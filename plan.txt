@@ -1,0 +1,89 @@
+organization
+- thumbnail.png
+- save files with UTF-8 with BOM encoding
+- create event first, then add decisions and triggers for calling the event
+
+decisions
+- try to find eligible partner within close range
+- cooldown 2 years?
+- effect is to trigger an event
+- ai potential?
+	- not sure if I should allow for AI and just have one set of events, where you're also on the receiving end,
+	or have 2 sets of events, one where you're the active partner and one where some AI will randomly act on you
+	- may be mandatory to have the AI perform the decision
+	- separate events depending on their status relative to you (your slave, your vassal, your liege, same level ruler / vassal)
+
+events
+- need namespace? not sure how those work
+- type = character_event
+- theme 
+- root is player
+- character flags used to facilitate hidden checks?
+- use scripted events to populate list
+	- consult PDXCON events 700 speakeasy (using an already populated list)
+- immediate is executed before description, portraits, title are evaluated
+	- can be used to trigger scripted effect to populate list
+
+localization
+- l_english: starting line in a _l_english.yml file
+- need to wrap content in quotation marks
+- for a decision, have the following
+	- _desc:0 brief description?
+	- _tooltip:1 long form description
+	- _effect_tooltip:1 long form description of the effects? (only for custom_tooltip under effect scope)
+	- _confirm:0 text of clickable button
+	- :0 title
+
+opinion modifier
+- add some non-decaying one for being someone's dom/sub
+- should also address natural dread
+
+forcing appearance
+- with character flags
+- checked by a trigger in scripted triggers (see /common/scripted_triggers/PDXCON_clothing_triggers.txt)
+- seems to require datacoring (no wonder there are so many conflicts)
+- however adding in a prop is easier since it can be added as props to an animation
+- triggered_outfit
+
+duel
+- skill = prowess to set prowess as the comparison stat
+- value = other character's value
+
+effect / commands
+- actual code that gets imperatively executed
+- inside events, can reside within immediate = {}, and option = {}
+- anything that takes = {X Y} can also just work as = X, takes random value in between the two values
+- control effects 
+	- if = { limit = { <triggers> } <effects> }
+	- while = {
+		    limit = { <triggers> }
+		    <effects>
+		}
+		while = { count = 3 <effects> }
+	- switch = {
+			trigger = simple_assign_trigger
+			case_1 = { <effects> }
+			case_2 = { <effects> }
+			case_n = { <effects> }
+			fallback = { <effects> }
+		}
+	- random = { chance = X modifier = Y effects... }
+	- random_list = {
+	    X1 = {
+	        trigger = { ... }
+	        modifier/compare_modifier/opinion_modifier = Y1
+	        effect1
+	    }
+	    X2 = { ... }
+	    ...
+	}
+
+questions
+- what does limit = {...} do?
+- how to populate list dynamically? (not a list of pre-existing characters)
+- what is potential_partner
+- what is sex_partner_check
+- use an activity?
+- random_prisoner effect
+- use has_relation_potential_lover to limit
+- consult get_potential_enemies_effect for populating list
