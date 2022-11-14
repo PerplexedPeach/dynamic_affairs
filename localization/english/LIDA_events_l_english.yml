@@ -1,0 +1,8 @@
+﻿l_english:
+LIDA.50.t:0 "An Illicit Affair"
+LIDA.50.desc:0 "placeholder description"
+LIDA.50.a:0 "Found affairs partner, [affairs_partner.GetFirstName]"
+LIDA.50.a.tt:0 "custom tooltip [affairs_partner.GetTitledFirstNameNoTooltip]"
+LIDA.50.b:0 "Do nothing"
+LIDA.50.b.tt:0 "custom tooltip do nothing"
+ 

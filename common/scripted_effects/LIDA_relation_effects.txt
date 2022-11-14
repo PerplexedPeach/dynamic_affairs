@@ -1,0 +1,65 @@
+﻿# Makes a list of eligible partners
+get_characters_eligible_partner_effect = {
+	save_temporary_scope_as = root_char
+	# liege
+	if = {
+		limit = {
+			major_interest_liege_trigger = { LISTNAME = $LISTNAME$ }
+		}
+		liege = { 
+			add_to_temporary_list = $LISTNAME$ 
+		}
+	}
+	# 3 - Realm Priest
+	if = {
+		limit = {
+			major_interest_realm_priest_trigger = { LISTNAME = $LISTNAME$ }
+		}
+		cp:councillor_court_chaplain = { 
+			add_to_temporary_list = $LISTNAME$ 
+		}
+	}
+	# 4 - Primary Spouse
+	if = {
+		limit = {
+			major_interest_primary_spouse_trigger = { LISTNAME = $LISTNAME$ }
+		}
+		primary_spouse = { add_to_temporary_list = $LISTNAME$ }
+	}
+	# 5 - Spymaster & # 11 - Other councillors
+	every_normal_councillor = {
+		limit = {
+			NOT = { is_in_list = $LISTNAME$ }
+		}
+		add_to_temporary_list = $LISTNAME$
+	}
+	# 6 - Powerful vassals
+	every_powerful_vassal = {
+		limit = {
+			NOT = { is_in_list = $LISTNAME$ }
+		}
+		add_to_temporary_list = $LISTNAME$
+	}
+	# # 4 - Lovers
+	every_relation = {
+		type = lover
+		limit = { NOT = { is_in_list = $LISTNAME$ } }
+		add_to_temporary_list = $LISTNAME$
+	}
+	if = { #Below is just for players
+		limit = { is_ai = no }
+		# 10 - Knights
+		every_knight = {
+			limit = { 
+				NOT = { is_in_list = $LISTNAME$ } 
+			}
+			add_to_temporary_list = $LISTNAME$
+		}
+		every_prisoner = {
+			limit = { 
+				NOT = { is_in_list = $LISTNAME$ } 
+			}
+			add_to_temporary_list = $LISTNAME$
+		}
+	}
+}

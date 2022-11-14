@@ -1,0 +1,83 @@
+﻿# LazyIcarus dynamic affairs
+namespace = LIDA
+LIDA.50 = { # main event hub An Illicit Affair
+	type = character_event
+	title = LIDA.50.t
+	desc = {
+		desc = LIDA.50.desc
+		# triggered description with triggered_desc
+	}
+	# probably can use a custom theme
+	theme = seduction
+	left_portrait = {
+		character = root
+		# can also have triggered animation depending on current mood (horny, past history with this character and so on)
+		animation = flirtation
+		# consider using triggered_outfit to force an outfit? or directly just have { outfit_tags = {...} }
+	}
+	trigger = {
+		# TODO cooldown, shorter for lustful characters, longer for chaste
+	}
+	# select affairs partner
+	immediate = {
+		get_characters_eligible_partner_effect = { 
+			LISTNAME = affairs_pool 
+		}
+
+		random_in_list = {
+			list = affairs_pool
+
+			limit = {
+				NOR = {
+					has_trait = celibate
+					has_sexuality = asexual
+				}
+				age >= 16
+			}
+
+			# TODO need to check if list is empty?
+			weight = {
+				base = 0
+
+				# TODO if the root character is a deviant/sadist, then having negative opinion actually makes them more likely as a partner (hate fuck) 
+				opinion_modifier = {
+					opinion_target = root
+					multiplier = 0.1
+				}
+				compatibility_modifier = {
+					compatibility_target = root
+					multiplier = 0.1
+				}
+				# add based on attraction
+				modifier = {
+					add = {
+						value = attraction
+						divide = high_positive_attraction
+						multiply = 50
+					}
+				}
+				# TODO if you've previously had relations with this person then weight them highly
+			}
+			save_scope_as = affairs_partner	
+			debug_log = "affairs check individual"
+			debug_log_scopes = no
+		}
+		debug_log = "affairs all in list"
+		every_in_list = {
+			list = affairs_pool
+			debug_log_scopes = no
+		}
+	}
+	option = {
+		name = LIDA.50.a
+		custom_tooltip = LIDA.50.a.tt
+		trigger_event = LIDA.50
+		# TODO consider ai_chance?
+	}
+	option = {
+		# do nothing / close the event
+		name = LIDA.50.b
+		custom_tooltip = LIDA.50.b.tt
+	}
+
+}
