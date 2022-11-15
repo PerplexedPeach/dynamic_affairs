@@ -15,6 +15,10 @@ LIDA.50 = { # main event hub An Illicit Affair
 		animation = flirtation
 		# consider using triggered_outfit to force an outfit? or directly just have { outfit_tags = {...} }
 	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
 	trigger = {
 		# TODO cooldown, shorter for lustful characters, longer for chaste
 	}
@@ -26,23 +30,22 @@ LIDA.50 = { # main event hub An Illicit Affair
 
 		random_in_list = {
 			list = affairs_pool
-
 			limit = {
 				NOR = {
 					has_trait = celibate
 					has_sexuality = asexual
 				}
-				age >= 16
+				age >= 18
 			}
 
 			# TODO need to check if list is empty?
 			weight = {
-				base = 0
+				base = 50
 
 				# TODO if the root character is a deviant/sadist, then having negative opinion actually makes them more likely as a partner (hate fuck) 
 				opinion_modifier = {
 					opinion_target = root
-					multiplier = 0.1
+					multiplier = 0.2
 				}
 				compatibility_modifier = {
 					compatibility_target = root
@@ -59,25 +62,33 @@ LIDA.50 = { # main event hub An Illicit Affair
 				# TODO if you've previously had relations with this person then weight them highly
 			}
 			save_scope_as = affairs_partner	
-			debug_log = "affairs check individual"
-			debug_log_scopes = no
 		}
+
 		debug_log = "affairs all in list"
 		every_in_list = {
 			list = affairs_pool
 			debug_log_scopes = no
 		}
+
 	}
 	option = {
+		# engage with the selected character
 		name = LIDA.50.a
 		custom_tooltip = LIDA.50.a.tt
+		# TODO trigger next event
 		trigger_event = LIDA.50
-		# TODO consider ai_chance?
+	}
+	option = {
+		# reroll
+		# TODO add this sampled character to an exclusion list?
+		name = LIDA.50.b
+		custom_tooltip = LIDA.50.b.tt
+		trigger_event = LIDA.50
 	}
 	option = {
 		# do nothing / close the event
-		name = LIDA.50.b
-		custom_tooltip = LIDA.50.b.tt
+		name = LIDA.50.c
+		custom_tooltip = LIDA.50.c.tt
 	}
 
 }
