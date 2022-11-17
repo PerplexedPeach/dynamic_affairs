@@ -2,6 +2,27 @@ organization
 - thumbnail.png
 - save files with UTF-8 with BOM encoding
 - create event first, then add decisions and triggers for calling the event
+- sex scenes alert the system sex has happened with carn sex effect
+- keep track of training progress (subdomness in a relationship) with a hidden opinion modifiers
+- scripted modifiers for adjust probability of random outcomes
+- active vs passive character
+	- active partner decides scene
+		- depends on their fetish, or if they're not a deviant then just from a random vanilla list
+		- fetish scenes has a chance of being passed on to passive partner
+		- non-fetish scenes has a chance of passing on submission scene to passive partner
+	- passive partner reacts to scene
+- underlying submissiveness level trait (optional)
+	- each option / action in a relationship taken has some chance of tiering this trait up / down
+	- modifies the chances of success of sub/dom actions
+- implementation order
+	- (done) interesting character list generation
+	- (done) stacking hidden opinion modifier to represent the sub/dom training progress
+	- choices in event sequence and how they affect the hidden relationship
+	- add in ways to trigger the events (decisions(?), schemes(?), and scripted triggers)
+	- separate event for when you're the active and passive partner
+	- writing
+	- add underlying trait with multiple tiers for influencing outcomes and getting influenced by actions
+	- 3D models tying in with hidden relationships
 
 decisions
 - try to find eligible partner within close range
@@ -87,3 +108,34 @@ questions
 - random_prisoner effect
 - use has_relation_potential_lover to limit
 - consult get_potential_enemies_effect for populating list
+- see A Fashionable Debate event for forcing other character to be naked, and also as a duel on stewardship
+- how to get hidden opinon modifier?
+	- consult 		has_opinion_modifier = {
+						modifier = sway_blocker_opinion
+						target = scope:owner
+					}
+	- also for modifier of base_success_chance based on previous actions
+		modifier = {
+			add = -10
+			desc = previously_swayed
+			scope:target = {
+				has_opinion_modifier = {
+					target = scope:owner
+					modifier = scheme_sway_opinion
+					value >= 25
+				}
+				has_opinion_modifier = {
+					target = scope:owner
+					modifier = scheme_sway_opinion
+					value < 40
+				}
+			}
+		}
+	- actually adding opinion
+			scope:target = {
+				add_opinion = {
+					target = scope:owner
+					modifier = scheme_sway_opinion
+					opinion = sway_opinion_increase_per_success
+				}
+			}

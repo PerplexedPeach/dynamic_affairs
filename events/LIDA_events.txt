@@ -1,6 +1,10 @@
 ﻿# LazyIcarus dynamic affairs
 namespace = LIDA
-LIDA.50 = { # main event hub An Illicit Affair
+# TODO for some reason putting these in a separate file under scripted_values/ leads to them not being defined
+dominant_increase_value = 1
+dominant_max_value = 10
+LIDA.50 = {
+	# main event hub An Illicit Affair
 	type = character_event
 	title = LIDA.50.t
 	desc = {
@@ -24,10 +28,9 @@ LIDA.50 = { # main event hub An Illicit Affair
 	}
 	# select affairs partner
 	immediate = {
-		get_characters_eligible_partner_effect = { 
-			LISTNAME = affairs_pool 
+		get_characters_eligible_partner_effect = {
+			LISTNAME = affairs_pool
 		}
-
 		random_in_list = {
 			list = affairs_pool
 			limit = {
@@ -37,11 +40,10 @@ LIDA.50 = { # main event hub An Illicit Affair
 				}
 				age >= 18
 			}
-
+			save_temporary_scope_as = affairs_candidate
 			# TODO need to check if list is empty?
 			weight = {
 				base = 50
-
 				# TODO if the root character is a deviant/sadist, then having negative opinion actually makes them more likely as a partner (hate fuck) 
 				opinion_modifier = {
 					opinion_target = root
@@ -59,17 +61,51 @@ LIDA.50 = { # main event hub An Illicit Affair
 						multiply = 50
 					}
 				}
-				# TODO if you've previously had relations with this person then weight them highly
+				# if you've previously had relations with this person then weight them highly
+				# either one of you should be the dom of the other
+				modifier = {
+					add = 1000
+					has_opinion_modifier = {
+						target = root
+						modifier = dominant_opinion
+					}
+				}
+				modifier = {
+					add = 1000
+					reverse_has_opinion_modifier = {
+						target = root
+						modifier = dominant_opinion
+					}
+				}
 			}
-			save_scope_as = affairs_partner	
+			save_scope_as = affairs_partner
 		}
-
+		# TODO remove after
 		debug_log = "affairs all in list"
 		every_in_list = {
 			list = affairs_pool
 			debug_log_scopes = no
+			if = {
+				limit = {
+					has_opinion_modifier = {
+						target = root
+						modifier = dominant_opinion
+						value >= 2
+					}
+				}
+				debug_log = "dominant >= 2"
+			}
+			if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = root
+						modifier = dominant_opinion
+						value >= 2
+					}
+				}
+				debug_log = "reverse dominant >= 2"
+			}
 		}
-
 	}
 	option = {
 		# engage with the selected character
@@ -77,6 +113,16 @@ LIDA.50 = { # main event hub An Illicit Affair
 		custom_tooltip = LIDA.50.a.tt
 		# TODO trigger next event
 		trigger_event = LIDA.50
+		# TODO in next event sequence eventually through some choices, chance one of you will become more dominant (here just directly added)
+		scope:affairs_partner = {
+			hidden_effect = {
+				add_opinion = {
+					target = root
+					modifier = dominant_opinion
+					opinion = dominant_increase_value
+				}
+			}
+		}
 	}
 	option = {
 		# reroll
@@ -90,5 +136,4 @@ LIDA.50 = { # main event hub An Illicit Affair
 		name = LIDA.50.c
 		custom_tooltip = LIDA.50.c.tt
 	}
-
 }

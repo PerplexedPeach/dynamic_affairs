@@ -1,0 +1,5 @@
+﻿dominant_opinion = {
+	decaying = no
+	max = 10
+	stacking = yes
+}
