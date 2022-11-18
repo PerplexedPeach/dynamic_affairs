@@ -23,6 +23,13 @@ organization
 	- writing
 	- add underlying trait with multiple tiers for influencing outcomes and getting influenced by actions
 	- 3D models tying in with hidden relationships
+- create effect for selecting which random event gets selected
+- each scene is from the perspective of the player (male and female will have separate events; hub will select events based on gender)
+	- special scenes for initiating relationships
+	- scenes don't need to know the scene that preceded it, unless it's a chain sequence in which case it'll know
+	- variable in_control for the event sequence that events could change and which effects descriptions
+- scene list (see spreadsheet in same directory)
+
 
 decisions
 - try to find eligible partner within close range
@@ -139,3 +146,6 @@ questions
 					opinion = sway_opinion_increase_per_success
 				}
 			}
+- how to get duel-like challenges?
+	- consult Intrigue Challenge
+- this option is available because of
