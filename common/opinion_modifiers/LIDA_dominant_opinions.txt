@@ -1,5 +1,8 @@
-﻿dominant_opinion = {
+﻿# positive means you are dominant to this character, and negative is the reverse
+# negative if you are the sub to them since they disrespect you, at least subconciously
+# is applied to other characters with the player character as the target
+dominant_opinion = {
 	decaying = no
-	max = 10
+	max = 30
 	stacking = yes
 }

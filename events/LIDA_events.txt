@@ -1,8 +1,9 @@
 ﻿# LazyIcarus dynamic affairs
 namespace = LIDA
 # TODO for some reason putting these in a separate file under scripted_values/ leads to them not being defined
-dominant_increase_value = 1
-dominant_max_value = 10
+# TODO for some reason defining them below breaks the whole event file
+# dominant_increase_value = 3
+# dominant_max_value = 30
 LIDA.50 = {
 	# main event hub An Illicit Affair
 	type = character_event
@@ -111,18 +112,16 @@ LIDA.50 = {
 		# engage with the selected character
 		name = LIDA.50.a
 		custom_tooltip = LIDA.50.a.tt
-		# TODO trigger next event
-		trigger_event = LIDA.50
 		# TODO in next event sequence eventually through some choices, chance one of you will become more dominant (here just directly added)
 		scope:affairs_partner = {
-			hidden_effect = {
-				add_opinion = {
-					target = root
-					modifier = dominant_opinion
-					opinion = dominant_increase_value
-				}
+			add_opinion = {
+				target = root
+				modifier = dominant_opinion
+				opinion = 1
 			}
 		}
+		# TODO trigger next event
+		trigger_event = LIDA.50
 	}
 	option = {
 		# reroll
