@@ -17,7 +17,7 @@ organization
 - implementation order
 	- (done) interesting character list generation
 	- (done) stacking hidden opinion modifier to represent the sub/dom training progress
-	- choices in event sequence and how they affect the hidden relationship
+	- (done) choices in event sequence and how they affect the hidden relationship
 	- add in ways to trigger the events (decisions(?), schemes(?), and scripted triggers)
 	- separate event for when you're the active and passive partner
 	- writing
@@ -29,6 +29,7 @@ organization
 	- scenes don't need to know the scene that preceded it, unless it's a chain sequence in which case it'll know
 	- variable in_control for the event sequence that events could change and which effects descriptions
 - scene list (see spreadsheet in same directory)
+- trigger event hub search up trigger_event for example extort_subjects_effect
 
 
 decisions
@@ -149,3 +150,7 @@ questions
 - how to get duel-like challenges?
 	- consult Intrigue Challenge
 - this option is available because of
+- how to create an effect that randomly selects an event?
+	- would like it to be 
+- how to show probability of success in tooltips
+- see Cultural acceptance tooltip

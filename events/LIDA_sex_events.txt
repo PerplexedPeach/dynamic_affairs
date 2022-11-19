@@ -1,0 +1,80 @@
+﻿# namespace for sex events in between first initiating the scene and cumming
+# sub/dom progression for each event is specific to that event (e.g. handjob tease into random other event or just directly handjob cum)
+namespace = LIDAs
+LIDAs.1 = {
+	# handjob tease
+	type = character_event
+	title = LIDAs.1.t
+	desc = {
+		desc = LIDAs.1.desc
+	}
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+
+	immediate = {
+		calculate_dom_success_effect = yes
+		if = {
+			limit = {
+				exists = scope:dom_success
+			}
+			debug_log = "dom success"
+		}
+		else = {
+			debug_log = "dom fail"
+		}
+	}
+
+	# dom and sub choice
+	option = {
+		# dom option
+		name = LIDAs.1.a
+		custom_tooltip = LIDAs.1.a.tt
+
+		# if you choose dom option but are not successful, you get taken down a peg
+		if = {
+			limit = {
+				exists = scope:dom_success
+			}
+			# asserted dominance
+			hidden_effect = {
+				reverse_add_opinion = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+					opinion = 1
+				}
+			}
+			# TODO trigger next dom event
+		}
+		else = {
+			# get taken down a peg so lose some dominance
+			hidden_effect = {
+				reverse_add_opinion = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+					opinion = -2
+				}
+			}
+			# TODO trigger next sub event
+		}
+	}
+	option = {
+		name = LIDAs.1.b
+		custom_tooltip = LIDAs.1.b.tt
+		# lose dominance by choosing the sub option, but not as much as getting reversed
+		hidden_effect = {
+			reverse_add_opinion = {
+				target = scope:affairs_partner
+				modifier = dominant_opinion
+				opinion = -1
+			}
+		}
+		# TODO trigger next sub event
+	}
+}

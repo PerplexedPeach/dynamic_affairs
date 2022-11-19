@@ -1,0 +1,38 @@
+﻿# namespace for events where you are first encountering this character
+namespace = LIDAf
+LIDAf.1 = {
+	# meeting with spouse
+	type = character_event
+	title = LIDAf.1.t
+	desc = {
+		desc = LIDAf.1.desc
+	}
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+
+	# TODO randomly choose events without replacement to place inside each option
+	option = {
+		# engage with the selected character
+		name = LIDAf.1.a
+		custom_tooltip = LIDAf.1.a.tt
+		select_start_affairs_effect = yes
+	}
+	option = {
+		name = LIDAf.1.b
+		custom_tooltip = LIDAf.1.b.tt
+		select_start_affairs_effect = yes
+	}
+	option = {
+		# do nothing / close the event
+		name = LIDAf.1.c
+		custom_tooltip = LIDAf.1.c.tt
+		# TODO add temporary negative opinion of them towards you for teasing them but backing out
+	}
+}

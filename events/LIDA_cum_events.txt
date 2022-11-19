@@ -1,0 +1,2 @@
+﻿# namespace for events at the end of an affairs event sequence (e.g. at least one party cums)
+namespace = LIDAc

@@ -1,4 +1,6 @@
 ﻿# LazyIcarus dynamic affairs
+
+# main namespace of all common events
 namespace = LIDA
 LIDA.50 = {
 	# main event hub An Illicit Affair
@@ -101,16 +103,22 @@ LIDA.50 = {
 		# engage with the selected character
 		name = LIDA.50.a
 		custom_tooltip = LIDA.50.a.tt
-		# TODO in next event sequence eventually through some choices, chance one of you will become more dominant (here just directly added)
-		scope:affairs_partner = {
-			add_opinion = {
-				target = root
-				modifier = dominant_opinion
-				opinion = dominant_decrease_value
+		# go straight to the sex event if we already have an ongoing affair with this person
+		if = {
+			limit = {
+				scope:affairs_partner = {
+					has_opinion_modifier = {
+						target = root
+						modifier = dominant_opinion
+					}
+				}
 			}
+			select_start_affairs_effect = yes
 		}
-		# TODO trigger next event
-		trigger_event = LIDA.50
+		# otherwise go through special first time event
+		else = {
+			select_first_meet_affairs_effect = yes
+		}
 	}
 	option = {
 		# reroll
