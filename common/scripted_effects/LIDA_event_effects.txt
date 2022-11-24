@@ -18,8 +18,62 @@ calculate_dom_success_effect = {
 		name = dom_chance
 		value = {
 			add = dom_base_success_value
-			# TODO if lustful, then success decrease if the partner is hot
-			# TODO reverse for the partner
+			# TODO physically stronger / more robust
+			# if lustful, then success decrease if the partner is hot
+			if = {
+				limit = {
+					has_trait = lustful
+					scope:affairs_partner = {
+						has_trait = beauty_good
+					}
+				}
+				add = -5
+			}
+			else_if = {
+				limit = {
+					has_trait = lustful
+					scope:affairs_partner = {
+						has_trait = beauty_good_2
+					}
+				}
+				add = -10
+			}
+			else_if = {
+				limit = {
+					has_trait = lustful
+					scope:affairs_partner = {
+						has_trait = beauty_good_3
+					}
+				}
+				add = -15
+			}
+			if = {
+				limit = {
+					has_trait = beauty_good
+					scope:affairs_partner = {
+						has_trait = lustful
+					}
+				}
+				add = 5
+			}
+			else_if = {
+				limit = {
+					has_trait = beauty_good_2
+					scope:affairs_partner = {
+						has_trait = lustful
+					}
+				}
+				add = 10
+			}
+			else_if = {
+				limit = {
+					has_trait = beauty_good_3
+					scope:affairs_partner = {
+						has_trait = lustful
+					}
+				}
+				add = 15
+			}
 			# every rank difference has preconceived differences in power (higher rank easier to dom lower rank, 10% per rank)
 			if = {
 				limit = {
