@@ -2,11 +2,54 @@
 # sub/dom progression for each event is specific to that event (e.g. handjob tease into random other event or just directly handjob cum)
 namespace = LIDAs
 LIDAs.1 = {
-	# handjob tease
+	# F handjob tease
 	type = character_event
 	title = LIDAs.1.t
 	desc = {
 		desc = LIDAs.1.desc
+
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:root_stamina < 2
+				}
+				desc = f_very_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:root_stamina < 3
+				}
+				desc = f_low_stam
+			}
+			triggered_desc = {
+				trigger = { 
+					scope:root_stamina < 4
+				}
+				desc = f_med_stam
+			}
+			desc = f_high_stam
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:partner_stamina < 2
+				}
+				desc = m_very_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:partner_stamina < 3
+				}
+				desc = m_low_stam
+			}
+			triggered_desc = {
+				trigger = { 
+					scope:partner_stamina < 4
+				}
+				desc = m_med_stam
+			}
+			desc = m_high_stam
+		}
 	}
 	theme = seduction
 	left_portrait = {
@@ -21,15 +64,6 @@ LIDAs.1 = {
 	immediate = {
 		calculate_dom_success_effect = yes
 		debug_log_scopes = yes
-		if = {
-			limit = {
-				exists = scope:dom_success
-			}
-			debug_log = "dom success"
-		}
-		else = {
-			debug_log = "dom fail"
-		}
 	}
 
 	# dom and sub choice

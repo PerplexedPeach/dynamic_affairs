@@ -105,6 +105,7 @@ LIDA.50 = {
 		name = LIDA.50.a
 		custom_tooltip = LIDA.50.a.tt
 		# inititalize staminas
+		# TODO create triggered descriptions based on current stamina
 		save_scope_value_as = {
 			name = root_stamina
 			value = max_sex_stamina
