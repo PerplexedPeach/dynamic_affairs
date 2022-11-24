@@ -5,6 +5,7 @@ get_characters_eligible_partner_effect = {
 	if = {
 		limit = {
 			major_interest_liege_trigger = { LISTNAME = $LISTNAME$ }
+			NOT = { is_in_list = $RESTRICTED_LISTNAME$ }
 		}
 		liege = { 
 			add_to_temporary_list = $LISTNAME$ 
@@ -14,6 +15,7 @@ get_characters_eligible_partner_effect = {
 	if = {
 		limit = {
 			major_interest_realm_priest_trigger = { LISTNAME = $LISTNAME$ }
+			NOT = { is_in_list = $RESTRICTED_LISTNAME$ }
 		}
 		cp:councillor_court_chaplain = { 
 			add_to_temporary_list = $LISTNAME$ 
@@ -23,6 +25,7 @@ get_characters_eligible_partner_effect = {
 	if = {
 		limit = {
 			major_interest_primary_spouse_trigger = { LISTNAME = $LISTNAME$ }
+			NOT = { is_in_list = $RESTRICTED_LISTNAME$ }
 		}
 		primary_spouse = { add_to_temporary_list = $LISTNAME$ }
 	}
@@ -30,6 +33,7 @@ get_characters_eligible_partner_effect = {
 	every_normal_councillor = {
 		limit = {
 			NOT = { is_in_list = $LISTNAME$ }
+			NOT = { is_in_list = $RESTRICTED_LISTNAME$ }
 		}
 		add_to_temporary_list = $LISTNAME$
 	}
@@ -37,13 +41,17 @@ get_characters_eligible_partner_effect = {
 	every_powerful_vassal = {
 		limit = {
 			NOT = { is_in_list = $LISTNAME$ }
+			NOT = { is_in_list = $RESTRICTED_LISTNAME$ }
 		}
 		add_to_temporary_list = $LISTNAME$
 	}
 	# # 4 - Lovers
 	every_relation = {
 		type = lover
-		limit = { NOT = { is_in_list = $LISTNAME$ } }
+		limit = { 
+			NOT = { is_in_list = $LISTNAME$ } 
+			NOT = { is_in_list = $RESTRICTED_LISTNAME$ }
+		}
 		add_to_temporary_list = $LISTNAME$
 	}
 	if = { #Below is just for players
@@ -52,12 +60,14 @@ get_characters_eligible_partner_effect = {
 		every_knight = {
 			limit = { 
 				NOT = { is_in_list = $LISTNAME$ } 
+				NOT = { is_in_list = $RESTRICTED_LISTNAME$ }
 			}
 			add_to_temporary_list = $LISTNAME$
 		}
 		every_prisoner = {
 			limit = { 
 				NOT = { is_in_list = $LISTNAME$ } 
+				NOT = { is_in_list = $RESTRICTED_LISTNAME$ }
 			}
 			add_to_temporary_list = $LISTNAME$
 		}

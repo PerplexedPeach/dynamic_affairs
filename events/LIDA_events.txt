@@ -29,6 +29,7 @@ LIDA.50 = {
 	immediate = {
 		get_characters_eligible_partner_effect = {
 			LISTNAME = affairs_pool
+			RESTRICTED_LISTNAME = rejected_affairs_pool
 		}
 		random_in_list = {
 			list = affairs_pool
@@ -122,9 +123,12 @@ LIDA.50 = {
 	}
 	option = {
 		# reroll
-		# TODO add this sampled character to an exclusion list?
+		# add this sampled character to an exclusion list
 		name = LIDA.50.b
 		custom_tooltip = LIDA.50.b.tt
+		scope:affairs_partner = {
+			add_to_list = rejected_affairs_pool
+		}
 		trigger_event = LIDA.50
 	}
 	option = {
