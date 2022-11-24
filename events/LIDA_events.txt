@@ -104,14 +104,21 @@ LIDA.50 = {
 		# engage with the selected character
 		name = LIDA.50.a
 		custom_tooltip = LIDA.50.a.tt
+		# inititalize staminas
+		save_scope_value_as = {
+			name = root_stamina
+			value = max_sex_stamina
+		}
+		save_scope_value_as = {
+			name = partner_stamina
+			value = scope:affairs_partner.max_sex_stamina 
+		}
 		# go straight to the sex event if we already have an ongoing affair with this person
 		if = {
 			limit = {
-				scope:affairs_partner = {
-					has_opinion_modifier = {
-						target = root
-						modifier = dominant_opinion
-					}
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
 				}
 			}
 			select_start_affairs_effect = yes
