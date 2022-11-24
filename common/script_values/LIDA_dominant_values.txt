@@ -2,3 +2,4 @@
 dominant_decrease_value = { add = -3 }
 dominant_max_value = 30
 dominant_min_value = -30
+dom_base_success_value = 50

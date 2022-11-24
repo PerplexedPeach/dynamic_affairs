@@ -17,8 +17,156 @@ calculate_dom_success_effect = {
 	save_temporary_scope_value_as = {
 		name = dom_chance
 		value = {
-			# TODO compute with traits
-			add = 50
+			add = dom_base_success_value
+			# TODO if lustful, then success decrease if the partner is hot
+			# TODO reverse for the partner
+			# every rank difference has preconceived differences in power (higher rank easier to dom lower rank, 10% per rank)
+			if = {
+				limit = {
+					tier_difference = {
+						target = scope:affairs_partner
+						value = 1
+					}
+				}
+				add = 5
+			}
+			else_if = {
+				limit = {
+					tier_difference = {
+						target = scope:affairs_partner
+						value = 2
+					}
+				}
+				add = 10
+			}
+			else_if = {
+				limit = {
+					tier_difference = {
+						target = scope:affairs_partner
+						value = 3
+					}
+				}
+				add = 15
+			}
+			else_if = {
+				limit = {
+					tier_difference = {
+						target = scope:affairs_partner
+						value = 4
+					}
+				}
+				add = 20
+			}
+			else_if = {
+				limit = {
+					tier_difference = {
+						target = scope:affairs_partner
+						value >= 5
+					}
+				}
+				add = 25
+			}
+			else_if = {
+				limit = {
+					tier_difference = {
+						target = scope:affairs_partner
+						value = -1
+					}
+				}
+				add = -5
+			}
+			else_if = {
+				limit = {
+					tier_difference = {
+						target = scope:affairs_partner
+						value = -2
+					}
+				}
+				add = -10
+			}
+			else_if = {
+				limit = {
+					tier_difference = {
+						target = scope:affairs_partner
+						value = -3
+					}
+				}
+				add = -15
+			}
+			else_if = {
+				limit = {
+					tier_difference = {
+						target = scope:affairs_partner
+						value = -4
+					}
+				}
+				add = -20
+			}
+			else_if = {
+				limit = {
+					tier_difference = {
+						target = scope:affairs_partner
+						value <= -5
+					}
+				}
+				add = -25
+			}
+			# stubborn characters dom more easily 
+			if = {
+				limit = {
+					has_trait = stubborn
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					scope:affairs_partner = {
+						has_trait = stubborn
+					}
+				}
+				add = -10
+			}
+			# existing sub/dom opinion contributes to dom
+			if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value >= 10
+					}
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value >= 20
+					}
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= -10
+					}
+				}
+				add = -10
+			}
+			if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= -20
+					}
+				}
+				add = -20
+			}
 		}
 	}
 
