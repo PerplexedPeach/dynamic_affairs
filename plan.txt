@@ -31,6 +31,20 @@ organization
 - scene list (see spreadsheet in same directory)
 - trigger event hub search up trigger_event for example extort_subjects_effect
 
+balance
+- dom
+	- gives dread
+	- gives martial
+	- gives positive opinion
+	- gain strong hook on them at max level
+- sub
+	- gives - stress gain
+	- gives diplomacy
+	- triggers random events at max level
+		- partner asks you to wear a collar in public (not everyone will know what it implies)
+		- partner asks you to sub more by getting piercings
+		- partner asks you to give up the responsibility of ruling to them (transfer your highest title)
+		- can refuse each request, but it'll be stressful and they'll continue asking
 
 decisions
 - try to find eligible partner within close range
@@ -153,4 +167,11 @@ questions
 - how to create an effect that randomly selects an event?
 	- would like it to be 
 - how to show probability of success in tooltips
+	- ANSWER_SUM_CHANCE for imprison
+	- SCOPE.ScriptValue('') - not sure what it's applicable to
 - see Cultural acceptance tooltip
+- holding an event inside a variable
+	- 	save_temporary_scope_value_as = {
+		name = spouse_event
+		value = $SPOUSE_EVENT$
+	}
