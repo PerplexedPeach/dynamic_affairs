@@ -14,12 +14,16 @@ select_start_affairs_effect = {
 # expects character scope with a scope:affairs_partner character
 # effects for progressing a sex event
 calculate_dom_success_effect = {
-
-	random = {
-		chance = {
+	save_temporary_scope_value_as = {
+		name = dom_chance
+		value = {
 			# TODO compute with traits
 			add = 50
 		}
+	}
+
+	random = {
+		chance = scope:dom_chance
 
 		save_temporary_scope_value_as = {
 			name = dom_success
