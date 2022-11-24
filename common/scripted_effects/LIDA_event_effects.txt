@@ -2,13 +2,13 @@
 select_first_meet_affairs_effect = {
 	# first time 
 	# TODO randomly choose from list
-	trigger_event = LIDAf.1
+	trigger_event = LIDAf.meet_spouse
 }
 
 # effect for navigating to a random initial event
 select_start_affairs_effect = {
 	# TODO randomly choose from list
-	trigger_event = LIDAs.1
+	trigger_event = LIDAs.handjob_tease
 }
 
 # expects character scope with a scope:affairs_partner character

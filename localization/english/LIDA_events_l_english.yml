@@ -1,10 +1,10 @@
 ﻿l_english:
-LIDA.50.t:0 "An Illicit Affair"
-LIDA.50.desc:0 "placeholder description"
-LIDA.50.a:0 "Found affairs partner, [affairs_partner.GetFirstName], proceed"
-LIDA.50.a.tt:0 "custom tooltip [affairs_partner.GetTitledFirstNameNoTooltip]"
-LIDA.50.b:0 "Reroll"
-LIDA.50.b.tt:0 "custom tooltip [affairs_partner.GetTitledFirstNameNoTooltip]"
-LIDA.50.c:0 "Close"
-LIDA.50.c.tt:0 "custom tooltip do nothing"
+LIDA.active_affair.t:0 "An Illicit Affair"
+LIDA.active_affair.desc:0 "placeholder description"
+LIDA.active_affair.a:0 "Found affairs partner, [affairs_partner.GetFirstName], proceed"
+LIDA.active_affair.a.tt:0 "custom tooltip [affairs_partner.GetTitledFirstNameNoTooltip]"
+LIDA.active_affair.b:0 "Reroll"
+LIDA.active_affair.b.tt:0 "custom tooltip [affairs_partner.GetTitledFirstNameNoTooltip]"
+LIDA.active_affair.c:0 "Close"
+LIDA.active_affair.c.tt:0 "custom tooltip do nothing"
  

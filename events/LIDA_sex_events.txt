@@ -1,12 +1,12 @@
 ﻿# namespace for sex events in between first initiating the scene and cumming
 # sub/dom progression for each event is specific to that event (e.g. handjob tease into random other event or just directly handjob cum)
 namespace = LIDAs
-LIDAs.1 = {
+LIDAs.handjob_tease = {
 	# handjob tease
 	type = character_event
-	title = LIDAs.1.t
+	title = LIDAs.handjob_tease.t
 	desc = {
-		desc = LIDAs.1.desc
+		desc = LIDAs.handjob_tease.desc
 	}
 	theme = seduction
 	left_portrait = {
@@ -35,8 +35,8 @@ LIDAs.1 = {
 	# dom and sub choice
 	option = {
 		# dom option
-		name = LIDAs.1.a
-		custom_tooltip = LIDAs.1.a.tt
+		name = LIDAs.handjob_tease.a
+		custom_tooltip = LIDAs.handjob_tease.a.tt
 
 		# if you choose dom option but are not successful, you get taken down a peg
 		if = {
@@ -66,8 +66,8 @@ LIDAs.1 = {
 		}
 	}
 	option = {
-		name = LIDAs.1.b
-		custom_tooltip = LIDAs.1.b.tt
+		name = LIDAs.handjob_tease.b
+		custom_tooltip = LIDAs.handjob_tease.b.tt
 		# lose dominance by choosing the sub option, but not as much as getting reversed
 		hidden_effect = {
 			reverse_add_opinion = {
