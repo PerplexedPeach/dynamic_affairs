@@ -20,6 +20,7 @@ LIDAs.1 = {
 
 	immediate = {
 		calculate_dom_success_effect = yes
+		debug_log_scopes = yes
 		if = {
 			limit = {
 				exists = scope:dom_success
