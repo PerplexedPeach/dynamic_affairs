@@ -1,10 +1,10 @@
 ﻿l_english:
-LIDAf.meet_spouse.t:0 "First Meet with Spouse"
-LIDAf.meet_spouse.desc:0 "placeholder description"
-LIDAf.meet_spouse.a:0 "Sex 1"
-LIDAf.meet_spouse.a.tt:0 "custom tooltip 1"
-LIDAf.meet_spouse.b:0 "Sex 2"
-LIDAf.meet_spouse.b.tt:0 "custom tooltip 2"
-LIDAf.meet_spouse.c:0 "Back out"
-LIDAf.meet_spouse.c.tt:0 "backing out of the promise of sex will make them angry"
+LIDAf.1.t:0 "First Meet with Spouse"
+LIDAf.1.desc:0 "placeholder description"
+LIDAf.1.a:0 "Sex 1"
+LIDAf.1.a.tt:0 "custom tooltip 1"
+LIDAf.1.b:0 "Sex 2"
+LIDAf.1.b.tt:0 "custom tooltip 2"
+LIDAf.1.c:0 "Back out"
+LIDAf.1.c.tt:0 "backing out of the promise of sex will make them angry"
  

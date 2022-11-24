@@ -2,12 +2,12 @@
 
 # main namespace of all common events
 namespace = LIDA
-LIDA.active_affair = {
+LIDA.50 = {
 	# main event hub An Illicit Affair
 	type = character_event
-	title = LIDA.active_affair.t
+	title = LIDA.50.t
 	desc = {
-		desc = LIDA.active_affair.desc
+		desc = LIDA.50.desc
 		# triggered description with triggered_desc
 	}
 	# probably can use a custom theme
@@ -101,8 +101,8 @@ LIDA.active_affair = {
 	}
 	option = {
 		# engage with the selected character
-		name = LIDA.active_affair.a
-		custom_tooltip = LIDA.active_affair.a.tt
+		name = LIDA.50.a
+		custom_tooltip = LIDA.50.a.tt
 		# go straight to the sex event if we already have an ongoing affair with this person
 		if = {
 			limit = {
@@ -123,13 +123,13 @@ LIDA.active_affair = {
 	option = {
 		# reroll
 		# TODO add this sampled character to an exclusion list?
-		name = LIDA.active_affair.b
-		custom_tooltip = LIDA.active_affair.b.tt
-		trigger_event = LIDA.active_affair
+		name = LIDA.50.b
+		custom_tooltip = LIDA.50.b.tt
+		trigger_event = LIDA.50
 	}
 	option = {
 		# do nothing / close the event
-		name = LIDA.active_affair.c
-		custom_tooltip = LIDA.active_affair.c.tt
+		name = LIDA.50.c
+		custom_tooltip = LIDA.50.c.tt
 	}
 }
