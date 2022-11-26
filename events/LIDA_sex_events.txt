@@ -63,6 +63,14 @@ LIDAs.1 = {
 
 	immediate = {
 		calculate_dom_success_effect = yes
+		# each event reduces stamina for both partner by a certain amount
+		save_scope_value_as = {
+			name = partner_stamina
+			value = {
+				add = scope:partner_stamina
+				subtract = 1
+			}
+		}
 		debug_log_scopes = yes
 	}
 
@@ -98,6 +106,15 @@ LIDAs.1 = {
 			}
 			# TODO trigger next sub event
 		}
+		# TODO if stamina is very low then trigger cum event and end, otherwise choose another event
+		if = {
+			limit = {
+				scope:partner_stamina <= 1
+			}
+		}
+		else = {
+			trigger_event = LIDAs.1
+		}
 	}
 	option = {
 		name = LIDAs.1.b
@@ -111,5 +128,14 @@ LIDAs.1 = {
 			}
 		}
 		# TODO trigger next sub event
+		# TODO if stamina is very low then trigger cum event and end, otherwise choose another event
+		if = {
+			limit = {
+				scope:partner_stamina <= 1
+			}
+		}
+		else = {
+			trigger_event = LIDAs.1
+		}
 	}
 }
