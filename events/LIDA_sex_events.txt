@@ -64,12 +64,9 @@ LIDAs.1 = {
 	immediate = {
 		calculate_dom_success_effect = yes
 		# each event reduces stamina for both partner by a certain amount
-		save_scope_value_as = {
-			name = partner_stamina
-			value = {
-				add = scope:partner_stamina
-				subtract = 1
-			}
+		lida_ongoing_sex_effect = {
+			STAMINA_COST_1 = 0
+			STAMINA_COST_2 = 1
 		}
 		debug_log_scopes = yes
 	}
@@ -111,6 +108,16 @@ LIDAs.1 = {
 			limit = {
 				scope:partner_stamina <= 1
 			}
+			hidden_effect = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = root
+					CHARACTER_2 = scope:affairs_partner
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = yes
+					DRAMA = yes
+				}
+			}
 		}
 		else = {
 			trigger_event = LIDAs.1
@@ -132,6 +139,16 @@ LIDAs.1 = {
 		if = {
 			limit = {
 				scope:partner_stamina <= 1
+			}
+			hidden_effect = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = root
+					CHARACTER_2 = scope:affairs_partner
+					C1_PREGNANCY_CHANCE = 0
+					C2_PREGNANCY_CHANCE = 0
+					STRESS_EFFECTS = yes
+					DRAMA = yes
+				}
 			}
 		}
 		else = {

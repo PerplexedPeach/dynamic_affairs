@@ -1,0 +1,27 @@
+﻿lida_ongoing_sex_effect = {
+	# stamina reduction on both parties
+	if = {
+		limit = {
+			$STAMINA_COST_1$ > 0
+		}
+		save_scope_value_as = {
+			name = root_stamina
+			value = {
+				add = scope:root_stamina
+				subtract = $STAMINA_COST_1$
+			}
+		}
+	}
+	if = {
+		limit = {
+			$STAMINA_COST_2$ > 0
+		}
+		save_scope_value_as = {
+			name = partner_stamina
+			value = {
+				add = scope:partner_stamina
+				subtract = $STAMINA_COST_2$
+			}
+		}
+	}
+}
