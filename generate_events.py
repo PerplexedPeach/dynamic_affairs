@@ -63,6 +63,8 @@ def event_type_namespace(id: EventId) -> str:
 
 
 class Event:
+    """Vertices in a scene graph, each corresponding to a specific scene"""
+
     def __init__(self, id: EventId, title="Placeholder title", desc="placeholder event desc", theme="seduction",
                  animation_left="flirtation", animation_right="flirtation_left", options=(),
                  root_female=True,
@@ -137,6 +139,13 @@ class Event:
 
     def generate_option(self, option):
         pass
+
+
+class Option:
+    """Directed edges in a scene graph, going from one event to another (or terminating)"""
+
+    def __init__(self, next_id: EventId):
+        self.next_id = next_id
 
 
 class Sex(Event):
