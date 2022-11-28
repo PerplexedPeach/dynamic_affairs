@@ -6,3 +6,8 @@ dominant_opinion = {
 	max = 30
 	stacking = yes
 }
+affair_spurned_opinion = {
+	opinion = -15
+	decaying = yes
+	years = 5
+}
