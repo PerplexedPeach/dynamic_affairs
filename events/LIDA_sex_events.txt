@@ -11,6 +11,93 @@ LIDAs.1 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 1
+				}
+				desc = prev_custom_desc_1
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 2
+				}
+				desc = prev_custom_desc_2
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 3
+				}
+				desc = prev_custom_desc_3
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 4
+				}
+				desc = prev_custom_desc_4
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 5
+				}
+				desc = prev_custom_desc_5
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 6
+				}
+				desc = prev_custom_desc_6
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 7
+				}
+				desc = prev_custom_desc_7
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 8
+				}
+				desc = prev_custom_desc_8
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 9
+				}
+				desc = prev_custom_desc_9
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 10
+				}
+				desc = prev_custom_desc_10
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 11
+				}
+				desc = prev_custom_desc_11
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:prev_custom_desc
+					scope:prev_custom_desc <= 12
+				}
+				desc = prev_custom_desc_12
+			}
+		}
+
+		first_valid = {
+			triggered_desc = {
+				trigger = {
 					scope:root_stamina < 2
 				}
 				desc = f_very_low_stam
@@ -91,6 +178,10 @@ LIDAs.1 = {
 				}
 			}
 			# TODO trigger next dom event
+			save_scope_value_as = {
+				name = prev_custom_desc
+				value = {0 4}
+			}
 		}
 		else = {
 			# get taken down a peg so lose some dominance
@@ -99,6 +190,11 @@ LIDAs.1 = {
 					target = scope:affairs_partner
 					modifier = dominant_opinion
 					opinion = -2
+				}
+				# TODO description of you getting dommed (and specify a random reason for why you failed the dom)
+				save_scope_value_as = {
+					name = prev_custom_desc
+					value = {5 8}
 				}
 			}
 			# TODO trigger next sub event
@@ -133,6 +229,10 @@ LIDAs.1 = {
 				modifier = dominant_opinion
 				opinion = -1
 			}
+		}
+		save_scope_value_as = {
+			name = prev_custom_desc
+			value = {9 12}
 		}
 		# TODO trigger next sub event
 		# TODO if stamina is very low then trigger cum event and end, otherwise choose another event
