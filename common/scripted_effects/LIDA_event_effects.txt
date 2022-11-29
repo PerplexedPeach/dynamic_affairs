@@ -14,7 +14,7 @@ select_start_affairs_effect = {
 # expects character scope with a scope:affairs_partner character
 # effects for progressing a sex event
 calculate_dom_success_effect = {
-	save_temporary_scope_value_as = {
+	save_scope_value_as = {
 		name = dom_chance
 		value = {
 			add = dom_base_success_value
