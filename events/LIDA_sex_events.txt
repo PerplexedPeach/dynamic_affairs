@@ -8,90 +8,91 @@ LIDAs.1 = {
 	desc = {
 		desc = LIDAs.1.desc
 
+		# description based on the transition from the previous event, if there was one
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 1
+					exists = scope:transition_desc
+					scope:transition_desc <= 1
 				}
-				desc = prev_custom_desc_1
+				desc = transition_desc_1
 			}
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 2
+					exists = scope:transition_desc
+					scope:transition_desc <= 2
 				}
-				desc = prev_custom_desc_2
+				desc = transition_desc_2
 			}
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 3
+					exists = scope:transition_desc
+					scope:transition_desc <= 3
 				}
-				desc = prev_custom_desc_3
+				desc = transition_desc_3
 			}
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 4
+					exists = scope:transition_desc
+					scope:transition_desc <= 4
 				}
-				desc = prev_custom_desc_4
+				desc = transition_desc_4
 			}
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 5
+					exists = scope:transition_desc
+					scope:transition_desc <= 5
 				}
-				desc = prev_custom_desc_5
+				desc = transition_desc_5
 			}
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 6
+					exists = scope:transition_desc
+					scope:transition_desc <= 6
 				}
-				desc = prev_custom_desc_6
+				desc = transition_desc_6
 			}
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 7
+					exists = scope:transition_desc
+					scope:transition_desc <= 7
 				}
-				desc = prev_custom_desc_7
+				desc = transition_desc_7
 			}
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 8
+					exists = scope:transition_desc
+					scope:transition_desc <= 8
 				}
-				desc = prev_custom_desc_8
+				desc = transition_desc_8
 			}
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 9
+					exists = scope:transition_desc
+					scope:transition_desc <= 9
 				}
-				desc = prev_custom_desc_9
+				desc = transition_desc_9
 			}
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 10
+					exists = scope:transition_desc
+					scope:transition_desc <= 10
 				}
-				desc = prev_custom_desc_10
+				desc = transition_desc_10
 			}
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 11
+					exists = scope:transition_desc
+					scope:transition_desc <= 11
 				}
-				desc = prev_custom_desc_11
+				desc = transition_desc_11
 			}
 			triggered_desc = {
 				trigger = {
-					exists = scope:prev_custom_desc
-					scope:prev_custom_desc <= 12
+					exists = scope:transition_desc
+					scope:transition_desc <= 12
 				}
-				desc = prev_custom_desc_12
+				desc = transition_desc_12
 			}
 		}
 
@@ -155,21 +156,126 @@ LIDAs.1 = {
 			STAMINA_COST_1 = 0
 			STAMINA_COST_2 = 1
 		}
+
+		# TODO checking if it's a problem with random_list not evaluated until after options
+		save_scope_value_as = {
+			name = dom_transition
+			value = 1
+		}
+
+		# TODO different list if they are about to climax or have climaxed
+		# TODO sample the options that are available
+		random_list = {
+			6 = {
+				modifier = {add = 1 has_trait = honest}
+				save_scope_value_as = {
+					name = dom_transition
+					value = 1
+				}
+			}
+			4 = {
+				save_scope_value_as = {
+					name = dom_transition
+					value = 2
+				}
+			}
+			2 = {
+				trigger = {is_female = yes}
+				save_scope_value_as = {
+					name = dom_transition
+					value = 3
+				}
+			}
+		}
+
+		random_list = {
+			3 = {
+				save_scope_value_as = {
+					name = sub_transition
+					value = 1
+				}
+			}
+			4 = {
+				save_scope_value_as = {
+					name = sub_transition
+					value = 2
+				}
+			}
+		}
+
+		# TODO cum events
+		if = {
+			limit = {
+				scope:partner_stamina <= 1
+			}
+			random_list = {
+				3 = {
+					save_scope_value_as = {
+						name = cum_transition
+						value = 1
+					}
+				}
+				4 = {
+					save_scope_value_as = {
+						name = cum_transition
+						value = 2
+					}
+				}
+			}
+		}
 		debug_log_scopes = yes
 	}
 
-	# dom and sub choice
+	# options that are only valid if you're cumming
 	option = {
-		# dom option
-		name = LIDAs.1.a
-		custom_tooltip = LIDAs.1.a.tt
+		name = "cum transition 1"
+		trigger = {
+			exists = scope:cum_transition
+			scope:cum_transition = 1
+		}
+		# TODO trigger the action cum event and move the had sex with effect inside of it
+		hidden_effect = {
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = root
+				CHARACTER_2 = scope:affairs_partner
+				C1_PREGNANCY_CHANCE = 0
+				C2_PREGNANCY_CHANCE = 0
+				STRESS_EFFECTS = yes
+				DRAMA = yes
+			}
+		}	
+	}
+	option = {
+		name = "cum transition 2"
+		trigger = {
+			exists = scope:cum_transition
+			scope:cum_transition = 2
+		}
+		# TODO trigger the action cum event and move the had sex with effect inside of it
+		hidden_effect = {
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = root
+				CHARACTER_2 = scope:affairs_partner
+				C1_PREGNANCY_CHANCE = 0
+				C2_PREGNANCY_CHANCE = 0
+				STRESS_EFFECTS = yes
+				DRAMA = yes
+			}
+		}	
+	}
 
-		# if you choose dom option but are not successful, you get taken down a peg
+
+	# alternative new set of options to allow for information of at least what options you could be going for
+	option = {
+		name = "dom transition 1"
+		trigger = {
+			NOT = {exists = scope:cum_transition}
+			scope:dom_transition = 1
+		}
 		if = {
 			limit = {
 				exists = scope:dom_success
 			}
-			# asserted dominance
 			hidden_effect = {
 				reverse_add_opinion = {
 					target = scope:affairs_partner
@@ -179,50 +285,162 @@ LIDAs.1 = {
 			}
 			# TODO trigger next dom event
 			save_scope_value_as = {
-				name = prev_custom_desc
-				value = {0 4}
+				name = transition_desc
+				value = {0 2}
 			}
+			trigger_event = LIDAs.1
 		}
 		else = {
-			# get taken down a peg so lose some dominance
+			# TODO trigger next sub event
 			hidden_effect = {
 				reverse_add_opinion = {
 					target = scope:affairs_partner
 					modifier = dominant_opinion
 					opinion = -2
 				}
-				# TODO description of you getting dommed (and specify a random reason for why you failed the dom)
+			}
+			# for each possible sub transition save the transition
+			if = {
+				limit = {
+					scope:sub_transition = 1
+				}
 				save_scope_value_as = {
-					name = prev_custom_desc
-					value = {5 8}
+					name = transition_desc
+					value = 5
 				}
+				trigger_event = LIDAs.1
 			}
-			# TODO trigger next sub event
-		}
-		# TODO if stamina is very low then trigger cum event and end, otherwise choose another event
-		if = {
-			limit = {
-				scope:partner_stamina <= 1
-			}
-			hidden_effect = {
-				carn_had_sex_with_effect = {
-					CHARACTER_1 = root
-					CHARACTER_2 = scope:affairs_partner
-					C1_PREGNANCY_CHANCE = 0
-					C2_PREGNANCY_CHANCE = 0
-					STRESS_EFFECTS = yes
-					DRAMA = yes
+			else_if = {
+				limit = {
+					scope:sub_transition = 2
 				}
+				save_scope_value_as = {
+					name = transition_desc
+					value = 6
+				}
+				trigger_event = LIDAs.1
 			}
-		}
-		else = {
-			trigger_event = LIDAs.1
 		}
 	}
 	option = {
-		name = LIDAs.1.b
-		custom_tooltip = LIDAs.1.b.tt
-		# lose dominance by choosing the sub option, but not as much as getting reversed
+		name = "dom transition 2"
+		trigger = {
+			NOT = {exists = scope:cum_transition}
+			scope:dom_transition = 2
+		}
+		if = {
+			limit = {
+				exists = scope:dom_success
+			}
+			hidden_effect = {
+				reverse_add_opinion = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+					opinion = 1
+				}
+			}
+			# TODO trigger next dom event
+			save_scope_value_as = {
+				name = transition_desc
+				value = {2 3}
+			}
+			trigger_event = LIDAs.1
+		}
+		else = {
+			# TODO trigger next sub event
+			hidden_effect = {
+				reverse_add_opinion = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+					opinion = -2
+				}
+			}
+			# for each possible sub transition save the transition
+			if = {
+				limit = {
+					scope:sub_transition = 1
+				}
+				save_scope_value_as = {
+					name = transition_desc
+					value = 7
+				}
+				trigger_event = LIDAs.1
+			}
+			else_if = {
+				limit = {
+					scope:sub_transition = 2
+				}
+				save_scope_value_as = {
+					name = transition_desc
+					value = 8
+				}
+				trigger_event = LIDAs.1
+			}
+		}
+	}
+	option = {
+		name = "dom transition 3"
+		trigger = {
+			NOT = {exists = scope:cum_transition}
+			scope:dom_transition = 3
+		}
+		if = {
+			limit = {
+				exists = scope:dom_success
+			}
+			hidden_effect = {
+				reverse_add_opinion = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+					opinion = 1
+				}
+			}
+			# TODO trigger next dom event
+			save_scope_value_as = {
+				name = transition_desc
+				value = {3 4}
+			}
+			trigger_event = LIDAs.1
+		}
+		else = {
+			# TODO trigger next sub event
+			hidden_effect = {
+				reverse_add_opinion = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+					opinion = -2
+				}
+			}
+			# for each possible sub transition save the transition
+			if = {
+				limit = {
+					scope:sub_transition = 1
+				}
+				save_scope_value_as = {
+					name = transition_desc
+					value = 9
+				}
+				trigger_event = LIDAs.1
+			}
+			else_if = {
+				limit = {
+					scope:sub_transition = 2
+				}
+				save_scope_value_as = {
+					name = transition_desc
+					value = 10
+				}
+				trigger_event = LIDAs.1
+			}
+		}
+	}
+	option = {
+		name = "sub transition 1"
+		trigger = {
+			NOT = {exists = scope:cum_transition}
+			scope:sub_transition = 1
+		}
+		# TODO trigger next sub event
 		hidden_effect = {
 			reverse_add_opinion = {
 				target = scope:affairs_partner
@@ -231,28 +449,29 @@ LIDAs.1 = {
 			}
 		}
 		save_scope_value_as = {
-			name = prev_custom_desc
-			value = {9 12}
+			name = transition_desc
+			value = 11
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		name = "sub transition 2"
+		trigger = {
+			NOT = {exists = scope:cum_transition}
+			scope:sub_transition = 2
 		}
 		# TODO trigger next sub event
-		# TODO if stamina is very low then trigger cum event and end, otherwise choose another event
-		if = {
-			limit = {
-				scope:partner_stamina <= 1
-			}
-			hidden_effect = {
-				carn_had_sex_with_effect = {
-					CHARACTER_1 = root
-					CHARACTER_2 = scope:affairs_partner
-					C1_PREGNANCY_CHANCE = 0
-					C2_PREGNANCY_CHANCE = 0
-					STRESS_EFFECTS = yes
-					DRAMA = yes
-				}
+		hidden_effect = {
+			reverse_add_opinion = {
+				target = scope:affairs_partner
+				modifier = dominant_opinion
+				opinion = -1
 			}
 		}
-		else = {
-			trigger_event = LIDAs.1
+		save_scope_value_as = {
+			name = transition_desc
+			value = 12
 		}
+		trigger_event = LIDAs.1
 	}
 }

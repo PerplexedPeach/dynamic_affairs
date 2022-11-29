@@ -286,7 +286,7 @@ calculate_dom_success_effect = {
 	random = {
 		chance = scope:dom_chance
 
-		save_temporary_scope_value_as = {
+		save_scope_value_as = {
 			name = dom_success
 			value = yes
 		}
