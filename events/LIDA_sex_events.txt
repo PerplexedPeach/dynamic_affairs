@@ -157,12 +157,6 @@ LIDAs.1 = {
 			STAMINA_COST_2 = 1
 		}
 
-		# TODO checking if it's a problem with random_list not evaluated until after options
-		save_scope_value_as = {
-			name = dom_transition
-			value = 1
-		}
-
 		# TODO different list if they are about to climax or have climaxed
 		# TODO sample the options that are available
 		random_list = {
@@ -274,7 +268,7 @@ LIDAs.1 = {
 		}
 		if = {
 			limit = {
-				exists = scope:dom_success
+				scope:dom_success = yes
 			}
 			hidden_effect = {
 				reverse_add_opinion = {
@@ -330,7 +324,7 @@ LIDAs.1 = {
 		}
 		if = {
 			limit = {
-				exists = scope:dom_success
+				scope:dom_success = yes
 			}
 			hidden_effect = {
 				reverse_add_opinion = {
@@ -386,7 +380,7 @@ LIDAs.1 = {
 		}
 		if = {
 			limit = {
-				exists = scope:dom_success
+				scope:dom_success = yes
 			}
 			hidden_effect = {
 				reverse_add_opinion = {
