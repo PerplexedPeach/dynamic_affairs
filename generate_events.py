@@ -81,36 +81,36 @@ CUM_TRANSITION = "cum_transition"
 dom_fail_offset = 10000
 
 
-def event_type_namespace(id: EventId) -> str:
-    if isinstance(id, EventsFirst):
+def event_type_namespace(eid: EventId) -> str:
+    if isinstance(eid, EventsFirst):
         return "LIDAf"
-    if isinstance(id, EventsSex):
+    if isinstance(eid, EventsSex):
         return "LIDAs"
-    if isinstance(id, EventsCum):
+    if isinstance(eid, EventsCum):
         return "LIDAc"
-    raise RuntimeError(f"Unrecognized event ID {id}")
+    raise RuntimeError(f"Unrecognized event ID {eid}")
 
 
-def event_type_file(id: EventId) -> str:
-    if isinstance(id, EventsFirst):
+def event_type_file(eid: EventId) -> str:
+    if isinstance(eid, EventsFirst):
         return "events/LIDA_first_events.txt"
-    if isinstance(id, EventsSex):
+    if isinstance(eid, EventsSex):
         return "events/LIDA_sex_events.txt"
-    if isinstance(id, EventsCum):
+    if isinstance(eid, EventsCum):
         return "events/LIDA_cum_events.txt"
-    raise RuntimeError(f"Unrecognized event ID {id}")
+    raise RuntimeError(f"Unrecognized event ID {eid}")
 
 
 class Event:
     """Vertices in a scene graph, each corresponding to a specific scene"""
 
-    def __init__(self, id: EventId, title="Placeholder title", desc="placeholder event desc", theme="seduction",
+    def __init__(self, eid: EventId, title="Placeholder title", desc="placeholder event desc", theme="seduction",
                  animation_left="flirtation", animation_right="flirtation_left", options=(),
                  root_female=True,
                  # custom generation functions, these take the event as teh first argument and call add_line
                  custom_desc: typing.Optional[typing.Callable] = None,
                  custom_immediate_effect: typing.Optional[typing.Callable] = None):
-        self.id = id
+        self.id = eid
         self.title = title
         self.desc = desc
         self.theme = theme
@@ -118,10 +118,10 @@ class Event:
         self.anim_r = animation_right
 
         namespace = event_type_namespace(self.id)
-        id = int(self.id)
-        self.fullname = f"{namespace}.{id}"
+        eid = int(self.id)
+        self.fullname = f"{namespace}.{eid}"
 
-        self.options = options
+        self.options: typing.Sequence[Option] = options
         # to be computed in a backwards pass to see what options come into this event
         self.incoming_options = []
 
@@ -196,10 +196,10 @@ class Option:
     """Directed edges in a scene graph, going from one event to another (or terminating)"""
 
     def __init__(self, next_id: EventId, category: OptionCategory, weight: int, transition_text: str,
-                 failed_transition_text="",  # for dom options, have a chance to fail them
+                 failed_transition_text="", tooltip=None,  # for dom options, have a chance to fail them
                  modifiers=(), triggers=()):
         self.next_id = next_id
-        # TODO to be populated via backwards pass
+        # to be populated via backwards pass
         self.from_id = None
         self.id = None
         self.fullname = None
@@ -210,6 +210,7 @@ class Option:
         self.weight = weight
         self.transition_text = transition_text
         self.failed_transition_text = failed_transition_text
+        self.tooltip = tooltip
 
         self.modifiers = modifiers
         self.triggers = triggers
@@ -229,7 +230,7 @@ class Sex(Event):
 
     def generate_desc(self):
         # description of the transition from the previous event
-        # TODO populate the reverse graph to see what options come into this event
+        # populate the reverse graph to see what options come into this event
         with Block(self, FIRST_VALID):
             for option in self.incoming_options:
                 with Block(self, TRIGGERED_DESC):
@@ -324,7 +325,7 @@ class Sex(Event):
                     self.generate_dom_option_effect(option, categories_to_options[OptionCategory.SUB])
                 elif option.category == OptionCategory.SUB:
                     self.generate_sub_option_effect(option)
-                elif option.cateory == OptionCategory.CUM:
+                elif option.category == OptionCategory.CUM:
                     self.add_line(f"{TRIGGER_EVENT} = {option.next_event.fullname}")
                 else:
                     raise RuntimeError(f"Unsupported option category {option.category}")
@@ -374,11 +375,9 @@ class Block:
         self.event.add_line("}")
 
 
-# TODO define directed graph of events
-
 class EventMap:
     def __init__(self):
-        self.events = {}
+        self.events: typing.Dict[EventId, Event] = {}
 
     def add(self, event: Event):
         self.events[event.id] = event
@@ -386,9 +385,34 @@ class EventMap:
     def __getitem__(self, event_id: EventId):
         return self.events[event_id]
 
+    def all(self):
+        return self.events.values()
+
+
+def link_events_and_options(events: EventMap):
+    options = {}
+    option_id = 1
+    for e in events.all():
+        for o in e.options:
+            o.id = option_id
+            option_id += 1
+            o.from_id = e.id
+            # option generate fullname
+            o.fullname = f"LIDAoption.{o.id}"
+            o.next_event = events[o.next_id]
+            o.from_event = e
+            o.next_event.incoming_options.append(o)
+            options[o.id] = o
+    return options
+
 
 # TODO validate events (no disconnected events; have at least some in-edge or out-edge)
 
 if __name__ == "__main__":
-    e = Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease", "handjob tease common description")
-    print(e)
+    es = EventMap()
+    # define directed graph of events
+    es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",
+               stam_cost_1=0, stam_cost_2=1,
+               desc="handjob tease common description"))
+
+    all_options = link_events_and_options(es)
