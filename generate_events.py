@@ -1,6 +1,8 @@
 import enum
 import typing
+import argparse
 
+UTF8_BOM = u'\ufeff'
 debug = True
 
 
@@ -78,26 +80,25 @@ DOM_TRANSITION = "dom_transition"
 SUB_TRANSITION = "sub_transition"
 CUM_TRANSITION = "cum_transition"
 
+NAMESPACE = "namespace"
+OPTION_NAMESPACE = "LIDAoption"
+FIRST_NAMESPACE = "LIDAf"
+SEX_NAMESPACE = "LIDAs"
+CUM_NAMESPACE = "LIDAc"
+
+L_ENGLISH = "l_english:"
+EVENTS_FILE_HEADER = "# GENERATED FILE - DO NOT MODIFY DIRECTLY"
+
 dom_fail_offset = 10000
 
 
 def event_type_namespace(eid: EventId) -> str:
     if isinstance(eid, EventsFirst):
-        return "LIDAf"
+        return FIRST_NAMESPACE
     if isinstance(eid, EventsSex):
-        return "LIDAs"
+        return SEX_NAMESPACE
     if isinstance(eid, EventsCum):
-        return "LIDAc"
-    raise RuntimeError(f"Unrecognized event ID {eid}")
-
-
-def event_type_file(eid: EventId) -> str:
-    if isinstance(eid, EventsFirst):
-        return "events/LIDA_first_events.txt"
-    if isinstance(eid, EventsSex):
-        return "events/LIDA_sex_events.txt"
-    if isinstance(eid, EventsCum):
-        return "events/LIDA_cum_events.txt"
+        return CUM_NAMESPACE
     raise RuntimeError(f"Unrecognized event ID {eid}")
 
 
@@ -137,6 +138,9 @@ class Event:
     def add_line(self, text: str):
         self._lines.append("\t" * self._indent + text)
 
+    def add_comment(self, text: str):
+        self.add_line("# " + text)
+
     def add_debug_line(self, *args):
         if debug:
             self.add_line(*args)
@@ -145,7 +149,7 @@ class Event:
         """Turn the event into a self string; will be called sequentially on the events to generate them"""
         self._lines = []
         with Block(self, self.fullname):
-            self.add_line(f"# {self.title}")
+            self.add_comment(self.title)
             self.add_line(f"{TYPE} = {CHARACTER_EVENT}")
             self.add_line(f"{TITLE} = {self.fullname}.t")
             self.add_line(f"{THEME} = {self.theme}")
@@ -179,10 +183,15 @@ class Event:
 
     def generate_hidden_opinion_change_effect(self, change):
         with Block(self, HIDDEN_EFFECT):
+            # TODO make this a scripted effect with some chance of gaining traits
             with Block(self, REVERSE_ADD_OPINION):
                 self.add_line(f"{TARGET} = {AFFAIRS_PARTNER}")
                 self.add_line(f"{MODIFIER} = {DOMINANT_OPINION}")
                 self.add_line(f"{OPINION} = {change}")
+
+    def generate_localization(self):
+        # TODO
+        return ""
 
 
 class OptionCategory(enum.IntEnum):
@@ -220,6 +229,14 @@ class Option:
             event.add_line(f"{MODIFIER} = {{ {modifier} }}")
         for trigger in self.triggers:
             event.add_line(f"{TRIGGER} = {{ {trigger} }}")
+
+    def generate_localization(self):
+        lines = [f"{self.fullname}: {self.transition_text}",
+                 f"{OPTION_NAMESPACE}.{self.id + dom_fail_offset}: {self.failed_transition_text}"]
+        if self.tooltip is not None:
+            lines.append(f"{self.fullname}.tt: {self.tooltip}")
+
+        return "\n".join(lines)
 
 
 class Sex(Event):
@@ -398,7 +415,7 @@ def link_events_and_options(events: EventMap):
             option_id += 1
             o.from_id = e.id
             # option generate fullname
-            o.fullname = f"LIDAoption.{o.id}"
+            o.fullname = f"{OPTION_NAMESPACE}.{o.id}"
             o.next_event = events[o.next_id]
             o.from_event = e
             o.next_event.incoming_options.append(o)
@@ -407,6 +424,72 @@ def link_events_and_options(events: EventMap):
 
 
 # TODO validate events (no disconnected events; have at least some in-edge or out-edge)
+def generate_strings(events, options):
+    # generate localizations
+    # event require maps because there are different files needed for each type of event
+    event_text = {}
+    event_localization = {}
+    for event in events.all():
+        ns = event_type_namespace(event.id)
+        if ns not in event_text:
+            event_text[ns] = [EVENTS_FILE_HEADER,
+                              f"{NAMESPACE} = {ns}"]
+            event_localization[ns] = [L_ENGLISH]
+        event_text[ns].append(str(event))
+        event_localization[ns].append(event.generate_localization())
+    # options are all grouped together into a single file so no need for a map
+    option_localization = [L_ENGLISH]
+    for option in options.values():
+        option_localization.append(option.generate_localization())
+    option_localization = "\n".join(option_localization)
+    return event_text, event_localization, option_localization
+
+
+def export_strings(event_text, event_localization, option_localization, dry_run=False):
+    event_ns_to_file_map = {
+        FIRST_NAMESPACE: "events/LIDA_first_events.txt",
+        SEX_NAMESPACE  : "events/LIDA_sex_events.txt",
+        CUM_NAMESPACE  : "events/LIDA_cum_events.txt",
+    }
+    event_ns_to_localization_map = {
+        FIRST_NAMESPACE: "localization/english/LIDA_first_events_l_english.yml",
+        SEX_NAMESPACE  : "localization/english/LIDA_sex_events_l_english.yml",
+        CUM_NAMESPACE  : "localization/english/LIDA_cum_events_l_english.yml",
+    }
+    for ns in event_text.keys():
+        event_file = event_ns_to_file_map[ns]
+        localization_file = event_ns_to_localization_map[ns]
+        event_str = "\n".join(event_text[ns])
+        localization_str = "\n".join(event_localization[ns])
+        print(f"Exporting event text to {event_file}")
+        print(f"Exporting event localization to {localization_file}")
+        if dry_run:
+            print(event_str)
+            print(localization_str)
+        else:
+            with open(event_file, "w", encoding='utf-8') as f:
+                f.write(UTF8_BOM)
+                f.write(event_str)
+            with open(localization_file, "w", encoding='utf-8') as f:
+                f.write(UTF8_BOM)
+                f.write(localization_str)
+
+    localization_file = "localization/english/LIDA_options_l_english.yml"
+    print(f"Exporting options localization to {localization_file}")
+    if dry_run:
+        print(option_localization)
+    else:
+        with open(localization_file, "w", encoding='utf-8') as f:
+            f.write(UTF8_BOM)
+            f.write(option_localization)
+
+
+parser = argparse.ArgumentParser(
+    description='Generate CK3 Dynamic Affairs events and localization',
+)
+parser.add_argument('-d', '--dry', action='store_true',
+                    help="dry run printing the generated strings without exporting to file")
+args = parser.parse_args()
 
 if __name__ == "__main__":
     es = EventMap()
@@ -416,3 +499,4 @@ if __name__ == "__main__":
                desc="handjob tease common description"))
 
     all_options = link_events_and_options(es)
+    export_strings(*generate_strings(es, all_options))
