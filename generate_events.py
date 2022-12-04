@@ -68,6 +68,8 @@ NOT = "NOT"
 LIDA_ONGOING_SEX_EFFECT = "lida_ongoing_sex_effect"
 STAMINA_COST_1 = "STAMINA_COST_1"
 STAMINA_COST_2 = "STAMINA_COST_2"
+CHANGE_SUBDOM_EFFECT = "change_subdom_effect"
+CHANGE = "CHANGE"
 
 SAVE_SCOPE_VALUE_AS = "save_scope_value_as"
 RANDOM = "random"
@@ -182,12 +184,8 @@ class Event:
         pass
 
     def generate_hidden_opinion_change_effect(self, change):
-        with Block(self, HIDDEN_EFFECT):
-            # TODO make this a scripted effect with some chance of gaining traits
-            with Block(self, REVERSE_ADD_OPINION):
-                self.add_line(f"{TARGET} = {AFFAIRS_PARTNER}")
-                self.add_line(f"{MODIFIER} = {DOMINANT_OPINION}")
-                self.add_line(f"{OPINION} = {change}")
+        with Block(self, CHANGE_SUBDOM_EFFECT):
+            self.add_line(f"{CHANGE} = {change}")
 
     def generate_localization(self):
         # TODO

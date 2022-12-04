@@ -270,12 +270,8 @@ LIDAs.1 = {
 			limit = {
 				scope:dom_success = yes
 			}
-			hidden_effect = {
-				reverse_add_opinion = {
-					target = scope:affairs_partner
-					modifier = dominant_opinion
-					opinion = 1
-				}
+			change_subdom_effect = {
+				CHANGE=1
 			}
 			# TODO trigger next dom event
 			save_scope_value_as = {
@@ -285,13 +281,8 @@ LIDAs.1 = {
 			trigger_event = LIDAs.1
 		}
 		else = {
-			# TODO trigger next sub event
-			hidden_effect = {
-				reverse_add_opinion = {
-					target = scope:affairs_partner
-					modifier = dominant_opinion
-					opinion = -2
-				}
+			change_subdom_effect = {
+				CHANGE=-2
 			}
 			# for each possible sub transition save the transition
 			if = {
@@ -326,12 +317,8 @@ LIDAs.1 = {
 			limit = {
 				scope:dom_success = yes
 			}
-			hidden_effect = {
-				reverse_add_opinion = {
-					target = scope:affairs_partner
-					modifier = dominant_opinion
-					opinion = 1
-				}
+			change_subdom_effect = {
+				CHANGE=1
 			}
 			# TODO trigger next dom event
 			save_scope_value_as = {
@@ -342,12 +329,8 @@ LIDAs.1 = {
 		}
 		else = {
 			# TODO trigger next sub event
-			hidden_effect = {
-				reverse_add_opinion = {
-					target = scope:affairs_partner
-					modifier = dominant_opinion
-					opinion = -2
-				}
+			change_subdom_effect = {
+				CHANGE=-2
 			}
 			# for each possible sub transition save the transition
 			if = {
@@ -382,12 +365,8 @@ LIDAs.1 = {
 			limit = {
 				scope:dom_success = yes
 			}
-			hidden_effect = {
-				reverse_add_opinion = {
-					target = scope:affairs_partner
-					modifier = dominant_opinion
-					opinion = 1
-				}
+			change_subdom_effect = {
+				CHANGE=1
 			}
 			# TODO trigger next dom event
 			save_scope_value_as = {
@@ -398,12 +377,8 @@ LIDAs.1 = {
 		}
 		else = {
 			# TODO trigger next sub event
-			hidden_effect = {
-				reverse_add_opinion = {
-					target = scope:affairs_partner
-					modifier = dominant_opinion
-					opinion = -2
-				}
+			change_subdom_effect = {
+				CHANGE=-2
 			}
 			# for each possible sub transition save the transition
 			if = {
@@ -434,13 +409,8 @@ LIDAs.1 = {
 			NOT = {exists = scope:cum_transition}
 			scope:sub_transition = 1
 		}
-		# TODO trigger next sub event
-		hidden_effect = {
-			reverse_add_opinion = {
-				target = scope:affairs_partner
-				modifier = dominant_opinion
-				opinion = -1
-			}
+		change_subdom_effect = {
+			CHANGE=-1
 		}
 		save_scope_value_as = {
 			name = transition_desc
@@ -454,13 +424,8 @@ LIDAs.1 = {
 			NOT = {exists = scope:cum_transition}
 			scope:sub_transition = 2
 		}
-		# TODO trigger next sub event
-		hidden_effect = {
-			reverse_add_opinion = {
-				target = scope:affairs_partner
-				modifier = dominant_opinion
-				opinion = -1
-			}
+		change_subdom_effect = {
+			CHANGE=-1
 		}
 		save_scope_value_as = {
 			name = transition_desc

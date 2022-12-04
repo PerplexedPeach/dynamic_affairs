@@ -73,3 +73,13 @@ get_characters_eligible_partner_effect = {
 		}
 	}
 }
+
+change_subdom_effect = {
+	hidden_effect = {
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = dominant_opinion
+			opinion = $CHANGE$
+		}
+	}
+}
