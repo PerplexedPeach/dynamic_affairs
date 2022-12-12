@@ -129,7 +129,7 @@ def event_type_namespace(eid: EventId) -> str:
 class Event:
     """Vertices in a scene graph, each corresponding to a specific scene"""
 
-    def __init__(self, eid: EventId, title="Placeholder title", desc="placeholder event desc", theme="seduction",
+    def __init__(self, eid: EventId, title, desc="placeholder event desc", theme="seduction",
                  animation_left="flirtation", animation_right="flirtation_left", options=(),
                  root_female=True,
                  # custom generation functions, these take the event as teh first argument and call add_line
@@ -240,7 +240,7 @@ class OptionCategory(enum.IntEnum):
 class Option:
     """Directed edges in a scene graph, going from one event to another (or terminating)"""
 
-    def __init__(self, next_id: EventId, category: OptionCategory, transition_text: str,
+    def __init__(self, next_id: typing.Optional[EventId], category: OptionCategory, transition_text: str,
                  # for dom options, have a chance to fail them
                  failed_transition_text="", weight: int = 10, tooltip=None,
                  subdom_dom_success=1, subdom_dom_fail=-2, subdom_sub=-1,
@@ -283,7 +283,8 @@ class Option:
 
 class Cum(Event):
     def __init__(self, *args, terminal_option: Option, preg_chance_1: float = 0, preg_chance_2: float = 0,
-                 stress_effects=True, drama=True, **kwargs):
+                 subdom_change=0, stress_effects=True, drama=True, **kwargs):
+        self.subdom_change = subdom_change
         self.preg_chance_1 = preg_chance_1
         self.preg_chance_2 = preg_chance_2
         self.stress_effects = stress_effects
@@ -299,6 +300,8 @@ class Cum(Event):
         # register that we have had sex to compute consequences
         # TODO see if this needs to be hidden or not, and also if we need to put this under option?
         with Block(self, HIDDEN_EFFECT):
+            if self.subdom_change is not 0:
+                self.generate_hidden_opinion_change_effect(self.subdom_change)
             with Block(self, CARN_HAD_SEX_WITH_EFFECT):
                 self.add_line(f"{CHARACTER_1} = {ROOT}")
                 self.add_line(f"{CHARACTER_2} = {AFFAIRS_PARTNER}")
@@ -492,9 +495,10 @@ def link_events_and_options(events: EventMap):
             o.from_id = e.id
             # option generate fullname
             o.fullname = f"{OPTION_NAMESPACE}.{o.id}"
-            o.next_event = events[o.next_id]
-            o.from_event = e
-            o.next_event.incoming_options.append(o)
+            if o.next_id is not None:
+                o.next_event = events[o.next_id]
+                o.from_event = e
+                o.next_event.incoming_options.append(o)
             options[o.id] = o
     return options
 
@@ -627,10 +631,36 @@ if __name__ == "__main__":
                           subdom_dom_success=0),
                    Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, OptionCategory.CUM,
                           "Milk him dry onto your tongue"),
-                   # TODO add modifiers for this; a sub ending to this event
                    Option(EventsCum.BLOWJOB_CUM_ON_FACE, OptionCategory.CUM,
-                          "Make him coat your face in cum")
+                          "Make him coat your face in cum"),
+                   Option(EventsCum.BLOWJOB_RUINED_ORGASM, OptionCategory.CUM,
+                          "Cruelly deny him his release")
                )))
+    es.add(Cum(EventsCum.HANDJOB_CUM_IN_HAND, "A Cumshot in Hand is Worth Two in the Bush",
+               subdom_change=1,
+               terminal_option=Option(None, OptionCategory.OTHER, "Wipe your hands on a nearby cloth"),
+               desc=f"""cum in hand desc"""
+               ))
+    es.add(Cum(EventsCum.ASS_TEASE_CUM_ON_ASS, "Icing on the Cake",
+               subdom_change=0,
+               terminal_option=Option(None, OptionCategory.OTHER, "Clean yourself and get dressed"),
+               desc=f"""cum on ass desc"""
+               ))
+    es.add(Cum(EventsCum.BLOWJOB_CUM_ON_FACE, "Painting your Face",
+               subdom_change=-2,
+               terminal_option=Option(None, OptionCategory.OTHER, "Sample some of the stray globs of cum"),
+               desc=f"""cum on face desc"""
+               ))
+    es.add(Cum(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, "Satisfying your Sweet Tooth",
+               subdom_change=-1,
+               terminal_option=Option(None, OptionCategory.OTHER, "Wipe away any cum that might've escaped"),
+               desc=f"""cum in mouth dom desc"""
+               ))
+    es.add(Cum(EventsCum.BLOWJOB_RUINED_ORGASM, "A Firm Grasp on His Release",
+               subdom_change=2,
+               terminal_option=Option(None, OptionCategory.OTHER, "Leave him yearning and frustrated"),
+               desc=f"""blowjob ruined orgasm desc"""
+               ))
 
     # find/specify all source sex events, which are ones which have at most themselves as input events
     all_options = link_events_and_options(es)
