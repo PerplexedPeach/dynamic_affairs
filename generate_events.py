@@ -6,18 +6,18 @@ UTF8_BOM = u'\ufeff'
 debug = True
 
 
-class EventsFirst(enum.IntEnum):
+class EventsFirst(enum.Enum):
     MEETING_WITH_SPOUSE = 1
 
 
-class EventsSex(enum.IntEnum):
+class EventsSex(enum.Enum):
     HANDJOB_TEASE = 1
     ASS_TEASE = 2
     HANDJOB = 3
     BLOWJOB_DOM = 4
 
 
-class EventsCum(enum.IntEnum):
+class EventsCum(enum.Enum):
     HANDJOB_CUM_IN_HAND = 1
     BLOWJOB_CUM_IN_MOUTH_DOM = 2
     BLOWJOB_CUM_ON_FACE = 3
@@ -143,7 +143,7 @@ class Event:
         self.anim_r = animation_right
 
         namespace = event_type_namespace(self.id)
-        eid = int(self.id)
+        eid = self.id.value
         self.fullname = f"{namespace}.{eid}"
 
         self.options: typing.Sequence[Option] = options
@@ -300,7 +300,7 @@ class Cum(Event):
         # register that we have had sex to compute consequences
         # TODO see if this needs to be hidden or not, and also if we need to put this under option?
         with Block(self, HIDDEN_EFFECT):
-            if self.subdom_change is not 0:
+            if self.subdom_change != 0:
                 self.generate_hidden_opinion_change_effect(self.subdom_change)
             with Block(self, CARN_HAD_SEX_WITH_EFFECT):
                 self.add_line(f"{CHARACTER_1} = {ROOT}")
