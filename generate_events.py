@@ -69,6 +69,7 @@ HIDDEN_EFFECT = "hidden_effect"
 REVERSE_ADD_OPINION = "reverse_add_opinion"
 CALCULATE_DOM_SUCCESS_EFFECT = "calculate_dom_success_effect"
 YES = "yes"
+NO = "no"
 EXISTS = "exists"
 NOT = "NOT"
 
@@ -77,6 +78,13 @@ STAMINA_COST_1 = "STAMINA_COST_1"
 STAMINA_COST_2 = "STAMINA_COST_2"
 CHANGE_SUBDOM_EFFECT = "change_subdom_effect"
 CHANGE = "CHANGE"
+CARN_HAD_SEX_WITH_EFFECT = "carn_had_sex_with_effect"
+CHARACTER_1 = "CHARACTER_1"
+CHARACTER_2 = "CHARACTER_2"
+C1_PREGNANCY_CHANCE = "C1_PREGNANCY_CHANCE"
+C2_PREGNANCY_CHANCE = "C2_PREGNANCY_CHANCE"
+STRESS_EFFECTS = "STRESS_EFFECTS"
+DRAMA = "DRAMA"
 
 SAVE_SCOPE_VALUE_AS = "save_scope_value_as"
 RANDOM = "random"
@@ -102,6 +110,10 @@ EVENTS_FILE_HEADER = "# GENERATED FILE - DO NOT MODIFY DIRECTLY"
 THEM = "[affairs_partner.GetFirstName]"
 
 dom_fail_offset = 10000
+
+
+def yes_no(boolean: bool):
+    return YES if boolean else NO
 
 
 def event_type_namespace(eid: EventId) -> str:
@@ -270,14 +282,41 @@ class Option:
 
 
 class Cum(Event):
-    def __init__(self, *args, preg_chance_1: float = 0, preg_chance_2: float = 0, **kwargs):
+    def __init__(self, *args, terminal_option: Option, preg_chance_1: float = 0, preg_chance_2: float = 0,
+                 stress_effects=True, drama=True, **kwargs):
         self.preg_chance_1 = preg_chance_1
         self.preg_chance_2 = preg_chance_2
-        super(Cum, self).__init__(*args, **kwargs)
+        self.stress_effects = stress_effects
+        self.drama = drama
+        super(Cum, self).__init__(*args, options=(terminal_option,), **kwargs)
 
     def generate_desc(self):
         self.generate_incoming_options_desc()
         super(Cum, self).generate_desc()
+
+    def generate_immediate_effect(self):
+        # register that we have had sex to compute consequences
+        # TODO see if this needs to be hidden or not, and also if we need to put this under option?
+        with Block(self, HIDDEN_EFFECT):
+            with Block(self, CARN_HAD_SEX_WITH_EFFECT):
+                self.add_line(f"{CHARACTER_1} = {ROOT}")
+                self.add_line(f"{CHARACTER_2} = {AFFAIRS_PARTNER}")
+                self.add_line(f"{C1_PREGNANCY_CHANCE} = {self.preg_chance_1}")
+                self.add_line(f"{C2_PREGNANCY_CHANCE} = {self.preg_chance_2}")
+                self.add_line(f"{STRESS_EFFECTS} = {yes_no(self.stress_effects)}")
+                self.add_line(f"{DRAMA} = {yes_no(self.drama)}")
+
+        # each cum only has one acknowledgement option with no effects
+        super(Cum, self).generate_immediate_effect()
+
+        self.add_debug_line(f"{DEBUG_LOG_SCOPES} = {YES}")
+
+    def generate_options(self):
+        option = self.options[0]
+        with Block(self, OPTION):
+            self.add_line(f"{NAME} = {option.fullname}")
+            if option.tooltip is not None:
+                self.add_line(f"{CUSTOM_TOOLTIP} = {option.fullname}.tt")
 
 
 class Sex(Event):
@@ -529,7 +568,6 @@ args = parser.parse_args()
 if __name__ == "__main__":
     es = EventMap()
     # define directed graph of events
-    # TODO find/specify all source sex events, which are ones which have at most themselves as input events
     es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=0, stam_cost_2=1,
                desc=f"""With a knowing smirk, you size {THEM} up and put both your hands on their chest.
@@ -592,5 +630,7 @@ if __name__ == "__main__":
                           "Make him coat your face in cum")
                )))
 
+    # find/specify all source sex events, which are ones which have at most themselves as input events
     all_options = link_events_and_options(es)
+    # TODO plot directed graph of events and options
     export_strings(*generate_strings(es, all_options), dry_run=args.dry)
