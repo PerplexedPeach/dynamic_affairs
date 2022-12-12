@@ -1,0 +1,10 @@
+﻿l_english:
+f_very_low_stam: "\nF very low stamina"
+f_low_stam: "\nF low stamina"
+f_med_stam: "\nF medium stamina"
+f_high_stam: "\nF high stamina"
+m_very_low_stam: "\nM very low stamina"
+m_low_stam: "\nM low stamina"
+m_med_stam: "\nM medium stamina"
+m_high_stam: "\nM high stamina"
+attempt_dom_tooltip: "This is considered a dominant action and will be challenged by [affairs_partner.GetFirstName]! Your chance of success is based on your personalities, traits, and current relationship #weak ([SCOPE.GetValue('dom_chance')|0]% success)#!"

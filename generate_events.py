@@ -60,6 +60,7 @@ AFFAIRS_PARTNER = "scope:affairs_partner"
 ROOT_STAMINA = "scope:root_stamina"
 PARNTER_STAMINA = "scope:partner_stamina"
 DOM_SUCCESS = "scope:dom_success"
+DOM_ATTEMPT_TOOLTIP = "attempt_dom_tooltip"
 
 # effects
 TRIGGER_EVENT = "trigger_event"
@@ -438,6 +439,7 @@ class Sex(Event):
         self.add_line(f"{TRIGGER_EVENT} = {option.next_event.fullname}")
 
     def generate_dom_option_effect(self, option, sub_options):
+        self.add_line(f"{CUSTOM_TOOLTIP} = {DOM_ATTEMPT_TOOLTIP}")
         with Block(self, IF):
             with Block(self, LIMIT):
                 self.add_line(f"{DOM_SUCCESS} = {YES}")
