@@ -266,6 +266,9 @@ class Option:
         self.modifiers = modifiers
         self.triggers = triggers
 
+    def __repr__(self):
+        return f"{self.id}: {self.from_id} -> {self.next_id}"
+
     def generate_modifiers_and_triggers(self, event: Event):
         for modifier in self.modifiers:
             event.add_line(f"{MODIFIER} = {{ {modifier} }}")
