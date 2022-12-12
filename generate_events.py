@@ -289,6 +289,7 @@ class Cum(Event):
         self.stress_effects = stress_effects
         self.drama = drama
         super(Cum, self).__init__(*args, options=(terminal_option,), **kwargs)
+        assert isinstance(self.id, EventsCum)
 
     def generate_desc(self):
         self.generate_incoming_options_desc()
@@ -324,6 +325,7 @@ class Sex(Event):
         self.stam_cost_1 = stam_cost_1
         self.stam_cost_2 = stam_cost_2
         super(Sex, self).__init__(*args, **kwargs)
+        assert isinstance(self.id, EventsSex)
 
     def generate_desc(self):
         self.generate_incoming_options_desc()
