@@ -12,10 +12,17 @@ class EventsFirst(enum.IntEnum):
 
 class EventsSex(enum.IntEnum):
     HANDJOB_TEASE = 1
+    ASS_TEASE = 2
+    HANDJOB = 3
+    BLOWJOB_DOM = 4
 
 
 class EventsCum(enum.IntEnum):
     HANDJOB_CUM_IN_HAND = 1
+    BLOWJOB_CUM_IN_MOUTH_DOM = 2
+    BLOWJOB_CUM_ON_FACE = 3
+    BLOWJOB_RUINED_ORGASM = 4
+    ASS_TEASE_CUM_ON_ASS = 5
 
 
 # alias for any event type
@@ -90,6 +97,9 @@ CUM_NAMESPACE = "LIDAc"
 
 L_ENGLISH = "l_english:"
 EVENTS_FILE_HEADER = "# GENERATED FILE - DO NOT MODIFY DIRECTLY"
+
+# localization constants
+THEM = "[affairs_partner.GetFirstName]"
 
 dom_fail_offset = 10000
 
@@ -191,6 +201,17 @@ class Event:
         # TODO
         return ""
 
+    def generate_incoming_options_desc(self):
+        # description of the transition from the previous event
+        # populate the reverse graph to see what options come into this event
+        with Block(self, FIRST_VALID):
+            for option in self.incoming_options:
+                with Block(self, TRIGGERED_DESC):
+                    with Block(self, TRIGGER):
+                        self.add_line(f"{EXISTS} = {SCOPE}:{SEX_TRANSITION}")
+                        self.add_line(f"{SCOPE}:{SEX_TRANSITION} = {option.id}")
+                    self.add_line(f"{DESC} = {SEX_TRANSITION}_{option.id}")
+
 
 class OptionCategory(enum.IntEnum):
     SUB = 1
@@ -202,8 +223,10 @@ class OptionCategory(enum.IntEnum):
 class Option:
     """Directed edges in a scene graph, going from one event to another (or terminating)"""
 
-    def __init__(self, next_id: EventId, category: OptionCategory, weight: int, transition_text: str,
-                 failed_transition_text="", tooltip=None,  # for dom options, have a chance to fail them
+    def __init__(self, next_id: EventId, category: OptionCategory, transition_text: str,
+                 # for dom options, have a chance to fail them
+                 failed_transition_text="", weight: int = 10, tooltip=None,
+                 subdom_dom_success=1, subdom_dom_fail=-2, subdom_sub=-1,
                  modifiers=(), triggers=()):
         self.next_id = next_id
         # to be populated via backwards pass
@@ -218,6 +241,10 @@ class Option:
         self.transition_text = transition_text
         self.failed_transition_text = failed_transition_text
         self.tooltip = tooltip
+
+        self.subdom_dom_success = subdom_dom_success
+        self.subdom_dom_fail = subdom_dom_fail
+        self.subdom_sub = subdom_sub
 
         self.modifiers = modifiers
         self.triggers = triggers
@@ -237,22 +264,24 @@ class Option:
         return "\n".join(lines)
 
 
+class Cum(Event):
+    def __init__(self, *args, preg_chance_1: float = 0, preg_chance_2: float = 0, **kwargs):
+        self.preg_chance_1 = preg_chance_1
+        self.preg_chance_2 = preg_chance_2
+        super(Cum, self).__init__(*args, **kwargs)
+
+    def generate_desc(self):
+        self.generate_incoming_options_desc()
+        super(Cum, self).generate_desc()
+
 class Sex(Event):
-    def __init__(self, *args, stam_cost_1=0, stam_cost_2=0, **kwargs):
+    def __init__(self, *args, stam_cost_1: float = 0, stam_cost_2: float = 0, **kwargs):
         self.stam_cost_1 = stam_cost_1
         self.stam_cost_2 = stam_cost_2
         super(Sex, self).__init__(*args, **kwargs)
 
     def generate_desc(self):
-        # description of the transition from the previous event
-        # populate the reverse graph to see what options come into this event
-        with Block(self, FIRST_VALID):
-            for option in self.incoming_options:
-                with Block(self, TRIGGERED_DESC):
-                    with Block(self, TRIGGER):
-                        self.add_line(f"{EXISTS} = {SCOPE}:{SEX_TRANSITION}")
-                        self.add_line(f"{SCOPE}:{SEX_TRANSITION} = {option.id}")
-                    self.add_line(f"{DESC} = {SEX_TRANSITION}_{option.id}")
+        self.generate_incoming_options_desc()
 
         # description of each partners' stamina
         stamina_thresholds = {2: "very_low", 3: "low", 4: "med"}
@@ -271,6 +300,8 @@ class Sex(Event):
                         self.add_line(f"{DESC} = {prefix}_{suffix}_stam")
                     # backup option for high stamina
                     self.add_line(f"{DESC} = {prefix}_high_stam")
+
+        super(Sex, self).generate_desc()
 
     def generate_options_transition(self, options_list, option_transition_str):
         if len(options_list) == 0:
@@ -346,7 +377,7 @@ class Sex(Event):
                     raise RuntimeError(f"Unsupported option category {option.category}")
 
     def generate_sub_option_effect(self, option):
-        self.generate_hidden_opinion_change_effect(-1)
+        self.generate_hidden_opinion_change_effect(option.subdom_sub)
         with Block(self, SAVE_SCOPE_VALUE_AS):
             self.add_line(f"{NAME} = {SEX_TRANSITION}")
             self.add_line(f"{VALUE} = {option.id}")
@@ -356,13 +387,13 @@ class Sex(Event):
         with Block(self, IF):
             with Block(self, LIMIT):
                 self.add_line(f"{DOM_SUCCESS} = {YES}")
-            self.generate_hidden_opinion_change_effect(1)
+            self.generate_hidden_opinion_change_effect(option.subdom_dom_success)
             with Block(self, SAVE_SCOPE_VALUE_AS):
                 self.add_line(f"{NAME} = {SEX_TRANSITION}")
                 self.add_line(f"{VALUE} = {option.id}")
             self.add_line(f"{TRIGGER_EVENT} = {option.next_event.fullname}")
         with Block(self, ELSE):
-            self.generate_hidden_opinion_change_effect(-2)
+            self.generate_hidden_opinion_change_effect(option.subdom_dom_fail)
             # register that we've failed to dom (use a large offset plus that ID)
             with Block(self, SAVE_SCOPE_VALUE_AS):
                 self.add_line(f"{NAME} = {SEX_TRANSITION}")
@@ -492,9 +523,68 @@ args = parser.parse_args()
 if __name__ == "__main__":
     es = EventMap()
     # define directed graph of events
+    # TODO find/specify all source sex events, which are ones which have at most themselves as input events
     es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=0, stam_cost_2=1,
-               desc="handjob tease common description"))
+               desc=f"""With a knowing smirk, you size {THEM} up and put both your hands on their chest.
+                    Leveraging your weight, you push and trap him against a wall. You slide your knee up his leg 
+                    and play with his bulge. 
+                    
+                    "Is that a dagger in your pocket, or are you glad to see me?"
+                    
+                    Tracing your fingers against thin fabric, you work your way up above his trouser before 
+                    pulling down to free his member. It twitches at the brisk air and the sharp contrast in 
+                    sensation against your warm hands.""",
+               options=(
+                   Option(EventsSex.HANDJOB, OptionCategory.DOM,
+                          "Jerk him off",
+                          "You're too turned on to be satisfied with just jerking him off"
+                          ),
+                   Option(EventsSex.BLOWJOB_DOM, OptionCategory.SUB,
+                          "Kneel down and take him in your mouth"),
+               )))
+    es.add(Sex(EventsSex.HANDJOB, "Handjob",
+               stam_cost_1=0, stam_cost_2=1,
+               desc=f"""handjob desc""",
+               options=(
+                   Option(EventsSex.HANDJOB, OptionCategory.DOM,
+                          "Continue jerking him off",
+                          "You're too turned on to be satisfied with just jerking him off"),
+                   Option(EventsSex.BLOWJOB_DOM, OptionCategory.SUB,
+                          "Kneel down and take him in your mouth"),
+                   Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.CUM,
+                          "Milk him into your soft palms"
+                          )
+               )))
+    es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
+               stam_cost_1=1, stam_cost_2=1,
+               desc=f"""ass tease desc""",
+               options=(
+                   Option(EventsSex.ASS_TEASE, OptionCategory.DOM,
+                          "Continue teasing him with your ass",
+                          "You have better uses for that hard cock than just teasing it"),
+                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.CUM,
+                          "Have him coat your ass with his seed")
+               )))
+    es.add(Sex(EventsSex.BLOWJOB_DOM, "Dom Blowjob",
+               stam_cost_1=0.5, stam_cost_2=1,
+               desc=f"""dom blowjob desc""",
+               options=(
+                   Option(EventsSex.HANDJOB, OptionCategory.DOM,
+                          "Deny him your mouth, replacing it with your hands",
+                          "The potent musk of his member, inflated by the proximity of your nose to his"
+                          "pubes, strangely captivates you and you lose this opportunity to assert more dominance."),
+                   Option(EventsSex.BLOWJOB_DOM, OptionCategory.DOM,
+                          "Continue milking his cock with your lips and tongue",
+                          "The incessant invasion of his member down your mouth pussy momentarily puts you in a trance"
+                          ", leaving the initiative in his hands.",
+                          subdom_dom_success=0),
+                   Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, OptionCategory.CUM,
+                          "Milk him dry onto your tongue"),
+                   # TODO add modifiers for this; a sub ending to this event
+                   Option(EventsCum.BLOWJOB_CUM_ON_FACE, OptionCategory.CUM,
+                          "Make him coat your face in cum")
+               )))
 
     all_options = link_events_and_options(es)
     export_strings(*generate_strings(es, all_options))
