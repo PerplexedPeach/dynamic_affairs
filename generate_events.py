@@ -139,6 +139,7 @@ class Event:
         self.incoming_options = []
 
         self.custom_desc = custom_desc
+        self.custom_localization = None
         self.custom_immediate_effect = custom_immediate_effect
 
         self.root_female = root_female
@@ -184,7 +185,8 @@ class Event:
     def generate_desc(self):
         self.add_line(f"{DESC} = {self.fullname}.{DESC}")
         if self.custom_desc is not None:
-            self.custom_desc(self)
+            # calling the custom desc will modify the event string text in place, and return a localization string
+            self.custom_localization = self.custom_desc(self)
 
     def generate_immediate_effect(self):
         if self.custom_immediate_effect is not None:
@@ -198,8 +200,11 @@ class Event:
             self.add_line(f"{CHANGE} = {change}")
 
     def generate_localization(self):
-        # TODO
-        return ""
+        lines = [f"{self.fullname}.t: \"{self.title}\"",
+                 f"{self.fullname}.{DESC}: \"{self.desc}\""]
+        if self.custom_localization is not None:
+            lines.append(self.custom_localization)
+        return "\n".join(lines)
 
     def generate_incoming_options_desc(self):
         # description of the transition from the previous event
@@ -273,6 +278,7 @@ class Cum(Event):
     def generate_desc(self):
         self.generate_incoming_options_desc()
         super(Cum, self).generate_desc()
+
 
 class Sex(Event):
     def __init__(self, *args, stam_cost_1: float = 0, stam_cost_2: float = 0, **kwargs):
@@ -587,4 +593,4 @@ if __name__ == "__main__":
                )))
 
     all_options = link_events_and_options(es)
-    export_strings(*generate_strings(es, all_options))
+    export_strings(*generate_strings(es, all_options), dry_run=args.dry)
