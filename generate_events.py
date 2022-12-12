@@ -1,6 +1,7 @@
 import enum
 import typing
 import argparse
+import subprocess
 
 UTF8_BOM = u'\ufeff'
 debug = True
@@ -567,6 +568,50 @@ def export_strings(event_text, event_localization, option_localization, dry_run=
             f.write(option_localization)
 
 
+def export_dot_graphviz(events, horizontal=True):
+    gv_filename = "vis.gv"
+    with open(gv_filename, "w") as f:
+        f.write("digraph G {\n")
+        if horizontal:
+            f.write("rankdir=LR;\n")
+        f.write("fontname=Helvetica;\n")
+
+        # sex events
+        for event in events.all():
+            if isinstance(event.id, EventsSex):
+                f.write(event.id.name)
+                f.write("[fontname=Helvetica, shape=box]")
+                f.write(";\n")
+                for option in event.options:
+                    # terminal option
+                    if option.next_id is None:
+                        continue
+                    f.write(f"{event.id.name} -> {option.next_id.name}")
+                    attr = []
+                    if option.category == OptionCategory.DOM:
+                        attr.append("color=red")
+                    elif option.category == OptionCategory.SUB:
+                        attr.append("color=blue")
+
+                    attr.append(f"penwidth={option.weight / 5}")
+
+                    if len(attr) > 0:
+                        attr = "[" + ",".join(attr) + "]"
+                        f.write(attr)
+                    f.write(";\n")
+
+        # cum events (sink nodes)
+        f.write("subgraph cluster_cum {\n label=\"Cum Events\";\n rank=sink;\n")
+        for event in events.all():
+            if isinstance(event.id, EventsCum):
+                f.write(event.id.name)
+                f.write("[fontname=Helvetica, shape=box, style=filled, rank=sink, color=\"#f2f0ae\"]")
+        f.write("}\n")
+        f.write("}\n")
+
+    subprocess.run(["dot", "-Tpng", gv_filename, "-o", "vis.png"])
+
+
 parser = argparse.ArgumentParser(
     description='Generate CK3 Dynamic Affairs events and localization',
 )
@@ -632,10 +677,11 @@ if __name__ == "__main__":
                           "The incessant invasion of his member down your mouth pussy momentarily puts you in a trance"
                           ", leaving the initiative in his hands.",
                           subdom_dom_success=0),
+                   # TODO make these options more likely if you are addicted to cum
                    Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, OptionCategory.CUM,
-                          "Milk him dry onto your tongue"),
+                          "Milk him dry onto your tongue", weight=3),
                    Option(EventsCum.BLOWJOB_CUM_ON_FACE, OptionCategory.CUM,
-                          "Make him coat your face in cum"),
+                          "Make him coat your face in cum", weight=3),
                    Option(EventsCum.BLOWJOB_RUINED_ORGASM, OptionCategory.CUM,
                           "Cruelly deny him his release")
                )))
@@ -649,6 +695,7 @@ if __name__ == "__main__":
                terminal_option=Option(None, OptionCategory.OTHER, "Clean yourself and get dressed"),
                desc=f"""cum on ass desc"""
                ))
+    # TODO add chance of acquiring fetishes
     es.add(Cum(EventsCum.BLOWJOB_CUM_ON_FACE, "Painting your Face",
                subdom_change=-2,
                terminal_option=Option(None, OptionCategory.OTHER, "Sample some of the stray globs of cum"),
@@ -667,5 +714,6 @@ if __name__ == "__main__":
 
     # find/specify all source sex events, which are ones which have at most themselves as input events
     all_options = link_events_and_options(es)
-    # TODO plot directed graph of events and options
+    # plot directed graph of events and options (graphviz)
+    export_dot_graphviz(es)
     export_strings(*generate_strings(es, all_options), dry_run=args.dry)
