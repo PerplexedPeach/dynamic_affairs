@@ -273,10 +273,10 @@ class Option:
             event.add_line(f"{TRIGGER} = {{ {trigger} }}")
 
     def generate_localization(self):
-        lines = [f"{self.fullname}: {self.transition_text}",
-                 f"{OPTION_NAMESPACE}.{self.id + dom_fail_offset}: {self.failed_transition_text}"]
+        lines = [f"{self.fullname}: \"{self.transition_text}\"",
+                 f"{OPTION_NAMESPACE}.{self.id + dom_fail_offset}: \"{self.failed_transition_text}\""]
         if self.tooltip is not None:
-            lines.append(f"{self.fullname}.tt: {self.tooltip}")
+            lines.append(f"{self.fullname}.tt: \"{self.tooltip}\"")
 
         return "\n".join(lines)
 
@@ -514,7 +514,7 @@ def generate_strings(events, options):
         if ns not in event_text:
             event_text[ns] = [EVENTS_FILE_HEADER,
                               f"{NAMESPACE} = {ns}"]
-            event_localization[ns] = [L_ENGLISH]
+            event_localization[ns] = [L_ENGLISH, EVENTS_FILE_HEADER]
         event_text[ns].append(str(event))
         event_localization[ns].append(event.generate_localization())
     # options are all grouped together into a single file so no need for a map
