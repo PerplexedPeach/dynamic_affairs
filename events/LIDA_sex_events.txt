@@ -507,7 +507,7 @@ LIDAs.2 = {
 	immediate = {
 		lida_ongoing_sex_effect = {
 			STAMINA_COST_1 = 1
-			STAMINA_COST_2 = 1
+			STAMINA_COST_2 = 2
 		}
 		# enforce dom success if we have no sub options to ensure there is at least a valid option
 		save_scope_value_as = {
@@ -744,7 +744,7 @@ LIDAs.4 = {
 	immediate = {
 		lida_ongoing_sex_effect = {
 			STAMINA_COST_1 = 0.5
-			STAMINA_COST_2 = 1
+			STAMINA_COST_2 = 2
 		}
 		# enforce dom success if we have no sub options to ensure there is at least a valid option
 		save_scope_value_as = {

@@ -780,7 +780,7 @@ if __name__ == "__main__":
                           "Milk him into your soft palms", )
                )))
     es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
-               stam_cost_1=1, stam_cost_2=1,
+               stam_cost_1=1, stam_cost_2=2,
                desc=f"""ass tease desc""",
                options=(
                    Option(EventsSex.ASS_TEASE, OptionCategory.DOM,
@@ -794,7 +794,7 @@ if __name__ == "__main__":
                           "Have him coat your ass with his seed")
                )))
     es.add(Sex(EventsSex.BLOWJOB_DOM, "Dom Blowjob",
-               stam_cost_1=0.5, stam_cost_2=1,
+               stam_cost_1=0.5, stam_cost_2=2,
                desc=f"""dom blowjob desc""",
                options=(
                    Option(EventsSex.HANDJOB, OptionCategory.DOM,
