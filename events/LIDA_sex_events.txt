@@ -136,6 +136,7 @@ LIDAs.1 = {
 			name = prev_event
 			value = 1
 		}
+		custom_tooltip = voluntary_sub_tooltip
 		change_subdom_effect = {
 			CHANGE = -1
 		}
@@ -391,6 +392,7 @@ LIDAs.3 = {
 			name = prev_event
 			value = 3
 		}
+		custom_tooltip = voluntary_sub_tooltip
 		change_subdom_effect = {
 			CHANGE = -1
 		}

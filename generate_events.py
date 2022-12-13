@@ -63,6 +63,7 @@ PARNTER_STAMINA = "scope:partner_stamina"
 DOM_SUCCESS = "dom_success"
 DOM_ATTEMPT_TOOLTIP = "attempt_dom_tooltip"
 DOM_NO_SUB_TOOLTIP = "dom_no_sub_tooltip"
+VOLUNTARY_SUB_TOOLTIP = "voluntary_sub_tooltip"
 
 # effects
 TRIGGER_EVENT = "trigger_event"
@@ -501,6 +502,7 @@ class Sex(Event):
                     raise RuntimeError(f"Unsupported option category {option.category}")
 
     def generate_sub_option_effect(self, option):
+        self.add_line(f"{CUSTOM_TOOLTIP} = {VOLUNTARY_SUB_TOOLTIP}")
         self.generate_hidden_opinion_change_effect(option.subdom_sub)
         with Block(self, SAVE_SCOPE_VALUE_AS):
             self.add_line(f"{NAME} = {SEX_TRANSITION}")
