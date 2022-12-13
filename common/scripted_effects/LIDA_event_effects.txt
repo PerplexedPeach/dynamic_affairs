@@ -5,12 +5,6 @@ select_first_meet_affairs_effect = {
 	trigger_event = LIDAf.1
 }
 
-# effect for navigating to a random initial event
-select_start_affairs_effect = {
-	# TODO randomly choose from list
-	trigger_event = LIDAs.1
-}
-
 # expects character scope with a scope:affairs_partner character
 # effects for progressing a sex event
 calculate_dom_success_effect = {

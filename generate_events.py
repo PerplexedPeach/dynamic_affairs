@@ -2,6 +2,7 @@ import enum
 import typing
 import argparse
 import subprocess
+import re
 
 UTF8_BOM = u'\ufeff'
 debug = True
@@ -147,6 +148,10 @@ class BlockRoot:
         if debug:
             self.add_line(*args)
 
+    def add_debug_comment(self, *args):
+        if debug:
+            self.add_comment(*args)
+
     def clear(self):
         self._lines = []
 
@@ -165,7 +170,7 @@ class Event(BlockRoot):
                  custom_immediate_effect: typing.Optional[typing.Callable] = None):
         self.id = eid
         self.title = title
-        self.desc = desc
+        self.desc = clean_str(desc)
         self.theme = theme
         self.anim_l = animation_left
         self.anim_r = animation_right
@@ -177,6 +182,9 @@ class Event(BlockRoot):
         self.options: typing.Sequence[Option] = options
         # to be computed in a backwards pass to see what options come into this event
         self.incoming_options = []
+        # for an incoming event, its options not going directly to this option
+        # their dom failure could potentially lead to this event, so we need that in our description
+        self.adjacent_options = []
 
         self.custom_desc = custom_desc
         self.custom_localization = None
@@ -198,7 +206,7 @@ class Event(BlockRoot):
                 self.add_line(f"{ANIMATION} = {self.anim_l}")
             with Block(self, RIGHT_PORTRAIT):
                 self.add_line(f"{CHARACTER} = {AFFAIRS_PARTNER}")
-                self.add_line(f"{CHARACTER} = {self.anim_r}")
+                self.add_line(f"{ANIMATION} = {self.anim_r}")
 
             with Block(self, DESC):
                 self.generate_desc()
@@ -236,13 +244,28 @@ class Event(BlockRoot):
     def generate_incoming_options_desc(self):
         # description of the transition from the previous event
         # populate the reverse graph to see what options come into this event
+        if len(self.incoming_options) == 0:
+            return
         with Block(self, FIRST_VALID):
             for option in self.incoming_options:
                 with Block(self, TRIGGERED_DESC):
                     with Block(self, TRIGGER):
                         self.add_line(f"{EXISTS} = {SCOPE}:{SEX_TRANSITION}")
                         self.add_line(f"{SCOPE}:{SEX_TRANSITION} = {option.id}")
+                    self.add_debug_comment(option.from_event.title)
+                    self.add_debug_comment(option.transition_text)
                     self.add_line(f"{DESC} = {SEX_TRANSITION}_{option.id}")
+            for option in self.adjacent_options:
+                if option.failed_transition_text != "":
+                    with Block(self, TRIGGERED_DESC):
+                        with Block(self, TRIGGER):
+                            self.add_line(f"{EXISTS} = {SCOPE}:{SEX_TRANSITION}")
+                            self.add_line(f"{SCOPE}:{SEX_TRANSITION} = {option.id + dom_fail_offset}")
+                        self.add_debug_comment(f"{option} failed")
+                        self.add_debug_comment(option.failed_transition_text)
+                        self.add_line(f"{DESC} = {SEX_TRANSITION}_{option.id + dom_fail_offset}")
+
+        # TODO if we failed a dom transition (sex transition > offset), also show the sub transition
 
 
 class OptionCategory(enum.IntEnum):
@@ -252,10 +275,15 @@ class OptionCategory(enum.IntEnum):
     OTHER = 4
 
 
+def clean_str(string):
+    return re.sub(' +', ' ', string.strip().replace('\n', '')).replace('\\n\\n ', '\\n\\n')
+
+
 class Option:
     """Directed edges in a scene graph, going from one event to another (or terminating)"""
 
-    def __init__(self, next_id: typing.Optional[EventId], category: OptionCategory, transition_text: str,
+    def __init__(self, next_id: typing.Optional[EventId], category: OptionCategory, option_text: str,
+                 transition_text: str = "",
                  # for dom options, have a chance to fail them
                  failed_transition_text="", weight: int = 10, tooltip=None,
                  subdom_dom_success=1, subdom_dom_fail=-2, subdom_sub=-1,
@@ -270,8 +298,11 @@ class Option:
 
         self.category = category
         self.weight = weight
-        self.transition_text = transition_text
-        self.failed_transition_text = failed_transition_text
+        self.option_text = option_text
+        self.transition_text = clean_str(transition_text) + "\\n"
+        self.failed_transition_text = clean_str(failed_transition_text)
+        if self.failed_transition_text != "":
+            self.failed_transition_text += "\\n"
         self.tooltip = tooltip
 
         self.subdom_dom_success = subdom_dom_success
@@ -291,8 +322,9 @@ class Option:
             event.add_line(f"{TRIGGER} = {{ {trigger} }}")
 
     def generate_localization(self):
-        lines = [f"{self.fullname}: \"{self.transition_text}\"",
-                 f"{OPTION_NAMESPACE}.{self.id + dom_fail_offset}: \"{self.failed_transition_text}\""]
+        lines = [f"{self.fullname}: \"{self.option_text}\"",
+                 f"{SEX_TRANSITION}_{self.id}: \"{self.transition_text}\"",
+                 f"{SEX_TRANSITION}_{self.id + dom_fail_offset}: \"{self.failed_transition_text}\""]
         if self.tooltip is not None:
             lines.append(f"{self.fullname}.tt: \"{self.tooltip}\"")
 
@@ -317,16 +349,15 @@ class Cum(Event):
     def generate_immediate_effect(self):
         # register that we have had sex to compute consequences
         # TODO see if this needs to be hidden or not, and also if we need to put this under option?
-        with Block(self, HIDDEN_EFFECT):
-            if self.subdom_change != 0:
-                self.generate_hidden_opinion_change_effect(self.subdom_change)
-            with Block(self, CARN_HAD_SEX_WITH_EFFECT):
-                self.add_line(f"{CHARACTER_1} = {ROOT}")
-                self.add_line(f"{CHARACTER_2} = {AFFAIRS_PARTNER}")
-                self.add_line(f"{C1_PREGNANCY_CHANCE} = {self.preg_chance_1}")
-                self.add_line(f"{C2_PREGNANCY_CHANCE} = {self.preg_chance_2}")
-                self.add_line(f"{STRESS_EFFECTS} = {yes_no(self.stress_effects)}")
-                self.add_line(f"{DRAMA} = {yes_no(self.drama)}")
+        if self.subdom_change != 0:
+            self.generate_hidden_opinion_change_effect(self.subdom_change)
+        with Block(self, CARN_HAD_SEX_WITH_EFFECT):
+            self.add_line(f"{CHARACTER_1} = {ROOT}")
+            self.add_line(f"{CHARACTER_2} = {AFFAIRS_PARTNER}")
+            self.add_line(f"{C1_PREGNANCY_CHANCE} = {self.preg_chance_1}")
+            self.add_line(f"{C2_PREGNANCY_CHANCE} = {self.preg_chance_2}")
+            self.add_line(f"{STRESS_EFFECTS} = {yes_no(self.stress_effects)}")
+            self.add_line(f"{DRAMA} = {yes_no(self.drama)}")
 
         # each cum only has one acknowledgement option with no effects
         super(Cum, self).generate_immediate_effect()
@@ -366,8 +397,8 @@ class Sex(Event):
                         with Block(self, TRIGGER):
                             self.add_line(f"{value_to_check} < {threshold}")
                         self.add_line(f"{DESC} = {prefix}_{suffix}_stam")
-                    # backup option for high stamina
-                    self.add_line(f"{DESC} = {prefix}_high_stam")
+                # backup option for high stamina
+                self.add_line(f"{DESC} = {prefix}_high_stam")
 
         super(Sex, self).generate_desc()
 
@@ -376,6 +407,7 @@ class Sex(Event):
             return
         with Block(self, RANDOM_LIST):
             for option in options_list:
+                self.add_debug_comment(option.next_id.name)
                 with Block(self, f"{option.weight}"):
                     option.generate_modifiers_and_triggers(self)
                     with Block(self, f"{SAVE_SCOPE_VALUE_AS}"):
@@ -420,6 +452,7 @@ class Sex(Event):
 
         for option in self.options:
             with Block(self, OPTION):
+                self.add_debug_comment(str(option))
                 self.add_line(f"{NAME} = {option.fullname}")
                 if option.tooltip is not None:
                     self.add_line(f"{CUSTOM_TOOLTIP} = {option.fullname}.tt")
@@ -519,6 +552,11 @@ def link_events_and_options(events: EventMap):
                 o.from_event = e
                 o.next_event.incoming_options.append(o)
             options[o.id] = o
+    for e in events.all():
+        for o in e.incoming_options:
+            for ao in o.from_event.options:
+                if ao.category == OptionCategory.DOM and ao not in e.adjacent_options:
+                    e.adjacent_options.append(ao)
     return options
 
 
@@ -676,19 +714,23 @@ if __name__ == "__main__":
                desc=f"""With a knowing smirk, you size {THEM} up and put both your hands on their chest.
                     Leveraging your weight, you push and trap him against a wall. You slide your knee up his leg 
                     and play with his bulge. 
-                    
+                    \\n\\n
                     "Is that a dagger in your pocket, or are you glad to see me?"
-                    
+                    \\n\\n
                     Tracing your fingers against thin fabric, you work your way up above his trouser before 
                     pulling down to free his member. It twitches at the brisk air and the sharp contrast in 
                     sensation against your warm hands.""",
                options=(
                    Option(EventsSex.HANDJOB, OptionCategory.DOM,
                           "Jerk him off",
-                          "You're too turned on to be satisfied with just jerking him off"
-                          ),
+                          transition_text="Your continue building a rhythm going up and down his shaft with your hands.",
+                          failed_transition_text="You're too turned on to be satisfied with just jerking him off."),
                    Option(EventsSex.BLOWJOB_DOM, OptionCategory.SUB,
-                          "Kneel down and take him in your mouth"),
+                          "Kneel down and take him in your mouth",
+                          transition_text=f"""
+                          Looking up, you spot a look of anticipation on {THEM}'s face. 
+                          They were probably not expecting you to volunteer your mouth's service.
+                          They start moving a hand to place behind your head, but you swat it away."""),
                )))
     es.add(Sex(EventsSex.HANDJOB, "Handjob",
                stam_cost_1=0, stam_cost_2=1,
@@ -696,12 +738,18 @@ if __name__ == "__main__":
                options=(
                    Option(EventsSex.HANDJOB, OptionCategory.DOM,
                           "Continue jerking him off",
-                          "You're too turned on to be satisfied with just jerking him off"),
+                          transition_text=f"""
+                          Under the interminable strokes from your hand, {THEM}'s cock has 
+                          fully hardened. Dew-like pre dribbles from the tip, lubricating the whole shaft.""",
+                          failed_transition_text="You're too turned on to be satisfied with just jerking him off"),
                    Option(EventsSex.BLOWJOB_DOM, OptionCategory.SUB,
-                          "Kneel down and take him in your mouth"),
+                          "Kneel down and take him in your mouth",
+                          transition_text=f"""
+                          Looking up, you spot a look of anticipation on {THEM}'s face. 
+                          They were probably not expecting you to volunteer your mouth's service.
+                          They start moving a hand to place behind your head, but you swat it away."""),
                    Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.CUM,
-                          "Milk him into your soft palms"
-                          )
+                          "Milk him into your soft palms", )
                )))
     es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
                stam_cost_1=1, stam_cost_2=1,
@@ -709,7 +757,11 @@ if __name__ == "__main__":
                options=(
                    Option(EventsSex.ASS_TEASE, OptionCategory.DOM,
                           "Continue teasing him with your ass",
-                          "You have better uses for that hard cock than just teasing it"),
+                          transition_text=f"""
+                          You continue to rub his rod in between your buns. You can feel a coolness
+                          from {THEM}'s pre, slicking up your back. The contrast with the rhythmic thrusts from his 
+                          hot member makes this an interesting experience.""",
+                          failed_transition_text="You have better uses for that hard cock than just teasing it"),
                    Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.CUM,
                           "Have him coat your ass with his seed")
                )))
@@ -719,12 +771,24 @@ if __name__ == "__main__":
                options=(
                    Option(EventsSex.HANDJOB, OptionCategory.DOM,
                           "Deny him your mouth, replacing it with your hands",
-                          "The potent musk of his member, inflated by the proximity of your nose to his"
-                          "pubes, strangely captivates you and you lose this opportunity to assert more dominance."),
+                          transition_text=f"""
+                          You give {THEM}'s head a last lick, making sure to drag it out as if expressing your tongue's
+                          reluctance to part from it. You replace the warmth of your mouth with the milder warmth of
+                          your palms, and replace the bobbing of your head with strokes from your hands.
+                          """,
+                          failed_transition_text=f"""
+                          The potent musk of his member, inflated by the proximity of your 
+                          nose to his pubes, strangely captivates you and you lose this opportunity to assert more 
+                          dominance."""),
                    Option(EventsSex.BLOWJOB_DOM, OptionCategory.DOM,
                           "Continue milking his cock with your lips and tongue",
-                          "The incessant invasion of his member down your mouth pussy momentarily puts you in a trance"
-                          ", leaving the initiative in his hands.",
+                          transition_text=f"""
+                          You continue to bob your head back and forth, occasionally glancing up and making adjustments
+                          based on their expression. The fact that you have total control over {THEM}'s pleasure makes
+                          you excited.""",
+                          failed_transition_text=f"""
+                          The incessant invasion of his member down your throat
+                          momentarily puts you in a trance, leaving the initiative in his hands.""",
                           subdom_dom_success=0),
                    # TODO make these options more likely if you are addicted to cum
                    Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, OptionCategory.CUM,

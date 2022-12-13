@@ -1,0 +1,19 @@
+﻿# GENERATED FILE - DO NOT MODIFY DIRECTLY
+select_start_affairs_effect = {
+	random_list = {
+		5 = {
+			trigger = {
+				is_female = yes
+			}
+			# Handjob Tease
+			trigger_event = LIDAs.1
+		}
+		5 = {
+			trigger = {
+				is_female = yes
+			}
+			# Ass Tease
+			trigger_event = LIDAs.2
+		}
+	}
+}

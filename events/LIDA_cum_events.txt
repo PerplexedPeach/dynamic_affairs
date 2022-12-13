@@ -1,2 +1,296 @@
-﻿# namespace for events at the end of an affairs event sequence (e.g. at least one party cums)
+﻿# GENERATED FILE - DO NOT MODIFY DIRECTLY
 namespace = LIDAc
+LIDAc.1 = {
+	# A Cumshot in Hand is Worth Two in the Bush
+	type = character_event
+	title = LIDAc.1.t
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 5
+				}
+				# Handjob
+				# \n
+				desc = sex_transition_5
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10003
+				}
+				# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB failed
+				# You're too turned on to be satisfied with just jerking him off\n
+				desc = sex_transition_10003
+			}
+		}
+		desc = LIDAc.1.desc
+	}
+	immediate = {
+		change_subdom_effect = {
+			CHANGE = 1
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.13
+	}
+}
+LIDAc.5 = {
+	# Icing on the Cake
+	type = character_event
+	title = LIDAc.5.t
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 7
+				}
+				# Ass Tease
+				# \n
+				desc = sex_transition_7
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10006
+				}
+				# 6: EventsSex.ASS_TEASE -> EventsSex.ASS_TEASE failed
+				# You have better uses for that hard cock than just teasing it\n
+				desc = sex_transition_10006
+			}
+		}
+		desc = LIDAc.5.desc
+	}
+	immediate = {
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.14
+	}
+}
+LIDAc.3 = {
+	# Painting your Face
+	type = character_event
+	title = LIDAc.3.t
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 11
+				}
+				# Dom Blowjob
+				# \n
+				desc = sex_transition_11
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10008
+				}
+				# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his pubes, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_10008
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10009
+				}
+				# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_10009
+			}
+		}
+		desc = LIDAc.3.desc
+	}
+	immediate = {
+		change_subdom_effect = {
+			CHANGE = -2
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.15
+	}
+}
+LIDAc.2 = {
+	# Satisfying your Sweet Tooth
+	type = character_event
+	title = LIDAc.2.t
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10
+				}
+				# Dom Blowjob
+				# \n
+				desc = sex_transition_10
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10008
+				}
+				# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his pubes, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_10008
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10009
+				}
+				# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_10009
+			}
+		}
+		desc = LIDAc.2.desc
+	}
+	immediate = {
+		change_subdom_effect = {
+			CHANGE = -1
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.16
+	}
+}
+LIDAc.4 = {
+	# A Firm Grasp on His Release
+	type = character_event
+	title = LIDAc.4.t
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 12
+				}
+				# Dom Blowjob
+				# \n
+				desc = sex_transition_12
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10008
+				}
+				# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his pubes, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_10008
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10009
+				}
+				# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_10009
+			}
+		}
+		desc = LIDAc.4.desc
+	}
+	immediate = {
+		change_subdom_effect = {
+			CHANGE = 2
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.17
+	}
+}

@@ -1,101 +1,19 @@
-﻿# namespace for sex events in between first initiating the scene and cumming
-# sub/dom progression for each event is specific to that event (e.g. handjob tease into random other event or just directly handjob cum)
+﻿# GENERATED FILE - DO NOT MODIFY DIRECTLY
 namespace = LIDAs
 LIDAs.1 = {
-	# F handjob tease
+	# Handjob Tease
 	type = character_event
 	title = LIDAs.1.t
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
 	desc = {
-		desc = LIDAs.1.desc
-
-		# description based on the transition from the previous event, if there was one
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 1
-				}
-				desc = transition_desc_1
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 2
-				}
-				desc = transition_desc_2
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 3
-				}
-				desc = transition_desc_3
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 4
-				}
-				desc = transition_desc_4
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 5
-				}
-				desc = transition_desc_5
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 6
-				}
-				desc = transition_desc_6
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 7
-				}
-				desc = transition_desc_7
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 8
-				}
-				desc = transition_desc_8
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 9
-				}
-				desc = transition_desc_9
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 10
-				}
-				desc = transition_desc_10
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 11
-				}
-				desc = transition_desc_11
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:transition_desc
-					scope:transition_desc <= 12
-				}
-				desc = transition_desc_12
-			}
-		}
-
 		first_valid = {
 			triggered_desc = {
 				trigger = {
@@ -110,7 +28,7 @@ LIDAs.1 = {
 				desc = f_low_stam
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:root_stamina < 4
 				}
 				desc = f_med_stam
@@ -131,14 +49,99 @@ LIDAs.1 = {
 				desc = m_low_stam
 			}
 			triggered_desc = {
-				trigger = { 
+				trigger = {
 					scope:partner_stamina < 4
 				}
 				desc = m_med_stam
 			}
 			desc = m_high_stam
 		}
+		desc = LIDAs.1.desc
 	}
+	immediate = {
+		calculate_dom_success_effect = yes
+		lida_ongoing_sex_effect = {
+			STAMINA_COST_1 = 0
+			STAMINA_COST_2 = 1
+		}
+		random_list = {
+			# HANDJOB
+			10 = {
+				save_scope_value_as = {
+					name = dom_transition
+					value = 1
+				}
+			}
+		}
+		random_list = {
+			# BLOWJOB_DOM
+			10 = {
+				save_scope_value_as = {
+					name = sub_transition
+					value = 2
+				}
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		# 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB
+		name = LIDAoption.1
+		trigger = {
+			NOT = { exists = scope:cum_transition }
+			scope:dom_transition = 1
+		}
+		custom_tooltip = attempt_dom_tooltip
+		if = {
+			limit = {
+				scope:dom_success = yes
+			}
+			change_subdom_effect = {
+				CHANGE = 1
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = 1
+			}
+			trigger_event = LIDAs.3
+		}
+		else = {
+			change_subdom_effect = {
+				CHANGE = -2
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = 10001
+			}
+			if = {
+				limit = {
+					scope:sub_transition = 2
+				}
+				trigger_event = LIDAs.4
+			}
+		}
+	}
+	option = {
+		# 2: EventsSex.HANDJOB_TEASE -> EventsSex.BLOWJOB_DOM
+		name = LIDAoption.2
+		trigger = {
+			NOT = { exists = scope:cum_transition }
+			scope:sub_transition = 2
+		}
+		change_subdom_effect = {
+			CHANGE = -1
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 2
+		}
+		trigger_event = LIDAs.4
+	}
+}
+LIDAs.3 = {
+	# Handjob
+	type = character_event
+	title = LIDAs.3.t
 	theme = seduction
 	left_portrait = {
 		character = root
@@ -148,289 +151,631 @@ LIDAs.1 = {
 		character = scope:affairs_partner
 		animation = flirtation_left
 	}
-
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 1
+				}
+				# Handjob Tease
+				# Your continue building a rhythm going up and down his shaft with your hands.\n
+				desc = sex_transition_1
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 3
+				}
+				# Handjob
+				# Under the interminable strokes from your hand, [affairs_partner.GetFirstName]'s cock has fully hardened. Dew-like pre dribbles from the tip, lubricating the whole shaft.\n
+				desc = sex_transition_3
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 8
+				}
+				# Dom Blowjob
+				# You give [affairs_partner.GetFirstName]'s head a last lick, making sure to drag it out as if expressing your tongue's reluctance to part from it. You replace the warmth of your mouth with the milder warmth of your palms, and replace the bobbing of your head with strokes from your hands.\n
+				desc = sex_transition_8
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10001
+				}
+				# 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB failed
+				# You're too turned on to be satisfied with just jerking him off.\n
+				desc = sex_transition_10001
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10003
+				}
+				# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB failed
+				# You're too turned on to be satisfied with just jerking him off\n
+				desc = sex_transition_10003
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10008
+				}
+				# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his pubes, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_10008
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10009
+				}
+				# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_10009
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:root_stamina < 2
+				}
+				desc = f_very_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:root_stamina < 3
+				}
+				desc = f_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:root_stamina < 4
+				}
+				desc = f_med_stam
+			}
+			desc = f_high_stam
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:partner_stamina < 2
+				}
+				desc = m_very_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:partner_stamina < 3
+				}
+				desc = m_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:partner_stamina < 4
+				}
+				desc = m_med_stam
+			}
+			desc = m_high_stam
+		}
+		desc = LIDAs.3.desc
+	}
 	immediate = {
 		calculate_dom_success_effect = yes
-		# each event reduces stamina for both partner by a certain amount
 		lida_ongoing_sex_effect = {
 			STAMINA_COST_1 = 0
 			STAMINA_COST_2 = 1
 		}
-
-		# TODO different list if they are about to climax or have climaxed
-		# TODO sample the options that are available
 		random_list = {
-			6 = {
-				modifier = {add = 1 has_trait = honest}
-				save_scope_value_as = {
-					name = dom_transition
-					value = 1
-				}
-			}
-			4 = {
-				save_scope_value_as = {
-					name = dom_transition
-					value = 2
-				}
-			}
-			2 = {
-				trigger = {is_female = yes}
+			# HANDJOB
+			10 = {
 				save_scope_value_as = {
 					name = dom_transition
 					value = 3
 				}
 			}
 		}
-
 		random_list = {
-			3 = {
+			# BLOWJOB_DOM
+			10 = {
 				save_scope_value_as = {
 					name = sub_transition
-					value = 1
-				}
-			}
-			4 = {
-				save_scope_value_as = {
-					name = sub_transition
-					value = 2
+					value = 4
 				}
 			}
 		}
-
-		# TODO cum events
 		if = {
 			limit = {
-				scope:partner_stamina <= 1
+				scope:partner_stamina <= 0
 			}
 			random_list = {
-				3 = {
+				# HANDJOB_CUM_IN_HAND
+				10 = {
 					save_scope_value_as = {
 						name = cum_transition
-						value = 1
-					}
-				}
-				4 = {
-					save_scope_value_as = {
-						name = cum_transition
-						value = 2
+						value = 5
 					}
 				}
 			}
 		}
 		debug_log_scopes = yes
 	}
-
-	# options that are only valid if you're cumming
 	option = {
-		name = "cum transition 1"
+		# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB
+		name = LIDAoption.3
 		trigger = {
-			exists = scope:cum_transition
-			scope:cum_transition = 1
-		}
-		# TODO trigger the action cum event and move the had sex with effect inside of it
-		hidden_effect = {
-			carn_had_sex_with_effect = {
-				CHARACTER_1 = root
-				CHARACTER_2 = scope:affairs_partner
-				C1_PREGNANCY_CHANCE = 0
-				C2_PREGNANCY_CHANCE = 0
-				STRESS_EFFECTS = yes
-				DRAMA = yes
-			}
-		}	
-	}
-	option = {
-		name = "cum transition 2"
-		trigger = {
-			exists = scope:cum_transition
-			scope:cum_transition = 2
-		}
-		# TODO trigger the action cum event and move the had sex with effect inside of it
-		hidden_effect = {
-			carn_had_sex_with_effect = {
-				CHARACTER_1 = root
-				CHARACTER_2 = scope:affairs_partner
-				C1_PREGNANCY_CHANCE = 0
-				C2_PREGNANCY_CHANCE = 0
-				STRESS_EFFECTS = yes
-				DRAMA = yes
-			}
-		}	
-	}
-
-
-	# alternative new set of options to allow for information of at least what options you could be going for
-	option = {
-		name = "dom transition 1"
-		trigger = {
-			NOT = {exists = scope:cum_transition}
-			scope:dom_transition = 1
-		}
-		if = {
-			limit = {
-				scope:dom_success = yes
-			}
-			change_subdom_effect = {
-				CHANGE=1
-			}
-			# TODO trigger next dom event
-			save_scope_value_as = {
-				name = transition_desc
-				value = {0 2}
-			}
-			trigger_event = LIDAs.1
-		}
-		else = {
-			change_subdom_effect = {
-				CHANGE=-2
-			}
-			# for each possible sub transition save the transition
-			if = {
-				limit = {
-					scope:sub_transition = 1
-				}
-				save_scope_value_as = {
-					name = transition_desc
-					value = 5
-				}
-				trigger_event = LIDAs.1
-			}
-			else_if = {
-				limit = {
-					scope:sub_transition = 2
-				}
-				save_scope_value_as = {
-					name = transition_desc
-					value = 6
-				}
-				trigger_event = LIDAs.1
-			}
-		}
-	}
-	option = {
-		name = "dom transition 2"
-		trigger = {
-			NOT = {exists = scope:cum_transition}
-			scope:dom_transition = 2
-		}
-		if = {
-			limit = {
-				scope:dom_success = yes
-			}
-			change_subdom_effect = {
-				CHANGE=1
-			}
-			# TODO trigger next dom event
-			save_scope_value_as = {
-				name = transition_desc
-				value = {2 3}
-			}
-			trigger_event = LIDAs.1
-		}
-		else = {
-			# TODO trigger next sub event
-			change_subdom_effect = {
-				CHANGE=-2
-			}
-			# for each possible sub transition save the transition
-			if = {
-				limit = {
-					scope:sub_transition = 1
-				}
-				save_scope_value_as = {
-					name = transition_desc
-					value = 7
-				}
-				trigger_event = LIDAs.1
-			}
-			else_if = {
-				limit = {
-					scope:sub_transition = 2
-				}
-				save_scope_value_as = {
-					name = transition_desc
-					value = 8
-				}
-				trigger_event = LIDAs.1
-			}
-		}
-	}
-	option = {
-		name = "dom transition 3"
-		trigger = {
-			NOT = {exists = scope:cum_transition}
+			NOT = { exists = scope:cum_transition }
 			scope:dom_transition = 3
 		}
+		custom_tooltip = attempt_dom_tooltip
 		if = {
 			limit = {
 				scope:dom_success = yes
 			}
 			change_subdom_effect = {
-				CHANGE=1
+				CHANGE = 1
 			}
-			# TODO trigger next dom event
 			save_scope_value_as = {
-				name = transition_desc
-				value = {3 4}
+				name = sex_transition
+				value = 3
 			}
-			trigger_event = LIDAs.1
+			trigger_event = LIDAs.3
 		}
 		else = {
-			# TODO trigger next sub event
 			change_subdom_effect = {
-				CHANGE=-2
+				CHANGE = -2
 			}
-			# for each possible sub transition save the transition
+			save_scope_value_as = {
+				name = sex_transition
+				value = 10003
+			}
 			if = {
 				limit = {
-					scope:sub_transition = 1
+					scope:sub_transition = 4
 				}
+				trigger_event = LIDAs.4
+			}
+		}
+	}
+	option = {
+		# 4: EventsSex.HANDJOB -> EventsSex.BLOWJOB_DOM
+		name = LIDAoption.4
+		trigger = {
+			NOT = { exists = scope:cum_transition }
+			scope:sub_transition = 4
+		}
+		change_subdom_effect = {
+			CHANGE = -1
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 4
+		}
+		trigger_event = LIDAs.4
+	}
+	option = {
+		# 5: EventsSex.HANDJOB -> EventsCum.HANDJOB_CUM_IN_HAND
+		name = LIDAoption.5
+		trigger = {
+			exists = scope:cum_transition
+			scope:cum_transition = 5
+		}
+		trigger_event = LIDAc.1
+	}
+}
+LIDAs.2 = {
+	# Ass Tease
+	type = character_event
+	title = LIDAs.2.t
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 6
+				}
+				# Ass Tease
+				# You continue to rub his rod in between your buns. You can feel a coolness from [affairs_partner.GetFirstName]'s pre, slicking up your back. The contrast with the rhythmic thrusts from his hot member makes this an interesting experience.\n
+				desc = sex_transition_6
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10006
+				}
+				# 6: EventsSex.ASS_TEASE -> EventsSex.ASS_TEASE failed
+				# You have better uses for that hard cock than just teasing it\n
+				desc = sex_transition_10006
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:root_stamina < 2
+				}
+				desc = f_very_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:root_stamina < 3
+				}
+				desc = f_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:root_stamina < 4
+				}
+				desc = f_med_stam
+			}
+			desc = f_high_stam
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:partner_stamina < 2
+				}
+				desc = m_very_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:partner_stamina < 3
+				}
+				desc = m_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:partner_stamina < 4
+				}
+				desc = m_med_stam
+			}
+			desc = m_high_stam
+		}
+		desc = LIDAs.2.desc
+	}
+	immediate = {
+		calculate_dom_success_effect = yes
+		lida_ongoing_sex_effect = {
+			STAMINA_COST_1 = 1
+			STAMINA_COST_2 = 1
+		}
+		random_list = {
+			# ASS_TEASE
+			10 = {
 				save_scope_value_as = {
-					name = transition_desc
+					name = dom_transition
+					value = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:partner_stamina <= 0
+			}
+			random_list = {
+				# ASS_TEASE_CUM_ON_ASS
+				10 = {
+					save_scope_value_as = {
+						name = cum_transition
+						value = 7
+					}
+				}
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		# 6: EventsSex.ASS_TEASE -> EventsSex.ASS_TEASE
+		name = LIDAoption.6
+		trigger = {
+			NOT = { exists = scope:cum_transition }
+			scope:dom_transition = 6
+		}
+		custom_tooltip = attempt_dom_tooltip
+		if = {
+			limit = {
+				scope:dom_success = yes
+			}
+			change_subdom_effect = {
+				CHANGE = 1
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = 6
+			}
+			trigger_event = LIDAs.2
+		}
+		else = {
+			change_subdom_effect = {
+				CHANGE = -2
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = 10006
+			}
+		}
+	}
+	option = {
+		# 7: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS
+		name = LIDAoption.7
+		trigger = {
+			exists = scope:cum_transition
+			scope:cum_transition = 7
+		}
+		trigger_event = LIDAc.5
+	}
+}
+LIDAs.4 = {
+	# Dom Blowjob
+	type = character_event
+	title = LIDAs.4.t
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 2
+				}
+				# Handjob Tease
+				# Looking up, you spot a look of anticipation on [affairs_partner.GetFirstName]'s face. They were probably not expecting you to volunteer your mouth's service. They start moving a hand to place behind your head, but you swat it away.\n
+				desc = sex_transition_2
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 4
+				}
+				# Handjob
+				# Looking up, you spot a look of anticipation on [affairs_partner.GetFirstName]'s face. They were probably not expecting you to volunteer your mouth's service. They start moving a hand to place behind your head, but you swat it away.\n
+				desc = sex_transition_4
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 9
+				}
+				# Dom Blowjob
+				# You continue to bob your head back and forth, occasionally glancing up and making adjustments based on their expression. The fact that you have total control over [affairs_partner.GetFirstName]'s pleasure makes you excited.\n
+				desc = sex_transition_9
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10001
+				}
+				# 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB failed
+				# You're too turned on to be satisfied with just jerking him off.\n
+				desc = sex_transition_10001
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10003
+				}
+				# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB failed
+				# You're too turned on to be satisfied with just jerking him off\n
+				desc = sex_transition_10003
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10008
+				}
+				# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his pubes, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_10008
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10009
+				}
+				# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_10009
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:root_stamina < 2
+				}
+				desc = f_very_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:root_stamina < 3
+				}
+				desc = f_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:root_stamina < 4
+				}
+				desc = f_med_stam
+			}
+			desc = f_high_stam
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:partner_stamina < 2
+				}
+				desc = m_very_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:partner_stamina < 3
+				}
+				desc = m_low_stam
+			}
+			triggered_desc = {
+				trigger = {
+					scope:partner_stamina < 4
+				}
+				desc = m_med_stam
+			}
+			desc = m_high_stam
+		}
+		desc = LIDAs.4.desc
+	}
+	immediate = {
+		calculate_dom_success_effect = yes
+		lida_ongoing_sex_effect = {
+			STAMINA_COST_1 = 0.5
+			STAMINA_COST_2 = 1
+		}
+		random_list = {
+			# HANDJOB
+			10 = {
+				save_scope_value_as = {
+					name = dom_transition
+					value = 8
+				}
+			}
+			# BLOWJOB_DOM
+			10 = {
+				save_scope_value_as = {
+					name = dom_transition
 					value = 9
 				}
-				trigger_event = LIDAs.1
 			}
-			else_if = {
-				limit = {
-					scope:sub_transition = 2
+		}
+		if = {
+			limit = {
+				scope:partner_stamina <= 0
+			}
+			random_list = {
+				# BLOWJOB_CUM_IN_MOUTH_DOM
+				3 = {
+					save_scope_value_as = {
+						name = cum_transition
+						value = 10
+					}
 				}
-				save_scope_value_as = {
-					name = transition_desc
-					value = 10
+				# BLOWJOB_CUM_ON_FACE
+				3 = {
+					save_scope_value_as = {
+						name = cum_transition
+						value = 11
+					}
 				}
-				trigger_event = LIDAs.1
+				# BLOWJOB_RUINED_ORGASM
+				10 = {
+					save_scope_value_as = {
+						name = cum_transition
+						value = 12
+					}
+				}
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB
+		name = LIDAoption.8
+		trigger = {
+			NOT = { exists = scope:cum_transition }
+			scope:dom_transition = 8
+		}
+		custom_tooltip = attempt_dom_tooltip
+		if = {
+			limit = {
+				scope:dom_success = yes
+			}
+			change_subdom_effect = {
+				CHANGE = 1
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = 8
+			}
+			trigger_event = LIDAs.3
+		}
+		else = {
+			change_subdom_effect = {
+				CHANGE = -2
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = 10008
 			}
 		}
 	}
 	option = {
-		name = "sub transition 1"
+		# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM
+		name = LIDAoption.9
 		trigger = {
-			NOT = {exists = scope:cum_transition}
-			scope:sub_transition = 1
+			NOT = { exists = scope:cum_transition }
+			scope:dom_transition = 9
 		}
-		change_subdom_effect = {
-			CHANGE=-1
+		custom_tooltip = attempt_dom_tooltip
+		if = {
+			limit = {
+				scope:dom_success = yes
+			}
+			change_subdom_effect = {
+				CHANGE = 0
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = 9
+			}
+			trigger_event = LIDAs.4
 		}
-		save_scope_value_as = {
-			name = transition_desc
-			value = 11
+		else = {
+			change_subdom_effect = {
+				CHANGE = -2
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = 10009
+			}
 		}
-		trigger_event = LIDAs.1
 	}
 	option = {
-		name = "sub transition 2"
+		# 10: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM
+		name = LIDAoption.10
 		trigger = {
-			NOT = {exists = scope:cum_transition}
-			scope:sub_transition = 2
+			exists = scope:cum_transition
+			scope:cum_transition = 10
 		}
-		change_subdom_effect = {
-			CHANGE=-1
+		trigger_event = LIDAc.2
+	}
+	option = {
+		# 11: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_ON_FACE
+		name = LIDAoption.11
+		trigger = {
+			exists = scope:cum_transition
+			scope:cum_transition = 11
 		}
-		save_scope_value_as = {
-			name = transition_desc
-			value = 12
+		trigger_event = LIDAc.3
+	}
+	option = {
+		# 12: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM
+		name = LIDAoption.12
+		trigger = {
+			exists = scope:cum_transition
+			scope:cum_transition = 12
 		}
-		trigger_event = LIDAs.1
+		trigger_event = LIDAc.4
 	}
 }
