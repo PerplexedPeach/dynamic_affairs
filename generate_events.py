@@ -74,7 +74,9 @@ YES = "yes"
 NO = "no"
 EXISTS = "exists"
 NOT = "NOT"
+IS_FEMALE = "is_female"
 
+SELECT_START_AFFAIRS_EFFECT = "select_start_affairs_effect"
 LIDA_ONGOING_SEX_EFFECT = "lida_ongoing_sex_effect"
 STAMINA_COST_1 = "STAMINA_COST_1"
 STAMINA_COST_2 = "STAMINA_COST_2"
@@ -112,6 +114,7 @@ EVENTS_FILE_HEADER = "# GENERATED FILE - DO NOT MODIFY DIRECTLY"
 THEM = "[affairs_partner.GetFirstName]"
 
 dom_fail_offset = 10000
+base_event_weight = 5
 
 
 def yes_no(boolean: bool):
@@ -128,7 +131,30 @@ def event_type_namespace(eid: EventId) -> str:
     raise RuntimeError(f"Unrecognized event ID {eid}")
 
 
-class Event:
+class BlockRoot:
+    def __init__(self):
+        # temporary data when generating the string representation
+        self._lines = []
+        self.indent = 0
+
+    def add_line(self, text: str):
+        self._lines.append("\t" * self.indent + text)
+
+    def add_comment(self, text: str):
+        self.add_line("# " + text)
+
+    def add_debug_line(self, *args):
+        if debug:
+            self.add_line(*args)
+
+    def clear(self):
+        self._lines = []
+
+    def __repr__(self):
+        return "\n".join(self._lines)
+
+
+class Event(BlockRoot):
     """Vertices in a scene graph, each corresponding to a specific scene"""
 
     def __init__(self, eid: EventId, title, desc="placeholder event desc", theme="seduction",
@@ -157,20 +183,7 @@ class Event:
         self.custom_immediate_effect = custom_immediate_effect
 
         self.root_female = root_female
-
-        # temporary data when generating the string representation
-        self._lines = []
-        self._indent = 0
-
-    def add_line(self, text: str):
-        self._lines.append("\t" * self._indent + text)
-
-    def add_comment(self, text: str):
-        self.add_line("# " + text)
-
-    def add_debug_line(self, *args):
-        if debug:
-            self.add_line(*args)
+        super(Event, self).__init__()
 
     def __repr__(self):
         """Turn the event into a self string; will be called sequentially on the events to generate them"""
@@ -465,15 +478,15 @@ class Sex(Event):
 class Block:
     """Context manager for nesting blocks of = {} with proper indentation"""
 
-    def __init__(self, event: Event, left_hand_side: str):
+    def __init__(self, event: BlockRoot, left_hand_side: str):
         self.event = event
         self.event.add_line(f"{left_hand_side} = {{")
 
     def __enter__(self):
-        self.event._indent += 1
+        self.event.indent += 1
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        self.event._indent -= 1
+        self.event.indent -= 1
         self.event.add_line("}")
 
 
@@ -528,10 +541,34 @@ def generate_strings(events, options):
     for option in options.values():
         option_localization.append(option.generate_localization())
     option_localization = "\n".join(option_localization)
-    return event_text, event_localization, option_localization
+    # organize effects into effects for randomly selecting them initially
+    b = BlockRoot()
+    # find sex events that have at most just itself as the incoming event
+    source_events = []
+    for e in events.all():
+        is_source = True
+        for o in e.incoming_options:
+            ie = o.from_event
+            if ie != e and not isinstance(ie.id, EventsFirst):
+                is_source = False
+                break
+        if is_source:
+            source_events.append(e)
+    with Block(b, SELECT_START_AFFAIRS_EFFECT):
+        with Block(b, RANDOM_LIST):
+            for e in source_events:
+                with Block(b, str(base_event_weight)):
+                    # triggers on these based on if root is female
+                    with Block(b, TRIGGER):
+                        b.add_line(f"{IS_FEMALE} = {yes_no(e.root_female)}")
+                    # TODO modifier on fetishes and sub/domness (needs to be added to the events as well)
+                    b.add_comment(e.title)
+                    b.add_line(f"{TRIGGER_EVENT} = {e.fullname}")
+    effect_text = str(b)
+    return event_text, effect_text, event_localization, option_localization
 
 
-def export_strings(event_text, event_localization, option_localization, dry_run=False):
+def export_strings(event_text, effect_text, event_localization, option_localization, dry_run=False):
     event_ns_to_file_map = {
         FIRST_NAMESPACE: "events/LIDA_first_events.txt",
         SEX_NAMESPACE  : "events/LIDA_sex_events.txt",
@@ -568,6 +605,16 @@ def export_strings(event_text, event_localization, option_localization, dry_run=
         with open(localization_file, "w", encoding='utf-8') as f:
             f.write(UTF8_BOM)
             f.write(option_localization)
+    effect_file = "common/scripted_effects/LIDA_generated_effects.txt"
+    print(f"Exporting effects to {effect_file}")
+    if dry_run:
+        print(effect_text)
+    else:
+        with open(effect_file, "w", encoding='utf-8') as f:
+            f.write(UTF8_BOM)
+            f.write(EVENTS_FILE_HEADER)
+            f.write("\n")
+            f.write(effect_text)
 
 
 def export_dot_graphviz(events, horizontal=True):
