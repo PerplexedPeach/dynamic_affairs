@@ -59,11 +59,11 @@ LIDAs.1 = {
 		desc = LIDAs.1.desc
 	}
 	immediate = {
-		calculate_dom_success_effect = yes
 		lida_ongoing_sex_effect = {
 			STAMINA_COST_1 = 0
 			STAMINA_COST_2 = 1
 		}
+		calculate_dom_success_effect = yes
 		random_list = {
 			# HANDJOB
 			10 = {
@@ -300,11 +300,11 @@ LIDAs.3 = {
 		desc = LIDAs.3.desc
 	}
 	immediate = {
-		calculate_dom_success_effect = yes
 		lida_ongoing_sex_effect = {
 			STAMINA_COST_1 = 0
 			STAMINA_COST_2 = 1
 		}
+		calculate_dom_success_effect = yes
 		random_list = {
 			# HANDJOB
 			10 = {
@@ -503,10 +503,14 @@ LIDAs.2 = {
 		desc = LIDAs.2.desc
 	}
 	immediate = {
-		calculate_dom_success_effect = yes
 		lida_ongoing_sex_effect = {
 			STAMINA_COST_1 = 1
 			STAMINA_COST_2 = 1
+		}
+		# enforce dom success if we have no sub options to ensure there is at least a valid option
+		save_scope_value_as = {
+			name = dom_success
+			value = yes
 		}
 		random_list = {
 			# ASS_TEASE
@@ -544,7 +548,7 @@ LIDAs.2 = {
 			name = prev_event
 			value = 2
 		}
-		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_no_sub_tooltip
 		if = {
 			limit = {
 				scope:dom_success = yes
@@ -736,10 +740,14 @@ LIDAs.4 = {
 		desc = LIDAs.4.desc
 	}
 	immediate = {
-		calculate_dom_success_effect = yes
 		lida_ongoing_sex_effect = {
 			STAMINA_COST_1 = 0.5
 			STAMINA_COST_2 = 1
+		}
+		# enforce dom success if we have no sub options to ensure there is at least a valid option
+		save_scope_value_as = {
+			name = dom_success
+			value = yes
 		}
 		random_list = {
 			# HANDJOB
@@ -798,7 +806,7 @@ LIDAs.4 = {
 			name = prev_event
 			value = 4
 		}
-		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_no_sub_tooltip
 		if = {
 			limit = {
 				scope:dom_success = yes
@@ -833,7 +841,7 @@ LIDAs.4 = {
 			name = prev_event
 			value = 4
 		}
-		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_no_sub_tooltip
 		if = {
 			limit = {
 				scope:dom_success = yes

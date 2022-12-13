@@ -60,8 +60,9 @@ AFFAIRS_PARTNER = "scope:affairs_partner"
 
 ROOT_STAMINA = "scope:root_stamina"
 PARNTER_STAMINA = "scope:partner_stamina"
-DOM_SUCCESS = "scope:dom_success"
+DOM_SUCCESS = "dom_success"
 DOM_ATTEMPT_TOOLTIP = "attempt_dom_tooltip"
+DOM_NO_SUB_TOOLTIP = "dom_no_sub_tooltip"
 
 # effects
 TRIGGER_EVENT = "trigger_event"
@@ -360,7 +361,6 @@ class Cum(Event):
 
     def generate_immediate_effect(self):
         # register that we have had sex to compute consequences
-        # TODO see if this needs to be hidden or not, and also if we need to put this under option?
         if self.subdom_change != 0:
             self.generate_hidden_opinion_change_effect(self.subdom_change)
         with Block(self, CARN_HAD_SEX_WITH_EFFECT):
@@ -427,8 +427,6 @@ class Sex(Event):
                         self.add_line(f"{VALUE} = {option.id}")
 
     def generate_immediate_effect(self):
-        # calculate the success probability
-        self.add_line(f"{CALCULATE_DOM_SUCCESS_EFFECT} = {YES}")
         with Block(self, LIDA_ONGOING_SEX_EFFECT):
             self.add_line(f"{STAMINA_COST_1} = {self.stam_cost_1}")
             self.add_line(f"{STAMINA_COST_2} = {self.stam_cost_2}")
@@ -437,6 +435,15 @@ class Sex(Event):
         categories_to_options = {c: [] for c in OptionCategory}
         for option in self.options:
             categories_to_options[option.category].append(option)
+
+        if len(categories_to_options[OptionCategory.SUB]) == 0:
+            self.add_comment("enforce dom success if we have no sub options to ensure there is at least a valid option")
+            with Block(self, SAVE_SCOPE_VALUE_AS):
+                self.add_line(f"{NAME} = {DOM_SUCCESS}")
+                self.add_line(f"{VALUE} = {YES}")
+        else:
+            # calculate the success probability
+            self.add_line(f"{CALCULATE_DOM_SUCCESS_EFFECT} = {YES}")
 
         # roll for both the dom and sub transitions
         for c, c_trans in [(OptionCategory.DOM, DOM_TRANSITION), (OptionCategory.SUB, SUB_TRANSITION)]:
@@ -501,10 +508,13 @@ class Sex(Event):
         self.add_line(f"{TRIGGER_EVENT} = {option.next_event.fullname}")
 
     def generate_dom_option_effect(self, option, sub_options):
-        self.add_line(f"{CUSTOM_TOOLTIP} = {DOM_ATTEMPT_TOOLTIP}")
+        if len(sub_options) == 0:
+            self.add_line(f"{CUSTOM_TOOLTIP} = {DOM_NO_SUB_TOOLTIP}")
+        else:
+            self.add_line(f"{CUSTOM_TOOLTIP} = {DOM_ATTEMPT_TOOLTIP}")
         with Block(self, IF):
             with Block(self, LIMIT):
-                self.add_line(f"{DOM_SUCCESS} = {YES}")
+                self.add_line(f"{SCOPE}:{DOM_SUCCESS} = {YES}")
             self.generate_hidden_opinion_change_effect(option.subdom_dom_success)
             with Block(self, SAVE_SCOPE_VALUE_AS):
                 self.add_line(f"{NAME} = {SEX_TRANSITION}")
@@ -767,7 +777,6 @@ if __name__ == "__main__":
                    Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.CUM,
                           "Milk him into your soft palms", )
                )))
-    # TODO investigate silent ending of event series when you fail dom (no sub option I guess)
     es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
                stam_cost_1=1, stam_cost_2=1,
                desc=f"""ass tease desc""",
