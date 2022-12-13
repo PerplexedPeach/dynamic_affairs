@@ -101,6 +101,7 @@ SEX_TRANSITION = "sex_transition"
 DOM_TRANSITION = "dom_transition"
 SUB_TRANSITION = "sub_transition"
 CUM_TRANSITION = "cum_transition"
+PREV_EVENT = "prev_event"
 
 NAMESPACE = "namespace"
 OPTION_NAMESPACE = "LIDAoption"
@@ -265,7 +266,18 @@ class Event(BlockRoot):
                         self.add_debug_comment(option.failed_transition_text)
                         self.add_line(f"{DESC} = {SEX_TRANSITION}_{option.id + dom_fail_offset}")
 
-        # TODO if we failed a dom transition (sex transition > offset), also show the sub transition
+        # if we failed a dom transition and this event has a direct option from that failed event, use it
+        # for all the incoming options
+        for option in self.incoming_options:
+            with Block(self, TRIGGERED_DESC):
+                with Block(self, TRIGGER):
+                    self.add_line(f"{EXISTS} = {SCOPE}:{SEX_TRANSITION}")
+                    self.add_line(f"{SCOPE}:{SEX_TRANSITION} > {dom_fail_offset}")
+                    self.add_line(f"{EXISTS} = {SCOPE}:{PREV_EVENT}")
+                    self.add_line(f"{SCOPE}:{PREV_EVENT} = {option.from_id.value}")
+                # TODO consider replacing the whole sex_transition system with just PREV_EVENT
+                self.add_debug_comment(f"defaulted to {option}")
+                self.add_line(f"{DESC} = {SEX_TRANSITION}_{option.id}")
 
 
 class OptionCategory(enum.IntEnum):
@@ -467,6 +479,10 @@ class Sex(Event):
                         self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION} }}")
                         self.add_line(f"{SCOPE}:{SUB_TRANSITION} = {option.id}")
 
+                # save this event
+                with Block(self, SAVE_SCOPE_VALUE_AS):
+                    self.add_line(f"{NAME} = {PREV_EVENT}")
+                    self.add_line(f"{VALUE} = {self.id.value}")
                 # for dom options, it could backfire and get you more dommed
                 if option.category == OptionCategory.DOM:
                     self.generate_dom_option_effect(option, categories_to_options[OptionCategory.SUB])
@@ -751,6 +767,7 @@ if __name__ == "__main__":
                    Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.CUM,
                           "Milk him into your soft palms", )
                )))
+    # TODO investigate silent ending of event series when you fail dom (no sub option I guess)
     es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
                stam_cost_1=1, stam_cost_2=1,
                desc=f"""ass tease desc""",

@@ -34,6 +34,16 @@ LIDAc.1 = {
 				desc = sex_transition_10003
 			}
 		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 3
+			}
+			# defaulted to 5: EventsSex.HANDJOB -> EventsCum.HANDJOB_CUM_IN_HAND
+			desc = sex_transition_5
+		}
 		desc = LIDAc.1.desc
 	}
 	immediate = {
@@ -87,6 +97,16 @@ LIDAc.5 = {
 				# You have better uses for that hard cock than just teasing it\n
 				desc = sex_transition_10006
 			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 2
+			}
+			# defaulted to 7: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_7
 		}
 		desc = LIDAc.5.desc
 	}
@@ -147,6 +167,16 @@ LIDAc.3 = {
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
 				desc = sex_transition_10009
 			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 4
+			}
+			# defaulted to 11: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_11
 		}
 		desc = LIDAc.3.desc
 	}
@@ -211,6 +241,16 @@ LIDAc.2 = {
 				desc = sex_transition_10009
 			}
 		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 4
+			}
+			# defaulted to 10: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM
+			desc = sex_transition_10
+		}
 		desc = LIDAc.2.desc
 	}
 	immediate = {
@@ -273,6 +313,16 @@ LIDAc.4 = {
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
 				desc = sex_transition_10009
 			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 4
+			}
+			# defaulted to 12: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM
+			desc = sex_transition_12
 		}
 		desc = LIDAc.4.desc
 	}
