@@ -30,6 +30,14 @@ organization
 	- variable in_control for the event sequence that events could change and which effects descriptions
 - scene list (see spreadsheet in same directory)
 - trigger event hub search up trigger_event for example extort_subjects_effect
+- generate events programmatically from python code
+	- enum for all the event IDs instead of referring to them by numbers
+	- organize events as a graph
+
+
+relation
+- dominant_opinion (-30, 30)
+
 
 balance
 - dom
@@ -120,6 +128,46 @@ effect / commands
 	    X2 = { ... }
 	    ...
 	}
+- have random effect show up as tooltip with show_as_tooltip
+effect = {
+		save_scope_as = challenger
+
+		add_character_flag = { #To enable the event and block the decision
+			flag = recently_took_the_tribal_challenge_ruler_decision
+			years = 10
+		}
+
+		liege = {
+			save_scope_as = liege_to_challenge
+			primary_title = {
+				save_scope_as = title_being_fought_over
+			}
+			trigger_event = tribal.1001
+		}
+
+		custom_tooltip = tribal_challenge_ruler_effect_tooltip
+		show_as_tooltip = {
+			random_list = {
+				10 = {
+					show_chance = no
+					desc = tribal_challenge_ruler_desc_success
+					tribal_transfer_liege_title_effect = yes
+				}
+				10 = {
+					show_chance = no
+					desc = tribal_challenge_ruler_desc_failure
+					tribal_challenger_lost_effect = yes
+				}
+			}
+		}
+	}
+- use title tier as value
+	multiply = {
+		value = root.primary_title.tier
+		subtract = 1
+		min = 1
+	}
+- give stress loss only at the cumming event
 
 questions
 - what does limit = {...} do?
@@ -175,3 +223,19 @@ questions
 		name = spouse_event
 		value = $SPOUSE_EVENT$
 	}
+- holding an opinion value inside a variable / using it directly for assignment
+				limit = {
+					has_artifact_feature = book_subject_relationship
+					scope:skill_base = {
+						save_temporary_opinion_value_as = {
+							name = opinion_of_subject
+							target = scope:owner.var:book_topic_relationship
+						}
+					}
+				}
+				add = {
+					value = scope:opinion_of_subject
+					min = 0
+					max = 75
+				}
+			}

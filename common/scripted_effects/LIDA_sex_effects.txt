@@ -25,3 +25,26 @@
 		}
 	}
 }
+
+check_if_root_cum_effect = {
+	if = {
+		limit = {
+			scope:root_stamina <= 0
+		}
+		save_scope_value_as = {
+			name = root_cum
+			value = yes
+		}
+		save_scope_value_as = {
+			name = root_stamina
+			value = max_sex_stamina
+		}
+		change_subdom_effect = { CHANGE = -2 }
+	}
+	else = {
+		save_scope_value_as = {
+			name = root_cum
+			value = no
+		}
+	}
+}

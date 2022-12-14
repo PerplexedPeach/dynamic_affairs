@@ -44,9 +44,16 @@ LIDAc.1 = {
 			# defaulted to 5: EventsSex.HANDJOB -> EventsCum.HANDJOB_CUM_IN_HAND
 			desc = sex_transition_5
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAc.1.desc
 	}
 	immediate = {
+		check_if_root_cum_effect = yes
 		change_subdom_effect = {
 			CHANGE = 1
 		}
@@ -108,9 +115,16 @@ LIDAc.5 = {
 			# defaulted to 7: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS
 			desc = sex_transition_7
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAc.5.desc
 	}
 	immediate = {
+		check_if_root_cum_effect = yes
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
 			CHARACTER_2 = scope:affairs_partner
@@ -178,9 +192,16 @@ LIDAc.3 = {
 			# defaulted to 11: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_ON_FACE
 			desc = sex_transition_11
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAc.3.desc
 	}
 	immediate = {
+		check_if_root_cum_effect = yes
 		change_subdom_effect = {
 			CHANGE = -2
 		}
@@ -251,9 +272,16 @@ LIDAc.2 = {
 			# defaulted to 10: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM
 			desc = sex_transition_10
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAc.2.desc
 	}
 	immediate = {
+		check_if_root_cum_effect = yes
 		change_subdom_effect = {
 			CHANGE = -1
 		}
@@ -324,9 +352,16 @@ LIDAc.4 = {
 			# defaulted to 12: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM
 			desc = sex_transition_12
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAc.4.desc
 	}
 	immediate = {
+		check_if_root_cum_effect = yes
 		change_subdom_effect = {
 			CHANGE = 2
 		}

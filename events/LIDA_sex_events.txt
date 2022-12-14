@@ -17,6 +17,12 @@ LIDAs.1 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
+					scope:root_cum = yes
+				}
+				desc = root_cum_f
+			}
+			triggered_desc = {
+				trigger = {
 					scope:root_stamina < 2
 				}
 				desc = f_very_low_stam
@@ -63,6 +69,7 @@ LIDAs.1 = {
 			STAMINA_COST_1 = 0
 			STAMINA_COST_2 = 1
 		}
+		check_if_root_cum_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# HANDJOB
@@ -88,6 +95,10 @@ LIDAs.1 = {
 		# 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB
 		name = LIDAoption.1
 		trigger = {
+			NOT = { exists = scope:cum_transition }
+			scope:dom_transition = 1
+		}
+		show_as_unavailable = {
 			NOT = { exists = scope:cum_transition }
 			scope:dom_transition = 1
 		}
@@ -129,6 +140,10 @@ LIDAs.1 = {
 		# 2: EventsSex.HANDJOB_TEASE -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.2
 		trigger = {
+			NOT = { exists = scope:cum_transition }
+			scope:sub_transition = 2
+		}
+		show_as_unavailable = {
 			NOT = { exists = scope:cum_transition }
 			scope:sub_transition = 2
 		}
@@ -259,6 +274,12 @@ LIDAs.3 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
+					scope:root_cum = yes
+				}
+				desc = root_cum_f
+			}
+			triggered_desc = {
+				trigger = {
 					scope:root_stamina < 2
 				}
 				desc = f_very_low_stam
@@ -305,6 +326,7 @@ LIDAs.3 = {
 			STAMINA_COST_1 = 0
 			STAMINA_COST_2 = 1
 		}
+		check_if_root_cum_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# HANDJOB
@@ -344,6 +366,10 @@ LIDAs.3 = {
 		# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB
 		name = LIDAoption.3
 		trigger = {
+			NOT = { exists = scope:cum_transition }
+			scope:dom_transition = 3
+		}
+		show_as_unavailable = {
 			NOT = { exists = scope:cum_transition }
 			scope:dom_transition = 3
 		}
@@ -388,6 +414,10 @@ LIDAs.3 = {
 			NOT = { exists = scope:cum_transition }
 			scope:sub_transition = 4
 		}
+		show_as_unavailable = {
+			NOT = { exists = scope:cum_transition }
+			scope:sub_transition = 4
+		}
 		save_scope_value_as = {
 			name = prev_event
 			value = 3
@@ -408,6 +438,13 @@ LIDAs.3 = {
 		trigger = {
 			exists = scope:cum_transition
 			scope:cum_transition = 5
+		}
+		show_as_unavailable = {
+			exists = scope:cum_transition
+			scope:cum_transition = 5
+		}
+		trigger = {
+			scope:root_cum = yes
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -463,6 +500,12 @@ LIDAs.2 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
+					scope:root_cum = yes
+				}
+				desc = root_cum_f
+			}
+			triggered_desc = {
+				trigger = {
 					scope:root_stamina < 2
 				}
 				desc = f_very_low_stam
@@ -509,6 +552,7 @@ LIDAs.2 = {
 			STAMINA_COST_1 = 1
 			STAMINA_COST_2 = 2
 		}
+		check_if_root_cum_effect = yes
 		# enforce dom success if we have no sub options to ensure there is at least a valid option
 		save_scope_value_as = {
 			name = dom_success
@@ -546,6 +590,10 @@ LIDAs.2 = {
 			NOT = { exists = scope:cum_transition }
 			scope:dom_transition = 6
 		}
+		show_as_unavailable = {
+			NOT = { exists = scope:cum_transition }
+			scope:dom_transition = 6
+		}
 		save_scope_value_as = {
 			name = prev_event
 			value = 2
@@ -578,6 +626,10 @@ LIDAs.2 = {
 		# 7: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS
 		name = LIDAoption.7
 		trigger = {
+			exists = scope:cum_transition
+			scope:cum_transition = 7
+		}
+		show_as_unavailable = {
 			exists = scope:cum_transition
 			scope:cum_transition = 7
 		}
@@ -700,6 +752,12 @@ LIDAs.4 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
+					scope:root_cum = yes
+				}
+				desc = root_cum_f
+			}
+			triggered_desc = {
+				trigger = {
 					scope:root_stamina < 2
 				}
 				desc = f_very_low_stam
@@ -746,6 +804,7 @@ LIDAs.4 = {
 			STAMINA_COST_1 = 0.5
 			STAMINA_COST_2 = 2
 		}
+		check_if_root_cum_effect = yes
 		# enforce dom success if we have no sub options to ensure there is at least a valid option
 		save_scope_value_as = {
 			name = dom_success
@@ -804,6 +863,10 @@ LIDAs.4 = {
 			NOT = { exists = scope:cum_transition }
 			scope:dom_transition = 8
 		}
+		show_as_unavailable = {
+			NOT = { exists = scope:cum_transition }
+			scope:dom_transition = 8
+		}
 		save_scope_value_as = {
 			name = prev_event
 			value = 4
@@ -836,6 +899,10 @@ LIDAs.4 = {
 		# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.9
 		trigger = {
+			NOT = { exists = scope:cum_transition }
+			scope:dom_transition = 9
+		}
+		show_as_unavailable = {
 			NOT = { exists = scope:cum_transition }
 			scope:dom_transition = 9
 		}
@@ -874,6 +941,10 @@ LIDAs.4 = {
 			exists = scope:cum_transition
 			scope:cum_transition = 10
 		}
+		show_as_unavailable = {
+			exists = scope:cum_transition
+			scope:cum_transition = 10
+		}
 		save_scope_value_as = {
 			name = prev_event
 			value = 4
@@ -887,6 +958,10 @@ LIDAs.4 = {
 			exists = scope:cum_transition
 			scope:cum_transition = 11
 		}
+		show_as_unavailable = {
+			exists = scope:cum_transition
+			scope:cum_transition = 11
+		}
 		save_scope_value_as = {
 			name = prev_event
 			value = 4
@@ -897,6 +972,10 @@ LIDAs.4 = {
 		# 12: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM
 		name = LIDAoption.12
 		trigger = {
+			exists = scope:cum_transition
+			scope:cum_transition = 12
+		}
+		show_as_unavailable = {
 			exists = scope:cum_transition
 			scope:cum_transition = 12
 		}

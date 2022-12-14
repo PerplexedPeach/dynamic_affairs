@@ -32,9 +32,11 @@ EventId = typing.Union[EventsFirst, EventsSex, EventsCum]
 
 # common keywords (avoid and catch typos)
 SCOPE = "scope"
+VAR = "var"
 MODIFIER = "modifier"
 DESC = "desc"
 TRIGGER = "trigger"
+SHOW_AS_UNAVAILABLE = "show_as_unavailable"
 ANIMATION = "animation"
 FIRST_VALID = "first_valid"
 TRIGGERED_DESC = "triggered_desc"
@@ -42,6 +44,7 @@ LEFT_PORTRAIT = "left_portrait"
 RIGHT_PORTRAIT = "right_portrait"
 IMMEDIATE = "immediate"
 OPTION = "option"
+AFTER = "after"
 TARGET = "target"
 OPINION = "opinion"
 TITLE = "title"
@@ -76,8 +79,12 @@ CALCULATE_DOM_SUCCESS_EFFECT = "calculate_dom_success_effect"
 YES = "yes"
 NO = "no"
 EXISTS = "exists"
+HAS_VARIABLE = "has_variable"
 NOT = "NOT"
 IS_FEMALE = "is_female"
+CHECK_IF_ROOT_CUM_EFFECT = "check_if_root_cum_effect"
+CLEAR_ROOT_CUM_EFFCT = "clear_root_cum_effect"
+ROOT_CUM = "root_cum"
 
 SELECT_START_AFFAIRS_EFFECT = "select_start_affairs_effect"
 LIDA_ONGOING_SEX_EFFECT = "lida_ongoing_sex_effect"
@@ -168,6 +175,8 @@ class Event(BlockRoot):
     def __init__(self, eid: EventId, title, desc="placeholder event desc", theme="seduction",
                  animation_left="flirtation", animation_right="flirtation_left", options=(),
                  root_female=True,
+                 # text for if the root cums; None indicates the default root cum text will be used
+                 root_cum_text=None,
                  # custom generation functions, these take the event as teh first argument and call add_line
                  custom_desc: typing.Optional[typing.Callable] = None,
                  custom_immediate_effect: typing.Optional[typing.Callable] = None):
@@ -177,6 +186,10 @@ class Event(BlockRoot):
         self.theme = theme
         self.anim_l = animation_left
         self.anim_r = animation_right
+
+        self.root_cum_text = root_cum_text
+        if self.root_cum_text is not None:
+            self.root_cum_text = clean_str(self.root_cum_text) + "\\n"
 
         namespace = event_type_namespace(self.id)
         eid = self.id.value
@@ -240,9 +253,22 @@ class Event(BlockRoot):
     def generate_localization(self):
         lines = [f"{self.fullname}.t: \"{self.title}\"",
                  f"{self.fullname}.{DESC}: \"{self.desc}\""]
+        if self.root_cum_text is not None:
+            lines.append(f"{self.fullname}.{ROOT_CUM}: \"{self.root_cum_text}\"")
         if self.custom_localization is not None:
             lines.append(self.custom_localization)
         return "\n".join(lines)
+
+    def generate_root_cum_desc(self):
+        prefix = "f" if self.root_female else "rm"
+        with Block(self, TRIGGERED_DESC):
+            with Block(self, TRIGGER):
+                self.add_line(f"{SCOPE}:{ROOT_CUM} = {YES}")
+                # depending on if we have a special root cum text or if we need to default
+            if self.root_cum_text is not None:
+                self.add_line(f"{DESC} = {self.fullname}.{ROOT_CUM}")
+            else:
+                self.add_line(f"{DESC} = {ROOT_CUM}_{prefix}")
 
     def generate_incoming_options_desc(self):
         # description of the transition from the previous event
@@ -299,7 +325,8 @@ class Option:
     def __init__(self, next_id: typing.Optional[EventId], category: OptionCategory, option_text: str,
                  transition_text: str = "",
                  # for dom options, have a chance to fail them
-                 failed_transition_text="", weight: int = 10, tooltip=None,
+                 failed_transition_text="",
+                 weight: int = 10, tooltip=None,
                  subdom_dom_success=1, subdom_dom_fail=-2, subdom_sub=-1,
                  modifiers=(), triggers=()):
         self.next_id = next_id
@@ -358,9 +385,11 @@ class Cum(Event):
 
     def generate_desc(self):
         self.generate_incoming_options_desc()
+        self.generate_root_cum_desc()
         super(Cum, self).generate_desc()
 
     def generate_immediate_effect(self):
+        self.add_line(f"{CHECK_IF_ROOT_CUM_EFFECT} = {YES}")
         # register that we have had sex to compute consequences
         if self.subdom_change != 0:
             self.generate_hidden_opinion_change_effect(self.subdom_change)
@@ -386,7 +415,8 @@ class Cum(Event):
 
 
 class Sex(Event):
-    def __init__(self, *args, stam_cost_1: float = 0, stam_cost_2: float = 0, **kwargs):
+    def __init__(self, *args,
+                 stam_cost_1: float = 0, stam_cost_2: float = 0, **kwargs):
         self.stam_cost_1 = stam_cost_1
         self.stam_cost_2 = stam_cost_2
         super(Sex, self).__init__(*args, **kwargs)
@@ -405,6 +435,9 @@ class Sex(Event):
 
         for prefix, value_to_check in [(first_prefix, ROOT_STAMINA), (second_prefix, PARTNER_STAMINA)]:
             with Block(self, FIRST_VALID):
+                # if you cum, then no need to indicate your sexual stamina, instead fill it with the root cum text
+                if value_to_check == ROOT_STAMINA:
+                    self.generate_root_cum_desc()
                 for threshold, suffix in stamina_thresholds.items():
                     with Block(self, TRIGGERED_DESC):
                         with Block(self, TRIGGER):
@@ -413,7 +446,6 @@ class Sex(Event):
                 # backup option for high stamina
                 self.add_line(f"{DESC} = {prefix}_high_stam")
 
-        # TODO events always continue until the partner cums, whenever you cum, add a text block, reset your stamina, and add submissiveness
         super(Sex, self).generate_desc()
 
     def generate_options_transition(self, options_list, option_transition_str):
@@ -433,6 +465,8 @@ class Sex(Event):
             self.add_line(f"{STAMINA_COST_1} = {self.stam_cost_1}")
             self.add_line(f"{STAMINA_COST_2} = {self.stam_cost_2}")
 
+        # for each event, allow for special description on root cum; if none specified, default one will be used
+        self.add_line(f"{CHECK_IF_ROOT_CUM_EFFECT} = {YES}")
         # separate into categories; within each category the outcome of which option gets selected is random
         categories_to_options = {c: [] for c in OptionCategory}
         for option in self.options:
@@ -477,16 +511,24 @@ class Sex(Event):
                 self.add_line(f"{NAME} = {option.fullname}")
                 if option.tooltip is not None:
                     self.add_line(f"{CUSTOM_TOOLTIP} = {option.fullname}.tt")
-                with Block(self, TRIGGER):
-                    if option.category == OptionCategory.CUM:
-                        self.add_line(f"{EXISTS} = {SCOPE}:{CUM_TRANSITION}")
-                        self.add_line(f"{SCOPE}:{CUM_TRANSITION} = {option.id}")
-                    elif option.category == OptionCategory.DOM:
-                        self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION} }}")
-                        self.add_line(f"{SCOPE}:{DOM_TRANSITION} = {option.id}")
-                    elif option.category == OptionCategory.SUB:
-                        self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION} }}")
-                        self.add_line(f"{SCOPE}:{SUB_TRANSITION} = {option.id}")
+
+                # for some reason show_as_unavailable is not a subset of trigger, so have to duplicate it
+                for block in [TRIGGER, SHOW_AS_UNAVAILABLE]:
+                    with Block(self, block):
+                        if option.category == OptionCategory.CUM:
+                            self.add_line(f"{EXISTS} = {SCOPE}:{CUM_TRANSITION}")
+                            self.add_line(f"{SCOPE}:{CUM_TRANSITION} = {option.id}")
+                        elif option.category == OptionCategory.DOM:
+                            self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION} }}")
+                            self.add_line(f"{SCOPE}:{DOM_TRANSITION} = {option.id}")
+                        elif option.category == OptionCategory.SUB:
+                            self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION} }}")
+                            self.add_line(f"{SCOPE}:{SUB_TRANSITION} = {option.id}")
+
+                # cumming locks you out of any dom transitions, but only if there are some sub options to transition to
+                if option.category == OptionCategory.CUM and len(categories_to_options[OptionCategory.SUB]) > 0:
+                    with Block(self, TRIGGER):
+                        self.add_line(f"{SCOPE}:{ROOT_CUM} = {YES}")
 
                 # save this event
                 with Block(self, SAVE_SCOPE_VALUE_AS):
@@ -684,7 +726,7 @@ def export_strings(event_text, effect_text, event_localization, option_localizat
             f.write(effect_text)
 
 
-def export_dot_graphviz(events, horizontal=True):
+def export_dot_graphviz(events, horizontal=True, censored=False):
     gv_filename = "vis.gv"
     with open(gv_filename, "w") as f:
         f.write("digraph G {\n")
@@ -696,7 +738,8 @@ def export_dot_graphviz(events, horizontal=True):
         for event in events.all():
             if isinstance(event.id, EventsSex):
                 f.write(event.id.name)
-                f.write("[fontname=Helvetica, shape=box]")
+                f.write(f"[fontname=Helvetica, shape=box, "
+                        f"label={event.id.value if censored else event.id.name}]")
                 f.write(";\n")
                 for option in event.options:
                     # terminal option
@@ -717,11 +760,13 @@ def export_dot_graphviz(events, horizontal=True):
                     f.write(";\n")
 
         # cum events (sink nodes)
-        f.write("subgraph cluster_cum {\n label=\"Cum Events\";\n rank=sink;\n")
+        f.write("subgraph cluster_cum {\n label=\"Terminal Events\";\n rank=sink;\n")
         for event in events.all():
             if isinstance(event.id, EventsCum):
                 f.write(event.id.name)
-                f.write("[fontname=Helvetica, shape=box, style=filled, rank=sink, color=\"#f2f0ae\"]")
+                f.write(
+                    f"[fontname=Helvetica, shape=box, style=filled, rank=sink, color=\"#f2f0ae\", "
+                    f"label={event.id.value if censored else event.id.name}]")
         f.write("}\n")
         f.write("}\n")
 
