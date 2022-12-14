@@ -59,7 +59,7 @@ ROOT = "root"
 AFFAIRS_PARTNER = "scope:affairs_partner"
 
 ROOT_STAMINA = "scope:root_stamina"
-PARNTER_STAMINA = "scope:partner_stamina"
+PARTNER_STAMINA = "scope:partner_stamina"
 DOM_SUCCESS = "dom_success"
 DOM_ATTEMPT_TOOLTIP = "attempt_dom_tooltip"
 DOM_NO_SUB_TOOLTIP = "dom_no_sub_tooltip"
@@ -403,7 +403,7 @@ class Sex(Event):
             first_prefix = "rm"
             second_prefix = "rf"
 
-        for prefix, value_to_check in [(first_prefix, ROOT_STAMINA), (second_prefix, PARNTER_STAMINA)]:
+        for prefix, value_to_check in [(first_prefix, ROOT_STAMINA), (second_prefix, PARTNER_STAMINA)]:
             with Block(self, FIRST_VALID):
                 for threshold, suffix in stamina_thresholds.items():
                     with Block(self, TRIGGERED_DESC):
@@ -413,6 +413,7 @@ class Sex(Event):
                 # backup option for high stamina
                 self.add_line(f"{DESC} = {prefix}_high_stam")
 
+        # TODO events always continue until the partner cums, whenever you cum, add a text block, reset your stamina, and add submissiveness
         super(Sex, self).generate_desc()
 
     def generate_options_transition(self, options_list, option_transition_str):
@@ -455,7 +456,7 @@ class Sex(Event):
         if len(options_list) > 0:
             with Block(self, IF):
                 with Block(self, LIMIT):
-                    self.add_line(f"{PARNTER_STAMINA} <= 0")
+                    self.add_line(f"{PARTNER_STAMINA} <= 0")
                 self.generate_options_transition(options_list, CUM_TRANSITION)
 
         super(Sex, self).generate_immediate_effect()
