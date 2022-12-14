@@ -230,6 +230,14 @@ calculate_dom_success_effect = {
 				}
 				add = -10
 			}
+			# difference in sex stamina affects dom success
+			add = {
+				value = {
+					add = scope:root_stamina
+					subtract = scope:partner_stamina
+				}
+				multiply = stamina_multiplier_dom_success
+			}
 			# existing sub/dom opinion contributes to dom
 			if = {
 				limit = {
