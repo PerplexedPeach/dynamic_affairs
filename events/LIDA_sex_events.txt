@@ -70,6 +70,7 @@ LIDAs.1 = {
 			STAMINA_COST_2 = 1
 		}
 		check_if_root_cum_effect = yes
+		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# HANDJOB
@@ -355,6 +356,7 @@ LIDAs.3 = {
 			STAMINA_COST_2 = 1
 		}
 		check_if_root_cum_effect = yes
+		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# HANDJOB
@@ -626,6 +628,7 @@ LIDAs.2 = {
 			STAMINA_COST_2 = 2
 		}
 		check_if_root_cum_effect = yes
+		store_subdom_value_effect = yes
 		# enforce dom success if we have no sub options to ensure there is at least a valid option
 		save_scope_value_as = {
 			name = dom_chance
@@ -947,6 +950,7 @@ LIDAs.4 = {
 			STAMINA_COST_2 = 2
 		}
 		check_if_root_cum_effect = yes
+		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# HANDJOB
@@ -1485,6 +1489,7 @@ LIDAs.6 = {
 			STAMINA_COST_2 = 1.5
 		}
 		check_if_root_cum_effect = yes
+		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# BLOWJOB_DOM
@@ -1912,6 +1917,7 @@ LIDAs.7 = {
 			STAMINA_COST_2 = 2.0
 		}
 		check_if_root_cum_effect = yes
+		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# BLOWJOB_SUB

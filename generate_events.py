@@ -85,6 +85,8 @@ ELSE = "else"
 HIDDEN_EFFECT = "hidden_effect"
 REVERSE_ADD_OPINION = "reverse_add_opinion"
 CALCULATE_DOM_SUCCESS_EFFECT = "calculate_dom_success_effect"
+STORE_SUBDOM_VALUE_EFFECT = "store_subdom_value_effect"
+SUBDOM = "subdom"
 YES = "yes"
 NO = "no"
 EXISTS = "exists"
@@ -505,6 +507,7 @@ class Sex(Event):
         for option in self.options:
             categories_to_options[option.category].append(option)
 
+        self.add_line(f"{STORE_SUBDOM_VALUE_EFFECT} = {YES}")
         if len(categories_to_options[OptionCategory.SUB]) == 0:
             self.add_comment("enforce dom success if we have no sub options to ensure there is at least a valid option")
             self.save_scope_value_as(DOM_CHANCE, 100)

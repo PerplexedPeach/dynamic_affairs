@@ -5,6 +5,149 @@ select_first_meet_affairs_effect = {
 	trigger_event = LIDAf.1
 }
 
+# map relationship value to a stored scope value
+store_subdom_value_effect = {
+	save_scope_value_as = {
+		name = subdom
+		value = {
+			if = {
+				limit = {
+					NOT = {
+						reverse_has_opinion_modifier = {
+							target = scope:affairs_partner
+							modifier = dominant_opinion
+						}
+					}
+				}
+				add = 0
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= -30
+					}
+				}
+				add = -30
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= -25
+					}
+				}
+				add = -25
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= -20
+					}
+				}
+				add = -20
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= -15
+					}
+				}
+				add = -15
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= -10
+					}
+				}
+				add = -10
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= -5
+					}
+				}
+				add = -5
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= 5
+					}
+				}
+				add = 0
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= 10
+					}
+				}
+				add = 5
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= 15
+					}
+				}
+				add = 10
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= 20
+					}
+				}
+				add = 15
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= 25
+					}
+				}
+				add = 20
+			}
+			else_if = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						target = scope:affairs_partner
+						modifier = dominant_opinion
+						value <= 30
+					}
+				}
+				add = 25
+			}
+			else = {
+				add = 30
+			}
+		}
+	}
+}
+
 # expects character scope with a scope:affairs_partner character
 # effects for progressing a sex event
 calculate_dom_success_effect = {
@@ -239,45 +382,8 @@ calculate_dom_success_effect = {
 				multiply = stamina_multiplier_dom_success
 			}
 			# existing sub/dom opinion contributes to dom
-			if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value >= 10
-					}
-				}
-				add = 10
-			}
-			if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value >= 20
-					}
-				}
-				add = 10
-			}
-			if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= -10
-					}
-				}
-				add = -10
-			}
-			if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= -20
-					}
-				}
-				add = -20
+			add = {
+				value = scope:subdom
 			}
 
 			min = 5
