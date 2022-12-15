@@ -555,7 +555,6 @@ class Sex(Event):
                             trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
                             self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION}_0 }}")
                             with Block(self, OR):
-                                # TODO possible problem if a previous event has more options than this one
                                 for choice in range(max_options_per_type):
                                     self.add_line(f"{SCOPE}:{trans_type}_{choice} = {option.id}")
                         elif option.category == OptionCategory.CUM:
@@ -821,8 +820,6 @@ args = parser.parse_args()
 
 def define_events(es: EventMap):
     # define directed graph of events
-    # TODO instead of sampling dom success/fail, just sample a number then do the comparison ourselves
-    # TODO since some dom options may be easier than others
     es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=0, stam_cost_2=1,
                desc=f"""With a knowing smirk, you size {THEM} up and put both your hands on their chest.
