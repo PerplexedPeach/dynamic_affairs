@@ -85,6 +85,8 @@ NO = "no"
 EXISTS = "exists"
 HAS_VARIABLE = "has_variable"
 NOT = "NOT"
+OR = "OR"
+AND = "AND"
 IS_FEMALE = "is_female"
 CHECK_IF_ROOT_CUM_EFFECT = "check_if_root_cum_effect"
 CLEAR_ROOT_CUM_EFFCT = "clear_root_cum_effect"
@@ -130,6 +132,7 @@ THEM = "[affairs_partner.GetFirstName]"
 
 dom_fail_offset = 10000
 base_event_weight = 5
+max_options_per_type = 2
 
 
 def yes_no(boolean: bool):
@@ -455,14 +458,26 @@ class Sex(Event):
     def generate_options_transition(self, options_list, option_transition_str):
         if len(options_list) == 0:
             return
-        with Block(self, RANDOM_LIST):
-            for option in options_list:
-                self.add_debug_comment(option.next_id.name)
-                with Block(self, f"{option.weight}"):
-                    option.generate_modifiers_and_triggers(self)
-                    with Block(self, f"{SAVE_SCOPE_VALUE_AS}"):
-                        self.add_line(f"{NAME} = {option_transition_str}")
-                        self.add_line(f"{VALUE} = {option.id}")
+        choice = 0
+        for choice in range(min(len(options_list), max_options_per_type)):
+            with Block(self, RANDOM_LIST):
+                for option in options_list:
+                    self.add_debug_comment(option.next_id.name)
+                    with Block(self, f"{option.weight}"):
+                        option.generate_modifiers_and_triggers(self)
+                        # choose without replacement
+                        for prev_choice in range(choice):
+                            with Block(self, TRIGGER):
+                                with Block(self, NOT):
+                                    self.add_line(f"{option_transition_str}_{prev_choice} = {option.id}")
+                        with Block(self, f"{SAVE_SCOPE_VALUE_AS}"):
+                            self.add_line(f"{NAME} = {option_transition_str}_{choice}")
+                            self.add_line(f"{VALUE} = {option.id}")
+        # fill in the rest of the choices so we don't have to check if it exists
+        for choice in range(choice + 1, max_options_per_type):
+            with Block(self, f"{SAVE_SCOPE_VALUE_AS}"):
+                self.add_line(f"{NAME} = {option_transition_str}_{choice}")
+                self.add_line(f"{VALUE} = -1")
 
     def generate_immediate_effect(self):
         with Block(self, LIDA_ONGOING_SEX_EFFECT):
@@ -519,20 +534,23 @@ class Sex(Event):
                 # for some reason show_as_unavailable is not a subset of trigger, so have to duplicate it
                 for block in [TRIGGER, SHOW_AS_UNAVAILABLE]:
                     with Block(self, block):
-                        if option.category == OptionCategory.CUM:
-                            self.add_line(f"{EXISTS} = {SCOPE}:{CUM_TRANSITION}")
-                            self.add_line(f"{SCOPE}:{CUM_TRANSITION} = {option.id}")
-                        elif option.category == OptionCategory.DOM:
-                            self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION} }}")
-                            self.add_line(f"{SCOPE}:{DOM_TRANSITION} = {option.id}")
-                        elif option.category == OptionCategory.SUB:
-                            self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION} }}")
-                            self.add_line(f"{SCOPE}:{SUB_TRANSITION} = {option.id}")
-
-                # cumming locks you out of any dom transitions, but only if there are some sub options to transition to
-                if option.category == OptionCategory.CUM and len(categories_to_options[OptionCategory.SUB]) > 0:
-                    with Block(self, TRIGGER):
-                        self.add_line(f"{SCOPE}:{ROOT_CUM} = {YES}")
+                        # cumming locks you out of any dom transitions, but only if there are some sub options to transition to
+                        if block == TRIGGER and option.category == OptionCategory.DOM and len(
+                                categories_to_options[OptionCategory.SUB]) > 0:
+                            self.add_line(f"{NOT} = {{ {SCOPE}:{ROOT_CUM} = {YES} }}")
+                        if option.category in [OptionCategory.DOM, OptionCategory.SUB]:
+                            trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
+                            self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION}_0 }}")
+                            with Block(self, OR):
+                                # TODO possible problem if a previous event has more options than this one
+                                for choice in range(max_options_per_type):
+                                    self.add_line(f"{SCOPE}:{trans_type}_{choice} = {option.id}")
+                        elif option.category == OptionCategory.CUM:
+                            with Block(self, OR):
+                                for choice in range(max_options_per_type):
+                                    with Block(self, AND):
+                                        self.add_line(f"{EXISTS} = {SCOPE}:{CUM_TRANSITION}_{choice}")
+                                        self.add_line(f"{SCOPE}:{CUM_TRANSITION}_{choice} = {option.id}")
 
                 # save this event
                 with Block(self, SAVE_SCOPE_VALUE_AS):
@@ -787,7 +805,6 @@ args = parser.parse_args()
 
 def define_events(es: EventMap):
     # define directed graph of events
-    # TODO consider allowing all transition options instead of random sampling the transitions (or allowing >1 per type)
     # TODO instead of sampling dom success/fail, just sample a number then do the comparison ourselves
     # TODO since some dom options may be easier than others
     es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",

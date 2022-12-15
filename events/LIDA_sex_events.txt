@@ -75,19 +75,27 @@ LIDAs.1 = {
 			# HANDJOB
 			10 = {
 				save_scope_value_as = {
-					name = dom_transition
+					name = dom_transition_0
 					value = 1
 				}
 			}
+		}
+		save_scope_value_as = {
+			name = dom_transition_1
+			value = -1
 		}
 		random_list = {
 			# BLOWJOB_DOM
 			10 = {
 				save_scope_value_as = {
-					name = sub_transition
+					name = sub_transition_0
 					value = 2
 				}
 			}
+		}
+		save_scope_value_as = {
+			name = sub_transition_1
+			value = -1
 		}
 		debug_log_scopes = yes
 	}
@@ -95,12 +103,19 @@ LIDAs.1 = {
 		# 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB
 		name = LIDAoption.1
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 1
+			NOT = { scope:root_cum = yes }
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 1
+				scope:dom_transition_1 = 1
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 1
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 1
+				scope:dom_transition_1 = 1
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -140,12 +155,18 @@ LIDAs.1 = {
 		# 2: EventsSex.HANDJOB_TEASE -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.2
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 2
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 2
+				scope:sub_transition_1 = 2
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 2
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 2
+				scope:sub_transition_1 = 2
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -332,19 +353,27 @@ LIDAs.3 = {
 			# HANDJOB
 			10 = {
 				save_scope_value_as = {
-					name = dom_transition
+					name = dom_transition_0
 					value = 3
 				}
 			}
+		}
+		save_scope_value_as = {
+			name = dom_transition_1
+			value = -1
 		}
 		random_list = {
 			# BLOWJOB_DOM
 			10 = {
 				save_scope_value_as = {
-					name = sub_transition
+					name = sub_transition_0
 					value = 4
 				}
 			}
+		}
+		save_scope_value_as = {
+			name = sub_transition_1
+			value = -1
 		}
 		if = {
 			limit = {
@@ -354,10 +383,14 @@ LIDAs.3 = {
 				# HANDJOB_CUM_IN_HAND
 				10 = {
 					save_scope_value_as = {
-						name = cum_transition
+						name = cum_transition_0
 						value = 5
 					}
 				}
+			}
+			save_scope_value_as = {
+				name = cum_transition_1
+				value = -1
 			}
 		}
 		debug_log_scopes = yes
@@ -366,12 +399,19 @@ LIDAs.3 = {
 		# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB
 		name = LIDAoption.3
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 3
+			NOT = { scope:root_cum = yes }
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 3
+				scope:dom_transition_1 = 3
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 3
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 3
+				scope:dom_transition_1 = 3
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -411,12 +451,18 @@ LIDAs.3 = {
 		# 4: EventsSex.HANDJOB -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.4
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 4
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 4
+				scope:sub_transition_1 = 4
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 4
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 4
+				scope:sub_transition_1 = 4
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -436,15 +482,28 @@ LIDAs.3 = {
 		# 5: EventsSex.HANDJOB -> EventsCum.HANDJOB_CUM_IN_HAND
 		name = LIDAoption.5
 		trigger = {
-			exists = scope:cum_transition
-			scope:cum_transition = 5
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 5
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 5
+				}
+			}
 		}
 		show_as_unavailable = {
-			exists = scope:cum_transition
-			scope:cum_transition = 5
-		}
-		trigger = {
-			scope:root_cum = yes
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 5
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 5
+				}
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -562,10 +621,14 @@ LIDAs.2 = {
 			# ASS_TEASE
 			10 = {
 				save_scope_value_as = {
-					name = dom_transition
+					name = dom_transition_0
 					value = 6
 				}
 			}
+		}
+		save_scope_value_as = {
+			name = dom_transition_1
+			value = -1
 		}
 		if = {
 			limit = {
@@ -575,10 +638,14 @@ LIDAs.2 = {
 				# ASS_TEASE_CUM_ON_ASS
 				10 = {
 					save_scope_value_as = {
-						name = cum_transition
+						name = cum_transition_0
 						value = 7
 					}
 				}
+			}
+			save_scope_value_as = {
+				name = cum_transition_1
+				value = -1
 			}
 		}
 		debug_log_scopes = yes
@@ -587,12 +654,18 @@ LIDAs.2 = {
 		# 6: EventsSex.ASS_TEASE -> EventsSex.ASS_TEASE
 		name = LIDAoption.6
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 6
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 6
+				scope:dom_transition_1 = 6
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 6
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 6
+				scope:dom_transition_1 = 6
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -626,12 +699,28 @@ LIDAs.2 = {
 		# 7: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS
 		name = LIDAoption.7
 		trigger = {
-			exists = scope:cum_transition
-			scope:cum_transition = 7
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 7
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 7
+				}
+			}
 		}
 		show_as_unavailable = {
-			exists = scope:cum_transition
-			scope:cum_transition = 7
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 7
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 7
+				}
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -838,14 +927,40 @@ LIDAs.4 = {
 			# HANDJOB
 			5 = {
 				save_scope_value_as = {
-					name = dom_transition
+					name = dom_transition_0
 					value = 8
 				}
 			}
 			# BLOWJOB_DOM
 			10 = {
 				save_scope_value_as = {
-					name = dom_transition
+					name = dom_transition_0
+					value = 9
+				}
+			}
+		}
+		random_list = {
+			# HANDJOB
+			5 = {
+				trigger = {
+					NOT = {
+						dom_transition_0 = 8
+					}
+				}
+				save_scope_value_as = {
+					name = dom_transition_1
+					value = 8
+				}
+			}
+			# BLOWJOB_DOM
+			10 = {
+				trigger = {
+					NOT = {
+						dom_transition_0 = 9
+					}
+				}
+				save_scope_value_as = {
+					name = dom_transition_1
 					value = 9
 				}
 			}
@@ -854,10 +969,14 @@ LIDAs.4 = {
 			# BLOWJOB_SUB
 			10 = {
 				save_scope_value_as = {
-					name = sub_transition
+					name = sub_transition_0
 					value = 10
 				}
 			}
+		}
+		save_scope_value_as = {
+			name = sub_transition_1
+			value = -1
 		}
 		if = {
 			limit = {
@@ -867,21 +986,59 @@ LIDAs.4 = {
 				# BLOWJOB_CUM_IN_MOUTH_DOM
 				3 = {
 					save_scope_value_as = {
-						name = cum_transition
+						name = cum_transition_0
 						value = 11
 					}
 				}
 				# BLOWJOB_CUM_ON_FACE
 				3 = {
 					save_scope_value_as = {
-						name = cum_transition
+						name = cum_transition_0
 						value = 12
 					}
 				}
 				# BLOWJOB_RUINED_ORGASM
 				10 = {
 					save_scope_value_as = {
-						name = cum_transition
+						name = cum_transition_0
+						value = 13
+					}
+				}
+			}
+			random_list = {
+				# BLOWJOB_CUM_IN_MOUTH_DOM
+				3 = {
+					trigger = {
+						NOT = {
+							cum_transition_0 = 11
+						}
+					}
+					save_scope_value_as = {
+						name = cum_transition_1
+						value = 11
+					}
+				}
+				# BLOWJOB_CUM_ON_FACE
+				3 = {
+					trigger = {
+						NOT = {
+							cum_transition_0 = 12
+						}
+					}
+					save_scope_value_as = {
+						name = cum_transition_1
+						value = 12
+					}
+				}
+				# BLOWJOB_RUINED_ORGASM
+				10 = {
+					trigger = {
+						NOT = {
+							cum_transition_0 = 13
+						}
+					}
+					save_scope_value_as = {
+						name = cum_transition_1
 						value = 13
 					}
 				}
@@ -893,12 +1050,19 @@ LIDAs.4 = {
 		# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB
 		name = LIDAoption.8
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 8
+			NOT = { scope:root_cum = yes }
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 8
+				scope:dom_transition_1 = 8
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 8
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 8
+				scope:dom_transition_1 = 8
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -938,12 +1102,19 @@ LIDAs.4 = {
 		# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.9
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 9
+			NOT = { scope:root_cum = yes }
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 9
+				scope:dom_transition_1 = 9
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 9
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 9
+				scope:dom_transition_1 = 9
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -983,12 +1154,18 @@ LIDAs.4 = {
 		# 10: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.10
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 10
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 10
+				scope:sub_transition_1 = 10
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 10
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 10
+				scope:sub_transition_1 = 10
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -1008,15 +1185,28 @@ LIDAs.4 = {
 		# 11: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM
 		name = LIDAoption.11
 		trigger = {
-			exists = scope:cum_transition
-			scope:cum_transition = 11
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 11
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 11
+				}
+			}
 		}
 		show_as_unavailable = {
-			exists = scope:cum_transition
-			scope:cum_transition = 11
-		}
-		trigger = {
-			scope:root_cum = yes
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 11
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 11
+				}
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -1028,15 +1218,28 @@ LIDAs.4 = {
 		# 12: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_ON_FACE
 		name = LIDAoption.12
 		trigger = {
-			exists = scope:cum_transition
-			scope:cum_transition = 12
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 12
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 12
+				}
+			}
 		}
 		show_as_unavailable = {
-			exists = scope:cum_transition
-			scope:cum_transition = 12
-		}
-		trigger = {
-			scope:root_cum = yes
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 12
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 12
+				}
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -1048,15 +1251,28 @@ LIDAs.4 = {
 		# 13: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM
 		name = LIDAoption.13
 		trigger = {
-			exists = scope:cum_transition
-			scope:cum_transition = 13
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 13
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 13
+				}
+			}
 		}
 		show_as_unavailable = {
-			exists = scope:cum_transition
-			scope:cum_transition = 13
-		}
-		trigger = {
-			scope:root_cum = yes
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 13
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 13
+				}
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -1086,7 +1302,7 @@ LIDAs.6 = {
 					scope:sex_transition = 10
 				}
 				# Dom Blowjob
-				# Your jaw and neck sore from doing all the work, you decide to let him do pick up the slack. "Come on [affairs_partner.GetFirstName], show me your mettle." \n\nInstead of wasting words, he places both hands behind your head and start thrusting.\n
+				# Your jaw and neck sore from doing all the work, you decide to let him do pick up the slack. "Come on [affairs_partner.GetFirstName], show me your mettle." \n\nInstead of wasting words, he places both hands behind your head and starts thrusting.\n
 				desc = sex_transition_10
 			}
 			triggered_desc = {
@@ -1235,23 +1451,53 @@ LIDAs.6 = {
 			# BLOWJOB_DOM
 			10 = {
 				save_scope_value_as = {
-					name = dom_transition
+					name = dom_transition_0
 					value = 14
 				}
 			}
+		}
+		save_scope_value_as = {
+			name = dom_transition_1
+			value = -1
 		}
 		random_list = {
 			# BLOWJOB_SUB
 			10 = {
 				save_scope_value_as = {
-					name = sub_transition
+					name = sub_transition_0
 					value = 15
 				}
 			}
 			# DEEPTHROAT
 			10 = {
 				save_scope_value_as = {
-					name = sub_transition
+					name = sub_transition_0
+					value = 16
+				}
+			}
+		}
+		random_list = {
+			# BLOWJOB_SUB
+			10 = {
+				trigger = {
+					NOT = {
+						sub_transition_0 = 15
+					}
+				}
+				save_scope_value_as = {
+					name = sub_transition_1
+					value = 15
+				}
+			}
+			# DEEPTHROAT
+			10 = {
+				trigger = {
+					NOT = {
+						sub_transition_0 = 16
+					}
+				}
+				save_scope_value_as = {
+					name = sub_transition_1
 					value = 16
 				}
 			}
@@ -1264,14 +1510,40 @@ LIDAs.6 = {
 				# BLOWJOB_CUM_IN_MOUTH_SUB
 				10 = {
 					save_scope_value_as = {
-						name = cum_transition
+						name = cum_transition_0
 						value = 17
 					}
 				}
 				# BLOWJOB_CUM_ON_FACE
 				10 = {
 					save_scope_value_as = {
-						name = cum_transition
+						name = cum_transition_0
+						value = 18
+					}
+				}
+			}
+			random_list = {
+				# BLOWJOB_CUM_IN_MOUTH_SUB
+				10 = {
+					trigger = {
+						NOT = {
+							cum_transition_0 = 17
+						}
+					}
+					save_scope_value_as = {
+						name = cum_transition_1
+						value = 17
+					}
+				}
+				# BLOWJOB_CUM_ON_FACE
+				10 = {
+					trigger = {
+						NOT = {
+							cum_transition_0 = 18
+						}
+					}
+					save_scope_value_as = {
+						name = cum_transition_1
 						value = 18
 					}
 				}
@@ -1283,12 +1555,19 @@ LIDAs.6 = {
 		# 14: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.14
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 14
+			NOT = { scope:root_cum = yes }
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 14
+				scope:dom_transition_1 = 14
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 14
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 14
+				scope:dom_transition_1 = 14
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -1334,12 +1613,18 @@ LIDAs.6 = {
 		# 15: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.15
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 15
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 15
+				scope:sub_transition_1 = 15
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 15
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 15
+				scope:sub_transition_1 = 15
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -1359,12 +1644,18 @@ LIDAs.6 = {
 		# 16: EventsSex.BLOWJOB_SUB -> EventsSex.DEEPTHROAT
 		name = LIDAoption.16
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 16
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 16
+				scope:sub_transition_1 = 16
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 16
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 16
+				scope:sub_transition_1 = 16
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -1384,15 +1675,28 @@ LIDAs.6 = {
 		# 17: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
 		name = LIDAoption.17
 		trigger = {
-			exists = scope:cum_transition
-			scope:cum_transition = 17
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 17
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 17
+				}
+			}
 		}
 		show_as_unavailable = {
-			exists = scope:cum_transition
-			scope:cum_transition = 17
-		}
-		trigger = {
-			scope:root_cum = yes
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 17
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 17
+				}
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -1404,15 +1708,28 @@ LIDAs.6 = {
 		# 18: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_ON_FACE
 		name = LIDAoption.18
 		trigger = {
-			exists = scope:cum_transition
-			scope:cum_transition = 18
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 18
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 18
+				}
+			}
 		}
 		show_as_unavailable = {
-			exists = scope:cum_transition
-			scope:cum_transition = 18
-		}
-		trigger = {
-			scope:root_cum = yes
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 18
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 18
+				}
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -1554,19 +1871,27 @@ LIDAs.7 = {
 			# BLOWJOB_SUB
 			10 = {
 				save_scope_value_as = {
-					name = dom_transition
+					name = dom_transition_0
 					value = 19
 				}
 			}
+		}
+		save_scope_value_as = {
+			name = dom_transition_1
+			value = -1
 		}
 		random_list = {
 			# DEEPTHROAT
 			10 = {
 				save_scope_value_as = {
-					name = sub_transition
+					name = sub_transition_0
 					value = 20
 				}
 			}
+		}
+		save_scope_value_as = {
+			name = sub_transition_1
+			value = -1
 		}
 		if = {
 			limit = {
@@ -1576,10 +1901,14 @@ LIDAs.7 = {
 				# BLOWJOB_CUM_IN_MOUTH_SUB
 				10 = {
 					save_scope_value_as = {
-						name = cum_transition
+						name = cum_transition_0
 						value = 21
 					}
 				}
+			}
+			save_scope_value_as = {
+				name = cum_transition_1
+				value = -1
 			}
 		}
 		debug_log_scopes = yes
@@ -1588,12 +1917,19 @@ LIDAs.7 = {
 		# 19: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.19
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 19
+			NOT = { scope:root_cum = yes }
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 19
+				scope:dom_transition_1 = 19
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:dom_transition = 19
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:dom_transition_0 = 19
+				scope:dom_transition_1 = 19
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -1633,12 +1969,18 @@ LIDAs.7 = {
 		# 20: EventsSex.DEEPTHROAT -> EventsSex.DEEPTHROAT
 		name = LIDAoption.20
 		trigger = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 20
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 20
+				scope:sub_transition_1 = 20
+			}
 		}
 		show_as_unavailable = {
-			NOT = { exists = scope:cum_transition }
-			scope:sub_transition = 20
+			NOT = { exists = scope:cum_transition_0 }
+			OR = {
+				scope:sub_transition_0 = 20
+				scope:sub_transition_1 = 20
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
@@ -1658,15 +2000,28 @@ LIDAs.7 = {
 		# 21: EventsSex.DEEPTHROAT -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
 		name = LIDAoption.21
 		trigger = {
-			exists = scope:cum_transition
-			scope:cum_transition = 21
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 21
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 21
+				}
+			}
 		}
 		show_as_unavailable = {
-			exists = scope:cum_transition
-			scope:cum_transition = 21
-		}
-		trigger = {
-			scope:root_cum = yes
+			OR = {
+				AND = {
+					exists = scope:cum_transition_0
+					scope:cum_transition_0 = 21
+				}
+				AND = {
+					exists = scope:cum_transition_1
+					scope:cum_transition_1 = 21
+				}
+			}
 		}
 		save_scope_value_as = {
 			name = prev_event
