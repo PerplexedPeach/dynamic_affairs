@@ -1,0 +1,11 @@
+textformatting = {
+	# LIDA
+	format = {
+		name = dom
+		format = "color:{0.565, 0.125, 0.902, 1}"
+	}
+	format = {
+		name = sub
+		format = "color:{1.0, 0.169, 1.0, 1}"
+	}
+}
