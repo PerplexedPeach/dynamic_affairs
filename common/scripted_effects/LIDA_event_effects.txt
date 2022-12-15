@@ -287,14 +287,7 @@ calculate_dom_success_effect = {
 
 	save_scope_value_as = {
 		name = dom_success
-		value = no
-	}
-	random = {
-		chance = scope:dom_chance
-
-		save_scope_value_as = {
-			name = dom_success
-			value = yes
-		}
+		# need to sample dom_success < dom_chance to succeed
+		value = {0 100}
 	}
 }

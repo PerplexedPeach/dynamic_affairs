@@ -122,9 +122,16 @@ LIDAs.1 = {
 			value = 1
 		}
 		custom_tooltip = attempt_dom_tooltip
+		save_temporary_scope_value_as = {
+			name = this_dom_chance
+			value = {
+				add = scope:dom_chance
+				add = 0
+			}
+		}
 		if = {
 			limit = {
-				scope:dom_success = yes
+				scope:dom_success <= scope:this_dom_chance
 			}
 			change_subdom_effect = {
 				CHANGE = 1
@@ -145,7 +152,7 @@ LIDAs.1 = {
 			}
 			if = {
 				limit = {
-					scope:sub_transition = 2
+					scope:sub_transition_0 = 2
 				}
 				trigger_event = LIDAs.4
 			}
@@ -418,9 +425,16 @@ LIDAs.3 = {
 			value = 3
 		}
 		custom_tooltip = attempt_dom_tooltip
+		save_temporary_scope_value_as = {
+			name = this_dom_chance
+			value = {
+				add = scope:dom_chance
+				add = 0
+			}
+		}
 		if = {
 			limit = {
-				scope:dom_success = yes
+				scope:dom_success <= scope:this_dom_chance
 			}
 			change_subdom_effect = {
 				CHANGE = 1
@@ -441,7 +455,7 @@ LIDAs.3 = {
 			}
 			if = {
 				limit = {
-					scope:sub_transition = 4
+					scope:sub_transition_0 = 4
 				}
 				trigger_event = LIDAs.4
 			}
@@ -614,8 +628,12 @@ LIDAs.2 = {
 		check_if_root_cum_effect = yes
 		# enforce dom success if we have no sub options to ensure there is at least a valid option
 		save_scope_value_as = {
+			name = dom_chance
+			value = 100
+		}
+		save_scope_value_as = {
 			name = dom_success
-			value = yes
+			value = 0
 		}
 		random_list = {
 			# ASS_TEASE
@@ -672,9 +690,16 @@ LIDAs.2 = {
 			value = 2
 		}
 		custom_tooltip = dom_no_sub_tooltip
+		save_temporary_scope_value_as = {
+			name = this_dom_chance
+			value = {
+				add = scope:dom_chance
+				add = 0
+			}
+		}
 		if = {
 			limit = {
-				scope:dom_success = yes
+				scope:dom_success <= scope:this_dom_chance
 			}
 			change_subdom_effect = {
 				CHANGE = 1
@@ -944,7 +969,7 @@ LIDAs.4 = {
 			5 = {
 				trigger = {
 					NOT = {
-						dom_transition_0 = 8
+						scope:dom_transition_0 = 8
 					}
 				}
 				save_scope_value_as = {
@@ -956,7 +981,7 @@ LIDAs.4 = {
 			10 = {
 				trigger = {
 					NOT = {
-						dom_transition_0 = 9
+						scope:dom_transition_0 = 9
 					}
 				}
 				save_scope_value_as = {
@@ -1010,7 +1035,7 @@ LIDAs.4 = {
 				3 = {
 					trigger = {
 						NOT = {
-							cum_transition_0 = 11
+							scope:cum_transition_0 = 11
 						}
 					}
 					save_scope_value_as = {
@@ -1022,7 +1047,7 @@ LIDAs.4 = {
 				3 = {
 					trigger = {
 						NOT = {
-							cum_transition_0 = 12
+							scope:cum_transition_0 = 12
 						}
 					}
 					save_scope_value_as = {
@@ -1034,7 +1059,7 @@ LIDAs.4 = {
 				10 = {
 					trigger = {
 						NOT = {
-							cum_transition_0 = 13
+							scope:cum_transition_0 = 13
 						}
 					}
 					save_scope_value_as = {
@@ -1069,9 +1094,16 @@ LIDAs.4 = {
 			value = 4
 		}
 		custom_tooltip = attempt_dom_tooltip
+		save_temporary_scope_value_as = {
+			name = this_dom_chance
+			value = {
+				add = scope:dom_chance
+				add = 0
+			}
+		}
 		if = {
 			limit = {
-				scope:dom_success = yes
+				scope:dom_success <= scope:this_dom_chance
 			}
 			change_subdom_effect = {
 				CHANGE = 1
@@ -1092,7 +1124,7 @@ LIDAs.4 = {
 			}
 			if = {
 				limit = {
-					scope:sub_transition = 10
+					scope:sub_transition_0 = 10
 				}
 				trigger_event = LIDAs.6
 			}
@@ -1121,9 +1153,16 @@ LIDAs.4 = {
 			value = 4
 		}
 		custom_tooltip = attempt_dom_tooltip
+		save_temporary_scope_value_as = {
+			name = this_dom_chance
+			value = {
+				add = scope:dom_chance
+				add = 0
+			}
+		}
 		if = {
 			limit = {
-				scope:dom_success = yes
+				scope:dom_success <= scope:this_dom_chance
 			}
 			change_subdom_effect = {
 				CHANGE = 0
@@ -1144,7 +1183,7 @@ LIDAs.4 = {
 			}
 			if = {
 				limit = {
-					scope:sub_transition = 10
+					scope:sub_transition_0 = 10
 				}
 				trigger_event = LIDAs.6
 			}
@@ -1481,7 +1520,7 @@ LIDAs.6 = {
 			10 = {
 				trigger = {
 					NOT = {
-						sub_transition_0 = 15
+						scope:sub_transition_0 = 15
 					}
 				}
 				save_scope_value_as = {
@@ -1493,7 +1532,7 @@ LIDAs.6 = {
 			10 = {
 				trigger = {
 					NOT = {
-						sub_transition_0 = 16
+						scope:sub_transition_0 = 16
 					}
 				}
 				save_scope_value_as = {
@@ -1527,7 +1566,7 @@ LIDAs.6 = {
 				10 = {
 					trigger = {
 						NOT = {
-							cum_transition_0 = 17
+							scope:cum_transition_0 = 17
 						}
 					}
 					save_scope_value_as = {
@@ -1539,7 +1578,7 @@ LIDAs.6 = {
 				10 = {
 					trigger = {
 						NOT = {
-							cum_transition_0 = 18
+							scope:cum_transition_0 = 18
 						}
 					}
 					save_scope_value_as = {
@@ -1574,9 +1613,16 @@ LIDAs.6 = {
 			value = 6
 		}
 		custom_tooltip = attempt_dom_tooltip
+		save_temporary_scope_value_as = {
+			name = this_dom_chance
+			value = {
+				add = scope:dom_chance
+				add = 0
+			}
+		}
 		if = {
 			limit = {
-				scope:dom_success = yes
+				scope:dom_success <= scope:this_dom_chance
 			}
 			change_subdom_effect = {
 				CHANGE = 1
@@ -1597,13 +1643,13 @@ LIDAs.6 = {
 			}
 			if = {
 				limit = {
-					scope:sub_transition = 15
+					scope:sub_transition_0 = 15
 				}
 				trigger_event = LIDAs.6
 			}
 			if = {
 				limit = {
-					scope:sub_transition = 16
+					scope:sub_transition_0 = 16
 				}
 				trigger_event = LIDAs.7
 			}
@@ -1936,9 +1982,16 @@ LIDAs.7 = {
 			value = 7
 		}
 		custom_tooltip = attempt_dom_tooltip
+		save_temporary_scope_value_as = {
+			name = this_dom_chance
+			value = {
+				add = scope:dom_chance
+				add = 0
+			}
+		}
 		if = {
 			limit = {
-				scope:dom_success = yes
+				scope:dom_success <= scope:this_dom_chance
 			}
 			change_subdom_effect = {
 				CHANGE = 1
@@ -1959,7 +2012,7 @@ LIDAs.7 = {
 			}
 			if = {
 				limit = {
-					scope:sub_transition = 20
+					scope:sub_transition_0 = 20
 				}
 				trigger_event = LIDAs.7
 			}

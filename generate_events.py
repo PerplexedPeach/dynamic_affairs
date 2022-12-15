@@ -57,6 +57,7 @@ TYPE = "type"
 NAME = "name"
 VALUE = "value"
 CUSTOM_TOOLTIP = "custom_tooltip"
+ADD = "add"
 
 CHARACTER_EVENT = "character_event"
 CHARACTER = "character"
@@ -67,10 +68,14 @@ AFFAIRS_PARTNER = "scope:affairs_partner"
 
 ROOT_STAMINA = "scope:root_stamina"
 PARTNER_STAMINA = "scope:partner_stamina"
+DOM_CHANCE = "dom_chance"
 DOM_SUCCESS = "dom_success"
+THIS_DOM_CHANCE = "this_dom_chance"
+DOM_SUCCESS_ADJUSTMENT = "dom_success_adjustment"
 DOM_ATTEMPT_TOOLTIP = "attempt_dom_tooltip"
 DOM_NO_SUB_TOOLTIP = "dom_no_sub_tooltip"
 VOLUNTARY_SUB_TOOLTIP = "voluntary_sub_tooltip"
+DOM_SUCCESS_ADJUSTMENT_TOOLTIP = "dom_success_adjustment_tooltip"
 
 # effects
 TRIGGER_EVENT = "trigger_event"
@@ -107,6 +112,7 @@ STRESS_EFFECTS = "STRESS_EFFECTS"
 DRAMA = "DRAMA"
 
 SAVE_SCOPE_VALUE_AS = "save_scope_value_as"
+SAVE_TEMPORARY_SCOPE_VALUE_AS = "save_temporary_scope_value_as"
 RANDOM = "random"
 RANDOM_LIST = "random_list"
 
@@ -240,6 +246,11 @@ class Event(BlockRoot):
 
         return "\n".join(self._lines)
 
+    def save_scope_value_as(self, name, value):
+        with Block(self, SAVE_SCOPE_VALUE_AS):
+            self.add_line(f"{NAME} = {name}")
+            self.add_line(f"{VALUE} = {value}")
+
     def generate_desc(self):
         self.add_line(f"{DESC} = {self.fullname}.{DESC}")
         if self.custom_desc is not None:
@@ -334,7 +345,12 @@ class Option:
                  # for dom options, have a chance to fail them
                  failed_transition_text="",
                  weight: int = 10, tooltip=None,
-                 subdom_dom_success=1, subdom_dom_fail=-2, subdom_sub=-1,
+                 # for dom options, specify the opinion change on success and failure of dom
+                 subdom_dom_success=1, subdom_dom_fail=-2,
+                 # for sub options, specify the opinion change on sub choice
+                 subdom_sub=-1,
+                 # for dom options, different options may be easier or harder than the base chance
+                 dom_success_adjustment=0,
                  modifiers=(), triggers=()):
         self.next_id = next_id
         # to be populated via backwards pass
@@ -356,6 +372,8 @@ class Option:
         self.subdom_dom_success = subdom_dom_success
         self.subdom_dom_fail = subdom_dom_fail
         self.subdom_sub = subdom_sub
+
+        self.dom_success_adjustment = dom_success_adjustment
 
         self.modifiers = modifiers
         self.triggers = triggers
@@ -469,15 +487,13 @@ class Sex(Event):
                         for prev_choice in range(choice):
                             with Block(self, TRIGGER):
                                 with Block(self, NOT):
-                                    self.add_line(f"{option_transition_str}_{prev_choice} = {option.id}")
+                                    self.add_line(f"{SCOPE}:{option_transition_str}_{prev_choice} = {option.id}")
                         with Block(self, f"{SAVE_SCOPE_VALUE_AS}"):
                             self.add_line(f"{NAME} = {option_transition_str}_{choice}")
                             self.add_line(f"{VALUE} = {option.id}")
         # fill in the rest of the choices so we don't have to check if it exists
         for choice in range(choice + 1, max_options_per_type):
-            with Block(self, f"{SAVE_SCOPE_VALUE_AS}"):
-                self.add_line(f"{NAME} = {option_transition_str}_{choice}")
-                self.add_line(f"{VALUE} = -1")
+            self.save_scope_value_as(f"{option_transition_str}_{choice}", -1)
 
     def generate_immediate_effect(self):
         with Block(self, LIDA_ONGOING_SEX_EFFECT):
@@ -493,9 +509,8 @@ class Sex(Event):
 
         if len(categories_to_options[OptionCategory.SUB]) == 0:
             self.add_comment("enforce dom success if we have no sub options to ensure there is at least a valid option")
-            with Block(self, SAVE_SCOPE_VALUE_AS):
-                self.add_line(f"{NAME} = {DOM_SUCCESS}")
-                self.add_line(f"{VALUE} = {YES}")
+            self.save_scope_value_as(DOM_CHANCE, 100)
+            self.save_scope_value_as(DOM_SUCCESS, 0)
         else:
             # calculate the success probability
             self.add_line(f"{CALCULATE_DOM_SUCCESS_EFFECT} = {YES}")
@@ -579,9 +594,20 @@ class Sex(Event):
             self.add_line(f"{CUSTOM_TOOLTIP} = {DOM_NO_SUB_TOOLTIP}")
         else:
             self.add_line(f"{CUSTOM_TOOLTIP} = {DOM_ATTEMPT_TOOLTIP}")
+            if option.dom_success_adjustment != 0:
+                self.save_scope_value_as(DOM_SUCCESS_ADJUSTMENT, option.dom_success_adjustment)
+                self.add_line(f"{CUSTOM_TOOLTIP} = {DOM_SUCCESS_ADJUSTMENT_TOOLTIP}")
+
+        # each dom option has potentially different success offsets
+        with Block(self, SAVE_TEMPORARY_SCOPE_VALUE_AS):
+            self.add_line(f"{NAME} = {THIS_DOM_CHANCE}")
+            with Block(self, VALUE):
+                self.add_line(f"{ADD} = {SCOPE}:{DOM_CHANCE}")
+                # this allows dom_success_adjustment to also be a scripted value (e.g. check if you're a blowjob expert)
+                self.add_line(f"{ADD} = {option.dom_success_adjustment}")
         with Block(self, IF):
             with Block(self, LIMIT):
-                self.add_line(f"{SCOPE}:{DOM_SUCCESS} = {YES}")
+                self.add_line(f"{SCOPE}:{DOM_SUCCESS} <= {SCOPE}:{THIS_DOM_CHANCE}")
             self.generate_hidden_opinion_change_effect(option.subdom_dom_success)
             with Block(self, SAVE_SCOPE_VALUE_AS):
                 self.add_line(f"{NAME} = {SEX_TRANSITION}")
@@ -597,7 +623,7 @@ class Sex(Event):
             for sub_option in sub_options:
                 with Block(self, IF):
                     with Block(self, LIMIT):
-                        self.add_line(f"{SCOPE}:{SUB_TRANSITION} = {sub_option.id}")
+                        self.add_line(f"{SCOPE}:{SUB_TRANSITION}_0 = {sub_option.id}")
                     self.add_line(f"{TRIGGER_EVENT} = {sub_option.next_event.fullname}")
 
 
