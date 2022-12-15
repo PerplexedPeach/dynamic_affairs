@@ -488,9 +488,7 @@ class Sex(Event):
                             with Block(self, TRIGGER):
                                 with Block(self, NOT):
                                     self.add_line(f"{SCOPE}:{option_transition_str}_{prev_choice} = {option.id}")
-                        with Block(self, f"{SAVE_SCOPE_VALUE_AS}"):
-                            self.add_line(f"{NAME} = {option_transition_str}_{choice}")
-                            self.add_line(f"{VALUE} = {option.id}")
+                        self.save_scope_value_as(f"{option_transition_str}_{choice}", option.id)
         # fill in the rest of the choices so we don't have to check if it exists
         for choice in range(choice + 1, max_options_per_type):
             self.save_scope_value_as(f"{option_transition_str}_{choice}", -1)
@@ -568,9 +566,7 @@ class Sex(Event):
                                         self.add_line(f"{SCOPE}:{CUM_TRANSITION}_{choice} = {option.id}")
 
                 # save this event
-                with Block(self, SAVE_SCOPE_VALUE_AS):
-                    self.add_line(f"{NAME} = {PREV_EVENT}")
-                    self.add_line(f"{VALUE} = {self.id.value}")
+                self.save_scope_value_as(PREV_EVENT, self.id.value)
                 # for dom options, it could backfire and get you more dommed
                 if option.category == OptionCategory.DOM:
                     self.generate_dom_option_effect(option, categories_to_options[OptionCategory.SUB])
@@ -584,9 +580,7 @@ class Sex(Event):
     def generate_sub_option_effect(self, option):
         self.add_line(f"{CUSTOM_TOOLTIP} = {VOLUNTARY_SUB_TOOLTIP}")
         self.generate_hidden_opinion_change_effect(option.subdom_sub)
-        with Block(self, SAVE_SCOPE_VALUE_AS):
-            self.add_line(f"{NAME} = {SEX_TRANSITION}")
-            self.add_line(f"{VALUE} = {option.id}")
+        self.save_scope_value_as(SEX_TRANSITION, option.id)
         self.add_line(f"{TRIGGER_EVENT} = {option.next_event.fullname}")
 
     def generate_dom_option_effect(self, option, sub_options):
@@ -609,16 +603,12 @@ class Sex(Event):
             with Block(self, LIMIT):
                 self.add_line(f"{SCOPE}:{DOM_SUCCESS} <= {SCOPE}:{THIS_DOM_CHANCE}")
             self.generate_hidden_opinion_change_effect(option.subdom_dom_success)
-            with Block(self, SAVE_SCOPE_VALUE_AS):
-                self.add_line(f"{NAME} = {SEX_TRANSITION}")
-                self.add_line(f"{VALUE} = {option.id}")
+            self.save_scope_value_as(SEX_TRANSITION, option.id)
             self.add_line(f"{TRIGGER_EVENT} = {option.next_event.fullname}")
         with Block(self, ELSE):
             self.generate_hidden_opinion_change_effect(option.subdom_dom_fail)
             # register that we've failed to dom (use a large offset plus that ID)
-            with Block(self, SAVE_SCOPE_VALUE_AS):
-                self.add_line(f"{NAME} = {SEX_TRANSITION}")
-                self.add_line(f"{VALUE} = {option.id + dom_fail_offset}")
+            self.save_scope_value_as(SEX_TRANSITION, option.id + dom_fail_offset)
             # for each possible sub transition check if we've sampled that
             for sub_option in sub_options:
                 with Block(self, IF):
