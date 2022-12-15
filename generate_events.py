@@ -671,6 +671,20 @@ def link_events_and_options(events: EventMap):
     return options
 
 
+def get_source_sex_events(events: EventMap):
+    source_events = []
+    for e in events.all():
+        is_source = True
+        for o in e.incoming_options:
+            ie = o.from_event
+            if ie != e and not isinstance(ie.id, EventsFirst):
+                is_source = False
+                break
+        if is_source:
+            source_events.append(e)
+    return source_events
+
+
 # TODO validate events (no disconnected events; have at least some in-edge or out-edge)
 def generate_strings(events, options):
     # generate localizations
@@ -693,16 +707,7 @@ def generate_strings(events, options):
     # organize effects into effects for randomly selecting them initially
     b = BlockRoot()
     # find sex events that have at most just itself as the incoming event
-    source_events = []
-    for e in events.all():
-        is_source = True
-        for o in e.incoming_options:
-            ie = o.from_event
-            if ie != e and not isinstance(ie.id, EventsFirst):
-                is_source = False
-                break
-        if is_source:
-            source_events.append(e)
+    source_events = get_source_sex_events(es)
     with Block(b, SELECT_START_AFFAIRS_EFFECT):
         with Block(b, RANDOM_LIST):
             for e in source_events:
@@ -773,40 +778,64 @@ def export_dot_graphviz(events, horizontal=True, censored=False):
         if horizontal:
             f.write("rankdir=LR;\n")
         f.write("fontname=Helvetica;\n")
+        f.write("concentrate=true")
 
-        # sex events
+        source_sex_events = get_source_sex_events(events)
+        cum_events = []
+        regular_sex_events = []
         for event in events.all():
-            if isinstance(event.id, EventsSex):
-                f.write(event.id.name)
-                f.write(f"[fontname=Helvetica, shape=box, "
-                        f"label={event.id.value if censored else event.id.name}]")
+            if event in source_sex_events:
+                continue
+            if isinstance(event.id, EventsCum):
+                cum_events.append(event)
+            else:
+                regular_sex_events.append(event)
+        events_with_options = source_sex_events + regular_sex_events
+
+        # regular sex events
+        for event in regular_sex_events:
+            f.write(event.id.name)
+            f.write(f"[fontname=Helvetica, shape=box, "
+                    f"label={event.id.value if censored else event.id.name}]")
+            f.write(";\n")
+
+        for event in events_with_options:
+            for option in event.options:
+                # terminal option
+                if option.next_id is None:
+                    continue
+                f.write(f"{event.id.name} -> {option.next_id.name}")
+                attr = []
+                if option.category == OptionCategory.DOM:
+                    attr.append("color=red")
+                elif option.category == OptionCategory.SUB:
+                    attr.append("color=blue")
+
+                attr.append(f"penwidth={option.weight / 5}")
+
+                if len(attr) > 0:
+                    attr = "[" + ",".join(attr) + "]"
+                    f.write(attr)
                 f.write(";\n")
-                for option in event.options:
-                    # terminal option
-                    if option.next_id is None:
-                        continue
-                    f.write(f"{event.id.name} -> {option.next_id.name}")
-                    attr = []
-                    if option.category == OptionCategory.DOM:
-                        attr.append("color=red")
-                    elif option.category == OptionCategory.SUB:
-                        attr.append("color=blue")
 
-                    attr.append(f"penwidth={option.weight / 5}")
-
-                    if len(attr) > 0:
-                        attr = "[" + ",".join(attr) + "]"
-                        f.write(attr)
-                    f.write(";\n")
+        # cum events (sink nodes)
+        f.write("subgraph cluster_sex_source {\n label=\"Source\";\n rank=same;\n")
+        for event in source_sex_events:
+            f.write(event.id.name)
+            f.write(
+                f"[fontname=Helvetica, shape=box, " 
+                f"label={event.id.value if censored else event.id.name}]")
+            f.write(";\n")
+        f.write("}\n")
 
         # cum events (sink nodes)
         f.write("subgraph cluster_cum {\n label=\"Terminal Events\";\n rank=sink;\n")
-        for event in events.all():
-            if isinstance(event.id, EventsCum):
-                f.write(event.id.name)
-                f.write(
-                    f"[fontname=Helvetica, shape=box, style=filled, rank=sink, color=\"#f2f0ae\", "
-                    f"label={event.id.value if censored else event.id.name}]")
+        for event in cum_events:
+            f.write(event.id.name)
+            f.write(
+                f"[fontname=Helvetica, shape=box, style=filled, rank=sink, color=\"#f2f0ae\", "
+                f"label={event.id.value if censored else event.id.name}]")
+            f.write(";\n")
         f.write("}\n")
         f.write("}\n")
 

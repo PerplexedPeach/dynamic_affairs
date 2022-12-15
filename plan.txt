@@ -239,3 +239,20 @@ questions
 					max = 75
 				}
 			}
+- use variables in the body then clear them in the after block
+		if = {
+			limit = { has_variable = last_hold_court_date }
+			remove_variable = last_hold_court_date
+		}
+		set_variable = {
+			name = last_hold_court_date
+			value = current_year
+		}
+
+
+TODO
+- change event 50's first option to point to first event with options list instead of just randomly choosing a single random event (give them some choices please!)
+	- special event list for first first time (but still of EventFirst type)
+- effect for selecting which first event we go to (depending on relationship)
+- select event theme in the first event, then carry over the theme from that event
+- add in traits
