@@ -17,6 +17,8 @@ class EventsSex(enum.Enum):
     ASS_TEASE = 2
     HANDJOB = 3
     BLOWJOB_DOM = 4
+    STANDING_FUCKED_FROM_BEHIND = 5
+    BLOWJOB_SUB = 6
 
 
 class EventsCum(enum.Enum):
@@ -780,8 +782,8 @@ parser.add_argument('-d', '--dry', action='store_true',
                     help="dry run printing the generated strings without exporting to file")
 args = parser.parse_args()
 
-if __name__ == "__main__":
-    es = EventMap()
+
+def define_events(es: EventMap):
     # define directed graph of events
     es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=0, stam_cost_2=1,
@@ -898,6 +900,11 @@ if __name__ == "__main__":
                terminal_option=Option(None, OptionCategory.OTHER, "Leave him yearning and frustrated"),
                desc=f"""blowjob ruined orgasm desc"""
                ))
+
+
+if __name__ == "__main__":
+    es = EventMap()
+    define_events(es)
 
     # find/specify all source sex events, which are ones which have at most themselves as input events
     all_options = link_events_and_options(es)
