@@ -19,11 +19,13 @@ class EventsSex(enum.Enum):
     BLOWJOB_DOM = 4
     STANDING_FUCKED_FROM_BEHIND = 5
     BLOWJOB_SUB = 6
+    DEEPTHROAT = 7
 
 
 class EventsCum(enum.Enum):
     HANDJOB_CUM_IN_HAND = 1
     BLOWJOB_CUM_IN_MOUTH_DOM = 2
+    BLOWJOB_CUM_IN_MOUTH_SUB = 6
     BLOWJOB_CUM_ON_FACE = 3
     BLOWJOB_RUINED_ORGASM = 4
     ASS_TEASE_CUM_ON_ASS = 5
@@ -785,6 +787,9 @@ args = parser.parse_args()
 
 def define_events(es: EventMap):
     # define directed graph of events
+    # TODO consider allowing all transition options instead of random sampling the transitions (or allowing >1 per type)
+    # TODO instead of sampling dom success/fail, just sample a number then do the comparison ourselves
+    # TODO since some dom options may be easier than others
     es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=0, stam_cost_2=1,
                desc=f"""With a knowing smirk, you size {THEM} up and put both your hands on their chest.
@@ -847,6 +852,7 @@ def define_events(es: EventMap):
                options=(
                    Option(EventsSex.HANDJOB, OptionCategory.DOM,
                           "Deny him your mouth, replacing it with your hands",
+                          weight=5,
                           transition_text=f"""
                           You give {THEM}'s head a last lick, making sure to drag it out as if expressing your tongue's
                           reluctance to part from it. You replace the warmth of your mouth with the milder warmth of
@@ -866,6 +872,13 @@ def define_events(es: EventMap):
                           The incessant invasion of his member down your throat
                           momentarily puts you in a trance, leaving the initiative in his hands.""",
                           subdom_dom_success=0),
+                   Option(EventsSex.BLOWJOB_SUB, OptionCategory.SUB,
+                          "Let him do the work of thrusting in and out of your mouth",
+                          transition_text=f"""
+                          Your jaw and neck sore from doing all the work, you decide to let him
+                          do pick up the slack. "Come on {THEM}, show me your mettle."
+                          \\n\\n
+                          Instead of wasting words, he places both hands behind your head and starts thrusting."""),
                    # TODO make these options more likely if you are addicted to cum
                    Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, OptionCategory.CUM,
                           "Milk him dry onto your tongue", weight=3),
@@ -873,6 +886,58 @@ def define_events(es: EventMap):
                           "Make him coat your face in cum", weight=3),
                    Option(EventsCum.BLOWJOB_RUINED_ORGASM, OptionCategory.CUM,
                           "Cruelly deny him his release")
+               )))
+    es.add(Sex(EventsSex.BLOWJOB_SUB, "Sub Blowjob",
+               stam_cost_1=1.0, stam_cost_2=1.5,
+               desc=f"""
+               sub blowjob desc""",
+               options=(
+                   Option(EventsSex.BLOWJOB_DOM, OptionCategory.DOM,
+                          "Take back control and be the active one giving the blowjob",
+                          transition_text=f"""
+                          Putting both hands on his waist, you curb his thrusts. 
+                          {THEM} moves his arms as if to protest, but your licks along his shaft
+                          resolve any nascent objections.""",
+                          failed_transition_text=f"""
+                          Putting both hands on his waist, you attempt to curb his thrusts.
+                          However, on your knees beneath him, you don't have enough leverage to forcefully
+                          stop him and he seems to have no intention of letting you back in control.
+                          """),
+                   Option(EventsSex.BLOWJOB_SUB, OptionCategory.SUB,
+                          "Let him continue his thrusts",
+                          transition_text=f"""
+                          You adjust your posture better suit his thrusts, making sure to pull away your teeth."""),
+                   Option(EventsSex.DEEPTHROAT, OptionCategory.SUB,
+                          "Let him thrust even deeper",
+                          transition_text=f"""
+                          He takes advantage of your lack of strong resistance to dominate your mouth
+                          further. Trapping your head with his hands, he plunges deeper while you gag."""),
+                   Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, OptionCategory.CUM,
+                          "Let him cum in your mouth"),
+                   Option(EventsCum.BLOWJOB_CUM_ON_FACE, OptionCategory.CUM,
+                          "Make him coat your face in cum"),
+               )))
+    es.add(Sex(EventsSex.DEEPTHROAT, "Deepthroat",
+               stam_cost_1=1.0, stam_cost_2=2.0,
+               desc=f"""
+               deepthroat desc""",
+               options=(
+                   Option(EventsSex.BLOWJOB_SUB, OptionCategory.DOM,
+                          "Take some control back",
+                          transition_text=f"""
+                          Putting both hands on his waist, you reduce his thrusts to a manageable pace and depth. 
+                          """,
+                          failed_transition_text=f"""
+                          Putting both hands on his waist, you push and try to stop his thrusts.
+                          It's all in vain, however, as he ignores you.
+                          """),
+                   Option(EventsSex.DEEPTHROAT, OptionCategory.SUB,
+                          "Continue deepthroating",
+                          transition_text=f"""
+                          He continues fucking your throat while 
+                          your vision blurs against a mixture of tears, saliva, and sex juices."""),
+                   Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, OptionCategory.CUM,
+                          "He cums in your mouth"),
                )))
     es.add(Cum(EventsCum.HANDJOB_CUM_IN_HAND, "A Cumshot in Hand is Worth Two in the Bush",
                subdom_change=1,
@@ -887,13 +952,18 @@ def define_events(es: EventMap):
     # TODO add chance of acquiring fetishes
     es.add(Cum(EventsCum.BLOWJOB_CUM_ON_FACE, "Painting your Face",
                subdom_change=-2,
-               terminal_option=Option(None, OptionCategory.OTHER, "Sample some of the stray globs of cum"),
+               terminal_option=Option(None, OptionCategory.OTHER, "Sample some stray globs of cum"),
                desc=f"""cum on face desc"""
                ))
     es.add(Cum(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, "Satisfying your Sweet Tooth",
                subdom_change=-1,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe away any cum that might've escaped"),
                desc=f"""cum in mouth dom desc"""
+               ))
+    es.add(Cum(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, "Down the Gullet",
+               subdom_change=-2,
+               terminal_option=Option(None, OptionCategory.OTHER, "Recover from having your throat used so roughly"),
+               desc=f"""cum in mouth sub desc"""
                ))
     es.add(Cum(EventsCum.BLOWJOB_RUINED_ORGASM, "A Firm Grasp on His Release",
                subdom_change=2,
