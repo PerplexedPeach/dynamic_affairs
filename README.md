@@ -82,3 +82,4 @@ in the format of the following commented example:
 
 Check out [https://ck3.paradoxwikis.com/Localization](https://ck3.paradoxwikis.com/Localization) for 
 fancy formatting of text.
+Current event graph: ![vis](vis.png)
