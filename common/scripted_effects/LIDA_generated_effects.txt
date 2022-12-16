@@ -1,19 +1,98 @@
 ﻿# GENERATED FILE - DO NOT MODIFY DIRECTLY
 select_start_affairs_effect = {
-	random_list = {
-		5 = {
-			trigger = {
-				is_female = yes
-			}
-			# Handjob Tease
-			trigger_event = LIDAs.1
+	every_prisoner = {
+		add_to_temporary_list = prisoner_list
+	}
+	if = {
+		limit = {
+			is_spouse_of = scope:affairs_partner
 		}
-		5 = {
-			trigger = {
-				is_female = yes
+		if = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+				}
 			}
-			# Ass Tease
-			trigger_event = LIDAs.2
+			# MEETING_WITH_SPOUSE
+			trigger_event = LIDAf.1
+		}
+		else = {
+			# MEETING_WITH_SPOUSE_INITIAL
+			trigger_event = LIDAf.2
+		}
+	}
+	else_if = {
+		limit = {
+			is_in_list = prisoner_list
+		}
+		if = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+				}
+			}
+			# MEETING_WITH_PRISONER
+			trigger_event = LIDAf.7
+		}
+		else = {
+			# MEETING_WITH_PRISONER_INITIAL
+			trigger_event = LIDAf.8
+		}
+	}
+	else_if = {
+		limit = {
+			is_vassal_or_below_of = scope:affairs_partner
+		}
+		if = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+				}
+			}
+			# MEETING_WITH_LIEGE
+			trigger_event = LIDAf.5
+		}
+		else = {
+			# MEETING_WITH_LIEGE_INITIAL
+			trigger_event = LIDAf.6
+		}
+	}
+	else_if = {
+		limit = {
+			target_is_vassal_or_below = scope:affairs_partner
+		}
+		if = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+				}
+			}
+			# MEETING_WITH_VASSAL
+			trigger_event = LIDAf.3
+		}
+		else = {
+			# MEETING_WITH_VASSAL_INITIAL
+			trigger_event = LIDAf.4
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+				}
+			}
+			# MEETING_WITH_ACQUAINTANCE
+			trigger_event = LIDAf.9
+		}
+		else = {
+			# MEETING_WITH_ACQUAINTANCE_INITIAL
+			trigger_event = LIDAf.10
 		}
 	}
 }

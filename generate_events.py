@@ -67,6 +67,13 @@ NAME = "name"
 VALUE = "value"
 CUSTOM_TOOLTIP = "custom_tooltip"
 ADD = "add"
+IS_SPOUSE_OF = "is_spouse_of"
+IS_IN_LIST = "is_in_list"
+REVERSE_HAS_OPINION_MODIFIER = "reverse_has_opinion_modifier"
+EVERY_PRISONER = "every_prisoner"
+ADD_TO_TEMPORARY_LIST = "add_to_temporary_list"
+IS_VASSAL_OR_BELOW_OF = "is_vassal_or_below_of"
+TARGET_IS_VASSAL_OR_BELOW = "target_is_vassal_or_below"
 
 CHARACTER_EVENT = "character_event"
 CHARACTER = "character"
@@ -92,6 +99,7 @@ CANCEL_MEETING_TOOLTIP = "cancel_meeting_tooltip"
 # effects
 TRIGGER_EVENT = "trigger_event"
 IF = "if"
+ELSE_IF = "else_if"
 LIMIT = "limit"
 ELSE = "else"
 HIDDEN_EFFECT = "hidden_effect"
@@ -196,6 +204,14 @@ class BlockRoot:
     def clear(self):
         self._lines = []
 
+    def assign(self, name, value):
+        self.add_line(f"{name} = {value}")
+
+    def save_scope_value_as(self, name, value):
+        with Block(self, SAVE_SCOPE_VALUE_AS):
+            self.assign(NAME, name)
+            self.assign(VALUE, value)
+
     def __repr__(self):
         return "\n".join(self._lines)
 
@@ -248,7 +264,6 @@ class Event(BlockRoot):
             self.add_line(f"{TYPE} = {CHARACTER_EVENT}")
             self.add_line(f"{TITLE} = {self.fullname}.t")
             self.add_line(f"{THEME} = {self.theme}")
-            # TODO check if I need to do this in every event, or just the first one in the chain
             self.generate_background()
             with Block(self, LEFT_PORTRAIT):
                 self.add_line(f"{CHARACTER} = {ROOT}")
@@ -265,14 +280,6 @@ class Event(BlockRoot):
             self.generate_options()
 
         return "\n".join(self._lines)
-
-    def assign(self, name, value):
-        self.add_line(f"{name} = {value}")
-
-    def save_scope_value_as(self, name, value):
-        with Block(self, SAVE_SCOPE_VALUE_AS):
-            self.assign(NAME, name)
-            self.assign(VALUE, value)
 
     def generate_desc(self):
         self.add_line(f"{DESC} = {self.fullname}.{DESC}")
@@ -770,6 +777,23 @@ def get_source_sex_events(events: EventMap):
     return source_events
 
 
+def limit_has_opinion(b: BlockRoot):
+    with Block(b, LIMIT):
+        with Block(b, REVERSE_HAS_OPINION_MODIFIER):
+            b.assign(TARGET, AFFAIRS_PARTNER)
+            b.assign(MODIFIER, DOMINANT_OPINION)
+
+
+def add_meeting_events(b: BlockRoot, es, id_initial, id_repeat):
+    with Block(b, IF):
+        limit_has_opinion(b)
+        b.add_comment(id_repeat.name)
+        b.assign(TRIGGER_EVENT, es[id_repeat].fullname)
+    with Block(b, ELSE):
+        b.add_comment(id_initial.name)
+        b.assign(TRIGGER_EVENT, es[id_initial].fullname)
+
+
 # TODO validate events (no disconnected events; have at least some in-edge or out-edge)
 def generate_strings(events, options):
     # generate localizations
@@ -792,17 +816,31 @@ def generate_strings(events, options):
     # organize effects into effects for randomly selecting them initially
     b = BlockRoot()
     # find sex events that have at most just itself as the incoming event
-    source_events = get_source_sex_events(es)
     with Block(b, SELECT_START_AFFAIRS_EFFECT):
-        with Block(b, RANDOM_LIST):
-            for e in source_events:
-                with Block(b, str(base_event_weight)):
-                    # triggers on these based on if root is female
-                    with Block(b, TRIGGER):
-                        b.add_line(f"{IS_FEMALE} = {yes_no(e.root_female)}")
-                    # TODO modifier on fetishes and sub/domness (needs to be added to the events as well)
-                    b.add_comment(e.title)
-                    b.add_line(f"{TRIGGER_EVENT} = {e.fullname}")
+        # depending on various conditions, choose different first events to launch
+        prisoner_list = "prisoner_list"
+        with Block(b, EVERY_PRISONER):
+            b.assign(ADD_TO_TEMPORARY_LIST, prisoner_list)
+        with Block(b, IF):
+            with Block(b, LIMIT):
+                b.assign(IS_SPOUSE_OF, AFFAIRS_PARTNER)
+            add_meeting_events(b, es, EventsFirst.MEETING_WITH_SPOUSE_INITIAL, EventsFirst.MEETING_WITH_SPOUSE)
+        with Block(b, ELSE_IF):
+            with Block(b, LIMIT):
+                b.assign(IS_IN_LIST, prisoner_list)
+            add_meeting_events(b, es, EventsFirst.MEETING_WITH_PRISONER_INITIAL, EventsFirst.MEETING_WITH_PRISONER)
+        with Block(b, ELSE_IF):
+            with Block(b, LIMIT):
+                b.assign(IS_VASSAL_OR_BELOW_OF, AFFAIRS_PARTNER)
+            add_meeting_events(b, es, EventsFirst.MEETING_WITH_LIEGE_INITIAL, EventsFirst.MEETING_WITH_LIEGE)
+        with Block(b, ELSE_IF):
+            with Block(b, LIMIT):
+                b.assign(TARGET_IS_VASSAL_OR_BELOW, AFFAIRS_PARTNER)
+            add_meeting_events(b, es, EventsFirst.MEETING_WITH_VASSAL_INITIAL, EventsFirst.MEETING_WITH_VASSAL)
+        with Block(b, ELSE):
+            add_meeting_events(b, es, EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL,
+                               EventsFirst.MEETING_WITH_ACQUAINTANCE)
+
     effect_text = str(b)
     return event_text, effect_text, event_localization, option_localization
 

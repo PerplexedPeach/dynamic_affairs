@@ -34,6 +34,9 @@ LIDA.50 = {
 		random_in_list = {
 			list = affairs_pool
 			limit = {
+				NOT = {
+					is_in_list = rejected_affairs_pool
+				}
 				NOR = {
 					has_trait = celibate
 					has_sexuality = asexual
@@ -114,20 +117,7 @@ LIDA.50 = {
 			name = partner_stamina
 			value = scope:affairs_partner.max_sex_stamina 
 		}
-		# go straight to the sex event if we already have an ongoing affair with this person
-		if = {
-			limit = {
-				reverse_has_opinion_modifier = {
-					target = scope:affairs_partner
-					modifier = dominant_opinion
-				}
-			}
-			select_start_affairs_effect = yes
-		}
-		# otherwise go through special first time event
-		else = {
-			select_first_meet_affairs_effect = yes
-		}
+		select_start_affairs_effect = yes
 	}
 	option = {
 		# reroll

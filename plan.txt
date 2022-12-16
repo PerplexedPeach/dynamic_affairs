@@ -251,8 +251,4 @@ questions
 
 
 TODO
-- change event 50's first option to point to first event with options list instead of just randomly choosing a single random event (give them some choices please!)
-	- special event list for first first time (but still of EventFirst type)
-- effect for selecting which first event we go to (depending on relationship)
-- select event theme in the first event, then carry over the theme from that event
 - add in traits

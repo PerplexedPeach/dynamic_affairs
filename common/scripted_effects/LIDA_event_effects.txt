@@ -1,11 +1,4 @@
-﻿# effect for navigating to the next event from the first hub event
-select_first_meet_affairs_effect = {
-	# first time 
-	# TODO randomly choose from list
-	trigger_event = LIDAf.1
-}
-
-# map relationship value to a stored scope value
+﻿# map relationship value to a stored scope value
 store_subdom_value_effect = {
 	save_scope_value_as = {
 		name = subdom
