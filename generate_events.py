@@ -261,16 +261,16 @@ class Event(BlockRoot):
         self._lines = []
         with Block(self, self.fullname):
             self.add_comment(self.title)
-            self.add_line(f"{TYPE} = {CHARACTER_EVENT}")
-            self.add_line(f"{TITLE} = {self.fullname}.t")
-            self.add_line(f"{THEME} = {self.theme}")
+            self.assign(TYPE, CHARACTER_EVENT)
+            self.assign(TITLE, f"{self.fullname}.t")
+            self.assign(THEME, self.theme)
             self.generate_background()
             with Block(self, LEFT_PORTRAIT):
-                self.add_line(f"{CHARACTER} = {ROOT}")
-                self.add_line(f"{ANIMATION} = {self.anim_l}")
+                self.assign(CHARACTER, ROOT)
+                self.assign(ANIMATION, self.anim_l)
             with Block(self, RIGHT_PORTRAIT):
-                self.add_line(f"{CHARACTER} = {AFFAIRS_PARTNER}")
-                self.add_line(f"{ANIMATION} = {self.anim_r}")
+                self.assign(CHARACTER, AFFAIRS_PARTNER)
+                self.assign(ANIMATION, self.anim_r)
 
             with Block(self, DESC):
                 self.generate_desc()
@@ -282,7 +282,7 @@ class Event(BlockRoot):
         return "\n".join(self._lines)
 
     def generate_desc(self):
-        self.add_line(f"{DESC} = {self.fullname}.{DESC}")
+        self.assign(DESC, f"{self.fullname}.{DESC}")
         if self.custom_desc is not None:
             # calling the custom desc will modify the event string text in place, and return a localization string
             self.custom_localization = self.custom_desc(self)
@@ -296,7 +296,7 @@ class Event(BlockRoot):
 
     def generate_hidden_opinion_change_effect(self, change):
         with Block(self, CHANGE_SUBDOM_EFFECT):
-            self.add_line(f"{CHANGE} = {change}")
+            self.assign(CHANGE, change)
 
     def generate_options_transition(self, options_list, option_transition_str):
         if len(options_list) == 0:
@@ -312,7 +312,7 @@ class Event(BlockRoot):
                         for prev_choice in range(choice):
                             with Block(self, TRIGGER):
                                 with Block(self, NOT):
-                                    self.add_line(f"{SCOPE}:{option_transition_str}_{prev_choice} = {option.id}")
+                                    self.assign(f"{SCOPE}:{option_transition_str}_{prev_choice}", option.id)
                         self.save_scope_value_as(f"{option_transition_str}_{choice}", option.id)
         # fill in the rest of the choices so we don't have to check if it exists
         for choice in range(choice + 1, max_options_per_type):
@@ -342,12 +342,12 @@ class Event(BlockRoot):
         prefix = "f" if self.root_female else "rm"
         with Block(self, TRIGGERED_DESC):
             with Block(self, TRIGGER):
-                self.add_line(f"{SCOPE}:{ROOT_CUM} = {YES}")
+                self.assign(f"{SCOPE}:{ROOT_CUM}", YES)
                 # depending on if we have a special root cum text or if we need to default
             if self.root_cum_text is not None:
-                self.add_line(f"{DESC} = {self.fullname}.{ROOT_CUM}")
+                self.assign(DESC, f"{self.fullname}.{ROOT_CUM}")
             else:
-                self.add_line(f"{DESC} = {ROOT_CUM}_{prefix}")
+                self.assign(DESC, f"{ROOT_CUM}_{prefix}")
 
     def generate_incoming_options_desc(self):
         # description of the transition from the previous event
@@ -358,33 +358,33 @@ class Event(BlockRoot):
             for option in self.incoming_options:
                 with Block(self, TRIGGERED_DESC):
                     with Block(self, TRIGGER):
-                        self.add_line(f"{EXISTS} = {SCOPE}:{SEX_TRANSITION}")
-                        self.add_line(f"{SCOPE}:{SEX_TRANSITION} = {option.id}")
+                        self.assign(EXISTS, f"{SCOPE}:{SEX_TRANSITION}")
+                        self.assign(f"{SCOPE}:{SEX_TRANSITION}", option.id)
                     self.add_debug_comment(option.from_event.title)
                     self.add_debug_comment(option.transition_text)
-                    self.add_line(f"{DESC} = {SEX_TRANSITION}_{option.id}")
+                    self.assign(DESC, f"{SEX_TRANSITION}_{option.id}")
             for option in self.adjacent_options:
                 if option.failed_transition_text != "":
                     with Block(self, TRIGGERED_DESC):
                         with Block(self, TRIGGER):
-                            self.add_line(f"{EXISTS} = {SCOPE}:{SEX_TRANSITION}")
-                            self.add_line(f"{SCOPE}:{SEX_TRANSITION} = {option.id + dom_fail_offset}")
+                            self.assign(EXISTS, f"{SCOPE}:{SEX_TRANSITION}")
+                            self.assign(f"{SCOPE}:{SEX_TRANSITION}", option.id + dom_fail_offset)
                         self.add_debug_comment(f"{option} failed")
                         self.add_debug_comment(option.failed_transition_text)
-                        self.add_line(f"{DESC} = {SEX_TRANSITION}_{option.id + dom_fail_offset}")
+                        self.assign(DESC, f"{SEX_TRANSITION}_{option.id + dom_fail_offset}")
 
         # if we failed a dom transition and this event has a direct option from that failed event, use it
         # for all the incoming options
         for option in self.incoming_options:
             with Block(self, TRIGGERED_DESC):
                 with Block(self, TRIGGER):
-                    self.add_line(f"{EXISTS} = {SCOPE}:{SEX_TRANSITION}")
+                    self.assign(EXISTS, f"{SCOPE}:{SEX_TRANSITION}")
                     self.add_line(f"{SCOPE}:{SEX_TRANSITION} > {dom_fail_offset}")
-                    self.add_line(f"{EXISTS} = {SCOPE}:{PREV_EVENT}")
-                    self.add_line(f"{SCOPE}:{PREV_EVENT} = {option.from_id.value}")
+                    self.assign(EXISTS, f"{SCOPE}:{PREV_EVENT}")
+                    self.assign(f"{SCOPE}:{PREV_EVENT}", option.from_id.value)
                 # TODO consider replacing the whole sex_transition system with just PREV_EVENT
                 self.add_debug_comment(f"defaulted to {option}")
-                self.add_line(f"{DESC} = {SEX_TRANSITION}_{option.id}")
+                self.assign(DESC, f"{SEX_TRANSITION}_{option.id}")
 
 
 class OptionCategory(enum.IntEnum):
@@ -444,9 +444,9 @@ class Option:
 
     def generate_modifiers_and_triggers(self, event: Event):
         for modifier in self.modifiers:
-            event.add_line(f"{MODIFIER} = {{ {modifier} }}")
+            event.assign(MODIFIER, f"{{ {modifier} }}")
         for trigger in self.triggers:
-            event.add_line(f"{TRIGGER} = {{ {trigger} }}")
+            event.assign(TRIGGER, f"{{ {trigger} }}")
 
     def generate_localization(self):
         lines = [f"{self.fullname}: \"{self.option_text}\"",
@@ -480,12 +480,12 @@ class Cum(Event):
         if self.subdom_change != 0:
             self.generate_hidden_opinion_change_effect(self.subdom_change)
         with Block(self, CARN_HAD_SEX_WITH_EFFECT):
-            self.add_line(f"{CHARACTER_1} = {ROOT}")
-            self.add_line(f"{CHARACTER_2} = {AFFAIRS_PARTNER}")
-            self.add_line(f"{C1_PREGNANCY_CHANCE} = {self.preg_chance_1}")
-            self.add_line(f"{C2_PREGNANCY_CHANCE} = {self.preg_chance_2}")
-            self.add_line(f"{STRESS_EFFECTS} = {yes_no(self.stress_effects)}")
-            self.add_line(f"{DRAMA} = {yes_no(self.drama)}")
+            self.assign(CHARACTER_1, ROOT)
+            self.assign(CHARACTER_2, AFFAIRS_PARTNER)
+            self.assign(C1_PREGNANCY_CHANCE, self.preg_chance_1)
+            self.assign(C2_PREGNANCY_CHANCE, self.preg_chance_2)
+            self.assign(STRESS_EFFECTS, yes_no(self.stress_effects))
+            self.assign(DRAMA, yes_no(self.drama))
 
         # each cum only has one acknowledgement option with no effects
         super(Cum, self).generate_immediate_effect()
@@ -495,9 +495,9 @@ class Cum(Event):
     def generate_options(self):
         option = self.options[0]
         with Block(self, OPTION):
-            self.add_line(f"{NAME} = {option.fullname}")
+            self.assign(NAME, option.fullname)
             if option.tooltip is not None:
-                self.add_line(f"{CUSTOM_TOOLTIP} = {option.fullname}.tt")
+                self.assign(CUSTOM_TOOLTIP, f"{option.fullname}.tt")
 
 
 class First(Event):
@@ -523,19 +523,19 @@ class First(Event):
         for option in self.options:
             with Block(self, OPTION):
                 self.add_debug_comment(str(option))
-                self.add_line(f"{NAME} = {option.fullname}")
+                self.assign(NAME, option.fullname)
                 if option.tooltip is not None:
-                    self.add_line(f"{CUSTOM_TOOLTIP} = {option.fullname}.tt")
+                    self.assign(CUSTOM_TOOLTIP, f"{option.fullname}.tt")
 
                 with Block(self, TRIGGER):
                     with Block(self, OR):
                         for choice in range(max_options_per_type):
-                            self.add_line(f"{SCOPE}:{FIRST_TRANSITION}_{choice} = {option.id}")
+                            self.assign(f"{SCOPE}:{FIRST_TRANSITION}_{choice}", option.id)
 
                 # save this event
                 self.save_scope_value_as(PREV_EVENT, self.id.value)
                 self.save_scope_value_as(SEX_TRANSITION, option.id)
-                self.add_line(f"{TRIGGER_EVENT} = {option.next_event.fullname}")
+                self.assign(TRIGGER_EVENT, option.next_event.fullname)
         # last option is to back out
         with Block(self, OPTION):
             self.assign(NAME, CANCEL_MEETING_OPTION)
@@ -573,32 +573,32 @@ class Sex(Event):
                     with Block(self, TRIGGERED_DESC):
                         with Block(self, TRIGGER):
                             self.add_line(f"{value_to_check} < {threshold}")
-                        self.add_line(f"{DESC} = {prefix}_{suffix}_stam")
+                        self.assign(DESC, f"{prefix}_{suffix}_stam")
                 # backup option for high stamina
-                self.add_line(f"{DESC} = {prefix}_high_stam")
+                self.assign(DESC, f"{prefix}_high_stam")
 
         super(Sex, self).generate_desc()
 
     def generate_immediate_effect(self):
         with Block(self, LIDA_ONGOING_SEX_EFFECT):
-            self.add_line(f"{STAMINA_COST_1} = {self.stam_cost_1}")
-            self.add_line(f"{STAMINA_COST_2} = {self.stam_cost_2}")
+            self.assign(STAMINA_COST_1, self.stam_cost_1)
+            self.assign(STAMINA_COST_2, self.stam_cost_2)
 
         # for each event, allow for special description on root cum; if none specified, default one will be used
-        self.add_line(f"{CHECK_IF_ROOT_CUM_EFFECT} = {YES}")
+        self.assign(CHECK_IF_ROOT_CUM_EFFECT, YES)
         # separate into categories; within each category the outcome of which option gets selected is random
         categories_to_options = {c: [] for c in OptionCategory}
         for option in self.options:
             categories_to_options[option.category].append(option)
 
-        self.add_line(f"{STORE_SUBDOM_VALUE_EFFECT} = {YES}")
+        self.assign(STORE_SUBDOM_VALUE_EFFECT, YES)
         if len(categories_to_options[OptionCategory.SUB]) == 0:
             self.add_comment("enforce dom success if we have no sub options to ensure there is at least a valid option")
             self.save_scope_value_as(DOM_CHANCE, 100)
             self.save_scope_value_as(DOM_SUCCESS, 0)
         else:
             # calculate the success probability
-            self.add_line(f"{CALCULATE_DOM_SUCCESS_EFFECT} = {YES}")
+            self.assign(CALCULATE_DOM_SUCCESS_EFFECT, YES)
 
         # roll for both the dom and sub transitions
         for c, c_trans in [(OptionCategory.DOM, DOM_TRANSITION), (OptionCategory.SUB, SUB_TRANSITION)]:
@@ -627,9 +627,9 @@ class Sex(Event):
         for option in self.options:
             with Block(self, OPTION):
                 self.add_debug_comment(str(option))
-                self.add_line(f"{NAME} = {option.fullname}")
+                self.assign(NAME, option.fullname)
                 if option.tooltip is not None:
-                    self.add_line(f"{CUSTOM_TOOLTIP} = {option.fullname}.tt")
+                    self.assign(CUSTOM_TOOLTIP, f"{option.fullname}.tt")
 
                 # for some reason show_as_unavailable is not a subset of trigger, so have to duplicate it
                 for block in [TRIGGER, SHOW_AS_UNAVAILABLE]:
@@ -643,13 +643,13 @@ class Sex(Event):
                             self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION}_0 }}")
                             with Block(self, OR):
                                 for choice in range(max_options_per_type):
-                                    self.add_line(f"{SCOPE}:{trans_type}_{choice} = {option.id}")
+                                    self.assign(f"{SCOPE}:{trans_type}_{choice}", option.id)
                         elif option.category == OptionCategory.CUM:
                             with Block(self, OR):
                                 for choice in range(max_options_per_type):
                                     with Block(self, AND):
-                                        self.add_line(f"{EXISTS} = {SCOPE}:{CUM_TRANSITION}_{choice}")
-                                        self.add_line(f"{SCOPE}:{CUM_TRANSITION}_{choice} = {option.id}")
+                                        self.assign(EXISTS, f"{SCOPE}:{CUM_TRANSITION}_{choice}")
+                                        self.assign(f"{SCOPE}:{CUM_TRANSITION}_{choice}", option.id)
 
                 # save this event
                 self.save_scope_value_as(PREV_EVENT, self.id.value)
@@ -659,38 +659,38 @@ class Sex(Event):
                 elif option.category == OptionCategory.SUB:
                     self.generate_sub_option_effect(option)
                 elif option.category == OptionCategory.CUM:
-                    self.add_line(f"{TRIGGER_EVENT} = {option.next_event.fullname}")
+                    self.assign(TRIGGER_EVENT, option.next_event.fullname)
                 else:
                     raise RuntimeError(f"Unsupported option category {option.category}")
 
     def generate_sub_option_effect(self, option):
-        self.add_line(f"{CUSTOM_TOOLTIP} = {VOLUNTARY_SUB_TOOLTIP}")
+        self.assign(CUSTOM_TOOLTIP, VOLUNTARY_SUB_TOOLTIP)
         self.generate_hidden_opinion_change_effect(option.subdom_sub)
         self.save_scope_value_as(SEX_TRANSITION, option.id)
-        self.add_line(f"{TRIGGER_EVENT} = {option.next_event.fullname}")
+        self.assign(TRIGGER_EVENT, option.next_event.fullname)
 
     def generate_dom_option_effect(self, option, sub_options):
         if len(sub_options) == 0:
-            self.add_line(f"{CUSTOM_TOOLTIP} = {DOM_NO_SUB_TOOLTIP}")
+            self.assign(CUSTOM_TOOLTIP, DOM_NO_SUB_TOOLTIP)
         else:
-            self.add_line(f"{CUSTOM_TOOLTIP} = {DOM_ATTEMPT_TOOLTIP}")
+            self.assign(CUSTOM_TOOLTIP, DOM_ATTEMPT_TOOLTIP)
             if option.dom_success_adjustment != 0:
                 self.save_scope_value_as(DOM_SUCCESS_ADJUSTMENT, option.dom_success_adjustment)
-                self.add_line(f"{CUSTOM_TOOLTIP} = {DOM_SUCCESS_ADJUSTMENT_TOOLTIP}")
+                self.assign(CUSTOM_TOOLTIP, DOM_SUCCESS_ADJUSTMENT_TOOLTIP)
 
         # each dom option has potentially different success offsets
         with Block(self, SAVE_TEMPORARY_SCOPE_VALUE_AS):
-            self.add_line(f"{NAME} = {THIS_DOM_CHANCE}")
+            self.assign(NAME, THIS_DOM_CHANCE)
             with Block(self, VALUE):
-                self.add_line(f"{ADD} = {SCOPE}:{DOM_CHANCE}")
+                self.assign(ADD, f"{SCOPE}:{DOM_CHANCE}")
                 # this allows dom_success_adjustment to also be a scripted value (e.g. check if you're a blowjob expert)
-                self.add_line(f"{ADD} = {option.dom_success_adjustment}")
+                self.assign(ADD, option.dom_success_adjustment)
         with Block(self, IF):
             with Block(self, LIMIT):
                 self.add_line(f"{SCOPE}:{DOM_SUCCESS} <= {SCOPE}:{THIS_DOM_CHANCE}")
             self.generate_hidden_opinion_change_effect(option.subdom_dom_success)
             self.save_scope_value_as(SEX_TRANSITION, option.id)
-            self.add_line(f"{TRIGGER_EVENT} = {option.next_event.fullname}")
+            self.assign(TRIGGER_EVENT, option.next_event.fullname)
         with Block(self, ELSE):
             self.generate_hidden_opinion_change_effect(option.subdom_dom_fail)
             # register that we've failed to dom (use a large offset plus that ID)
@@ -699,8 +699,8 @@ class Sex(Event):
             for sub_option in sub_options:
                 with Block(self, IF):
                     with Block(self, LIMIT):
-                        self.add_line(f"{SCOPE}:{SUB_TRANSITION}_0 = {sub_option.id}")
-                    self.add_line(f"{TRIGGER_EVENT} = {sub_option.next_event.fullname}")
+                        self.assign(f"{SCOPE}:{SUB_TRANSITION}_0", sub_option.id)
+                    self.assign(TRIGGER_EVENT, sub_option.next_event.fullname)
 
 
 class Block:
