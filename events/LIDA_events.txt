@@ -2,6 +2,41 @@
 
 # main namespace of all common events
 namespace = LIDA
+# debug events
+LIDA.1 = {
+	type = character_event
+	title = "Become more sub"
+	theme = seduction
+	left_portrait = {
+		character = root
+	}
+	immediate = {
+		random = {
+			chance = 50
+			become_more_sub_effect = yes
+		}
+	}
+	option = {
+		name = "ok"
+	}
+}
+LIDA.2 = {
+	type = character_event
+	title = "Become more dom"
+	theme = seduction
+	left_portrait = {
+		character = root
+	}
+	immediate = {
+		random = {
+			chance = 50
+			become_more_dom_effect = yes
+		}
+	}
+	option = {
+		name = "ok"
+	}
+}
 LIDA.50 = {
 	# main event hub An Illicit Affair
 	type = character_event
