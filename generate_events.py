@@ -894,14 +894,23 @@ def export_strings(event_text, effect_text, event_localization, option_localizat
             f.write(effect_text)
 
 
-def export_dot_graphviz(events, horizontal=True, censored=False):
+def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=True):
+    def get_event_name(event):
+        name = event.id.name
+        if show_titles:
+            name += f"\\n{event.title}"
+        if censored:
+            name = event.id.value
+        return name
+
     gv_filename = "vis.gv"
     with open(gv_filename, "w") as f:
         f.write("digraph G {\n")
         if horizontal:
             f.write("rankdir=LR;\n")
         f.write("fontname=Helvetica;\n")
-        f.write("concentrate=true;\n")
+        # merge edges going back and forth - not good since we need different colors
+        # f.write("concentrate=true;\n")
         f.write("compound=true;\n")
 
         source_sex_events = get_source_sex_events(events)
@@ -922,8 +931,7 @@ def export_dot_graphviz(events, horizontal=True, censored=False):
         # regular sex events
         for event in regular_sex_events:
             f.write(event.id.name)
-            f.write(f"[fontname=Helvetica, shape=box, "
-                    f"label={event.id.value if censored else event.id.name}]")
+            f.write(f"[fontname=Helvetica, shape=box, label=\"{get_event_name(event)}\"]")
             f.write(";\n")
 
         for event in events_with_options:
@@ -950,9 +958,7 @@ def export_dot_graphviz(events, horizontal=True, censored=False):
         # invisible node for others to connect to the cluster as a whole
         for i, event in enumerate(source_sex_events):
             f.write(event.id.name)
-            f.write(
-                f"[fontname=Helvetica, shape=box, "
-                f"label={event.id.value if censored else event.id.name}]")
+            f.write(f"[fontname=Helvetica, shape=box, label=\"{get_event_name(event)}\"]")
             f.write(";\n")
         f.write("}\n")
 
@@ -961,7 +967,7 @@ def export_dot_graphviz(events, horizontal=True, censored=False):
             f.write(event.id.name)
             f.write(
                 f"[fontname=Helvetica, shape=box, style=filled, color=\"#7fdb98\","
-                f"label={event.id.value if censored else event.id.name}]")
+                f"label=\"{get_event_name(event)}\"]")
             f.write(";\n")
             # create visual connection between the start meeting events and the source events
             if i == len(first_events) // 2:
@@ -975,7 +981,7 @@ def export_dot_graphviz(events, horizontal=True, censored=False):
             f.write(event.id.name)
             f.write(
                 f"[fontname=Helvetica, shape=box, style=filled, rank=sink, color=\"#f2f0ae\", "
-                f"label={event.id.value if censored else event.id.name}]")
+                f"label=\"{get_event_name(event)}\"]")
             f.write(";\n")
         f.write("}\n")
         f.write("}\n")
