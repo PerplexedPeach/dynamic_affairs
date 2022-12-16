@@ -135,7 +135,7 @@ LIDAc.1 = {
 					scope:sex_transition = 5
 				}
 				# Handjob
-				# \n
+				# 
 				desc = sex_transition_5
 			}
 			triggered_desc = {
@@ -320,7 +320,7 @@ LIDAc.5 = {
 					scope:sex_transition = 7
 				}
 				# Ass Tease
-				# \n
+				# 
 				desc = sex_transition_7
 			}
 			triggered_desc = {
@@ -502,7 +502,7 @@ LIDAc.3 = {
 					scope:sex_transition = 12
 				}
 				# Dom Blowjob
-				# \n
+				# 
 				desc = sex_transition_12
 			}
 			triggered_desc = {
@@ -511,7 +511,7 @@ LIDAc.3 = {
 					scope:sex_transition = 18
 				}
 				# Sub Blowjob
-				# \n
+				# 
 				desc = sex_transition_18
 			}
 			triggered_desc = {
@@ -724,7 +724,7 @@ LIDAc.2 = {
 					scope:sex_transition = 11
 				}
 				# Dom Blowjob
-				# \n
+				# 
 				desc = sex_transition_11
 			}
 			triggered_desc = {
@@ -918,7 +918,7 @@ LIDAc.6 = {
 					scope:sex_transition = 17
 				}
 				# Sub Blowjob
-				# \n
+				# 
 				desc = sex_transition_17
 			}
 			triggered_desc = {
@@ -927,7 +927,7 @@ LIDAc.6 = {
 					scope:sex_transition = 21
 				}
 				# Deepthroat
-				# \n
+				# 
 				desc = sex_transition_21
 			}
 			triggered_desc = {
@@ -1131,7 +1131,7 @@ LIDAc.4 = {
 					scope:sex_transition = 13
 				}
 				# Dom Blowjob
-				# \n
+				# 
 				desc = sex_transition_13
 			}
 			triggered_desc = {

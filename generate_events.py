@@ -356,6 +356,8 @@ class Event(BlockRoot):
             return
         with Block(self, FIRST_VALID):
             for option in self.incoming_options:
+                if not isinstance(option.from_id, EventsSex):
+                    continue
                 with Block(self, TRIGGERED_DESC):
                     with Block(self, TRIGGER):
                         self.assign(EXISTS, f"{SCOPE}:{SEX_TRANSITION}")
@@ -404,7 +406,7 @@ class Option:
     def __init__(self, next_id: typing.Optional[EventId], category: OptionCategory, option_text: str,
                  transition_text: str = "",
                  # for dom options, have a chance to fail them
-                 failed_transition_text="",
+                 failed_transition_text: str = "",
                  weight: int = 10, tooltip=None,
                  # for dom options, specify the opinion change on success and failure of dom
                  subdom_dom_success=1, subdom_dom_fail=-2,
@@ -424,10 +426,12 @@ class Option:
         self.category = category
         self.weight = weight
         self.option_text = option_text
-        self.transition_text = clean_str(transition_text) + "\\n"
-        self.failed_transition_text = clean_str(failed_transition_text)
-        if self.failed_transition_text != "":
-            self.failed_transition_text += "\\n"
+        self.transition_text = ""
+        self.failed_transition_text = ""
+        if transition_text != "":
+            self.transition_text = clean_str(transition_text) + "\\n"
+        if failed_transition_text != "":
+            self.failed_transition_text = clean_str(failed_transition_text) + "\\n"
         self.tooltip = tooltip
 
         self.subdom_dom_success = subdom_dom_success
@@ -449,9 +453,11 @@ class Option:
             event.assign(TRIGGER, f"{{ {trigger} }}")
 
     def generate_localization(self):
-        lines = [f"{self.fullname}: \"{self.option_text}\"",
-                 f"{SEX_TRANSITION}_{self.id}: \"{self.transition_text}\"",
-                 f"{SEX_TRANSITION}_{self.id + dom_fail_offset}: \"{self.failed_transition_text}\""]
+        lines = [f"{self.fullname}: \"{self.option_text}\""]
+        if self.transition_text != "":
+            lines.append(f"{SEX_TRANSITION}_{self.id}: \"{self.transition_text}\"")
+        if self.failed_transition_text != "":
+            lines.append(f"{SEX_TRANSITION}_{self.id + dom_fail_offset}: \"{self.failed_transition_text}\"")
         if self.tooltip is not None:
             lines.append(f"{self.fullname}.tt: \"{self.tooltip}\"")
 
