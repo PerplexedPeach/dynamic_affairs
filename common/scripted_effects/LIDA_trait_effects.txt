@@ -1,0 +1,34 @@
+﻿become_more_sub_effect = {
+	if = {
+		limit = {
+			NOT = {has_trait = lida_dom}
+		}
+		change_trait_rank = {
+			trait = lida_sub
+			rank = 1
+		}
+	}
+	else = {
+		change_trait_rank = {
+			trait = lida_dom
+			rank = -1
+		}
+	}
+}
+become_more_dom_effect = {
+	if = {
+		limit = {
+			NOT = {has_trait = lida_sub}
+		}
+		change_trait_rank = {
+			trait = lida_dom
+			rank = 1
+		}
+	}
+	else = {
+		change_trait_rank = {
+			trait = lida_sub
+			rank = -1
+		}
+	}
+}

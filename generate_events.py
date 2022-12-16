@@ -122,6 +122,8 @@ OVERRIDE_BACKGROUND = "override_background"
 EVENT_BACKGROUND = "event_background"
 LOCALE = "locale"
 
+BECOME_MORE_SUB_EFFECT = "become_more_sub_effect"
+BECOME_MORE_DOM_EFFECT = "become_more_dom_effect"
 SELECT_START_AFFAIRS_EFFECT = "select_start_affairs_effect"
 LIDA_ONGOING_SEX_EFFECT = "lida_ongoing_sex_effect"
 STAMINA_COST_1 = "STAMINA_COST_1"
@@ -140,6 +142,7 @@ SAVE_SCOPE_VALUE_AS = "save_scope_value_as"
 SAVE_TEMPORARY_SCOPE_VALUE_AS = "save_temporary_scope_value_as"
 RANDOM = "random"
 RANDOM_LIST = "random_list"
+CHANCE = "chance"
 
 DEBUG_LOG_SCOPES = "debug_log_scopes"
 
@@ -226,6 +229,8 @@ class Event(BlockRoot):
                  root_cum_text=None,
                  # custom generation functions, these take the event as teh first argument and call add_line
                  custom_desc: typing.Optional[typing.Callable] = None,
+                 # chance for this event to rank up dom/sub (always opposite, but in a separate roll for the partner)
+                 root_become_more_sub_chance=0, root_become_more_dom_chance=0,
                  custom_immediate_effect: typing.Optional[typing.Callable] = None):
         self.id = eid
         self.title = title
@@ -233,6 +238,9 @@ class Event(BlockRoot):
         self.theme = theme
         self.anim_l = animation_left
         self.anim_r = animation_right
+
+        self.root_become_more_sub_chance = root_become_more_sub_chance
+        self.root_become_more_dom_chance = root_become_more_dom_chance
 
         self.root_cum_text = root_cum_text
         if self.root_cum_text is not None:
@@ -287,7 +295,22 @@ class Event(BlockRoot):
             # calling the custom desc will modify the event string text in place, and return a localization string
             self.custom_localization = self.custom_desc(self)
 
+    def _generate_change_subdom_trait(self, chance, root_change, partner_change):
+        if chance > 0:
+            with Block(self, RANDOM):
+                self.assign(CHANCE, chance)
+                self.assign(root_change, YES)
+            with Block(self, AFFAIRS_PARTNER):
+                with Block(self, RANDOM):
+                    self.assign(CHANCE, chance)
+                    self.assign(partner_change, YES)
+
     def generate_immediate_effect(self):
+        self._generate_change_subdom_trait(self.root_become_more_sub_chance, BECOME_MORE_SUB_EFFECT,
+                                           BECOME_MORE_DOM_EFFECT)
+        self._generate_change_subdom_trait(self.root_become_more_dom_chance, BECOME_MORE_DOM_EFFECT,
+                                           BECOME_MORE_SUB_EFFECT)
+
         if self.custom_immediate_effect is not None:
             self.custom_immediate_effect(self)
 
@@ -1007,6 +1030,7 @@ def define_sex_events(es: EventMap):
     # define directed graph of events
     es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=0, stam_cost_2=1,
+               root_become_more_dom_chance=5,
                desc=f"""With a knowing smirk, you size {THEM} up and put both your hands on their chest.
                     Leveraging your weight, you push and trap him against a wall. You slide your knee up his leg 
                     and play with his bulge. 
@@ -1030,6 +1054,7 @@ def define_sex_events(es: EventMap):
                )))
     es.add(Sex(EventsSex.HANDJOB, "Handjob",
                stam_cost_1=0, stam_cost_2=1,
+               root_become_more_dom_chance=5,
                desc=f"""handjob desc""",
                options=(
                    Option(EventsSex.HANDJOB, OptionCategory.DOM,
@@ -1049,6 +1074,7 @@ def define_sex_events(es: EventMap):
                )))
     es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
                stam_cost_1=1, stam_cost_2=2,
+               root_become_more_dom_chance=5,
                desc=f"""ass tease desc""",
                options=(
                    Option(EventsSex.ASS_TEASE, OptionCategory.DOM,
@@ -1104,6 +1130,7 @@ def define_sex_events(es: EventMap):
                )))
     es.add(Sex(EventsSex.BLOWJOB_SUB, "Sub Blowjob",
                stam_cost_1=1.0, stam_cost_2=1.5,
+               root_become_more_sub_chance=5,
                desc=f"""
                sub blowjob desc""",
                options=(
@@ -1134,6 +1161,7 @@ def define_sex_events(es: EventMap):
                )))
     es.add(Sex(EventsSex.DEEPTHROAT, "Deepthroat",
                stam_cost_1=1.0, stam_cost_2=2.0,
+               root_become_more_sub_chance=10,
                desc=f"""
                deepthroat desc""",
                options=(
@@ -1158,7 +1186,7 @@ def define_sex_events(es: EventMap):
 
 def define_cum_events(es: EventMap):
     es.add(Cum(EventsCum.HANDJOB_CUM_IN_HAND, "A Cumshot in Hand is Worth Two in the Bush",
-               subdom_change=1,
+               subdom_change=1, root_become_more_dom_chance=20,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe your hands on a nearby cloth"),
                desc=f"""cum in hand desc"""
                ))
@@ -1169,22 +1197,22 @@ def define_cum_events(es: EventMap):
                ))
     # TODO add chance of acquiring fetishes
     es.add(Cum(EventsCum.BLOWJOB_CUM_ON_FACE, "Painting your Face",
-               subdom_change=-2,
+               subdom_change=-2, root_become_more_sub_chance=20,
                terminal_option=Option(None, OptionCategory.OTHER, "Sample some stray globs of cum"),
                desc=f"""cum on face desc"""
                ))
     es.add(Cum(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, "Satisfying your Sweet Tooth",
-               subdom_change=-1,
+               subdom_change=-1, root_become_more_sub_chance=10,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe away any cum that might've escaped"),
                desc=f"""cum in mouth dom desc"""
                ))
     es.add(Cum(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, "Down the Gullet",
-               subdom_change=-2,
+               subdom_change=-2, root_become_more_sub_chance=25,
                terminal_option=Option(None, OptionCategory.OTHER, "Recover from having your throat used so roughly"),
                desc=f"""cum in mouth sub desc"""
                ))
     es.add(Cum(EventsCum.BLOWJOB_RUINED_ORGASM, "A Firm Grasp on His Release",
-               subdom_change=2,
+               subdom_change=2, root_become_more_dom_chance=35,
                terminal_option=Option(None, OptionCategory.OTHER, "Leave him yearning and frustrated"),
                desc=f"""blowjob ruined orgasm desc"""
                ))

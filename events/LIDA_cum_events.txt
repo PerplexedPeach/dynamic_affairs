@@ -179,6 +179,16 @@ LIDAc.1 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
+		random = {
+			chance = 20
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 20
+				become_more_sub_effect = yes
+			}
+		}
 		debug_log_scopes = yes
 	}
 	option = {
@@ -583,6 +593,16 @@ LIDAc.3 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
+		random = {
+			chance = 20
+			become_more_sub_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 20
+				become_more_dom_effect = yes
+			}
+		}
 		debug_log_scopes = yes
 	}
 	option = {
@@ -776,6 +796,16 @@ LIDAc.2 = {
 			C2_PREGNANCY_CHANCE = 0
 			STRESS_EFFECTS = yes
 			DRAMA = yes
+		}
+		random = {
+			chance = 10
+			become_more_sub_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 10
+				become_more_dom_effect = yes
+			}
 		}
 		debug_log_scopes = yes
 	}
@@ -990,6 +1020,16 @@ LIDAc.6 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
+		random = {
+			chance = 25
+			become_more_sub_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 25
+				become_more_dom_effect = yes
+			}
+		}
 		debug_log_scopes = yes
 	}
 	option = {
@@ -1183,6 +1223,16 @@ LIDAc.4 = {
 			C2_PREGNANCY_CHANCE = 0
 			STRESS_EFFECTS = yes
 			DRAMA = yes
+		}
+		random = {
+			chance = 35
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 35
+				become_more_sub_effect = yes
+			}
 		}
 		debug_log_scopes = yes
 	}

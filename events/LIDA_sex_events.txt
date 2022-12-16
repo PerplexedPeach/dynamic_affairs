@@ -314,6 +314,16 @@ LIDAs.1 = {
 			name = sub_transition_1
 			value = -1
 		}
+		random = {
+			chance = 5
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 5
+				become_more_sub_effect = yes
+			}
+		}
 		debug_log_scopes = yes
 	}
 	option = {
@@ -730,6 +740,16 @@ LIDAs.3 = {
 			save_scope_value_as = {
 				name = cum_transition_1
 				value = -1
+			}
+		}
+		random = {
+			chance = 5
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 5
+				become_more_sub_effect = yes
 			}
 		}
 		debug_log_scopes = yes
@@ -1211,6 +1231,16 @@ LIDAs.2 = {
 			save_scope_value_as = {
 				name = cum_transition_1
 				value = -1
+			}
+		}
+		random = {
+			chance = 5
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 5
+				become_more_sub_effect = yes
 			}
 		}
 		debug_log_scopes = yes
@@ -2365,6 +2395,16 @@ LIDAs.6 = {
 				}
 			}
 		}
+		random = {
+			chance = 5
+			become_more_sub_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 5
+				become_more_dom_effect = yes
+			}
+		}
 		debug_log_scopes = yes
 	}
 	option = {
@@ -2847,6 +2887,16 @@ LIDAs.7 = {
 			save_scope_value_as = {
 				name = cum_transition_1
 				value = -1
+			}
+		}
+		random = {
+			chance = 10
+			become_more_sub_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 10
+				become_more_dom_effect = yes
 			}
 		}
 		debug_log_scopes = yes

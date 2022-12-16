@@ -40,6 +40,8 @@ in the format of the following commented example:
                stam_cost_1=0, stam_cost_2=1,
                # this event is only for when the player (root) character is female; this is by default 
                root_female=True,
+               # chance for this event to rank up dom/sub (always opposite, but in a separate roll for the partner)
+               root_become_more_sub_chance=0, root_become_more_dom_chance=0,
                # description that shows up in the text body
                # {THEM} will result in their first name that's mouse-overable to get a tooltip
                desc=f"""With a knowing smirk, you size {THEM} up and put both your hands on their chest.
@@ -82,5 +84,7 @@ in the format of the following commented example:
 ```
 
 Check out [https://ck3.paradoxwikis.com/Localization](https://ck3.paradoxwikis.com/Localization) for 
-fancy formatting of text.
+fancy formatting of text. We have custom `#sub <text>#!` and `#dom <text>#!` formatting which will make
+the text pink and purple, respectively.
+
 Current event graph: ![vis](vis.png)

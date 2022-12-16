@@ -251,4 +251,4 @@ questions
 
 
 TODO
-- add in traits
+- add triggering decision
