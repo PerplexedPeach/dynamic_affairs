@@ -29,7 +29,8 @@ You'll care mostly about the `EventSex`, `EventCum` enums at the top of the file
 of events. It's pretty straightforward, and you should just follow the existing event conventions.
 
 For event writing, you should write everything in **second person present tense**.
-You'll care most about the `define_events` function at the bottom of the file, where you can define events
+You'll care most about the `define_sex_events`, `define_cum_events`, and `define_first_events` functions at
+the bottom of the file, where you can define events
 in the format of the following commented example:
 ```python
     # Sex is the event class; use Cum for the cum events

@@ -10,6 +10,15 @@ debug = True
 
 class EventsFirst(enum.Enum):
     MEETING_WITH_SPOUSE = 1
+    MEETING_WITH_SPOUSE_INITIAL = 2
+    MEETING_WITH_VASSAL = 3
+    MEETING_WITH_VASSAL_INITIAL = 4
+    MEETING_WITH_LIEGE = 5
+    MEETING_WITH_LIEGE_INITIAL = 6
+    MEETING_WITH_PRISONER = 7
+    MEETING_WITH_PRISONER_INITIAL = 8
+    MEETING_WITH_ACQUAINTANCE = 9
+    MEETING_WITH_ACQUAINTANCE_INITIAL = 10
 
 
 class EventsSex(enum.Enum):
@@ -63,6 +72,7 @@ CHARACTER_EVENT = "character_event"
 CHARACTER = "character"
 
 DOMINANT_OPINION = "dominant_opinion"
+AFFAIR_SPURNED_OPINION = "affair_spurned_opinion"
 ROOT = "root"
 AFFAIRS_PARTNER = "scope:affairs_partner"
 
@@ -76,6 +86,8 @@ DOM_ATTEMPT_TOOLTIP = "attempt_dom_tooltip"
 DOM_NO_SUB_TOOLTIP = "dom_no_sub_tooltip"
 VOLUNTARY_SUB_TOOLTIP = "voluntary_sub_tooltip"
 DOM_SUCCESS_ADJUSTMENT_TOOLTIP = "dom_success_adjustment_tooltip"
+CANCEL_MEETING_OPTION = "cancel_meeting_option"
+CANCEL_MEETING_TOOLTIP = "cancel_meeting_tooltip"
 
 # effects
 TRIGGER_EVENT = "trigger_event"
@@ -98,6 +110,9 @@ IS_FEMALE = "is_female"
 CHECK_IF_ROOT_CUM_EFFECT = "check_if_root_cum_effect"
 CLEAR_ROOT_CUM_EFFCT = "clear_root_cum_effect"
 ROOT_CUM = "root_cum"
+OVERRIDE_BACKGROUND = "override_background"
+EVENT_BACKGROUND = "event_background"
+LOCALE = "locale"
 
 SELECT_START_AFFAIRS_EFFECT = "select_start_affairs_effect"
 LIDA_ONGOING_SEX_EFFECT = "lida_ongoing_sex_effect"
@@ -124,6 +139,7 @@ SEX_TRANSITION = "sex_transition"
 DOM_TRANSITION = "dom_transition"
 SUB_TRANSITION = "sub_transition"
 CUM_TRANSITION = "cum_transition"
+FIRST_TRANSITION = "first_transition"
 PREV_EVENT = "prev_event"
 
 NAMESPACE = "namespace"
@@ -232,6 +248,8 @@ class Event(BlockRoot):
             self.add_line(f"{TYPE} = {CHARACTER_EVENT}")
             self.add_line(f"{TITLE} = {self.fullname}.t")
             self.add_line(f"{THEME} = {self.theme}")
+            # TODO check if I need to do this in every event, or just the first one in the chain
+            self.generate_background()
             with Block(self, LEFT_PORTRAIT):
                 self.add_line(f"{CHARACTER} = {ROOT}")
                 self.add_line(f"{ANIMATION} = {self.anim_l}")
@@ -248,10 +266,13 @@ class Event(BlockRoot):
 
         return "\n".join(self._lines)
 
+    def assign(self, name, value):
+        self.add_line(f"{name} = {value}")
+
     def save_scope_value_as(self, name, value):
         with Block(self, SAVE_SCOPE_VALUE_AS):
-            self.add_line(f"{NAME} = {name}")
-            self.add_line(f"{VALUE} = {value}")
+            self.assign(NAME, name)
+            self.assign(VALUE, value)
 
     def generate_desc(self):
         self.add_line(f"{DESC} = {self.fullname}.{DESC}")
@@ -270,6 +291,26 @@ class Event(BlockRoot):
         with Block(self, CHANGE_SUBDOM_EFFECT):
             self.add_line(f"{CHANGE} = {change}")
 
+    def generate_options_transition(self, options_list, option_transition_str):
+        if len(options_list) == 0:
+            return
+        choice = 0
+        for choice in range(min(len(options_list), max_options_per_type)):
+            with Block(self, RANDOM_LIST):
+                for option in options_list:
+                    self.add_debug_comment(option.next_id.name)
+                    with Block(self, f"{option.weight}"):
+                        option.generate_modifiers_and_triggers(self)
+                        # choose without replacement
+                        for prev_choice in range(choice):
+                            with Block(self, TRIGGER):
+                                with Block(self, NOT):
+                                    self.add_line(f"{SCOPE}:{option_transition_str}_{prev_choice} = {option.id}")
+                        self.save_scope_value_as(f"{option_transition_str}_{choice}", option.id)
+        # fill in the rest of the choices so we don't have to check if it exists
+        for choice in range(choice + 1, max_options_per_type):
+            self.save_scope_value_as(f"{option_transition_str}_{choice}", -1)
+
     def generate_localization(self):
         lines = [f"{self.fullname}.t: \"{self.title}\"",
                  f"{self.fullname}.{DESC}: \"{self.desc}\""]
@@ -278,6 +319,17 @@ class Event(BlockRoot):
         if self.custom_localization is not None:
             lines.append(self.custom_localization)
         return "\n".join(lines)
+
+    POSSIBLE_BACKGROUNDS = ["battlefield", "alley_night", "alley_day", "temple", "corridor_night", "corridor_day",
+                            "courtyard", "dungeon", "docks", "feast", "market", "tavern", "throne_room", "garden",
+                            "gallows", "bedchamber", "study", "council_chamber", "sitting_room"]
+
+    def generate_background(self):
+        for background in self.POSSIBLE_BACKGROUNDS:
+            with Block(self, OVERRIDE_BACKGROUND):
+                with Block(self, TRIGGER):
+                    self.assign(f"{SCOPE}:{LOCALE}", f"flag:{background}")
+                self.assign(EVENT_BACKGROUND, background)
 
     def generate_root_cum_desc(self):
         prefix = "f" if self.root_female else "rm"
@@ -441,6 +493,51 @@ class Cum(Event):
                 self.add_line(f"{CUSTOM_TOOLTIP} = {option.fullname}.tt")
 
 
+class First(Event):
+    def __init__(self, *args, background="sitting_room", source_sex_events=(), **kwargs):
+        if background not in self.POSSIBLE_BACKGROUNDS:
+            raise RuntimeError(f"{background} not in possible backgrounds list")
+        self.background = background
+        # generate options to each sex source event
+        options = []
+        for event in source_sex_events:
+            options.append(Option(event.id, OptionCategory.OTHER, event.title))
+
+        super(First, self).__init__(*args, options=options, **kwargs)
+
+    def generate_immediate_effect(self):
+        # save to use for all future events
+        self.save_scope_value_as(LOCALE, f"flag:{self.background}")
+        # sample which option to use
+        self.generate_options_transition(self.options, FIRST_TRANSITION)
+        super(First, self).generate_immediate_effect()
+
+    def generate_options(self):
+        for option in self.options:
+            with Block(self, OPTION):
+                self.add_debug_comment(str(option))
+                self.add_line(f"{NAME} = {option.fullname}")
+                if option.tooltip is not None:
+                    self.add_line(f"{CUSTOM_TOOLTIP} = {option.fullname}.tt")
+
+                with Block(self, TRIGGER):
+                    with Block(self, OR):
+                        for choice in range(max_options_per_type):
+                            self.add_line(f"{SCOPE}:{FIRST_TRANSITION}_{choice} = {option.id}")
+
+                # save this event
+                self.save_scope_value_as(PREV_EVENT, self.id.value)
+                self.save_scope_value_as(SEX_TRANSITION, option.id)
+                self.add_line(f"{TRIGGER_EVENT} = {option.next_event.fullname}")
+        # last option is to back out
+        with Block(self, OPTION):
+            self.assign(NAME, CANCEL_MEETING_OPTION)
+            self.assign(CUSTOM_TOOLTIP, CANCEL_MEETING_TOOLTIP)
+            with Block(self, REVERSE_ADD_OPINION):
+                self.assign(MODIFIER, AFFAIR_SPURNED_OPINION)
+                self.assign(TARGET, AFFAIRS_PARTNER)
+
+
 class Sex(Event):
     def __init__(self, *args,
                  stam_cost_1: float = 0, stam_cost_2: float = 0, **kwargs):
@@ -474,26 +571,6 @@ class Sex(Event):
                 self.add_line(f"{DESC} = {prefix}_high_stam")
 
         super(Sex, self).generate_desc()
-
-    def generate_options_transition(self, options_list, option_transition_str):
-        if len(options_list) == 0:
-            return
-        choice = 0
-        for choice in range(min(len(options_list), max_options_per_type)):
-            with Block(self, RANDOM_LIST):
-                for option in options_list:
-                    self.add_debug_comment(option.next_id.name)
-                    with Block(self, f"{option.weight}"):
-                        option.generate_modifiers_and_triggers(self)
-                        # choose without replacement
-                        for prev_choice in range(choice):
-                            with Block(self, TRIGGER):
-                                with Block(self, NOT):
-                                    self.add_line(f"{SCOPE}:{option_transition_str}_{prev_choice} = {option.id}")
-                        self.save_scope_value_as(f"{option_transition_str}_{choice}", option.id)
-        # fill in the rest of the choices so we don't have to check if it exists
-        for choice in range(choice + 1, max_options_per_type):
-            self.save_scope_value_as(f"{option_transition_str}_{choice}", -1)
 
     def generate_immediate_effect(self):
         with Block(self, LIDA_ONGOING_SEX_EFFECT):
@@ -651,6 +728,10 @@ class EventMap:
 def link_events_and_options(events: EventMap):
     options = {}
     option_id = 1
+    # clear some lists to enable recalling this
+    for e in events.all():
+        e.incoming_options = []
+        e.adjacent_options = []
     for e in events.all():
         for o in e.options:
             o.id = option_id
@@ -665,6 +746,8 @@ def link_events_and_options(events: EventMap):
             options[o.id] = o
     for e in events.all():
         for o in e.incoming_options:
+            if not isinstance(o.from_id, EventsSex):
+                continue
             for ao in o.from_event.options:
                 if ao.category == OptionCategory.DOM and ao not in e.adjacent_options:
                     e.adjacent_options.append(ao)
@@ -674,6 +757,8 @@ def link_events_and_options(events: EventMap):
 def get_source_sex_events(events: EventMap):
     source_events = []
     for e in events.all():
+        if not isinstance(e.id, EventsSex):
+            continue
         is_source = True
         for o in e.incoming_options:
             ie = o.from_event
@@ -778,16 +863,20 @@ def export_dot_graphviz(events, horizontal=True, censored=False):
         if horizontal:
             f.write("rankdir=LR;\n")
         f.write("fontname=Helvetica;\n")
-        f.write("concentrate=true")
+        f.write("concentrate=true;\n")
+        f.write("compound=true;\n")
 
         source_sex_events = get_source_sex_events(events)
         cum_events = []
         regular_sex_events = []
+        first_events = []
         for event in events.all():
             if event in source_sex_events:
                 continue
             if isinstance(event.id, EventsCum):
                 cum_events.append(event)
+            elif isinstance(event.id, EventsFirst):
+                first_events.append(event)
             else:
                 regular_sex_events.append(event)
         events_with_options = source_sex_events + regular_sex_events
@@ -818,14 +907,28 @@ def export_dot_graphviz(events, horizontal=True, censored=False):
                     f.write(attr)
                 f.write(";\n")
 
-        # cum events (sink nodes)
+        # sex source events (source nodes)
         f.write("subgraph cluster_sex_source {\n label=\"Source\";\n rank=same;\n")
-        for event in source_sex_events:
+        # invisible node for others to connect to the cluster as a whole
+        for i, event in enumerate(source_sex_events):
             f.write(event.id.name)
             f.write(
-                f"[fontname=Helvetica, shape=box, " 
+                f"[fontname=Helvetica, shape=box, "
                 f"label={event.id.value if censored else event.id.name}]")
             f.write(";\n")
+        f.write("}\n")
+
+        f.write("subgraph cluster_meeting {\n label=\"Start Meeting Events\";\n rank=source;\n")
+        for i, event in enumerate(first_events):
+            f.write(event.id.name)
+            f.write(
+                f"[fontname=Helvetica, shape=box, style=filled, color=\"#7fdb98\","
+                f"label={event.id.value if censored else event.id.name}]")
+            f.write(";\n")
+            # create visual connection between the start meeting events and the source events
+            if i == len(first_events) // 2:
+                other = source_sex_events[len(source_sex_events) // 2]
+                f.write(f"{event.id.name} -> {other.id.name} [ltail=cluster_meeting,lhead=cluster_sex_source];\n")
         f.write("}\n")
 
         # cum events (sink nodes)
@@ -850,7 +953,7 @@ parser.add_argument('-d', '--dry', action='store_true',
 args = parser.parse_args()
 
 
-def define_events(es: EventMap):
+def define_sex_events(es: EventMap):
     # define directed graph of events
     es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=0, stam_cost_2=1,
@@ -1001,6 +1104,9 @@ def define_events(es: EventMap):
                    Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, OptionCategory.CUM,
                           "He cums in your mouth"),
                )))
+
+
+def define_cum_events(es: EventMap):
     es.add(Cum(EventsCum.HANDJOB_CUM_IN_HAND, "A Cumshot in Hand is Worth Two in the Bush",
                subdom_change=1,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe your hands on a nearby cloth"),
@@ -1034,11 +1140,49 @@ def define_events(es: EventMap):
                ))
 
 
+def define_first_events(es: EventMap):
+    source_sex_events = get_source_sex_events(es)
+    es.add(First(EventsFirst.MEETING_WITH_SPOUSE, "Spicing it Up",
+                 source_sex_events=source_sex_events, background="bedchamber",
+                 desc=f"""meet with spouse again"""))
+    es.add(First(EventsFirst.MEETING_WITH_SPOUSE_INITIAL, "Flowers in Bloom",
+                 source_sex_events=source_sex_events, background="garden",
+                 desc=f"""meet with spouse first in garden"""))
+    es.add(First(EventsFirst.MEETING_WITH_VASSAL, "Chains of Command",
+                 source_sex_events=source_sex_events, background="study",
+                 desc=f"""meet with vassal again"""))
+    es.add(First(EventsFirst.MEETING_WITH_VASSAL_INITIAL, "Privileges of Power",
+                 source_sex_events=source_sex_events, background="study",
+                 desc=f"""meet with vassal first in study"""))
+    es.add(First(EventsFirst.MEETING_WITH_LIEGE, "Mead in my Room?",
+                 source_sex_events=source_sex_events, background="bedchamber",
+                 desc=f"""meet with liege again"""))
+    es.add(First(EventsFirst.MEETING_WITH_LIEGE_INITIAL, "An Intimate Discussion",
+                 source_sex_events=source_sex_events, background="council_chamber",
+                 desc=f"""meet with liege first in council 
+                 (have something to talk to them about after a council meeting)"""))
+    es.add(First(EventsFirst.MEETING_WITH_PRISONER, "Taste of Heaven in Hell",
+                 source_sex_events=source_sex_events, background="dungeon",
+                 desc=f"""meet with prisoner again"""))
+    es.add(First(EventsFirst.MEETING_WITH_PRISONER_INITIAL, "The Sweetest Torture",
+                 source_sex_events=source_sex_events, background="dungeon",
+                 desc=f"""meet with prisoner first"""))
+    es.add(First(EventsFirst.MEETING_WITH_ACQUAINTANCE, "Who Owns Who",
+                 source_sex_events=source_sex_events, background="sitting_room",
+                 desc=f"""meet with acquaintance again"""))
+    es.add(First(EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL, "A Chance Encounter",
+                 source_sex_events=source_sex_events, background="courtyard",
+                 desc=f"""meet with acquaintance first"""))
+
+
 if __name__ == "__main__":
     es = EventMap()
-    define_events(es)
-
+    define_sex_events(es)
+    define_cum_events(es)
     # find/specify all source sex events, which are ones which have at most themselves as input events
+    link_events_and_options(es)
+    # can only define this after linking options since we need incoming options
+    define_first_events(es)
     all_options = link_events_and_options(es)
     # plot directed graph of events and options (graphviz)
     export_dot_graphviz(es)

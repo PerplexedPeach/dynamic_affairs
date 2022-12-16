@@ -5,6 +5,120 @@ LIDAc.1 = {
 	type = character_event
 	title = LIDAc.1.t
 	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
 	left_portrait = {
 		character = root
 		animation = flirtation
@@ -76,6 +190,120 @@ LIDAc.5 = {
 	type = character_event
 	title = LIDAc.5.t
 	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
 	left_portrait = {
 		character = root
 		animation = flirtation
@@ -144,6 +372,120 @@ LIDAc.3 = {
 	type = character_event
 	title = LIDAc.3.t
 	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
 	left_portrait = {
 		character = root
 		animation = flirtation
@@ -252,6 +594,120 @@ LIDAc.2 = {
 	type = character_event
 	title = LIDAc.2.t
 	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
 	left_portrait = {
 		character = root
 		animation = flirtation
@@ -332,6 +788,120 @@ LIDAc.6 = {
 	type = character_event
 	title = LIDAc.6.t
 	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
 	left_portrait = {
 		character = root
 		animation = flirtation
@@ -431,6 +1001,120 @@ LIDAc.4 = {
 	type = character_event
 	title = LIDAc.4.t
 	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
 	left_portrait = {
 		character = root
 		animation = flirtation
