@@ -1,0 +1,281 @@
+﻿lida_dom_1 = {
+	opposites = {
+		lida_sub
+	}
+	group = lida_dom
+	level = 1
+	
+	birth = 1
+	random_creation = 1
+
+	same_opinion = -5
+	opposite_opinion = 5
+
+	compatibility = {
+		lida_dom_1 = @neg_compat_low
+		lida_dom_2 = @neg_compat_low
+		lida_dom_3 = @neg_compat_low
+		lida_sub_1 = @pos_compat_low
+		lida_sub_2 = @pos_compat_low
+		lida_sub_3 = @pos_compat_low
+	}
+
+	martial = 1
+	prowess = 2
+	diplomacy = -1
+	intrigue = -1
+	monthly_martial_lifestyle_xp_gain_mult = 0.1
+	stress_loss_mult = -0.05
+	dread_baseline_add = 5
+	dread_decay_mult = -0.1
+
+	ai_boldness = low_positive_ai_value
+	ai_sociability = low_negative_ai_value
+	
+	ruler_designer_cost = 0
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_lida_dom_1_desc
+			}
+			desc = trait_lida_dom_1_character_desc
+		}
+	}
+}
+
+lida_dom_2 = {
+	opposites = {
+		lida_sub
+	}
+	group = lida_dom
+	level = 2
+	
+	birth = 0.5
+	random_creation = 0.5
+
+	same_opinion = -10
+	opposite_opinion = 10
+
+	compatibility = {
+		lida_dom_1 = @neg_compat_medium
+		lida_dom_2 = @neg_compat_medium
+		lida_dom_3 = @neg_compat_medium
+		lida_sub_1 = @pos_compat_low
+		lida_sub_2 = @pos_compat_medium
+		lida_sub_3 = @pos_compat_low
+	}
+
+	martial = 2
+	prowess = 3
+	diplomacy = -2
+	intrigue = -2
+	monthly_martial_lifestyle_xp_gain_mult = 0.2
+	stress_loss_mult = -0.1
+	dread_baseline_add = 10
+	dread_decay_mult = -0.15
+
+	ai_boldness = medium_positive_ai_value
+	ai_sociability = medium_negative_ai_value
+
+	ruler_designer_cost = 15
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_lida_dom_2_desc
+			}
+			desc = trait_lida_dom_2_character_desc
+		}
+	}
+}
+
+lida_dom_3 = {
+	opposites = {
+		lida_sub
+	}
+	group = lida_dom
+	level = 3
+
+	birth = 0.25
+	random_creation = 0.25
+
+	same_opinion = -15
+	opposite_opinion = 15
+
+	compatibility = {
+		lida_dom_1 = @neg_compat_high
+		lida_dom_2 = @neg_compat_high
+		lida_dom_3 = @neg_compat_high
+		lida_sub_1 = @pos_compat_low
+		lida_sub_2 = @pos_compat_medium
+		lida_sub_3 = @pos_compat_high
+	}
+	
+	martial = 3
+	prowess = 5
+	diplomacy = -3
+	intrigue = -3
+	monthly_martial_lifestyle_xp_gain_mult = 0.4
+	stress_loss_mult = -0.15
+	dread_baseline_add = 15
+	dread_decay_mult = -0.2
+	
+	ai_boldness = high_positive_ai_value
+	ai_sociability = high_negative_ai_value
+
+	ruler_designer_cost = 30
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_lida_dom_3_desc
+			}
+			desc = trait_lida_dom_3_character_desc
+		}
+	}
+}
+
+lida_sub_1 = {
+	opposites = {
+		lida_dom
+	}
+	group = lida_sub
+	level = 1
+	
+	birth = 1
+	random_creation = 1
+
+	opposite_opinion = 10
+
+	compatibility = {
+		lida_dom_1 = @pos_compat_low
+		lida_dom_2 = @pos_compat_low
+		lida_dom_3 = @pos_compat_low
+	}
+
+	martial = -1
+	prowess = -1
+	diplomacy = 1
+	intrigue = 2
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.1
+	stress_loss_mult = 0.1
+	dread_baseline_add = -5
+	dread_decay_mult = 0.05
+
+	ai_boldness = low_negative_ai_value
+	ai_sociability = low_positive_ai_value
+
+	ruler_designer_cost = 15
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_lida_sub_1_desc
+			}
+			desc = trait_lida_sub_1_character_desc
+		}
+	}
+}
+
+lida_sub_2 = {
+	opposites = {
+		lida_dom
+	}
+	group = lida_sub
+	level = 2
+
+	opposite_opinion = 20
+
+	compatibility = {
+		lida_dom_1 = @pos_compat_low
+		lida_dom_2 = @pos_compat_medium
+		lida_dom_3 = @pos_compat_low
+	}
+	
+	birth = 0.5
+	random_creation = 0.5
+
+	martial = -2
+	prowess = -2
+	diplomacy = 2
+	intrigue = 3
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.2
+	stress_loss_mult = 0.15
+	dread_baseline_add = -10
+	dread_decay_mult = 0.1
+	
+	ai_boldness = medium_negative_ai_value
+	ai_sociability = medium_positive_ai_value
+
+	ruler_designer_cost = 30
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_lida_sub_2_desc
+			}
+			desc = trait_lida_sub_2_character_desc
+		}
+	}
+}
+
+lida_sub_3 = {
+	opposites = {
+		lida_dom
+	}
+	group = lida_sub
+	level = 3
+
+	birth = 0.25
+	random_creation = 0.15
+
+	opposite_opinion = 30
+
+	compatibility = {
+		lida_dom_1 = @pos_compat_low
+		lida_dom_2 = @pos_compat_medium
+		lida_dom_3 = @pos_compat_high
+	}
+	
+	martial = -3
+	prowess = -3
+	diplomacy = 3
+	intrigue = 5
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.4
+	stress_loss_mult = 0.2
+	dread_baseline_add = -15
+	dread_decay_mult = 0.15
+	
+	ai_boldness = high_negative_ai_value
+	ai_sociability = high_positive_ai_value
+
+	ruler_designer_cost = 50
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_lida_sub_3_desc
+			}
+			desc = trait_lida_sub_3_character_desc
+		}
+	}
+}
