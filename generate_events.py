@@ -932,6 +932,19 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
             name = event.id.value
         return name
 
+    def get_event_attr(event, fontname="Helvetica", shape="box", style="filled", rank=None):
+        attr = [f"fontname={fontname}", f"shape={shape}", f"style={style}", f"label=\"{get_event_name(event)}\""]
+        if rank is not None:
+            attr.append(f"rank={rank}")
+        if event.root_become_more_dom_chance > 0:
+            attr.append(f"fillcolor=\"0.0 {float(event.root_become_more_dom_chance) / 100} 1.0\"")
+        elif event.root_become_more_sub_chance > 0:
+            attr.append(f"fillcolor=\"0.6 {float(event.root_become_more_sub_chance) / 100} 1.0\"")
+        else:
+            attr.append(f"fillcolor=\"#ffffff\"")
+        attr = "[" + ",".join(attr) + "]"
+        return attr
+
     gv_filename = "vis.gv"
     with open(gv_filename, "w") as f:
         f.write("digraph G {\n")
@@ -960,7 +973,7 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
         # regular sex events
         for event in regular_sex_events:
             f.write(event.id.name)
-            f.write(f"[fontname=Helvetica, shape=box, label=\"{get_event_name(event)}\"]")
+            f.write(get_event_attr(event))
             f.write(";\n")
 
         for event in events_with_options:
@@ -987,16 +1000,15 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
         # invisible node for others to connect to the cluster as a whole
         for i, event in enumerate(source_sex_events):
             f.write(event.id.name)
-            f.write(f"[fontname=Helvetica, shape=box, label=\"{get_event_name(event)}\"]")
+            f.write(get_event_attr(event))
             f.write(";\n")
         f.write("}\n")
 
         f.write("subgraph cluster_meeting {\n label=\"Start Meeting Events\";\n rank=source;\n")
+        f.write("style=filled;\n fillcolor=\"#A5FFC7\";\n")
         for i, event in enumerate(first_events):
             f.write(event.id.name)
-            f.write(
-                f"[fontname=Helvetica, shape=box, style=filled, color=\"#7fdb98\","
-                f"label=\"{get_event_name(event)}\"]")
+            f.write(get_event_attr(event))
             f.write(";\n")
             # create visual connection between the start meeting events and the source events
             if i == len(first_events) // 2:
@@ -1006,11 +1018,10 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
 
         # cum events (sink nodes)
         f.write("subgraph cluster_cum {\n label=\"Terminal Events\";\n rank=sink;\n")
+        f.write("style=filled;\n fillcolor=\"#f2f0ae\";\n")
         for event in cum_events:
             f.write(event.id.name)
-            f.write(
-                f"[fontname=Helvetica, shape=box, style=filled, rank=sink, color=\"#f2f0ae\", "
-                f"label=\"{get_event_name(event)}\"]")
+            f.write(get_event_attr(event, rank="sink"))
             f.write(";\n")
         f.write("}\n")
         f.write("}\n")
