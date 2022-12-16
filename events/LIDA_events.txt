@@ -11,8 +11,21 @@ LIDA.1 = {
 		character = root
 	}
 	immediate = {
-		random = {
-			chance = 50
+		# random = {
+		# 	chance = 50
+		# 	become_more_sub_effect = yes
+		# }
+
+		get_characters_eligible_partner_effect = {
+			LISTNAME = affairs_pool
+			RESTRICTED_LISTNAME = rejected_affairs_pool
+		}
+		random_in_list = {
+			list = affairs_pool
+			save_scope_as = affairs_partner
+		}
+
+		scope:affairs_partner = {
 			become_more_sub_effect = yes
 		}
 	}

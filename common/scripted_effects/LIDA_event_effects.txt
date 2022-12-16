@@ -148,6 +148,82 @@ calculate_dom_success_effect = {
 		name = dom_chance
 		value = {
 			add = dom_base_success_value
+			# underlying subbiness / domminess
+			if = {
+				limit = {
+					has_trait = lida_dom_1
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_trait = lida_dom_2
+				}
+				add = 17
+			}
+			if = {
+				limit = {
+					has_trait = lida_dom_3
+				}
+				add = 25
+			}
+			if = {
+				limit = {
+					has_trait = lida_sub_1
+				}
+				add = -10
+			}
+			if = {
+				limit = {
+					has_trait = lida_sub_2
+				}
+				add = -17
+			}
+			if = {
+				limit = {
+					has_trait = lida_sub_3
+				}
+				add = -25
+			}
+			scope:affairs_partner = {
+				if = {
+					limit = {
+						has_trait = lida_dom_1
+					}
+					add = -10
+				}
+				if = {
+					limit = {
+						has_trait = lida_dom_2
+					}
+					add = -17
+				}
+				if = {
+					limit = {
+						has_trait = lida_dom_3
+					}
+					add = -25
+				}
+				if = {
+					limit = {
+						has_trait = lida_sub_1
+					}
+					add = 10
+				}
+				if = {
+					limit = {
+						has_trait = lida_sub_2
+					}
+					add = 17
+				}
+				if = {
+					limit = {
+						has_trait = lida_sub_3
+					}
+					add = 25
+				}
+			}
+			# correspondingly for the partner
 			# physically stronger / more robust
 			if = {
 				limit = {
