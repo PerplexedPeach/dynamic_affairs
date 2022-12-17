@@ -7,4 +7,5 @@ tags={
 }
 name="Dynamic Affairs"
 supported_version="1.8.*"
+path="mod/dynamic_affairs"
 picture="thumbnail.png"

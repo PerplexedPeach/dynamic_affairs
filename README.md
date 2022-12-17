@@ -4,7 +4,17 @@ planning to write events or otherwise contribute
 to it. If you're just looking to use it, it's
 better to use the one from release sites (discord or loverslab).
 
+**Copy `dynamic_affairs.mod` just outside this repository to use the mod
+from the repostiory**.
+
 ## Contribution Guide
+**No coding is required for contributing events** - just tell me the event title, event description,
+what other events it can lead to (and text for the transitions), and also what events can 
+transition to it.
+
+However, if you want to test the mod, or if you want to contribute directly and
+want to code a little bit (just in python, no need to touch paradox script), then follow the guides below:
+
 1. install git (version management tool) and read about some of its basic usage
 2. create account on [github.com](github.com)
 3. fork this [repoistory](https://github.com/PerplexedPeach/dynamic_affairs) by clicking the fork button near the top right
