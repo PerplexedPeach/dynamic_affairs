@@ -129,108 +129,6 @@ LIDAs.1 = {
 	}
 	desc = {
 		first_valid = {
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 1
-			}
-			# defaulted to 47: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.HANDJOB_TEASE
-			desc = sex_transition_47
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 2
-			}
-			# defaulted to 49: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.HANDJOB_TEASE
-			desc = sex_transition_49
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 3
-			}
-			# defaulted to 51: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.HANDJOB_TEASE
-			desc = sex_transition_51
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 4
-			}
-			# defaulted to 53: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.HANDJOB_TEASE
-			desc = sex_transition_53
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 5
-			}
-			# defaulted to 55: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.HANDJOB_TEASE
-			desc = sex_transition_55
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 6
-			}
-			# defaulted to 57: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.HANDJOB_TEASE
-			desc = sex_transition_57
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 7
-			}
-			# defaulted to 59: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.HANDJOB_TEASE
-			desc = sex_transition_59
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 8
-			}
-			# defaulted to 61: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.HANDJOB_TEASE
-			desc = sex_transition_61
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 9
-			}
-			# defaulted to 63: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.HANDJOB_TEASE
-			desc = sex_transition_63
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 10
-			}
-			# defaulted to 65: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.HANDJOB_TEASE
-			desc = sex_transition_65
-		}
-		first_valid = {
 			triggered_desc = {
 				trigger = {
 					scope:root_cum = yes
@@ -330,7 +228,10 @@ LIDAs.1 = {
 		# 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB
 		name = LIDAoption.1
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 1
@@ -795,7 +696,10 @@ LIDAs.3 = {
 		# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB
 		name = LIDAoption.3
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 3
@@ -1462,7 +1366,10 @@ LIDAs.4 = {
 		# 6: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB
 		name = LIDAoption.6
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 6
@@ -1521,7 +1428,10 @@ LIDAs.4 = {
 		# 7: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.7
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 7
@@ -2143,7 +2053,10 @@ LIDAs.6 = {
 		# 12: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.12
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 12
@@ -2637,7 +2550,10 @@ LIDAs.7 = {
 		# 17: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.17
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 17
@@ -2924,106 +2840,6 @@ LIDAs.2 = {
 			# defaulted to 20: EventsSex.ASS_TEASE -> EventsSex.ASS_TEASE
 			desc = sex_transition_20
 		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 1
-			}
-			# defaulted to 48: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.ASS_TEASE
-			desc = sex_transition_48
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 2
-			}
-			# defaulted to 50: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.ASS_TEASE
-			desc = sex_transition_50
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 3
-			}
-			# defaulted to 52: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.ASS_TEASE
-			desc = sex_transition_52
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 4
-			}
-			# defaulted to 54: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.ASS_TEASE
-			desc = sex_transition_54
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 5
-			}
-			# defaulted to 56: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.ASS_TEASE
-			desc = sex_transition_56
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 6
-			}
-			# defaulted to 58: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.ASS_TEASE
-			desc = sex_transition_58
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 7
-			}
-			# defaulted to 60: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.ASS_TEASE
-			desc = sex_transition_60
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 8
-			}
-			# defaulted to 62: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.ASS_TEASE
-			desc = sex_transition_62
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 9
-			}
-			# defaulted to 64: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.ASS_TEASE
-			desc = sex_transition_64
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 10
-			}
-			# defaulted to 66: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.ASS_TEASE
-			desc = sex_transition_66
-		}
 		first_valid = {
 			triggered_desc = {
 				trigger = {
@@ -3076,8 +2892,8 @@ LIDAs.2 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = 1
-			STAMINA_COST_2 = 1.5
+			STAMINA_COST_1 = 0.5
+			STAMINA_COST_2 = 1.0
 		}
 		check_if_root_cum_effect = yes
 		store_subdom_value_effect = yes
@@ -3171,7 +2987,10 @@ LIDAs.2 = {
 		# 20: EventsSex.ASS_TEASE -> EventsSex.ASS_TEASE
 		name = LIDAoption.20
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 20
@@ -3230,7 +3049,10 @@ LIDAs.2 = {
 		# 21: EventsSex.ASS_TEASE -> EventsSex.HANDJOB
 		name = LIDAoption.21
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 21
@@ -3643,8 +3465,8 @@ LIDAs.8 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = 1
-			STAMINA_COST_2 = 1.5
+			STAMINA_COST_1 = 0.5
+			STAMINA_COST_2 = 1.0
 		}
 		check_if_root_cum_effect = yes
 		store_subdom_value_effect = yes
@@ -3757,7 +3579,10 @@ LIDAs.8 = {
 		# 24: EventsSex.HOTDOG -> EventsSex.HOTDOG
 		name = LIDAoption.24
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 24
@@ -3822,7 +3647,10 @@ LIDAs.8 = {
 		# 25: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.25
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 25
@@ -4359,7 +4187,10 @@ LIDAs.9 = {
 		# 29: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG
 		name = LIDAoption.29
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 29
@@ -4424,7 +4255,10 @@ LIDAs.9 = {
 		# 30: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.30
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 30
@@ -5003,7 +4837,10 @@ LIDAs.5 = {
 		# 34: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.34
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 34
@@ -5062,7 +4899,10 @@ LIDAs.5 = {
 		# 35: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.35
 		trigger = {
-			NOT = { scope:root_cum = yes }
+			custom_tooltip = {
+				text = cant_dom_due_to_cum_tooltip
+				NOT = { scope:root_cum = yes }
+			}
 			NOT = { exists = scope:cum_transition_0 }
 			OR = {
 				scope:dom_transition_0 = 35

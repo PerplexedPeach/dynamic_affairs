@@ -70,6 +70,8 @@ TYPE = "type"
 NAME = "name"
 VALUE = "value"
 CUSTOM_TOOLTIP = "custom_tooltip"
+CUSTOM_DESCRIPTION = "custom_description"
+TEXT = "text"
 ADD = "add"
 IS_SPOUSE_OF = "is_spouse_of"
 IS_IN_LIST = "is_in_list"
@@ -99,6 +101,7 @@ VOLUNTARY_SUB_TOOLTIP = "voluntary_sub_tooltip"
 DOM_SUCCESS_ADJUSTMENT_TOOLTIP = "dom_success_adjustment_tooltip"
 CANCEL_MEETING_OPTION = "cancel_meeting_option"
 CANCEL_MEETING_TOOLTIP = "cancel_meeting_tooltip"
+CANT_DOM_DUE_TO_CUM_TOOLTIP = "cant_dom_due_to_cum_tooltip"
 
 # effects
 TRIGGER_EVENT = "trigger_event"
@@ -379,11 +382,12 @@ class Event(BlockRoot):
     def generate_incoming_options_desc(self):
         # description of the transition from the previous event
         # populate the reverse graph to see what options come into this event
-        if len(self.incoming_options) == 0:
+        sex_incoming_options = [o for o in self.incoming_options if isinstance(o.from_id, EventsSex)]
+        if len(sex_incoming_options) == 0:
             return
         with Block(self, FIRST_VALID):
-            for option in self.incoming_options:
-                if not isinstance(option.from_id, EventsSex):
+            for option in sex_incoming_options:
+                if option.transition_text == "":
                     continue
                 with Block(self, TRIGGERED_DESC):
                     with Block(self, TRIGGER):
@@ -393,18 +397,21 @@ class Event(BlockRoot):
                     self.add_debug_comment(option.transition_text)
                     self.assign(DESC, f"{SEX_TRANSITION}_{option.id}")
             for option in self.adjacent_options:
-                if option.failed_transition_text != "":
-                    with Block(self, TRIGGERED_DESC):
-                        with Block(self, TRIGGER):
-                            self.assign(EXISTS, f"{SCOPE}:{SEX_TRANSITION}")
-                            self.assign(f"{SCOPE}:{SEX_TRANSITION}", option.id + dom_fail_offset)
-                        self.add_debug_comment(f"{option} failed")
-                        self.add_debug_comment(option.failed_transition_text)
-                        self.assign(DESC, f"{SEX_TRANSITION}_{option.id + dom_fail_offset}")
+                if option.failed_transition_text == "":
+                    continue
+                with Block(self, TRIGGERED_DESC):
+                    with Block(self, TRIGGER):
+                        self.assign(EXISTS, f"{SCOPE}:{SEX_TRANSITION}")
+                        self.assign(f"{SCOPE}:{SEX_TRANSITION}", option.id + dom_fail_offset)
+                    self.add_debug_comment(f"{option} failed")
+                    self.add_debug_comment(option.failed_transition_text)
+                    self.assign(DESC, f"{SEX_TRANSITION}_{option.id + dom_fail_offset}")
 
         # if we failed a dom transition and this event has a direct option from that failed event, use it
         # for all the incoming options
-        for option in self.incoming_options:
+        for option in sex_incoming_options:
+            if option.transition_text == "":
+                continue
             with Block(self, TRIGGERED_DESC):
                 with Block(self, TRIGGER):
                     self.assign(EXISTS, f"{SCOPE}:{SEX_TRANSITION}")
@@ -668,9 +675,11 @@ class Sex(Event):
                 for block in [TRIGGER, SHOW_AS_UNAVAILABLE]:
                     with Block(self, block):
                         # cumming locks you out of any dom transitions, but only if there are some sub options to transition to
-                        if block == TRIGGER and option.category == OptionCategory.DOM and len(
-                                categories_to_options[OptionCategory.SUB]) > 0:
-                            self.add_line(f"{NOT} = {{ {SCOPE}:{ROOT_CUM} = {YES} }}")
+                        if option.category == OptionCategory.DOM and len(categories_to_options[OptionCategory.SUB]) > 0:
+                            if block == TRIGGER:
+                                with Block(self, CUSTOM_TOOLTIP):
+                                    self.assign(TEXT, CANT_DOM_DUE_TO_CUM_TOOLTIP)
+                                    self.add_line(f"{NOT} = {{ {SCOPE}:{ROOT_CUM} = {YES} }}")
                         if option.category in [OptionCategory.DOM, OptionCategory.SUB]:
                             trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
                             self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION}_0 }}")
@@ -1185,7 +1194,7 @@ def define_sex_events(es: EventMap):
                           "He cums in your mouth"),
                )))
     es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
-               stam_cost_1=1, stam_cost_2=1.5,
+               stam_cost_1=0.5, stam_cost_2=1.0,
                root_become_more_dom_chance=5,
                desc=f"""ass tease desc""",
                options=(
@@ -1212,7 +1221,7 @@ def define_sex_events(es: EventMap):
                           "Have him coat your ass with his seed")
                )))
     es.add(Sex(EventsSex.HOTDOG, "Get Hotdogged",
-               stam_cost_1=1, stam_cost_2=1.5,
+               stam_cost_1=0.5, stam_cost_2=1.0,
                desc=f"""get hotdogged from behind desc""",
                options=(
                    Option(EventsSex.HOTDOG, OptionCategory.DOM,

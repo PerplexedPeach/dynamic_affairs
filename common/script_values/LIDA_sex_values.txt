@@ -1,7 +1,7 @@
 ﻿# stamina (how long they can last without climaxing)
 # expects character scope
 max_sex_stamina = {
-	value = 5
+	value = 6
 	if = {
 		limit = { has_trait = physique_bad_1 }
 		add = -1
