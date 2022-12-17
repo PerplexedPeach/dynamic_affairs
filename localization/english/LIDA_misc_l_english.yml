@@ -48,3 +48,16 @@ trait_lida_sub_3_character_desc: "Head bowed, hands clasped; without their cloth
 # trait groups
 trait_lida_dom: "Dominant Characters"
 trait_lida_sub: "Submissive Characters"
+# decision
+lida_start_affair_decision: "Look for a "Chance" Encounter"
+lida_start_affair_decision_desc: "Ruling is grueling and I desire the pleasure of the flesh. Something spontaneous is much more exciting than routine marital life."
+lida_start_affair_decision_confirm: "Start your hunt"
+lida_start_affair_decision_tooltip: "Find a partner to have an #V Affair#! with"
+start_affair_decision_tooltip: "Search your realm for someone suitable for an #V Affair#! and opportunitites to lose [stress|E]"
+start_affair_decision_tooltip_subdom: "You may become more #dom dominant#! or #sub submissive#! through your choices and choice of partner"
+start_affair_decision_tooltip_sub_1: "Since you are [GetTrait('lida_sub_1').GetName(GetPlayer)], you will prioritize someone who will be rough with you"
+start_affair_decision_tooltip_sub_2: "Since you are [GetTrait('lida_sub_2').GetName(GetPlayer)], you will prioritize someone who will dominate you"
+start_affair_decision_tooltip_sub_3: "Since you are [GetTrait('lida_sub_3').GetName(GetPlayer)], you will prioritize a master who will #sub put you in your place#!"
+start_affair_decision_tooltip_dom_1: "Since you are [GetTrait('lida_dom_1').GetName(GetPlayer)], you will prioritize someone meek"
+start_affair_decision_tooltip_dom_2: "Since you are [GetTrait('lida_dom_2').GetName(GetPlayer)], you will prioritize someone submissive"
+start_affair_decision_tooltip_dom_3: "Since you are [GetTrait('lida_dom_3').GetName(GetPlayer)], you will prioritize a slave who will #dom surrender everything to you#!"

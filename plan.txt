@@ -251,4 +251,5 @@ questions
 
 
 TODO
-- add triggering decision
+- add more events
+- fill in the writing for some events

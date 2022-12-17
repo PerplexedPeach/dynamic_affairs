@@ -11,10 +11,10 @@ LIDA.1 = {
 		character = root
 	}
 	immediate = {
-		# random = {
-		# 	chance = 50
-		# 	become_more_sub_effect = yes
-		# }
+		random = {
+			chance = 50
+			become_more_sub_effect = yes
+		}
 
 		get_characters_eligible_partner_effect = {
 			LISTNAME = affairs_pool

@@ -1,0 +1,30 @@
+﻿start_affair_cost = {
+	value = 0
+	add = standard_activity_cost
+	divide = 1.5
+	# if you're discrete, this has less of an effect on prestige
+	if = {
+		limit = {
+			intrigue > 10
+		}
+		multiply = 0.8
+	}
+	else_if = {
+		limit = {
+			intrigue > 20
+		}
+		multiply = 0.65
+	}
+	else_if = {
+		limit = {
+			intrigue > 30
+		}
+		multiply = 0.5
+	}
+	if = {
+		limit = {
+			has_trait = gregarious
+		}
+		multiply = 0.8
+	}
+}
