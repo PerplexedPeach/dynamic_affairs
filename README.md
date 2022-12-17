@@ -5,7 +5,8 @@ to it. If you're just looking to use it, it's
 better to use the one from release sites (discord or loverslab).
 
 **Copy `dynamic_affairs.mod` just outside this repository to use the mod
-from the repostiory**.
+from the repostiory**. This mod depends on Carnalitas
+(no restriction on load order).
 
 ## Contribution Guide
 **No coding is required for contributing events** - just tell me the event title, event description,
