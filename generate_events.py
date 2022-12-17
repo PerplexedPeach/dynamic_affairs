@@ -29,6 +29,8 @@ class EventsSex(enum.Enum):
     STANDING_FUCKED_FROM_BEHIND = 5
     BLOWJOB_SUB = 6
     DEEPTHROAT = 7
+    HOTDOG = 8
+    STANDING_FINGERED_FROM_BEHIND = 9
 
 
 class EventsCum(enum.Enum):
@@ -38,6 +40,8 @@ class EventsCum(enum.Enum):
     BLOWJOB_CUM_ON_FACE = 3
     BLOWJOB_RUINED_ORGASM = 4
     ASS_TEASE_CUM_ON_ASS = 5
+    PULL_OUT_CUM_ON_ASS = 7
+    FUCK_BEHIND_CREAMPIE = 8
 
 
 # alias for any event type
@@ -752,6 +756,8 @@ class EventMap:
         self.events: typing.Dict[EventId, Event] = {}
 
     def add(self, event: Event):
+        if event.id in self.events:
+            raise RuntimeError(f"Trying to re-add {event.id}")
         self.events[event.id] = event
 
     def __getitem__(self, event_id: EventId):
@@ -1083,21 +1089,6 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.CUM,
                           "Milk him into your soft palms", )
                )))
-    es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
-               stam_cost_1=1, stam_cost_2=2,
-               root_become_more_dom_chance=5,
-               desc=f"""ass tease desc""",
-               options=(
-                   Option(EventsSex.ASS_TEASE, OptionCategory.DOM,
-                          "Continue teasing him with your ass",
-                          transition_text=f"""
-                          You continue to rub his rod in between your buns. You can feel a coolness
-                          from {THEM}'s pre, slicking up your back. The contrast with the rhythmic thrusts from his 
-                          hot member makes this an interesting experience.""",
-                          failed_transition_text="You have better uses for that hard cock than just teasing it"),
-                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.CUM,
-                          "Have him coat your ass with his seed")
-               )))
     es.add(Sex(EventsSex.BLOWJOB_DOM, "Dom Blowjob",
                stam_cost_1=0.5, stam_cost_2=2,
                desc=f"""dom blowjob desc""",
@@ -1193,6 +1184,136 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, OptionCategory.CUM,
                           "He cums in your mouth"),
                )))
+    es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
+               stam_cost_1=1, stam_cost_2=1.5,
+               root_become_more_dom_chance=5,
+               desc=f"""ass tease desc""",
+               options=(
+                   Option(EventsSex.ASS_TEASE, OptionCategory.DOM,
+                          "Continue teasing him with your ass",
+                          transition_text=f"""
+                          You continue to rub his rod in between your buns. You can feel a coolness
+                          from {THEM}'s pre, slicking up your back. The contrast with the rhythmic thrusts from his 
+                          hot member makes this an interesting experience.""",
+                          failed_transition_text="You have better uses for that hard cock than just teasing it"),
+                   Option(EventsSex.HANDJOB, OptionCategory.DOM,
+                          "Wrap your fingers around his member and start jerking",
+                          transition_text=f"""
+                          Feeling a change of pace, you switch to using your hand to get him off.""",
+                          failed_transition_text=f"""
+                          He recognizes what you are trying to do and twists his body to avoid having his member
+                          fully trapped within your fingers."""),
+                   Option(EventsSex.HOTDOG, OptionCategory.SUB,
+                          "Relax and let him do the thrusting along your crack",
+                          transition_text=f"""
+                          {THEM} wastes no time after you slow down to pick up the pace, his rod now doing the
+                          thrusting along your crack."""),
+                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.CUM,
+                          "Have him coat your ass with his seed")
+               )))
+    es.add(Sex(EventsSex.HOTDOG, "Get Hotdogged",
+               stam_cost_1=1, stam_cost_2=1.5,
+               desc=f"""get hotdogged from behind desc""",
+               options=(
+                   Option(EventsSex.HOTDOG, OptionCategory.DOM,
+                          "Continue to get him off with your ass",
+                          transition_text=f"""
+                          You enjoy the sensation of controlling his pleasure with just your butt, without having
+                          to resort to any penetration.""",
+                          failed_transition_text=f"""
+                          Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it 
+                          would feel like to him thrust inside you."""),
+                   Option(EventsSex.BLOWJOB_DOM, OptionCategory.DOM,
+                          "Switch to using your mouth",
+                          transition_text=f"""
+                          His vigorous thrusts invade your mind and you can't help but wonder what it would feel like
+                          inside of you. You satisfying this curiosity by offering your mouth.""",
+                          failed_transition_text=f"""
+                          His vigorous thrusts invade your mind and you can't help but wonder what it would feel like
+                          inside of you. You won't be satisfied with just him inside your mouth.
+                          """),
+                   Option(EventsSex.STANDING_FINGERED_FROM_BEHIND, OptionCategory.SUB,
+                          "Let him use his fingers",
+                          transition_text=f"""
+                          As if his earlier thrusting along your ass crack was in preparation, he plunges his fingers
+                          into your wet folds, with only a moan as a weak protest from you."""),
+                   Option(EventsSex.STANDING_FUCKED_FROM_BEHIND, OptionCategory.SUB,
+                          "Get impaled from behind",
+                          transition_text=f"""
+                          One of his thrusts, instead of going up, goes in between your thighs. Your wet folds dribble
+                          your anticipation onto his cock. Accepting your body's invitation, his next thrust pierces
+                          into you, eliciting a moan from your lips."""),
+                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.CUM,
+                          "Have him coat your ass with his seed")
+               )))
+    es.add(Sex(EventsSex.STANDING_FINGERED_FROM_BEHIND, "Fingered from Behind",
+               stam_cost_1=1, stam_cost_2=0,
+               root_become_more_sub_chance=5,
+               desc=f"""get fingered from behind desc""",
+               options=(
+                   Option(EventsSex.HOTDOG, OptionCategory.DOM,
+                          "Pull out to recover from his thrusting",
+                          transition_text=f"""
+                          You pull away from his devious fingers to get a chance to recover.
+                          They accept it, for now, and resume thrusting between your buns.""",
+                          failed_transition_text=f"""
+                          You try to pull away from his devious fingers, but your endeavour is stopped
+                          by a particularly deep thrust scraping your inner walls."""),
+                   Option(EventsSex.BLOWJOB_DOM, OptionCategory.DOM,
+                          "Satisfy him with your mouth",
+                          dom_success_adjustment=5,
+                          transition_text=f"""
+                          Giving him something else to thrust into, you get on your knees and starting sucking.""",
+                          failed_transition_text=f"""
+                          You move to pull away from his fingers, but your endeavour is stopped
+                          by a particularly deep thrust scraping your inner walls."""),
+                   Option(EventsSex.STANDING_FINGERED_FROM_BEHIND, OptionCategory.SUB,
+                          "Continue enjoying his deft hands",
+                          transition_text=f"""
+                          You melt into his hands as you surrender to pleasure."""),
+                   Option(EventsSex.STANDING_FUCKED_FROM_BEHIND, OptionCategory.SUB,
+                          "Let him fuck you proper",
+                          transition_text=f"""
+                          Surrendering to pleasure and wanting more, you reach down to guide his member to your
+                          entrance. Welcoming your invitation, he plunges into you fully."""),
+                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.CUM,
+                          "Have him coat your ass with his seed")
+               )))
+    es.add(Sex(EventsSex.STANDING_FUCKED_FROM_BEHIND, "Standing Fucked from Behind",
+               stam_cost_1=1.5, stam_cost_2=1,
+               root_become_more_sub_chance=10,
+               desc=f"""fucked from behind desc""",
+               options=(
+                   Option(EventsSex.BLOWJOB_DOM, OptionCategory.DOM,
+                          "Pleasure him with your mouth instead",
+                          transition_text=f"""
+                          You pull away and recover a bit of control by placing your hands and mouth around
+                          his cock, where you can easily decide what to do with it.""",
+                          failed_transition_text=f"""
+                          You attempt to pull away and recover some control, but you find it hard to focus
+                          and pull away from this pleasure."""),
+                   Option(EventsSex.BLOWJOB_SUB, OptionCategory.DOM,
+                          "Let him fuck your mouth instead",
+                          dom_success_adjustment=15,
+                          transition_text=f"""
+                          Dropping to your knees, you replace the hole he thrusts into. {THEM} don't seem to mind and
+                          doesn't break their rhythm.""",
+                          failed_transition_text=f"""
+                          You attempt to extricate yourself with gravity's assistance. However, he grabs your arms
+                          and hoists you up, giving you a few sharp thrusts while spanking you
+                          as punishment for trying to escape."""),
+                   Option(EventsSex.STANDING_FUCKED_FROM_BEHIND, OptionCategory.SUB,
+                          "Submit to getting plowed",
+                          transition_text=f"""
+                          You accept his invasion, each thrust making it harder and harder to pull away and form
+                          coherent thoughts. Instead, your mind is filled with a pink haze, urging you to just accept
+                          the pleasure of being used like a piece of meat.
+                          """),
+                   Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.CUM,
+                          "Have him pull out and cum on your ass"),
+                   Option(EventsCum.FUCK_BEHIND_CREAMPIE, OptionCategory.CUM,
+                          "Let him fill you with his seed"),
+               )))
 
 
 def define_cum_events(es: EventMap):
@@ -1226,6 +1347,17 @@ def define_cum_events(es: EventMap):
                subdom_change=2, root_become_more_dom_chance=35,
                terminal_option=Option(None, OptionCategory.OTHER, "Leave him yearning and frustrated"),
                desc=f"""blowjob ruined orgasm desc"""
+               ))
+    es.add(Cum(EventsCum.PULL_OUT_CUM_ON_ASS, "More Icing on the Cake",
+               subdom_change=-1,
+               terminal_option=Option(None, OptionCategory.OTHER, "Clean yourself and get dressed"),
+               desc=f"""cum on ass after fucking desc"""
+               ))
+    es.add(Cum(EventsCum.FUCK_BEHIND_CREAMPIE, "Plowing the Fields",
+               subdom_change=-3,
+               preg_chance_1=1.0,
+               terminal_option=Option(None, OptionCategory.OTHER, "Wipe away the cum dripping down your thighs"),
+               desc=f"""creampie after fucked behind desc"""
                ))
 
 
@@ -1273,6 +1405,12 @@ if __name__ == "__main__":
     # can only define this after linking options since we need incoming options
     define_first_events(es)
     all_options = link_events_and_options(es)
+
+    # warn about any undefined events
+    for eid in list(EventsFirst) + list(EventsSex) + list(EventsCum):
+        if eid not in es.events:
+            print(f"WARNING: {eid} declared but not defined")
+
     # plot directed graph of events and options (graphviz)
     export_dot_graphviz(es)
     export_strings(*generate_strings(es, all_options), dry_run=args.dry)

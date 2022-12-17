@@ -192,7 +192,7 @@ LIDAc.1 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.22
+		name = LIDAoption.39
 	}
 }
 LIDAc.5 = {
@@ -327,20 +327,83 @@ LIDAc.5 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 7
+					scope:sex_transition = 23
 				}
 				# Ass Tease
 				# 
-				desc = sex_transition_7
+				desc = sex_transition_23
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10006
+					scope:sex_transition = 28
 				}
-				# 6: EventsSex.ASS_TEASE -> EventsSex.ASS_TEASE failed
+				# Get Hotdogged
+				# 
+				desc = sex_transition_28
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 33
+				}
+				# Fingered from Behind
+				# 
+				desc = sex_transition_33
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10020
+				}
+				# 20: EventsSex.ASS_TEASE -> EventsSex.ASS_TEASE failed
 				# You have better uses for that hard cock than just teasing it\n
-				desc = sex_transition_10006
+				desc = sex_transition_10020
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10021
+				}
+				# 21: EventsSex.ASS_TEASE -> EventsSex.HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				desc = sex_transition_10021
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10024
+				}
+				# 24: EventsSex.HOTDOG -> EventsSex.HOTDOG failed
+				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
+				desc = sex_transition_10024
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10025
+				}
+				# 25: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM failed
+				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
+				desc = sex_transition_10025
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10029
+				}
+				# 29: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG failed
+				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_10029
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10030
+				}
+				# 30: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_10030
 			}
 		}
 		triggered_desc = {
@@ -350,8 +413,28 @@ LIDAc.5 = {
 				exists = scope:prev_event
 				scope:prev_event = 2
 			}
-			# defaulted to 7: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS
-			desc = sex_transition_7
+			# defaulted to 23: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_23
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 8
+			}
+			# defaulted to 28: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_28
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 9
+			}
+			# defaulted to 33: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_33
 		}
 		triggered_desc = {
 			trigger = {
@@ -374,7 +457,7 @@ LIDAc.5 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.23
+		name = LIDAoption.40
 	}
 }
 LIDAc.3 = {
@@ -509,47 +592,47 @@ LIDAc.3 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 12
+					scope:sex_transition = 10
 				}
 				# Dom Blowjob
 				# 
-				desc = sex_transition_12
+				desc = sex_transition_10
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 18
+					scope:sex_transition = 16
 				}
 				# Sub Blowjob
 				# 
-				desc = sex_transition_18
+				desc = sex_transition_16
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10008
+					scope:sex_transition = 10006
 				}
-				# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
+				# 6: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
 				# The potent musk of his member, inflated by the proximity of your nose to his pubes, strangely captivates you and you lose this opportunity to assert more dominance.\n
-				desc = sex_transition_10008
+				desc = sex_transition_10006
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10009
+					scope:sex_transition = 10007
 				}
-				# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
+				# 7: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
-				desc = sex_transition_10009
+				desc = sex_transition_10007
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10014
+					scope:sex_transition = 10012
 				}
-				# 14: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM failed
+				# 12: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM failed
 				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
-				desc = sex_transition_10014
+				desc = sex_transition_10012
 			}
 		}
 		triggered_desc = {
@@ -559,8 +642,8 @@ LIDAc.3 = {
 				exists = scope:prev_event
 				scope:prev_event = 4
 			}
-			# defaulted to 12: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_ON_FACE
-			desc = sex_transition_12
+			# defaulted to 10: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_10
 		}
 		triggered_desc = {
 			trigger = {
@@ -569,8 +652,8 @@ LIDAc.3 = {
 				exists = scope:prev_event
 				scope:prev_event = 6
 			}
-			# defaulted to 18: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_ON_FACE
-			desc = sex_transition_18
+			# defaulted to 16: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_16
 		}
 		triggered_desc = {
 			trigger = {
@@ -606,13 +689,440 @@ LIDAc.3 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.24
+		name = LIDAoption.41
 	}
 }
 LIDAc.2 = {
 	# Satisfying your Sweet Tooth
 	type = character_event
 	title = LIDAc.2.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 9
+				}
+				# Dom Blowjob
+				# 
+				desc = sex_transition_9
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10006
+				}
+				# 6: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his pubes, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_10006
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10007
+				}
+				# 7: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_10007
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 4
+			}
+			# defaulted to 9: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM
+			desc = sex_transition_9
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_f
+		}
+		desc = LIDAc.2.desc
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = -1
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 10
+			become_more_sub_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 10
+				become_more_dom_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.42
+	}
+}
+LIDAc.6 = {
+	# Down the Gullet
+	type = character_event
+	title = LIDAc.6.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 15
+				}
+				# Sub Blowjob
+				# 
+				desc = sex_transition_15
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 19
+				}
+				# Deepthroat
+				# 
+				desc = sex_transition_19
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10012
+				}
+				# 12: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM failed
+				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
+				desc = sex_transition_10012
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10017
+				}
+				# 17: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB failed
+				# Putting both hands on his waist, you push and try to stop his thrusts. It's all in vain, however, as he ignores you.\n
+				desc = sex_transition_10017
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 6
+			}
+			# defaulted to 15: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
+			desc = sex_transition_15
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 7
+			}
+			# defaulted to 19: EventsSex.DEEPTHROAT -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
+			desc = sex_transition_19
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_f
+		}
+		desc = LIDAc.6.desc
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = -2
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 25
+			become_more_sub_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 25
+				become_more_dom_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.43
+	}
+}
+LIDAc.4 = {
+	# A Firm Grasp on His Release
+	type = character_event
+	title = LIDAc.4.t
 	theme = seduction
 	override_background = {
 		trigger = {
@@ -750,20 +1260,20 @@ LIDAc.2 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10008
+					scope:sex_transition = 10006
 				}
-				# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
+				# 6: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
 				# The potent musk of his member, inflated by the proximity of your nose to his pubes, strangely captivates you and you lose this opportunity to assert more dominance.\n
-				desc = sex_transition_10008
+				desc = sex_transition_10006
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10009
+					scope:sex_transition = 10007
 				}
-				# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
+				# 7: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
-				desc = sex_transition_10009
+				desc = sex_transition_10007
 			}
 		}
 		triggered_desc = {
@@ -773,435 +1283,8 @@ LIDAc.2 = {
 				exists = scope:prev_event
 				scope:prev_event = 4
 			}
-			# defaulted to 11: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM
+			# defaulted to 11: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM
 			desc = sex_transition_11
-		}
-		triggered_desc = {
-			trigger = {
-				scope:root_cum = yes
-			}
-			desc = root_cum_f
-		}
-		desc = LIDAc.2.desc
-	}
-	immediate = {
-		check_if_root_cum_effect = yes
-		change_subdom_effect = {
-			CHANGE = -1
-		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = root
-			CHARACTER_2 = scope:affairs_partner
-			C1_PREGNANCY_CHANCE = 0
-			C2_PREGNANCY_CHANCE = 0
-			STRESS_EFFECTS = yes
-			DRAMA = yes
-		}
-		random = {
-			chance = 10
-			become_more_sub_effect = yes
-		}
-		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_dom_effect = yes
-			}
-		}
-		debug_log_scopes = yes
-	}
-	option = {
-		name = LIDAoption.25
-	}
-}
-LIDAc.6 = {
-	# Down the Gullet
-	type = character_event
-	title = LIDAc.6.t
-	theme = seduction
-	override_background = {
-		trigger = {
-			scope:locale = flag:battlefield
-		}
-		event_background = battlefield
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:alley_night
-		}
-		event_background = alley_night
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:alley_day
-		}
-		event_background = alley_day
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:temple
-		}
-		event_background = temple
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:corridor_night
-		}
-		event_background = corridor_night
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:corridor_day
-		}
-		event_background = corridor_day
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:courtyard
-		}
-		event_background = courtyard
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:dungeon
-		}
-		event_background = dungeon
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:docks
-		}
-		event_background = docks
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:feast
-		}
-		event_background = feast
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:market
-		}
-		event_background = market
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:tavern
-		}
-		event_background = tavern
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:throne_room
-		}
-		event_background = throne_room
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:garden
-		}
-		event_background = garden
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:gallows
-		}
-		event_background = gallows
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:bedchamber
-		}
-		event_background = bedchamber
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:study
-		}
-		event_background = study
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:council_chamber
-		}
-		event_background = council_chamber
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:sitting_room
-		}
-		event_background = sitting_room
-	}
-	left_portrait = {
-		character = root
-		animation = flirtation
-	}
-	right_portrait = {
-		character = scope:affairs_partner
-		animation = flirtation_left
-	}
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 17
-				}
-				# Sub Blowjob
-				# 
-				desc = sex_transition_17
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 21
-				}
-				# Deepthroat
-				# 
-				desc = sex_transition_21
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10014
-				}
-				# 14: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM failed
-				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
-				desc = sex_transition_10014
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10019
-				}
-				# 19: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB failed
-				# Putting both hands on his waist, you push and try to stop his thrusts. It's all in vain, however, as he ignores you.\n
-				desc = sex_transition_10019
-			}
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 6
-			}
-			# defaulted to 17: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
-			desc = sex_transition_17
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 7
-			}
-			# defaulted to 21: EventsSex.DEEPTHROAT -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
-			desc = sex_transition_21
-		}
-		triggered_desc = {
-			trigger = {
-				scope:root_cum = yes
-			}
-			desc = root_cum_f
-		}
-		desc = LIDAc.6.desc
-	}
-	immediate = {
-		check_if_root_cum_effect = yes
-		change_subdom_effect = {
-			CHANGE = -2
-		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = root
-			CHARACTER_2 = scope:affairs_partner
-			C1_PREGNANCY_CHANCE = 0
-			C2_PREGNANCY_CHANCE = 0
-			STRESS_EFFECTS = yes
-			DRAMA = yes
-		}
-		random = {
-			chance = 25
-			become_more_sub_effect = yes
-		}
-		scope:affairs_partner = {
-			random = {
-				chance = 25
-				become_more_dom_effect = yes
-			}
-		}
-		debug_log_scopes = yes
-	}
-	option = {
-		name = LIDAoption.26
-	}
-}
-LIDAc.4 = {
-	# A Firm Grasp on His Release
-	type = character_event
-	title = LIDAc.4.t
-	theme = seduction
-	override_background = {
-		trigger = {
-			scope:locale = flag:battlefield
-		}
-		event_background = battlefield
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:alley_night
-		}
-		event_background = alley_night
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:alley_day
-		}
-		event_background = alley_day
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:temple
-		}
-		event_background = temple
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:corridor_night
-		}
-		event_background = corridor_night
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:corridor_day
-		}
-		event_background = corridor_day
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:courtyard
-		}
-		event_background = courtyard
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:dungeon
-		}
-		event_background = dungeon
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:docks
-		}
-		event_background = docks
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:feast
-		}
-		event_background = feast
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:market
-		}
-		event_background = market
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:tavern
-		}
-		event_background = tavern
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:throne_room
-		}
-		event_background = throne_room
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:garden
-		}
-		event_background = garden
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:gallows
-		}
-		event_background = gallows
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:bedchamber
-		}
-		event_background = bedchamber
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:study
-		}
-		event_background = study
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:council_chamber
-		}
-		event_background = council_chamber
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:sitting_room
-		}
-		event_background = sitting_room
-	}
-	left_portrait = {
-		character = root
-		animation = flirtation
-	}
-	right_portrait = {
-		character = scope:affairs_partner
-		animation = flirtation_left
-	}
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 13
-				}
-				# Dom Blowjob
-				# 
-				desc = sex_transition_13
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10008
-				}
-				# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
-				# The potent musk of his member, inflated by the proximity of your nose to his pubes, strangely captivates you and you lose this opportunity to assert more dominance.\n
-				desc = sex_transition_10008
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10009
-				}
-				# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
-				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
-				desc = sex_transition_10009
-			}
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 4
-			}
-			# defaulted to 13: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM
-			desc = sex_transition_13
 		}
 		triggered_desc = {
 			trigger = {
@@ -1237,6 +1320,394 @@ LIDAc.4 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.27
+		name = LIDAoption.44
+	}
+}
+LIDAc.7 = {
+	# More Icing on the Cake
+	type = character_event
+	title = LIDAc.7.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 37
+				}
+				# Standing Fucked from Behind
+				# 
+				desc = sex_transition_37
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10034
+				}
+				# 34: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
+				desc = sex_transition_10034
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10035
+				}
+				# 35: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
+				desc = sex_transition_10035
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 5
+			}
+			# defaulted to 37: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_37
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_f
+		}
+		desc = LIDAc.7.desc
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = -1
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.45
+	}
+}
+LIDAc.8 = {
+	# Plowing the Fields
+	type = character_event
+	title = LIDAc.8.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 38
+				}
+				# Standing Fucked from Behind
+				# 
+				desc = sex_transition_38
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10034
+				}
+				# 34: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
+				desc = sex_transition_10034
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10035
+				}
+				# 35: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
+				desc = sex_transition_10035
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 5
+			}
+			# defaulted to 38: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.FUCK_BEHIND_CREAMPIE
+			desc = sex_transition_38
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_f
+		}
+		desc = LIDAc.8.desc
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = -3
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 1.0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.46
 	}
 }
