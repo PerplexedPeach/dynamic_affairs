@@ -1,10 +1,10 @@
 ﻿l_english:
 LIDA.50.t:0 "An Illicit Affair"
-LIDA.50.desc:0 "placeholder description"
-LIDA.50.a:0 "Found affairs partner, [affairs_partner.GetFirstName], proceed"
-LIDA.50.a.tt:0 "custom tooltip [affairs_partner.GetTitledFirstNameNoTooltip]"
-LIDA.50.b:0 "Reroll"
-LIDA.50.b.tt:0 "custom tooltip [affairs_partner.GetTitledFirstNameNoTooltip]"
-LIDA.50.c:0 "Close"
-LIDA.50.c.tt:0 "custom tooltip do nothing"
+LIDA.50.desc:0 "Your trusted servant brings a stack of letters to you, bowing and quickly leaving. \n\nEach letter lists a name and their detailed description, which are to some extent matching your taste. \n\nSipping on your tea, you scan each one carefully."
+LIDA.50.a:0 "[affairs_partner.GetFullNameRegnal] will do"
+LIDA.50.a.tt:0 "Meet discretely with [affairs_partner.GetTitledFirstNameNoTooltip]"
+LIDA.50.b:0 "No, consider someone else"
+LIDA.50.b.tt:0 "Continue scanning the list"
+LIDA.50.c:0 "Nevermind, I bore of this"
+LIDA.50.c.tt:0 "You cannot search for another affair for a period of time after!"
  
