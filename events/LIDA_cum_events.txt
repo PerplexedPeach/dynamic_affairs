@@ -590,12 +590,12 @@ LIDAc.3 = {
 			DRAMA = yes
 		}
 		random = {
-			chance = 20
+			chance = 15
 			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
-				chance = 20
+				chance = 15
 				become_more_dom_effect = yes
 			}
 		}
@@ -960,12 +960,12 @@ LIDAc.6 = {
 			DRAMA = yes
 		}
 		random = {
-			chance = 25
+			chance = 20
 			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
-				chance = 25
+				chance = 20
 				become_more_dom_effect = yes
 			}
 		}
@@ -1515,12 +1515,12 @@ LIDAc.8 = {
 			DRAMA = yes
 		}
 		random = {
-			chance = 25
+			chance = 20
 			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
-				chance = 25
+				chance = 20
 				become_more_dom_effect = yes
 			}
 		}

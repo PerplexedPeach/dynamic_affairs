@@ -2899,8 +2899,8 @@ LIDAs.2 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = 0.25
-			STAMINA_COST_2 = 0.5
+			STAMINA_COST_1 = 0.5
+			STAMINA_COST_2 = 0.75
 		}
 		check_if_root_cum_effect = yes
 		store_subdom_value_effect = yes
@@ -3481,8 +3481,8 @@ LIDAs.10 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = 0.25
-			STAMINA_COST_2 = 0.5
+			STAMINA_COST_1 = 0.5
+			STAMINA_COST_2 = 0.75
 		}
 		check_if_root_cum_effect = yes
 		store_subdom_value_effect = yes
@@ -4100,8 +4100,8 @@ LIDAs.8 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = 0.25
-			STAMINA_COST_2 = 0.5
+			STAMINA_COST_1 = 0.5
+			STAMINA_COST_2 = 0.75
 		}
 		check_if_root_cum_effect = yes
 		store_subdom_value_effect = yes
@@ -5572,12 +5572,12 @@ LIDAs.5 = {
 			}
 		}
 		random = {
-			chance = 10
+			chance = 7
 			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
-				chance = 10
+				chance = 7
 				become_more_dom_effect = yes
 			}
 		}

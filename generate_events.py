@@ -1206,7 +1206,7 @@ def define_sex_events(es: EventMap):
                           "He cums in your mouth"),
                )))
     es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
-               stam_cost_1=0.25, stam_cost_2=0.5,
+               stam_cost_1=0.5, stam_cost_2=0.75,
                root_become_more_dom_chance=5,
                desc=f"""
                Looking into {THEM}'s leering eyes, you can see his desire to have you.
@@ -1242,7 +1242,7 @@ def define_sex_events(es: EventMap):
                           "Have him coat your ass with his seed")
                )))
     es.add(Sex(EventsSex.ASS_RUB, "Ass Rub",
-               stam_cost_1=0.25, stam_cost_2=0.5,
+               stam_cost_1=0.5, stam_cost_2=0.75,
                root_become_more_dom_chance=5,
                desc=f"""
                Despite not being able to see him standing behind you, 
@@ -1272,7 +1272,7 @@ def define_sex_events(es: EventMap):
                           "Have him coat your ass with his seed")
                )))
     es.add(Sex(EventsSex.HOTDOG, "Get Hotdogged",
-               stam_cost_1=0.25, stam_cost_2=0.5,
+               stam_cost_1=0.5, stam_cost_2=0.75,
                desc=f"""
                You lay back and relax as his cock repeatedly parts your cheeks. He holds your arms
                to keep you from sliding away during his thrusts, which you allow.
@@ -1357,7 +1357,7 @@ def define_sex_events(es: EventMap):
                )))
     es.add(Sex(EventsSex.STANDING_FUCKED_FROM_BEHIND, "Standing Fucked from Behind",
                stam_cost_1=2, stam_cost_2=1.5,
-               root_become_more_sub_chance=10,
+               root_become_more_sub_chance=7,
                desc=f"""
                Sometimes bending you over and sometimes #sub pulling your hair to keep you upright#!, 
                you're at the mercy of {THEM}. His vigorous thrusts make you knees weak and you find it
@@ -1420,7 +1420,7 @@ def define_cum_events(es: EventMap):
                ))
     # TODO add chance of acquiring fetishes
     es.add(Cum(EventsCum.BLOWJOB_CUM_ON_FACE, "Painting your Face",
-               subdom_change=-2, root_become_more_sub_chance=20,
+               subdom_change=-2, root_become_more_sub_chance=15,
                terminal_option=Option(None, OptionCategory.OTHER, "Sample some stray globs of cum"),
                desc=f"""
                You look up and brace yourself for what's the come. When the first drop hits your face,
@@ -1447,7 +1447,7 @@ def define_cum_events(es: EventMap):
                """
                ))
     es.add(Cum(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, "Down the Gullet",
-               subdom_change=-2, root_become_more_sub_chance=25,
+               subdom_change=-2, root_become_more_sub_chance=20,
                terminal_option=Option(None, OptionCategory.OTHER, "Recover from having your throat used so roughly"),
                desc=f"""
                {THEM} holds your head in place while his last thrust goes deeper than before.
@@ -1487,7 +1487,7 @@ def define_cum_events(es: EventMap):
                ))
     es.add(Cum(EventsCum.FUCK_BEHIND_CREAMPIE, "Plowing the Fields",
                subdom_change=-3,
-               root_become_more_sub_chance=25,
+               root_become_more_sub_chance=20,
                preg_chance_1=1.0,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe away the cum dripping down your thighs"),
                desc=f"""
