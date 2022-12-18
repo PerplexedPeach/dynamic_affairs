@@ -172,6 +172,7 @@ EVENTS_FILE_HEADER = "# GENERATED FILE - DO NOT MODIFY DIRECTLY"
 
 # localization constants
 THEM = "[affairs_partner.GetFirstName]"
+ME_FULL_REGNAL = "[GetFullNameRegnal]"
 
 dom_fail_offset = 10000
 base_event_weight = 5
@@ -1500,35 +1501,122 @@ def define_first_events(es: EventMap):
     source_sex_events = get_source_sex_events(es)
     es.add(First(EventsFirst.MEETING_WITH_SPOUSE, "Spicing it Up",
                  source_sex_events=source_sex_events, background="bedchamber",
-                 desc=f"""meet with spouse again"""))
+                 desc=f"""
+                 You light some candles and sprinkle some scented petals in your bedchamber,
+                 making it an even more inviting den of intimacy. As before, you left
+                 a cryptic message inviting {THEM}.
+                 \\n\\n
+                 He arrives promptly, clearly excited with your spontaneous trysts, and only
+                 gives a brief greeting before climbing into bed with you."""))
     es.add(First(EventsFirst.MEETING_WITH_SPOUSE_INITIAL, "Flowers in Bloom",
                  source_sex_events=source_sex_events, background="garden",
-                 desc=f"""meet with spouse first in garden"""))
+                 desc=f"""
+                 As it is beautiful day, you have a stroll in your garden. 
+                 In your bed chambers, you left a note to invite {THEM} outside.
+                 \\n\\n
+                 Upon spotting you, he rushes forward, "What is it you wanted to see me
+                 about?" Curious, and a little bit panicked with the cryptic content of your message.
+                 \\n\\n
+                 Instead of answering, you beam him your brightest smile, 
+                 "Let's make love here," pointing to a shaded awning free from prying eyes.
+                 \\n\\n
+                 Your strategy to put him on his toes and then deliver such a direct line works
+                 and he stands there, flustered at your proposal but not rejecting it.
+                 """))
     es.add(First(EventsFirst.MEETING_WITH_VASSAL, "Chains of Command",
                  source_sex_events=source_sex_events, background="study",
-                 desc=f"""meet with vassal again"""))
+                 desc=f"""
+                 You send a summons to {THEM} about helping you with interpreting some passages in your study.
+                 By now, that's tacitly understood as an invitation to a tryst, which he gladly accepts.
+                 Almost immediately, he shows up in your study.
+                 """))
     es.add(First(EventsFirst.MEETING_WITH_VASSAL_INITIAL, "Privileges of Power",
                  source_sex_events=source_sex_events, background="study",
-                 desc=f"""meet with vassal first in study"""))
+                 desc=f"""
+                 You summon {THEM} to your study, giving instructions to your 
+                 guards to let him in then leave afterwards. The guards' faces betray their guesses,
+                 but you pay them to be discrete thus they make no comments.
+                 \\n\\n
+                 Entering the study, "You summoned me, my Lady?"
+                 \\n\\n
+                 "Yes, I want to consult with you on this passage here", you say as you reach for one of the books
+                 on your bookshelf, making sure that as you do so, one of the straps on your dress would come loose
+                 and present your feminine assets. Blushing, they turn away, but you pretend as if you didn't notice 
+                 and instead walk up to him and say in a coy tone, "Could you help me with this?"
+                 """))
     es.add(First(EventsFirst.MEETING_WITH_LIEGE, "Mead in my Room?",
                  source_sex_events=source_sex_events, background="bedchamber",
-                 desc=f"""meet with liege again"""))
+                 desc=f"""
+                 It's another long council meeting, and {THEM}'s councillors start streaming out of the
+                 room. You, however, remain in the room and say, "My Lord, I have some more council
+                 business to discuss with you."
+                 \\n\\n
+                 Nodding, he responds, "Very good, I appreciate your enthusiasm and hard work."
+                 Taking a pause, "But it's getting late, so let us retire to my bedchambers where
+                 we can discuss it in more comfort."
+                 """))
     es.add(First(EventsFirst.MEETING_WITH_LIEGE_INITIAL, "An Intimate Discussion",
                  source_sex_events=source_sex_events, background="council_chamber",
-                 desc=f"""meet with liege first in council 
-                 (have something to talk to them about after a council meeting)"""))
+                 desc=f"""
+                 After the council meeting, {THEM} dismisses you all. However, you take your time
+                 leaving and soon you two are the only ones left in the chamber. "Is there something
+                 you need?" he asks amicably.
+                 \\n\\n
+                 Instead of answering, you twirl your hair and put an arm under your bosom, making
+                 an effort to highlight it. You saunter closer to him and see an inviting amusement in 
+                 his eyes, "You, my Lord."
+                 """))
     es.add(First(EventsFirst.MEETING_WITH_PRISONER, "Taste of Heaven in Hell",
                  source_sex_events=source_sex_events, background="dungeon",
-                 desc=f"""meet with prisoner again"""))
+                 desc=f"""
+                 You descend to {THEM}'s cell without much ceremony.
+                 \\n\\n
+                 "You've come again," he says happily. Laughing, he jests#weak (?)#! "Have you fallen
+                 for my cock?"
+                 \\n\\n
+                 That comment strikes a cord within you and you question your repeated visit to your prisoner.
+                 Initially it was meant as a torture for them, but that is only valid if you deny him the pleasure
+                 afterwards. #sub;italic Perhaps you are growing dependent on the pleasure he can provide?#!
+                 \\n\\n
+                 Pushing such thoughts to the back of your mind, you approach him."""))
     es.add(First(EventsFirst.MEETING_WITH_PRISONER_INITIAL, "The Sweetest Torture",
                  source_sex_events=source_sex_events, background="dungeon",
-                 desc=f"""meet with prisoner first"""))
+                 desc=f"""
+                 You descend down the stone stairs to your dungeon and muse that giving a prisoner
+                 pleasure might be the greatest torture after you take it away. After all, ignore is bliss,
+                 and to take away that bliss would be fitting punishment.
+                 \\n\\n
+                 It doesn't take you long before you arrive in front of {THEM}'s cell. Speaking to the guards,
+                 "I need to talk to this prisoner along; you are dismissed."
+                 \\n\\n
+                 He looks up, eyes wide in fear of what tortures you have devised that requires a personal visit.
+                 But you also notice a bulge forming in his loose trousers. Before coming, you had your makeup and
+                 perfume done in a manner bordering on garish (and some would call #sub whorish#!), the kind that
+                 instantly sparks men's loins and their desire to dominate and conquer.
+                 """))
     es.add(First(EventsFirst.MEETING_WITH_ACQUAINTANCE, "Who Owns Who",
                  source_sex_events=source_sex_events, background="sitting_room",
-                 desc=f"""meet with acquaintance again"""))
+                 desc=f"""
+                 Communicating via your servants, you inform {THEM} that you'd like to get to know them better
+                 in your sitting room. Wise to your intentions, he wastes no time arriving, noting the lack of 
+                 servants and guards to confirm his guess.
+                 \\n\\n
+                 You lock eyes, and without exchanging any words do all the communication with your bodies."""))
     es.add(First(EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL, "A Chance Encounter",
                  source_sex_events=source_sex_events, background="courtyard",
-                 desc=f"""meet with acquaintance first"""))
+                 desc=f"""
+                 Your servants inform you that {THEM} is strolling along your courtyard. You give further instructions
+                 to clear out the guards and any other personage near that location. A knowing gleam appears in their
+                 eyes, but they are paid for their discretion and so bow and leave without any comment.
+                 \\n\\n
+                 You find him in the expected location, and feigning like you were strolling as well, you don't
+                 go towards him.
+                 \\n\\n
+                 "Well met, {ME_FULL_REGNAL}!" He greets you enthusiastically.
+                 \\n\\n
+                 Smiling, you reply, "{THEM}, no need to stand on formality. Fate has ordained that we
+                 meet today, it must mean that we should get to know each other more intimately."
+                 Your painted lips and inviting body language draws them in with no chance of escape."""))
 
 
 if __name__ == "__main__":
