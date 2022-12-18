@@ -1212,7 +1212,7 @@ def define_sex_events(es: EventMap):
                Looking into {THEM}'s leering eyes, you can see his desire to have you.
                You may not let them have their way with you, but for now you play along.
                Closing in, you lean close to his ear and promise, "This will be a day you'll remember."
-               
+               \\n\\n
                Simultaneously, you reach down and loosen his trousers. His member springs to attention,
                clearly incensed from your womanly wiles and seductive manner. In reciprocation, he pulls
                up your dress, and you turn around, teasingly shake your shapely behind and giving his eyes
@@ -1225,7 +1225,7 @@ def define_sex_events(es: EventMap):
                           You continue to rub his rod in between your buns. You can feel a coolness
                           from {THEM}'s pre, slicking up your back. The contrast with the rhythmic thrusts from his 
                           hot member makes this an interesting experience.""",
-                          failed_transition_text="You have better uses for that hard cock than just teasing it"),
+                          failed_transition_text="You have better uses for that hard cock than just teasing it."),
                    Option(EventsSex.HANDJOB, OptionCategory.DOM,
                           "Wrap your fingers around his member and start jerking",
                           transition_text=f"""
@@ -1356,10 +1356,10 @@ def define_sex_events(es: EventMap):
                           "Have him coat your ass with his seed")
                )))
     es.add(Sex(EventsSex.STANDING_FUCKED_FROM_BEHIND, "Standing Fucked from Behind",
-               stam_cost_1=1.5, stam_cost_2=1,
+               stam_cost_1=2, stam_cost_2=1.5,
                root_become_more_sub_chance=10,
                desc=f"""
-               Sometimes bending you over and sometimes pulling your hair to keep you upright, 
+               Sometimes bending you over and sometimes #sub pulling your hair to keep you upright#!, 
                you're at the mercy of {THEM}. His vigorous thrusts make you knees weak and you find it
                hard to stay on your feet.
                \\n\\n
@@ -1429,6 +1429,7 @@ def define_cum_events(es: EventMap):
                \\n\\n
                "You look beautiful covered in my cum," {THEM} say while #sub wiping his cock against your face#!.
                Taking advantage of your helpless state, he takes some liberties in degrading you,
+               \\n\\n
                "I've marked you as mine, regardless of who you lay with later. Even when you're with them,
                you'll think back to this moment with my cum on your face."
                """

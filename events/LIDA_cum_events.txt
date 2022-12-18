@@ -311,7 +311,7 @@ LIDAc.5 = {
 					scope:sex_transition = 10020
 				}
 				# 20: EventsSex.ASS_TEASE -> EventsSex.ASS_RUB failed
-				# You have better uses for that hard cock than just teasing it\n
+				# You have better uses for that hard cock than just teasing it.\n
 				desc = sex_transition_10020
 			}
 			triggered_desc = {
