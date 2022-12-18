@@ -1400,45 +1400,99 @@ def define_sex_events(es: EventMap):
 def define_cum_events(es: EventMap):
     es.add(Cum(EventsCum.HANDJOB_CUM_IN_HAND, "A Cumshot in Hand is Worth Two in the Bush",
                subdom_change=1, root_become_more_dom_chance=20,
-               terminal_option=Option(None, OptionCategory.OTHER, "Wipe your hands on a nearby cloth"),
-               desc=f"""cum in hand desc"""
+               terminal_option=Option(None, OptionCategory.OTHER, "Clean your hands on a nearby cloth"),
+               desc=f"""
+               His back arches, thrusting forward into an imaginary womb, and spurts his load onto your open palm.
+               \\n\\n
+               "That's it?" you say as you wipe his seed onto his chest, "How do you hope to please any
+               woman with that pathetic stamina?" His #dom dejected look 
+               pleases#! you #italic - maybe your personality is twisted?#!"""
                ))
     es.add(Cum(EventsCum.ASS_TEASE_CUM_ON_ASS, "Icing on the Cake",
                subdom_change=0,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean yourself and get dressed"),
-               desc=f"""cum on ass desc"""
+               desc=f"""
+               You don't see it as much as feel it as a splash of warmth on your ass signals the end of
+               this session. Some of it starts sliding, tracing a warm path down your legs. Others stay,
+               a complement to your curves. #italic Is it normal for your thoughts to wander so quickly
+               after sex? Maybe you're just bored.#!"""
                ))
     # TODO add chance of acquiring fetishes
     es.add(Cum(EventsCum.BLOWJOB_CUM_ON_FACE, "Painting your Face",
                subdom_change=-2, root_become_more_sub_chance=20,
                terminal_option=Option(None, OptionCategory.OTHER, "Sample some stray globs of cum"),
-               desc=f"""cum on face desc"""
+               desc=f"""
+               You look up and brace yourself for what's the come. When the first drop hits your face,
+               you flinch and instinctively close your eyes, which was fortunate as you feel a glob
+               land on your eyelids.
+               \\n\\n
+               "You look beautiful covered in my cum," {THEM} say while #sub wiping his cock against your face#!.
+               Taking advantage of your helpless state, he takes some liberties in degrading you,
+               "I've marked you as mine, regardless of who you lay with later. Even when you're with them,
+               you'll think back to this moment with my cum on your face."
+               """
                ))
     es.add(Cum(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, "Satisfying your Sweet Tooth",
                subdom_change=-1, root_become_more_sub_chance=10,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe away any cum that might've escaped"),
-               desc=f"""cum in mouth dom desc"""
+               # TODO triggered text depending on cum fetish
+               desc=f"""
+               {THEM} arches his back and holds your head in place with his hands.
+               You move to free your head, but with his release imminent, he has no intention to listen to orders.
+               Soon, you feel {THEM}'s cock twitch in your mouth followed by a salty deluge.
+               
+               His #sub seed is thick#!, and combined with its salty taste makes it quite conventionally unpalatable.
+               """
                ))
     es.add(Cum(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, "Down the Gullet",
                subdom_change=-2, root_become_more_sub_chance=25,
                terminal_option=Option(None, OptionCategory.OTHER, "Recover from having your throat used so roughly"),
-               desc=f"""cum in mouth sub desc"""
+               desc=f"""
+               {THEM} holds your head in place while his last thrust goes deeper than before.
+               His dick twitches and shoots out his seed in a steady stream. It fills up your mouth,
+               and he makes no moves to extricate his member. 
+               \\n\\n
+               "Swallow it," he says in a commanding tone.
+               \\n\\n
+               As you have no choice apart from drowning, you swallow it. Fortunately or not, since he
+               thrusted so deeply, most of it was shot into the back of your throat where you cannot taste it.
+               You #sub gulp audibly and take it all down#!.
+               """
                ))
     es.add(Cum(EventsCum.BLOWJOB_RUINED_ORGASM, "A Firm Grasp on His Release",
                subdom_change=2, root_become_more_dom_chance=35,
                terminal_option=Option(None, OptionCategory.OTHER, "Leave him yearning and frustrated"),
-               desc=f"""blowjob ruined orgasm desc"""
+               desc=f"""
+               {THEM} arches his back he's clearly about to to climax, but you interrupt by firmly grabbing his
+               shaft close to his body. Even if he wanted to, he physically cannot release his seed.
+               "Did I say you could cum?" You cruelly intone as you grasp his balls with your other hand.
+               \\n\\n
+               "Please, I'm so close," he whines.
+               \\n\\n
+               "You didn't earn it today," you respond, "maybe next time #dom if you please me.#!"
+               """
                ))
     es.add(Cum(EventsCum.PULL_OUT_CUM_ON_ASS, "More Icing on the Cake",
                subdom_change=-1,
+               root_become_more_sub_chance=10,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean yourself and get dressed"),
-               desc=f"""cum on ass after fucking desc"""
+               desc=f"""
+               Perhaps fearing the consequences of impregnating you, {THEM} pulls out near his limit.
+               He instead shoots his seed on your ass, several spurts of warmth announcing the end of the session.
+               \\n\\n
+               With a #sub smack on your ass#!, "Let's meet again in the future."
+               """
                ))
     es.add(Cum(EventsCum.FUCK_BEHIND_CREAMPIE, "Plowing the Fields",
                subdom_change=-3,
+               root_become_more_sub_chance=25,
                preg_chance_1=1.0,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe away the cum dripping down your thighs"),
-               desc=f"""creampie after fucked behind desc"""
+               desc=f"""
+               "Ugh," {THEM} grunts as he plunges to the hilt while pulling your head back by your hair,
+               "Your mine now. I'm going to make you my breeding bitch."
+               \\n\\n
+               Your body #sub submits to its conquerer#! and you have no choice but to take his seed into your womb."""
                ))
 
 

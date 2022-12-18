@@ -5,7 +5,8 @@ to it. If you're just looking to use it, it's
 better to use the one from release sites (discord or loverslab).
 
 **Copy `dynamic_affairs.mod` just outside this repository to use the mod
-from the repostiory**. This mod depends on Carnalitas
+from the repostiory**. This repository also needs to be called `dynamic_affairs`.
+This mod depends on Carnalitas
 (no restriction on load order).
 
 ## Contribution Guide
@@ -22,8 +23,8 @@ want to code a little bit (just in python, no need to touch paradox script), the
 4. clone (download) your forked repository by clicking the green button, getting a link, then on command line
     type something like `git clone https://github.com/PerplexedPeach/dynamic_affairs` but replace it with the link
     to your own fork.
-5. put the repository under `C:\Users\<username>\Documents\Paradox Interactive\Crusader Kings III\mod\`
-6. add it as a mod in the paradox launcher
+5. put the repository under `C:\Users\<username>\Documents\Paradox Interactive\Crusader Kings III\mod\` (make sure the repository folder is called `dynamic_affairs`)
+6. copy the `dynamic_affairs.mod` file to immediately outside this repository to add it to the launcher
 7. make changes to the code in `generate_events.py` (detailed guide below)
 8. (optional) install [graphviz](https://graphviz.org/download/) to produce a graphical representation of the events,
     which is really helpful for organizing and debugging things
