@@ -140,14 +140,14 @@ LIDAf.1 = {
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 47
+					value = 52
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 48
+					value = 53
 				}
 			}
 		}
@@ -156,35 +156,35 @@ LIDAf.1 = {
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 47
+						scope:first_transition_0 = 52
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 47
+					value = 52
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 48
+						scope:first_transition_0 = 53
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 48
+					value = 53
 				}
 			}
 		}
 	}
 	option = {
-		# 47: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.HANDJOB_TEASE
-		name = LIDAoption.47
+		# 52: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.52
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 47
-				scope:first_transition_1 = 47
+				scope:first_transition_0 = 52
+				scope:first_transition_1 = 52
 			}
 		}
 		save_scope_value_as = {
@@ -193,17 +193,17 @@ LIDAf.1 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 47
+			value = 52
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 48: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.ASS_TEASE
-		name = LIDAoption.48
+		# 53: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.ASS_TEASE
+		name = LIDAoption.53
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 48
-				scope:first_transition_1 = 48
+				scope:first_transition_0 = 53
+				scope:first_transition_1 = 53
 			}
 		}
 		save_scope_value_as = {
@@ -212,7 +212,7 @@ LIDAf.1 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 48
+			value = 53
 		}
 		trigger_event = LIDAs.2
 	}
@@ -365,14 +365,14 @@ LIDAf.2 = {
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 49
+					value = 54
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 50
+					value = 55
 				}
 			}
 		}
@@ -381,35 +381,35 @@ LIDAf.2 = {
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 49
+						scope:first_transition_0 = 54
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 49
+					value = 54
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 50
+						scope:first_transition_0 = 55
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 50
+					value = 55
 				}
 			}
 		}
 	}
 	option = {
-		# 49: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.HANDJOB_TEASE
-		name = LIDAoption.49
+		# 54: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.54
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 49
-				scope:first_transition_1 = 49
+				scope:first_transition_0 = 54
+				scope:first_transition_1 = 54
 			}
 		}
 		save_scope_value_as = {
@@ -418,17 +418,17 @@ LIDAf.2 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 49
+			value = 54
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 50: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.ASS_TEASE
-		name = LIDAoption.50
+		# 55: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.55
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 50
-				scope:first_transition_1 = 50
+				scope:first_transition_0 = 55
+				scope:first_transition_1 = 55
 			}
 		}
 		save_scope_value_as = {
@@ -437,7 +437,7 @@ LIDAf.2 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 50
+			value = 55
 		}
 		trigger_event = LIDAs.2
 	}
@@ -590,14 +590,14 @@ LIDAf.3 = {
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 51
+					value = 56
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 52
+					value = 57
 				}
 			}
 		}
@@ -606,35 +606,35 @@ LIDAf.3 = {
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 51
+						scope:first_transition_0 = 56
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 51
+					value = 56
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 52
+						scope:first_transition_0 = 57
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 52
+					value = 57
 				}
 			}
 		}
 	}
 	option = {
-		# 51: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.HANDJOB_TEASE
-		name = LIDAoption.51
+		# 56: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.56
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 51
-				scope:first_transition_1 = 51
+				scope:first_transition_0 = 56
+				scope:first_transition_1 = 56
 			}
 		}
 		save_scope_value_as = {
@@ -643,17 +643,17 @@ LIDAf.3 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 51
+			value = 56
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 52: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.ASS_TEASE
-		name = LIDAoption.52
+		# 57: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.57
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 52
-				scope:first_transition_1 = 52
+				scope:first_transition_0 = 57
+				scope:first_transition_1 = 57
 			}
 		}
 		save_scope_value_as = {
@@ -662,7 +662,7 @@ LIDAf.3 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 52
+			value = 57
 		}
 		trigger_event = LIDAs.2
 	}
@@ -815,14 +815,14 @@ LIDAf.4 = {
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 53
+					value = 58
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 54
+					value = 59
 				}
 			}
 		}
@@ -831,35 +831,35 @@ LIDAf.4 = {
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 53
+						scope:first_transition_0 = 58
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 53
+					value = 58
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 54
+						scope:first_transition_0 = 59
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 54
+					value = 59
 				}
 			}
 		}
 	}
 	option = {
-		# 53: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.HANDJOB_TEASE
-		name = LIDAoption.53
+		# 58: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.58
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 53
-				scope:first_transition_1 = 53
+				scope:first_transition_0 = 58
+				scope:first_transition_1 = 58
 			}
 		}
 		save_scope_value_as = {
@@ -868,17 +868,17 @@ LIDAf.4 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 53
+			value = 58
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 54: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.ASS_TEASE
-		name = LIDAoption.54
+		# 59: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.59
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 54
-				scope:first_transition_1 = 54
+				scope:first_transition_0 = 59
+				scope:first_transition_1 = 59
 			}
 		}
 		save_scope_value_as = {
@@ -887,7 +887,7 @@ LIDAf.4 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 54
+			value = 59
 		}
 		trigger_event = LIDAs.2
 	}
@@ -1040,14 +1040,14 @@ LIDAf.5 = {
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 55
+					value = 60
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 56
+					value = 61
 				}
 			}
 		}
@@ -1056,35 +1056,35 @@ LIDAf.5 = {
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 55
+						scope:first_transition_0 = 60
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 55
+					value = 60
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 56
+						scope:first_transition_0 = 61
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 56
+					value = 61
 				}
 			}
 		}
 	}
 	option = {
-		# 55: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.HANDJOB_TEASE
-		name = LIDAoption.55
+		# 60: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.60
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 55
-				scope:first_transition_1 = 55
+				scope:first_transition_0 = 60
+				scope:first_transition_1 = 60
 			}
 		}
 		save_scope_value_as = {
@@ -1093,17 +1093,17 @@ LIDAf.5 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 55
+			value = 60
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 56: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.ASS_TEASE
-		name = LIDAoption.56
+		# 61: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.ASS_TEASE
+		name = LIDAoption.61
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 56
-				scope:first_transition_1 = 56
+				scope:first_transition_0 = 61
+				scope:first_transition_1 = 61
 			}
 		}
 		save_scope_value_as = {
@@ -1112,7 +1112,7 @@ LIDAf.5 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 56
+			value = 61
 		}
 		trigger_event = LIDAs.2
 	}
@@ -1265,14 +1265,14 @@ LIDAf.6 = {
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 57
+					value = 62
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 58
+					value = 63
 				}
 			}
 		}
@@ -1281,35 +1281,35 @@ LIDAf.6 = {
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 57
+						scope:first_transition_0 = 62
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 57
+					value = 62
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 58
+						scope:first_transition_0 = 63
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 58
+					value = 63
 				}
 			}
 		}
 	}
 	option = {
-		# 57: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.HANDJOB_TEASE
-		name = LIDAoption.57
+		# 62: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.62
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 57
-				scope:first_transition_1 = 57
+				scope:first_transition_0 = 62
+				scope:first_transition_1 = 62
 			}
 		}
 		save_scope_value_as = {
@@ -1318,17 +1318,17 @@ LIDAf.6 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 57
+			value = 62
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 58: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.ASS_TEASE
-		name = LIDAoption.58
+		# 63: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.63
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 58
-				scope:first_transition_1 = 58
+				scope:first_transition_0 = 63
+				scope:first_transition_1 = 63
 			}
 		}
 		save_scope_value_as = {
@@ -1337,7 +1337,7 @@ LIDAf.6 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 58
+			value = 63
 		}
 		trigger_event = LIDAs.2
 	}
@@ -1490,14 +1490,14 @@ LIDAf.7 = {
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 59
+					value = 64
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 60
+					value = 65
 				}
 			}
 		}
@@ -1506,35 +1506,35 @@ LIDAf.7 = {
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 59
+						scope:first_transition_0 = 64
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 59
+					value = 64
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 60
+						scope:first_transition_0 = 65
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 60
+					value = 65
 				}
 			}
 		}
 	}
 	option = {
-		# 59: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.HANDJOB_TEASE
-		name = LIDAoption.59
+		# 64: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.64
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 59
-				scope:first_transition_1 = 59
+				scope:first_transition_0 = 64
+				scope:first_transition_1 = 64
 			}
 		}
 		save_scope_value_as = {
@@ -1543,17 +1543,17 @@ LIDAf.7 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 59
+			value = 64
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 60: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.ASS_TEASE
-		name = LIDAoption.60
+		# 65: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.ASS_TEASE
+		name = LIDAoption.65
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 60
-				scope:first_transition_1 = 60
+				scope:first_transition_0 = 65
+				scope:first_transition_1 = 65
 			}
 		}
 		save_scope_value_as = {
@@ -1562,7 +1562,7 @@ LIDAf.7 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 60
+			value = 65
 		}
 		trigger_event = LIDAs.2
 	}
@@ -1715,14 +1715,14 @@ LIDAf.8 = {
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 61
+					value = 66
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 62
+					value = 67
 				}
 			}
 		}
@@ -1731,35 +1731,35 @@ LIDAf.8 = {
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 61
+						scope:first_transition_0 = 66
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 61
+					value = 66
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 62
+						scope:first_transition_0 = 67
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 62
+					value = 67
 				}
 			}
 		}
 	}
 	option = {
-		# 61: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.HANDJOB_TEASE
-		name = LIDAoption.61
+		# 66: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.66
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 61
-				scope:first_transition_1 = 61
+				scope:first_transition_0 = 66
+				scope:first_transition_1 = 66
 			}
 		}
 		save_scope_value_as = {
@@ -1768,17 +1768,17 @@ LIDAf.8 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 61
+			value = 66
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 62: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.ASS_TEASE
-		name = LIDAoption.62
+		# 67: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.67
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 62
-				scope:first_transition_1 = 62
+				scope:first_transition_0 = 67
+				scope:first_transition_1 = 67
 			}
 		}
 		save_scope_value_as = {
@@ -1787,7 +1787,7 @@ LIDAf.8 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 62
+			value = 67
 		}
 		trigger_event = LIDAs.2
 	}
@@ -1940,14 +1940,14 @@ LIDAf.9 = {
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 63
+					value = 68
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 64
+					value = 69
 				}
 			}
 		}
@@ -1956,35 +1956,35 @@ LIDAf.9 = {
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 63
+						scope:first_transition_0 = 68
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 63
+					value = 68
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 64
+						scope:first_transition_0 = 69
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 64
+					value = 69
 				}
 			}
 		}
 	}
 	option = {
-		# 63: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.HANDJOB_TEASE
-		name = LIDAoption.63
+		# 68: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.68
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 63
-				scope:first_transition_1 = 63
+				scope:first_transition_0 = 68
+				scope:first_transition_1 = 68
 			}
 		}
 		save_scope_value_as = {
@@ -1993,17 +1993,17 @@ LIDAf.9 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 63
+			value = 68
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 64: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.ASS_TEASE
-		name = LIDAoption.64
+		# 69: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.ASS_TEASE
+		name = LIDAoption.69
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 64
-				scope:first_transition_1 = 64
+				scope:first_transition_0 = 69
+				scope:first_transition_1 = 69
 			}
 		}
 		save_scope_value_as = {
@@ -2012,7 +2012,7 @@ LIDAf.9 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 64
+			value = 69
 		}
 		trigger_event = LIDAs.2
 	}
@@ -2165,14 +2165,14 @@ LIDAf.10 = {
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 65
+					value = 70
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 66
+					value = 71
 				}
 			}
 		}
@@ -2181,35 +2181,35 @@ LIDAf.10 = {
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 65
+						scope:first_transition_0 = 70
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 65
+					value = 70
 				}
 			}
 			# ASS_TEASE
 			10 = {
 				trigger = {
 					NOT = {
-						scope:first_transition_0 = 66
+						scope:first_transition_0 = 71
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 66
+					value = 71
 				}
 			}
 		}
 	}
 	option = {
-		# 65: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.HANDJOB_TEASE
-		name = LIDAoption.65
+		# 70: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.70
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 65
-				scope:first_transition_1 = 65
+				scope:first_transition_0 = 70
+				scope:first_transition_1 = 70
 			}
 		}
 		save_scope_value_as = {
@@ -2218,17 +2218,17 @@ LIDAf.10 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 65
+			value = 70
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 66: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.ASS_TEASE
-		name = LIDAoption.66
+		# 71: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.71
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 66
-				scope:first_transition_1 = 66
+				scope:first_transition_0 = 71
+				scope:first_transition_1 = 71
 			}
 		}
 		save_scope_value_as = {
@@ -2237,7 +2237,7 @@ LIDAf.10 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 66
+			value = 71
 		}
 		trigger_event = LIDAs.2
 	}

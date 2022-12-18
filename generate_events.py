@@ -31,6 +31,7 @@ class EventsSex(enum.Enum):
     DEEPTHROAT = 7
     HOTDOG = 8
     STANDING_FINGERED_FROM_BEHIND = 9
+    ASS_RUB = 10
 
 
 class EventsCum(enum.Enum):
@@ -1057,15 +1058,16 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=0, stam_cost_2=1,
                root_become_more_dom_chance=5,
-               desc=f"""With a knowing smirk, you size {THEM} up and put both your hands on their chest.
-                    Leveraging your weight, you push and trap him against a wall. You slide your knee up his leg 
-                    and play with his bulge. 
-                    \\n\\n
-                    "Is that a dagger in your pocket, or are you glad to see me?"
-                    \\n\\n
-                    Tracing your fingers against thin fabric, you work your way up above his trouser before 
-                    pulling down to free his member. It twitches at the brisk air and the sharp contrast in 
-                    sensation against your warm hands.""",
+               desc=f"""
+               With a knowing smirk, you size {THEM} up and put both your hands on their chest.
+               Leveraging your weight, you push and trap him against a wall. You slide your knee up his leg 
+               and play with his bulge. 
+               \\n\\n
+               "Is that a dagger in your pocket, or are you glad to see me?"
+               \\n\\n
+               Tracing your fingers against thin fabric, you work your way up above his trouser before 
+               pulling down to free his member. It twitches at the brisk air and the sharp contrast in 
+               sensation against your warm hands.""",
                options=(
                    Option(EventsSex.HANDJOB, OptionCategory.DOM,
                           "Jerk him off",
@@ -1081,7 +1083,9 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.HANDJOB, "Handjob",
                stam_cost_1=0, stam_cost_2=1,
                root_become_more_dom_chance=5,
-               desc=f"""handjob desc""",
+               desc=f"""
+               {THEM}'s eyes are closed and you smirk at your total control of his pleasure.
+               You experiment with your strokes, and delight at the immediate feedback on his face.""",
                options=(
                    Option(EventsSex.HANDJOB, OptionCategory.DOM,
                           "Continue jerking him off",
@@ -1100,7 +1104,9 @@ def define_sex_events(es: EventMap):
                )))
     es.add(Sex(EventsSex.BLOWJOB_DOM, "Dom Blowjob",
                stam_cost_1=0.5, stam_cost_2=2,
-               desc=f"""dom blowjob desc""",
+               desc=f"""
+               You tease his shaft with your tongue, leaving him yearning for your mouth's full commitment.
+               In this position of power and control over his pleasure, you deny him any movement with his hands.""",
                options=(
                    Option(EventsSex.HANDJOB, OptionCategory.DOM,
                           "Deny him your mouth, replacing it with your hands",
@@ -1143,7 +1149,9 @@ def define_sex_events(es: EventMap):
                stam_cost_1=1.0, stam_cost_2=1.5,
                root_become_more_sub_chance=5,
                desc=f"""
-               sub blowjob desc""",
+               With your tongue out, your mouth receives {THEM}'s rhythmic thrusts. His hands behind
+               your head prevent you from instinctively pulling away, making you feel self conscious about
+               being kept captive in a compromising position.""",
                options=(
                    Option(EventsSex.BLOWJOB_DOM, OptionCategory.DOM,
                           "Take back control and be the active one giving the blowjob",
@@ -1174,7 +1182,10 @@ def define_sex_events(es: EventMap):
                stam_cost_1=1.0, stam_cost_2=2.0,
                root_become_more_sub_chance=10,
                desc=f"""
-               deepthroat desc""",
+               Your eyes tear up as he thrusts deeply and relentlessly. The degrading way in which he
+               gives not care about your well-being or pleasure leaves a deep impression on you.
+               In a dark part of your mind, though you may not recognize, you enjoy being used like
+               a cheap toy.""",
                options=(
                    Option(EventsSex.BLOWJOB_SUB, OptionCategory.DOM,
                           "Take some control back",
@@ -1194,11 +1205,50 @@ def define_sex_events(es: EventMap):
                           "He cums in your mouth"),
                )))
     es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
-               stam_cost_1=0.5, stam_cost_2=1.0,
+               stam_cost_1=0.25, stam_cost_2=0.5,
                root_become_more_dom_chance=5,
-               desc=f"""ass tease desc""",
+               desc=f"""
+               Looking into {THEM}'s leering eyes, you can see his desire to have you.
+               You may not let them have their way with you, but for now you play along.
+               Closing in, you lean close to his ear and promise, "This will be a day you'll remember."
+               
+               Simultaneously, you reach down and loosen his trousers. His member springs to attention,
+               clearly incensed from your womanly wiles and seductive manner. In reciprocation, he pulls
+               up your dress, and you turn around, teasingly shake your shapely behind and giving his eyes
+               a treat. You continue shaking while backing up until his cock is gripped by your cheeks.
+               """,
                options=(
-                   Option(EventsSex.ASS_TEASE, OptionCategory.DOM,
+                   Option(EventsSex.ASS_RUB, OptionCategory.DOM,
+                          "Continue teasing him with your ass",
+                          transition_text=f"""
+                          You continue to rub his rod in between your buns. You can feel a coolness
+                          from {THEM}'s pre, slicking up your back. The contrast with the rhythmic thrusts from his 
+                          hot member makes this an interesting experience.""",
+                          failed_transition_text="You have better uses for that hard cock than just teasing it"),
+                   Option(EventsSex.HANDJOB, OptionCategory.DOM,
+                          "Wrap your fingers around his member and start jerking",
+                          transition_text=f"""
+                          Feeling a change of pace, you switch to using your hand to get him off.""",
+                          failed_transition_text=f"""
+                          He recognizes what you are trying to do and twists his body to avoid having his member
+                          fully trapped within your fingers."""),
+                   Option(EventsSex.HOTDOG, OptionCategory.SUB,
+                          "Relax and let him do the thrusting along your crack",
+                          transition_text=f"""
+                          {THEM} wastes no time after you slow down to pick up the pace, his rod now doing the
+                          thrusting along your crack."""),
+                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.CUM,
+                          "Have him coat your ass with his seed")
+               )))
+    es.add(Sex(EventsSex.ASS_RUB, "Ass Rub",
+               stam_cost_1=0.25, stam_cost_2=0.5,
+               root_become_more_dom_chance=5,
+               desc=f"""
+               Despite not being able to see him standing behind you, 
+               you feel a sense of control as you rub his cock and control his pleasure with your ass.
+               """,
+               options=(
+                   Option(EventsSex.ASS_RUB, OptionCategory.DOM,
                           "Continue teasing him with your ass",
                           transition_text=f"""
                           You continue to rub his rod in between your buns. You can feel a coolness
@@ -1221,11 +1271,23 @@ def define_sex_events(es: EventMap):
                           "Have him coat your ass with his seed")
                )))
     es.add(Sex(EventsSex.HOTDOG, "Get Hotdogged",
-               stam_cost_1=0.5, stam_cost_2=1.0,
-               desc=f"""get hotdogged from behind desc""",
+               stam_cost_1=0.25, stam_cost_2=0.5,
+               desc=f"""
+               You lay back and relax as his cock repeatedly parts your cheeks. He holds your arms
+               to keep you from sliding away during his thrusts, which you allow.
+               """,
                options=(
+                   Option(EventsSex.ASS_RUB, OptionCategory.DOM,
+                          "Resume active rubbing to take back some control",
+                          transition_text=f"""
+                          Having rested a bit by letting him do the thrusting, you restart your own
+                          bounce to better control his pleasure.""",
+                          failed_transition_text=f"""
+                          Having tasted a bit of control, he has no intention of relenting and giving it back to you.
+                          """),
                    Option(EventsSex.HOTDOG, OptionCategory.DOM,
                           "Continue to get him off with your ass",
+                          dom_success_adjustment=10,
                           transition_text=f"""
                           You enjoy the sensation of controlling his pleasure with just your butt, without having
                           to resort to any penetration.""",
@@ -1234,6 +1296,7 @@ def define_sex_events(es: EventMap):
                           would feel like to him thrust inside you."""),
                    Option(EventsSex.BLOWJOB_DOM, OptionCategory.DOM,
                           "Switch to using your mouth",
+                          dom_success_adjustment=10,
                           transition_text=f"""
                           His vigorous thrusts invade your mind and you can't help but wonder what it would feel like
                           inside of you. You satisfying this curiosity by offering your mouth.""",
@@ -1258,7 +1321,10 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.STANDING_FINGERED_FROM_BEHIND, "Fingered from Behind",
                stam_cost_1=1, stam_cost_2=0,
                root_become_more_sub_chance=5,
-               desc=f"""get fingered from behind desc""",
+               desc=f"""
+               His finger #sub squelches against your wet folds#! as he extracts juices from your lower lips while
+               extracting moans from your upper lips. Your head leans back and he occasionally takes the liberty
+               of entwining his tongue with yours.""",
                options=(
                    Option(EventsSex.HOTDOG, OptionCategory.DOM,
                           "Pull out to recover from his thrusting",
@@ -1291,7 +1357,13 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.STANDING_FUCKED_FROM_BEHIND, "Standing Fucked from Behind",
                stam_cost_1=1.5, stam_cost_2=1,
                root_become_more_sub_chance=10,
-               desc=f"""fucked from behind desc""",
+               desc=f"""
+               Sometimes bending you over and sometimes pulling your hair to keep you upright, 
+               you're at the mercy of {THEM}. His vigorous thrusts make you knees weak and you find it
+               hard to stay on your feet.
+               \\n\\n
+               "You're my bitch now," he says, punctuated with a resounding spank on your ass.
+               """,
                options=(
                    Option(EventsSex.BLOWJOB_DOM, OptionCategory.DOM,
                           "Pleasure him with your mouth instead",

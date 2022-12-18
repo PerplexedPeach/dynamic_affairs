@@ -173,7 +173,7 @@ LIDAc.1 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.39
+		name = LIDAoption.44
 	}
 }
 LIDAc.5 = {
@@ -310,7 +310,7 @@ LIDAc.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10020
 				}
-				# 20: EventsSex.ASS_TEASE -> EventsSex.ASS_TEASE failed
+				# 20: EventsSex.ASS_TEASE -> EventsSex.ASS_RUB failed
 				# You have better uses for that hard cock than just teasing it\n
 				desc = sex_transition_10020
 			}
@@ -328,8 +328,8 @@ LIDAc.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10024
 				}
-				# 24: EventsSex.HOTDOG -> EventsSex.HOTDOG failed
-				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
+				# 24: EventsSex.ASS_RUB -> EventsSex.ASS_RUB failed
+				# You have better uses for that hard cock than just teasing it\n
 				desc = sex_transition_10024
 			}
 			triggered_desc = {
@@ -337,17 +337,26 @@ LIDAc.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10025
 				}
-				# 25: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM failed
-				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
+				# 25: EventsSex.ASS_RUB -> EventsSex.HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
 				desc = sex_transition_10025
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10028
+				}
+				# 28: EventsSex.HOTDOG -> EventsSex.ASS_RUB failed
+				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
+				desc = sex_transition_10028
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10029
 				}
-				# 29: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG failed
-				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# 29: EventsSex.HOTDOG -> EventsSex.HOTDOG failed
+				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
 				desc = sex_transition_10029
 			}
 			triggered_desc = {
@@ -355,9 +364,27 @@ LIDAc.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10030
 				}
-				# 30: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# 30: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM failed
+				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
 				desc = sex_transition_10030
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10034
+				}
+				# 34: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG failed
+				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_10034
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10035
+				}
+				# 35: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_10035
 			}
 		}
 		triggered_desc = {
@@ -381,7 +408,7 @@ LIDAc.5 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.40
+		name = LIDAoption.45
 	}
 }
 LIDAc.3 = {
@@ -575,7 +602,7 @@ LIDAc.3 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.41
+		name = LIDAoption.46
 	}
 }
 LIDAc.2 = {
@@ -760,7 +787,7 @@ LIDAc.2 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.42
+		name = LIDAoption.47
 	}
 }
 LIDAc.6 = {
@@ -945,7 +972,7 @@ LIDAc.6 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.43
+		name = LIDAoption.48
 	}
 }
 LIDAc.4 = {
@@ -1130,7 +1157,7 @@ LIDAc.4 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.44
+		name = LIDAoption.49
 	}
 }
 LIDAc.7 = {
@@ -1265,20 +1292,20 @@ LIDAc.7 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10034
+					scope:sex_transition = 10039
 				}
-				# 34: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# 39: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
 				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
-				desc = sex_transition_10034
+				desc = sex_transition_10039
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10035
+					scope:sex_transition = 10040
 				}
-				# 35: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
+				# 40: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
 				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
-				desc = sex_transition_10035
+				desc = sex_transition_10040
 			}
 		}
 		triggered_desc = {
@@ -1305,7 +1332,7 @@ LIDAc.7 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.45
+		name = LIDAoption.50
 	}
 }
 LIDAc.8 = {
@@ -1440,20 +1467,20 @@ LIDAc.8 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10034
+					scope:sex_transition = 10039
 				}
-				# 34: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# 39: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
 				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
-				desc = sex_transition_10034
+				desc = sex_transition_10039
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10035
+					scope:sex_transition = 10040
 				}
-				# 35: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
+				# 40: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
 				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
-				desc = sex_transition_10035
+				desc = sex_transition_10040
 			}
 		}
 		triggered_desc = {
@@ -1480,6 +1507,6 @@ LIDAc.8 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.46
+		name = LIDAoption.51
 	}
 }
