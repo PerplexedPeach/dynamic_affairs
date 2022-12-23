@@ -990,75 +990,94 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
         # f.write("concentrate=true;\n")
         f.write("compound=true;\n")
 
-        source_sex_events = get_source_sex_events(events)
-        cum_events = []
-        regular_sex_events = []
-        first_events = []
-        for event in events.all():
-            if event in source_sex_events:
+        # organize events into gender pairings
+        pairings = [(FEMALE, MALE), (MALE, FEMALE), (FEMALE, FEMALE), (MALE, MALE)]
+        for pairing in pairings:
+            these_events = EventMap()
+            for event in events.all():
+                if event.root_gender == pairing[0] and event.partner_gender == pairing[1]:
+                    these_events.add(event)
+
+            if len(these_events.events) == 0:
                 continue
-            if isinstance(event.id, EventsCum):
-                cum_events.append(event)
-            elif isinstance(event.id, EventsFirst):
-                first_events.append(event)
-            else:
-                regular_sex_events.append(event)
-        events_with_options = source_sex_events + regular_sex_events
 
-        # regular sex events
-        for event in regular_sex_events:
-            f.write(event.id.name)
-            f.write(get_event_attr(event))
-            f.write(";\n")
+            f.write(
+                f"subgraph cluster_{pairing[0]}{pairing[1]} "
+                f"{{\n label=\"{pairing[0].upper()}/{pairing[1].upper()} Events\";\n")
+            # f.write("style=filled;\n fillcolor=\"#f2f0ae\";\n")
 
-        for event in events_with_options:
-            for option in event.options:
-                # terminal option
-                if option.next_id is None:
+            source_sex_events = get_source_sex_events(events)
+            cum_events = []
+            regular_sex_events = []
+            first_events = []
+            for event in events.all():
+                if event in source_sex_events:
                     continue
-                f.write(f"{event.id.name} -> {option.next_id.name}")
-                attr = []
-                if option.category == OptionCategory.DOM:
-                    attr.append("color=red")
-                elif option.category == OptionCategory.SUB:
-                    attr.append("color=blue")
+                if isinstance(event.id, EventsCum):
+                    cum_events.append(event)
+                elif isinstance(event.id, EventsFirst):
+                    first_events.append(event)
+                else:
+                    regular_sex_events.append(event)
+            events_with_options = source_sex_events + regular_sex_events
 
-                attr.append(f"penwidth={option.weight / 5}")
-
-                if len(attr) > 0:
-                    attr = "[" + ",".join(attr) + "]"
-                    f.write(attr)
+            # regular sex events
+            for event in regular_sex_events:
+                f.write(event.id.name)
+                f.write(get_event_attr(event))
                 f.write(";\n")
 
-        # sex source events (source nodes)
-        f.write("subgraph cluster_sex_source {\n label=\"Source\";\n rank=same;\n")
-        # invisible node for others to connect to the cluster as a whole
-        for i, event in enumerate(source_sex_events):
-            f.write(event.id.name)
-            f.write(get_event_attr(event))
-            f.write(";\n")
-        f.write("}\n")
+            # sex source events (source nodes)
+            f.write("subgraph cluster_sex_source {\n label=\"Source\";\n rank=same;\n")
+            # invisible node for others to connect to the cluster as a whole
+            for i, event in enumerate(source_sex_events):
+                f.write(event.id.name)
+                f.write(get_event_attr(event))
+                f.write(";\n")
+            f.write("}\n")
 
-        f.write("subgraph cluster_meeting {\n label=\"Start Meeting Events\";\n rank=source;\n")
-        f.write("style=filled;\n fillcolor=\"#A5FFC7\";\n")
-        for i, event in enumerate(first_events):
-            f.write(event.id.name)
-            f.write(get_event_attr(event))
-            f.write(";\n")
-            # create visual connection between the start meeting events and the source events
-            if i == len(first_events) // 2:
-                other = source_sex_events[len(source_sex_events) // 2]
-                f.write(f"{event.id.name} -> {other.id.name} [ltail=cluster_meeting,lhead=cluster_sex_source];\n")
-        f.write("}\n")
+            f.write("subgraph cluster_meeting {\n label=\"Start Meeting Events\";\n rank=source;\n")
+            f.write("style=filled;\n fillcolor=\"#A5FFC7\";\n")
+            for i, event in enumerate(first_events):
+                f.write(event.id.name)
+                f.write(get_event_attr(event))
+                f.write(";\n")
+                # create visual connection between the start meeting events and the source events
+                if i == len(first_events) // 2:
+                    other = source_sex_events[len(source_sex_events) // 2]
+                    f.write(f"{event.id.name} -> {other.id.name} [ltail=cluster_meeting,lhead=cluster_sex_source];\n")
+            f.write("}\n")
 
-        # cum events (sink nodes)
-        f.write("subgraph cluster_cum {\n label=\"Terminal Events\";\n rank=sink;\n")
-        f.write("style=filled;\n fillcolor=\"#f2f0ae\";\n")
-        for event in cum_events:
-            f.write(event.id.name)
-            f.write(get_event_attr(event, rank="sink"))
-            f.write(";\n")
-        f.write("}\n")
+            # cum events (sink nodes)
+            f.write("subgraph cluster_cum {\n label=\"Terminal Events\";\n rank=sink;\n")
+            f.write("style=filled;\n fillcolor=\"#f2f0ae\";\n")
+            for event in cum_events:
+                f.write(event.id.name)
+                f.write(get_event_attr(event, rank="sink"))
+                f.write(";\n")
+            f.write("}\n")
+
+            for event in events_with_options:
+                for option in event.options:
+                    # terminal option
+                    if option.next_id is None:
+                        continue
+                    f.write(f"{event.id.name} -> {option.next_id.name}")
+                    attr = []
+                    if option.category == OptionCategory.DOM:
+                        attr.append("color=red")
+                    elif option.category == OptionCategory.SUB:
+                        attr.append("color=blue")
+
+                    attr.append(f"penwidth={option.weight / 5}")
+
+                    if len(attr) > 0:
+                        attr = "[" + ",".join(attr) + "]"
+                        f.write(attr)
+                    f.write(";\n")
+
+            f.write("}\n")
+
         f.write("}\n")
 
     subprocess.run(["dot", "-Tpng", gv_filename, "-o", "vis.png"])
