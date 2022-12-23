@@ -166,6 +166,7 @@ OPTION_NAMESPACE = "LIDAoption"
 FIRST_NAMESPACE = "LIDAf"
 SEX_NAMESPACE = "LIDAs"
 CUM_NAMESPACE = "LIDAc"
+UNIMPLEMENTED_PAIRING_EVENT = "LIDA.3"
 
 L_ENGLISH = "l_english:"
 EVENTS_FILE_HEADER = "# GENERATED FILE - DO NOT MODIFY DIRECTLY"
@@ -841,6 +842,12 @@ def add_meeting_events(b: BlockRoot, es, id_initial, id_repeat):
         b.assign(TRIGGER_EVENT, es[id_initial].fullname)
 
 
+def inside_limit_check_gender(b: BlockRoot, root_gender, partner_gender):
+    b.assign(IS_FEMALE, yes_no(root_gender == FEMALE))
+    with Block(b, AFFAIRS_PARTNER):
+        b.assign(IS_FEMALE, yes_no(partner_gender == FEMALE))
+
+
 # TODO validate events (no disconnected events; have at least some in-edge or out-edge)
 def generate_strings(events, options):
     # generate localizations
@@ -868,25 +875,35 @@ def generate_strings(events, options):
         prisoner_list = "prisoner_list"
         with Block(b, EVERY_PRISONER):
             b.assign(ADD_TO_TEMPORARY_LIST, prisoner_list)
+        # F/M events
         with Block(b, IF):
             with Block(b, LIMIT):
                 b.assign(IS_SPOUSE_OF, AFFAIRS_PARTNER)
+                inside_limit_check_gender(b, FEMALE, MALE)
             add_meeting_events(b, es, EventsFirst.MEETING_WITH_SPOUSE_INITIAL, EventsFirst.MEETING_WITH_SPOUSE)
         with Block(b, ELSE_IF):
             with Block(b, LIMIT):
                 b.assign(IS_IN_LIST, prisoner_list)
+                inside_limit_check_gender(b, FEMALE, MALE)
             add_meeting_events(b, es, EventsFirst.MEETING_WITH_PRISONER_INITIAL, EventsFirst.MEETING_WITH_PRISONER)
         with Block(b, ELSE_IF):
             with Block(b, LIMIT):
                 b.assign(IS_VASSAL_OR_BELOW_OF, AFFAIRS_PARTNER)
+                inside_limit_check_gender(b, FEMALE, MALE)
             add_meeting_events(b, es, EventsFirst.MEETING_WITH_LIEGE_INITIAL, EventsFirst.MEETING_WITH_LIEGE)
         with Block(b, ELSE_IF):
             with Block(b, LIMIT):
                 b.assign(TARGET_IS_VASSAL_OR_BELOW, AFFAIRS_PARTNER)
+                inside_limit_check_gender(b, FEMALE, MALE)
             add_meeting_events(b, es, EventsFirst.MEETING_WITH_VASSAL_INITIAL, EventsFirst.MEETING_WITH_VASSAL)
-        with Block(b, ELSE):
+        with Block(b, ELSE_IF):
+            with Block(b, LIMIT):
+                inside_limit_check_gender(b, FEMALE, MALE)
             add_meeting_events(b, es, EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL,
                                EventsFirst.MEETING_WITH_ACQUAINTANCE)
+        # TODO M/F events and other pairings
+        with Block(b, ELSE):
+            b.assign(TRIGGER_EVENT, UNIMPLEMENTED_PAIRING_EVENT)
 
     effect_text = str(b)
     return event_text, effect_text, event_localization, option_localization

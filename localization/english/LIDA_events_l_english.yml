@@ -7,4 +7,7 @@ LIDA.50.b:0 "No, consider someone else"
 LIDA.50.b.tt:0 "Continue scanning the list"
 LIDA.50.c:0 "Nevermind, I bore of this"
 LIDA.50.c.tt:0 "You cannot search for another affair for a period of time after!"
- 
+# debug event
+LIDA.3.t: "Unimplemented Pairing"
+LIDA.3.desc: "This gender pairing does not have any implemented events. Please check the diagram for what pairings and events are currently implemented." 
+LIDA.3.a: "OK..."

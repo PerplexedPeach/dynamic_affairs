@@ -157,3 +157,22 @@ LIDA.50 = {
 # 		name = "ok"
 # 	}
 # }
+LIDA.3 = {
+	type = character_event
+	title = LIDA.3.t
+	theme = seduction
+	desc = {
+		desc = LIDA.3.desc
+	}
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = sadness
+	}
+	option = {
+		name = LIDA.3.a
+	}
+}

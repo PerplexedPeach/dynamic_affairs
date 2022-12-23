@@ -6,6 +6,10 @@ select_start_affairs_effect = {
 	if = {
 		limit = {
 			is_spouse_of = scope:affairs_partner
+			is_female = yes
+			scope:affairs_partner = {
+				is_female = no
+			}
 		}
 		if = {
 			limit = {
@@ -25,6 +29,10 @@ select_start_affairs_effect = {
 	else_if = {
 		limit = {
 			is_in_list = prisoner_list
+			is_female = yes
+			scope:affairs_partner = {
+				is_female = no
+			}
 		}
 		if = {
 			limit = {
@@ -44,6 +52,10 @@ select_start_affairs_effect = {
 	else_if = {
 		limit = {
 			is_vassal_or_below_of = scope:affairs_partner
+			is_female = yes
+			scope:affairs_partner = {
+				is_female = no
+			}
 		}
 		if = {
 			limit = {
@@ -63,6 +75,10 @@ select_start_affairs_effect = {
 	else_if = {
 		limit = {
 			target_is_vassal_or_below = scope:affairs_partner
+			is_female = yes
+			scope:affairs_partner = {
+				is_female = no
+			}
 		}
 		if = {
 			limit = {
@@ -79,7 +95,13 @@ select_start_affairs_effect = {
 			trigger_event = LIDAf.4
 		}
 	}
-	else = {
+	else_if = {
+		limit = {
+			is_female = yes
+			scope:affairs_partner = {
+				is_female = no
+			}
+		}
 		if = {
 			limit = {
 				reverse_has_opinion_modifier = {
@@ -94,5 +116,8 @@ select_start_affairs_effect = {
 			# MEETING_WITH_ACQUAINTANCE_INITIAL
 			trigger_event = LIDAf.10
 		}
+	}
+	else = {
+		trigger_event = LIDA.3
 	}
 }
