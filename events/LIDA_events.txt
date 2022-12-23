@@ -76,32 +76,6 @@ LIDA.50 = {
 			}
 			save_scope_as = affairs_partner
 		}
-		# TODO remove after
-		debug_log = "affairs all in list"
-		every_in_list = {
-			list = affairs_pool
-			debug_log_scopes = no
-			if = {
-				limit = {
-					has_opinion_modifier = {
-						target = root
-						modifier = dominant_opinion
-						value >= 2
-					}
-				}
-				debug_log = "you dom them >= 2"
-			}
-			if = {
-				limit = {
-					has_opinion_modifier = {
-						target = root
-						modifier = dominant_opinion
-						value <= -2
-					}
-				}
-				debug_log = "they dom you >= 2"
-			}
-		}
 	}
 	option = {
 		# engage with the selected character

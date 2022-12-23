@@ -177,6 +177,8 @@ ME_FULL_REGNAL = "[GetFullNameRegnal]"
 dom_fail_offset = 10000
 base_event_weight = 5
 max_options_per_type = 2
+FEMALE = "f"
+MALE = "m"
 
 
 def yes_no(boolean: bool):
@@ -233,7 +235,8 @@ class Event(BlockRoot):
 
     def __init__(self, eid: EventId, title, desc="placeholder event desc", theme="seduction",
                  animation_left="flirtation", animation_right="flirtation_left", options=(),
-                 root_female=True,
+                 root_gender=FEMALE,
+                 partner_gender=MALE,
                  # text for if the root cums; None indicates the default root cum text will be used
                  root_cum_text=None,
                  # custom generation functions, these take the event as teh first argument and call add_line
@@ -270,7 +273,8 @@ class Event(BlockRoot):
         self.custom_localization = None
         self.custom_immediate_effect = custom_immediate_effect
 
-        self.root_female = root_female
+        self.root_gender = root_gender
+        self.partner_gender = partner_gender
         super(Event, self).__init__()
 
     def __repr__(self):
@@ -371,7 +375,7 @@ class Event(BlockRoot):
                 self.assign(EVENT_BACKGROUND, background)
 
     def generate_root_cum_desc(self):
-        prefix = "f" if self.root_female else "rm"
+        prefix = self.root_gender
         with Block(self, TRIGGERED_DESC):
             with Block(self, TRIGGER):
                 self.assign(f"{SCOPE}:{ROOT_CUM}", YES)
@@ -600,11 +604,8 @@ class Sex(Event):
 
         # description of each partners' stamina
         stamina_thresholds = {2: "very_low", 3: "low", 4: "med"}
-        first_prefix = "f"
-        second_prefix = "m"
-        if not self.root_female:
-            first_prefix = "rm"
-            second_prefix = "rf"
+        first_prefix = self.root_gender
+        second_prefix = f"p{self.partner_gender}"
 
         for prefix, value_to_check in [(first_prefix, ROOT_STAMINA), (second_prefix, PARTNER_STAMINA)]:
             with Block(self, FIRST_VALID):

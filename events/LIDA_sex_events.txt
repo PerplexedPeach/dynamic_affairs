@@ -160,21 +160,21 @@ LIDAs.1 = {
 				trigger = {
 					scope:partner_stamina < 2
 				}
-				desc = m_very_low_stam
+				desc = pm_very_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 3
 				}
-				desc = m_low_stam
+				desc = pm_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 4
 				}
-				desc = m_med_stam
+				desc = pm_med_stam
 			}
-			desc = m_high_stam
+			desc = pm_high_stam
 		}
 		desc = LIDAs.1.desc
 	}
@@ -647,21 +647,21 @@ LIDAs.3 = {
 				trigger = {
 					scope:partner_stamina < 2
 				}
-				desc = m_very_low_stam
+				desc = pm_very_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 3
 				}
-				desc = m_low_stam
+				desc = pm_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 4
 				}
-				desc = m_med_stam
+				desc = pm_med_stam
 			}
-			desc = m_high_stam
+			desc = pm_high_stam
 		}
 		desc = LIDAs.3.desc
 	}
@@ -1259,21 +1259,21 @@ LIDAs.4 = {
 				trigger = {
 					scope:partner_stamina < 2
 				}
-				desc = m_very_low_stam
+				desc = pm_very_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 3
 				}
-				desc = m_low_stam
+				desc = pm_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 4
 				}
-				desc = m_med_stam
+				desc = pm_med_stam
 			}
-			desc = m_high_stam
+			desc = pm_high_stam
 		}
 		desc = LIDAs.4.desc
 	}
@@ -1955,21 +1955,21 @@ LIDAs.6 = {
 				trigger = {
 					scope:partner_stamina < 2
 				}
-				desc = m_very_low_stam
+				desc = pm_very_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 3
 				}
-				desc = m_low_stam
+				desc = pm_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 4
 				}
-				desc = m_med_stam
+				desc = pm_med_stam
 			}
-			desc = m_high_stam
+			desc = pm_high_stam
 		}
 		desc = LIDAs.6.desc
 	}
@@ -2510,21 +2510,21 @@ LIDAs.7 = {
 				trigger = {
 					scope:partner_stamina < 2
 				}
-				desc = m_very_low_stam
+				desc = pm_very_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 3
 				}
-				desc = m_low_stam
+				desc = pm_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 4
 				}
-				desc = m_med_stam
+				desc = pm_med_stam
 			}
-			desc = m_high_stam
+			desc = pm_high_stam
 		}
 		desc = LIDAs.7.desc
 	}
@@ -2879,21 +2879,21 @@ LIDAs.2 = {
 				trigger = {
 					scope:partner_stamina < 2
 				}
-				desc = m_very_low_stam
+				desc = pm_very_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 3
 				}
-				desc = m_low_stam
+				desc = pm_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 4
 				}
-				desc = m_med_stam
+				desc = pm_med_stam
 			}
-			desc = m_high_stam
+			desc = pm_high_stam
 		}
 		desc = LIDAs.2.desc
 	}
@@ -3461,21 +3461,21 @@ LIDAs.10 = {
 				trigger = {
 					scope:partner_stamina < 2
 				}
-				desc = m_very_low_stam
+				desc = pm_very_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 3
 				}
-				desc = m_low_stam
+				desc = pm_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 4
 				}
-				desc = m_med_stam
+				desc = pm_med_stam
 			}
-			desc = m_high_stam
+			desc = pm_high_stam
 		}
 		desc = LIDAs.10.desc
 	}
@@ -4080,21 +4080,21 @@ LIDAs.8 = {
 				trigger = {
 					scope:partner_stamina < 2
 				}
-				desc = m_very_low_stam
+				desc = pm_very_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 3
 				}
-				desc = m_low_stam
+				desc = pm_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 4
 				}
-				desc = m_med_stam
+				desc = pm_med_stam
 			}
-			desc = m_high_stam
+			desc = pm_high_stam
 		}
 		desc = LIDAs.8.desc
 	}
@@ -4784,21 +4784,21 @@ LIDAs.9 = {
 				trigger = {
 					scope:partner_stamina < 2
 				}
-				desc = m_very_low_stam
+				desc = pm_very_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 3
 				}
-				desc = m_low_stam
+				desc = pm_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 4
 				}
-				desc = m_med_stam
+				desc = pm_med_stam
 			}
-			desc = m_high_stam
+			desc = pm_high_stam
 		}
 		desc = LIDAs.9.desc
 	}
@@ -5443,21 +5443,21 @@ LIDAs.5 = {
 				trigger = {
 					scope:partner_stamina < 2
 				}
-				desc = m_very_low_stam
+				desc = pm_very_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 3
 				}
-				desc = m_low_stam
+				desc = pm_low_stam
 			}
 			triggered_desc = {
 				trigger = {
 					scope:partner_stamina < 4
 				}
-				desc = m_med_stam
+				desc = pm_med_stam
 			}
-			desc = m_high_stam
+			desc = pm_high_stam
 		}
 		desc = LIDAs.5.desc
 	}
