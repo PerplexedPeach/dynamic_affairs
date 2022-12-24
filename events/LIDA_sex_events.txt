@@ -121,7 +121,7 @@ LIDAs.1 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = idle
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -133,7 +133,7 @@ LIDAs.1 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = personality_content
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -1017,7 +1017,7 @@ LIDAs.4 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = throne_room_ruler_3
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -1844,7 +1844,7 @@ LIDAs.6 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = throne_room_ruler_3
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -2493,7 +2493,7 @@ LIDAs.7 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = throne_room_kneel_2
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -4844,7 +4844,7 @@ LIDAs.9 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = schadenfreude
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -5474,7 +5474,7 @@ LIDAs.5 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = throne_room_bow_3
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -5486,7 +5486,7 @@ LIDAs.5 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = schadenfreude
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked

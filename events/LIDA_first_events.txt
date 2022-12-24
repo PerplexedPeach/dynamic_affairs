@@ -1326,7 +1326,7 @@ LIDAf.6 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = throne_room_bow_1
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -1579,7 +1579,7 @@ LIDAf.7 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = prisonhouse
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -1820,7 +1820,7 @@ LIDAf.8 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = prisonhouse
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked

@@ -121,7 +121,7 @@ LIDAc.1 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = boredom
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -133,7 +133,7 @@ LIDAc.1 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = shame
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -564,7 +564,7 @@ LIDAc.3 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = shame
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -576,7 +576,7 @@ LIDAc.3 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = scheme
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -774,7 +774,7 @@ LIDAc.2 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = disgust
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -786,7 +786,7 @@ LIDAc.2 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = schadenfreude
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -975,7 +975,7 @@ LIDAc.6 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = shame
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -987,7 +987,7 @@ LIDAc.6 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = schadenfreude
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -1176,7 +1176,7 @@ LIDAc.4 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = dismissal
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -1188,7 +1188,7 @@ LIDAc.4 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = beg
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -1578,7 +1578,7 @@ LIDAc.8 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = worry
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -1590,7 +1590,7 @@ LIDAc.8 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = personality_bold
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked

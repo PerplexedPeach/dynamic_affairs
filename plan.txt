@@ -251,7 +251,6 @@ questions
 
 
 TODO
-- add clothing triggers to the events
 - add in triggered events that are alternatives to LIDA.50 for an affair (somewhere you're passive)
 	- vassal goes to a brothel but is instead inspired to sample you instead (everything has a price - they must have lots of money)
 - connect Carnalitas fetish system

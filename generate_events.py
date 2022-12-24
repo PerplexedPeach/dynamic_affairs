@@ -189,6 +189,30 @@ NO_CLOTHES = "no_clothes"
 ROOT_NAKED = "root_naked"
 PARTNER_NAKED = "partner_naked"
 
+# animation tags
+KNEEL_2 = "throne_room_kneel_2"
+KNEEL_RULER_3 = "throne_room_ruler_3"
+BOW = "throne_room_bow_1"
+BOW_3 = "throne_room_bow_3"
+PRISON_HOUSE = "prisonhouse"
+BEG = "beg"
+BOREDOM = "boredom"
+DISGUST = "disgust"
+DISMISSAL = "dismissal"
+ECSTASY = "ecstasy"
+LOVE = "love"
+SHAME = "shame"
+SHOCK = "shock"
+SCHEME = "scheme"
+SCHADENFREUDE = "schadenfreude"
+SADNESS = "sadness"
+WORRY = "worry"
+PERSONALITY_BOLD = "personality_bold"
+PERSONALITY_CONTENT = "personality_content"
+WRITER = "throne_room_writer"
+IDLE = "idle"
+FLIRTATION = "flirtation"
+FLIRTATION_LEFT = "flirtation_left"
 
 def yes_no(boolean: bool):
     return YES if boolean else NO
@@ -243,7 +267,7 @@ class Event(BlockRoot):
     """Vertices in a scene graph, each corresponding to a specific scene"""
 
     def __init__(self, eid: EventId, title, desc="placeholder event desc", theme="seduction",
-                 animation_left="flirtation", animation_right="flirtation_left", options=(),
+                 animation_left=FLIRTATION, animation_right=FLIRTATION_LEFT, options=(),
                  root_gender=FEMALE,
                  partner_gender=MALE,
                  # whether this event removes their clothes
@@ -1134,6 +1158,7 @@ def define_sex_events(es: EventMap):
                stam_cost_1=0, stam_cost_2=1,
                root_become_more_dom_chance=5,
                partner_removes_clothes=True,
+               animation_left=IDLE, animation_right=PERSONALITY_CONTENT,
                desc=f"""
                With a knowing smirk, you size {THEM} up and put both your hands on their chest.
                Leveraging your weight, you push and trap him against a wall. You slide your knee up his leg 
@@ -1182,6 +1207,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.BLOWJOB_DOM, "Dom Blowjob",
                stam_cost_1=0.5, stam_cost_2=2,
                partner_removes_clothes=True,
+               animation_left=KNEEL_RULER_3,
                desc=f"""
                You tease his shaft with your tongue, leaving him yearning for your mouth's full commitment.
                In this position of power and control over his pleasure, you deny him any movement with his hands.""",
@@ -1227,6 +1253,7 @@ def define_sex_events(es: EventMap):
                stam_cost_1=1.0, stam_cost_2=1.5,
                root_become_more_sub_chance=5,
                partner_removes_clothes=True,
+               animation_left=KNEEL_RULER_3,
                desc=f"""
                With your tongue out, your mouth receives {THEM}'s rhythmic thrusts. His hands behind
                your head prevent you from instinctively pulling away, making you feel self conscious about
@@ -1261,6 +1288,7 @@ def define_sex_events(es: EventMap):
                stam_cost_1=1.0, stam_cost_2=2.0,
                root_become_more_sub_chance=10,
                partner_removes_clothes=True,
+               animation_left=KNEEL_2,
                desc=f"""
                Your eyes tear up as he thrusts deeply and relentlessly. The degrading way in which he
                gives not care about your well-being or pleasure leaves a deep impression on you.
@@ -1405,6 +1433,7 @@ def define_sex_events(es: EventMap):
                stam_cost_1=1, stam_cost_2=0,
                root_become_more_sub_chance=5,
                root_removes_clothes=True,
+               animation_right=SCHADENFREUDE,
                desc=f"""
                His finger #sub squelches against your wet folds#! as he extracts juices from your lower lips while
                extracting moans from your upper lips. Your head leans back and he occasionally takes the liberty
@@ -1442,6 +1471,7 @@ def define_sex_events(es: EventMap):
                stam_cost_1=2, stam_cost_2=1.5,
                root_become_more_sub_chance=7,
                root_removes_clothes=True, partner_removes_clothes=True,
+               animation_left=BOW_3, animation_right=SCHADENFREUDE,
                desc=f"""
                Sometimes bending you over and sometimes #sub pulling your hair to keep you upright#!, 
                you're at the mercy of {THEM}. His vigorous thrusts make you knees weak and you find it
@@ -1486,6 +1516,7 @@ def define_cum_events(es: EventMap):
     es.add(Cum(EventsCum.HANDJOB_CUM_IN_HAND, "A Cumshot in Hand is Worth Two in the Bush",
                subdom_change=1, root_become_more_dom_chance=20,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean your hands on a nearby cloth"),
+               animation_left=BOREDOM, animation_right=SHAME,
                desc=f"""
                His back arches, thrusting forward into an imaginary womb, and spurts his load onto your open palm.
                \\n\\n
@@ -1505,6 +1536,7 @@ def define_cum_events(es: EventMap):
     # TODO add chance of acquiring fetishes
     es.add(Cum(EventsCum.BLOWJOB_CUM_ON_FACE, "Painting your Face",
                subdom_change=-2, root_become_more_sub_chance=15,
+               animation_left=SHAME, animation_right=SCHEME,
                terminal_option=Option(None, OptionCategory.OTHER, "Sample some stray globs of cum"),
                desc=f"""
                You look up and brace yourself for what's the come. When the first drop hits your face,
@@ -1520,6 +1552,7 @@ def define_cum_events(es: EventMap):
                ))
     es.add(Cum(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, "Satisfying your Sweet Tooth",
                subdom_change=-1, root_become_more_sub_chance=10,
+               animation_left=DISGUST, animation_right=SCHADENFREUDE,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe away any cum that might've escaped"),
                # TODO triggered text depending on cum fetish
                desc=f"""
@@ -1532,6 +1565,7 @@ def define_cum_events(es: EventMap):
                ))
     es.add(Cum(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, "Down the Gullet",
                subdom_change=-2, root_become_more_sub_chance=20,
+               animation_left=SHAME, animation_right=SCHADENFREUDE,
                terminal_option=Option(None, OptionCategory.OTHER, "Recover from having your throat used so roughly"),
                desc=f"""
                {THEM} holds your head in place while his last thrust goes deeper than before.
@@ -1547,6 +1581,7 @@ def define_cum_events(es: EventMap):
                ))
     es.add(Cum(EventsCum.BLOWJOB_RUINED_ORGASM, "A Firm Grasp on His Release",
                subdom_change=2, root_become_more_dom_chance=35,
+               animation_left=DISMISSAL, animation_right=BEG,
                terminal_option=Option(None, OptionCategory.OTHER, "Leave him yearning and frustrated"),
                desc=f"""
                {THEM} arches his back he's clearly about to to climax, but you interrupt by firmly grabbing his
@@ -1573,6 +1608,7 @@ def define_cum_events(es: EventMap):
                subdom_change=-3,
                root_become_more_sub_chance=20,
                preg_chance_1=1.0,
+               animation_left=WORRY, animation_right=PERSONALITY_BOLD,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe away the cum dripping down your thighs"),
                desc=f"""
                "Ugh," {THEM} grunts as he plunges to the hilt while pulling your head back by your hair,
@@ -1642,6 +1678,7 @@ def define_first_events(es: EventMap):
                  """))
     es.add(First(EventsFirst.MEETING_WITH_LIEGE_INITIAL, "An Intimate Discussion",
                  source_sex_events=source_sex_events, background="council_chamber",
+                 animation_left=BOW,
                  desc=f"""
                  After the council meeting, {THEM} dismisses you all. However, you take your time
                  leaving and soon you two are the only ones left in the chamber. "Is there something
@@ -1653,6 +1690,7 @@ def define_first_events(es: EventMap):
                  """))
     es.add(First(EventsFirst.MEETING_WITH_PRISONER, "Taste of Heaven in Hell",
                  source_sex_events=source_sex_events, background="dungeon",
+                 animation_right=PRISON_HOUSE,
                  desc=f"""
                  You descend to {THEM}'s cell without much ceremony.
                  \\n\\n
@@ -1666,6 +1704,7 @@ def define_first_events(es: EventMap):
                  Pushing such thoughts to the back of your mind, you approach him."""))
     es.add(First(EventsFirst.MEETING_WITH_PRISONER_INITIAL, "The Sweetest Torture",
                  source_sex_events=source_sex_events, background="dungeon",
+                 animation_right=PRISON_HOUSE,
                  desc=f"""
                  You descend down the stone stairs to your dungeon and muse that giving a prisoner
                  pleasure might be the greatest torture after you take it away. After all, ignore is bliss,
