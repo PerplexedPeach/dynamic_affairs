@@ -251,8 +251,14 @@ questions
 
 
 TODO
-- fill in the writing for some events
 - add clothing triggers to the events
-- connect Carnalitas fetish system
 - add in triggered events that are alternatives to LIDA.50 for an affair (somewhere you're passive)
 	- vassal goes to a brothel but is instead inspired to sample you instead (everything has a price - they must have lots of money)
+- connect Carnalitas fetish system
+- easy system for triggered description (e.g. based on subdom value)
+
+TODO long term
+- add sex skills
+	- blowjob proficiency trait (up to 3 stars)
+	- tie into partner stamina cost (can make them scripted values)
+- triggered submission events when your subdom relation with someone is sub enough

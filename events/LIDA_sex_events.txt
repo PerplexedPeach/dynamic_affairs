@@ -122,10 +122,26 @@ LIDAs.1 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -221,6 +237,10 @@ LIDAs.1 = {
 				chance = 5
 				become_more_sub_effect = yes
 			}
+		}
+		save_scope_value_as = {
+			name = partner_naked
+			value = yes
 		}
 		debug_log_scopes = yes
 	}
@@ -440,10 +460,26 @@ LIDAs.3 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -727,6 +763,10 @@ LIDAs.3 = {
 				become_more_sub_effect = yes
 			}
 		}
+		save_scope_value_as = {
+			name = partner_naked
+			value = yes
+		}
 		debug_log_scopes = yes
 	}
 	option = {
@@ -978,10 +1018,26 @@ LIDAs.4 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -1406,6 +1462,10 @@ LIDAs.4 = {
 				}
 			}
 		}
+		save_scope_value_as = {
+			name = partner_naked
+			value = yes
+		}
 		debug_log_scopes = yes
 	}
 	option = {
@@ -1785,10 +1845,26 @@ LIDAs.6 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -2092,6 +2168,10 @@ LIDAs.6 = {
 				chance = 5
 				become_more_dom_effect = yes
 			}
+		}
+		save_scope_value_as = {
+			name = partner_naked
+			value = yes
 		}
 		debug_log_scopes = yes
 	}
@@ -2414,10 +2494,26 @@ LIDAs.7 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -2589,6 +2685,10 @@ LIDAs.7 = {
 				chance = 10
 				become_more_dom_effect = yes
 			}
+		}
+		save_scope_value_as = {
+			name = partner_naked
+			value = yes
 		}
 		debug_log_scopes = yes
 	}
@@ -2841,10 +2941,26 @@ LIDAs.2 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -2987,6 +3103,14 @@ LIDAs.2 = {
 				chance = 5
 				become_more_sub_effect = yes
 			}
+		}
+		save_scope_value_as = {
+			name = root_naked
+			value = yes
+		}
+		save_scope_value_as = {
+			name = partner_naked
+			value = yes
 		}
 		debug_log_scopes = yes
 	}
@@ -3301,10 +3425,26 @@ LIDAs.10 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -3569,6 +3709,14 @@ LIDAs.10 = {
 				chance = 5
 				become_more_sub_effect = yes
 			}
+		}
+		save_scope_value_as = {
+			name = root_naked
+			value = yes
+		}
+		save_scope_value_as = {
+			name = partner_naked
+			value = yes
 		}
 		debug_log_scopes = yes
 	}
@@ -3883,10 +4031,26 @@ LIDAs.8 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -4226,6 +4390,14 @@ LIDAs.8 = {
 				name = cum_transition_1
 				value = -1
 			}
+		}
+		save_scope_value_as = {
+			name = root_naked
+			value = yes
+		}
+		save_scope_value_as = {
+			name = partner_naked
+			value = yes
 		}
 		debug_log_scopes = yes
 	}
@@ -4661,10 +4833,26 @@ LIDAs.9 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -4921,6 +5109,10 @@ LIDAs.9 = {
 				chance = 5
 				become_more_dom_effect = yes
 			}
+		}
+		save_scope_value_as = {
+			name = root_naked
+			value = yes
 		}
 		debug_log_scopes = yes
 	}
@@ -5283,10 +5475,26 @@ LIDAs.5 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -5580,6 +5788,14 @@ LIDAs.5 = {
 				chance = 7
 				become_more_dom_effect = yes
 			}
+		}
+		save_scope_value_as = {
+			name = root_naked
+			value = yes
+		}
+		save_scope_value_as = {
+			name = partner_naked
+			value = yes
 		}
 		debug_log_scopes = yes
 	}

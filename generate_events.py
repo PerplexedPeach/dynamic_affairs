@@ -173,13 +173,21 @@ EVENTS_FILE_HEADER = "# GENERATED FILE - DO NOT MODIFY DIRECTLY"
 
 # localization constants
 THEM = "[affairs_partner.GetFirstName]"
-ME_FULL_REGNAL = "[GetFullNameRegnal]"
+ME_FULL_REGNAL = "[ROOT.Char.GetFullNameRegnal]"
 
 dom_fail_offset = 10000
 base_event_weight = 5
 max_options_per_type = 2
 FEMALE = "f"
 MALE = "m"
+
+# Outfit tags
+OUTFIT_TAGS = "outfit_tags"
+TRIGGERED_OUTFIT = "triggered_outfit"
+NO_CLOTHES = "no_clothes"
+# outfit scope values
+ROOT_NAKED = "root_naked"
+PARTNER_NAKED = "partner_naked"
 
 
 def yes_no(boolean: bool):
@@ -238,6 +246,9 @@ class Event(BlockRoot):
                  animation_left="flirtation", animation_right="flirtation_left", options=(),
                  root_gender=FEMALE,
                  partner_gender=MALE,
+                 # whether this event removes their clothes
+                 root_removes_clothes=False,
+                 partner_removes_clothes=False,
                  # text for if the root cums; None indicates the default root cum text will be used
                  root_cum_text=None,
                  # custom generation functions, these take the event as teh first argument and call add_line
@@ -276,6 +287,9 @@ class Event(BlockRoot):
 
         self.root_gender = root_gender
         self.partner_gender = partner_gender
+
+        self.root_removes_clothes = root_removes_clothes
+        self.partner_removes_clothes = partner_removes_clothes
         super(Event, self).__init__()
 
     def __repr__(self):
@@ -290,9 +304,12 @@ class Event(BlockRoot):
             with Block(self, LEFT_PORTRAIT):
                 self.assign(CHARACTER, ROOT)
                 self.assign(ANIMATION, self.anim_l)
+                self.generate_root_outfit()
+
             with Block(self, RIGHT_PORTRAIT):
                 self.assign(CHARACTER, AFFAIRS_PARTNER)
                 self.assign(ANIMATION, self.anim_r)
+                self.generate_partner_outfit()
 
             with Block(self, DESC):
                 self.generate_desc()
@@ -302,6 +319,21 @@ class Event(BlockRoot):
             self.generate_options()
 
         return "\n".join(self._lines)
+
+    def generate_root_outfit(self):
+        with Block(self, TRIGGERED_OUTFIT):
+            with Block(self, TRIGGER):
+                self.assign(EXISTS, f"{SCOPE}:{ROOT_NAKED}")
+            # TODO add triggered outfits such as depending on traits / collars / piercings and so on
+            with Block(self, OUTFIT_TAGS):
+                self.add_line(NO_CLOTHES)
+
+    def generate_partner_outfit(self):
+        with Block(self, TRIGGERED_OUTFIT):
+            with Block(self, TRIGGER):
+                self.assign(EXISTS, f"{SCOPE}:{PARTNER_NAKED}")
+            with Block(self, OUTFIT_TAGS):
+                self.add_line(NO_CLOTHES)
 
     def generate_desc(self):
         self.assign(DESC, f"{self.fullname}.{DESC}")
@@ -324,6 +356,11 @@ class Event(BlockRoot):
                                            BECOME_MORE_DOM_EFFECT)
         self._generate_change_subdom_trait(self.root_become_more_dom_chance, BECOME_MORE_DOM_EFFECT,
                                            BECOME_MORE_SUB_EFFECT)
+
+        if self.root_removes_clothes:
+            self.save_scope_value_as(ROOT_NAKED, YES)
+        if self.partner_removes_clothes:
+            self.save_scope_value_as(PARTNER_NAKED, YES)
 
         if self.custom_immediate_effect is not None:
             self.custom_immediate_effect(self)
@@ -1096,6 +1133,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=0, stam_cost_2=1,
                root_become_more_dom_chance=5,
+               partner_removes_clothes=True,
                desc=f"""
                With a knowing smirk, you size {THEM} up and put both your hands on their chest.
                Leveraging your weight, you push and trap him against a wall. You slide your knee up his leg 
@@ -1121,6 +1159,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.HANDJOB, "Handjob",
                stam_cost_1=0, stam_cost_2=1,
                root_become_more_dom_chance=5,
+               partner_removes_clothes=True,
                desc=f"""
                {THEM}'s eyes are closed and you smirk at your total control of his pleasure.
                You experiment with your strokes, and delight at the immediate feedback on his face.""",
@@ -1142,6 +1181,7 @@ def define_sex_events(es: EventMap):
                )))
     es.add(Sex(EventsSex.BLOWJOB_DOM, "Dom Blowjob",
                stam_cost_1=0.5, stam_cost_2=2,
+               partner_removes_clothes=True,
                desc=f"""
                You tease his shaft with your tongue, leaving him yearning for your mouth's full commitment.
                In this position of power and control over his pleasure, you deny him any movement with his hands.""",
@@ -1186,6 +1226,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.BLOWJOB_SUB, "Sub Blowjob",
                stam_cost_1=1.0, stam_cost_2=1.5,
                root_become_more_sub_chance=5,
+               partner_removes_clothes=True,
                desc=f"""
                With your tongue out, your mouth receives {THEM}'s rhythmic thrusts. His hands behind
                your head prevent you from instinctively pulling away, making you feel self conscious about
@@ -1219,6 +1260,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.DEEPTHROAT, "Deepthroat",
                stam_cost_1=1.0, stam_cost_2=2.0,
                root_become_more_sub_chance=10,
+               partner_removes_clothes=True,
                desc=f"""
                Your eyes tear up as he thrusts deeply and relentlessly. The degrading way in which he
                gives not care about your well-being or pleasure leaves a deep impression on you.
@@ -1245,6 +1287,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
                stam_cost_1=0.5, stam_cost_2=0.75,
                root_become_more_dom_chance=5,
+               root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
                Looking into {THEM}'s leering eyes, you can see his desire to have you.
                You may not let them have their way with you, but for now you play along.
@@ -1281,6 +1324,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.ASS_RUB, "Ass Rub",
                stam_cost_1=0.5, stam_cost_2=0.75,
                root_become_more_dom_chance=5,
+               root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
                Despite not being able to see him standing behind you, 
                you feel a sense of control as you rub his cock and control his pleasure with your ass.
@@ -1310,6 +1354,7 @@ def define_sex_events(es: EventMap):
                )))
     es.add(Sex(EventsSex.HOTDOG, "Get Hotdogged",
                stam_cost_1=0.5, stam_cost_2=0.75,
+               root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
                You lay back and relax as his cock repeatedly parts your cheeks. He holds your arms
                to keep you from sliding away during his thrusts, which you allow.
@@ -1359,6 +1404,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.STANDING_FINGERED_FROM_BEHIND, "Fingered from Behind",
                stam_cost_1=1, stam_cost_2=0,
                root_become_more_sub_chance=5,
+               root_removes_clothes=True,
                desc=f"""
                His finger #sub squelches against your wet folds#! as he extracts juices from your lower lips while
                extracting moans from your upper lips. Your head leans back and he occasionally takes the liberty
@@ -1395,6 +1441,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.STANDING_FUCKED_FROM_BEHIND, "Standing Fucked from Behind",
                stam_cost_1=2, stam_cost_2=1.5,
                root_become_more_sub_chance=7,
+               root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
                Sometimes bending you over and sometimes #sub pulling your hair to keep you upright#!, 
                you're at the mercy of {THEM}. His vigorous thrusts make you knees weak and you find it

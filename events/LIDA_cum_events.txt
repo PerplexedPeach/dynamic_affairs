@@ -122,10 +122,26 @@ LIDAc.1 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -298,10 +314,26 @@ LIDAc.5 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -533,10 +565,26 @@ LIDAc.3 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -727,10 +775,26 @@ LIDAc.2 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -912,10 +976,26 @@ LIDAc.6 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -1097,10 +1177,26 @@ LIDAc.4 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -1282,10 +1378,26 @@ LIDAc.7 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
@@ -1467,10 +1579,26 @@ LIDAc.8 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	right_portrait = {
 		character = scope:affairs_partner
 		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
 	}
 	desc = {
 		first_valid = {
