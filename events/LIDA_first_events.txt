@@ -1,7 +1,7 @@
 ﻿# GENERATED FILE - DO NOT MODIFY DIRECTLY
 namespace = LIDAf
 LIDAf.1 = {
-	# Spicing it Up
+	# MEETING_WITH_SPOUSE: Spicing it Up
 	type = character_event
 	title = LIDAf.1.t
 	theme = seduction
@@ -242,7 +242,7 @@ LIDAf.1 = {
 	}
 }
 LIDAf.2 = {
-	# Flowers in Bloom
+	# MEETING_WITH_SPOUSE_INITIAL: Flowers in Bloom
 	type = character_event
 	title = LIDAf.2.t
 	theme = seduction
@@ -483,7 +483,7 @@ LIDAf.2 = {
 	}
 }
 LIDAf.3 = {
-	# Chains of Command
+	# MEETING_WITH_VASSAL: Chains of Command
 	type = character_event
 	title = LIDAf.3.t
 	theme = seduction
@@ -724,7 +724,7 @@ LIDAf.3 = {
 	}
 }
 LIDAf.4 = {
-	# Privileges of Power
+	# MEETING_WITH_VASSAL_INITIAL: Privileges of Power
 	type = character_event
 	title = LIDAf.4.t
 	theme = seduction
@@ -965,7 +965,7 @@ LIDAf.4 = {
 	}
 }
 LIDAf.5 = {
-	# Mead in my Room?
+	# MEETING_WITH_LIEGE: Mead in my Room?
 	type = character_event
 	title = LIDAf.5.t
 	theme = seduction
@@ -1206,7 +1206,7 @@ LIDAf.5 = {
 	}
 }
 LIDAf.6 = {
-	# An Intimate Discussion
+	# MEETING_WITH_LIEGE_INITIAL: An Intimate Discussion
 	type = character_event
 	title = LIDAf.6.t
 	theme = seduction
@@ -1447,7 +1447,7 @@ LIDAf.6 = {
 	}
 }
 LIDAf.7 = {
-	# Taste of Heaven in Hell
+	# MEETING_WITH_PRISONER: Taste of Heaven in Hell
 	type = character_event
 	title = LIDAf.7.t
 	theme = seduction
@@ -1688,7 +1688,7 @@ LIDAf.7 = {
 	}
 }
 LIDAf.8 = {
-	# The Sweetest Torture
+	# MEETING_WITH_PRISONER_INITIAL: The Sweetest Torture
 	type = character_event
 	title = LIDAf.8.t
 	theme = seduction
@@ -1929,7 +1929,7 @@ LIDAf.8 = {
 	}
 }
 LIDAf.9 = {
-	# Who Owns Who
+	# MEETING_WITH_ACQUAINTANCE: Who Owns Who
 	type = character_event
 	title = LIDAf.9.t
 	theme = seduction
@@ -2170,7 +2170,7 @@ LIDAf.9 = {
 	}
 }
 LIDAf.10 = {
-	# A Chance Encounter
+	# MEETING_WITH_ACQUAINTANCE_INITIAL: A Chance Encounter
 	type = character_event
 	title = LIDAf.10.t
 	theme = seduction

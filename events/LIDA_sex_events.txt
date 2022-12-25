@@ -1,7 +1,7 @@
 ﻿# GENERATED FILE - DO NOT MODIFY DIRECTLY
 namespace = LIDAs
 LIDAs.1 = {
-	# Handjob Tease
+	# HANDJOB_TEASE: Handjob Tease
 	type = character_event
 	title = LIDAs.1.t
 	theme = seduction
@@ -339,7 +339,7 @@ LIDAs.1 = {
 	}
 }
 LIDAs.3 = {
-	# Handjob
+	# HANDJOB: Handjob
 	type = character_event
 	title = LIDAs.3.t
 	theme = seduction
@@ -897,7 +897,7 @@ LIDAs.3 = {
 	}
 }
 LIDAs.4 = {
-	# Dom Blowjob
+	# BLOWJOB_DOM: Dom Blowjob
 	type = character_event
 	title = LIDAs.4.t
 	theme = seduction
@@ -1724,7 +1724,7 @@ LIDAs.4 = {
 	}
 }
 LIDAs.6 = {
-	# Sub Blowjob
+	# BLOWJOB_SUB: Sub Blowjob
 	type = character_event
 	title = LIDAs.6.t
 	theme = seduction
@@ -2373,7 +2373,7 @@ LIDAs.6 = {
 	}
 }
 LIDAs.7 = {
-	# Deepthroat
+	# DEEPTHROAT: Deepthroat
 	type = character_event
 	title = LIDAs.7.t
 	theme = seduction
@@ -2820,7 +2820,7 @@ LIDAs.7 = {
 	}
 }
 LIDAs.2 = {
-	# Ass Tease
+	# ASS_TEASE: Ass Tease
 	type = character_event
 	title = LIDAs.2.t
 	theme = seduction
@@ -3304,7 +3304,7 @@ LIDAs.2 = {
 	}
 }
 LIDAs.10 = {
-	# Ass Rub
+	# ASS_RUB: Ass Rub
 	type = character_event
 	title = LIDAs.10.t
 	theme = seduction
@@ -3910,7 +3910,7 @@ LIDAs.10 = {
 	}
 }
 LIDAs.8 = {
-	# Get Hotdogged
+	# HOTDOG: Get Hotdogged
 	type = character_event
 	title = LIDAs.8.t
 	theme = seduction
@@ -4712,7 +4712,7 @@ LIDAs.8 = {
 	}
 }
 LIDAs.9 = {
-	# Fingered from Behind
+	# STANDING_FINGERED_FROM_BEHIND: Fingered from Behind
 	type = character_event
 	title = LIDAs.9.t
 	theme = seduction
@@ -5354,7 +5354,7 @@ LIDAs.9 = {
 	}
 }
 LIDAs.5 = {
-	# Standing Fucked from Behind
+	# STANDING_FUCKED_FROM_BEHIND: Standing Fucked from Behind
 	type = character_event
 	title = LIDAs.5.t
 	theme = seduction

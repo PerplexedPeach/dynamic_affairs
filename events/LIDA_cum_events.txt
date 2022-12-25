@@ -1,7 +1,7 @@
 ﻿# GENERATED FILE - DO NOT MODIFY DIRECTLY
 namespace = LIDAc
 LIDAc.1 = {
-	# A Cumshot in Hand is Worth Two in the Bush
+	# HANDJOB_CUM_IN_HAND: A Cumshot in Hand is Worth Two in the Bush
 	type = character_event
 	title = LIDAc.1.t
 	theme = seduction
@@ -193,7 +193,7 @@ LIDAc.1 = {
 	}
 }
 LIDAc.5 = {
-	# Icing on the Cake
+	# ASS_TEASE_CUM_ON_ASS: Icing on the Cake
 	type = character_event
 	title = LIDAc.5.t
 	theme = seduction
@@ -444,7 +444,7 @@ LIDAc.5 = {
 	}
 }
 LIDAc.3 = {
-	# Painting your Face
+	# BLOWJOB_CUM_ON_FACE: Painting your Face
 	type = character_event
 	title = LIDAc.3.t
 	theme = seduction
@@ -654,7 +654,7 @@ LIDAc.3 = {
 	}
 }
 LIDAc.2 = {
-	# Satisfying your Sweet Tooth
+	# BLOWJOB_CUM_IN_MOUTH_DOM: Satisfying your Sweet Tooth
 	type = character_event
 	title = LIDAc.2.t
 	theme = seduction
@@ -855,7 +855,7 @@ LIDAc.2 = {
 	}
 }
 LIDAc.6 = {
-	# Down the Gullet
+	# BLOWJOB_CUM_IN_MOUTH_SUB: Down the Gullet
 	type = character_event
 	title = LIDAc.6.t
 	theme = seduction
@@ -1056,7 +1056,7 @@ LIDAc.6 = {
 	}
 }
 LIDAc.4 = {
-	# A Firm Grasp on His Release
+	# BLOWJOB_RUINED_ORGASM: A Firm Grasp on His Release
 	type = character_event
 	title = LIDAc.4.t
 	theme = seduction
@@ -1257,7 +1257,7 @@ LIDAc.4 = {
 	}
 }
 LIDAc.7 = {
-	# More Icing on the Cake
+	# PULL_OUT_CUM_ON_ASS: More Icing on the Cake
 	type = character_event
 	title = LIDAc.7.t
 	theme = seduction
@@ -1458,7 +1458,7 @@ LIDAc.7 = {
 	}
 }
 LIDAc.8 = {
-	# Plowing the Fields
+	# FUCK_BEHIND_CREAMPIE: Plowing the Fields
 	type = character_event
 	title = LIDAc.8.t
 	theme = seduction
@@ -1637,7 +1637,7 @@ LIDAc.8 = {
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
 			CHARACTER_2 = scope:affairs_partner
-			C1_PREGNANCY_CHANCE = 1.0
+			C1_PREGNANCY_CHANCE = pregnancy_chance
 			C2_PREGNANCY_CHANCE = 0
 			STRESS_EFFECTS = yes
 			DRAMA = yes

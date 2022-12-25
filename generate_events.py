@@ -144,6 +144,7 @@ CHARACTER_1 = "CHARACTER_1"
 CHARACTER_2 = "CHARACTER_2"
 C1_PREGNANCY_CHANCE = "C1_PREGNANCY_CHANCE"
 C2_PREGNANCY_CHANCE = "C2_PREGNANCY_CHANCE"
+PREGNANCY_CHANCE = "pregnancy_chance"  # basic value
 STRESS_EFFECTS = "STRESS_EFFECTS"
 DRAMA = "DRAMA"
 
@@ -322,7 +323,7 @@ class Event(BlockRoot):
         """Turn the event into a self string; will be called sequentially on the events to generate them"""
         self._lines = []
         with Block(self, self.fullname):
-            self.add_comment(self.title)
+            self.add_comment(f"{self.id.name}: {self.title}")
             self.assign(TYPE, CHARACTER_EVENT)
             self.assign(TITLE, f"{self.fullname}.t")
             self.assign(THEME, self.theme)
@@ -569,7 +570,8 @@ class Option:
 
 
 class Cum(Event):
-    def __init__(self, *args, terminal_option: Option, preg_chance_1: float = 0, preg_chance_2: float = 0,
+    def __init__(self, *args, terminal_option: Option, preg_chance_1: typing.Union[float, str] = 0,
+                 preg_chance_2: typing.Union[float, str] = 0,
                  subdom_change=0, stress_effects=True, drama=True, **kwargs):
         self.subdom_change = subdom_change
         self.preg_chance_1 = preg_chance_1
@@ -1618,7 +1620,7 @@ def define_cum_events(es: EventMap):
     es.add(Cum(EventsCum.FUCK_BEHIND_CREAMPIE, "Plowing the Fields",
                subdom_change=-3,
                root_become_more_sub_chance=20,
-               preg_chance_1=1.0,
+               preg_chance_1=PREGNANCY_CHANCE,
                animation_left=WORRY, animation_right=PERSONALITY_BOLD,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe away the cum dripping down your thighs"),
                desc=f"""
