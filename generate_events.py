@@ -409,15 +409,24 @@ class Event(BlockRoot):
                     self.add_debug_comment(option.next_id.name)
                     with Block(self, f"{option.weight}"):
                         option.generate_modifiers_and_triggers(self)
-                        # choose without replacement
-                        for prev_choice in range(choice):
-                            with Block(self, TRIGGER):
+                        with Block(self, TRIGGER):
+                            # depending on this transition leads to cumming or not
+                            if isinstance(option.next_id, EventsCum):
+                                self.add_line(f"{PARTNER_STAMINA} <= 0")
+                            else:
+                                self.add_line(f"{PARTNER_STAMINA} > 0")
+                            # choose without replacement to avoid duplicating the prev choices
+                            for prev_choice in range(choice):
                                 with Block(self, NOT):
                                     self.assign(f"{SCOPE}:{option_transition_str}_{prev_choice}", option.id)
                         self.save_scope_value_as(f"{option_transition_str}_{choice}", option.id)
         # fill in the rest of the choices so we don't have to check if it exists
-        for choice in range(choice + 1, max_options_per_type):
-            self.save_scope_value_as(f"{option_transition_str}_{choice}", -1)
+        for choice in range(1, max_options_per_type):
+            with Block(self, IF):
+                with Block(self, LIMIT):
+                    with Block(self, NOT):
+                        self.assign(EXISTS, f"{SCOPE}:{option_transition_str}_{choice}")
+                self.save_scope_value_as(f"{option_transition_str}_{choice}", -1)
 
     def generate_localization(self):
         lines = [f"{self.fullname}.t: \"{self.title}\"",
@@ -497,8 +506,7 @@ class Event(BlockRoot):
 class OptionCategory(enum.IntEnum):
     SUB = 1
     DOM = 2
-    CUM = 3
-    OTHER = 4
+    OTHER = 3
 
 
 def clean_str(string):
@@ -701,7 +709,9 @@ class Sex(Event):
             categories_to_options[option.category].append(option)
 
         self.assign(STORE_SUBDOM_VALUE_EFFECT, YES)
-        if len(categories_to_options[OptionCategory.SUB]) == 0:
+        selectable_non_cum_sub_options = [o for o in categories_to_options[OptionCategory.SUB] if
+                                          isinstance(o.next_id, EventsSex)]
+        if len(selectable_non_cum_sub_options) == 0:
             self.add_comment("enforce dom success if we have no sub options to ensure there is at least a valid option")
             self.save_scope_value_as(DOM_CHANCE, 100)
             self.save_scope_value_as(DOM_SUCCESS, 0)
@@ -713,14 +723,6 @@ class Sex(Event):
         for c, c_trans in [(OptionCategory.DOM, DOM_TRANSITION), (OptionCategory.SUB, SUB_TRANSITION)]:
             self.generate_options_transition(categories_to_options[c], c_trans)
 
-        # additionally if there are cumming actions allow for these options
-        options_list = categories_to_options[OptionCategory.CUM]
-        if len(options_list) > 0:
-            with Block(self, IF):
-                with Block(self, LIMIT):
-                    self.add_line(f"{PARTNER_STAMINA} <= 0")
-                self.generate_options_transition(options_list, CUM_TRANSITION)
-
         super(Sex, self).generate_immediate_effect()
 
         self.add_debug_line(f"{DEBUG_LOG_SCOPES} = {YES}")
@@ -729,9 +731,6 @@ class Sex(Event):
         categories_to_options = {c: [] for c in OptionCategory}
         for option in self.options:
             categories_to_options[option.category].append(option)
-
-        # for c, c_trans in [(OptionCategory.DOM, DOM_TRANSITION), (OptionCategory.SUB, SUB_TRANSITION)]:
-        #     options_list = categories_to_options[c]
 
         for option in self.options:
             with Block(self, OPTION):
@@ -751,16 +750,9 @@ class Sex(Event):
                                     self.add_line(f"{NOT} = {{ {SCOPE}:{ROOT_CUM} = {YES} }}")
                         if option.category in [OptionCategory.DOM, OptionCategory.SUB]:
                             trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
-                            self.add_line(f"{NOT} = {{ {EXISTS} = {SCOPE}:{CUM_TRANSITION}_0 }}")
                             with Block(self, OR):
                                 for choice in range(max_options_per_type):
                                     self.assign(f"{SCOPE}:{trans_type}_{choice}", option.id)
-                        elif option.category == OptionCategory.CUM:
-                            with Block(self, OR):
-                                for choice in range(max_options_per_type):
-                                    with Block(self, AND):
-                                        self.assign(EXISTS, f"{SCOPE}:{CUM_TRANSITION}_{choice}")
-                                        self.assign(f"{SCOPE}:{CUM_TRANSITION}_{choice}", option.id)
 
                 # save this event
                 self.save_scope_value_as(PREV_EVENT, self.id.value)
@@ -769,8 +761,6 @@ class Sex(Event):
                     self.generate_dom_option_effect(option, categories_to_options[OptionCategory.SUB])
                 elif option.category == OptionCategory.SUB:
                     self.generate_sub_option_effect(option)
-                elif option.category == OptionCategory.CUM:
-                    self.assign(TRIGGER_EVENT, option.next_event.fullname)
                 else:
                     raise RuntimeError(f"Unsupported option category {option.category}")
 
@@ -1140,7 +1130,7 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
                     attr = []
                     if option.category == OptionCategory.DOM:
                         attr.append("color=red")
-                    elif option.category == OptionCategory.SUB:
+                    elif option.category == OptionCategory.SUB and option.subdom_sub < 0:
                         attr.append("color=blue")
 
                     attr.append(f"penwidth={option.weight / 5}")
@@ -1214,8 +1204,11 @@ def define_sex_events(es: EventMap):
                           Looking up, you spot a look of anticipation on {THEM}'s face. 
                           They were probably not expecting you to volunteer your mouth's service.
                           They start moving a hand to place behind your head, but you swat it away."""),
-                   Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.CUM,
-                          "Milk him into your soft palms", )
+                   Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.SUB,
+                          "Milk him into your soft palms",
+                          subdom_sub=0,
+                          transition_text=f"""
+                          You place your open palm below his cock, ready to receive his seed.""")
                )))
     es.add(Sex(EventsSex.BLOWJOB_DOM, "Dom Blowjob",
                stam_cost_1=0.5, stam_cost_2=2,
@@ -1255,12 +1248,20 @@ def define_sex_events(es: EventMap):
                           \\n\\n
                           Instead of wasting words, he places both hands behind your head and starts thrusting."""),
                    # TODO make these options more likely if you are addicted to cum
-                   Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, OptionCategory.CUM,
-                          "Milk him dry onto your tongue", weight=3),
-                   Option(EventsCum.BLOWJOB_CUM_ON_FACE, OptionCategory.CUM,
-                          "Make him coat your face in cum", weight=3),
-                   Option(EventsCum.BLOWJOB_RUINED_ORGASM, OptionCategory.CUM,
-                          "Cruelly deny him his release")
+                   Option(EventsCum.BLOWJOB_RUINED_ORGASM, OptionCategory.DOM,
+                          "Cruelly deny him his release",
+                          transition_text=f"""
+                          You pull back and slap his rod, disrupting the build up to his climax.""",
+                          failed_transition_text=f"""
+                          As you try to pull back, he holds the back of your head with his hands."""),
+                   Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, OptionCategory.SUB,
+                          "Milk him dry onto your tongue",
+                          transition_text=f"""
+                          You prepare to wring him dry with your dexterous tongue."""),
+                   Option(EventsCum.BLOWJOB_CUM_ON_FACE, OptionCategory.SUB,
+                          "Make him coat your face in cum",
+                          transition_text=f"""
+                          You pull away and look up, preparing for him to mark your face."""),
                )))
     es.add(Sex(EventsSex.BLOWJOB_SUB, "Sub Blowjob",
                stam_cost_1=1.0, stam_cost_2=1.5,
@@ -1292,10 +1293,22 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           He takes advantage of your lack of strong resistance to dominate your mouth
                           further. Trapping your head with his hands, he plunges deeper while you gag."""),
-                   Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, OptionCategory.CUM,
-                          "Let him cum in your mouth"),
-                   Option(EventsCum.BLOWJOB_CUM_ON_FACE, OptionCategory.CUM,
-                          "Make him coat your face in cum"),
+                   Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.DOM,
+                          "Finish him off on your hand",
+                          transition_text=f"""
+                          Pulling away, you deprive him of the warmth of your mouth.""",
+                          failed_transition_text=f"""
+                          Try as you might, {THEM} stops you from pulling away."""),
+                   Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, OptionCategory.SUB,
+                          "Let him cum in your mouth",
+                          subdom_sub=0,
+                          transition_text=f"""
+                          You don't resist when he plunges into your mouth to deposit his seed."""),
+                   Option(EventsCum.BLOWJOB_CUM_ON_FACE, OptionCategory.SUB,
+                          "Make him coat your face in cum",
+                          subdom_sub=0,
+                          transition_text=f"""
+                          You don't resist when he pulls out and aims his rod at your face."""),
                )))
     es.add(Sex(EventsSex.DEEPTHROAT, "Deepthroat",
                stam_cost_1=1.0, stam_cost_2=2.0,
@@ -1322,8 +1335,12 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           He continues fucking your throat while 
                           your vision blurs against a mixture of tears, saliva, and sex juices."""),
-                   Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, OptionCategory.CUM,
-                          "He cums in your mouth"),
+                   Option(EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB, OptionCategory.SUB,
+                          "He cums in your mouth",
+                          subdom_sub=0,
+                          transition_text=f"""
+                          You don't have any say in it, or in anything else at the moment, as his mass
+                          fills your throat."""),
                )))
     es.add(Sex(EventsSex.ASS_TEASE, "Ass Tease",
                stam_cost_1=0.5, stam_cost_2=0.75,
@@ -1359,8 +1376,11 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           {THEM} wastes no time after you slow down to pick up the pace, his rod now doing the
                           thrusting along your crack."""),
-                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.CUM,
-                          "Have him coat your ass with his seed")
+                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.SUB,
+                          "Have him coat your ass with his seed",
+                          subdom_sub=0,
+                          transition_text=f"""
+                          You feel his dick twitch against your ass, alerting you of his impending climax.""")
                )))
     es.add(Sex(EventsSex.ASS_RUB, "Ass Rub",
                stam_cost_1=0.5, stam_cost_2=0.75,
@@ -1390,8 +1410,12 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           {THEM} wastes no time after you slow down to pick up the pace, his rod now doing the
                           thrusting along your crack."""),
-                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.CUM,
-                          "Have him coat your ass with his seed")
+                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.SUB,
+                          "Have him coat your ass with his seed",
+                          subdom_sub=0,
+                          transition_text=f"""
+                          You feel his dick twitch against your ass, alerting you of his impending climax."""
+                          )
                )))
     es.add(Sex(EventsSex.HOTDOG, "Get Hotdogged",
                stam_cost_1=0.5, stam_cost_2=0.75,
@@ -1439,8 +1463,11 @@ def define_sex_events(es: EventMap):
                           One of his thrusts, instead of going up, goes in between your thighs. Your wet folds dribble
                           your anticipation onto his cock. Accepting your body's invitation, his next thrust pierces
                           into you, eliciting a moan from your lips."""),
-                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.CUM,
-                          "Have him coat your ass with his seed")
+                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.SUB,
+                          "Have him coat your ass with his seed",
+                          subdom_sub=0,
+                          transition_text=f"""
+                          His grinding comes to a stop and his hands pull down on your waist.""")
                )))
     es.add(Sex(EventsSex.STANDING_FINGERED_FROM_BEHIND, "Fingered from Behind",
                stam_cost_1=1, stam_cost_2=0,
@@ -1477,8 +1504,11 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           Surrendering to pleasure and wanting more, you reach down to guide his member to your
                           entrance. Welcoming your invitation, he plunges into you fully."""),
-                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.CUM,
-                          "Have him coat your ass with his seed")
+                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.SUB,
+                          "Have him coat your ass with his seed",
+                          subdom_sub=0,
+                          transition_text=f"""
+                          While fingering you, he reaches a climax and aims his seed at your ass.""")
                )))
     es.add(Sex(EventsSex.STANDING_FUCKED_FROM_BEHIND, "Standing Fucked from Behind",
                stam_cost_1=2, stam_cost_2=1.5,
@@ -1518,10 +1548,16 @@ def define_sex_events(es: EventMap):
                           coherent thoughts. Instead, your mind is filled with a pink haze, urging you to just accept
                           the pleasure of being used like a piece of meat.
                           """),
-                   Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.CUM,
-                          "Have him pull out and cum on your ass"),
-                   Option(EventsCum.FUCK_BEHIND_CREAMPIE, OptionCategory.CUM,
-                          "Let him fill you with his seed"),
+                   Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
+                          "Have him pull out and cum on your ass",
+                          transition_text=f"""
+                          Your requests sways {THEM}.""",
+                          failed_transition_text=f"""
+                          In the heat of the moment, your request falls on deaf ears."""),
+                   Option(EventsCum.FUCK_BEHIND_CREAMPIE, OptionCategory.SUB,
+                          "Let him fill you with his seed",
+                          transition_text=f"""
+                          Happy to fulfill your request, he prepares to unleash his load."""),
                )))
 
 

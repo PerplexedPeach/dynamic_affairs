@@ -148,12 +148,68 @@ LIDAc.1 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 5
+				}
+				# Handjob
+				# You place your open palm below his cock, ready to receive his seed.\n
+				desc = sex_transition_5
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 15
+				}
+				# Sub Blowjob
+				# Pulling away, you deprive him of the warmth of your mouth.\n
+				desc = sex_transition_15
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 10003
 				}
 				# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB failed
 				# You're too turned on to be satisfied with just jerking him off\n
 				desc = sex_transition_10003
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10012
+				}
+				# 12: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM failed
+				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
+				desc = sex_transition_10012
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10015
+				}
+				# 15: EventsSex.BLOWJOB_SUB -> EventsCum.HANDJOB_CUM_IN_HAND failed
+				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
+				desc = sex_transition_10015
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 3
+			}
+			# defaulted to 5: EventsSex.HANDJOB -> EventsCum.HANDJOB_CUM_IN_HAND
+			desc = sex_transition_5
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 6
+			}
+			# defaulted to 15: EventsSex.BLOWJOB_SUB -> EventsCum.HANDJOB_CUM_IN_HAND
+			desc = sex_transition_15
 		}
 		triggered_desc = {
 			trigger = {
@@ -189,7 +245,7 @@ LIDAc.1 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.44
+		name = LIDAoption.45
 	}
 }
 LIDAc.5 = {
@@ -340,55 +396,82 @@ LIDAc.5 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10020
+					scope:sex_transition = 24
 				}
-				# 20: EventsSex.ASS_TEASE -> EventsSex.ASS_RUB failed
-				# You have better uses for that hard cock than just teasing it.\n
-				desc = sex_transition_10020
+				# Ass Tease
+				# You feel his dick twitch against your ass, alerting you of his impending climax.\n
+				desc = sex_transition_24
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 28
+				}
+				# Ass Rub
+				# You feel his dick twitch against your ass, alerting you of his impending climax.\n
+				desc = sex_transition_28
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 34
+				}
+				# Get Hotdogged
+				# His grinding comes to a stop and his hands pull down on your waist.\n
+				desc = sex_transition_34
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 39
+				}
+				# Fingered from Behind
+				# While fingering you, he reaches a climax and aims his seed at your ass.\n
+				desc = sex_transition_39
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10021
 				}
-				# 21: EventsSex.ASS_TEASE -> EventsSex.HANDJOB failed
-				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				# 21: EventsSex.ASS_TEASE -> EventsSex.ASS_RUB failed
+				# You have better uses for that hard cock than just teasing it.\n
 				desc = sex_transition_10021
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10024
+					scope:sex_transition = 10022
 				}
-				# 24: EventsSex.ASS_RUB -> EventsSex.ASS_RUB failed
-				# You have better uses for that hard cock than just teasing it\n
-				desc = sex_transition_10024
+				# 22: EventsSex.ASS_TEASE -> EventsSex.HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				desc = sex_transition_10022
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10025
 				}
-				# 25: EventsSex.ASS_RUB -> EventsSex.HANDJOB failed
-				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				# 25: EventsSex.ASS_RUB -> EventsSex.ASS_RUB failed
+				# You have better uses for that hard cock than just teasing it\n
 				desc = sex_transition_10025
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10028
+					scope:sex_transition = 10026
 				}
-				# 28: EventsSex.HOTDOG -> EventsSex.ASS_RUB failed
-				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
-				desc = sex_transition_10028
+				# 26: EventsSex.ASS_RUB -> EventsSex.HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				desc = sex_transition_10026
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10029
 				}
-				# 29: EventsSex.HOTDOG -> EventsSex.HOTDOG failed
-				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
+				# 29: EventsSex.HOTDOG -> EventsSex.ASS_RUB failed
+				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
 				desc = sex_transition_10029
 			}
 			triggered_desc = {
@@ -396,28 +479,77 @@ LIDAc.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10030
 				}
-				# 30: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM failed
-				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
+				# 30: EventsSex.HOTDOG -> EventsSex.HOTDOG failed
+				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
 				desc = sex_transition_10030
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10034
+					scope:sex_transition = 10031
 				}
-				# 34: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG failed
-				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
-				desc = sex_transition_10034
+				# 31: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM failed
+				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
+				desc = sex_transition_10031
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10035
 				}
-				# 35: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# 35: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG failed
+				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
 				desc = sex_transition_10035
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10036
+				}
+				# 36: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_10036
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 2
+			}
+			# defaulted to 24: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_24
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 10
+			}
+			# defaulted to 28: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_28
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 8
+			}
+			# defaulted to 34: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_34
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 9
+			}
+			# defaulted to 39: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_39
 		}
 		triggered_desc = {
 			trigger = {
@@ -440,7 +572,7 @@ LIDAc.5 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.45
+		name = LIDAoption.46
 	}
 }
 LIDAc.3 = {
@@ -591,6 +723,24 @@ LIDAc.3 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 11
+				}
+				# Dom Blowjob
+				# You pull away and look up, preparing for him to mark your face.\n
+				desc = sex_transition_11
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 17
+				}
+				# Sub Blowjob
+				# You don't resist when he pulls out and aims his rod at your face.\n
+				desc = sex_transition_17
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 10006
 				}
 				# 6: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
@@ -609,12 +759,50 @@ LIDAc.3 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 10009
+				}
+				# 9: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_10009
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 10012
 				}
 				# 12: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM failed
 				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
 				desc = sex_transition_10012
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10015
+				}
+				# 15: EventsSex.BLOWJOB_SUB -> EventsCum.HANDJOB_CUM_IN_HAND failed
+				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
+				desc = sex_transition_10015
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 4
+			}
+			# defaulted to 11: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_11
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 6
+			}
+			# defaulted to 17: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_17
 		}
 		triggered_desc = {
 			trigger = {
@@ -650,7 +838,7 @@ LIDAc.3 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.46
+		name = LIDAoption.47
 	}
 }
 LIDAc.2 = {
@@ -801,6 +989,15 @@ LIDAc.2 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 10
+				}
+				# Dom Blowjob
+				# You prepare to wring him dry with your dexterous tongue.\n
+				desc = sex_transition_10
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 10006
 				}
 				# 6: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
@@ -816,6 +1013,25 @@ LIDAc.2 = {
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
 				desc = sex_transition_10007
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10009
+				}
+				# 9: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_10009
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 4
+			}
+			# defaulted to 10: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM
+			desc = sex_transition_10
 		}
 		triggered_desc = {
 			trigger = {
@@ -851,7 +1067,7 @@ LIDAc.2 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.47
+		name = LIDAoption.48
 	}
 }
 LIDAc.6 = {
@@ -1002,6 +1218,24 @@ LIDAc.6 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 16
+				}
+				# Sub Blowjob
+				# You don't resist when he plunges into your mouth to deposit his seed.\n
+				desc = sex_transition_16
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 20
+				}
+				# Deepthroat
+				# You don't have any say in it, or in anything else at the moment, as his mass fills your throat.\n
+				desc = sex_transition_20
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 10012
 				}
 				# 12: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM failed
@@ -1011,12 +1245,41 @@ LIDAc.6 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10017
+					scope:sex_transition = 10015
 				}
-				# 17: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB failed
-				# Putting both hands on his waist, you push and try to stop his thrusts. It's all in vain, however, as he ignores you.\n
-				desc = sex_transition_10017
+				# 15: EventsSex.BLOWJOB_SUB -> EventsCum.HANDJOB_CUM_IN_HAND failed
+				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
+				desc = sex_transition_10015
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10018
+				}
+				# 18: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB failed
+				# Putting both hands on his waist, you push and try to stop his thrusts. It's all in vain, however, as he ignores you.\n
+				desc = sex_transition_10018
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 6
+			}
+			# defaulted to 16: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
+			desc = sex_transition_16
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 7
+			}
+			# defaulted to 20: EventsSex.DEEPTHROAT -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
+			desc = sex_transition_20
 		}
 		triggered_desc = {
 			trigger = {
@@ -1052,7 +1315,7 @@ LIDAc.6 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.48
+		name = LIDAoption.49
 	}
 }
 LIDAc.4 = {
@@ -1203,6 +1466,15 @@ LIDAc.4 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 9
+				}
+				# Dom Blowjob
+				# You pull back and slap his rod, disrupting the build up to his climax.\n
+				desc = sex_transition_9
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 10006
 				}
 				# 6: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
@@ -1218,6 +1490,25 @@ LIDAc.4 = {
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
 				desc = sex_transition_10007
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10009
+				}
+				# 9: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_10009
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 4
+			}
+			# defaulted to 9: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM
+			desc = sex_transition_9
 		}
 		triggered_desc = {
 			trigger = {
@@ -1253,7 +1544,7 @@ LIDAc.4 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.49
+		name = LIDAoption.50
 	}
 }
 LIDAc.7 = {
@@ -1404,21 +1695,49 @@ LIDAc.7 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10039
+					scope:sex_transition = 43
 				}
-				# 39: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
-				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
-				desc = sex_transition_10039
+				# Standing Fucked from Behind
+				# Your requests sways [affairs_partner.GetFirstName].\n
+				desc = sex_transition_43
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10040
 				}
-				# 40: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
+				# 40: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
 				desc = sex_transition_10040
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10041
+				}
+				# 41: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
+				desc = sex_transition_10041
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10043
+				}
+				# 43: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# In the heat of the moment, your request falls on deaf ears.\n
+				desc = sex_transition_10043
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 5
+			}
+			# defaulted to 43: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_43
 		}
 		triggered_desc = {
 			trigger = {
@@ -1454,7 +1773,7 @@ LIDAc.7 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.50
+		name = LIDAoption.51
 	}
 }
 LIDAc.8 = {
@@ -1605,21 +1924,49 @@ LIDAc.8 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10039
+					scope:sex_transition = 44
 				}
-				# 39: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
-				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
-				desc = sex_transition_10039
+				# Standing Fucked from Behind
+				# Happy to fulfill your request, he prepares to unleash his load.\n
+				desc = sex_transition_44
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10040
 				}
-				# 40: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
+				# 40: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
 				desc = sex_transition_10040
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10041
+				}
+				# 41: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
+				desc = sex_transition_10041
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10043
+				}
+				# 43: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# In the heat of the moment, your request falls on deaf ears.\n
+				desc = sex_transition_10043
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 5
+			}
+			# defaulted to 44: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.FUCK_BEHIND_CREAMPIE
+			desc = sex_transition_44
 		}
 		triggered_desc = {
 			trigger = {
@@ -1655,6 +2002,6 @@ LIDAc.8 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.51
+		name = LIDAoption.52
 	}
 }
