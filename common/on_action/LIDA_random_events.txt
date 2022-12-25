@@ -14,6 +14,6 @@ lida_yearly_random_player_pulse = {
 	}
 	random_events = {
 		100 = LIDA.100 # an affairs partner propositions money to you
-		10 = 0 # nothing happens
+		100 = 0 # nothing happens
 	} 
 }
