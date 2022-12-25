@@ -308,10 +308,10 @@ LIDA.100 = {
 					gold >= scope:gold_cost_extra
 				}
 
-				# if you've previously had relations with this person then weight them highly
-				# either one of you should be the dom of the other
+				# if you've already had an affair with this person then they're unlikely to pay you for it
+				# however, it's still more likely than not since they know you're open for it, so it's not as big of a factor
 				modifier = {
-					add = 100
+					add = 40
 					has_opinion_modifier = {
 						target = root
 						modifier = dominant_opinion
