@@ -454,6 +454,26 @@ calculate_dom_success_effect = {
 			add = {
 				value = scope:subdom
 			}
+			# sex skills - more skilled = more likely to succeed
+			# TODO this is a standin for actual, more specific sex skills; consider replacing later
+			if = {
+				limit = {
+					has_trait = prostitute_1
+				}
+				add = 5
+			}
+			if = {
+				limit = {
+					has_trait = prostitute_2
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					has_trait = prostitute_3
+				}
+				add = 15
+			}
 
 			min = 5
 			max = 95
