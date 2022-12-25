@@ -2,6 +2,8 @@
 
 # main namespace of all common events
 namespace = LIDA
+# all events under 50 are for debugging
+# 50 is the active event to be called from a decision
 LIDA.50 = {
 	# main event hub An Illicit Affair
 	type = character_event
@@ -157,6 +159,8 @@ LIDA.50 = {
 # 		name = "ok"
 # 	}
 # }
+
+# consolation event explaining a gender pairing's not been implemented
 LIDA.3 = {
 	type = character_event
 	title = LIDA.3.t
@@ -174,5 +178,274 @@ LIDA.3 = {
 	}
 	option = {
 		name = LIDA.3.a
+	}
+}
+
+
+# Random passive events
+LIDA.100 = {
+	# someone attracted to you propositions to have sex with you for money
+	type = character_event
+	title = LIDA.100.t
+	desc = {
+		desc = LIDA.100.desc
+		# triggered description with triggered_desc
+	}
+	# probably can use a custom theme
+	theme = seduction
+	override_background = {
+		event_background = corridor_day
+	}
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	# select affairs partner
+	immediate = {
+		get_characters_eligible_partner_effect = {
+			LISTNAME = affairs_pool
+			RESTRICTED_LISTNAME = rejected_affairs_pool
+		}
+		save_scope_value_as = {
+			name = min_gold_cost
+			value = start_affair_cost
+		}
+		# depending on traits, actual charged price could change
+		if = {
+			limit = {
+				has_trait = prostitute_1
+			}
+			save_scope_value_as = {
+				name = gold_cost
+				value = {
+					add = scope:min_gold_cost
+					multiply = 1.25
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_trait = prostitute_2
+			}
+			save_scope_value_as = {
+				name = gold_cost
+				value = {
+					add = scope:min_gold_cost
+					multiply = 1.5
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_trait = prostitute_3
+			}
+			save_scope_value_as = {
+				name = gold_cost
+				value = {
+					add = scope:min_gold_cost
+					multiply = 2.0
+				}
+			}
+		}
+		else = {
+			save_scope_value_as = {
+				name = gold_cost
+				value = scope:min_gold_cost
+			}
+		}
+		# thresholds based on this cost
+		save_temporary_scope_value_as = {
+			name = gold_cost_half
+			value = {
+				add = scope:gold_cost
+				multiply = 0.5
+			}
+		}
+		save_temporary_scope_value_as = {
+			name = gold_cost_extra
+			value = {
+				add = scope:gold_cost
+				multiply = 1.5
+			}
+		}
+		# find someone who can pay and is interested
+		random_in_list = {
+			list = affairs_pool
+			limit = {
+				NOT = {
+					is_in_list = rejected_affairs_pool
+				}
+				NOR = {
+					has_trait = celibate
+					has_sexuality = asexual
+				}
+				# prisoners don't have the freedom to proposition you
+				is_imprisoned = no
+				age >= 18
+			}
+			save_temporary_scope_as = affairs_candidate
+			weight = {
+				base = 50
+				# add based on attraction
+				modifier = {
+					add = {
+						value = attraction
+						divide = high_positive_attraction
+						multiply = 50
+					}
+				}
+				modifier = {
+					factor = 0.1
+					gold < scope:gold_cost_half
+				}
+				# more likely if they have extra coins to spare
+				modifier = {
+					factor = 1.5
+					gold >= scope:gold_cost_extra
+				}
+
+				# if you've previously had relations with this person then weight them highly
+				# either one of you should be the dom of the other
+				modifier = {
+					add = 100
+					has_opinion_modifier = {
+						target = root
+						modifier = dominant_opinion
+					}
+				}
+			}
+			save_scope_as = affairs_partner
+		}
+	}
+	# create acceptance option for prostitutes (different ones for each tier, with just the flavor being different)
+	option = {
+		name = LIDA.100.a
+		trigger = {
+			has_trait = prostitute_1
+		}
+		scope:affairs_partner = {
+			pay_short_term_gold = {
+				target = root
+				gold = scope:gold_cost
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = serviced_opinion
+			opinion = 5
+		}
+		trait = prostitute_1
+		trigger_event = LIDA.101
+	}
+	option = {
+		name = LIDA.100.b
+		trigger = {
+			has_trait = prostitute_2
+		}
+		scope:affairs_partner = {
+			pay_short_term_gold = {
+				target = root
+				gold = scope:gold_cost
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = serviced_opinion
+			opinion = 10
+		}
+		trait = prostitute_2
+		trigger_event = LIDA.101
+	}
+	option = {
+		name = LIDA.100.c
+		trigger = {
+			has_trait = prostitute_3
+		}
+		scope:affairs_partner = {
+			pay_short_term_gold = {
+				target = root
+				gold = scope:gold_cost
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = serviced_opinion
+			opinion = 15
+		}
+		trait = prostitute_3
+		trigger_event = LIDA.101
+	}
+	option = {
+		name = LIDA.100.d
+		trigger = {
+			not = {
+				has_trait = lifestyle_prostitute
+			}
+		}
+		scope:affairs_partner = {
+			pay_short_term_gold = {
+				target = root
+				gold = scope:gold_cost
+			}
+		}
+		trigger_event = LIDA.101
+	}
+	option = {
+		# reject and be offended
+		name = LIDA.100.e
+		add_opinion = {
+			modifier = offer_offended_opinion
+			target = scope:affairs_partner
+		}
+	}
+}
+
+LIDA.101 = {
+	# acceptance followup event to 100
+	# someone attracted to you propositions to have sex with you for money
+	type = character_event
+	title = LIDA.101.t
+	desc = {
+		desc = LIDA.101.desc
+	}
+	theme = seduction
+	override_background = {
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:bedchamber
+		}
+		# inititalize staminas
+		# triggered descriptions based on current stamina
+		save_scope_value_as = {
+			name = root_stamina
+			value = max_sex_stamina
+		}
+		save_scope_value_as = {
+			name = partner_stamina
+			value = scope:affairs_partner.max_sex_stamina 
+		}
+	}
+	option = {
+		# engage with the selected character
+		name = LIDA.101.a
+		# randomly select a sex source event
+		hidden_effect = {
+			select_random_sex_source_effect = yes
+		}
 	}
 }

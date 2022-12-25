@@ -11,3 +11,14 @@ affair_spurned_opinion = {
 	decaying = yes
 	years = 5
 }
+offer_offended_opinion = {
+	opinion = -15
+	decaying = yes
+	years = 5
+}
+serviced_opinion = {
+	max = 30
+	stacking = yes
+	decaying = yes
+	years = 3
+}

@@ -1,0 +1,19 @@
+﻿random_yearly_playable_pulse = {
+	on_actions = {
+		lida_yearly_random_player_pulse
+	}
+}
+
+lida_yearly_random_player_pulse = {
+	trigger = {
+		is_ai = no
+	}
+	effect = {
+		debug_log = "yearly random log for player"
+		debug_log_scopes = yes
+	}
+	random_events = {
+		100 = LIDA.100 # an affairs partner propositions money to you
+		10 = 0 # nothing happens
+	} 
+}

@@ -133,6 +133,7 @@ LOCALE = "locale"
 BECOME_MORE_SUB_EFFECT = "become_more_sub_effect"
 BECOME_MORE_DOM_EFFECT = "become_more_dom_effect"
 SELECT_START_AFFAIRS_EFFECT = "select_start_affairs_effect"
+SELECT_RANDOM_SEX_SOURCE_EFFECT = "select_random_sex_source_effect"
 LIDA_ONGOING_SEX_EFFECT = "lida_ongoing_sex_effect"
 STAMINA_COST_1 = "STAMINA_COST_1"
 STAMINA_COST_2 = "STAMINA_COST_2"
@@ -213,6 +214,7 @@ WRITER = "throne_room_writer"
 IDLE = "idle"
 FLIRTATION = "flirtation"
 FLIRTATION_LEFT = "flirtation_left"
+
 
 def yes_no(boolean: bool):
     return YES if boolean else NO
@@ -965,6 +967,15 @@ def generate_strings(events, options):
         # TODO M/F events and other pairings
         with Block(b, ELSE):
             b.assign(TRIGGER_EVENT, UNIMPLEMENTED_PAIRING_EVENT)
+
+    # generate sex source effect to allow directly randomly transitioning into a sex event
+    with Block(b, SELECT_RANDOM_SEX_SOURCE_EFFECT):
+        with Block(b, RANDOM_LIST):
+            for event in get_source_sex_events(events):
+                with Block(b, "100"):
+                    with Block(b, TRIGGER):
+                        inside_limit_check_gender(b, event.root_gender, event.partner_gender)
+                    b.assign(TRIGGER_EVENT, event.fullname)
 
     effect_text = str(b)
     return event_text, effect_text, event_localization, option_localization

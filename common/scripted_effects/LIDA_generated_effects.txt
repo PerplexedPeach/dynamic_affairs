@@ -121,3 +121,25 @@ select_start_affairs_effect = {
 		trigger_event = LIDA.3
 	}
 }
+select_random_sex_source_effect = {
+	random_list = {
+		100 = {
+			trigger = {
+				is_female = yes
+				scope:affairs_partner = {
+					is_female = no
+				}
+			}
+			trigger_event = LIDAs.1
+		}
+		100 = {
+			trigger = {
+				is_female = yes
+				scope:affairs_partner = {
+					is_female = no
+				}
+			}
+			trigger_event = LIDAs.2
+		}
+	}
+}
