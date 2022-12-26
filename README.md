@@ -50,8 +50,9 @@ in the format of the following commented example:
     es.add(Sex(EventsSex.HANDJOB_TEASE, "Handjob Tease",
                # stamina cost of this event for the player (cost_1) and the partner (cost_2)
                stam_cost_1=0, stam_cost_2=1,
-               # this event is only for when the player (root) character is female; this is by default 
-               root_female=True,
+               # this event is only for when the player (root) character is female and partner is male; this is by default 
+               # set this to allow for M/F, F/F, and M/M events (or any other gender pairing)
+               root_gender=FEMALE, partner_gender=MALE,
                # chance for this event to rank up dom/sub (always opposite, but in a separate roll for the partner)
                root_become_more_sub_chance=0, root_become_more_dom_chance=0,
                # animations to play for you and the partner; default is flirtation
