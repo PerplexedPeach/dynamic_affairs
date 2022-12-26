@@ -119,6 +119,7 @@ YES = "yes"
 NO = "no"
 EXISTS = "exists"
 HAS_VARIABLE = "has_variable"
+HAS_TRAIT = "has_trait"
 NOT = "NOT"
 OR = "OR"
 AND = "AND"
@@ -172,6 +173,10 @@ UNIMPLEMENTED_PAIRING_EVENT = "LIDA.3"
 
 L_ENGLISH = "l_english:"
 EVENTS_FILE_HEADER = "# GENERATED FILE - DO NOT MODIFY DIRECTLY"
+
+# traits
+LIDA_SUB = "lida_sub"
+LIDA_DOM = "lida_dom"
 
 # localization constants
 THEM = "[affairs_partner.GetFirstName]"
@@ -504,14 +509,42 @@ class Event(BlockRoot):
 
 
 class Desc:
-    def __init__(self, desc):
+    def __init__(self, desc, subid=0):
         self.desc = clean_str(desc)
+        self.subid = subid
 
     def generate_desc(self, b: Event):
-        b.assign(DESC, f"{b.fullname}.{DESC}")
+        b.assign(DESC, f"{b.fullname}.{DESC}.{self.subid}")
 
     def generate_localization(self, b: Event):
-        return f"{b.fullname}.{DESC}: \"{self.desc}\""
+        return f"{b.fullname}.{DESC}.{self.subid}: \"{self.desc}\""
+
+
+class TriggeredDesc(Desc):
+    def __init__(self, trigger_condition, desc):
+        self.trigger_condition = trigger_condition
+        super(TriggeredDesc, self).__init__(desc)
+
+    def generate_desc(self, b: Event):
+        with Block(b, TRIGGERED_DESC):
+            with Block(b, TRIGGER):
+                b.add_line(self.trigger_condition)
+            super(TriggeredDesc, self).generate_desc(b)
+
+
+class ComposedDesc(Desc):
+    def __init__(self, *descs: typing.Union[Desc, str]):
+        self.descs = [d if isinstance(d, Desc) else Desc(d) for d in descs]
+        for i, d in enumerate(self.descs):
+            d.subid = i
+        super(ComposedDesc, self).__init__("")
+
+    def generate_desc(self, b: Event):
+        for desc in self.descs:
+            desc.generate_desc(b)
+
+    def generate_localization(self, b: Event):
+        return "\n".join([d.generate_localization(b) for d in self.descs])
 
 
 class OptionCategory(enum.IntEnum):
@@ -1326,11 +1359,15 @@ def define_sex_events(es: EventMap):
                root_become_more_sub_chance=10,
                partner_removes_clothes=True,
                animation_left=KNEEL_2,
-               desc=f"""
+               desc=ComposedDesc("""
                Your eyes tear up as he thrusts deeply and relentlessly. The degrading way in which he
-               gives not care about your well-being or pleasure leaves a deep impression on you.
+               gives not care about your well-being or pleasure leaves a deep impression on you.""",
+                                 TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}", """
                In a dark part of your mind, though you may not recognize, you enjoy being used like
-               a cheap toy.""",
+               a cheap toy."""),
+                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+               You enjoy being used like a cheap toy, reinforcing your submissive nature."""),
+                                 ),
                options=(
                    Option(EventsSex.BLOWJOB_SUB, OptionCategory.DOM,
                           "Take some control back",
@@ -1526,13 +1563,18 @@ def define_sex_events(es: EventMap):
                root_become_more_sub_chance=7,
                root_removes_clothes=True, partner_removes_clothes=True,
                animation_left=BOW_3, animation_right=SCHADENFREUDE,
-               desc=f"""
+               desc=ComposedDesc(f"""
                Sometimes bending you over and sometimes #sub pulling your hair to keep you upright#!, 
                you're at the mercy of {THEM}. His vigorous thrusts make you knees weak and you find it
                hard to stay on your feet.
-               \\n\\n
-               "You're my bitch now," he says, punctuated with a resounding spank on your ass.
-               """,
+               \\n\\n""",
+                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -20", f"""
+               "You're my bitch now," he punctuates with a resounding spank on your ass.
+               """),
+                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
+               "Is that all?" You manage to get out in between his thrusts, taunting and teasing him.
+               """),
+                                 ),
                options=(
                    Option(EventsSex.BLOWJOB_DOM, OptionCategory.DOM,
                           "Pleasure him with your mouth instead",
@@ -1577,13 +1619,15 @@ def define_cum_events(es: EventMap):
                subdom_change=1, root_become_more_dom_chance=20,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean your hands on a nearby cloth"),
                animation_left=BOREDOM, animation_right=SHAME,
-               desc=f"""
+               desc=ComposedDesc("""
                His back arches, thrusting forward into an imaginary womb, and spurts his load onto your open palm.
-               \\n\\n
+               \\n\\n""",
+                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} > 10", """
                "That's it?" you say as you wipe his seed onto his chest, "How do you hope to please any
                woman with that pathetic stamina?" His #dom dejected look 
-               pleases#! you #italic - maybe your personality is twisted?#!"""
-               ))
+               pleases#! you #italic - maybe your personality is twisted?#!
+               """),
+                                 )))
     es.add(Cum(EventsCum.ASS_TEASE_CUM_ON_ASS, "Icing on the Cake",
                subdom_change=0,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean yourself and get dressed"),
@@ -1598,18 +1642,23 @@ def define_cum_events(es: EventMap):
                subdom_change=-2, root_become_more_sub_chance=15,
                animation_left=SHAME, animation_right=SCHEME,
                terminal_option=Option(None, OptionCategory.OTHER, "Sample some stray globs of cum"),
-               desc=f"""
+               desc=ComposedDesc(f"""
                You look up and brace yourself for what's the come. When the first drop hits your face,
                you flinch and instinctively close your eyes, which was fortunate as you feel a glob
                land on your eyelids.
-               \\n\\n
+               \\n\\n""",
+                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -20", f"""
                "You look beautiful covered in my cum," {THEM} say while #sub wiping his cock against your face#!.
                Taking advantage of your helpless state, he takes some liberties in degrading you,
                \\n\\n
                "I've marked you as mine, regardless of who you lay with later. Even when you're with them,
                you'll think back to this moment with my cum on your face."
-               """
-               ))
+               """),
+                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} > 10", f"""
+               "Impudent knave!" You say while wiping away those near your eyes. "At least have the decency
+               to aim away from my eyes!"
+               """),
+                                 )))
     es.add(Cum(EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM, "Satisfying your Sweet Tooth",
                subdom_change=-1, root_become_more_sub_chance=10,
                animation_left=DISGUST, animation_right=SCHADENFREUDE,

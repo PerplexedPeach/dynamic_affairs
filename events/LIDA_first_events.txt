@@ -144,7 +144,7 @@ LIDAf.1 = {
 		}
 	}
 	desc = {
-		desc = LIDAf.1.desc
+		desc = LIDAf.1.desc.0
 	}
 	immediate = {
 		save_scope_value_as = {
@@ -404,7 +404,7 @@ LIDAf.2 = {
 		}
 	}
 	desc = {
-		desc = LIDAf.2.desc
+		desc = LIDAf.2.desc.0
 	}
 	immediate = {
 		save_scope_value_as = {
@@ -664,7 +664,7 @@ LIDAf.3 = {
 		}
 	}
 	desc = {
-		desc = LIDAf.3.desc
+		desc = LIDAf.3.desc.0
 	}
 	immediate = {
 		save_scope_value_as = {
@@ -924,7 +924,7 @@ LIDAf.4 = {
 		}
 	}
 	desc = {
-		desc = LIDAf.4.desc
+		desc = LIDAf.4.desc.0
 	}
 	immediate = {
 		save_scope_value_as = {
@@ -1184,7 +1184,7 @@ LIDAf.5 = {
 		}
 	}
 	desc = {
-		desc = LIDAf.5.desc
+		desc = LIDAf.5.desc.0
 	}
 	immediate = {
 		save_scope_value_as = {
@@ -1444,7 +1444,7 @@ LIDAf.6 = {
 		}
 	}
 	desc = {
-		desc = LIDAf.6.desc
+		desc = LIDAf.6.desc.0
 	}
 	immediate = {
 		save_scope_value_as = {
@@ -1704,7 +1704,7 @@ LIDAf.7 = {
 		}
 	}
 	desc = {
-		desc = LIDAf.7.desc
+		desc = LIDAf.7.desc.0
 	}
 	immediate = {
 		save_scope_value_as = {
@@ -1964,7 +1964,7 @@ LIDAf.8 = {
 		}
 	}
 	desc = {
-		desc = LIDAf.8.desc
+		desc = LIDAf.8.desc.0
 	}
 	immediate = {
 		save_scope_value_as = {
@@ -2224,7 +2224,7 @@ LIDAf.9 = {
 		}
 	}
 	desc = {
-		desc = LIDAf.9.desc
+		desc = LIDAf.9.desc.0
 	}
 	immediate = {
 		save_scope_value_as = {
@@ -2484,7 +2484,7 @@ LIDAf.10 = {
 		}
 	}
 	desc = {
-		desc = LIDAf.10.desc
+		desc = LIDAf.10.desc.0
 	}
 	immediate = {
 		save_scope_value_as = {

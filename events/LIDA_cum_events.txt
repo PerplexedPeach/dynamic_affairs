@@ -217,7 +217,13 @@ LIDAc.1 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.1.desc
+		desc = LIDAc.1.desc.0
+		triggered_desc = {
+			trigger = {
+				scope:subdom > 10
+			}
+			desc = LIDAc.1.desc.1
+		}
 	}
 	immediate = {
 		check_if_root_cum_effect = yes
@@ -557,7 +563,7 @@ LIDAc.5 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.5.desc
+		desc = LIDAc.5.desc.0
 	}
 	immediate = {
 		check_if_root_cum_effect = yes
@@ -810,7 +816,19 @@ LIDAc.3 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.3.desc
+		desc = LIDAc.3.desc.0
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -20
+			}
+			desc = LIDAc.3.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > 10
+			}
+			desc = LIDAc.3.desc.2
+		}
 	}
 	immediate = {
 		check_if_root_cum_effect = yes
@@ -1039,7 +1057,7 @@ LIDAc.2 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.2.desc
+		desc = LIDAc.2.desc.0
 	}
 	immediate = {
 		check_if_root_cum_effect = yes
@@ -1287,7 +1305,7 @@ LIDAc.6 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.6.desc
+		desc = LIDAc.6.desc.0
 	}
 	immediate = {
 		check_if_root_cum_effect = yes
@@ -1516,7 +1534,7 @@ LIDAc.4 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.4.desc
+		desc = LIDAc.4.desc.0
 	}
 	immediate = {
 		check_if_root_cum_effect = yes
@@ -1745,7 +1763,7 @@ LIDAc.7 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.7.desc
+		desc = LIDAc.7.desc.0
 	}
 	immediate = {
 		check_if_root_cum_effect = yes
@@ -1974,7 +1992,7 @@ LIDAc.8 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.8.desc
+		desc = LIDAc.8.desc.0
 	}
 	immediate = {
 		check_if_root_cum_effect = yes

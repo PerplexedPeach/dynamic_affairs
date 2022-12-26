@@ -192,7 +192,7 @@ LIDAs.1 = {
 			}
 			desc = pm_high_stam
 		}
-		desc = LIDAs.1.desc
+		desc = LIDAs.1.desc.0
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -724,7 +724,7 @@ LIDAs.3 = {
 			}
 			desc = pm_high_stam
 		}
-		desc = LIDAs.3.desc
+		desc = LIDAs.3.desc.0
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -1421,7 +1421,7 @@ LIDAs.4 = {
 			}
 			desc = pm_high_stam
 		}
-		desc = LIDAs.4.desc
+		desc = LIDAs.4.desc.0
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -2260,7 +2260,7 @@ LIDAs.6 = {
 			}
 			desc = pm_high_stam
 		}
-		desc = LIDAs.6.desc
+		desc = LIDAs.6.desc.0
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -2986,7 +2986,19 @@ LIDAs.7 = {
 			}
 			desc = pm_high_stam
 		}
-		desc = LIDAs.7.desc
+		desc = LIDAs.7.desc.0
+		triggered_desc = {
+			trigger = {
+				NOT = { has_trait = lida_sub }
+			}
+			desc = LIDAs.7.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAs.7.desc.2
+		}
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -3413,7 +3425,7 @@ LIDAs.2 = {
 			}
 			desc = pm_high_stam
 		}
-		desc = LIDAs.2.desc
+		desc = LIDAs.2.desc.0
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -4070,7 +4082,7 @@ LIDAs.10 = {
 			}
 			desc = pm_high_stam
 		}
-		desc = LIDAs.10.desc
+		desc = LIDAs.10.desc.0
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -4764,7 +4776,7 @@ LIDAs.8 = {
 			}
 			desc = pm_high_stam
 		}
-		desc = LIDAs.8.desc
+		desc = LIDAs.8.desc.0
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -5543,7 +5555,7 @@ LIDAs.9 = {
 			}
 			desc = pm_high_stam
 		}
-		desc = LIDAs.9.desc
+		desc = LIDAs.9.desc.0
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -6274,7 +6286,19 @@ LIDAs.5 = {
 			}
 			desc = pm_high_stam
 		}
-		desc = LIDAs.5.desc
+		desc = LIDAs.5.desc.0
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -20
+			}
+			desc = LIDAs.5.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAs.5.desc.2
+		}
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
