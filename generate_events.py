@@ -285,7 +285,9 @@ class Event(BlockRoot):
                  custom_immediate_effect: typing.Optional[typing.Callable] = None):
         self.id = eid
         self.title = title
-        self.desc = clean_str(desc)
+        if isinstance(desc, str):
+            desc = Desc(desc)
+        self.desc = desc
         self.theme = theme
         self.anim_l = animation_left
         self.anim_r = animation_right
@@ -363,7 +365,7 @@ class Event(BlockRoot):
                 self.add_line(NO_CLOTHES)
 
     def generate_desc(self):
-        self.assign(DESC, f"{self.fullname}.{DESC}")
+        self.desc.generate_desc(self)
         if self.custom_desc is not None:
             # calling the custom desc will modify the event string text in place, and return a localization string
             self.custom_localization = self.custom_desc(self)
@@ -402,7 +404,6 @@ class Event(BlockRoot):
     def generate_options_transition(self, options_list, option_transition_str):
         if len(options_list) == 0:
             return
-        choice = 0
         for choice in range(min(len(options_list), max_options_per_type)):
             with Block(self, RANDOM_LIST):
                 for option in options_list:
@@ -429,8 +430,7 @@ class Event(BlockRoot):
                 self.save_scope_value_as(f"{option_transition_str}_{choice}", -1)
 
     def generate_localization(self):
-        lines = [f"{self.fullname}.t: \"{self.title}\"",
-                 f"{self.fullname}.{DESC}: \"{self.desc}\""]
+        lines = [f"{self.fullname}.t: \"{self.title}\"", self.desc.generate_localization(self)]
         if self.root_cum_text is not None:
             lines.append(f"{self.fullname}.{ROOT_CUM}: \"{self.root_cum_text}\"")
         if self.custom_localization is not None:
@@ -501,6 +501,17 @@ class Event(BlockRoot):
                 # TODO consider replacing the whole sex_transition system with just PREV_EVENT
                 self.add_debug_comment(f"defaulted to {option}")
                 self.assign(DESC, f"{SEX_TRANSITION}_{option.id}")
+
+
+class Desc:
+    def __init__(self, desc):
+        self.desc = clean_str(desc)
+
+    def generate_desc(self, b: Event):
+        b.assign(DESC, f"{b.fullname}.{DESC}")
+
+    def generate_localization(self, b: Event):
+        return f"{b.fullname}.{DESC}: \"{self.desc}\""
 
 
 class OptionCategory(enum.IntEnum):
