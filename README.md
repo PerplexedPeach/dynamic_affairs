@@ -54,6 +54,8 @@ in the format of the following commented example:
                root_female=True,
                # chance for this event to rank up dom/sub (always opposite, but in a separate roll for the partner)
                root_become_more_sub_chance=0, root_become_more_dom_chance=0,
+               # animations to play for you and the partner; default is flirtation
+               animation_left=IDLE, animation_right=PERSONALITY_CONTENT,
                # description that shows up in the text body
                # {THEM} will result in their first name that's mouse-overable to get a tooltip
                desc=f"""With a knowing smirk, you size {THEM} up and put both your hands on their chest.
@@ -77,22 +79,54 @@ in the format of the following commented example:
                    # if you choose a DOM type transition and fail, you'll default to a sub transition
                    # DOM transitions require failed_transition_text which will show up when you fail to dominate them
                    Option(EventsSex.HANDJOB, OptionCategory.DOM,
-                          # text that will show up on the option button
-                          "Jerk him off",
-                          # text that will show up at the beginning of the next event
-                          transition_text="Your continue building a rhythm going up and down his shaft with your hands.",
-                          # text that will show up at the beginning of the next event if you fail to dom
-                          failed_transition_text="You're too turned on to be satisfied with just jerking him off."),
+                          "Continue jerking him off",
+                          transition_text=f"""
+                          Under the interminable strokes from your hand, {THEM}'s cock has 
+                          fully hardened. Dew-like pre dribbles from the tip, lubricating the whole shaft.""",
+                          failed_transition_text="You're too turned on to be satisfied with just jerking him off"),
                    Option(EventsSex.BLOWJOB_DOM, OptionCategory.SUB,
                           "Kneel down and take him in your mouth",
                           transition_text=f"""
                           Looking up, you spot a look of anticipation on {THEM}'s face. 
                           They were probably not expecting you to volunteer your mouth's service.
                           They start moving a hand to place behind your head, but you swat it away."""),
-                   # if this event can directly lead to cum, you should define cum transition type options
-                   Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.CUM,
-                          "Milk him into your soft palms", ),
+                   # can transition to cumming events, which will only be options if partner stamina <= 0
+                   # they can also be sub/dom (requesting pull out vs them giving you a creampie)
+                   Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.SUB,
+                          "Milk him into your soft palms",
+                          subdom_sub=0,
+                          transition_text=f"""
+                          You place your open palm below his cock, ready to receive his seed.""")
                )))
+```
+
+Below is an example of more advanced composed and triggered descriptions that allow you to gate descriptions behind
+triggered conditions. A string can be used in place of a `Desc` object (will be converted).
+```python
+    es.add(Sex(EventsSex.STANDING_FUCKED_FROM_BEHIND, "Standing Fucked from Behind",
+               stam_cost_1=2, stam_cost_2=1.5,
+               root_become_more_sub_chance=7,
+               # this event removes clothes from both, following events will have them naked
+               root_removes_clothes=True, partner_removes_clothes=True,
+               animation_left=BOW_3, animation_right=SCHADENFREUDE,
+               # ComposedDesc allows you to compose/chain Desc
+               # the first Desc is just a string
+               desc=ComposedDesc(f"""
+               Sometimes bending you over and sometimes #sub pulling your hair to keep you upright#!, 
+               you're at the mercy of {THEM}. His vigorous thrusts make you knees weak and you find it
+               hard to stay on your feet.
+               \\n\\n""",
+                                 # some following descriptions that will only show on satisfying conditions
+                                 # this example one requires the subdom score with the partner to be below -20 (am sub)
+                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -20", f"""
+               "You're my bitch now," he punctuates with a resounding spank on your ass.
+               """),
+                                 # different attitude when subdom score >= 10 (when you're dom)
+                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
+               "Is that all?" You manage to get out in between his thrusts, taunting and teasing him.
+               """),
+                                 ),
+        ))
 ```
 
 Check out [https://ck3.paradoxwikis.com/Localization](https://ck3.paradoxwikis.com/Localization) for 
