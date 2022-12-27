@@ -1666,9 +1666,9 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him pull out and cum on your ass",
                           transition_text=f"""
-                          "Not inside!" you blurt out between moans and labored breaths.""",
+                          "Not inside!" you barely blurt out between moans and labored breaths.""",
                           failed_transition_text=f"""
-                          "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears."""),
+                          "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears."""),
                    Option(EventsCum.CREAMPIE_BEHIND, OptionCategory.SUB,
                           "Let him fill you with his seed",
                           transition_text=f"""
@@ -1850,9 +1850,9 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him pull out and cum on your ass",
                           transition_text=f"""
-                          "Not inside!" you blurt out between moans and labored breaths.""",
+                          "Not inside!" you barely blurt out between moans and labored breaths.""",
                           failed_transition_text=f"""
-                          "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears."""),
+                          "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears."""),
                    Option(EventsCum.CREAMPIE_BRED, OptionCategory.SUB,
                           "Get filled to the brim",
                           transition_text=f"""
@@ -1898,9 +1898,9 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him pull out and cum on your ass",
                           transition_text=f"""
-                          "Not inside!" you blurt out between moans and labored breaths.""",
+                          "Not inside!" you barely blurt out between moans and labored breaths.""",
                           failed_transition_text=f"""
-                          "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears."""),
+                          "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears."""),
                    Option(EventsCum.CREAMPIE_BRED, OptionCategory.SUB,
                           "Get filled to the brim",
                           transition_text=f"""
@@ -2013,17 +2013,17 @@ def define_cum_events(es: EventMap):
                Perhaps fearing the consequences of impregnating you or just showing some courtesy, {THEM} pulls out just as he reaches his limit.
                He instead shoots his seed on your ass and holes, several spurts of warmth announcing the end of the session.
                 \\n\\n
-               "When can we do this again?", he says in a satisfied tone.
+               "Wanna do this again sometime?", he says looking expectantly at you.
                """),
                TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
-               Perhaps out of courtesy or not wanting to impregnate you, {THEM} pulls out just as he goes past his limit.
+               Perhaps out of courtesy or simply not wanting to impregnate you, {THEM} pulls out just as he goes past his limit.
                He instead shoots his seed on your whole groin, several spurts of warmth announcing the end of the session. \\n\\n
-               With a sudden #sub smack on your ass#!, "Let's meet again in the future."
+               With a sudden #sub smack on your ass#!, "Let's meet again soon."
                """),
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
-                That was hot... but it could have been hotter if he'd done #sub more#! to you!"""),
+                \\n\\n"Come again sometime, will you? I'd like it if you did #sub more#! to me", you say with a smile """),
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-                "Good boy", you say as you #dom pat#! him on the head. I might just invite you again.""")
+                \\n\\n"Good boy", you say as you #dom pat#! him on the head. "I might just have you over again when I need something", you say with a smirk.""")
                                  ),
                ))
     es.add(Cum(EventsCum.CUM_ON_GROIN, "Coated in White", #Added by me#

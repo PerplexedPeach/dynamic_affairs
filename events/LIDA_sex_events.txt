@@ -1324,7 +1324,7 @@ LIDAs.4 = {
 					scope:sex_transition = 10049
 				}
 				# 49: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10049
 			}
 		}
@@ -2169,7 +2169,7 @@ LIDAs.6 = {
 					scope:sex_transition = 10049
 				}
 				# 49: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10049
 			}
 		}
@@ -6737,7 +6737,7 @@ LIDAs.5 = {
 					scope:sex_transition = 10049
 				}
 				# 49: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10049
 			}
 			triggered_desc = {
@@ -7647,7 +7647,7 @@ LIDAs.11 = {
 					scope:sex_transition = 10072
 				}
 				# 72: EventsSex.MISSIONARY -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10072
 			}
 			triggered_desc = {
@@ -10068,7 +10068,7 @@ LIDAs.14 = {
 					scope:sex_transition = 10072
 				}
 				# 72: EventsSex.MISSIONARY -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10072
 			}
 			triggered_desc = {
@@ -10095,7 +10095,7 @@ LIDAs.14 = {
 					scope:sex_transition = 10077
 				}
 				# 77: EventsSex.PRONE_BONE -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10077
 			}
 		}
@@ -10873,7 +10873,7 @@ LIDAs.15 = {
 					scope:sex_transition = 10049
 				}
 				# 49: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10049
 			}
 			triggered_desc = {
@@ -10918,7 +10918,7 @@ LIDAs.15 = {
 					scope:sex_transition = 10072
 				}
 				# 72: EventsSex.MISSIONARY -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10072
 			}
 			triggered_desc = {
@@ -10945,7 +10945,7 @@ LIDAs.15 = {
 					scope:sex_transition = 10077
 				}
 				# 77: EventsSex.PRONE_BONE -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10077
 			}
 		}
