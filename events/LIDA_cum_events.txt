@@ -1777,7 +1777,7 @@ LIDAc.7 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = flirtation_left
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -1789,7 +1789,7 @@ LIDAc.7 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = personality_bold
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -2031,22 +2031,33 @@ LIDAc.7 = {
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_sub
+				scope:subdom >= 10
 			}
 			desc = LIDAc.7.desc.0
 		}
-		desc = LIDAc.7.desc.1
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_sub
+				scope:subdom > -10 && scope:subdom < 10
+			}
+			desc = LIDAc.7.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
 			}
 			desc = LIDAc.7.desc.2
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_dom
+				has_trait = lida_sub
 			}
 			desc = LIDAc.7.desc.3
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.7.desc.4
 		}
 	}
 	immediate = {
