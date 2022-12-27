@@ -23,11 +23,11 @@ dom_no_sub_tooltip: "This is considered a #dom;bold dominant#! action! However, 
 voluntary_sub_tooltip: "This is considered a #sub;bold submissive#! action and will be welcomed by [affairs_partner.GetFirstName]! However, there are long term consequences to being submissive to them."
 dom_success_adjustment_tooltip: "Due to special circumstance, you have an extra #weak ([SCOPE.GetValue('dom_success_adjustment')|0]%)#! chance of succeeding."
 # default root cum text
-root_cum_f: "\nYou shudder and close your eyes as you climax. Your body subconsciously clamping down on the one who #sub conquered it#!, as if pleading for more."
+root_cum_f: "\nYou shudder and close your eyes as you climax. Your body subconsciously clamping down on the one who #sub;bold conquered it#!, as if pleading for more."
 root_cum_m: "\nroot cum male"
 cancel_meeting_option: "Back out"
 cancel_meeting_tooltip: "Backing out of the promise of sex will make them angry."
-cant_dom_due_to_cum_tooltip: "You cannot select any dominant options since you are in the middle of an orgasm!"
+cant_dom_due_to_cum_tooltip: "You find it much harder to control the situation in the middle of an orgasm!"
 # traits
 trait_lida_dom_1: "Assertive"
 trait_lida_dom_1_desc: "This character prefers to #dom dominate others#! socially and physically."
