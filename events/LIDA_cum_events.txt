@@ -2683,7 +2683,7 @@ LIDAc.8 = {
 					scope:sex_transition = 50
 				}
 				# Standing Fucked from Behind
-				# Happy to fulfill your request, he prepares to unleash his load.\n
+				# Feeling little resistance, he prepares to leave you a hot, sticky gift.\n
 				desc = sex_transition_50
 			}
 			triggered_desc = {
@@ -2692,7 +2692,7 @@ LIDAc.8 = {
 					scope:sex_transition = 62
 				}
 				# Ride Facing Away
-				# Happy to fulfill your request, he prepares to unleash his load.\n
+				# Feeling little resistance, he prepares to leave you a hot, sticky gift.\n
 				desc = sex_transition_62
 			}
 			triggered_desc = {
