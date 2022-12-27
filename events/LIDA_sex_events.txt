@@ -268,17 +268,6 @@ LIDAs.1 = {
 		# 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB
 		name = LIDAoption.1
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			scope:partner_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 1
-				scope:dom_transition_1 = 1
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 1
@@ -325,18 +314,18 @@ LIDAs.1 = {
 				trigger_event = LIDAs.4
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 2: EventsSex.HANDJOB_TEASE -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.2
 		trigger = {
-			scope:partner_stamina > 0
-			OR = {
-				scope:sub_transition_0 = 2
-				scope:sub_transition_1 = 2
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 2
@@ -860,17 +849,6 @@ LIDAs.3 = {
 		# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB
 		name = LIDAoption.3
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			scope:partner_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 3
-				scope:dom_transition_1 = 3
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 3
@@ -923,18 +901,18 @@ LIDAs.3 = {
 				trigger_event = LIDAc.1
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 4: EventsSex.HANDJOB -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.4
 		trigger = {
-			scope:partner_stamina > 0
-			OR = {
-				scope:sub_transition_0 = 4
-				scope:sub_transition_1 = 4
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 4
@@ -959,12 +937,6 @@ LIDAs.3 = {
 		# 5: EventsSex.HANDJOB -> EventsCum.HANDJOB_CUM_IN_HAND
 		name = LIDAoption.5
 		trigger = {
-			OR = {
-				scope:sub_transition_0 = 5
-				scope:sub_transition_1 = 5
-			}
-		}
-		show_as_unavailable = {
 			OR = {
 				scope:sub_transition_0 = 5
 				scope:sub_transition_1 = 5
@@ -1662,17 +1634,6 @@ LIDAs.4 = {
 		# 6: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB
 		name = LIDAoption.6
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			scope:partner_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 6
-				scope:dom_transition_1 = 6
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 6
@@ -1731,22 +1692,18 @@ LIDAs.4 = {
 				trigger_event = LIDAc.3
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 7: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.7
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			scope:partner_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 7
-				scope:dom_transition_1 = 7
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 7
@@ -1805,18 +1762,18 @@ LIDAs.4 = {
 				trigger_event = LIDAc.3
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 8: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.8
 		trigger = {
-			scope:partner_stamina > 0
-			OR = {
-				scope:sub_transition_0 = 8
-				scope:sub_transition_1 = 8
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 8
@@ -1841,16 +1798,6 @@ LIDAs.4 = {
 		# 9: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_RUINED_ORGASM
 		name = LIDAoption.9
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			OR = {
-				scope:dom_transition_0 = 9
-				scope:dom_transition_1 = 9
-			}
-		}
-		show_as_unavailable = {
 			OR = {
 				scope:dom_transition_0 = 9
 				scope:dom_transition_1 = 9
@@ -1908,17 +1855,18 @@ LIDAs.4 = {
 				trigger_event = LIDAc.3
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 10: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM
 		name = LIDAoption.10
 		trigger = {
-			OR = {
-				scope:sub_transition_0 = 10
-				scope:sub_transition_1 = 10
-			}
-		}
-		show_as_unavailable = {
 			OR = {
 				scope:sub_transition_0 = 10
 				scope:sub_transition_1 = 10
@@ -1942,12 +1890,6 @@ LIDAs.4 = {
 		# 11: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_ON_FACE
 		name = LIDAoption.11
 		trigger = {
-			OR = {
-				scope:sub_transition_0 = 11
-				scope:sub_transition_1 = 11
-			}
-		}
-		show_as_unavailable = {
 			OR = {
 				scope:sub_transition_0 = 11
 				scope:sub_transition_1 = 11
@@ -2517,17 +2459,6 @@ LIDAs.6 = {
 		# 12: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.12
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			scope:partner_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 12
-				scope:dom_transition_1 = 12
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 12
@@ -2592,18 +2523,18 @@ LIDAs.6 = {
 				trigger_event = LIDAc.3
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 13: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.13
 		trigger = {
-			scope:partner_stamina > 0
-			OR = {
-				scope:sub_transition_0 = 13
-				scope:sub_transition_1 = 13
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 13
@@ -2634,13 +2565,6 @@ LIDAs.6 = {
 				scope:sub_transition_1 = 14
 			}
 		}
-		show_as_unavailable = {
-			scope:partner_stamina > 0
-			OR = {
-				scope:sub_transition_0 = 14
-				scope:sub_transition_1 = 14
-			}
-		}
 		save_scope_value_as = {
 			name = prev_event
 			value = 6
@@ -2659,16 +2583,6 @@ LIDAs.6 = {
 		# 15: EventsSex.BLOWJOB_SUB -> EventsCum.HANDJOB_CUM_IN_HAND
 		name = LIDAoption.15
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			OR = {
-				scope:dom_transition_0 = 15
-				scope:dom_transition_1 = 15
-			}
-		}
-		show_as_unavailable = {
 			OR = {
 				scope:dom_transition_0 = 15
 				scope:dom_transition_1 = 15
@@ -2732,17 +2646,18 @@ LIDAs.6 = {
 				trigger_event = LIDAc.3
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 16: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
 		name = LIDAoption.16
 		trigger = {
-			OR = {
-				scope:sub_transition_0 = 16
-				scope:sub_transition_1 = 16
-			}
-		}
-		show_as_unavailable = {
 			OR = {
 				scope:sub_transition_0 = 16
 				scope:sub_transition_1 = 16
@@ -2766,12 +2681,6 @@ LIDAs.6 = {
 		# 17: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_ON_FACE
 		name = LIDAoption.17
 		trigger = {
-			OR = {
-				scope:sub_transition_0 = 17
-				scope:sub_transition_1 = 17
-			}
-		}
-		show_as_unavailable = {
 			OR = {
 				scope:sub_transition_0 = 17
 				scope:sub_transition_1 = 17
@@ -3177,17 +3086,6 @@ LIDAs.7 = {
 		# 18: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.18
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			scope:partner_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 18
-				scope:dom_transition_1 = 18
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 18
@@ -3240,18 +3138,18 @@ LIDAs.7 = {
 				trigger_event = LIDAc.6
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 19: EventsSex.DEEPTHROAT -> EventsSex.DEEPTHROAT
 		name = LIDAoption.19
 		trigger = {
-			scope:partner_stamina > 0
-			OR = {
-				scope:sub_transition_0 = 19
-				scope:sub_transition_1 = 19
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 19
@@ -3276,12 +3174,6 @@ LIDAs.7 = {
 		# 20: EventsSex.DEEPTHROAT -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
 		name = LIDAoption.20
 		trigger = {
-			OR = {
-				scope:sub_transition_0 = 20
-				scope:sub_transition_1 = 20
-			}
-		}
-		show_as_unavailable = {
 			OR = {
 				scope:sub_transition_0 = 20
 				scope:sub_transition_1 = 20
@@ -3673,17 +3565,6 @@ LIDAs.2 = {
 		# 21: EventsSex.ASS_TEASE -> EventsSex.ASS_RUB
 		name = LIDAoption.21
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			scope:partner_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 21
-				scope:dom_transition_1 = 21
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 21
@@ -3736,22 +3617,18 @@ LIDAs.2 = {
 				trigger_event = LIDAc.12
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 22: EventsSex.ASS_TEASE -> EventsSex.HANDJOB
 		name = LIDAoption.22
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			scope:partner_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 22
-				scope:dom_transition_1 = 22
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 22
@@ -3804,18 +3681,18 @@ LIDAs.2 = {
 				trigger_event = LIDAc.12
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 23: EventsSex.ASS_TEASE -> EventsSex.HOTDOG
 		name = LIDAoption.23
 		trigger = {
-			scope:partner_stamina > 0
-			OR = {
-				scope:sub_transition_0 = 23
-				scope:sub_transition_1 = 23
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 23
@@ -4461,17 +4338,6 @@ LIDAs.10 = {
 		# 26: EventsSex.ASS_RUB -> EventsSex.ASS_RUB
 		name = LIDAoption.26
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			scope:partner_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 26
-				scope:dom_transition_1 = 26
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 26
@@ -4523,6 +4389,13 @@ LIDAs.10 = {
 				}
 				trigger_event = LIDAc.12
 			}
+		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
 		}
 	}
 	option = {
@@ -5400,17 +5273,6 @@ LIDAs.8 = {
 		# 31: EventsSex.HOTDOG -> EventsSex.ASS_RUB
 		name = LIDAoption.31
 		trigger = {
-			custom_tooltip = {
-				text = cant_dom_due_to_cum_tooltip
-				NOT = { scope:root_cum = yes }
-			}
-			scope:partner_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 31
-				scope:dom_transition_1 = 31
-			}
-		}
-		show_as_unavailable = {
 			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 31
@@ -5705,6 +5567,13 @@ LIDAs.8 = {
 				}
 				trigger_event = LIDAc.12
 			}
+		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
 		}
 	}
 	option = {
@@ -6442,6 +6311,13 @@ LIDAs.9 = {
 				trigger_event = LIDAc.12
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 40: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM
@@ -6520,6 +6396,13 @@ LIDAs.9 = {
 				}
 				trigger_event = LIDAc.12
 			}
+		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
 		}
 	}
 	option = {
@@ -7365,6 +7248,13 @@ LIDAs.5 = {
 				trigger_event = LIDAc.8
 			}
 		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
 	}
 	option = {
 		# 46: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB
@@ -7443,6 +7333,13 @@ LIDAs.5 = {
 				}
 				trigger_event = LIDAc.8
 			}
+		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
 		}
 	}
 	option = {
@@ -7577,6 +7474,13 @@ LIDAs.5 = {
 				}
 				trigger_event = LIDAc.8
 			}
+		}
+		if = {
+			limit = {
+				scope:root_cum = yes
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
 		}
 	}
 	option = {

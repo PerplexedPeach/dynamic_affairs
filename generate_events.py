@@ -90,6 +90,9 @@ EVERY_PRISONER = "every_prisoner"
 ADD_TO_TEMPORARY_LIST = "add_to_temporary_list"
 IS_VASSAL_OR_BELOW_OF = "is_vassal_or_below_of"
 TARGET_IS_VASSAL_OR_BELOW = "target_is_vassal_or_below"
+ADD_INTERNAL_FLAG = "add_internal_flag"
+SPECIAL = "special"
+DANGEROUS = "dangerous"
 
 CHARACTER_EVENT = "character_event"
 CHARACTER = "character"
@@ -804,28 +807,27 @@ class Sex(Event):
                     self.assign(CUSTOM_TOOLTIP, f"{option.fullname}.tt")
 
                 # for some reason show_as_unavailable is not a subset of trigger, so have to duplicate it
-                for block in [TRIGGER, SHOW_AS_UNAVAILABLE]:
-                    with Block(self, block):
-                        # cumming locks you out of any dom transitions, but only if there are some sub options to transition to
-                        if option.category == OptionCategory.DOM and len(categories_to_options[OptionCategory.SUB]) > 0:
-                            if block == TRIGGER:
-                                with Block(self, CUSTOM_TOOLTIP):
-                                    self.assign(TEXT, CANT_DOM_DUE_TO_CUM_TOOLTIP)
-                                    self.add_line(f"{NOT} = {{ {SCOPE}:{ROOT_CUM} = {YES} }}")
-                        if option.category in [OptionCategory.DOM, OptionCategory.SUB]:
-                            # non-cum options are only available if partner is not cumming
-                            if not isinstance(option.next_id, EventsCum):
-                                self.add_line(f"{PARTNER_STAMINA} > 0")
-                            trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
-                            with Block(self, OR):
-                                for choice in range(max_options_per_type):
-                                    self.assign(f"{SCOPE}:{trans_type}_{choice}", option.id)
+                with Block(self, TRIGGER):
+                    if option.category in [OptionCategory.DOM, OptionCategory.SUB]:
+                        # non-cum options are only available if partner is not cumming
+                        if not isinstance(option.next_id, EventsCum):
+                            self.add_line(f"{PARTNER_STAMINA} > 0")
+                        trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
+                        with Block(self, OR):
+                            for choice in range(max_options_per_type):
+                                self.assign(f"{SCOPE}:{trans_type}_{choice}", option.id)
 
                 # save this event
                 self.save_scope_value_as(PREV_EVENT, self.id.value)
                 # for dom options, it could backfire and get you more dommed
                 if option.category == OptionCategory.DOM:
                     self.generate_dom_option_effect(option, categories_to_options[OptionCategory.SUB])
+                    # cumming decreases dom success
+                    with Block(self, IF):
+                        with Block(self, LIMIT):
+                            self.assign(f"{SCOPE}:{ROOT_CUM}", YES)
+                        self.assign(CUSTOM_TOOLTIP, CANT_DOM_DUE_TO_CUM_TOOLTIP)
+                        self.assign(ADD_INTERNAL_FLAG, DANGEROUS)
                 elif option.category == OptionCategory.SUB:
                     self.generate_sub_option_effect(option)
                 else:

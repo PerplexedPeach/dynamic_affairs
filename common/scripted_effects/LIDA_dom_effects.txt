@@ -454,6 +454,13 @@ calculate_dom_success_effect = {
 			add = {
 				value = scope:subdom
 			}
+			# if you are in the middle of an orgasm, you'll find it hard to control the situation
+			if = {
+				limit = {
+					scope:root_cum = yes
+				}
+				add = -60
+			}
 			# sex skills - more skilled = more likely to succeed
 			# TODO this is a standin for actual, more specific sex skills; consider replacing later
 			if = {
