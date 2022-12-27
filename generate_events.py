@@ -1672,7 +1672,7 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.CREAMPIE_BEHIND, OptionCategory.SUB,
                           "Let him fill you with his seed",
                           transition_text=f"""
-                          Happy to fulfill your request, he prepares to unleash his load."""),
+                          Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
                )))
     es.add(Sex(EventsSex.HOTDOG_ON_TOP, "Get Hotdogged on Top of Him", #Added by me#
                stam_cost_1=0.5, stam_cost_2=0.75,
@@ -1766,7 +1766,7 @@ def define_sex_events(es: EventMap):
                     Option(EventsCum.CREAMPIE_BEHIND, OptionCategory.SUB,
                           "Let him fill you with his seed",
                           transition_text=f"""
-                          Happy to fulfill your request, he prepares to unleash his load."""),
+                          Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
                )))
     es.add(Sex(EventsSex.COWGIRL, "Ride Facing Them", #Added by me#
                stam_cost_1=2.5, stam_cost_2=1,
