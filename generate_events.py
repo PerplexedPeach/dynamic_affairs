@@ -793,6 +793,9 @@ class Sex(Event):
                                     self.assign(TEXT, CANT_DOM_DUE_TO_CUM_TOOLTIP)
                                     self.add_line(f"{NOT} = {{ {SCOPE}:{ROOT_CUM} = {YES} }}")
                         if option.category in [OptionCategory.DOM, OptionCategory.SUB]:
+                            # non-cum options are only available if partner is not cumming
+                            if not isinstance(option.next_id, EventsCum):
+                                self.add_line(f"{PARTNER_STAMINA} > 0")
                             trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
                             with Block(self, OR):
                                 for choice in range(max_options_per_type):

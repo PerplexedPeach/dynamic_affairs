@@ -272,12 +272,14 @@ LIDAs.1 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 1
 				scope:dom_transition_1 = 1
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 1
 				scope:dom_transition_1 = 1
@@ -328,12 +330,14 @@ LIDAs.1 = {
 		# 2: EventsSex.HANDJOB_TEASE -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.2
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 2
 				scope:sub_transition_1 = 2
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 2
 				scope:sub_transition_1 = 2
@@ -842,12 +846,14 @@ LIDAs.3 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 3
 				scope:dom_transition_1 = 3
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 3
 				scope:dom_transition_1 = 3
@@ -904,12 +910,14 @@ LIDAs.3 = {
 		# 4: EventsSex.HANDJOB -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.4
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 4
 				scope:sub_transition_1 = 4
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 4
 				scope:sub_transition_1 = 4
@@ -1613,12 +1621,14 @@ LIDAs.4 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 6
 				scope:dom_transition_1 = 6
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 6
 				scope:dom_transition_1 = 6
@@ -1685,12 +1695,14 @@ LIDAs.4 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 7
 				scope:dom_transition_1 = 7
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 7
 				scope:dom_transition_1 = 7
@@ -1753,12 +1765,14 @@ LIDAs.4 = {
 		# 8: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.8
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 8
 				scope:sub_transition_1 = 8
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 8
 				scope:sub_transition_1 = 8
@@ -2462,12 +2476,14 @@ LIDAs.6 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 12
 				scope:dom_transition_1 = 12
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 12
 				scope:dom_transition_1 = 12
@@ -2536,12 +2552,14 @@ LIDAs.6 = {
 		# 13: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.13
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 13
 				scope:sub_transition_1 = 13
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 13
 				scope:sub_transition_1 = 13
@@ -2565,12 +2583,14 @@ LIDAs.6 = {
 		# 14: EventsSex.BLOWJOB_SUB -> EventsSex.DEEPTHROAT
 		name = LIDAoption.14
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 14
 				scope:sub_transition_1 = 14
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 14
 				scope:sub_transition_1 = 14
@@ -3116,12 +3136,14 @@ LIDAs.7 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 18
 				scope:dom_transition_1 = 18
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 18
 				scope:dom_transition_1 = 18
@@ -3178,12 +3200,14 @@ LIDAs.7 = {
 		# 19: EventsSex.DEEPTHROAT -> EventsSex.DEEPTHROAT
 		name = LIDAoption.19
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 19
 				scope:sub_transition_1 = 19
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 19
 				scope:sub_transition_1 = 19
@@ -3585,12 +3609,14 @@ LIDAs.2 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 21
 				scope:dom_transition_1 = 21
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 21
 				scope:dom_transition_1 = 21
@@ -3651,12 +3677,14 @@ LIDAs.2 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 22
 				scope:dom_transition_1 = 22
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 22
 				scope:dom_transition_1 = 22
@@ -3713,12 +3741,14 @@ LIDAs.2 = {
 		# 23: EventsSex.ASS_TEASE -> EventsSex.HOTDOG
 		name = LIDAoption.23
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 23
 				scope:sub_transition_1 = 23
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 23
 				scope:sub_transition_1 = 23
@@ -4242,12 +4272,14 @@ LIDAs.10 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 25
 				scope:dom_transition_1 = 25
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 25
 				scope:dom_transition_1 = 25
@@ -4308,12 +4340,14 @@ LIDAs.10 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 26
 				scope:dom_transition_1 = 26
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 26
 				scope:dom_transition_1 = 26
@@ -4370,12 +4404,14 @@ LIDAs.10 = {
 		# 27: EventsSex.ASS_RUB -> EventsSex.HOTDOG
 		name = LIDAoption.27
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 27
 				scope:sub_transition_1 = 27
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 27
 				scope:sub_transition_1 = 27
@@ -4972,12 +5008,14 @@ LIDAs.8 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 29
 				scope:dom_transition_1 = 29
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 29
 				scope:dom_transition_1 = 29
@@ -5044,12 +5082,14 @@ LIDAs.8 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 30
 				scope:dom_transition_1 = 30
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 30
 				scope:dom_transition_1 = 30
@@ -5121,12 +5161,14 @@ LIDAs.8 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 31
 				scope:dom_transition_1 = 31
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 31
 				scope:dom_transition_1 = 31
@@ -5194,12 +5236,14 @@ LIDAs.8 = {
 		# 32: EventsSex.HOTDOG -> EventsSex.STANDING_FINGERED_FROM_BEHIND
 		name = LIDAoption.32
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 32
 				scope:sub_transition_1 = 32
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 32
 				scope:sub_transition_1 = 32
@@ -5223,12 +5267,14 @@ LIDAs.8 = {
 		# 33: EventsSex.HOTDOG -> EventsSex.STANDING_FUCKED_FROM_BEHIND
 		name = LIDAoption.33
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 33
 				scope:sub_transition_1 = 33
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 33
 				scope:sub_transition_1 = 33
@@ -5734,12 +5780,14 @@ LIDAs.9 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 35
 				scope:dom_transition_1 = 35
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 35
 				scope:dom_transition_1 = 35
@@ -5806,12 +5854,14 @@ LIDAs.9 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 36
 				scope:dom_transition_1 = 36
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 36
 				scope:dom_transition_1 = 36
@@ -5879,12 +5929,14 @@ LIDAs.9 = {
 		# 37: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.STANDING_FINGERED_FROM_BEHIND
 		name = LIDAoption.37
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 37
 				scope:sub_transition_1 = 37
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 37
 				scope:sub_transition_1 = 37
@@ -5908,12 +5960,14 @@ LIDAs.9 = {
 		# 38: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.STANDING_FUCKED_FROM_BEHIND
 		name = LIDAoption.38
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 38
 				scope:sub_transition_1 = 38
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 38
 				scope:sub_transition_1 = 38
@@ -6481,12 +6535,14 @@ LIDAs.5 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 40
 				scope:dom_transition_1 = 40
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 40
 				scope:dom_transition_1 = 40
@@ -6547,12 +6603,14 @@ LIDAs.5 = {
 				text = cant_dom_due_to_cum_tooltip
 				NOT = { scope:root_cum = yes }
 			}
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 41
 				scope:dom_transition_1 = 41
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 41
 				scope:dom_transition_1 = 41
@@ -6614,12 +6672,14 @@ LIDAs.5 = {
 		# 42: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.STANDING_FUCKED_FROM_BEHIND
 		name = LIDAoption.42
 		trigger = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 42
 				scope:sub_transition_1 = 42
 			}
 		}
 		show_as_unavailable = {
+			scope:partner_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 42
 				scope:sub_transition_1 = 42
