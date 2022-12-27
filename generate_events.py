@@ -1908,7 +1908,7 @@ def define_sex_events(es: EventMap):
                           ""),
                )))
 
-
+# TODO add chance of acquiring fetishes
 def define_cum_events(es: EventMap):
     es.add(Cum(EventsCum.HANDJOB_CUM_IN_HAND, "A Cumshot in Hand is Worth Two in the Bush",
                subdom_change=1, root_become_more_dom_chance=20,
@@ -1926,13 +1926,28 @@ def define_cum_events(es: EventMap):
     es.add(Cum(EventsCum.ASS_TEASE_CUM_ON_ASS, "Icing on the Cake",
                subdom_change=0,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean yourself and get dressed"),
-               desc=f"""
-               You don't see it as much as feel it as a splash of warmth on your ass signals the end of
+               desc=ComposedDesc(f"""
+               You don't see it as much as feel it when a few splashes of warmth land on your ass, signaling the end of
                this session. Some of it starts sliding, tracing a warm path down your legs. Others stay,
                a complement to your curves. #italic Is it normal for your thoughts to wander so quickly
-               after sex? Maybe you're just bored.#!"""
+               after sex?\\n\\n""",
+                TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
+               "Thank you for letting me feel your ass, {ME_FULL_REGNAL}", he says while gently cleaning your buns.
+               """),
+               TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 && {SCOPE}:{SUBDOM} < 10", f"""
+               "This was fun", he says while #italic clearly#! staring at your shapes.
+               """),
+               TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
+               "Let's do more next time", as you feel a sudden #sub smack on your ass#!, 
+               """),
+                                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                \\n\\n
+                Maybe they wouldn't if he'd taken some #sub initiative#! instead of being satisfied with this."""),
+                                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                \\n\\n
+                Yes, it is - their #dom petty#! desires don't deserve your full atention.""")
+                                 ),
                ))
-    # TODO add chance of acquiring fetishes
     es.add(Cum(EventsCum.BLOWJOB_CUM_ON_FACE, "Painting your Face",
                subdom_change=-2, root_become_more_sub_chance=15,
                animation_left=SHAME, animation_right=SCHEME,
@@ -2013,7 +2028,7 @@ def define_cum_events(es: EventMap):
                Perhaps fearing the consequences of impregnating you or just showing some courtesy, {THEM} pulls out just as he reaches his limit.
                He instead shoots his seed on your ass and holes, several spurts of warmth announcing the end of the session.
                 \\n\\n
-               "Wanna do this again sometime?", he says looking expectantly at you.
+               "What happens next?", he says while #italic clearly#! staring at your shapes.
                """),
                TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
                Perhaps out of courtesy or simply not wanting to impregnate you, {THEM} pulls out just as he goes past his limit.
