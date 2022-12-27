@@ -48,3 +48,34 @@ check_if_root_cum_effect = {
 		}
 	}
 }
+
+lida_start_sex_effect = {
+	# initializes parameters and optionally
+	# starts random sex sequence (at a sex source) between root and scope:affairs_partner
+	# expects the scope value scope:affairs_partner to be set to a character
+	# can have optional scope values defined including:
+	# scope:locale sets the location of the event
+
+	# inititalize staminas
+	# triggered descriptions based on current stamina
+	save_scope_value_as = {
+		name = root_stamina
+		value = max_sex_stamina
+	}
+	save_scope_value_as = {
+		name = partner_stamina
+		value = scope:affairs_partner.max_sex_stamina 
+	}		
+	
+	# if TRIGGER_RANDOM_EVENT is not set, then this effect only does initialization
+	# otherwise will trigger random source sex event
+	# randomly select a sex source event
+	if = {
+		limit = {
+			$TRIGGER_RANDOM_EVENT$ = yes
+		}
+		hidden_effect = {
+			select_random_sex_source_effect = yes
+		}
+	}
+}

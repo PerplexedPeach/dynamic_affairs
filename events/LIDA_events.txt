@@ -83,16 +83,7 @@ LIDA.50 = {
 		# engage with the selected character
 		name = LIDA.50.a
 		custom_tooltip = LIDA.50.a.tt
-		# inititalize staminas
-		# triggered descriptions based on current stamina
-		save_scope_value_as = {
-			name = root_stamina
-			value = max_sex_stamina
-		}
-		save_scope_value_as = {
-			name = partner_stamina
-			value = scope:affairs_partner.max_sex_stamina 
-		}
+		lida_start_sex_effect = { TRIGGER_RANDOM_EVENT = no }
 		select_start_affairs_effect = yes
 	}
 	option = {
@@ -429,23 +420,11 @@ LIDA.101 = {
 			name = locale
 			value = flag:bedchamber
 		}
-		# inititalize staminas
-		# triggered descriptions based on current stamina
-		save_scope_value_as = {
-			name = root_stamina
-			value = max_sex_stamina
-		}
-		save_scope_value_as = {
-			name = partner_stamina
-			value = scope:affairs_partner.max_sex_stamina 
-		}
+
 	}
 	option = {
 		# engage with the selected character
 		name = LIDA.101.a
-		# randomly select a sex source event
-		hidden_effect = {
-			select_random_sex_source_effect = yes
-		}
+		lida_start_sex_effect = { TRIGGER_RANDOM_EVENT = yes }
 	}
 }

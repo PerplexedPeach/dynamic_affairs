@@ -35,7 +35,40 @@ want to code a little bit (just in python, no need to touch paradox script), the
 12. submit pull request on the github page for your fork
 13. I'll review the fork then merge or give feedback
 
-## Event Writing Guide
+## Event Modding Guide
+You can contribute by adding events of various types:
+1. sex events (see below) that are part of dynamic sex scenes
+2. events that lead to a sex scene, triggered from some `on_action` or a decision
+3. events that refer to the traits, modifiers, opinions, and so on generated from this framework
+
+### Creating Events Leading to a Sex Scene
+For events of type 2, you need to know how to trigger a sex scene and what parameters are available.
+The most basic requirement is that you must define the `affairs_partner` character. e.g. in a character scope,
+```
+			save_scope_as = affairs_partner
+```
+
+You can then trigger a sex scene with the effect
+```
+		lida_start_sex_effect = { TRIGGER_RANDOM_EVENT = yes }
+```
+
+This will initiate a random source sex scene (sex scene with no other sex scenes leading to it other than itself).
+If you set `TRIGGER_RANDOM_EVENT = no` then all the effect does is some initialization, where you then need to
+trigger the first sex event yourself, such as directly through `trigger_event = LIDAs.1`, or `select_random_sex_source_effect = yes`
+
+### Locale
+The locale is the location of the sex scene (dungeon, bedchamber, corridor, ...). See the full list below.
+You can save `locale` as a scope value before starting the sex scene, such as through
+```
+		save_scope_value_as = {
+			name = locale
+			value = flag:study
+		}
+```
+
+## Sex Event Writing Guide
+Sex events are a special form of highly structured events. 
 All code is inside `generate_events.py`.
 You'll care mostly about the `EventSex`, `EventCum` enums at the top of the file which has the IDs for all types
 of events. It's pretty straightforward, and you should just follow the existing event conventions.
