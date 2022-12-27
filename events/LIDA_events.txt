@@ -172,6 +172,23 @@ LIDA.3 = {
 	}
 }
 
+# testing of yearly pulse
+LIDA.4 = {
+	type = character_event
+	title = LIDA.4.t
+	theme = seduction
+	desc = {
+		desc = LIDA.4.desc
+	}
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	option = {
+		name = LIDA.4.a
+		trigger_event = { on_action = lida_yearly_random_player_pulse }
+	}
+}
 
 # Random passive events
 LIDA.100 = {
@@ -426,5 +443,142 @@ LIDA.101 = {
 		# engage with the selected character
 		name = LIDA.101.a
 		lida_start_sex_effect = { TRIGGER_RANDOM_EVENT = yes }
+	}
+}
+
+LIDA.110 = {
+	# someone sneaks into your room
+	type = character_event
+	title = LIDA.110.t
+	desc = {
+		desc = LIDA.110.desc
+		# triggered description with triggered_desc
+	}
+	trigger = {
+		OR = {
+			has_trait = lida_sub_2
+			has_trait = lida_sub_3
+		}
+	}
+	# probably can use a custom theme
+	theme = seduction
+	override_background = {
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+	}
+	# select affairs partner
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:bedchamber
+		}
+		get_characters_eligible_partner_effect = {
+			LISTNAME = affairs_pool
+			RESTRICTED_LISTNAME = rejected_affairs_pool
+		}
+		# find someone who can pay and is interested
+		random_in_list = {
+			list = affairs_pool
+			limit = {
+				NOT = {
+					is_in_list = rejected_affairs_pool
+				}
+				NOR = {
+					has_trait = celibate
+					has_sexuality = asexual
+				}
+				# prisoners don't have the freedom to proposition you
+				is_imprisoned = no
+				age >= 18
+			}
+			save_temporary_scope_as = affairs_candidate
+			weight = {
+				base = 50
+				# add based on attraction
+				modifier = {
+					add = {
+						value = attraction
+						divide = high_positive_attraction
+						multiply = 50
+					}
+				}
+
+				# more likely if they are dom
+				modifier = {
+					factor = 1.2
+					has_trait = lida_dom_1
+				}
+				modifier = {
+					factor = 1.5
+					has_trait = lida_dom_2
+				}
+				modifier = {
+					factor = 2.0
+					has_trait = lida_dom_3
+				}
+
+				# more likely if they are bold
+				modifier = {
+					add = {
+						value = ai_boldness
+						divide = dominant_positive_ai_value
+						multiply = 50
+					}
+				}
+			}
+			save_scope_as = affairs_partner
+		}
+		store_subdom_value_effect = yes
+		lida_start_sex_effect = {TRIGGER_RANDOM_EVENT = no}
+		check_if_root_cum_effect = yes
+		calculate_dom_success_effect = yes
+	}
+	# create acceptance option for prostitutes (different ones for each tier, with just the flavor being different)
+	option = {
+		name = LIDA.110.a
+		custom_tooltip = voluntary_sub_tooltip
+		trait = lida_sub_2
+		trait = lida_sub_3
+		# starts right into it (get fingered from behind)
+		trigger_event = LIDAs.9
+	}
+	option = {
+		# rejection not guaranteed! It's a dom action so you can fail
+		# reject and be offended
+		name = LIDA.110.b
+		custom_tooltip = attempt_dom_tooltip
+		save_temporary_scope_value_as = {
+			name = this_dom_chance
+			value = {
+				add = scope:dom_chance
+				add = 0
+			}
+		}
+		if = {
+			limit = {
+				scope:dom_success <= scope:this_dom_chance
+			}
+			change_subdom_effect = {
+				CHANGE = 1
+			}
+			add_opinion = {
+				modifier = offer_offended_opinion
+				target = scope:affairs_partner
+			}
+		}
+		else = {
+			change_subdom_effect = {
+				CHANGE = -2
+			}
+			# you fail and we go to the next event anyway
+			trigger_event = LIDAs.9
+		}
 	}
 }

@@ -67,6 +67,13 @@ You can save `locale` as a scope value before starting the sex scene, such as th
 		}
 ```
 
+Note the locales currently used:
+```python
+    POSSIBLE_BACKGROUNDS = ["battlefield", "alley_night", "alley_day", "temple", "corridor_night", "corridor_day",
+                            "courtyard", "dungeon", "docks", "feast", "market", "tavern", "throne_room", "garden",
+                            "gallows", "bedchamber", "study", "council_chamber", "sitting_room"]
+```
+
 ## Sex Event Writing Guide
 Sex events are a special form of highly structured events. 
 All code is inside `generate_events.py`.
