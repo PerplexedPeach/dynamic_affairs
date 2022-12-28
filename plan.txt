@@ -251,10 +251,10 @@ questions
 
 
 TODO
-- add in triggered events that are alternatives to LIDA.50 for an affair (somewhere you're passive)
-	- vassal goes to a brothel but is instead inspired to sample you instead (everything has a price - they must have lots of money)
 - connect Carnalitas fetish system
-- easy system for triggered description (e.g. based on subdom value)
+- switch transitions to Desc
+- use current health to replace the herculean trait checks for sex stamina
+- use prowess instead of trait checks for dom success
 
 TODO long term
 - add sex skills

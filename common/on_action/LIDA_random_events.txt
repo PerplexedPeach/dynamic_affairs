@@ -13,12 +13,10 @@ lida_yearly_random_player_pulse = {
 		debug_log_scopes = yes
 	}
 	random_events = {
-		chance_to_happen = 75
-		chance_of_no_event = {
-			value = 0
-		}
+		chance_to_happen = 100
 
 		100 = LIDA.100 # an affairs partner propositions money to you
 		200 = LIDA.110 # your outward submissive tendencies encourages a partner to sneak into your room
+		100 = LIDA.120 # someone you dom decides to cum in your shoes
 	} 
 }

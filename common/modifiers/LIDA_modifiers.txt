@@ -1,0 +1,15 @@
+﻿sexually_frustrated = {
+	icon = sexually_frustrated
+	stewardship = -1
+	diplomacy = -1
+	prowess = 2
+	stress_loss_mult = -0.2
+}
+
+wearing_cummy_clothes = {
+	icon = cummy_clothes
+	monthly_prestige = -0.5
+	dread_decay_mult = 0.3
+	attraction_opinion = 10
+	stress_loss_mult = 0.1
+}

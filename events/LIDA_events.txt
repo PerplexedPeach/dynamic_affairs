@@ -582,3 +582,128 @@ LIDA.110 = {
 		}
 	}
 }
+
+# TODO followup event next pulse if you decide to wear the cummed clothing
+LIDA.120 = {
+	# someone you dom cums in your shoes
+	type = character_event
+	title = LIDA.120.t
+	desc = {
+		desc = LIDA.120.desc
+		# triggered description with triggered_desc
+	}
+	trigger = {
+		any_affair_candidate_trigger = { TRIGGER = you_dom_them }
+	}
+	# probably can use a custom theme
+	theme = seduction
+	override_background = {
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = disgust
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = shock
+	}
+	# select affairs partner
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:bedchamber
+		}
+		get_characters_eligible_partner_effect = {
+			LISTNAME = affairs_pool
+			RESTRICTED_LISTNAME = rejected_affairs_pool
+		}
+		# find someone who can pay and is interested
+		random_in_list = {
+			list = affairs_pool
+			limit = {
+				# prisoners don't have the freedom to proposition you
+				is_imprisoned = no
+				age >= 18
+				you_dom_them = yes
+			}
+			save_temporary_scope_as = affairs_candidate
+			weight = {
+				base = 50
+
+				# more likely if they are sexually frustrated
+				modifier = {
+					add = 100
+					has_character_modifier = sexually_frustrated
+				}
+
+				# more likely if they are bold
+				modifier = {
+					add = {
+						value = ai_boldness
+						divide = dominant_positive_ai_value
+						multiply = 50
+					}
+				}
+			}
+			save_scope_as = affairs_partner
+		}
+	}
+	option = {
+		# subtly agitates people to cum in your clothing more since you're sub and like it
+		name = LIDA.120.a
+		trigger = {
+			has_trait = lida_sub
+		}
+		trait = lida_sub_1
+		trait = lida_sub_2
+		trait = lida_sub_3
+		add_character_modifier = {
+			modifier = wearing_cummy_clothes
+			years = 5
+		}
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = grateful_opinion
+			opinion = 30
+		}
+		scope:affairs_partner = {
+			remove_character_modifier = sexually_frustrated
+		}
+		change_subdom_effect = {
+			CHANGE = -2
+		}
+	}
+	option = {
+		# ignores this behavior and consider them as pathetic
+		name = LIDA.120.b
+		add_character_modifier = {
+			modifier = wearing_cummy_clothes
+			years = 1
+		}
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = grateful_opinion
+			opinion = 15
+		}
+		scope:affairs_partner = {
+			remove_character_modifier = sexually_frustrated
+		}
+		change_subdom_effect = {
+			CHANGE = -1
+		}
+	}
+	option = {
+		# disgusted by them then verbally abuse them
+		name = LIDA.120.c
+		add_prestige = minor_prestige_gain
+		add_opinion = {
+			target = scope:affairs_partner
+			modifier = disgusted_opinion
+			opinion = -20
+		}
+		change_subdom_effect = {
+			CHANGE = 1
+		}
+	}
+}

@@ -1,0 +1,35 @@
+﻿# pass in TRIGGER = a locally defined scripted trigger to evaluate on all
+any_affair_candidate_trigger = {
+	OR = {
+		liege = { 
+			$TRIGGER$ = yes
+		}
+		cp:councillor_court_chaplain = { 
+			$TRIGGER$ = yes
+		}
+		primary_spouse = { 
+			$TRIGGER$ = yes
+		}
+		any_normal_councillor = {
+			$TRIGGER$ = yes
+		}
+		any_powerful_vassal = {
+			$TRIGGER$ = yes
+		}
+		any_knight = {
+			$TRIGGER$ = yes
+		}
+		any_relation = {
+			type = lover
+			$TRIGGER$ = yes
+		}
+	}
+}
+
+you_dom_them = {
+	has_opinion_modifier = {
+		target = root
+		modifier = dominant_opinion
+		value >= 10
+	}
+}

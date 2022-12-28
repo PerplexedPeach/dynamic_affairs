@@ -32,10 +32,10 @@ class EventsSex(enum.Enum):
     HOTDOG = 8
     STANDING_FINGERED_FROM_BEHIND = 9
     ASS_RUB = 10
-    REVERSE_COWGIRL = 11 
-    COWGIRL = 12 
-    MISSIONARY = 13 
-    PRONE_BONE = 14 
+    REVERSE_COWGIRL = 11
+    COWGIRL = 12
+    MISSIONARY = 13
+    PRONE_BONE = 14
 
 
 class EventsCum(enum.Enum):
@@ -43,17 +43,19 @@ class EventsCum(enum.Enum):
     BLOWJOB_CUM_IN_MOUTH_DOM = 2
     BLOWJOB_CUM_IN_MOUTH_SUB = 6
     BLOWJOB_CUM_ON_FACE = 3
-    BLOWJOB_RUINED_ORGASM = 4
+    RUINED_ORGASM = 4
     ASS_TEASE_CUM_ON_ASS = 5
-    CUM_ON_GROIN = 12 
+    CUM_ON_GROIN = 12
     PULL_OUT_CUM_ON_ASS = 7
     CREAMPIE_BEHIND = 8
-    CREAMPIE_ON_TOP = 9 
-    CREAMPIE_BRED = 10 
-    CREAMPIE_KEEP = 11 
+    CREAMPIE_ON_TOP = 9
+    CREAMPIE_BRED = 10
+    CREAMPIE_KEEP = 11
 
 
 # alias for any event type
+
+
 EventId = typing.Union[EventsFirst, EventsSex, EventsCum]
 
 # common keywords (avoid and catch typos)
@@ -92,6 +94,8 @@ TARGET_IS_VASSAL_OR_BELOW = "target_is_vassal_or_below"
 ADD_INTERNAL_FLAG = "add_internal_flag"
 SPECIAL = "special"
 DANGEROUS = "dangerous"
+ADD_CHARACTER_MODIFIER = "add_character_modifier"
+YEARS = "years"
 
 CHARACTER_EVENT = "character_event"
 CHARACTER = "character"
@@ -232,16 +236,20 @@ WRITER = "throne_room_writer"
 IDLE = "idle"
 FLIRTATION = "flirtation"
 FLIRTATION_LEFT = "flirtation_left"
-HAPPINESS = "happiness" 
-PREGNANT = "pregnant" 
-PERSONALITY_IRRATIONAL = "personality_irrational" 
-WAR_ATTACKER = "war_attacker" 
-WAR_OVER_WIN = "war_over_win" 
-WAR_OVER_LOSE = "war_over_lose" 
-CHESS_COCKY = "chess_cocky" 
-CHESS_CERTAIN_WIN = "chess_certain_win" 
-FEAR = "fear" 
-EYEROLL = "eyeroll" 
+HAPPINESS = "happiness"
+PREGNANT = "pregnant"
+PERSONALITY_IRRATIONAL = "personality_irrational"
+WAR_ATTACKER = "war_attacker"
+WAR_OVER_WIN = "war_over_win"
+WAR_OVER_LOSE = "war_over_lose"
+CHESS_COCKY = "chess_cocky"
+CHESS_CERTAIN_WIN = "chess_certain_win"
+FEAR = "fear"
+EYEROLL = "eyeroll"
+
+# modifiers
+SEXUALLY_FRUSTRATED = "sexually_frustrated"
+WEARING_CUMMY_CLOTHING = "wearing_cummy_clothing"
 
 
 def yes_no(boolean: bool):
@@ -293,6 +301,11 @@ class BlockRoot:
         return "\n".join(self._lines)
 
 
+class Effect:
+    def __call__(self, b: BlockRoot):
+        pass
+
+
 class Event(BlockRoot):
     """Vertices in a scene graph, each corresponding to a specific scene"""
 
@@ -309,7 +322,7 @@ class Event(BlockRoot):
                  custom_desc: typing.Optional[typing.Callable] = None,
                  # chance for this event to rank up dom/sub (always opposite, but in a separate roll for the partner)
                  root_become_more_sub_chance=0, root_become_more_dom_chance=0,
-                 custom_immediate_effect: typing.Optional[typing.Callable] = None):
+                 custom_immediate_effect: typing.Optional[Effect] = None):
         self.id = eid
         self.title = title
         if isinstance(desc, str):
@@ -1272,6 +1285,13 @@ def define_sex_events(es: EventMap):
                           Looking up, you spot a look of anticipation on {THEM}'s face. 
                           They were probably not expecting you to volunteer your mouth's service.
                           They start moving a hand to place behind your head, but you swat it away."""),
+                   Option(EventsCum.RUINED_ORGASM, OptionCategory.DOM,
+                          "Deny his release",
+                          transition_text=f"""
+                          You abruptly stop your jerking motion and slap his cock, 
+                          disrupting the build up to his climax.""",
+                          failed_transition_text=f"""
+                          You move to stop his climax, but realize that he did not last as long as you expected."""),
                    Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.SUB,
                           "Milk him into your soft palms",
                           subdom_sub=0,
@@ -1316,7 +1336,7 @@ def define_sex_events(es: EventMap):
                           \\n\\n
                           Instead of wasting words, he places both hands behind your head and starts thrusting."""),
                    # TODO make these options more likely if you are addicted to cum
-                   Option(EventsCum.BLOWJOB_RUINED_ORGASM, OptionCategory.DOM,
+                   Option(EventsCum.RUINED_ORGASM, OptionCategory.DOM,
                           "Cruelly deny him his release",
                           transition_text=f"""
                           You pull back and slap his rod, disrupting the build up to his climax.""",
@@ -1870,6 +1890,34 @@ def define_sex_events(es: EventMap):
                           ""),
                )))
 
+
+class Modifier:
+    def __init__(self, modifier: str, duration: typing.Optional[str] = None, root=True):
+        self.modifier = modifier
+        self.duration = duration
+        self.root = root
+
+
+class AddModifier(Effect):
+    def __init__(self, *args: Modifier):
+        self.modifiers = args
+
+    def __call__(self, b: BlockRoot):
+        for mod in self.modifiers:
+            if mod.root:
+                self.assign_single_mod(b, mod)
+            else:
+                with Block(b, AFFAIRS_PARTNER):
+                    self.assign_single_mod(b, mod)
+
+    @staticmethod
+    def assign_single_mod(b: BlockRoot, mod: Modifier):
+        with Block(b, ADD_CHARACTER_MODIFIER):
+            b.assign(MODIFIER, mod.modifier)
+            if mod.duration:
+                b.add_line(mod.duration)
+
+
 # TODO add chance of acquiring fetishes
 def define_cum_events(es: EventMap):
     es.add(Cum(EventsCum.HANDJOB_CUM_IN_HAND, "A Cumshot in Hand is Worth Two in the Bush",
@@ -1962,7 +2010,7 @@ def define_cum_events(es: EventMap):
                You #sub gulp audibly and take it all down#!.
                """
                ))
-    es.add(Cum(EventsCum.BLOWJOB_RUINED_ORGASM, "A Firm Grasp on His Release",
+    es.add(Cum(EventsCum.RUINED_ORGASM, "A Firm Grasp on His Release",
                subdom_change=2, root_become_more_dom_chance=35,
                animation_left=DISMISSAL, animation_right=BEG,
                terminal_option=Option(None, OptionCategory.OTHER, "Leave him yearning and frustrated"),
@@ -1974,7 +2022,8 @@ def define_cum_events(es: EventMap):
                "Please, I'm so close," he whines.
                \\n\\n
                "You didn't earn it today," you respond, "maybe next time #dom if you please me.#!"
-               """
+               """,
+               custom_immediate_effect=AddModifier(Modifier(SEXUALLY_FRUSTRATED, duration=f"{YEARS} = 1", root=False))
                ))
     es.add(Cum(EventsCum.PULL_OUT_CUM_ON_ASS, "More Icing on the Cake",
                subdom_change=-1,
