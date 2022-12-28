@@ -405,7 +405,7 @@ LIDAc.5 = {
 					scope:sex_transition = 24
 				}
 				# Ass Tease
-				# You manage to guide his stream onto your buns.\n
+				# You manage to guide his stream onto your cheeks.\n
 				desc = sex_transition_24
 			}
 			triggered_desc = {
@@ -414,7 +414,7 @@ LIDAc.5 = {
 					scope:sex_transition = 29
 				}
 				# Ass Rub
-				# You manage to guide his stream onto your buns.\n
+				# You manage to guide his stream onto your cheeks.\n
 				desc = sex_transition_29
 			}
 			triggered_desc = {
@@ -423,7 +423,7 @@ LIDAc.5 = {
 					scope:sex_transition = 37
 				}
 				# Get Hotdogged
-				# You manage to guide his stream onto your buns.\n
+				# You manage to guide his stream onto your cheeks.\n
 				desc = sex_transition_37
 			}
 			triggered_desc = {
@@ -432,7 +432,7 @@ LIDAc.5 = {
 					scope:sex_transition = 43
 				}
 				# Fingered from Behind
-				# You manage to guide his stream onto your buns.\n
+				# You manage to guide his stream onto your cheeks.\n
 				desc = sex_transition_43
 			}
 			triggered_desc = {
@@ -459,7 +459,7 @@ LIDAc.5 = {
 					scope:sex_transition = 10024
 				}
 				# 24: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_10024
 			}
 			triggered_desc = {
@@ -486,7 +486,7 @@ LIDAc.5 = {
 					scope:sex_transition = 10029
 				}
 				# 29: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_10029
 			}
 			triggered_desc = {
@@ -531,7 +531,7 @@ LIDAc.5 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -558,7 +558,7 @@ LIDAc.5 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_10043
 			}
 		}
@@ -1963,11 +1963,11 @@ LIDAc.7 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10070
+					scope:sex_transition = 10069
 				}
-				# 70: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
+				# 69: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_10070
+				desc = sex_transition_10069
 			}
 			triggered_desc = {
 				trigger = {
@@ -2310,7 +2310,7 @@ LIDAc.12 = {
 					scope:sex_transition = 10024
 				}
 				# 24: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_10024
 			}
 			triggered_desc = {
@@ -2337,7 +2337,7 @@ LIDAc.12 = {
 					scope:sex_transition = 10029
 				}
 				# 29: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_10029
 			}
 			triggered_desc = {
@@ -2382,7 +2382,7 @@ LIDAc.12 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -2409,7 +2409,7 @@ LIDAc.12 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_10043
 			}
 		}
@@ -3144,16 +3144,23 @@ LIDAc.9 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:subdom > 10
+				scope:subdom > -10 
+scope:subdom < 10
 			}
 			desc = LIDAc.9.desc.2
 		}
-		desc = LIDAc.9.desc.3
+		triggered_desc = {
+			trigger = {
+				scope:subdom > 10
+			}
+			desc = LIDAc.9.desc.3
+		}
+		desc = LIDAc.9.desc.4
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.9.desc.4
+			desc = LIDAc.9.desc.5
 		}
 	}
 	immediate = {
@@ -3186,7 +3193,7 @@ LIDAc.9 = {
 	}
 }
 LIDAc.10 = {
-	# CREAMPIE_BRED: Something to Remember Me By
+	# CREAMPIE_BRED: Something to Remember Him By
 	type = character_event
 	title = LIDAc.10.t
 	theme = seduction
@@ -3333,11 +3340,11 @@ LIDAc.10 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 69
+					scope:sex_transition = 70
 				}
 				# Lie on Back
-				# His rod gets even harder as his relentless pounding reaches your deepest spot, your mind #bold overwhelmed#! with euphoria.\n
-				desc = sex_transition_69
+				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
+				desc = sex_transition_70
 			}
 			triggered_desc = {
 				trigger = {
@@ -3345,7 +3352,7 @@ LIDAc.10 = {
 					scope:sex_transition = 74
 				}
 				# Lie Face Down
-				# His rod gets even harder as his relentless pounding reaches your deepest spot, your mind #bold overwhelmed#! by the euphoria.\n
+				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
 				desc = sex_transition_74
 			}
 			triggered_desc = {
@@ -3369,11 +3376,11 @@ LIDAc.10 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10070
+					scope:sex_transition = 10069
 				}
-				# 70: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
+				# 69: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_10070
+				desc = sex_transition_10069
 			}
 			triggered_desc = {
 				trigger = {
@@ -3401,8 +3408,8 @@ LIDAc.10 = {
 				exists = scope:prev_event
 				scope:prev_event = 13
 			}
-			# defaulted to 69: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_BRED
-			desc = sex_transition_69
+			# defaulted to 70: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_BRED
+			desc = sex_transition_70
 		}
 		triggered_desc = {
 			trigger = {
@@ -3428,57 +3435,87 @@ LIDAc.10 = {
 			}
 			desc = LIDAc.10.desc.2
 		}
-		desc = LIDAc.10.desc.3
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub 
+ NOT = { has_trait =pregnant }
+			}
+			desc = LIDAc.10.desc.3
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub 
+ has_trait = pregnant
+			}
+			desc = LIDAc.10.desc.4
+		}
+		desc = LIDAc.10.desc.5
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 10
 			}
-			desc = LIDAc.10.desc.4
+			desc = LIDAc.10.desc.6
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 20
 			}
-			desc = LIDAc.10.desc.5
+			desc = LIDAc.10.desc.7
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom > -10 
 scope:subdom < 10
 			}
-			desc = LIDAc.10.desc.6
+			desc = LIDAc.10.desc.8
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.10.desc.7
+			desc = LIDAc.10.desc.9
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -20
 			}
-			desc = LIDAc.10.desc.8
+			desc = LIDAc.10.desc.10
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.10.desc.9
+			desc = LIDAc.10.desc.11
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom 
  NOT = { has_trait =pregnant }
 			}
-			desc = LIDAc.10.desc.10
+			desc = LIDAc.10.desc.12
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom 
  has_trait = pregnant
 			}
-			desc = LIDAc.10.desc.11
+			desc = LIDAc.10.desc.13
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = { has_trait =pregnant } 
+ NOT = { has_trait =lida_sub } 
+ NOT = { has_trait =lida_dom }
+			}
+			desc = LIDAc.10.desc.14
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait =pregnant 
+ NOT = { has_trait =lida_sub } 
+ NOT = { has_trait =lida_dom }
+			}
+			desc = LIDAc.10.desc.15
 		}
 	}
 	immediate = {
@@ -3495,12 +3532,12 @@ scope:subdom < 10
 			DRAMA = yes
 		}
 		random = {
-			chance = 30
+			chance = 60
 			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
-				chance = 30
+				chance = 60
 				become_more_dom_effect = yes
 			}
 		}
@@ -3658,11 +3695,11 @@ LIDAc.11 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 70
+					scope:sex_transition = 69
 				}
 				# Lie on Back
 				# You wrap your legs and arms around him...\n
-				desc = sex_transition_70
+				desc = sex_transition_69
 			}
 			triggered_desc = {
 				trigger = {
@@ -3685,11 +3722,11 @@ LIDAc.11 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10070
+					scope:sex_transition = 10069
 				}
-				# 70: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
+				# 69: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_10070
+				desc = sex_transition_10069
 			}
 		}
 		triggered_desc = {
@@ -3699,8 +3736,8 @@ LIDAc.11 = {
 				exists = scope:prev_event
 				scope:prev_event = 13
 			}
-			# defaulted to 70: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP
-			desc = sex_transition_70
+			# defaulted to 69: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP
+			desc = sex_transition_69
 		}
 		triggered_desc = {
 			trigger = {
@@ -3711,22 +3748,28 @@ LIDAc.11 = {
 		desc = LIDAc.11.desc.0
 		triggered_desc = {
 			trigger = {
-				scope:subdom < 10
+				scope:subdom >= 10
 			}
 			desc = LIDAc.11.desc.1
 		}
-		desc = LIDAc.11.desc.2
+		triggered_desc = {
+			trigger = {
+				scope:subdom < 10
+			}
+			desc = LIDAc.11.desc.2
+		}
+		desc = LIDAc.11.desc.3
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.11.desc.3
+			desc = LIDAc.11.desc.4
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.11.desc.4
+			desc = LIDAc.11.desc.5
 		}
 	}
 	immediate = {
