@@ -2134,7 +2134,7 @@ def define_cum_events(es: EventMap):
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                Your body brimming with anticipation as you softly say: "Y-you can do it again if you want". You #bold #sub want#!#! him to do it again, \\n"""),
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-               Is the #dom privilege#! of experiencing your body not enough?! How #dom dare#! he release in you whenever he wishes
+               Is the #dom privilege#! of experiencing your body not enough?! How #dom dare#! he release inside you whenever he wishes
                 like in some #italic random peasant girl?!#!"""),
                                  ),
                ))
