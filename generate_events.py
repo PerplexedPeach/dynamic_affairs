@@ -2204,7 +2204,7 @@ def define_cum_events(es: EventMap):
                """),
                TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10 \n{HAS_TRAIT} = {LIDA_SUB}", f"""
                \\n\\n"Come again sometime", you say with a #italic #sub smile#!#!. He #sub smacks#! your ass with a grin,
-                inserting two fingers for a moment before starting to dress.  
+                running two fingers along your slit before starting to dress.  
                """),
                
                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
