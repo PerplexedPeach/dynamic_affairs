@@ -1882,7 +1882,7 @@ LIDAc.7 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 69
 				}
-				# Lie on Your Back
+				# Lie on Back
 				# "Not inside!" you barely blurt out between moans and labored breaths.\n
 				desc = sex_transition_69.0
 			}
@@ -3238,7 +3238,7 @@ LIDAc.9 = {
 	}
 }
 LIDAc.10 = {
-	# CREAMPIE_BRED: Tightly Packed
+	# CREAMPIE_BRED: Something to Remember Me By
 	type = character_event
 	title = LIDAc.10.t
 	theme = seduction
@@ -3387,7 +3387,7 @@ LIDAc.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 70
 				}
-				# Lie on Your Back
+				# Lie on Back
 				# His rod gets even harder as his relentless pounding reaches your deepest spot, your mind #bold overwhelmed#! with euphoria.\n
 				desc = sex_transition_70.0
 			}
@@ -3517,6 +3517,20 @@ scope:subdom < 10
 				has_trait = lida_dom
 			}
 			desc = LIDAc.10.desc.9
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom 
+ NOT = { has_trait =pregnant }
+			}
+			desc = LIDAc.10.desc.10
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom 
+ has_trait = pregnant
+			}
+			desc = LIDAc.10.desc.11
 		}
 	}
 	immediate = {
@@ -3698,7 +3712,7 @@ LIDAc.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 71
 				}
-				# Lie on Your Back
+				# Lie on Back
 				# You wrap your legs and arms around him...\n
 				desc = sex_transition_71.0
 			}

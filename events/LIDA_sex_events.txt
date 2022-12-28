@@ -8608,7 +8608,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 66
 				}
-				# Lie on Your Back
+				# Lie on Back
 				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and push him sideways with all your strength, landing on top of him.\n
 				desc = sex_transition_66.0
 			}
@@ -9374,7 +9374,7 @@ LIDAs.12 = {
 	}
 }
 LIDAs.13 = {
-	# MISSIONARY: Lie on Your Back
+	# MISSIONARY: Lie on Back
 	type = character_event
 	title = LIDAs.13.t
 	theme = seduction
@@ -9532,7 +9532,7 @@ LIDAs.13 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 67
 				}
-				# Lie on Your Back
+				# Lie on Back
 				# You keep your legs up, letting [affairs_partner.GetFirstName] continue nailing you from above.\n
 				desc = sex_transition_67.0
 			}
@@ -10364,7 +10364,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 68
 				}
-				# Lie on Your Back
+				# Lie on Back
 				# You find yourself rolled onto your belly, your opening at [affairs_partner.GetFirstName]'s mercy.\n
 				desc = sex_transition_68.0
 			}
