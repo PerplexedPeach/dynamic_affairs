@@ -32,11 +32,10 @@ class EventsSex(enum.Enum):
     HOTDOG = 8
     STANDING_FINGERED_FROM_BEHIND = 9
     ASS_RUB = 10
-    HOTDOG_ON_TOP = 11 #Added by me#
-    REVERSE_COWGIRL = 12 #Added by me#
-    COWGIRL = 13 #Added by me#
-    MISSIONARY = 14 #Added by me#
-    PRONE_BONE = 15 #Added by me#
+    REVERSE_COWGIRL = 11 
+    COWGIRL = 12 
+    MISSIONARY = 13 
+    PRONE_BONE = 14 
 
 
 class EventsCum(enum.Enum):
@@ -46,12 +45,12 @@ class EventsCum(enum.Enum):
     BLOWJOB_CUM_ON_FACE = 3
     BLOWJOB_RUINED_ORGASM = 4
     ASS_TEASE_CUM_ON_ASS = 5
-    CUM_ON_GROIN = 12 #Added by me#
+    CUM_ON_GROIN = 12 
     PULL_OUT_CUM_ON_ASS = 7
     CREAMPIE_BEHIND = 8
-    CREAMPIE_ON_TOP = 9 #Added by me#
-    CREAMPIE_BRED = 10 #Added by me#
-    CREAMPIE_KEEP = 11 #Added by me#
+    CREAMPIE_ON_TOP = 9 
+    CREAMPIE_BRED = 10 
+    CREAMPIE_KEEP = 11 
 
 
 # alias for any event type
@@ -157,7 +156,7 @@ CHARACTER_1 = "CHARACTER_1"
 CHARACTER_2 = "CHARACTER_2"
 C1_PREGNANCY_CHANCE = "C1_PREGNANCY_CHANCE"
 C2_PREGNANCY_CHANCE = "C2_PREGNANCY_CHANCE"
-PREGNANCY_CHANCE = 30  # basic value #Added by me# replaced base value with 30 because it was doing weird stuff otherwise
+PREGNANCY_CHANCE = 30  # basic value  replaced base value with 30 because it was doing weird stuff otherwise
 STRESS_EFFECTS = "STRESS_EFFECTS"
 DRAMA = "DRAMA"
 
@@ -233,16 +232,16 @@ WRITER = "throne_room_writer"
 IDLE = "idle"
 FLIRTATION = "flirtation"
 FLIRTATION_LEFT = "flirtation_left"
-HAPPINESS = "happiness" #Added by me#
-PREGNANT = "pregnant" #Added by me#
-PERSONALITY_IRRATIONAL = "personality_irrational" #Added by me#
-WAR_ATTACKER = "war_attacker" #Added by me#
-WAR_OVER_WIN = "war_over_win" #Added by me#
-WAR_OVER_LOSE = "war_over_lose" #Added by me#
-CHESS_COCKY = "chess_cocky" #Added by me#
-CHESS_CERTAIN_WIN = "chess_certain_win" #Added by me#
-FEAR = "fear" #Added by me#
-EYEROLL = "eyeroll" #Added by me#
+HAPPINESS = "happiness" 
+PREGNANT = "pregnant" 
+PERSONALITY_IRRATIONAL = "personality_irrational" 
+WAR_ATTACKER = "war_attacker" 
+WAR_OVER_WIN = "war_over_win" 
+WAR_OVER_LOSE = "war_over_lose" 
+CHESS_COCKY = "chess_cocky" 
+CHESS_CERTAIN_WIN = "chess_certain_win" 
+FEAR = "fear" 
+EYEROLL = "eyeroll" 
 
 
 def yes_no(boolean: bool):
@@ -1254,7 +1253,7 @@ def define_sex_events(es: EventMap):
                           They start moving a hand to place behind your head, but you swat it away."""),
                )))
     es.add(Sex(EventsSex.HANDJOB, "Handjob",
-               stam_cost_1=-1, stam_cost_2=1,
+               stam_cost_1=-0.5, stam_cost_2=1,
                root_become_more_dom_chance=5,
                partner_removes_clothes=True,
                desc=f"""
@@ -1452,9 +1451,9 @@ def define_sex_events(es: EventMap):
                     Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him cum on your cheeks",
                           transition_text=f"""
-                          Your manage to guide his stream to land on your buns.""",
+                          You manage to guide his stream onto your buns.""",
                           failed_transition_text=f"""
-                          You try to guide his stream to land on your buns, but he is cumming too hard to control"""),
+                          You try to guide his stream onto your buns, but he is cumming too hard to control"""),
                    Option(EventsCum.CUM_ON_GROIN, OptionCategory.SUB,
                           "Let him cum all over on your groin",
                           subdom_sub=0,
@@ -1492,9 +1491,9 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him cum on your cheeks",
                           transition_text=f"""
-                          Your manage to guide his stream to land on your buns.""",
+                          You manage to guide his stream onto your buns.""",
                           failed_transition_text=f"""
-                          You try to guide his stream to land on your buns, but he is cumming too hard to control"""),
+                          You try to guide his stream onto your buns, but he is cumming too hard to control"""),
                    Option(EventsCum.CUM_ON_GROIN, OptionCategory.SUB,
                           "Let him cum all over your groin",
                           subdom_sub=0,
@@ -1526,11 +1525,11 @@ def define_sex_events(es: EventMap):
                           failed_transition_text=f"""
                           Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it 
                           would feel like to him thrust inside you."""),
-                   Option(EventsSex.HOTDOG_ON_TOP, OptionCategory.DOM, #Added by me#
-                          "Get on top of him and continue to get him off with your ass",
+                   Option(EventsSex.REVERSE_COWGIRL, OptionCategory.DOM, 
+                          "Get on top and ride him facing away",
                           dom_success_adjustment=10,
                           transition_text=f"""
-                          You push your groin backwards, forcing him to the ground as you keep him between your cheeks.""",
+                          You push your groin backwards, forcing him to the ground as you get his rod inside you.""",
                           failed_transition_text=f"""
                           You push your groin backwards, trying to force him to the ground, but instead are met with sudden pleasure as you feel {THEM} grab and enter you."""),
                    Option(EventsSex.BLOWJOB_DOM, OptionCategory.DOM,
@@ -1557,17 +1556,17 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him cum on your cheeks",
                           transition_text=f"""
-                          Your manage to guide his stream to land on your buns.""",
+                          You manage to guide his stream onto your buns.""",
                           failed_transition_text=f"""
-                          You try to guide his stream to land on your buns, but he is climaxing too hard to control"""),
+                          You try to guide his stream onto your buns, but he is climaxing too hard to control"""),
                    Option(EventsCum.CUM_ON_GROIN, OptionCategory.SUB,
                           "Let him cum all over your groin",
                           subdom_sub=0,
                           transition_text=f"""
-                          you feel his dick twitch between your cheeks, alerting you of his impending climax.""")
+                          You feel his dick twitch between your cheeks, alerting you of his impending climax.""")
                )))
-    es.add(Sex(EventsSex.STANDING_FINGERED_FROM_BEHIND, "Fingered from Behind", #Added by me# just in case stam2 cost will ever not be 0
-               stam_cost_1=1, stam_cost_2=0,
+    es.add(Sex(EventsSex.STANDING_FINGERED_FROM_BEHIND, "Fingered from Behind",
+               stam_cost_1=1, stam_cost_2=-0.5,
                root_become_more_sub_chance=5,
                root_removes_clothes=True,
                animation_right=SCHADENFREUDE,
@@ -1604,9 +1603,9 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him cum on your cheeks",
                           transition_text=f"""
-                          Your manage to guide his stream to land on your buns.""",
+                          You manage to guide his stream onto your buns.""",
                           failed_transition_text=f"""
-                          You try to guide his stream to land on your buns, but he is climaxing too hard to control"""),
+                          You try to guide his stream onto your buns, but he is climaxing too hard to control"""),
                    Option(EventsCum.CUM_ON_GROIN, OptionCategory.SUB,
                           "Let him cum all over your groin",
                           subdom_sub=0,
@@ -1647,8 +1646,7 @@ def define_sex_events(es: EventMap):
                           doesn't break their rhythm.""",
                           failed_transition_text=f"""
                           You attempt to extricate yourself with gravity's assistance. However, he grabs your arms
-                          and hoists you up, giving you a few sharp thrusts while spanking you
-                          as punishment for trying to escape."""),
+                          and pulls you back, giving you a few sharp thrusts while as punishment for trying to escape."""),
                    Option(EventsSex.STANDING_FUCKED_FROM_BEHIND, OptionCategory.SUB,
                           "Submit to getting plowed",
                           transition_text=f"""
@@ -1656,73 +1654,30 @@ def define_sex_events(es: EventMap):
                           coherent thoughts. Instead, your mind is filled with a pink haze, urging you to just accept
                           the pleasure of being used like a piece of meat.
                           """),
-                   Option(EventsSex.PRONE_BONE, OptionCategory.SUB, #Added by me#
+                   Option(EventsSex.PRONE_BONE, OptionCategory.SUB, 
                           "Submit to getting plowed facing down",
                           transition_text=f"""
-                          You accept his invasion, each thrust making it harder and harder to pull away and form
-                          coherent thoughts. Your legs weaken and you fall to the floor as your mind is filled with a pink haze,
-                          urging you to just accept the pleasure of being used like a piece of meat.
+                          Your legs weaken as you fall to the floor, {THEM} immediately following you down as he 
+                          takes advantage of the opportunity to #sub dominate#! you. You try to prepare yourself for 
+                          the #bold intense#! pounding that you're about to recieve.
                           """), 
                    Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him pull out and cum on your ass",
                           transition_text=f"""
-                          "Not inside!" you barely blurt out between moans and labored breaths.""",
+                          "Pull it out, {THEM}!", you just manage to say between his thrusts and groans.""",
                           failed_transition_text=f"""
-                          "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears."""),
+                          "Pull it out, {THEM}!", you just manage to say between his thrusts and groans, but your pleas falls on deaf ears."""),
                    Option(EventsCum.CREAMPIE_BEHIND, OptionCategory.SUB,
                           "Let him fill you with his seed",
                           transition_text=f"""
                           Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
                )))
-    es.add(Sex(EventsSex.HOTDOG_ON_TOP, "Get Hotdogged on Top of Him", #Added by me#
-               stam_cost_1=0.5, stam_cost_2=0.75,
-               root_removes_clothes=True, partner_removes_clothes=True,
-               desc=f"""
-               You lay back and relax as his cock repeatedly parts your cheeks. He holds your arms
-               to keep you from sliding away during his thrusts, which you allow.
-               """,
-               options=(
-                   Option(EventsSex.HOTDOG_ON_TOP, OptionCategory.DOM,
-                          "Continue to get him off with your ass",
-                          dom_success_adjustment=10,
-                          transition_text=f"""
-                          You enjoy the sensation of controlling his pleasure with just your butt, without having
-                          to resort to any penetration.""",
-                          failed_transition_text=f"""
-                          Your thoughts are occupied by his vigorous thrusts and you don't even notice when he
-                          gets up from under you."""),
-                   Option(EventsSex.COWGIRL, OptionCategory.DOM,
-                          "Get on Top Facing Him",
-                          dom_success_adjustment=5,
-                          transition_text=f"""
-                          You push {THEM} to the ground and plunge him hilt-deep into your slit.""",
-                          failed_transition_text=f"""
-                          You attempt to push him to the ground with your body, but are met with pleasure as {THEM} gets up,
-                           running his rod along your crack while holding you tightly."""),
-                   Option(EventsSex.HOTDOG, OptionCategory.SUB,
-                          "Get up and let him rub against your ass",
-                          transition_text=f"""
-                          He picks you up and aligns his hips with yours then begins running his rod along your crack,
-                          slightly slipping inside occasionally.
-                          """),
-                   Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.DOM,
-                          "Have him cum on your cheeks",
-                          transition_text=f"""
-                          Your manage to guide his stream to land on your buns.""",
-                          failed_transition_text=f"""
-                          You try to guide his stream to land on your buns, but he is climaxing too hard to control"""),
-                   Option(EventsCum.CUM_ON_GROIN, OptionCategory.SUB,
-                          "Let him cum all over your groin",
-                          subdom_sub=0,
-                          transition_text=f"""
-                          you feel his dick twitch between your cheeks, alerting you of his impending climax.""")
-               )))
-    es.add(Sex(EventsSex.REVERSE_COWGIRL, "Ride Facing Away", #Added by me#
+    es.add(Sex(EventsSex.REVERSE_COWGIRL, "Ride Facing Away", 
                stam_cost_1=3, stam_cost_2=1.5,
                root_become_more_dom_chance=15,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
-               You close your eyes as your hips hungrily dance around {THEME} shaft, #bold shaking#! with pleasure.
+               You close your eyes as your hips hungrily dance around {THEM}'s shaft, #bold shaking#! with pleasure.
                """, TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
                Your senses focus on the hard meat in you, using it with precision to scratch itches no man could ever even #dom hope#! to understand.
                """), TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
@@ -1768,8 +1723,8 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
                )))
-    es.add(Sex(EventsSex.COWGIRL, "Ride Facing Them", #Added by me#
-               stam_cost_1=2.5, stam_cost_2=1,
+    es.add(Sex(EventsSex.COWGIRL, "Ride Facing Them", 
+               stam_cost_1=2.0, stam_cost_2=1,
                root_become_more_dom_chance=10,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
@@ -1795,11 +1750,11 @@ def define_sex_events(es: EventMap):
                           failed_transition_text=f"""
                           You begin to turn your back towards him, but your legs feel weak and {THEM} doesn't miss his opportunity to take the lead and guide your next move.
                           """),
-                   Option(EventsSex.HOTDOG_ON_TOP, OptionCategory.SUB,
+                   Option(EventsSex.HOTDOG, OptionCategory.SUB,
                           "Pull out to recover from his thrusting",
                           dom_success_adjustment=10,
                           transition_text=f"""
-                          {THEM} twitches backwards, his rod now between your buns, as he almost escapes from under you.""",),
+                          {THEM} twitches backwards, managing to get up, as he escapes from under you.""",),
                    Option(EventsSex.MISSIONARY, OptionCategory.SUB,
                           "Lie on your back and let him pound you",
                           transition_text=f"""
@@ -1817,14 +1772,14 @@ def define_sex_events(es: EventMap):
                           ),
                    
                )))
-    es.add(Sex(EventsSex.MISSIONARY, "Lie on Your Back", #Added by me#
-               stam_cost_1=2.5, stam_cost_2=2,
+    es.add(Sex(EventsSex.MISSIONARY, "Lie on Your Back", 
+               stam_cost_1=2.0, stam_cost_2=1.5,
                root_become_more_sub_chance=10,
                animation_left=FLIRTATION_LEFT, animation_right=FLIRTATION_LEFT,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
                You lie there, legs on his shoulders, each of {THEM}'s vigorous thrusts slapping loudly against your cheeks as
-               waves of pleasure course through your core.\\nYou can hardly control yourself
+               waves of pleasure course through your core.\\nYou have nearly no control over your body
                """,
                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                 and you wish you had even #sub less#!"""),
@@ -1832,10 +1787,10 @@ def define_sex_events(es: EventMap):
                 and you #dom hate#! that it feels this good anyway"""), "."
                ),
                options=(
-                   Option(EventsSex.HOTDOG_ON_TOP, OptionCategory.DOM,
+                   Option(EventsSex.COWGIRL, OptionCategory.DOM,
                           "Roll with him",
                           transition_text=f"""
-                          You grab {THEM} as he's recovering from a thrust and push him sideways with all your strength, landing on top of him""",
+                          You grab {THEM} as he's recovering from a thrust and push him sideways with all your strength, landing on top of him.""",
                           failed_transition_text=f"""
                           You grab {THEM} as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.
                           """),
@@ -1865,7 +1820,7 @@ def define_sex_events(es: EventMap):
                           failed_transition_text=f"""
                           You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on."""),
                )))
-    es.add(Sex(EventsSex.PRONE_BONE, "Lie Face Down", #Added by me#
+    es.add(Sex(EventsSex.PRONE_BONE, "Lie Face Down", 
                stam_cost_1=3, stam_cost_2=2.5,
                root_become_more_sub_chance=15,
                animation_left=FLIRTATION_LEFT, animation_right=FLIRTATION_LEFT,
@@ -1898,9 +1853,9 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him pull out and cum on your ass",
                           transition_text=f"""
-                          "Not inside!" you barely blurt out between moans and labored breaths.""",
+                          "P-Pull out!" you shakingly say as his pounding nearly drives you senseless.""",
                           failed_transition_text=f"""
-                          "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears."""),
+                          "P-Pull out!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears."""),
                    Option(EventsCum.CREAMPIE_BRED, OptionCategory.SUB,
                           "Get filled to the brim",
                           transition_text=f"""
@@ -2043,7 +1998,7 @@ def define_cum_events(es: EventMap):
                 \\n\\n"Good boy", you say as you #dom pat#! him on the head. "I might just have you over again when I need something", you say with a smirk.""")
                                  ),
                ))
-    es.add(Cum(EventsCum.CUM_ON_GROIN, "Coated in White", #Added by me#
+    es.add(Cum(EventsCum.CUM_ON_GROIN, "Coated in White", 
                subdom_change=-1,
                root_become_more_sub_chance=5,
                preg_chance_1=PREGNANCY_CHANCE * 0.01,
@@ -2083,7 +2038,7 @@ def define_cum_events(es: EventMap):
                How #S dare#! he blow his load inside after you gave him the #dom priviledge#! of entering you."""),
                                  ),
                ))
-    es.add(Cum(EventsCum.CREAMPIE_ON_TOP, "Cherry on Top", #Added by me#
+    es.add(Cum(EventsCum.CREAMPIE_ON_TOP, "Cherry on Top", 
                subdom_change= 3,
                root_become_more_dom_chance=30,
                preg_chance_1= PREGNANCY_CHANCE,
@@ -2105,7 +2060,7 @@ def define_cum_events(es: EventMap):
                You stare intently into his eyes, knowing he couldn't have stopped you from #dom taking#! his seed no matter how hard he tried - so #dom you did#!.""")
                                  ),
                ))
-    es.add(Cum(EventsCum.CREAMPIE_BRED, "Tightly Packed", #Added by me#
+    es.add(Cum(EventsCum.CREAMPIE_BRED, "Tightly Packed", 
                subdom_change= -3,
                root_become_more_sub_chance=30,
                preg_chance_1= PREGNANCY_CHANCE * 1.5,
@@ -2143,7 +2098,7 @@ def define_cum_events(es: EventMap):
                How #S #dom dare#!#! he do that to #S you#!!?""",),
                                  ),
                ))
-    es.add(Cum(EventsCum.CREAMPIE_KEEP, "Taking It Home", #Added by me#
+    es.add(Cum(EventsCum.CREAMPIE_KEEP, "Taking It Home", 
                subdom_change= 1,
                root_become_more_dom_chance=20,
                preg_chance_1= PREGNANCY_CHANCE * 2,

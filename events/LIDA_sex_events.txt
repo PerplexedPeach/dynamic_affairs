@@ -606,7 +606,7 @@ LIDAs.3 = {
 					scope:sex_transition = 10024
 				}
 				# 24: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10024
 			}
 			triggered_desc = {
@@ -633,7 +633,7 @@ LIDAs.3 = {
 					scope:sex_transition = 10029
 				}
 				# 29: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10029
 			}
 		}
@@ -739,7 +739,7 @@ LIDAs.3 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = -1
+			STAMINA_COST_1 = -0.5
 			STAMINA_COST_2 = 1
 		}
 		check_if_root_cum_effect = yes
@@ -1270,7 +1270,7 @@ LIDAs.4 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -1297,7 +1297,7 @@ LIDAs.4 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10043
 			}
 			triggered_desc = {
@@ -1315,7 +1315,7 @@ LIDAs.4 = {
 					scope:sex_transition = 10046
 				}
 				# 46: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts while as punishment for trying to escape.\n
 				desc = sex_transition_10046
 			}
 			triggered_desc = {
@@ -1324,7 +1324,7 @@ LIDAs.4 = {
 					scope:sex_transition = 10049
 				}
 				# 49: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Pull it out, [affairs_partner.GetFirstName]!", you just manage to say between his thrusts and groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10049
 			}
 		}
@@ -2160,7 +2160,7 @@ LIDAs.6 = {
 					scope:sex_transition = 10046
 				}
 				# 46: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts while as punishment for trying to escape.\n
 				desc = sex_transition_10046
 			}
 			triggered_desc = {
@@ -2169,7 +2169,7 @@ LIDAs.6 = {
 					scope:sex_transition = 10049
 				}
 				# 49: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Pull it out, [affairs_partner.GetFirstName]!", you just manage to say between his thrusts and groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10049
 			}
 		}
@@ -3996,7 +3996,7 @@ LIDAs.10 = {
 					scope:sex_transition = 10024
 				}
 				# 24: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10024
 			}
 			triggered_desc = {
@@ -4023,7 +4023,7 @@ LIDAs.10 = {
 					scope:sex_transition = 10029
 				}
 				# 29: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10029
 			}
 			triggered_desc = {
@@ -4068,7 +4068,7 @@ LIDAs.10 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 		}
@@ -4778,7 +4778,7 @@ LIDAs.8 = {
 					scope:sex_transition = 10024
 				}
 				# 24: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10024
 			}
 			triggered_desc = {
@@ -4805,7 +4805,7 @@ LIDAs.8 = {
 					scope:sex_transition = 10029
 				}
 				# 29: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10029
 			}
 			triggered_desc = {
@@ -4850,7 +4850,7 @@ LIDAs.8 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -4877,7 +4877,7 @@ LIDAs.8 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10043
 			}
 			triggered_desc = {
@@ -4904,7 +4904,7 @@ LIDAs.8 = {
 					scope:sex_transition = 10054
 				}
 				# 54: EventsSex.HOTDOG_ON_TOP -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10054
 			}
 		}
@@ -5881,7 +5881,7 @@ LIDAs.9 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -5908,7 +5908,7 @@ LIDAs.9 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10043
 			}
 		}
@@ -5985,7 +5985,7 @@ LIDAs.9 = {
 	immediate = {
 		lida_ongoing_sex_effect = {
 			STAMINA_COST_1 = 1
-			STAMINA_COST_2 = 0
+			STAMINA_COST_2 = -0.5
 		}
 		check_if_root_cum_effect = yes
 		store_subdom_value_effect = yes
@@ -6683,7 +6683,7 @@ LIDAs.5 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -6710,7 +6710,7 @@ LIDAs.5 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10043
 			}
 			triggered_desc = {
@@ -6728,7 +6728,7 @@ LIDAs.5 = {
 					scope:sex_transition = 10046
 				}
 				# 46: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts while as punishment for trying to escape.\n
 				desc = sex_transition_10046
 			}
 			triggered_desc = {
@@ -6737,7 +6737,7 @@ LIDAs.5 = {
 					scope:sex_transition = 10049
 				}
 				# 49: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Pull it out, [affairs_partner.GetFirstName]!", you just manage to say between his thrusts and groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10049
 			}
 			triggered_desc = {
@@ -7527,15 +7527,6 @@ LIDAs.11 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 69
-				}
-				# Lie on Your Back
-				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and push him sideways with all your strength, landing on top of him\n
-				desc = sex_transition_69
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
 					scope:sex_transition = 10031
 				}
 				# 31: EventsSex.HOTDOG -> EventsSex.ASS_RUB failed
@@ -7575,7 +7566,7 @@ LIDAs.11 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -7602,7 +7593,7 @@ LIDAs.11 = {
 					scope:sex_transition = 10054
 				}
 				# 54: EventsSex.HOTDOG_ON_TOP -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10054
 			}
 			triggered_desc = {
@@ -7631,33 +7622,6 @@ LIDAs.11 = {
 				# 67: EventsSex.COWGIRL -> EventsCum.PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
 				desc = sex_transition_10067
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10069
-				}
-				# 69: EventsSex.MISSIONARY -> EventsSex.HOTDOG_ON_TOP failed
-				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
-				desc = sex_transition_10069
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10072
-				}
-				# 72: EventsSex.MISSIONARY -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
-				desc = sex_transition_10072
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10074
-				}
-				# 74: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
-				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_10074
 			}
 		}
 		triggered_desc = {
@@ -7689,16 +7653,6 @@ LIDAs.11 = {
 			}
 			# defaulted to 65: EventsSex.COWGIRL -> EventsSex.HOTDOG_ON_TOP
 			desc = sex_transition_65
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 14
-			}
-			# defaulted to 69: EventsSex.MISSIONARY -> EventsSex.HOTDOG_ON_TOP
-			desc = sex_transition_69
 		}
 		first_valid = {
 			triggered_desc = {
@@ -9206,6 +9160,15 @@ LIDAs.13 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 69
+				}
+				# Lie on Your Back
+				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and push him sideways with all your strength, landing on top of him.\n
+				desc = sex_transition_69
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 10051
 				}
 				# 51: EventsSex.HOTDOG_ON_TOP -> EventsSex.HOTDOG_ON_TOP failed
@@ -9227,7 +9190,7 @@ LIDAs.13 = {
 					scope:sex_transition = 10054
 				}
 				# 54: EventsSex.HOTDOG_ON_TOP -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream to land on your buns, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10054
 			}
 			triggered_desc = {
@@ -9284,6 +9247,33 @@ LIDAs.13 = {
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
 				desc = sex_transition_10067
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10069
+				}
+				# 69: EventsSex.MISSIONARY -> EventsSex.COWGIRL failed
+				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
+				desc = sex_transition_10069
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10072
+				}
+				# 72: EventsSex.MISSIONARY -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				desc = sex_transition_10072
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10074
+				}
+				# 74: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
+				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
+				desc = sex_transition_10074
+			}
 		}
 		triggered_desc = {
 			trigger = {
@@ -9314,6 +9304,16 @@ LIDAs.13 = {
 			}
 			# defaulted to 63: EventsSex.COWGIRL -> EventsSex.COWGIRL
 			desc = sex_transition_63
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 14
+			}
+			# defaulted to 69: EventsSex.MISSIONARY -> EventsSex.COWGIRL
+			desc = sex_transition_69
 		}
 		first_valid = {
 			triggered_desc = {
@@ -9379,7 +9379,7 @@ LIDAs.13 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = 2.5
+			STAMINA_COST_1 = 2.0
 			STAMINA_COST_2 = 1
 		}
 		check_if_root_cum_effect = yes
@@ -10058,7 +10058,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10069
 				}
-				# 69: EventsSex.MISSIONARY -> EventsSex.HOTDOG_ON_TOP failed
+				# 69: EventsSex.MISSIONARY -> EventsSex.COWGIRL failed
 				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
 				desc = sex_transition_10069
 			}
@@ -10095,7 +10095,7 @@ LIDAs.14 = {
 					scope:sex_transition = 10077
 				}
 				# 77: EventsSex.PRONE_BONE -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "P-Pull out!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10077
 			}
 		}
@@ -10194,14 +10194,14 @@ LIDAs.14 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = 2.5
-			STAMINA_COST_2 = 2
+			STAMINA_COST_1 = 2.0
+			STAMINA_COST_2 = 1.5
 		}
 		check_if_root_cum_effect = yes
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# HOTDOG_ON_TOP
+			# COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -10233,7 +10233,7 @@ LIDAs.14 = {
 			}
 		}
 		random_list = {
-			# HOTDOG_ON_TOP
+			# COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -10389,7 +10389,7 @@ LIDAs.14 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 69: EventsSex.MISSIONARY -> EventsSex.HOTDOG_ON_TOP
+		# 69: EventsSex.MISSIONARY -> EventsSex.COWGIRL
 		name = LIDAoption.69
 		trigger = {
 			scope:partner_stamina > 0
@@ -10421,7 +10421,7 @@ LIDAs.14 = {
 				name = sex_transition
 				value = 69
 			}
-			trigger_event = LIDAs.11
+			trigger_event = LIDAs.13
 		}
 		else = {
 			change_subdom_effect = {
@@ -10819,7 +10819,7 @@ LIDAs.15 = {
 					scope:sex_transition = 48
 				}
 				# Standing Fucked from Behind
-				# You accept his invasion, each thrust making it harder and harder to pull away and form coherent thoughts. Your legs weaken and you fall to the floor as your mind is filled with a pink haze, urging you to just accept the pleasure of being used like a piece of meat.\n
+				# Your legs weaken as you fall to the floor, [affairs_partner.GetFirstName] immediately following you down as he takes advantage of the opportunity to #sub dominate#! you. You try to prepare yourself for the #bold intense#! pounding that you're about to recieve.\n
 				desc = sex_transition_48
 			}
 			triggered_desc = {
@@ -10864,7 +10864,7 @@ LIDAs.15 = {
 					scope:sex_transition = 10046
 				}
 				# 46: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and hoists you up, giving you a few sharp thrusts while spanking you as punishment for trying to escape.\n
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts while as punishment for trying to escape.\n
 				desc = sex_transition_10046
 			}
 			triggered_desc = {
@@ -10873,7 +10873,7 @@ LIDAs.15 = {
 					scope:sex_transition = 10049
 				}
 				# 49: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "Pull it out, [affairs_partner.GetFirstName]!", you just manage to say between his thrusts and groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10049
 			}
 			triggered_desc = {
@@ -10908,7 +10908,7 @@ LIDAs.15 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10069
 				}
-				# 69: EventsSex.MISSIONARY -> EventsSex.HOTDOG_ON_TOP failed
+				# 69: EventsSex.MISSIONARY -> EventsSex.COWGIRL failed
 				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
 				desc = sex_transition_10069
 			}
@@ -10945,7 +10945,7 @@ LIDAs.15 = {
 					scope:sex_transition = 10077
 				}
 				# 77: EventsSex.PRONE_BONE -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				# "P-Pull out!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10077
 			}
 		}
