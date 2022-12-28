@@ -657,13 +657,13 @@ LIDAc.5 = {
 		desc = LIDAc.5.desc.0
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_sub
+				has_trait = lida_dom
 			}
 			desc = LIDAc.5.desc.1
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_dom
+				has_trait = lida_sub
 			}
 			desc = LIDAc.5.desc.2
 		}
@@ -684,6 +684,18 @@ LIDAc.5 = {
 				scope:subdom <= -10
 			}
 			desc = LIDAc.5.desc.5
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.5.desc.6
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.5.desc.7
 		}
 	}
 	immediate = {

@@ -1931,19 +1931,23 @@ def define_cum_events(es: EventMap):
                this session. Some of it starts sliding, tracing a warm path down your legs. Others stay,
                a complement to your curves. #italic Is it normal for your thoughts to wander so quickly
                after sex?#!""", 
-                                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
-                #italic Maybe they wouldn't if he'd taken some #sub initiative#! instead of being satisfied with this.#!"""),
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
                 #italic Yes, it is - their #dom petty#! desires don't deserve your full atention.#!"""),
-                TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-               \\n\\n"Thank you for letting me feel your ass, {ME_FULL_REGNAL}", {THEM} says while gently cleaning your buns.
+                                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                #italic Maybe they wouldn't if he'd taken some #sub initiative#! instead of being satisfied with this.#!"""),  
+                                TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
+               \\n\\n"Thank you for letting me touch your ass, {ME_FULL_REGNAL}", {THEM} says while gently cleaning your buns.
                """),
-               TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 && {SCOPE}:{SUBDOM} < 10", f"""
+                                TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 && {SCOPE}:{SUBDOM} < 10", f"""
                \\n\\n"This was fun", {THEM} says while #italic clearly#! staring at your shapes.
                """),
-               TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
-               \\n\\n"Let's do more next time", {THEM} says as you feel a sudden #sub smack on your ass#!, 
+                                TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
+               \\n\\n"Let's do more next time", {THEM} says as you feel a sudden #sub smack on your ass#!. 
                """),
+                                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                \\n\\nYou can't help but #dom chuckle#! to yourself at his reaction."""),
+                                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                \\n\\nYou wish his reaction would have been more... #sub intense#!, at least."""), 
                                  ),
                ))
     es.add(Cum(EventsCum.BLOWJOB_CUM_ON_FACE, "Painting your Face",
