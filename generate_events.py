@@ -1988,7 +1988,7 @@ def define_cum_events(es: EventMap):
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                 #italic Maybe they wouldn't if he'd taken some #sub initiative#! instead of being satisfied with this.#!"""),  
                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-               \\n\\n"Thank you for letting me feel your, {ME_FULL_REGNAL}", {THEM} says while eagerly cleaning you up.
+               \\n\\n"Thank you for letting my manhood feel your buns, {ME_FULL_REGNAL}", {THEM} says while devotedly cleaning you up.
                """),
                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                \\n\\n"This was fun", {THEM} says enthusiastically while #italic clearly#! staring at your shapes yearningly.
@@ -2077,13 +2077,13 @@ def define_cum_events(es: EventMap):
                 TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
                Fearing the consequences of impregnating you, {THEM} pulls out just before he goes past his limit.
                He instead shoots his seed on your ass, several spurts of warmth announcing the end of the session. \\n\\n
-               "Thank you for this gift, {ME_FULL_REGNAL}", he says while eagerly cleaning you up.
+               "It iss a privilege to satisfy the needs of your womb, {ME_FULL_REGNAL}", he says while devotedly cleaning you up.
                """),
                TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                Perhaps fearing the consequences of impregnating you or just showing some courtesy, {THEM} pulls out just as he reaches his limit.
                He instead shoots his seed on your ass and holes, several spurts of warmth announcing the end of the session.
                 \\n\\n
-               "What happens next?", he says while #italic clearly#! staring at your shapes.
+               "What happens next?", he says while #italic clearly#! staring at your shapes with a lustful gaze.
                """),
                TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
                Perhaps out of courtesy or simply not wanting to impregnate you, {THEM} pulls out just as he goes past his limit.
@@ -2134,7 +2134,7 @@ def define_cum_events(es: EventMap):
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                "Y-you can do it again if you want", you say softly. You #bold #sub want#!#! him to do it again.\\n"""),
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-               How #S dare#! he blow his load inside after you let him have the #dom priviledge#! of being inside you?!"""),
+               How #S dare#! he not pull out after you let him have the #dom privilege#! of being inside you?!"""),
                                  ),
                ))
     es.add(Cum(EventsCum.CREAMPIE_ON_TOP, "Cherry on Top", 
