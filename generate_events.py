@@ -1930,22 +1930,20 @@ def define_cum_events(es: EventMap):
                You don't see it as much as feel it when a few splashes of warmth land on your ass, signaling the end of
                this session. Some of it starts sliding, tracing a warm path down your legs. Others stay,
                a complement to your curves. #italic Is it normal for your thoughts to wander so quickly
-               after sex?\\n\\n""",
+               after sex?#!""", 
+                                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                #italic Maybe they wouldn't if he'd taken some #sub initiative#! instead of being satisfied with this.#!"""),
+                                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                #italic Yes, it is - their #dom petty#! desires don't deserve your full atention.#!"""),
                 TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-               "Thank you for letting me feel your ass, {ME_FULL_REGNAL}", he says while gently cleaning your buns.
+               \\n\\n"Thank you for letting me feel your ass, {ME_FULL_REGNAL}", {THEM} says while gently cleaning your buns.
                """),
                TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 && {SCOPE}:{SUBDOM} < 10", f"""
-               "This was fun", he says while #italic clearly#! staring at your shapes.
+               \\n\\n"This was fun", {THEM} says while #italic clearly#! staring at your shapes.
                """),
                TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
-               "Let's do more next time", as you feel a sudden #sub smack on your ass#!, 
+               \\n\\n"Let's do more next time", {THEM} says as you feel a sudden #sub smack on your ass#!, 
                """),
-                                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
-                \\n\\n
-                Maybe they wouldn't if he'd taken some #sub initiative#! instead of being satisfied with this."""),
-                                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-                \\n\\n
-                Yes, it is - their #dom petty#! desires don't deserve your full atention.""")
                                  ),
                ))
     es.add(Cum(EventsCum.BLOWJOB_CUM_ON_FACE, "Painting your Face",
@@ -1953,7 +1951,7 @@ def define_cum_events(es: EventMap):
                animation_left=SHAME, animation_right=SCHEME,
                terminal_option=Option(None, OptionCategory.OTHER, "Sample some stray globs of cum"),
                desc=ComposedDesc(f"""
-               You look up and brace yourself for what's the come. When the first drop hits your face,
+               You look up and brace yourself for what's to come. When the first drop hits your face,
                you flinch and instinctively close your eyes, which was fortunate as you feel a glob
                land on your eyelids.
                \\n\\n""",

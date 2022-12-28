@@ -657,31 +657,31 @@ LIDAc.5 = {
 		desc = LIDAc.5.desc.0
 		triggered_desc = {
 			trigger = {
-				scope:subdom >= 10
+				has_trait = lida_sub
 			}
 			desc = LIDAc.5.desc.1
 		}
 		triggered_desc = {
 			trigger = {
-				scope:subdom > -10 && scope:subdom < 10
+				has_trait = lida_dom
 			}
 			desc = LIDAc.5.desc.2
 		}
 		triggered_desc = {
 			trigger = {
-				scope:subdom <= -10
+				scope:subdom >= 10
 			}
 			desc = LIDAc.5.desc.3
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_sub
+				scope:subdom > -10 && scope:subdom < 10
 			}
 			desc = LIDAc.5.desc.4
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_dom
+				scope:subdom <= -10
 			}
 			desc = LIDAc.5.desc.5
 		}
