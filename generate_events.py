@@ -2077,7 +2077,7 @@ def define_cum_events(es: EventMap):
                 TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
                Fearing the consequences of impregnating you, {THEM} pulls out just before he goes past his limit.
                He instead shoots his seed on your ass, several spurts of warmth announcing the end of the session. \\n\\n
-               "It iss a privilege to satisfy the needs of your womb, {ME_FULL_REGNAL}", he says while devotedly cleaning you up.
+               "It is a privilege to satisfy your womb's needs, {ME_FULL_REGNAL}", he says while devotedly cleaning you up.
                """),
                TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                Perhaps fearing the consequences of impregnating you or just showing some courtesy, {THEM} pulls out just as he reaches his limit.
