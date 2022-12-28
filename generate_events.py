@@ -1308,13 +1308,16 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           Under the interminable strokes from your hand, {THEM}'s cock has 
                           fully hardened. Dew-like pre dribbles from the tip, lubricating the whole shaft.""",
-                          failed_transition_text="You're too turned on to be satisfied with just jerking him off"),
+                          failed_transition_text= f"""{THEM} wants more than your hands, so he #sub takes#! something #italic wetter#!."""
+                          #ComposedDesc(
+                          #TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
+                          #   You're too turned on to be satisfied with just jerking him off!"""),
+                          #TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                          #    {THEM} wants more than your hands, so he #sub takes#! something #italic wetter#!."""), "."
+                            ),
                    Option(EventsSex.BLOWJOB_DOM, OptionCategory.SUB,
                           "Kneel down and take him in your mouth",
-                          transition_text=f"""
-                          Looking up, you spot a look of anticipation on {THEM}'s face. 
-                          They were probably not expecting you to volunteer your mouth's service.
-                          They start moving a hand to place behind your head, but you swat it away."""),
+                          transition_text=f"""You get on your knees, taking him in your mouth."""),
                    Option(EventsCum.RUINED_ORGASM, OptionCategory.DOM,
                           "Deny his release",
                           transition_text=f"""
@@ -1322,11 +1325,20 @@ def define_sex_events(es: EventMap):
                           disrupting the build up to his climax.""",
                           failed_transition_text=f"""
                           You move to stop his climax, but realize that he did not last as long as you expected."""),
-                   Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.SUB,
+                   Option(EventsCum.HANDJOB_CUM_IN_HAND, OptionCategory.DOM,
                           "Milk him into your soft palms",
                           subdom_sub=0,
                           transition_text=f"""
-                          You place your open palm below his cock, ready to receive his seed.""")
+                          You place your open palm below his cock, ready to receive his seed.""",
+                          failed_transition_text=f"""
+                          You place your open palm below his cock, ready to receive his seed,
+                          but his tip seems to be pointing elsewhere...""",
+                          ),
+                   Option(EventsCum.BLOWJOB_CUM_ON_FACE, OptionCategory.SUB,
+                          "Make him coat your face in cum",
+                          transition_text=f"""
+                          You pull away and look up, preparing for him to mark your face.""",
+                          ),
                )))
     es.add(Sex(EventsSex.BLOWJOB_DOM, "Dom Blowjob",
                stam_cost_1=0.5, stam_cost_2=2,
@@ -1648,8 +1660,8 @@ def define_sex_events(es: EventMap):
                    Option(EventsSex.STANDING_FUCKED_FROM_BEHIND, OptionCategory.SUB,
                           "Let him fuck you proper",
                           transition_text=f"""
-                          Surrendering to pleasure and wanting more, you reach down to guide his member to your
-                          entrance. Welcoming your invitation, he plunges into you fully."""),
+                          Surrendering to pleasure and wanting more, you involuntarily push your groin backwards, but find
+                           #italic something else#! at your entrance. Welcoming the invitation, he plunges into you fully."""),
                    Option(EventsCum.ASS_TEASE_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him cum on your cheeks",
                           transition_text=f"""
@@ -1835,8 +1847,8 @@ def define_sex_events(es: EventMap):
                animation_left=FLIRTATION_LEFT, animation_right=FLIRTATION_LEFT,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
-               You lie there, legs on his shoulders, each of {THEM}'s vigorous thrusts slapping loudly against your cheeks as
-               waves of pleasure course through your core.\\nYou have nearly no control over your body
+               You lie there, legs straddling his shoulders, each of {THEM}'s vigorous thrusts slapping loudly against your cheeks as
+               waves of pleasure course through your core. You have nearly no control over your body
                """,
                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                 and you wish you had even #sub less#!"""),
@@ -2202,7 +2214,7 @@ def define_cum_events(es: EventMap):
                \\n\\nThis isn't quite how you were expecting your dalliance to end...
                """,),
                TriggeredDesc(f"{HAS_TRAIT} ={PREGNANT} \n {NOT} = {{ {HAS_TRAIT_AUX1} ={LIDA_SUB} }} \n {NOT} = {{ {HAS_TRAIT_AUX2} ={LIDA_DOM} }}", f"""
-               \\n\\nAt least the ending of this dalliance won't cause any #S issues#! in your belly. 
+               \\n\\nAt least the #italic indiscreet#! ending of this dalliance won't have any #S unwanted#! consequences.
                """,),
                ),
                ))
@@ -2214,7 +2226,7 @@ def define_cum_events(es: EventMap):
                terminal_option=Option(None, OptionCategory.OTHER, "No need to clean up, it's #bold all#! inside you"),
                desc=ComposedDesc(f"""
                As you feel {THEM} close to finishing you clasp around him, each tense twitch of his rod keeping him #dom locked#!
-                inside as he #S fully#! unloads his hot goo in your womb.
+                inside as he #S fully#! unloads his hot load in your womb.
                \\n\\n
                 """,
                TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
