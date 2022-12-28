@@ -1449,7 +1449,7 @@ def define_sex_events(es: EventMap):
                Your eyes tear up as he thrusts deeply and relentlessly. The degrading way in which he
                gives not care about your well-being or pleasure leaves a deep impression on you.""",
                                  TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}", """
-               In a dark part of your mind, though you may not recognize, you enjoy being used like
+               In a dark part of your mind, though you may not admit it, you enjoy being used like
                a cheap toy."""),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                You enjoy being used like a cheap toy, reinforcing your submissive nature."""),
@@ -2132,10 +2132,10 @@ def define_cum_events(es: EventMap):
                """),
                """\\n\\nYou're left standing as his seed #sub seeps#! out of your slit, your body enjoying the newfound warmth within it. \\n\\n""",
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
-               "Y-you can do it again if you want", you say softly. You #bold #sub want#!#! him to do it again.\\n"""),
+               Your body brimming with anticipation as you softly say: "Y-you can do it again if you want". You #bold #sub want#!#! him to do it again, \\n"""),
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-               How #italic dare#! that #!italic fool#! not pull out after you let him have the #dom privilege#! of being inside you?!
-               If you #S wanted#! his seed you would have #dom taken#! it!"""),
+               Is the #dom privilege#! of experiencing your body not enough?! How #dom dare#! he release in you whenever he wishes
+                like in some #italic random peasant girl?!#!"""),
                                  ),
                ))
     es.add(Cum(EventsCum.CREAMPIE_ON_TOP, "Cherry on Top", 
