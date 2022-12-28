@@ -2239,7 +2239,7 @@ def define_cum_events(es: EventMap):
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                You're not usually this assertive, but you #bold #dom yearned#!#! to keep his warmth #sub inside you.#!"""),
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-               Did he think you'd let him have his way with you just for fun? #dom Fool.#!""")
+               Did he think you'd let him have his way with your body just for fun? #dom Fool.#!""")
                                  )
                ))
 
