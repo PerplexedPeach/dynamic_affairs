@@ -606,7 +606,7 @@ LIDAs.3 = {
 					scope:sex_transition = 10024
 				}
 				# 24: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10024
 			}
 			triggered_desc = {
@@ -633,7 +633,7 @@ LIDAs.3 = {
 					scope:sex_transition = 10029
 				}
 				# 29: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10029
 			}
 		}
@@ -1270,7 +1270,7 @@ LIDAs.4 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -1297,7 +1297,7 @@ LIDAs.4 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10043
 			}
 			triggered_desc = {
@@ -3996,7 +3996,7 @@ LIDAs.10 = {
 					scope:sex_transition = 10024
 				}
 				# 24: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10024
 			}
 			triggered_desc = {
@@ -4023,7 +4023,7 @@ LIDAs.10 = {
 					scope:sex_transition = 10029
 				}
 				# 29: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10029
 			}
 			triggered_desc = {
@@ -4068,7 +4068,7 @@ LIDAs.10 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 		}
@@ -4778,7 +4778,7 @@ LIDAs.8 = {
 					scope:sex_transition = 10024
 				}
 				# 24: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10024
 			}
 			triggered_desc = {
@@ -4805,7 +4805,7 @@ LIDAs.8 = {
 					scope:sex_transition = 10029
 				}
 				# 29: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
+				# You try to guide his stream onto your buns, but he is cumming too hard to control\n
 				desc = sex_transition_10029
 			}
 			triggered_desc = {
@@ -4850,7 +4850,7 @@ LIDAs.8 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -4877,7 +4877,7 @@ LIDAs.8 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10043
 			}
 			triggered_desc = {
@@ -5890,7 +5890,7 @@ LIDAs.9 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -5917,7 +5917,7 @@ LIDAs.9 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10043
 			}
 		}
@@ -6692,7 +6692,7 @@ LIDAs.5 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -6719,7 +6719,7 @@ LIDAs.5 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10043
 			}
 			triggered_desc = {
@@ -7584,7 +7584,7 @@ LIDAs.11 = {
 					scope:sex_transition = 10037
 				}
 				# 37: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# You try to guide his stream onto your buns, but he is climaxing too hard to control\n
 				desc = sex_transition_10037
 			}
 			triggered_desc = {
@@ -8586,11 +8586,11 @@ LIDAs.12 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10069
+					scope:sex_transition = 10070
 				}
-				# 69: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
+				# 70: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_10069
+				desc = sex_transition_10070
 			}
 		}
 		triggered_desc = {
@@ -9483,11 +9483,11 @@ LIDAs.13 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10069
+					scope:sex_transition = 10070
 				}
-				# 69: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
+				# 70: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_10069
+				desc = sex_transition_10070
 			}
 			triggered_desc = {
 				trigger = {
@@ -9637,7 +9637,7 @@ LIDAs.13 = {
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
-					value = 69
+					value = 70
 				}
 			}
 		}
@@ -9673,12 +9673,12 @@ LIDAs.13 = {
 				trigger = {
 					scope:partner_stamina <= 0
 					NOT = {
-						scope:dom_transition_0 = 69
+						scope:dom_transition_0 = 70
 					}
 				}
 				save_scope_value_as = {
 					name = dom_transition_1
-					value = 69
+					value = 70
 				}
 			}
 		}
@@ -9721,7 +9721,7 @@ LIDAs.13 = {
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
-					value = 70
+					value = 69
 				}
 			}
 		}
@@ -9757,12 +9757,12 @@ LIDAs.13 = {
 				trigger = {
 					scope:partner_stamina <= 0
 					NOT = {
-						scope:sub_transition_0 = 70
+						scope:sub_transition_0 = 69
 					}
 				}
 				save_scope_value_as = {
 					name = sub_transition_1
-					value = 70
+					value = 69
 				}
 			}
 		}
@@ -9854,7 +9854,7 @@ LIDAs.13 = {
 			}
 			if = {
 				limit = {
-					scope:sub_transition_0 = 70
+					scope:sub_transition_0 = 69
 				}
 				trigger_event = LIDAc.10
 			}
@@ -9971,7 +9971,7 @@ LIDAs.13 = {
 			}
 			if = {
 				limit = {
-					scope:sub_transition_0 = 70
+					scope:sub_transition_0 = 69
 				}
 				trigger_event = LIDAc.10
 			}
@@ -9985,12 +9985,35 @@ LIDAs.13 = {
 		}
 	}
 	option = {
-		# 69: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP
+		# 69: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_BRED
 		name = LIDAoption.69
 		trigger = {
 			OR = {
-				scope:dom_transition_0 = 69
-				scope:dom_transition_1 = 69
+				scope:sub_transition_0 = 69
+				scope:sub_transition_1 = 69
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 13
+		}
+		custom_tooltip = voluntary_sub_tooltip
+		change_subdom_effect = {
+			CHANGE = -1
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 69
+		}
+		trigger_event = LIDAc.10
+	}
+	option = {
+		# 70: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP
+		name = LIDAoption.70
+		trigger = {
+			OR = {
+				scope:dom_transition_0 = 70
+				scope:dom_transition_1 = 70
 			}
 		}
 		save_scope_value_as = {
@@ -10014,7 +10037,7 @@ LIDAs.13 = {
 			}
 			save_scope_value_as = {
 				name = sex_transition
-				value = 69
+				value = 70
 			}
 			trigger_event = LIDAc.11
 		}
@@ -10024,7 +10047,7 @@ LIDAs.13 = {
 			}
 			save_scope_value_as = {
 				name = sex_transition
-				value = 10069
+				value = 10070
 			}
 			if = {
 				limit = {
@@ -10040,7 +10063,7 @@ LIDAs.13 = {
 			}
 			if = {
 				limit = {
-					scope:sub_transition_0 = 70
+					scope:sub_transition_0 = 69
 				}
 				trigger_event = LIDAc.10
 			}
@@ -10052,29 +10075,6 @@ LIDAs.13 = {
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
 		}
-	}
-	option = {
-		# 70: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_BRED
-		name = LIDAoption.70
-		trigger = {
-			OR = {
-				scope:sub_transition_0 = 70
-				scope:sub_transition_1 = 70
-			}
-		}
-		save_scope_value_as = {
-			name = prev_event
-			value = 13
-		}
-		custom_tooltip = voluntary_sub_tooltip
-		change_subdom_effect = {
-			CHANGE = -1
-		}
-		save_scope_value_as = {
-			name = sex_transition
-			value = 70
-		}
-		trigger_event = LIDAc.10
 	}
 }
 LIDAs.14 = {
@@ -10255,7 +10255,7 @@ LIDAs.14 = {
 					scope:sex_transition = 72
 				}
 				# Lie Face Down
-				# The immense warmth of [affairs_partner.GetFirstName] pounding you to the core makes your body melt as your mind is #sub flooded with heat#!.\n
+				# The immense warmth of [affairs_partner.GetFirstName] pounding your core makes your body melt as your mind is #sub flooded with heat#!.\n
 				desc = sex_transition_72
 			}
 			triggered_desc = {
@@ -10342,11 +10342,11 @@ LIDAs.14 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10069
+					scope:sex_transition = 10070
 				}
-				# 69: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
+				# 70: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_10069
+				desc = sex_transition_10070
 			}
 			triggered_desc = {
 				trigger = {
@@ -10472,7 +10472,7 @@ LIDAs.14 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = 3.5
+			STAMINA_COST_1 = 3
 			STAMINA_COST_2 = 2.5
 		}
 		check_if_root_cum_effect = yes
