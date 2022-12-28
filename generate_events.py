@@ -1705,9 +1705,9 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           You stand up, letting him take you however he desires""",),
                    Option(EventsSex.PRONE_BONE, OptionCategory.SUB,
-                          "Roll in place",
+                          "Lie on your back and let him pound you",
                           transition_text=f"""
-                          You find yourself rolled on your belly, your back at {THEM}'s mercy."""),
+                          You end up on your belly, readying yourself as {THEM} prepares to pound you.""",),
                    Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
                           "Make him pull out and cum on your ass",
                           transition_text=f"""
@@ -1717,7 +1717,9 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.CREAMPIE_ON_TOP, OptionCategory.DOM,
                           "Pin him down and #bold take#! his seed",
                           transition_text=f"""
-                          Your body tightens as he begins to twitch inside you."""),
+                          Your body tightens as he begins to twitch inside you.""",
+                          failed_transition_text=f"""
+                          Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in."""),
                     Option(EventsCum.CREAMPIE_BEHIND, OptionCategory.SUB,
                           "Let him fill you with his seed",
                           transition_text=f"""
@@ -1765,11 +1767,16 @@ def define_sex_events(es: EventMap):
                           You put your hand on his rod, guiding him to unload on your cheeks instead""",
                           failed_transition_text=f"""
                           You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed."""),
-                   Option(EventsCum.CREAMPIE_ON_TOP, OptionCategory.SUB,
-                          "Pin him down and take his seed",
+                   Option(EventsCum.CREAMPIE_ON_TOP, OptionCategory.DOM,
+                          "Pin him down and #bold take#! his seed",
                           transition_text=f"""
-                          "Your body tightens as he begins to twitch inside you.""",
-                          ),
+                          Your body tightens as he begins to twitch inside you.""",
+                          failed_transition_text=f"""
+                          Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in."""),
+                    Option(EventsCum.CREAMPIE_BEHIND, OptionCategory.SUB,
+                          "Let him fill you with his seed",
+                          transition_text=f"""
+                          Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
                    
                )))
     es.add(Sex(EventsSex.MISSIONARY, "Lie on Your Back", 
@@ -1853,9 +1860,9 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him pull out and cum on your ass",
                           transition_text=f"""
-                          "D-Don't seed me!" you shakingly say as his pounding nearly drives you senseless.""",
+                          "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless.""",
                           failed_transition_text=f"""
-                          "D-Don't seed me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears."""),
+                          "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears."""),
                    Option(EventsCum.CREAMPIE_BRED, OptionCategory.SUB,
                           "Get filled to the brim",
                           transition_text=f"""
@@ -1893,7 +1900,7 @@ def define_cum_events(es: EventMap):
                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
                \\n\\n"Thank you for letting me touch your ass, {ME_FULL_REGNAL}", {THEM} says while gently cleaning your buns.
                """),
-                                TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 && {SCOPE}:{SUBDOM} < 10", f"""
+                                TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                \\n\\n"This was fun", {THEM} says while #italic clearly#! staring at your shapes.
                """),
                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
@@ -1981,7 +1988,7 @@ def define_cum_events(es: EventMap):
                He instead shoots his seed on your ass, several spurts of warmth announcing the end of the session. \\n\\n
                "Thank you for this gift, {ME_FULL_REGNAL}", he says while gently cleaning your buns.
                """),
-               TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 && {SCOPE}:{SUBDOM} < 10", f"""
+               TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                Perhaps fearing the consequences of impregnating you or just showing some courtesy, {THEM} pulls out just as he reaches his limit.
                He instead shoots his seed on your ass and holes, several spurts of warmth announcing the end of the session.
                 \\n\\n
@@ -2025,7 +2032,7 @@ def define_cum_events(es: EventMap):
                 TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", """
                "I-I don't know what came over me!" he says, staring at the ground with a deeply ashamed look.
                """),
-               TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 && {SCOPE}:{SUBDOM} < 10", f"""
+               TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                "You were just so tight!", {THEM} awkwardly says, as if trying to justify himself.
                """), 
                TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", """
@@ -2083,7 +2090,7 @@ def define_cum_events(es: EventMap):
                "I'll clean it, forgive me!", he pleads as he frantically pulls his rod out #S far#! too late and starts #dom licking#! your slit clean.
                 His expression switches to dread as he realizes his load is #bold staying#! inside you.
                """),
-               TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 && {SCOPE}:{SUBDOM} < 10", f"""
+               TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                "Sorry, it just felt too good", {THEM} casually says, feigning an apology before finally pulling out.
                """),              
                 TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
