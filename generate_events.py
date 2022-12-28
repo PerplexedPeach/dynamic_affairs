@@ -1705,7 +1705,7 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           You stand up, letting him take you however he desires""",),
                    Option(EventsSex.PRONE_BONE, OptionCategory.SUB,
-                          "Lie on your back and let him pound you",
+                          "Lie on your belly and let him pound you",
                           transition_text=f"""
                           You end up on your belly, readying yourself as {THEM} prepares to pound you.""",),
                    Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
