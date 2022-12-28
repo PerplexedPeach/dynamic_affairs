@@ -3510,8 +3510,8 @@ LIDAc.10 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:subdom > -10 
-scope:subdom < 10
+				scope:subdom >= 10 
+has_trait = lida_dom
 			}
 			desc = LIDAc.10.desc.8
 		}
@@ -3529,23 +3529,30 @@ scope:subdom < 10
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_dom
+				scope:subdom <= -10 
+has_trait = lida_sub
 			}
 			desc = LIDAc.10.desc.11
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_dom 
- NOT = { has_trait =pregnant }
+				has_trait = lida_dom
 			}
 			desc = LIDAc.10.desc.12
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom 
- has_trait = pregnant
+ NOT = { has_trait =pregnant }
 			}
 			desc = LIDAc.10.desc.13
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom 
+ has_trait = pregnant
+			}
+			desc = LIDAc.10.desc.14
 		}
 		triggered_desc = {
 			trigger = {
@@ -3553,7 +3560,7 @@ scope:subdom < 10
  NOT = { has_trait =lida_sub } 
  NOT = { has_trait =lida_dom }
 			}
-			desc = LIDAc.10.desc.14
+			desc = LIDAc.10.desc.15
 		}
 		triggered_desc = {
 			trigger = {
@@ -3561,7 +3568,7 @@ scope:subdom < 10
  NOT = { has_trait =lida_sub } 
  NOT = { has_trait =lida_dom }
 			}
-			desc = LIDAc.10.desc.15
+			desc = LIDAc.10.desc.16
 		}
 	}
 	immediate = {
