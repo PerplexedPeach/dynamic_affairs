@@ -2134,7 +2134,8 @@ def define_cum_events(es: EventMap):
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                "Y-you can do it again if you want", you say softly. You #bold #sub want#!#! him to do it again.\\n"""),
                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-               How #S dare#! he not pull out after you let him have the #dom privilege#! of being inside you?!"""),
+               How #italic dare#! that #!italic fool#! not pull out after you let him have the #dom privilege#! of being inside you?!
+               If you #S wanted#! his seed you would have #dom taken#! it!"""),
                                  ),
                ))
     es.add(Cum(EventsCum.CREAMPIE_ON_TOP, "Cherry on Top", 
@@ -2188,7 +2189,7 @@ def define_cum_events(es: EventMap):
                """),
                TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 20", f"""
                "I'll clean it, forgive me!", he pleads as he starts #dom licking#! you clean, having pulled out #S far#! too late.
-                You quickly dismiss him, knowing there is #bold nothing#! he can do.
+               \\n"Leave, #dom fool#! you say #warning furiously#! as you kick him with your foot, banishing him nude from the chamber.
                """),
                TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                "I didn't mean to, but it just felt so good!" {THEM} says, his gaze lingering on your #bold plowed#! hole as he bites his lip.
@@ -2204,7 +2205,7 @@ def define_cum_events(es: EventMap):
                \\n\\nAs if getting fucked like a cheap whore wasn't enough, he even #warning seeded#! you like you're just some servant girl at a feast! 
                """,),
                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {NOT} = {{ {HAS_TRAIT_AUX1} ={PREGNANT} }}", f"""
-               Enjoying the warmth of your womb is an #italic unrivaled priviliedge#!,
+               Enjoying the warmth of your womb is an #italic unrivaled privilege#!,
                 how #S #dom dare#!#! he demand more by trying to #S mate with you!?#!
                """,),
                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {HAS_TRAIT_AUX1} = {PREGNANT}", f"""
