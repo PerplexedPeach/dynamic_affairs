@@ -1839,7 +1839,7 @@ LIDAc.7 = {
 					scope:sex_transition = 72
 				}
 				# Lie Face Down
-				# "P-Pull out!" you shakingly say as his pounding nearly drives you senseless.\n
+				# "D-Don't seed me!" you shakingly say as his pounding nearly drives you senseless.\n
 				desc = sex_transition_72
 			}
 			triggered_desc = {
@@ -1965,7 +1965,7 @@ LIDAc.7 = {
 					scope:sex_transition = 10072
 				}
 				# 72: EventsSex.PRONE_BONE -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "P-Pull out!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
+				# "D-Don't seed me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10072
 			}
 		}
@@ -3287,7 +3287,7 @@ LIDAc.10 = {
 					scope:sex_transition = 10072
 				}
 				# 72: EventsSex.PRONE_BONE -> EventsCum.PULL_OUT_CUM_ON_ASS failed
-				# "P-Pull out!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
+				# "D-Don't seed me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
 				desc = sex_transition_10072
 			}
 		}

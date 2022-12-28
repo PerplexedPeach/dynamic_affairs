@@ -1784,7 +1784,7 @@ def define_sex_events(es: EventMap):
                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                 and you wish you had even #sub less#!"""),
                TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-                and you #dom hate#! that it feels this good anyway"""), "."
+                and you #dom hate#! that it feels this good"""), "."
                ),
                options=(
                    Option(EventsSex.COWGIRL, OptionCategory.DOM,
@@ -1853,9 +1853,9 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him pull out and cum on your ass",
                           transition_text=f"""
-                          "P-Pull out!" you shakingly say as his pounding nearly drives you senseless.""",
+                          "D-Don't seed me!" you shakingly say as his pounding nearly drives you senseless.""",
                           failed_transition_text=f"""
-                          "P-Pull out!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears."""),
+                          "D-Don't seed me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears."""),
                    Option(EventsCum.CREAMPIE_BRED, OptionCategory.SUB,
                           "Get filled to the brim",
                           transition_text=f"""
