@@ -507,30 +507,30 @@ class Event(BlockRoot):
             return
         with Block(self, FIRST_VALID):
             for option in sex_incoming_options:
-                if option.transition_text == "":
+                if option.transition_text is None:
                     continue
                 with Block(self, TRIGGERED_DESC):
                     with Block(self, TRIGGER):
                         self.assign(EXISTS, f"{SCOPE}:{SEX_TRANSITION}")
                         self.assign(f"{SCOPE}:{SEX_TRANSITION}", option.id)
                     self.add_debug_comment(option.from_event.title)
-                    self.add_debug_comment(option.transition_text)
-                    self.assign(DESC, f"{SEX_TRANSITION}_{option.id}")
+                    self.add_debug_comment(option.transition_text.desc)
+                    option.transition_text.generate_desc(self, option)
             for option in self.adjacent_options:
-                if option.failed_transition_text == "":
+                if option.failed_transition_text is None:
                     continue
                 with Block(self, TRIGGERED_DESC):
                     with Block(self, TRIGGER):
                         self.assign(EXISTS, f"{SCOPE}:{SEX_TRANSITION}")
                         self.assign(f"{SCOPE}:{SEX_TRANSITION}", option.id + dom_fail_offset)
                     self.add_debug_comment(f"{option} failed")
-                    self.add_debug_comment(option.failed_transition_text)
-                    self.assign(DESC, f"{SEX_TRANSITION}_{option.id + dom_fail_offset}")
+                    self.add_debug_comment(option.failed_transition_text.desc)
+                    option.failed_transition_text.generate_desc(self, option)
 
         # if we failed a dom transition and this event has a direct option from that failed event, use it
         # for all the incoming options
         for option in sex_incoming_options:
-            if option.transition_text == "":
+            if option.transition_text is None:
                 continue
             with Block(self, TRIGGERED_DESC):
                 with Block(self, TRIGGER):
@@ -540,46 +540,7 @@ class Event(BlockRoot):
                     self.assign(f"{SCOPE}:{PREV_EVENT}", option.from_id.value)
                 # TODO consider replacing the whole sex_transition system with just PREV_EVENT
                 self.add_debug_comment(f"defaulted to {option}")
-                self.assign(DESC, f"{SEX_TRANSITION}_{option.id}")
-
-
-class Desc:
-    def __init__(self, desc, subid=0):
-        self.desc = clean_str(desc)
-        self.subid = subid
-
-    def generate_desc(self, b: Event):
-        b.assign(DESC, f"{b.fullname}.{DESC}.{self.subid}")
-
-    def generate_localization(self, b: Event):
-        return f"{b.fullname}.{DESC}.{self.subid}: \"{self.desc}\""
-
-
-class TriggeredDesc(Desc):
-    def __init__(self, trigger_condition, desc):
-        self.trigger_condition = trigger_condition
-        super(TriggeredDesc, self).__init__(desc)
-
-    def generate_desc(self, b: Event):
-        with Block(b, TRIGGERED_DESC):
-            with Block(b, TRIGGER):
-                b.add_line(self.trigger_condition)
-            super(TriggeredDesc, self).generate_desc(b)
-
-
-class ComposedDesc(Desc):
-    def __init__(self, *descs: typing.Union[Desc, str]):
-        self.descs = [d if isinstance(d, Desc) else Desc(d) for d in descs]
-        for i, d in enumerate(self.descs):
-            d.subid = i
-        super(ComposedDesc, self).__init__("")
-
-    def generate_desc(self, b: Event):
-        for desc in self.descs:
-            desc.generate_desc(b)
-
-    def generate_localization(self, b: Event):
-        return "\n".join([d.generate_localization(b) for d in self.descs])
+                option.transition_text.generate_desc(self, option)
 
 
 class OptionCategory(enum.IntEnum):
@@ -596,9 +557,9 @@ class Option:
     """Directed edges in a scene graph, going from one event to another (or terminating)"""
 
     def __init__(self, next_id: typing.Optional[EventId], category: OptionCategory, option_text: str,
-                 transition_text: str = "",
+                 transition_text=None,
                  # for dom options, have a chance to fail them
-                 failed_transition_text: str = "",
+                 failed_transition_text=None,
                  weight: int = 10, tooltip=None,
                  # for dom options, specify the opinion change on success and failure of dom
                  subdom_dom_success=1, subdom_dom_fail=-2,
@@ -618,12 +579,18 @@ class Option:
         self.category = category
         self.weight = weight
         self.option_text = option_text
-        self.transition_text = ""
-        self.failed_transition_text = ""
-        if transition_text != "":
-            self.transition_text = clean_str(transition_text) + "\\n"
-        if failed_transition_text != "":
-            self.failed_transition_text = clean_str(failed_transition_text) + "\\n"
+        if isinstance(transition_text, str):
+            transition_text = Desc(transition_text)
+            transition_text.desc += "\\n"
+        self.transition_text: Desc = transition_text
+        self.failed_transition_text = None
+        if failed_transition_text is not None:
+            if isinstance(failed_transition_text, str):
+                failed_transition_text = Desc(failed_transition_text)
+                failed_transition_text.desc += "\\n"
+            self.failed_transition_text: Desc = failed_transition_text
+            self.failed_transition_text.subid = dom_fail_offset
+
         self.tooltip = tooltip
 
         self.subdom_dom_success = subdom_dom_success
@@ -646,14 +613,74 @@ class Option:
 
     def generate_localization(self):
         lines = [f"{self.fullname}: \"{self.option_text}\""]
-        if self.transition_text != "":
-            lines.append(f"{SEX_TRANSITION}_{self.id}: \"{self.transition_text}\"")
-        if self.failed_transition_text != "":
-            lines.append(f"{SEX_TRANSITION}_{self.id + dom_fail_offset}: \"{self.failed_transition_text}\"")
+        if self.transition_text is not None:
+            lines.append(self.transition_text.generate_localization(self))
+        if self.failed_transition_text is not None:
+            lines.append(self.failed_transition_text.generate_localization(self))
         if self.tooltip is not None:
             lines.append(f"{self.fullname}.tt: \"{self.tooltip}\"")
 
         return "\n".join(lines)
+
+
+Describable = typing.Union[Event, Option]
+
+
+class Desc:
+    def __init__(self, desc, subid=0):
+        self.desc = clean_str(desc)
+        self.subid = subid
+
+    def generate_desc(self, b: Event, o: typing.Optional[Option] = None):
+        if o is not None:
+            self._generate_desc_option(b, o)
+        else:
+            self._generate_desc_event(b)
+
+    def generate_localization(self, b: Describable):
+        if isinstance(b, Event):
+            return self._generate_localization_event(b)
+        elif isinstance(b, Option):
+            return self._generate_localization_option(b)
+
+    def _generate_desc_event(self, b: Event):
+        b.assign(DESC, f"{b.fullname}.{DESC}.{self.subid}")
+
+    def _generate_localization_event(self, b: Event):
+        return f"{b.fullname}.{DESC}.{self.subid}: \"{self.desc}\""
+
+    def _generate_desc_option(self, b: Event, o: Option):
+        b.assign(DESC, f"{SEX_TRANSITION}_{o.id}.{self.subid}")
+
+    def _generate_localization_option(self, b: Option):
+        return f"{SEX_TRANSITION}_{b.id}.{self.subid}: \"{self.desc}\""
+
+
+class TriggeredDesc(Desc):
+    def __init__(self, trigger_condition, desc):
+        self.trigger_condition = trigger_condition
+        super(TriggeredDesc, self).__init__(desc)
+
+    def generate_desc(self, b: Event, o: typing.Optional[Option] = None):
+        with Block(b, TRIGGERED_DESC):
+            with Block(b, TRIGGER):
+                b.add_line(self.trigger_condition)
+            super(TriggeredDesc, self).generate_desc(b, o)
+
+
+class ComposedDesc(Desc):
+    def __init__(self, *descs: typing.Union[Desc, str]):
+        self.descs = [d if isinstance(d, Desc) else Desc(d) for d in descs]
+        for i, d in enumerate(self.descs):
+            d.subid = i
+        super(ComposedDesc, self).__init__("")
+
+    def generate_desc(self,  b: Event, o: typing.Optional[Option] = None):
+        for desc in self.descs:
+            desc.generate_desc(b, o)
+
+    def generate_localization(self, b: Describable):
+        return "\n".join([d.generate_localization(b) for d in self.descs])
 
 
 class Cum(Event):

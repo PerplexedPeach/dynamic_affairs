@@ -252,9 +252,6 @@ questions
 
 TODO
 - connect Carnalitas fetish system
-- switch transitions to Desc
-- use current health to replace the herculean trait checks for sex stamina
-- use prowess instead of trait checks for dom success
 
 TODO long term
 - add sex skills
