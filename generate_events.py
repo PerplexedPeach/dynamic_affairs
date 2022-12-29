@@ -1687,7 +1687,7 @@ def define_sex_events(es: EventMap):
                           You push your groin backwards, forcing him to the ground as you get his rod inside you.""",
                           failed_transition_text=f"""
                           You try to force him to the ground, but as you push your groin backwards something
-                           #italic enter#! and {THEM} wraps an arm around you, holding you in place."""),
+                           #italic enters#! you and {THEM} wraps an arm around your bosom, holding you in place."""),
                    Option(EventsSex.FM_BLOWJOB_DOM, OptionCategory.DOM,
                           "Switch to using your mouth",
                           dom_success_adjustment=10,
@@ -1826,7 +1826,7 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.FM_CREAMPIE_REGULAR, OptionCategory.SUB,
                           "Let him fill you with his seed",
                           transition_text=f"""
-                          Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
+                          Feeling little resistance from your body, he prepares to leave you a hot, sticky gift."""),
                )))
     es.add(Sex(EventsSex.FM_REVERSE_COWGIRL, "Ride Facing Away",
                stam_cost_1=3, stam_cost_2=1.5,
@@ -1875,11 +1875,11 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           Your body tightens as he begins to twitch inside you.""",
                           failed_transition_text=f"""
-                          Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in."""),
+                          Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them."""),
                    Option(EventsCum.FM_CREAMPIE_REGULAR, OptionCategory.SUB,
                           "Let #bold him#! fill you with his seed",
                           transition_text=f"""
-                          Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
+                          Feeling little resistance from your body, he prepares to leave you a hot, sticky gift."""),
                )))
     es.add(Sex(EventsSex.FM_COWGIRL, "Ride Facing Them",
                stam_cost_1=2.0, stam_cost_2=1,
@@ -1916,7 +1916,7 @@ def define_sex_events(es: EventMap):
                    Option(EventsSex.FM_MISSIONARY, OptionCategory.SUB,
                           "Lie on your back and let him pound you",
                           transition_text=f"""
-                          You end up on your back, readying yourself as {THEM} lifts your legs and enters you from above.""", ),
+                          You end up on your back, readying yourself as {THEM} lifts your legs, making way for his rod.""", ),
                    Option(EventsCum.FM_PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
                           "Make him pull out and cum on your ass",
                           transition_text=f"""
@@ -1928,11 +1928,11 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           Your body tightens as he begins to twitch inside you.""",
                           failed_transition_text=f"""
-                          Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in."""),
+                          Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them."""),
                    Option(EventsCum.FM_CREAMPIE_REGULAR, OptionCategory.SUB,
                           "Let #bold him#! fill you with his seed",
                           transition_text=f"""
-                          Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
+                          Feeling little resistance from your body, he prepares to leave you a hot, sticky gift."""),
 
                )))
     es.add(Sex(EventsSex.FM_MISSIONARY, "Lie on Back",
@@ -2003,7 +2003,7 @@ def define_sex_events(es: EventMap):
                           "Roll in place",
                           transition_text=f"""
                           You find an opening between {THEM}'s thrusts and manage to roll in place, your body now facing his,
-                           but he quickly moves your legs out of the way of his prick.""",
+                           but he quickly spreads your legs out of the way of his prick.""",
                           failed_transition_text=f"""
                           You try to roll in place, but {THEM}'s #bold paralyzing#! barrage of thrusts never slows enough to do so.
                           """),
