@@ -1,7 +1,7 @@
 ﻿# GENERATED FILE - DO NOT MODIFY DIRECTLY
 namespace = LIDAs
 LIDAs.1 = {
-	# HANDJOB_TEASE: Handjob Tease
+	# FM_HANDJOB_TEASE: Handjob Tease
 	type = character_event
 	title = LIDAs.1.t
 	theme = seduction
@@ -203,7 +203,7 @@ LIDAs.1 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# HANDJOB
+			# FM_HANDJOB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -226,7 +226,7 @@ LIDAs.1 = {
 			}
 		}
 		random_list = {
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -265,7 +265,7 @@ LIDAs.1 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB
+		# 1: EventsSex.FM_HANDJOB_TEASE -> EventsSex.FM_HANDJOB
 		name = LIDAoption.1
 		trigger = {
 			scope:partner_stamina > 0
@@ -323,7 +323,7 @@ LIDAs.1 = {
 		}
 	}
 	option = {
-		# 2: EventsSex.HANDJOB_TEASE -> EventsSex.BLOWJOB_DOM
+		# 2: EventsSex.FM_HANDJOB_TEASE -> EventsSex.FM_BLOWJOB_DOM
 		name = LIDAoption.2
 		trigger = {
 			scope:partner_stamina > 0
@@ -348,7 +348,7 @@ LIDAs.1 = {
 	}
 }
 LIDAs.3 = {
-	# HANDJOB: Handjob
+	# FM_HANDJOB: Handjob
 	type = character_event
 	title = LIDAs.3.t
 	theme = seduction
@@ -542,7 +542,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10001
 				}
-				# 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB failed
+				# 1: EventsSex.FM_HANDJOB_TEASE -> EventsSex.FM_HANDJOB failed
 				# You're too turned on to be satisfied with just jerking him off.\n
 				desc = sex_transition_1.10000
 			}
@@ -551,7 +551,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10003
 				}
-				# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB failed
+				# 3: EventsSex.FM_HANDJOB -> EventsSex.FM_HANDJOB failed
 				# 
 				triggered_desc = {
 					trigger = {
@@ -572,7 +572,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10005
 				}
-				# 5: EventsSex.HANDJOB -> EventsCum.RUINED_ORGASM failed
+				# 5: EventsSex.FM_HANDJOB -> EventsCum.FM_RUINED_ORGASM failed
 				# You move to stop his climax, but realize that he did not last as long as you expected.\n
 				desc = sex_transition_5.10000
 			}
@@ -581,7 +581,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10006
 				}
-				# 6: EventsSex.HANDJOB -> EventsCum.HANDJOB_CUM_IN_HAND failed
+				# 6: EventsSex.FM_HANDJOB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# You place your open palm below his cock, ready to receive his seed, but his tip seems to be pointing elsewhere...\n
 				desc = sex_transition_6.10000
 			}
@@ -590,7 +590,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10008
 				}
-				# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
+				# 8: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_HANDJOB failed
 				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
 				desc = sex_transition_8.10000
 			}
@@ -599,7 +599,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10009
 				}
-				# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
+				# 9: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM failed
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
 				desc = sex_transition_9.10000
 			}
@@ -608,7 +608,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10011
 				}
-				# 11: EventsSex.BLOWJOB_DOM -> EventsCum.RUINED_ORGASM failed
+				# 11: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
 				desc = sex_transition_11.10000
 			}
@@ -617,7 +617,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10023
 				}
-				# 23: EventsSex.ASS_TEASE -> EventsSex.ASS_RUB failed
+				# 23: EventsSex.FM_ASS_TEASE -> EventsSex.FM_ASS_RUB failed
 				# You have better uses for that hard cock than just teasing it.\n
 				desc = sex_transition_23.10000
 			}
@@ -626,7 +626,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10024
 				}
-				# 24: EventsSex.ASS_TEASE -> EventsSex.HANDJOB failed
+				# 24: EventsSex.FM_ASS_TEASE -> EventsSex.FM_HANDJOB failed
 				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
 				desc = sex_transition_24.10000
 			}
@@ -635,7 +635,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10026
 				}
-				# 26: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 26: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_26.10000
 			}
@@ -644,7 +644,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10028
 				}
-				# 28: EventsSex.ASS_RUB -> EventsSex.ASS_RUB failed
+				# 28: EventsSex.FM_ASS_RUB -> EventsSex.FM_ASS_RUB failed
 				# You have better uses for that hard cock than just teasing it\n
 				desc = sex_transition_28.10000
 			}
@@ -653,7 +653,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10029
 				}
-				# 29: EventsSex.ASS_RUB -> EventsSex.HANDJOB failed
+				# 29: EventsSex.FM_ASS_RUB -> EventsSex.FM_HANDJOB failed
 				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
 				desc = sex_transition_29.10000
 			}
@@ -662,7 +662,7 @@ LIDAs.3 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10031
 				}
-				# 31: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 31: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_31.10000
 			}
@@ -674,7 +674,7 @@ LIDAs.3 = {
 				exists = scope:prev_event
 				scope:prev_event = 1
 			}
-			# defaulted to 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB
+			# defaulted to 1: EventsSex.FM_HANDJOB_TEASE -> EventsSex.FM_HANDJOB
 			desc = sex_transition_1.0
 		}
 		triggered_desc = {
@@ -684,7 +684,7 @@ LIDAs.3 = {
 				exists = scope:prev_event
 				scope:prev_event = 3
 			}
-			# defaulted to 3: EventsSex.HANDJOB -> EventsSex.HANDJOB
+			# defaulted to 3: EventsSex.FM_HANDJOB -> EventsSex.FM_HANDJOB
 			desc = sex_transition_3.0
 		}
 		triggered_desc = {
@@ -694,7 +694,7 @@ LIDAs.3 = {
 				exists = scope:prev_event
 				scope:prev_event = 4
 			}
-			# defaulted to 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB
+			# defaulted to 8: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_HANDJOB
 			desc = sex_transition_8.0
 		}
 		triggered_desc = {
@@ -704,7 +704,7 @@ LIDAs.3 = {
 				exists = scope:prev_event
 				scope:prev_event = 2
 			}
-			# defaulted to 24: EventsSex.ASS_TEASE -> EventsSex.HANDJOB
+			# defaulted to 24: EventsSex.FM_ASS_TEASE -> EventsSex.FM_HANDJOB
 			desc = sex_transition_24.0
 		}
 		triggered_desc = {
@@ -714,7 +714,7 @@ LIDAs.3 = {
 				exists = scope:prev_event
 				scope:prev_event = 10
 			}
-			# defaulted to 29: EventsSex.ASS_RUB -> EventsSex.HANDJOB
+			# defaulted to 29: EventsSex.FM_ASS_RUB -> EventsSex.FM_HANDJOB
 			desc = sex_transition_29.0
 		}
 		first_valid = {
@@ -776,7 +776,7 @@ LIDAs.3 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# HANDJOB
+			# FM_HANDJOB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -786,7 +786,7 @@ LIDAs.3 = {
 					value = 3
 				}
 			}
-			# RUINED_ORGASM
+			# FM_RUINED_ORGASM
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -796,7 +796,7 @@ LIDAs.3 = {
 					value = 5
 				}
 			}
-			# HANDJOB_CUM_IN_HAND
+			# FM_HANDJOB_CUM_IN_HAND
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -808,7 +808,7 @@ LIDAs.3 = {
 			}
 		}
 		random_list = {
-			# HANDJOB
+			# FM_HANDJOB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -821,7 +821,7 @@ LIDAs.3 = {
 					value = 3
 				}
 			}
-			# RUINED_ORGASM
+			# FM_RUINED_ORGASM
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -834,7 +834,7 @@ LIDAs.3 = {
 					value = 5
 				}
 			}
-			# HANDJOB_CUM_IN_HAND
+			# FM_HANDJOB_CUM_IN_HAND
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -860,7 +860,7 @@ LIDAs.3 = {
 			}
 		}
 		random_list = {
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -870,7 +870,7 @@ LIDAs.3 = {
 					value = 4
 				}
 			}
-			# BLOWJOB_CUM_ON_FACE
+			# FM_BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -882,7 +882,7 @@ LIDAs.3 = {
 			}
 		}
 		random_list = {
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -895,7 +895,7 @@ LIDAs.3 = {
 					value = 4
 				}
 			}
-			# BLOWJOB_CUM_ON_FACE
+			# FM_BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -937,7 +937,7 @@ LIDAs.3 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB
+		# 3: EventsSex.FM_HANDJOB -> EventsSex.FM_HANDJOB
 		name = LIDAoption.3
 		trigger = {
 			scope:partner_stamina > 0
@@ -1001,7 +1001,7 @@ LIDAs.3 = {
 		}
 	}
 	option = {
-		# 4: EventsSex.HANDJOB -> EventsSex.BLOWJOB_DOM
+		# 4: EventsSex.FM_HANDJOB -> EventsSex.FM_BLOWJOB_DOM
 		name = LIDAoption.4
 		trigger = {
 			scope:partner_stamina > 0
@@ -1025,7 +1025,7 @@ LIDAs.3 = {
 		trigger_event = LIDAs.4
 	}
 	option = {
-		# 5: EventsSex.HANDJOB -> EventsCum.RUINED_ORGASM
+		# 5: EventsSex.FM_HANDJOB -> EventsCum.FM_RUINED_ORGASM
 		name = LIDAoption.5
 		trigger = {
 			OR = {
@@ -1088,7 +1088,7 @@ LIDAs.3 = {
 		}
 	}
 	option = {
-		# 6: EventsSex.HANDJOB -> EventsCum.HANDJOB_CUM_IN_HAND
+		# 6: EventsSex.FM_HANDJOB -> EventsCum.FM_HANDJOB_CUM_IN_HAND
 		name = LIDAoption.6
 		trigger = {
 			OR = {
@@ -1151,7 +1151,7 @@ LIDAs.3 = {
 		}
 	}
 	option = {
-		# 7: EventsSex.HANDJOB -> EventsCum.BLOWJOB_CUM_ON_FACE
+		# 7: EventsSex.FM_HANDJOB -> EventsCum.FM_BLOWJOB_CUM_ON_FACE
 		name = LIDAoption.7
 		trigger = {
 			OR = {
@@ -1175,7 +1175,7 @@ LIDAs.3 = {
 	}
 }
 LIDAs.4 = {
-	# BLOWJOB_DOM: Dom Blowjob
+	# FM_BLOWJOB_DOM: Dom Blowjob
 	type = character_event
 	title = LIDAs.4.t
 	theme = seduction
@@ -1387,7 +1387,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10001
 				}
-				# 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB failed
+				# 1: EventsSex.FM_HANDJOB_TEASE -> EventsSex.FM_HANDJOB failed
 				# You're too turned on to be satisfied with just jerking him off.\n
 				desc = sex_transition_1.10000
 			}
@@ -1396,7 +1396,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10003
 				}
-				# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB failed
+				# 3: EventsSex.FM_HANDJOB -> EventsSex.FM_HANDJOB failed
 				# 
 				triggered_desc = {
 					trigger = {
@@ -1417,7 +1417,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10005
 				}
-				# 5: EventsSex.HANDJOB -> EventsCum.RUINED_ORGASM failed
+				# 5: EventsSex.FM_HANDJOB -> EventsCum.FM_RUINED_ORGASM failed
 				# You move to stop his climax, but realize that he did not last as long as you expected.\n
 				desc = sex_transition_5.10000
 			}
@@ -1426,7 +1426,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10006
 				}
-				# 6: EventsSex.HANDJOB -> EventsCum.HANDJOB_CUM_IN_HAND failed
+				# 6: EventsSex.FM_HANDJOB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# You place your open palm below his cock, ready to receive his seed, but his tip seems to be pointing elsewhere...\n
 				desc = sex_transition_6.10000
 			}
@@ -1435,7 +1435,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10008
 				}
-				# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
+				# 8: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_HANDJOB failed
 				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
 				desc = sex_transition_8.10000
 			}
@@ -1444,7 +1444,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10009
 				}
-				# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
+				# 9: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM failed
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
 				desc = sex_transition_9.10000
 			}
@@ -1453,7 +1453,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10011
 				}
-				# 11: EventsSex.BLOWJOB_DOM -> EventsCum.RUINED_ORGASM failed
+				# 11: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
 				desc = sex_transition_11.10000
 			}
@@ -1462,7 +1462,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10014
 				}
-				# 14: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM failed
+				# 14: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_DOM failed
 				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
 				desc = sex_transition_14.10000
 			}
@@ -1471,7 +1471,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10017
 				}
-				# 17: EventsSex.BLOWJOB_SUB -> EventsCum.HANDJOB_CUM_IN_HAND failed
+				# 17: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
 				desc = sex_transition_17.10000
 			}
@@ -1480,7 +1480,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10033
 				}
-				# 33: EventsSex.HOTDOG -> EventsSex.ASS_RUB failed
+				# 33: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB failed
 				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
 				desc = sex_transition_33.10000
 			}
@@ -1489,7 +1489,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10034
 				}
-				# 34: EventsSex.HOTDOG -> EventsSex.HOTDOG failed
+				# 34: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG failed
 				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
 				desc = sex_transition_34.10000
 			}
@@ -1498,7 +1498,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10035
 				}
-				# 35: EventsSex.HOTDOG -> EventsSex.REVERSE_COWGIRL failed
+				# 35: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You push your groin backwards, trying to force him to the ground, but instead are met with sudden pleasure as you feel [affairs_partner.GetFirstName] grab and enter you.\n
 				desc = sex_transition_35.10000
 			}
@@ -1507,7 +1507,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10036
 				}
-				# 36: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM failed
+				# 36: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM failed
 				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
 				desc = sex_transition_36.10000
 			}
@@ -1516,7 +1516,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10039
 				}
-				# 39: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 39: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_39.10000
 			}
@@ -1525,7 +1525,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10041
 				}
-				# 41: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG failed
+				# 41: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_HOTDOG failed
 				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
 				desc = sex_transition_41.10000
 			}
@@ -1534,7 +1534,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10042
 				}
-				# 42: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# 42: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
 				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
 				desc = sex_transition_42.10000
 			}
@@ -1543,7 +1543,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10045
 				}
-				# 45: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 45: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_45.10000
 			}
@@ -1552,7 +1552,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10047
 				}
-				# 47: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# 47: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
 				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
 				desc = sex_transition_47.10000
 			}
@@ -1561,7 +1561,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10048
 				}
-				# 48: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
+				# 48: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB failed
 				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts while as punishment for trying to escape.\n
 				desc = sex_transition_48.10000
 			}
@@ -1570,7 +1570,7 @@ LIDAs.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10051
 				}
-				# 51: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 51: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Pull it out, [affairs_partner.GetFirstName]!", you just manage to say between his thrusts and groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_51.10000
 			}
@@ -1582,7 +1582,7 @@ LIDAs.4 = {
 				exists = scope:prev_event
 				scope:prev_event = 1
 			}
-			# defaulted to 2: EventsSex.HANDJOB_TEASE -> EventsSex.BLOWJOB_DOM
+			# defaulted to 2: EventsSex.FM_HANDJOB_TEASE -> EventsSex.FM_BLOWJOB_DOM
 			desc = sex_transition_2.0
 		}
 		triggered_desc = {
@@ -1592,7 +1592,7 @@ LIDAs.4 = {
 				exists = scope:prev_event
 				scope:prev_event = 3
 			}
-			# defaulted to 4: EventsSex.HANDJOB -> EventsSex.BLOWJOB_DOM
+			# defaulted to 4: EventsSex.FM_HANDJOB -> EventsSex.FM_BLOWJOB_DOM
 			desc = sex_transition_4.0
 		}
 		triggered_desc = {
@@ -1602,7 +1602,7 @@ LIDAs.4 = {
 				exists = scope:prev_event
 				scope:prev_event = 4
 			}
-			# defaulted to 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM
+			# defaulted to 9: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM
 			desc = sex_transition_9.0
 		}
 		triggered_desc = {
@@ -1612,7 +1612,7 @@ LIDAs.4 = {
 				exists = scope:prev_event
 				scope:prev_event = 6
 			}
-			# defaulted to 14: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM
+			# defaulted to 14: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_DOM
 			desc = sex_transition_14.0
 		}
 		triggered_desc = {
@@ -1622,7 +1622,7 @@ LIDAs.4 = {
 				exists = scope:prev_event
 				scope:prev_event = 8
 			}
-			# defaulted to 36: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM
+			# defaulted to 36: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM
 			desc = sex_transition_36.0
 		}
 		triggered_desc = {
@@ -1632,7 +1632,7 @@ LIDAs.4 = {
 				exists = scope:prev_event
 				scope:prev_event = 9
 			}
-			# defaulted to 42: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM
+			# defaulted to 42: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM
 			desc = sex_transition_42.0
 		}
 		triggered_desc = {
@@ -1642,7 +1642,7 @@ LIDAs.4 = {
 				exists = scope:prev_event
 				scope:prev_event = 5
 			}
-			# defaulted to 47: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM
+			# defaulted to 47: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM
 			desc = sex_transition_47.0
 		}
 		first_valid = {
@@ -1704,7 +1704,7 @@ LIDAs.4 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# HANDJOB
+			# FM_HANDJOB
 			5 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -1714,7 +1714,7 @@ LIDAs.4 = {
 					value = 8
 				}
 			}
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -1724,7 +1724,7 @@ LIDAs.4 = {
 					value = 9
 				}
 			}
-			# RUINED_ORGASM
+			# FM_RUINED_ORGASM
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -1736,7 +1736,7 @@ LIDAs.4 = {
 			}
 		}
 		random_list = {
-			# HANDJOB
+			# FM_HANDJOB
 			5 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -1749,7 +1749,7 @@ LIDAs.4 = {
 					value = 8
 				}
 			}
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -1762,7 +1762,7 @@ LIDAs.4 = {
 					value = 9
 				}
 			}
-			# RUINED_ORGASM
+			# FM_RUINED_ORGASM
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -1788,7 +1788,7 @@ LIDAs.4 = {
 			}
 		}
 		random_list = {
-			# BLOWJOB_SUB
+			# FM_BLOWJOB_SUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -1798,7 +1798,7 @@ LIDAs.4 = {
 					value = 10
 				}
 			}
-			# BLOWJOB_CUM_IN_MOUTH_DOM
+			# FM_BLOWJOB_CUM_IN_MOUTH_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -1808,7 +1808,7 @@ LIDAs.4 = {
 					value = 12
 				}
 			}
-			# BLOWJOB_CUM_ON_FACE
+			# FM_BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -1820,7 +1820,7 @@ LIDAs.4 = {
 			}
 		}
 		random_list = {
-			# BLOWJOB_SUB
+			# FM_BLOWJOB_SUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -1833,7 +1833,7 @@ LIDAs.4 = {
 					value = 10
 				}
 			}
-			# BLOWJOB_CUM_IN_MOUTH_DOM
+			# FM_BLOWJOB_CUM_IN_MOUTH_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -1846,7 +1846,7 @@ LIDAs.4 = {
 					value = 12
 				}
 			}
-			# BLOWJOB_CUM_ON_FACE
+			# FM_BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -1878,7 +1878,7 @@ LIDAs.4 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB
+		# 8: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_HANDJOB
 		name = LIDAoption.8
 		trigger = {
 			scope:partner_stamina > 0
@@ -1948,7 +1948,7 @@ LIDAs.4 = {
 		}
 	}
 	option = {
-		# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM
+		# 9: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM
 		name = LIDAoption.9
 		trigger = {
 			scope:partner_stamina > 0
@@ -2018,7 +2018,7 @@ LIDAs.4 = {
 		}
 	}
 	option = {
-		# 10: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_SUB
+		# 10: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_SUB
 		name = LIDAoption.10
 		trigger = {
 			scope:partner_stamina > 0
@@ -2042,7 +2042,7 @@ LIDAs.4 = {
 		trigger_event = LIDAs.6
 	}
 	option = {
-		# 11: EventsSex.BLOWJOB_DOM -> EventsCum.RUINED_ORGASM
+		# 11: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_RUINED_ORGASM
 		name = LIDAoption.11
 		trigger = {
 			OR = {
@@ -2111,7 +2111,7 @@ LIDAs.4 = {
 		}
 	}
 	option = {
-		# 12: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_IN_MOUTH_DOM
+		# 12: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_DOM
 		name = LIDAoption.12
 		trigger = {
 			OR = {
@@ -2134,7 +2134,7 @@ LIDAs.4 = {
 		trigger_event = LIDAc.2
 	}
 	option = {
-		# 13: EventsSex.BLOWJOB_DOM -> EventsCum.BLOWJOB_CUM_ON_FACE
+		# 13: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_BLOWJOB_CUM_ON_FACE
 		name = LIDAoption.13
 		trigger = {
 			OR = {
@@ -2158,7 +2158,7 @@ LIDAs.4 = {
 	}
 }
 LIDAs.6 = {
-	# BLOWJOB_SUB: Sub Blowjob
+	# FM_BLOWJOB_SUB: Sub Blowjob
 	type = character_event
 	title = LIDAs.6.t
 	theme = seduction
@@ -2343,7 +2343,7 @@ LIDAs.6 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10008
 				}
-				# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB failed
+				# 8: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_HANDJOB failed
 				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
 				desc = sex_transition_8.10000
 			}
@@ -2352,7 +2352,7 @@ LIDAs.6 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10009
 				}
-				# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM failed
+				# 9: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM failed
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
 				desc = sex_transition_9.10000
 			}
@@ -2361,7 +2361,7 @@ LIDAs.6 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10011
 				}
-				# 11: EventsSex.BLOWJOB_DOM -> EventsCum.RUINED_ORGASM failed
+				# 11: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
 				desc = sex_transition_11.10000
 			}
@@ -2370,7 +2370,7 @@ LIDAs.6 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10014
 				}
-				# 14: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM failed
+				# 14: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_DOM failed
 				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
 				desc = sex_transition_14.10000
 			}
@@ -2379,7 +2379,7 @@ LIDAs.6 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10017
 				}
-				# 17: EventsSex.BLOWJOB_SUB -> EventsCum.HANDJOB_CUM_IN_HAND failed
+				# 17: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
 				desc = sex_transition_17.10000
 			}
@@ -2388,7 +2388,7 @@ LIDAs.6 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10020
 				}
-				# 20: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB failed
+				# 20: EventsSex.FM_DEEPTHROAT -> EventsSex.FM_BLOWJOB_SUB failed
 				# Putting both hands on his waist, you push and try to stop his thrusts. It's all in vain, however, as he ignores you.\n
 				desc = sex_transition_20.10000
 			}
@@ -2397,7 +2397,7 @@ LIDAs.6 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10047
 				}
-				# 47: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# 47: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
 				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
 				desc = sex_transition_47.10000
 			}
@@ -2406,7 +2406,7 @@ LIDAs.6 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10048
 				}
-				# 48: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
+				# 48: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB failed
 				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts while as punishment for trying to escape.\n
 				desc = sex_transition_48.10000
 			}
@@ -2415,7 +2415,7 @@ LIDAs.6 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10051
 				}
-				# 51: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 51: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Pull it out, [affairs_partner.GetFirstName]!", you just manage to say between his thrusts and groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_51.10000
 			}
@@ -2427,7 +2427,7 @@ LIDAs.6 = {
 				exists = scope:prev_event
 				scope:prev_event = 4
 			}
-			# defaulted to 10: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_SUB
+			# defaulted to 10: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_SUB
 			desc = sex_transition_10.0
 		}
 		triggered_desc = {
@@ -2437,7 +2437,7 @@ LIDAs.6 = {
 				exists = scope:prev_event
 				scope:prev_event = 6
 			}
-			# defaulted to 15: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_SUB
+			# defaulted to 15: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_SUB
 			desc = sex_transition_15.0
 		}
 		triggered_desc = {
@@ -2447,7 +2447,7 @@ LIDAs.6 = {
 				exists = scope:prev_event
 				scope:prev_event = 7
 			}
-			# defaulted to 20: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB
+			# defaulted to 20: EventsSex.FM_DEEPTHROAT -> EventsSex.FM_BLOWJOB_SUB
 			desc = sex_transition_20.0
 		}
 		triggered_desc = {
@@ -2457,7 +2457,7 @@ LIDAs.6 = {
 				exists = scope:prev_event
 				scope:prev_event = 5
 			}
-			# defaulted to 48: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB
+			# defaulted to 48: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB
 			desc = sex_transition_48.0
 		}
 		first_valid = {
@@ -2519,7 +2519,7 @@ LIDAs.6 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -2529,7 +2529,7 @@ LIDAs.6 = {
 					value = 14
 				}
 			}
-			# HANDJOB_CUM_IN_HAND
+			# FM_HANDJOB_CUM_IN_HAND
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -2541,7 +2541,7 @@ LIDAs.6 = {
 			}
 		}
 		random_list = {
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -2554,7 +2554,7 @@ LIDAs.6 = {
 					value = 14
 				}
 			}
-			# HANDJOB_CUM_IN_HAND
+			# FM_HANDJOB_CUM_IN_HAND
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -2580,7 +2580,7 @@ LIDAs.6 = {
 			}
 		}
 		random_list = {
-			# BLOWJOB_SUB
+			# FM_BLOWJOB_SUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -2590,7 +2590,7 @@ LIDAs.6 = {
 					value = 15
 				}
 			}
-			# DEEPTHROAT
+			# FM_DEEPTHROAT
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -2600,7 +2600,7 @@ LIDAs.6 = {
 					value = 16
 				}
 			}
-			# BLOWJOB_CUM_IN_MOUTH_SUB
+			# FM_BLOWJOB_CUM_IN_MOUTH_SUB
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -2610,7 +2610,7 @@ LIDAs.6 = {
 					value = 18
 				}
 			}
-			# BLOWJOB_CUM_ON_FACE
+			# FM_BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -2622,7 +2622,7 @@ LIDAs.6 = {
 			}
 		}
 		random_list = {
-			# BLOWJOB_SUB
+			# FM_BLOWJOB_SUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -2635,7 +2635,7 @@ LIDAs.6 = {
 					value = 15
 				}
 			}
-			# DEEPTHROAT
+			# FM_DEEPTHROAT
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -2648,7 +2648,7 @@ LIDAs.6 = {
 					value = 16
 				}
 			}
-			# BLOWJOB_CUM_IN_MOUTH_SUB
+			# FM_BLOWJOB_CUM_IN_MOUTH_SUB
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -2661,7 +2661,7 @@ LIDAs.6 = {
 					value = 18
 				}
 			}
-			# BLOWJOB_CUM_ON_FACE
+			# FM_BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -2703,7 +2703,7 @@ LIDAs.6 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 14: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM
+		# 14: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_DOM
 		name = LIDAoption.14
 		trigger = {
 			scope:partner_stamina > 0
@@ -2779,7 +2779,7 @@ LIDAs.6 = {
 		}
 	}
 	option = {
-		# 15: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_SUB
+		# 15: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_SUB
 		name = LIDAoption.15
 		trigger = {
 			scope:partner_stamina > 0
@@ -2803,7 +2803,7 @@ LIDAs.6 = {
 		trigger_event = LIDAs.6
 	}
 	option = {
-		# 16: EventsSex.BLOWJOB_SUB -> EventsSex.DEEPTHROAT
+		# 16: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_DEEPTHROAT
 		name = LIDAoption.16
 		trigger = {
 			scope:partner_stamina > 0
@@ -2827,7 +2827,7 @@ LIDAs.6 = {
 		trigger_event = LIDAs.7
 	}
 	option = {
-		# 17: EventsSex.BLOWJOB_SUB -> EventsCum.HANDJOB_CUM_IN_HAND
+		# 17: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND
 		name = LIDAoption.17
 		trigger = {
 			OR = {
@@ -2902,7 +2902,7 @@ LIDAs.6 = {
 		}
 	}
 	option = {
-		# 18: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
+		# 18: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_SUB
 		name = LIDAoption.18
 		trigger = {
 			OR = {
@@ -2925,7 +2925,7 @@ LIDAs.6 = {
 		trigger_event = LIDAc.6
 	}
 	option = {
-		# 19: EventsSex.BLOWJOB_SUB -> EventsCum.BLOWJOB_CUM_ON_FACE
+		# 19: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_BLOWJOB_CUM_ON_FACE
 		name = LIDAoption.19
 		trigger = {
 			OR = {
@@ -2949,7 +2949,7 @@ LIDAs.6 = {
 	}
 }
 LIDAs.7 = {
-	# DEEPTHROAT: Deepthroat
+	# FM_DEEPTHROAT: Deepthroat
 	type = character_event
 	title = LIDAs.7.t
 	theme = seduction
@@ -3116,7 +3116,7 @@ LIDAs.7 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10014
 				}
-				# 14: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM failed
+				# 14: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_DOM failed
 				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
 				desc = sex_transition_14.10000
 			}
@@ -3125,7 +3125,7 @@ LIDAs.7 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10017
 				}
-				# 17: EventsSex.BLOWJOB_SUB -> EventsCum.HANDJOB_CUM_IN_HAND failed
+				# 17: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
 				desc = sex_transition_17.10000
 			}
@@ -3134,7 +3134,7 @@ LIDAs.7 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10020
 				}
-				# 20: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB failed
+				# 20: EventsSex.FM_DEEPTHROAT -> EventsSex.FM_BLOWJOB_SUB failed
 				# Putting both hands on his waist, you push and try to stop his thrusts. It's all in vain, however, as he ignores you.\n
 				desc = sex_transition_20.10000
 			}
@@ -3146,7 +3146,7 @@ LIDAs.7 = {
 				exists = scope:prev_event
 				scope:prev_event = 6
 			}
-			# defaulted to 16: EventsSex.BLOWJOB_SUB -> EventsSex.DEEPTHROAT
+			# defaulted to 16: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_DEEPTHROAT
 			desc = sex_transition_16.0
 		}
 		triggered_desc = {
@@ -3156,7 +3156,7 @@ LIDAs.7 = {
 				exists = scope:prev_event
 				scope:prev_event = 7
 			}
-			# defaulted to 21: EventsSex.DEEPTHROAT -> EventsSex.DEEPTHROAT
+			# defaulted to 21: EventsSex.FM_DEEPTHROAT -> EventsSex.FM_DEEPTHROAT
 			desc = sex_transition_21.0
 		}
 		first_valid = {
@@ -3230,7 +3230,7 @@ LIDAs.7 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# BLOWJOB_SUB
+			# FM_BLOWJOB_SUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -3253,7 +3253,7 @@ LIDAs.7 = {
 			}
 		}
 		random_list = {
-			# DEEPTHROAT
+			# FM_DEEPTHROAT
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -3263,7 +3263,7 @@ LIDAs.7 = {
 					value = 21
 				}
 			}
-			# BLOWJOB_CUM_IN_MOUTH_SUB
+			# FM_BLOWJOB_CUM_IN_MOUTH_SUB
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -3275,7 +3275,7 @@ LIDAs.7 = {
 			}
 		}
 		random_list = {
-			# DEEPTHROAT
+			# FM_DEEPTHROAT
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -3288,7 +3288,7 @@ LIDAs.7 = {
 					value = 21
 				}
 			}
-			# BLOWJOB_CUM_IN_MOUTH_SUB
+			# FM_BLOWJOB_CUM_IN_MOUTH_SUB
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -3330,7 +3330,7 @@ LIDAs.7 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 20: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB
+		# 20: EventsSex.FM_DEEPTHROAT -> EventsSex.FM_BLOWJOB_SUB
 		name = LIDAoption.20
 		trigger = {
 			scope:partner_stamina > 0
@@ -3394,7 +3394,7 @@ LIDAs.7 = {
 		}
 	}
 	option = {
-		# 21: EventsSex.DEEPTHROAT -> EventsSex.DEEPTHROAT
+		# 21: EventsSex.FM_DEEPTHROAT -> EventsSex.FM_DEEPTHROAT
 		name = LIDAoption.21
 		trigger = {
 			scope:partner_stamina > 0
@@ -3418,7 +3418,7 @@ LIDAs.7 = {
 		trigger_event = LIDAs.7
 	}
 	option = {
-		# 22: EventsSex.DEEPTHROAT -> EventsCum.BLOWJOB_CUM_IN_MOUTH_SUB
+		# 22: EventsSex.FM_DEEPTHROAT -> EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_SUB
 		name = LIDAoption.22
 		trigger = {
 			OR = {
@@ -3442,7 +3442,7 @@ LIDAs.7 = {
 	}
 }
 LIDAs.2 = {
-	# ASS_TEASE: Ass Tease
+	# FM_ASS_TEASE: Ass Tease
 	type = character_event
 	title = LIDAs.2.t
 	theme = seduction
@@ -3644,7 +3644,7 @@ LIDAs.2 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# ASS_RUB
+			# FM_ASS_RUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -3654,7 +3654,7 @@ LIDAs.2 = {
 					value = 23
 				}
 			}
-			# HANDJOB
+			# FM_HANDJOB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -3664,7 +3664,7 @@ LIDAs.2 = {
 					value = 24
 				}
 			}
-			# ASS_TEASE_CUM_ON_ASS
+			# FM_ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -3676,7 +3676,7 @@ LIDAs.2 = {
 			}
 		}
 		random_list = {
-			# ASS_RUB
+			# FM_ASS_RUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -3689,7 +3689,7 @@ LIDAs.2 = {
 					value = 23
 				}
 			}
-			# HANDJOB
+			# FM_HANDJOB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -3702,7 +3702,7 @@ LIDAs.2 = {
 					value = 24
 				}
 			}
-			# ASS_TEASE_CUM_ON_ASS
+			# FM_ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -3728,7 +3728,7 @@ LIDAs.2 = {
 			}
 		}
 		random_list = {
-			# HOTDOG
+			# FM_HOTDOG
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -3738,7 +3738,7 @@ LIDAs.2 = {
 					value = 25
 				}
 			}
-			# CUM_ON_GROIN
+			# FM_CUM_ON_GROIN
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -3750,7 +3750,7 @@ LIDAs.2 = {
 			}
 		}
 		random_list = {
-			# HOTDOG
+			# FM_HOTDOG
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -3763,7 +3763,7 @@ LIDAs.2 = {
 					value = 25
 				}
 			}
-			# CUM_ON_GROIN
+			# FM_CUM_ON_GROIN
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -3809,7 +3809,7 @@ LIDAs.2 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 23: EventsSex.ASS_TEASE -> EventsSex.ASS_RUB
+		# 23: EventsSex.FM_ASS_TEASE -> EventsSex.FM_ASS_RUB
 		name = LIDAoption.23
 		trigger = {
 			scope:partner_stamina > 0
@@ -3873,7 +3873,7 @@ LIDAs.2 = {
 		}
 	}
 	option = {
-		# 24: EventsSex.ASS_TEASE -> EventsSex.HANDJOB
+		# 24: EventsSex.FM_ASS_TEASE -> EventsSex.FM_HANDJOB
 		name = LIDAoption.24
 		trigger = {
 			scope:partner_stamina > 0
@@ -3937,7 +3937,7 @@ LIDAs.2 = {
 		}
 	}
 	option = {
-		# 25: EventsSex.ASS_TEASE -> EventsSex.HOTDOG
+		# 25: EventsSex.FM_ASS_TEASE -> EventsSex.FM_HOTDOG
 		name = LIDAoption.25
 		trigger = {
 			scope:partner_stamina > 0
@@ -3961,7 +3961,7 @@ LIDAs.2 = {
 		trigger_event = LIDAs.8
 	}
 	option = {
-		# 26: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS
+		# 26: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
 		name = LIDAoption.26
 		trigger = {
 			OR = {
@@ -4024,7 +4024,7 @@ LIDAs.2 = {
 		}
 	}
 	option = {
-		# 27: EventsSex.ASS_TEASE -> EventsCum.CUM_ON_GROIN
+		# 27: EventsSex.FM_ASS_TEASE -> EventsCum.FM_CUM_ON_GROIN
 		name = LIDAoption.27
 		trigger = {
 			OR = {
@@ -4048,7 +4048,7 @@ LIDAs.2 = {
 	}
 }
 LIDAs.10 = {
-	# ASS_RUB: Ass Rub
+	# FM_ASS_RUB: Ass Rub
 	type = character_event
 	title = LIDAs.10.t
 	theme = seduction
@@ -4224,7 +4224,7 @@ LIDAs.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10023
 				}
-				# 23: EventsSex.ASS_TEASE -> EventsSex.ASS_RUB failed
+				# 23: EventsSex.FM_ASS_TEASE -> EventsSex.FM_ASS_RUB failed
 				# You have better uses for that hard cock than just teasing it.\n
 				desc = sex_transition_23.10000
 			}
@@ -4233,7 +4233,7 @@ LIDAs.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10024
 				}
-				# 24: EventsSex.ASS_TEASE -> EventsSex.HANDJOB failed
+				# 24: EventsSex.FM_ASS_TEASE -> EventsSex.FM_HANDJOB failed
 				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
 				desc = sex_transition_24.10000
 			}
@@ -4242,7 +4242,7 @@ LIDAs.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10026
 				}
-				# 26: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 26: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_26.10000
 			}
@@ -4251,7 +4251,7 @@ LIDAs.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10028
 				}
-				# 28: EventsSex.ASS_RUB -> EventsSex.ASS_RUB failed
+				# 28: EventsSex.FM_ASS_RUB -> EventsSex.FM_ASS_RUB failed
 				# You have better uses for that hard cock than just teasing it\n
 				desc = sex_transition_28.10000
 			}
@@ -4260,7 +4260,7 @@ LIDAs.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10029
 				}
-				# 29: EventsSex.ASS_RUB -> EventsSex.HANDJOB failed
+				# 29: EventsSex.FM_ASS_RUB -> EventsSex.FM_HANDJOB failed
 				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
 				desc = sex_transition_29.10000
 			}
@@ -4269,7 +4269,7 @@ LIDAs.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10031
 				}
-				# 31: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 31: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_31.10000
 			}
@@ -4278,7 +4278,7 @@ LIDAs.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10033
 				}
-				# 33: EventsSex.HOTDOG -> EventsSex.ASS_RUB failed
+				# 33: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB failed
 				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
 				desc = sex_transition_33.10000
 			}
@@ -4287,7 +4287,7 @@ LIDAs.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10034
 				}
-				# 34: EventsSex.HOTDOG -> EventsSex.HOTDOG failed
+				# 34: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG failed
 				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
 				desc = sex_transition_34.10000
 			}
@@ -4296,7 +4296,7 @@ LIDAs.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10035
 				}
-				# 35: EventsSex.HOTDOG -> EventsSex.REVERSE_COWGIRL failed
+				# 35: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You push your groin backwards, trying to force him to the ground, but instead are met with sudden pleasure as you feel [affairs_partner.GetFirstName] grab and enter you.\n
 				desc = sex_transition_35.10000
 			}
@@ -4305,7 +4305,7 @@ LIDAs.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10036
 				}
-				# 36: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM failed
+				# 36: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM failed
 				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
 				desc = sex_transition_36.10000
 			}
@@ -4314,7 +4314,7 @@ LIDAs.10 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10039
 				}
-				# 39: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 39: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_39.10000
 			}
@@ -4326,7 +4326,7 @@ LIDAs.10 = {
 				exists = scope:prev_event
 				scope:prev_event = 2
 			}
-			# defaulted to 23: EventsSex.ASS_TEASE -> EventsSex.ASS_RUB
+			# defaulted to 23: EventsSex.FM_ASS_TEASE -> EventsSex.FM_ASS_RUB
 			desc = sex_transition_23.0
 		}
 		triggered_desc = {
@@ -4336,7 +4336,7 @@ LIDAs.10 = {
 				exists = scope:prev_event
 				scope:prev_event = 10
 			}
-			# defaulted to 28: EventsSex.ASS_RUB -> EventsSex.ASS_RUB
+			# defaulted to 28: EventsSex.FM_ASS_RUB -> EventsSex.FM_ASS_RUB
 			desc = sex_transition_28.0
 		}
 		triggered_desc = {
@@ -4346,7 +4346,7 @@ LIDAs.10 = {
 				exists = scope:prev_event
 				scope:prev_event = 8
 			}
-			# defaulted to 33: EventsSex.HOTDOG -> EventsSex.ASS_RUB
+			# defaulted to 33: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB
 			desc = sex_transition_33.0
 		}
 		first_valid = {
@@ -4408,7 +4408,7 @@ LIDAs.10 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# ASS_RUB
+			# FM_ASS_RUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -4418,7 +4418,7 @@ LIDAs.10 = {
 					value = 28
 				}
 			}
-			# HANDJOB
+			# FM_HANDJOB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -4428,7 +4428,7 @@ LIDAs.10 = {
 					value = 29
 				}
 			}
-			# ASS_TEASE_CUM_ON_ASS
+			# FM_ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -4440,7 +4440,7 @@ LIDAs.10 = {
 			}
 		}
 		random_list = {
-			# ASS_RUB
+			# FM_ASS_RUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -4453,7 +4453,7 @@ LIDAs.10 = {
 					value = 28
 				}
 			}
-			# HANDJOB
+			# FM_HANDJOB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -4466,7 +4466,7 @@ LIDAs.10 = {
 					value = 29
 				}
 			}
-			# ASS_TEASE_CUM_ON_ASS
+			# FM_ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -4492,7 +4492,7 @@ LIDAs.10 = {
 			}
 		}
 		random_list = {
-			# HOTDOG
+			# FM_HOTDOG
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -4502,7 +4502,7 @@ LIDAs.10 = {
 					value = 30
 				}
 			}
-			# CUM_ON_GROIN
+			# FM_CUM_ON_GROIN
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -4514,7 +4514,7 @@ LIDAs.10 = {
 			}
 		}
 		random_list = {
-			# HOTDOG
+			# FM_HOTDOG
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -4527,7 +4527,7 @@ LIDAs.10 = {
 					value = 30
 				}
 			}
-			# CUM_ON_GROIN
+			# FM_CUM_ON_GROIN
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -4573,7 +4573,7 @@ LIDAs.10 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 28: EventsSex.ASS_RUB -> EventsSex.ASS_RUB
+		# 28: EventsSex.FM_ASS_RUB -> EventsSex.FM_ASS_RUB
 		name = LIDAoption.28
 		trigger = {
 			scope:partner_stamina > 0
@@ -4637,7 +4637,7 @@ LIDAs.10 = {
 		}
 	}
 	option = {
-		# 29: EventsSex.ASS_RUB -> EventsSex.HANDJOB
+		# 29: EventsSex.FM_ASS_RUB -> EventsSex.FM_HANDJOB
 		name = LIDAoption.29
 		trigger = {
 			scope:partner_stamina > 0
@@ -4701,7 +4701,7 @@ LIDAs.10 = {
 		}
 	}
 	option = {
-		# 30: EventsSex.ASS_RUB -> EventsSex.HOTDOG
+		# 30: EventsSex.FM_ASS_RUB -> EventsSex.FM_HOTDOG
 		name = LIDAoption.30
 		trigger = {
 			scope:partner_stamina > 0
@@ -4725,7 +4725,7 @@ LIDAs.10 = {
 		trigger_event = LIDAs.8
 	}
 	option = {
-		# 31: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS
+		# 31: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
 		name = LIDAoption.31
 		trigger = {
 			OR = {
@@ -4788,7 +4788,7 @@ LIDAs.10 = {
 		}
 	}
 	option = {
-		# 32: EventsSex.ASS_RUB -> EventsCum.CUM_ON_GROIN
+		# 32: EventsSex.FM_ASS_RUB -> EventsCum.FM_CUM_ON_GROIN
 		name = LIDAoption.32
 		trigger = {
 			OR = {
@@ -4812,7 +4812,7 @@ LIDAs.10 = {
 	}
 }
 LIDAs.8 = {
-	# HOTDOG: Get Hotdogged
+	# FM_HOTDOG: Get Hotdogged
 	type = character_event
 	title = LIDAs.8.t
 	theme = seduction
@@ -5006,7 +5006,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10023
 				}
-				# 23: EventsSex.ASS_TEASE -> EventsSex.ASS_RUB failed
+				# 23: EventsSex.FM_ASS_TEASE -> EventsSex.FM_ASS_RUB failed
 				# You have better uses for that hard cock than just teasing it.\n
 				desc = sex_transition_23.10000
 			}
@@ -5015,7 +5015,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10024
 				}
-				# 24: EventsSex.ASS_TEASE -> EventsSex.HANDJOB failed
+				# 24: EventsSex.FM_ASS_TEASE -> EventsSex.FM_HANDJOB failed
 				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
 				desc = sex_transition_24.10000
 			}
@@ -5024,7 +5024,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10026
 				}
-				# 26: EventsSex.ASS_TEASE -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 26: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_26.10000
 			}
@@ -5033,7 +5033,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10028
 				}
-				# 28: EventsSex.ASS_RUB -> EventsSex.ASS_RUB failed
+				# 28: EventsSex.FM_ASS_RUB -> EventsSex.FM_ASS_RUB failed
 				# You have better uses for that hard cock than just teasing it\n
 				desc = sex_transition_28.10000
 			}
@@ -5042,7 +5042,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10029
 				}
-				# 29: EventsSex.ASS_RUB -> EventsSex.HANDJOB failed
+				# 29: EventsSex.FM_ASS_RUB -> EventsSex.FM_HANDJOB failed
 				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
 				desc = sex_transition_29.10000
 			}
@@ -5051,7 +5051,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10031
 				}
-				# 31: EventsSex.ASS_RUB -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 31: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_31.10000
 			}
@@ -5060,7 +5060,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10033
 				}
-				# 33: EventsSex.HOTDOG -> EventsSex.ASS_RUB failed
+				# 33: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB failed
 				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
 				desc = sex_transition_33.10000
 			}
@@ -5069,7 +5069,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10034
 				}
-				# 34: EventsSex.HOTDOG -> EventsSex.HOTDOG failed
+				# 34: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG failed
 				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
 				desc = sex_transition_34.10000
 			}
@@ -5078,7 +5078,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10035
 				}
-				# 35: EventsSex.HOTDOG -> EventsSex.REVERSE_COWGIRL failed
+				# 35: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You push your groin backwards, trying to force him to the ground, but instead are met with sudden pleasure as you feel [affairs_partner.GetFirstName] grab and enter you.\n
 				desc = sex_transition_35.10000
 			}
@@ -5087,7 +5087,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10036
 				}
-				# 36: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM failed
+				# 36: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM failed
 				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
 				desc = sex_transition_36.10000
 			}
@@ -5096,7 +5096,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10039
 				}
-				# 39: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 39: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_39.10000
 			}
@@ -5105,7 +5105,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10041
 				}
-				# 41: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG failed
+				# 41: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_HOTDOG failed
 				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
 				desc = sex_transition_41.10000
 			}
@@ -5114,7 +5114,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10042
 				}
-				# 42: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# 42: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
 				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
 				desc = sex_transition_42.10000
 			}
@@ -5123,7 +5123,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10045
 				}
-				# 45: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 45: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_45.10000
 			}
@@ -5132,7 +5132,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10060
 				}
-				# 60: EventsSex.COWGIRL -> EventsSex.COWGIRL failed
+				# 60: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL failed
 				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
 				desc = sex_transition_60.10000
 			}
@@ -5141,7 +5141,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10061
 				}
-				# 61: EventsSex.COWGIRL -> EventsSex.REVERSE_COWGIRL failed
+				# 61: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
 				desc = sex_transition_61.10000
 			}
@@ -5150,7 +5150,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10064
 				}
-				# 64: EventsSex.COWGIRL -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 64: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
 				desc = sex_transition_64.10000
 			}
@@ -5159,7 +5159,7 @@ LIDAs.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10065
 				}
-				# 65: EventsSex.COWGIRL -> EventsCum.CREAMPIE_ON_TOP failed
+				# 65: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in.\n
 				desc = sex_transition_65.10000
 			}
@@ -5171,7 +5171,7 @@ LIDAs.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 2
 			}
-			# defaulted to 25: EventsSex.ASS_TEASE -> EventsSex.HOTDOG
+			# defaulted to 25: EventsSex.FM_ASS_TEASE -> EventsSex.FM_HOTDOG
 			desc = sex_transition_25.0
 		}
 		triggered_desc = {
@@ -5181,7 +5181,7 @@ LIDAs.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 10
 			}
-			# defaulted to 30: EventsSex.ASS_RUB -> EventsSex.HOTDOG
+			# defaulted to 30: EventsSex.FM_ASS_RUB -> EventsSex.FM_HOTDOG
 			desc = sex_transition_30.0
 		}
 		triggered_desc = {
@@ -5191,7 +5191,7 @@ LIDAs.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 8
 			}
-			# defaulted to 34: EventsSex.HOTDOG -> EventsSex.HOTDOG
+			# defaulted to 34: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG
 			desc = sex_transition_34.0
 		}
 		triggered_desc = {
@@ -5201,7 +5201,7 @@ LIDAs.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 9
 			}
-			# defaulted to 41: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG
+			# defaulted to 41: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_HOTDOG
 			desc = sex_transition_41.0
 		}
 		triggered_desc = {
@@ -5211,7 +5211,7 @@ LIDAs.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 12
 			}
-			# defaulted to 62: EventsSex.COWGIRL -> EventsSex.HOTDOG
+			# defaulted to 62: EventsSex.FM_COWGIRL -> EventsSex.FM_HOTDOG
 			desc = sex_transition_62.0
 		}
 		first_valid = {
@@ -5273,7 +5273,7 @@ LIDAs.8 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# ASS_RUB
+			# FM_ASS_RUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5283,7 +5283,7 @@ LIDAs.8 = {
 					value = 33
 				}
 			}
-			# HOTDOG
+			# FM_HOTDOG
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5293,7 +5293,7 @@ LIDAs.8 = {
 					value = 34
 				}
 			}
-			# REVERSE_COWGIRL
+			# FM_REVERSE_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5303,7 +5303,7 @@ LIDAs.8 = {
 					value = 35
 				}
 			}
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5313,7 +5313,7 @@ LIDAs.8 = {
 					value = 36
 				}
 			}
-			# ASS_TEASE_CUM_ON_ASS
+			# FM_ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -5325,7 +5325,7 @@ LIDAs.8 = {
 			}
 		}
 		random_list = {
-			# ASS_RUB
+			# FM_ASS_RUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5338,7 +5338,7 @@ LIDAs.8 = {
 					value = 33
 				}
 			}
-			# HOTDOG
+			# FM_HOTDOG
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5351,7 +5351,7 @@ LIDAs.8 = {
 					value = 34
 				}
 			}
-			# REVERSE_COWGIRL
+			# FM_REVERSE_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5364,7 +5364,7 @@ LIDAs.8 = {
 					value = 35
 				}
 			}
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5377,7 +5377,7 @@ LIDAs.8 = {
 					value = 36
 				}
 			}
-			# ASS_TEASE_CUM_ON_ASS
+			# FM_ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -5403,7 +5403,7 @@ LIDAs.8 = {
 			}
 		}
 		random_list = {
-			# STANDING_FINGERED_FROM_BEHIND
+			# FM_STANDING_FINGERED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5413,7 +5413,7 @@ LIDAs.8 = {
 					value = 37
 				}
 			}
-			# STANDING_FUCKED_FROM_BEHIND
+			# FM_STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5423,7 +5423,7 @@ LIDAs.8 = {
 					value = 38
 				}
 			}
-			# CUM_ON_GROIN
+			# FM_CUM_ON_GROIN
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -5435,7 +5435,7 @@ LIDAs.8 = {
 			}
 		}
 		random_list = {
-			# STANDING_FINGERED_FROM_BEHIND
+			# FM_STANDING_FINGERED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5448,7 +5448,7 @@ LIDAs.8 = {
 					value = 37
 				}
 			}
-			# STANDING_FUCKED_FROM_BEHIND
+			# FM_STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -5461,7 +5461,7 @@ LIDAs.8 = {
 					value = 38
 				}
 			}
-			# CUM_ON_GROIN
+			# FM_CUM_ON_GROIN
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -5497,7 +5497,7 @@ LIDAs.8 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 33: EventsSex.HOTDOG -> EventsSex.ASS_RUB
+		# 33: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB
 		name = LIDAoption.33
 		trigger = {
 			scope:partner_stamina > 0
@@ -5567,7 +5567,7 @@ LIDAs.8 = {
 		}
 	}
 	option = {
-		# 34: EventsSex.HOTDOG -> EventsSex.HOTDOG
+		# 34: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG
 		name = LIDAoption.34
 		trigger = {
 			scope:partner_stamina > 0
@@ -5642,7 +5642,7 @@ LIDAs.8 = {
 		}
 	}
 	option = {
-		# 35: EventsSex.HOTDOG -> EventsSex.REVERSE_COWGIRL
+		# 35: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL
 		name = LIDAoption.35
 		trigger = {
 			scope:partner_stamina > 0
@@ -5717,7 +5717,7 @@ LIDAs.8 = {
 		}
 	}
 	option = {
-		# 36: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM
+		# 36: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM
 		name = LIDAoption.36
 		trigger = {
 			scope:partner_stamina > 0
@@ -5792,7 +5792,7 @@ LIDAs.8 = {
 		}
 	}
 	option = {
-		# 37: EventsSex.HOTDOG -> EventsSex.STANDING_FINGERED_FROM_BEHIND
+		# 37: EventsSex.FM_HOTDOG -> EventsSex.FM_STANDING_FINGERED_FROM_BEHIND
 		name = LIDAoption.37
 		trigger = {
 			scope:partner_stamina > 0
@@ -5816,7 +5816,7 @@ LIDAs.8 = {
 		trigger_event = LIDAs.9
 	}
 	option = {
-		# 38: EventsSex.HOTDOG -> EventsSex.STANDING_FUCKED_FROM_BEHIND
+		# 38: EventsSex.FM_HOTDOG -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
 		name = LIDAoption.38
 		trigger = {
 			scope:partner_stamina > 0
@@ -5840,7 +5840,7 @@ LIDAs.8 = {
 		trigger_event = LIDAs.5
 	}
 	option = {
-		# 39: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS
+		# 39: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
 		name = LIDAoption.39
 		trigger = {
 			OR = {
@@ -5909,7 +5909,7 @@ LIDAs.8 = {
 		}
 	}
 	option = {
-		# 40: EventsSex.HOTDOG -> EventsCum.CUM_ON_GROIN
+		# 40: EventsSex.FM_HOTDOG -> EventsCum.FM_CUM_ON_GROIN
 		name = LIDAoption.40
 		trigger = {
 			OR = {
@@ -5933,7 +5933,7 @@ LIDAs.8 = {
 	}
 }
 LIDAs.9 = {
-	# STANDING_FINGERED_FROM_BEHIND: Fingered from Behind
+	# FM_STANDING_FINGERED_FROM_BEHIND: Fingered from Behind
 	type = character_event
 	title = LIDAs.9.t
 	theme = seduction
@@ -6100,7 +6100,7 @@ LIDAs.9 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10033
 				}
-				# 33: EventsSex.HOTDOG -> EventsSex.ASS_RUB failed
+				# 33: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB failed
 				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
 				desc = sex_transition_33.10000
 			}
@@ -6109,7 +6109,7 @@ LIDAs.9 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10034
 				}
-				# 34: EventsSex.HOTDOG -> EventsSex.HOTDOG failed
+				# 34: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG failed
 				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
 				desc = sex_transition_34.10000
 			}
@@ -6118,7 +6118,7 @@ LIDAs.9 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10035
 				}
-				# 35: EventsSex.HOTDOG -> EventsSex.REVERSE_COWGIRL failed
+				# 35: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You push your groin backwards, trying to force him to the ground, but instead are met with sudden pleasure as you feel [affairs_partner.GetFirstName] grab and enter you.\n
 				desc = sex_transition_35.10000
 			}
@@ -6127,7 +6127,7 @@ LIDAs.9 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10036
 				}
-				# 36: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM failed
+				# 36: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM failed
 				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
 				desc = sex_transition_36.10000
 			}
@@ -6136,7 +6136,7 @@ LIDAs.9 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10039
 				}
-				# 39: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 39: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_39.10000
 			}
@@ -6145,7 +6145,7 @@ LIDAs.9 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10041
 				}
-				# 41: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG failed
+				# 41: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_HOTDOG failed
 				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
 				desc = sex_transition_41.10000
 			}
@@ -6154,7 +6154,7 @@ LIDAs.9 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10042
 				}
-				# 42: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# 42: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
 				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
 				desc = sex_transition_42.10000
 			}
@@ -6163,7 +6163,7 @@ LIDAs.9 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10045
 				}
-				# 45: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 45: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_45.10000
 			}
@@ -6175,7 +6175,7 @@ LIDAs.9 = {
 				exists = scope:prev_event
 				scope:prev_event = 8
 			}
-			# defaulted to 37: EventsSex.HOTDOG -> EventsSex.STANDING_FINGERED_FROM_BEHIND
+			# defaulted to 37: EventsSex.FM_HOTDOG -> EventsSex.FM_STANDING_FINGERED_FROM_BEHIND
 			desc = sex_transition_37.0
 		}
 		triggered_desc = {
@@ -6185,7 +6185,7 @@ LIDAs.9 = {
 				exists = scope:prev_event
 				scope:prev_event = 9
 			}
-			# defaulted to 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.STANDING_FINGERED_FROM_BEHIND
+			# defaulted to 43: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_STANDING_FINGERED_FROM_BEHIND
 			desc = sex_transition_43.0
 		}
 		first_valid = {
@@ -6247,7 +6247,7 @@ LIDAs.9 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# HOTDOG
+			# FM_HOTDOG
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -6257,7 +6257,7 @@ LIDAs.9 = {
 					value = 41
 				}
 			}
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -6267,7 +6267,7 @@ LIDAs.9 = {
 					value = 42
 				}
 			}
-			# ASS_TEASE_CUM_ON_ASS
+			# FM_ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -6279,7 +6279,7 @@ LIDAs.9 = {
 			}
 		}
 		random_list = {
-			# HOTDOG
+			# FM_HOTDOG
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -6292,7 +6292,7 @@ LIDAs.9 = {
 					value = 41
 				}
 			}
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -6305,7 +6305,7 @@ LIDAs.9 = {
 					value = 42
 				}
 			}
-			# ASS_TEASE_CUM_ON_ASS
+			# FM_ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -6331,7 +6331,7 @@ LIDAs.9 = {
 			}
 		}
 		random_list = {
-			# STANDING_FINGERED_FROM_BEHIND
+			# FM_STANDING_FINGERED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -6341,7 +6341,7 @@ LIDAs.9 = {
 					value = 43
 				}
 			}
-			# STANDING_FUCKED_FROM_BEHIND
+			# FM_STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -6351,7 +6351,7 @@ LIDAs.9 = {
 					value = 44
 				}
 			}
-			# CUM_ON_GROIN
+			# FM_CUM_ON_GROIN
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -6363,7 +6363,7 @@ LIDAs.9 = {
 			}
 		}
 		random_list = {
-			# STANDING_FINGERED_FROM_BEHIND
+			# FM_STANDING_FINGERED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -6376,7 +6376,7 @@ LIDAs.9 = {
 					value = 43
 				}
 			}
-			# STANDING_FUCKED_FROM_BEHIND
+			# FM_STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -6389,7 +6389,7 @@ LIDAs.9 = {
 					value = 44
 				}
 			}
-			# CUM_ON_GROIN
+			# FM_CUM_ON_GROIN
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -6431,7 +6431,7 @@ LIDAs.9 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 41: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG
+		# 41: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_HOTDOG
 		name = LIDAoption.41
 		trigger = {
 			scope:partner_stamina > 0
@@ -6501,7 +6501,7 @@ LIDAs.9 = {
 		}
 	}
 	option = {
-		# 42: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM
+		# 42: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM
 		name = LIDAoption.42
 		trigger = {
 			scope:partner_stamina > 0
@@ -6576,7 +6576,7 @@ LIDAs.9 = {
 		}
 	}
 	option = {
-		# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.STANDING_FINGERED_FROM_BEHIND
+		# 43: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_STANDING_FINGERED_FROM_BEHIND
 		name = LIDAoption.43
 		trigger = {
 			scope:partner_stamina > 0
@@ -6600,7 +6600,7 @@ LIDAs.9 = {
 		trigger_event = LIDAs.9
 	}
 	option = {
-		# 44: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.STANDING_FUCKED_FROM_BEHIND
+		# 44: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
 		name = LIDAoption.44
 		trigger = {
 			scope:partner_stamina > 0
@@ -6624,7 +6624,7 @@ LIDAs.9 = {
 		trigger_event = LIDAs.5
 	}
 	option = {
-		# 45: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS
+		# 45: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
 		name = LIDAoption.45
 		trigger = {
 			OR = {
@@ -6693,7 +6693,7 @@ LIDAs.9 = {
 		}
 	}
 	option = {
-		# 46: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.CUM_ON_GROIN
+		# 46: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_CUM_ON_GROIN
 		name = LIDAoption.46
 		trigger = {
 			OR = {
@@ -6717,7 +6717,7 @@ LIDAs.9 = {
 	}
 }
 LIDAs.5 = {
-	# STANDING_FUCKED_FROM_BEHIND: Standing Fucked from Behind
+	# FM_STANDING_FUCKED_FROM_BEHIND: Standing Fucked from Behind
 	type = character_event
 	title = LIDAs.5.t
 	theme = seduction
@@ -6902,7 +6902,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10033
 				}
-				# 33: EventsSex.HOTDOG -> EventsSex.ASS_RUB failed
+				# 33: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB failed
 				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
 				desc = sex_transition_33.10000
 			}
@@ -6911,7 +6911,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10034
 				}
-				# 34: EventsSex.HOTDOG -> EventsSex.HOTDOG failed
+				# 34: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG failed
 				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
 				desc = sex_transition_34.10000
 			}
@@ -6920,7 +6920,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10035
 				}
-				# 35: EventsSex.HOTDOG -> EventsSex.REVERSE_COWGIRL failed
+				# 35: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You push your groin backwards, trying to force him to the ground, but instead are met with sudden pleasure as you feel [affairs_partner.GetFirstName] grab and enter you.\n
 				desc = sex_transition_35.10000
 			}
@@ -6929,7 +6929,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10036
 				}
-				# 36: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM failed
+				# 36: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM failed
 				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
 				desc = sex_transition_36.10000
 			}
@@ -6938,7 +6938,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10039
 				}
-				# 39: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 39: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_39.10000
 			}
@@ -6947,7 +6947,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10041
 				}
-				# 41: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG failed
+				# 41: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_HOTDOG failed
 				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
 				desc = sex_transition_41.10000
 			}
@@ -6956,7 +6956,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10042
 				}
-				# 42: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# 42: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
 				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
 				desc = sex_transition_42.10000
 			}
@@ -6965,7 +6965,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10045
 				}
-				# 45: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 45: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_45.10000
 			}
@@ -6974,7 +6974,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10047
 				}
-				# 47: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# 47: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
 				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
 				desc = sex_transition_47.10000
 			}
@@ -6983,7 +6983,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10048
 				}
-				# 48: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
+				# 48: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB failed
 				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts while as punishment for trying to escape.\n
 				desc = sex_transition_48.10000
 			}
@@ -6992,7 +6992,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10051
 				}
-				# 51: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 51: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Pull it out, [affairs_partner.GetFirstName]!", you just manage to say between his thrusts and groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_51.10000
 			}
@@ -7001,7 +7001,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10053
 				}
-				# 53: EventsSex.REVERSE_COWGIRL -> EventsSex.REVERSE_COWGIRL failed
+				# 53: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
 				desc = sex_transition_53.10000
 			}
@@ -7010,7 +7010,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10054
 				}
-				# 54: EventsSex.REVERSE_COWGIRL -> EventsSex.COWGIRL failed
+				# 54: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL failed
 				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
 				desc = sex_transition_54.10000
 			}
@@ -7019,7 +7019,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10057
 				}
-				# 57: EventsSex.REVERSE_COWGIRL -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 57: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
 				desc = sex_transition_57.10000
 			}
@@ -7028,7 +7028,7 @@ LIDAs.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10058
 				}
-				# 58: EventsSex.REVERSE_COWGIRL -> EventsCum.CREAMPIE_ON_TOP failed
+				# 58: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in.\n
 				desc = sex_transition_58.10000
 			}
@@ -7040,7 +7040,7 @@ LIDAs.5 = {
 				exists = scope:prev_event
 				scope:prev_event = 8
 			}
-			# defaulted to 38: EventsSex.HOTDOG -> EventsSex.STANDING_FUCKED_FROM_BEHIND
+			# defaulted to 38: EventsSex.FM_HOTDOG -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
 			desc = sex_transition_38.0
 		}
 		triggered_desc = {
@@ -7050,7 +7050,7 @@ LIDAs.5 = {
 				exists = scope:prev_event
 				scope:prev_event = 9
 			}
-			# defaulted to 44: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.STANDING_FUCKED_FROM_BEHIND
+			# defaulted to 44: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
 			desc = sex_transition_44.0
 		}
 		triggered_desc = {
@@ -7060,7 +7060,7 @@ LIDAs.5 = {
 				exists = scope:prev_event
 				scope:prev_event = 5
 			}
-			# defaulted to 49: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.STANDING_FUCKED_FROM_BEHIND
+			# defaulted to 49: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
 			desc = sex_transition_49.0
 		}
 		triggered_desc = {
@@ -7070,7 +7070,7 @@ LIDAs.5 = {
 				exists = scope:prev_event
 				scope:prev_event = 11
 			}
-			# defaulted to 55: EventsSex.REVERSE_COWGIRL -> EventsSex.STANDING_FUCKED_FROM_BEHIND
+			# defaulted to 55: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
 			desc = sex_transition_55.0
 		}
 		first_valid = {
@@ -7144,7 +7144,7 @@ LIDAs.5 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -7154,7 +7154,7 @@ LIDAs.5 = {
 					value = 47
 				}
 			}
-			# BLOWJOB_SUB
+			# FM_BLOWJOB_SUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -7164,7 +7164,7 @@ LIDAs.5 = {
 					value = 48
 				}
 			}
-			# PULL_OUT_CUM_ON_ASS
+			# FM_PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -7176,7 +7176,7 @@ LIDAs.5 = {
 			}
 		}
 		random_list = {
-			# BLOWJOB_DOM
+			# FM_BLOWJOB_DOM
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -7189,7 +7189,7 @@ LIDAs.5 = {
 					value = 47
 				}
 			}
-			# BLOWJOB_SUB
+			# FM_BLOWJOB_SUB
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -7202,7 +7202,7 @@ LIDAs.5 = {
 					value = 48
 				}
 			}
-			# PULL_OUT_CUM_ON_ASS
+			# FM_PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -7228,7 +7228,7 @@ LIDAs.5 = {
 			}
 		}
 		random_list = {
-			# STANDING_FUCKED_FROM_BEHIND
+			# FM_STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -7238,7 +7238,7 @@ LIDAs.5 = {
 					value = 49
 				}
 			}
-			# PRONE_BONE
+			# FM_PRONE_BONE
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -7248,7 +7248,7 @@ LIDAs.5 = {
 					value = 50
 				}
 			}
-			# CREAMPIE_REGULAR
+			# FM_CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -7260,7 +7260,7 @@ LIDAs.5 = {
 			}
 		}
 		random_list = {
-			# STANDING_FUCKED_FROM_BEHIND
+			# FM_STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -7273,7 +7273,7 @@ LIDAs.5 = {
 					value = 49
 				}
 			}
-			# PRONE_BONE
+			# FM_PRONE_BONE
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -7286,7 +7286,7 @@ LIDAs.5 = {
 					value = 50
 				}
 			}
-			# CREAMPIE_REGULAR
+			# FM_CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -7332,7 +7332,7 @@ LIDAs.5 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 47: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM
+		# 47: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM
 		name = LIDAoption.47
 		trigger = {
 			scope:partner_stamina > 0
@@ -7402,7 +7402,7 @@ LIDAs.5 = {
 		}
 	}
 	option = {
-		# 48: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB
+		# 48: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB
 		name = LIDAoption.48
 		trigger = {
 			scope:partner_stamina > 0
@@ -7477,7 +7477,7 @@ LIDAs.5 = {
 		}
 	}
 	option = {
-		# 49: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.STANDING_FUCKED_FROM_BEHIND
+		# 49: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
 		name = LIDAoption.49
 		trigger = {
 			scope:partner_stamina > 0
@@ -7501,7 +7501,7 @@ LIDAs.5 = {
 		trigger_event = LIDAs.5
 	}
 	option = {
-		# 50: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.PRONE_BONE
+		# 50: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_PRONE_BONE
 		name = LIDAoption.50
 		trigger = {
 			scope:partner_stamina > 0
@@ -7525,7 +7525,7 @@ LIDAs.5 = {
 		trigger_event = LIDAs.14
 	}
 	option = {
-		# 51: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS
+		# 51: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
 		name = LIDAoption.51
 		trigger = {
 			OR = {
@@ -7594,7 +7594,7 @@ LIDAs.5 = {
 		}
 	}
 	option = {
-		# 52: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.CREAMPIE_REGULAR
+		# 52: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_CREAMPIE_REGULAR
 		name = LIDAoption.52
 		trigger = {
 			OR = {
@@ -7618,7 +7618,7 @@ LIDAs.5 = {
 	}
 }
 LIDAs.11 = {
-	# REVERSE_COWGIRL: Ride Facing Away
+	# FM_REVERSE_COWGIRL: Ride Facing Away
 	type = character_event
 	title = LIDAs.11.t
 	theme = seduction
@@ -7794,7 +7794,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10033
 				}
-				# 33: EventsSex.HOTDOG -> EventsSex.ASS_RUB failed
+				# 33: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB failed
 				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
 				desc = sex_transition_33.10000
 			}
@@ -7803,7 +7803,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10034
 				}
-				# 34: EventsSex.HOTDOG -> EventsSex.HOTDOG failed
+				# 34: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG failed
 				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
 				desc = sex_transition_34.10000
 			}
@@ -7812,7 +7812,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10035
 				}
-				# 35: EventsSex.HOTDOG -> EventsSex.REVERSE_COWGIRL failed
+				# 35: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You push your groin backwards, trying to force him to the ground, but instead are met with sudden pleasure as you feel [affairs_partner.GetFirstName] grab and enter you.\n
 				desc = sex_transition_35.10000
 			}
@@ -7821,7 +7821,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10036
 				}
-				# 36: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM failed
+				# 36: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM failed
 				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
 				desc = sex_transition_36.10000
 			}
@@ -7830,7 +7830,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10039
 				}
-				# 39: EventsSex.HOTDOG -> EventsCum.ASS_TEASE_CUM_ON_ASS failed
+				# 39: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
 				desc = sex_transition_39.10000
 			}
@@ -7839,7 +7839,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10053
 				}
-				# 53: EventsSex.REVERSE_COWGIRL -> EventsSex.REVERSE_COWGIRL failed
+				# 53: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
 				desc = sex_transition_53.10000
 			}
@@ -7848,7 +7848,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10054
 				}
-				# 54: EventsSex.REVERSE_COWGIRL -> EventsSex.COWGIRL failed
+				# 54: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL failed
 				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
 				desc = sex_transition_54.10000
 			}
@@ -7857,7 +7857,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10057
 				}
-				# 57: EventsSex.REVERSE_COWGIRL -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 57: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
 				desc = sex_transition_57.10000
 			}
@@ -7866,7 +7866,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10058
 				}
-				# 58: EventsSex.REVERSE_COWGIRL -> EventsCum.CREAMPIE_ON_TOP failed
+				# 58: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in.\n
 				desc = sex_transition_58.10000
 			}
@@ -7875,7 +7875,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10060
 				}
-				# 60: EventsSex.COWGIRL -> EventsSex.COWGIRL failed
+				# 60: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL failed
 				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
 				desc = sex_transition_60.10000
 			}
@@ -7884,7 +7884,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10061
 				}
-				# 61: EventsSex.COWGIRL -> EventsSex.REVERSE_COWGIRL failed
+				# 61: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
 				desc = sex_transition_61.10000
 			}
@@ -7893,7 +7893,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10064
 				}
-				# 64: EventsSex.COWGIRL -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 64: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
 				desc = sex_transition_64.10000
 			}
@@ -7902,7 +7902,7 @@ LIDAs.11 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10065
 				}
-				# 65: EventsSex.COWGIRL -> EventsCum.CREAMPIE_ON_TOP failed
+				# 65: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in.\n
 				desc = sex_transition_65.10000
 			}
@@ -7914,7 +7914,7 @@ LIDAs.11 = {
 				exists = scope:prev_event
 				scope:prev_event = 8
 			}
-			# defaulted to 35: EventsSex.HOTDOG -> EventsSex.REVERSE_COWGIRL
+			# defaulted to 35: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL
 			desc = sex_transition_35.0
 		}
 		triggered_desc = {
@@ -7924,7 +7924,7 @@ LIDAs.11 = {
 				exists = scope:prev_event
 				scope:prev_event = 11
 			}
-			# defaulted to 53: EventsSex.REVERSE_COWGIRL -> EventsSex.REVERSE_COWGIRL
+			# defaulted to 53: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL
 			desc = sex_transition_53.0
 		}
 		triggered_desc = {
@@ -7934,7 +7934,7 @@ LIDAs.11 = {
 				exists = scope:prev_event
 				scope:prev_event = 12
 			}
-			# defaulted to 61: EventsSex.COWGIRL -> EventsSex.REVERSE_COWGIRL
+			# defaulted to 61: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL
 			desc = sex_transition_61.0
 		}
 		first_valid = {
@@ -8008,7 +8008,7 @@ LIDAs.11 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# REVERSE_COWGIRL
+			# FM_REVERSE_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -8018,7 +8018,7 @@ LIDAs.11 = {
 					value = 53
 				}
 			}
-			# COWGIRL
+			# FM_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -8028,7 +8028,7 @@ LIDAs.11 = {
 					value = 54
 				}
 			}
-			# PULL_OUT_CUM_ON_ASS
+			# FM_PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -8038,7 +8038,7 @@ LIDAs.11 = {
 					value = 57
 				}
 			}
-			# CREAMPIE_ON_TOP
+			# FM_CREAMPIE_ON_TOP
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -8050,7 +8050,7 @@ LIDAs.11 = {
 			}
 		}
 		random_list = {
-			# REVERSE_COWGIRL
+			# FM_REVERSE_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -8063,7 +8063,7 @@ LIDAs.11 = {
 					value = 53
 				}
 			}
-			# COWGIRL
+			# FM_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -8076,7 +8076,7 @@ LIDAs.11 = {
 					value = 54
 				}
 			}
-			# PULL_OUT_CUM_ON_ASS
+			# FM_PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -8089,7 +8089,7 @@ LIDAs.11 = {
 					value = 57
 				}
 			}
-			# CREAMPIE_ON_TOP
+			# FM_CREAMPIE_ON_TOP
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -8115,7 +8115,7 @@ LIDAs.11 = {
 			}
 		}
 		random_list = {
-			# STANDING_FUCKED_FROM_BEHIND
+			# FM_STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -8125,7 +8125,7 @@ LIDAs.11 = {
 					value = 55
 				}
 			}
-			# PRONE_BONE
+			# FM_PRONE_BONE
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -8135,7 +8135,7 @@ LIDAs.11 = {
 					value = 56
 				}
 			}
-			# CREAMPIE_REGULAR
+			# FM_CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -8147,7 +8147,7 @@ LIDAs.11 = {
 			}
 		}
 		random_list = {
-			# STANDING_FUCKED_FROM_BEHIND
+			# FM_STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -8160,7 +8160,7 @@ LIDAs.11 = {
 					value = 55
 				}
 			}
-			# PRONE_BONE
+			# FM_PRONE_BONE
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -8173,7 +8173,7 @@ LIDAs.11 = {
 					value = 56
 				}
 			}
-			# CREAMPIE_REGULAR
+			# FM_CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -8219,7 +8219,7 @@ LIDAs.11 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 53: EventsSex.REVERSE_COWGIRL -> EventsSex.REVERSE_COWGIRL
+		# 53: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL
 		name = LIDAoption.53
 		trigger = {
 			scope:partner_stamina > 0
@@ -8289,7 +8289,7 @@ LIDAs.11 = {
 		}
 	}
 	option = {
-		# 54: EventsSex.REVERSE_COWGIRL -> EventsSex.COWGIRL
+		# 54: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL
 		name = LIDAoption.54
 		trigger = {
 			scope:partner_stamina > 0
@@ -8359,7 +8359,7 @@ LIDAs.11 = {
 		}
 	}
 	option = {
-		# 55: EventsSex.REVERSE_COWGIRL -> EventsSex.STANDING_FUCKED_FROM_BEHIND
+		# 55: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
 		name = LIDAoption.55
 		trigger = {
 			scope:partner_stamina > 0
@@ -8383,7 +8383,7 @@ LIDAs.11 = {
 		trigger_event = LIDAs.5
 	}
 	option = {
-		# 56: EventsSex.REVERSE_COWGIRL -> EventsSex.PRONE_BONE
+		# 56: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_PRONE_BONE
 		name = LIDAoption.56
 		trigger = {
 			scope:partner_stamina > 0
@@ -8407,7 +8407,7 @@ LIDAs.11 = {
 		trigger_event = LIDAs.14
 	}
 	option = {
-		# 57: EventsSex.REVERSE_COWGIRL -> EventsCum.PULL_OUT_CUM_ON_ASS
+		# 57: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
 		name = LIDAoption.57
 		trigger = {
 			OR = {
@@ -8476,7 +8476,7 @@ LIDAs.11 = {
 		}
 	}
 	option = {
-		# 58: EventsSex.REVERSE_COWGIRL -> EventsCum.CREAMPIE_ON_TOP
+		# 58: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP
 		name = LIDAoption.58
 		trigger = {
 			OR = {
@@ -8545,7 +8545,7 @@ LIDAs.11 = {
 		}
 	}
 	option = {
-		# 59: EventsSex.REVERSE_COWGIRL -> EventsCum.CREAMPIE_REGULAR
+		# 59: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_REGULAR
 		name = LIDAoption.59
 		trigger = {
 			OR = {
@@ -8569,7 +8569,7 @@ LIDAs.11 = {
 	}
 }
 LIDAs.12 = {
-	# COWGIRL: Ride Facing Them
+	# FM_COWGIRL: Ride Facing Them
 	type = character_event
 	title = LIDAs.12.t
 	theme = seduction
@@ -8745,7 +8745,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10053
 				}
-				# 53: EventsSex.REVERSE_COWGIRL -> EventsSex.REVERSE_COWGIRL failed
+				# 53: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
 				desc = sex_transition_53.10000
 			}
@@ -8754,7 +8754,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10054
 				}
-				# 54: EventsSex.REVERSE_COWGIRL -> EventsSex.COWGIRL failed
+				# 54: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL failed
 				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
 				desc = sex_transition_54.10000
 			}
@@ -8763,7 +8763,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10057
 				}
-				# 57: EventsSex.REVERSE_COWGIRL -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 57: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
 				desc = sex_transition_57.10000
 			}
@@ -8772,7 +8772,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10058
 				}
-				# 58: EventsSex.REVERSE_COWGIRL -> EventsCum.CREAMPIE_ON_TOP failed
+				# 58: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in.\n
 				desc = sex_transition_58.10000
 			}
@@ -8781,7 +8781,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10060
 				}
-				# 60: EventsSex.COWGIRL -> EventsSex.COWGIRL failed
+				# 60: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL failed
 				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
 				desc = sex_transition_60.10000
 			}
@@ -8790,7 +8790,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10061
 				}
-				# 61: EventsSex.COWGIRL -> EventsSex.REVERSE_COWGIRL failed
+				# 61: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
 				desc = sex_transition_61.10000
 			}
@@ -8799,7 +8799,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10064
 				}
-				# 64: EventsSex.COWGIRL -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 64: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
 				desc = sex_transition_64.10000
 			}
@@ -8808,7 +8808,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10065
 				}
-				# 65: EventsSex.COWGIRL -> EventsCum.CREAMPIE_ON_TOP failed
+				# 65: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in.\n
 				desc = sex_transition_65.10000
 			}
@@ -8817,7 +8817,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10067
 				}
-				# 67: EventsSex.MISSIONARY -> EventsSex.COWGIRL failed
+				# 67: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
 				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
 				desc = sex_transition_67.10000
 			}
@@ -8826,7 +8826,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10070
 				}
-				# 70: EventsSex.MISSIONARY -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 70: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_70.10000
 			}
@@ -8835,7 +8835,7 @@ LIDAs.12 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10071
 				}
-				# 71: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
+				# 71: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
 				desc = sex_transition_71.10000
 			}
@@ -8847,7 +8847,7 @@ LIDAs.12 = {
 				exists = scope:prev_event
 				scope:prev_event = 11
 			}
-			# defaulted to 54: EventsSex.REVERSE_COWGIRL -> EventsSex.COWGIRL
+			# defaulted to 54: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL
 			desc = sex_transition_54.0
 		}
 		triggered_desc = {
@@ -8857,7 +8857,7 @@ LIDAs.12 = {
 				exists = scope:prev_event
 				scope:prev_event = 12
 			}
-			# defaulted to 60: EventsSex.COWGIRL -> EventsSex.COWGIRL
+			# defaulted to 60: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL
 			desc = sex_transition_60.0
 		}
 		triggered_desc = {
@@ -8867,7 +8867,7 @@ LIDAs.12 = {
 				exists = scope:prev_event
 				scope:prev_event = 13
 			}
-			# defaulted to 67: EventsSex.MISSIONARY -> EventsSex.COWGIRL
+			# defaulted to 67: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL
 			desc = sex_transition_67.0
 		}
 		first_valid = {
@@ -8941,7 +8941,7 @@ LIDAs.12 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# COWGIRL
+			# FM_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -8951,7 +8951,7 @@ LIDAs.12 = {
 					value = 60
 				}
 			}
-			# REVERSE_COWGIRL
+			# FM_REVERSE_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -8961,7 +8961,7 @@ LIDAs.12 = {
 					value = 61
 				}
 			}
-			# PULL_OUT_CUM_ON_ASS
+			# FM_PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -8971,7 +8971,7 @@ LIDAs.12 = {
 					value = 64
 				}
 			}
-			# CREAMPIE_ON_TOP
+			# FM_CREAMPIE_ON_TOP
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -8983,7 +8983,7 @@ LIDAs.12 = {
 			}
 		}
 		random_list = {
-			# COWGIRL
+			# FM_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -8996,7 +8996,7 @@ LIDAs.12 = {
 					value = 60
 				}
 			}
-			# REVERSE_COWGIRL
+			# FM_REVERSE_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -9009,7 +9009,7 @@ LIDAs.12 = {
 					value = 61
 				}
 			}
-			# PULL_OUT_CUM_ON_ASS
+			# FM_PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -9022,7 +9022,7 @@ LIDAs.12 = {
 					value = 64
 				}
 			}
-			# CREAMPIE_ON_TOP
+			# FM_CREAMPIE_ON_TOP
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -9048,7 +9048,7 @@ LIDAs.12 = {
 			}
 		}
 		random_list = {
-			# HOTDOG
+			# FM_HOTDOG
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -9058,7 +9058,7 @@ LIDAs.12 = {
 					value = 62
 				}
 			}
-			# MISSIONARY
+			# FM_MISSIONARY
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -9068,7 +9068,7 @@ LIDAs.12 = {
 					value = 63
 				}
 			}
-			# CREAMPIE_REGULAR
+			# FM_CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -9080,7 +9080,7 @@ LIDAs.12 = {
 			}
 		}
 		random_list = {
-			# HOTDOG
+			# FM_HOTDOG
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -9093,7 +9093,7 @@ LIDAs.12 = {
 					value = 62
 				}
 			}
-			# MISSIONARY
+			# FM_MISSIONARY
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -9106,7 +9106,7 @@ LIDAs.12 = {
 					value = 63
 				}
 			}
-			# CREAMPIE_REGULAR
+			# FM_CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -9152,7 +9152,7 @@ LIDAs.12 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 60: EventsSex.COWGIRL -> EventsSex.COWGIRL
+		# 60: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL
 		name = LIDAoption.60
 		trigger = {
 			scope:partner_stamina > 0
@@ -9222,7 +9222,7 @@ LIDAs.12 = {
 		}
 	}
 	option = {
-		# 61: EventsSex.COWGIRL -> EventsSex.REVERSE_COWGIRL
+		# 61: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL
 		name = LIDAoption.61
 		trigger = {
 			scope:partner_stamina > 0
@@ -9292,7 +9292,7 @@ LIDAs.12 = {
 		}
 	}
 	option = {
-		# 62: EventsSex.COWGIRL -> EventsSex.HOTDOG
+		# 62: EventsSex.FM_COWGIRL -> EventsSex.FM_HOTDOG
 		name = LIDAoption.62
 		trigger = {
 			scope:partner_stamina > 0
@@ -9316,7 +9316,7 @@ LIDAs.12 = {
 		trigger_event = LIDAs.8
 	}
 	option = {
-		# 63: EventsSex.COWGIRL -> EventsSex.MISSIONARY
+		# 63: EventsSex.FM_COWGIRL -> EventsSex.FM_MISSIONARY
 		name = LIDAoption.63
 		trigger = {
 			scope:partner_stamina > 0
@@ -9340,7 +9340,7 @@ LIDAs.12 = {
 		trigger_event = LIDAs.13
 	}
 	option = {
-		# 64: EventsSex.COWGIRL -> EventsCum.PULL_OUT_CUM_ON_ASS
+		# 64: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
 		name = LIDAoption.64
 		trigger = {
 			OR = {
@@ -9409,7 +9409,7 @@ LIDAs.12 = {
 		}
 	}
 	option = {
-		# 65: EventsSex.COWGIRL -> EventsCum.CREAMPIE_ON_TOP
+		# 65: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP
 		name = LIDAoption.65
 		trigger = {
 			OR = {
@@ -9478,7 +9478,7 @@ LIDAs.12 = {
 		}
 	}
 	option = {
-		# 66: EventsSex.COWGIRL -> EventsCum.CREAMPIE_REGULAR
+		# 66: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_REGULAR
 		name = LIDAoption.66
 		trigger = {
 			OR = {
@@ -9502,7 +9502,7 @@ LIDAs.12 = {
 	}
 }
 LIDAs.13 = {
-	# MISSIONARY: Lie on Back
+	# FM_MISSIONARY: Lie on Back
 	type = character_event
 	title = LIDAs.13.t
 	theme = seduction
@@ -9678,7 +9678,7 @@ LIDAs.13 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10060
 				}
-				# 60: EventsSex.COWGIRL -> EventsSex.COWGIRL failed
+				# 60: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL failed
 				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
 				desc = sex_transition_60.10000
 			}
@@ -9687,7 +9687,7 @@ LIDAs.13 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10061
 				}
-				# 61: EventsSex.COWGIRL -> EventsSex.REVERSE_COWGIRL failed
+				# 61: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
 				desc = sex_transition_61.10000
 			}
@@ -9696,7 +9696,7 @@ LIDAs.13 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10064
 				}
-				# 64: EventsSex.COWGIRL -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 64: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
 				desc = sex_transition_64.10000
 			}
@@ -9705,7 +9705,7 @@ LIDAs.13 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10065
 				}
-				# 65: EventsSex.COWGIRL -> EventsCum.CREAMPIE_ON_TOP failed
+				# 65: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in.\n
 				desc = sex_transition_65.10000
 			}
@@ -9714,7 +9714,7 @@ LIDAs.13 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10067
 				}
-				# 67: EventsSex.MISSIONARY -> EventsSex.COWGIRL failed
+				# 67: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
 				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
 				desc = sex_transition_67.10000
 			}
@@ -9723,7 +9723,7 @@ LIDAs.13 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10070
 				}
-				# 70: EventsSex.MISSIONARY -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 70: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_70.10000
 			}
@@ -9732,7 +9732,7 @@ LIDAs.13 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10071
 				}
-				# 71: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
+				# 71: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
 				desc = sex_transition_71.10000
 			}
@@ -9741,7 +9741,7 @@ LIDAs.13 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10073
 				}
-				# 73: EventsSex.PRONE_BONE -> EventsSex.MISSIONARY failed
+				# 73: EventsSex.FM_PRONE_BONE -> EventsSex.FM_MISSIONARY failed
 				# You try to roll in place, but [affairs_partner.GetFirstName]'s paralyzing barrage of thrusts never slows enough to do so.\n
 				desc = sex_transition_73.10000
 			}
@@ -9750,7 +9750,7 @@ LIDAs.13 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10075
 				}
-				# 75: EventsSex.PRONE_BONE -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 75: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
 				desc = sex_transition_75.10000
 			}
@@ -9762,7 +9762,7 @@ LIDAs.13 = {
 				exists = scope:prev_event
 				scope:prev_event = 12
 			}
-			# defaulted to 63: EventsSex.COWGIRL -> EventsSex.MISSIONARY
+			# defaulted to 63: EventsSex.FM_COWGIRL -> EventsSex.FM_MISSIONARY
 			desc = sex_transition_63.0
 		}
 		triggered_desc = {
@@ -9772,7 +9772,7 @@ LIDAs.13 = {
 				exists = scope:prev_event
 				scope:prev_event = 13
 			}
-			# defaulted to 68: EventsSex.MISSIONARY -> EventsSex.MISSIONARY
+			# defaulted to 68: EventsSex.FM_MISSIONARY -> EventsSex.FM_MISSIONARY
 			desc = sex_transition_68.0
 		}
 		triggered_desc = {
@@ -9782,7 +9782,7 @@ LIDAs.13 = {
 				exists = scope:prev_event
 				scope:prev_event = 14
 			}
-			# defaulted to 73: EventsSex.PRONE_BONE -> EventsSex.MISSIONARY
+			# defaulted to 73: EventsSex.FM_PRONE_BONE -> EventsSex.FM_MISSIONARY
 			desc = sex_transition_73.0
 		}
 		first_valid = {
@@ -9857,7 +9857,7 @@ LIDAs.13 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# COWGIRL
+			# FM_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -9867,7 +9867,7 @@ LIDAs.13 = {
 					value = 67
 				}
 			}
-			# PULL_OUT_CUM_ON_ASS
+			# FM_PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -9877,7 +9877,7 @@ LIDAs.13 = {
 					value = 70
 				}
 			}
-			# CREAMPIE_KEEP
+			# FM_CREAMPIE_KEEP
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -9889,7 +9889,7 @@ LIDAs.13 = {
 			}
 		}
 		random_list = {
-			# COWGIRL
+			# FM_COWGIRL
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -9902,7 +9902,7 @@ LIDAs.13 = {
 					value = 67
 				}
 			}
-			# PULL_OUT_CUM_ON_ASS
+			# FM_PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -9915,7 +9915,7 @@ LIDAs.13 = {
 					value = 70
 				}
 			}
-			# CREAMPIE_KEEP
+			# FM_CREAMPIE_KEEP
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -9941,7 +9941,7 @@ LIDAs.13 = {
 			}
 		}
 		random_list = {
-			# MISSIONARY
+			# FM_MISSIONARY
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -9951,7 +9951,7 @@ LIDAs.13 = {
 					value = 68
 				}
 			}
-			# PRONE_BONE
+			# FM_PRONE_BONE
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -9961,7 +9961,7 @@ LIDAs.13 = {
 					value = 69
 				}
 			}
-			# CREAMPIE_BRED
+			# FM_CREAMPIE_BRED
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -9973,7 +9973,7 @@ LIDAs.13 = {
 			}
 		}
 		random_list = {
-			# MISSIONARY
+			# FM_MISSIONARY
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -9986,7 +9986,7 @@ LIDAs.13 = {
 					value = 68
 				}
 			}
-			# PRONE_BONE
+			# FM_PRONE_BONE
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -9999,7 +9999,7 @@ LIDAs.13 = {
 					value = 69
 				}
 			}
-			# CREAMPIE_BRED
+			# FM_CREAMPIE_BRED
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -10045,7 +10045,7 @@ LIDAs.13 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 67: EventsSex.MISSIONARY -> EventsSex.COWGIRL
+		# 67: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL
 		name = LIDAoption.67
 		trigger = {
 			scope:partner_stamina > 0
@@ -10115,7 +10115,7 @@ LIDAs.13 = {
 		}
 	}
 	option = {
-		# 68: EventsSex.MISSIONARY -> EventsSex.MISSIONARY
+		# 68: EventsSex.FM_MISSIONARY -> EventsSex.FM_MISSIONARY
 		name = LIDAoption.68
 		trigger = {
 			scope:partner_stamina > 0
@@ -10139,7 +10139,7 @@ LIDAs.13 = {
 		trigger_event = LIDAs.13
 	}
 	option = {
-		# 69: EventsSex.MISSIONARY -> EventsSex.PRONE_BONE
+		# 69: EventsSex.FM_MISSIONARY -> EventsSex.FM_PRONE_BONE
 		name = LIDAoption.69
 		trigger = {
 			scope:partner_stamina > 0
@@ -10163,7 +10163,7 @@ LIDAs.13 = {
 		trigger_event = LIDAs.14
 	}
 	option = {
-		# 70: EventsSex.MISSIONARY -> EventsCum.PULL_OUT_CUM_ON_ASS
+		# 70: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
 		name = LIDAoption.70
 		trigger = {
 			OR = {
@@ -10232,7 +10232,7 @@ LIDAs.13 = {
 		}
 	}
 	option = {
-		# 71: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP
+		# 71: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP
 		name = LIDAoption.71
 		trigger = {
 			OR = {
@@ -10301,7 +10301,7 @@ LIDAs.13 = {
 		}
 	}
 	option = {
-		# 72: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_BRED
+		# 72: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_BRED
 		name = LIDAoption.72
 		trigger = {
 			OR = {
@@ -10325,7 +10325,7 @@ LIDAs.13 = {
 	}
 }
 LIDAs.14 = {
-	# PRONE_BONE: Lie Face Down
+	# FM_PRONE_BONE: Lie Face Down
 	type = character_event
 	title = LIDAs.14.t
 	theme = seduction
@@ -10510,7 +10510,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10047
 				}
-				# 47: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM failed
+				# 47: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
 				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
 				desc = sex_transition_47.10000
 			}
@@ -10519,7 +10519,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10048
 				}
-				# 48: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB failed
+				# 48: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB failed
 				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts while as punishment for trying to escape.\n
 				desc = sex_transition_48.10000
 			}
@@ -10528,7 +10528,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10051
 				}
-				# 51: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 51: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Pull it out, [affairs_partner.GetFirstName]!", you just manage to say between his thrusts and groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_51.10000
 			}
@@ -10537,7 +10537,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10053
 				}
-				# 53: EventsSex.REVERSE_COWGIRL -> EventsSex.REVERSE_COWGIRL failed
+				# 53: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
 				desc = sex_transition_53.10000
 			}
@@ -10546,7 +10546,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10054
 				}
-				# 54: EventsSex.REVERSE_COWGIRL -> EventsSex.COWGIRL failed
+				# 54: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL failed
 				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
 				desc = sex_transition_54.10000
 			}
@@ -10555,7 +10555,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10057
 				}
-				# 57: EventsSex.REVERSE_COWGIRL -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 57: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
 				desc = sex_transition_57.10000
 			}
@@ -10564,7 +10564,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10058
 				}
-				# 58: EventsSex.REVERSE_COWGIRL -> EventsCum.CREAMPIE_ON_TOP failed
+				# 58: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in.\n
 				desc = sex_transition_58.10000
 			}
@@ -10573,7 +10573,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10067
 				}
-				# 67: EventsSex.MISSIONARY -> EventsSex.COWGIRL failed
+				# 67: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
 				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
 				desc = sex_transition_67.10000
 			}
@@ -10582,7 +10582,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10070
 				}
-				# 70: EventsSex.MISSIONARY -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 70: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
 				desc = sex_transition_70.10000
 			}
@@ -10591,7 +10591,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10071
 				}
-				# 71: EventsSex.MISSIONARY -> EventsCum.CREAMPIE_KEEP failed
+				# 71: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
 				desc = sex_transition_71.10000
 			}
@@ -10600,7 +10600,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10073
 				}
-				# 73: EventsSex.PRONE_BONE -> EventsSex.MISSIONARY failed
+				# 73: EventsSex.FM_PRONE_BONE -> EventsSex.FM_MISSIONARY failed
 				# You try to roll in place, but [affairs_partner.GetFirstName]'s paralyzing barrage of thrusts never slows enough to do so.\n
 				desc = sex_transition_73.10000
 			}
@@ -10609,7 +10609,7 @@ LIDAs.14 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10075
 				}
-				# 75: EventsSex.PRONE_BONE -> EventsCum.PULL_OUT_CUM_ON_ASS failed
+				# 75: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
 				desc = sex_transition_75.10000
 			}
@@ -10621,7 +10621,7 @@ LIDAs.14 = {
 				exists = scope:prev_event
 				scope:prev_event = 5
 			}
-			# defaulted to 50: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.PRONE_BONE
+			# defaulted to 50: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_PRONE_BONE
 			desc = sex_transition_50.0
 		}
 		triggered_desc = {
@@ -10631,7 +10631,7 @@ LIDAs.14 = {
 				exists = scope:prev_event
 				scope:prev_event = 11
 			}
-			# defaulted to 56: EventsSex.REVERSE_COWGIRL -> EventsSex.PRONE_BONE
+			# defaulted to 56: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_PRONE_BONE
 			desc = sex_transition_56.0
 		}
 		triggered_desc = {
@@ -10641,7 +10641,7 @@ LIDAs.14 = {
 				exists = scope:prev_event
 				scope:prev_event = 13
 			}
-			# defaulted to 69: EventsSex.MISSIONARY -> EventsSex.PRONE_BONE
+			# defaulted to 69: EventsSex.FM_MISSIONARY -> EventsSex.FM_PRONE_BONE
 			desc = sex_transition_69.0
 		}
 		triggered_desc = {
@@ -10651,7 +10651,7 @@ LIDAs.14 = {
 				exists = scope:prev_event
 				scope:prev_event = 14
 			}
-			# defaulted to 74: EventsSex.PRONE_BONE -> EventsSex.PRONE_BONE
+			# defaulted to 74: EventsSex.FM_PRONE_BONE -> EventsSex.FM_PRONE_BONE
 			desc = sex_transition_74.0
 		}
 		first_valid = {
@@ -10726,7 +10726,7 @@ LIDAs.14 = {
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
-			# MISSIONARY
+			# FM_MISSIONARY
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -10736,7 +10736,7 @@ LIDAs.14 = {
 					value = 73
 				}
 			}
-			# PULL_OUT_CUM_ON_ASS
+			# FM_PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -10748,7 +10748,7 @@ LIDAs.14 = {
 			}
 		}
 		random_list = {
-			# MISSIONARY
+			# FM_MISSIONARY
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -10761,7 +10761,7 @@ LIDAs.14 = {
 					value = 73
 				}
 			}
-			# PULL_OUT_CUM_ON_ASS
+			# FM_PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -10787,7 +10787,7 @@ LIDAs.14 = {
 			}
 		}
 		random_list = {
-			# PRONE_BONE
+			# FM_PRONE_BONE
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -10797,7 +10797,7 @@ LIDAs.14 = {
 					value = 74
 				}
 			}
-			# CREAMPIE_BRED
+			# FM_CREAMPIE_BRED
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -10809,7 +10809,7 @@ LIDAs.14 = {
 			}
 		}
 		random_list = {
-			# PRONE_BONE
+			# FM_PRONE_BONE
 			10 = {
 				trigger = {
 					scope:partner_stamina > 0
@@ -10822,7 +10822,7 @@ LIDAs.14 = {
 					value = 74
 				}
 			}
-			# CREAMPIE_BRED
+			# FM_CREAMPIE_BRED
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -10868,7 +10868,7 @@ LIDAs.14 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		# 73: EventsSex.PRONE_BONE -> EventsSex.MISSIONARY
+		# 73: EventsSex.FM_PRONE_BONE -> EventsSex.FM_MISSIONARY
 		name = LIDAoption.73
 		trigger = {
 			scope:partner_stamina > 0
@@ -10932,7 +10932,7 @@ LIDAs.14 = {
 		}
 	}
 	option = {
-		# 74: EventsSex.PRONE_BONE -> EventsSex.PRONE_BONE
+		# 74: EventsSex.FM_PRONE_BONE -> EventsSex.FM_PRONE_BONE
 		name = LIDAoption.74
 		trigger = {
 			scope:partner_stamina > 0
@@ -10956,7 +10956,7 @@ LIDAs.14 = {
 		trigger_event = LIDAs.14
 	}
 	option = {
-		# 75: EventsSex.PRONE_BONE -> EventsCum.PULL_OUT_CUM_ON_ASS
+		# 75: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
 		name = LIDAoption.75
 		trigger = {
 			OR = {
@@ -11019,7 +11019,7 @@ LIDAs.14 = {
 		}
 	}
 	option = {
-		# 76: EventsSex.PRONE_BONE -> EventsCum.CREAMPIE_BRED
+		# 76: EventsSex.FM_PRONE_BONE -> EventsCum.FM_CREAMPIE_BRED
 		name = LIDAoption.76
 		trigger = {
 			OR = {
