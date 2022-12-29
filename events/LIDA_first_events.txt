@@ -156,7 +156,7 @@ LIDAf.1 = {
 			value = flag:bedchamber
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -166,7 +166,7 @@ LIDAf.1 = {
 					value = 89
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -178,7 +178,7 @@ LIDAf.1 = {
 			}
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -191,7 +191,7 @@ LIDAf.1 = {
 					value = 89
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -218,7 +218,7 @@ LIDAf.1 = {
 		}
 	}
 	option = {
-		# 89: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.HANDJOB_TEASE
+		# 89: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.FM_HANDJOB_TEASE
 		name = LIDAoption.89
 		trigger = {
 			OR = {
@@ -237,7 +237,7 @@ LIDAf.1 = {
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 90: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.ASS_TEASE
+		# 90: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.FM_ASS_TEASE
 		name = LIDAoption.90
 		trigger = {
 			OR = {
@@ -423,7 +423,7 @@ LIDAf.2 = {
 			value = flag:garden
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -433,7 +433,7 @@ LIDAf.2 = {
 					value = 91
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -445,7 +445,7 @@ LIDAf.2 = {
 			}
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -458,7 +458,7 @@ LIDAf.2 = {
 					value = 91
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -485,7 +485,7 @@ LIDAf.2 = {
 		}
 	}
 	option = {
-		# 91: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.HANDJOB_TEASE
+		# 91: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
 		name = LIDAoption.91
 		trigger = {
 			OR = {
@@ -504,7 +504,7 @@ LIDAf.2 = {
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 92: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.ASS_TEASE
+		# 92: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_ASS_TEASE
 		name = LIDAoption.92
 		trigger = {
 			OR = {
@@ -690,7 +690,7 @@ LIDAf.3 = {
 			value = flag:study
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -700,7 +700,7 @@ LIDAf.3 = {
 					value = 93
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -712,7 +712,7 @@ LIDAf.3 = {
 			}
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -725,7 +725,7 @@ LIDAf.3 = {
 					value = 93
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -752,7 +752,7 @@ LIDAf.3 = {
 		}
 	}
 	option = {
-		# 93: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.HANDJOB_TEASE
+		# 93: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.FM_HANDJOB_TEASE
 		name = LIDAoption.93
 		trigger = {
 			OR = {
@@ -771,7 +771,7 @@ LIDAf.3 = {
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 94: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.ASS_TEASE
+		# 94: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.FM_ASS_TEASE
 		name = LIDAoption.94
 		trigger = {
 			OR = {
@@ -957,7 +957,7 @@ LIDAf.4 = {
 			value = flag:study
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -967,7 +967,7 @@ LIDAf.4 = {
 					value = 95
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -979,7 +979,7 @@ LIDAf.4 = {
 			}
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -992,7 +992,7 @@ LIDAf.4 = {
 					value = 95
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1019,7 +1019,7 @@ LIDAf.4 = {
 		}
 	}
 	option = {
-		# 95: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.HANDJOB_TEASE
+		# 95: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_HANDJOB_TEASE
 		name = LIDAoption.95
 		trigger = {
 			OR = {
@@ -1038,7 +1038,7 @@ LIDAf.4 = {
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 96: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.ASS_TEASE
+		# 96: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_ASS_TEASE
 		name = LIDAoption.96
 		trigger = {
 			OR = {
@@ -1224,7 +1224,7 @@ LIDAf.5 = {
 			value = flag:bedchamber
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1234,7 +1234,7 @@ LIDAf.5 = {
 					value = 97
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1246,7 +1246,7 @@ LIDAf.5 = {
 			}
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1259,7 +1259,7 @@ LIDAf.5 = {
 					value = 97
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1286,7 +1286,7 @@ LIDAf.5 = {
 		}
 	}
 	option = {
-		# 97: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.HANDJOB_TEASE
+		# 97: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.FM_HANDJOB_TEASE
 		name = LIDAoption.97
 		trigger = {
 			OR = {
@@ -1305,7 +1305,7 @@ LIDAf.5 = {
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 98: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.ASS_TEASE
+		# 98: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.FM_ASS_TEASE
 		name = LIDAoption.98
 		trigger = {
 			OR = {
@@ -1491,7 +1491,7 @@ LIDAf.6 = {
 			value = flag:council_chamber
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1501,7 +1501,7 @@ LIDAf.6 = {
 					value = 99
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1513,7 +1513,7 @@ LIDAf.6 = {
 			}
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1526,7 +1526,7 @@ LIDAf.6 = {
 					value = 99
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1553,7 +1553,7 @@ LIDAf.6 = {
 		}
 	}
 	option = {
-		# 99: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.HANDJOB_TEASE
+		# 99: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
 		name = LIDAoption.99
 		trigger = {
 			OR = {
@@ -1572,7 +1572,7 @@ LIDAf.6 = {
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 100: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.ASS_TEASE
+		# 100: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_ASS_TEASE
 		name = LIDAoption.100
 		trigger = {
 			OR = {
@@ -1758,7 +1758,7 @@ LIDAf.7 = {
 			value = flag:dungeon
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1768,7 +1768,7 @@ LIDAf.7 = {
 					value = 101
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1780,7 +1780,7 @@ LIDAf.7 = {
 			}
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1793,7 +1793,7 @@ LIDAf.7 = {
 					value = 101
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -1820,7 +1820,7 @@ LIDAf.7 = {
 		}
 	}
 	option = {
-		# 101: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.HANDJOB_TEASE
+		# 101: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.FM_HANDJOB_TEASE
 		name = LIDAoption.101
 		trigger = {
 			OR = {
@@ -1839,7 +1839,7 @@ LIDAf.7 = {
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 102: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.ASS_TEASE
+		# 102: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.FM_ASS_TEASE
 		name = LIDAoption.102
 		trigger = {
 			OR = {
@@ -2025,7 +2025,7 @@ LIDAf.8 = {
 			value = flag:dungeon
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2035,7 +2035,7 @@ LIDAf.8 = {
 					value = 103
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2047,7 +2047,7 @@ LIDAf.8 = {
 			}
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2060,7 +2060,7 @@ LIDAf.8 = {
 					value = 103
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2087,7 +2087,7 @@ LIDAf.8 = {
 		}
 	}
 	option = {
-		# 103: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.HANDJOB_TEASE
+		# 103: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_HANDJOB_TEASE
 		name = LIDAoption.103
 		trigger = {
 			OR = {
@@ -2106,7 +2106,7 @@ LIDAf.8 = {
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 104: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.ASS_TEASE
+		# 104: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_ASS_TEASE
 		name = LIDAoption.104
 		trigger = {
 			OR = {
@@ -2292,7 +2292,7 @@ LIDAf.9 = {
 			value = flag:sitting_room
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2302,7 +2302,7 @@ LIDAf.9 = {
 					value = 105
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2314,7 +2314,7 @@ LIDAf.9 = {
 			}
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2327,7 +2327,7 @@ LIDAf.9 = {
 					value = 105
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2354,7 +2354,7 @@ LIDAf.9 = {
 		}
 	}
 	option = {
-		# 105: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.HANDJOB_TEASE
+		# 105: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_HANDJOB_TEASE
 		name = LIDAoption.105
 		trigger = {
 			OR = {
@@ -2373,7 +2373,7 @@ LIDAf.9 = {
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 106: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.ASS_TEASE
+		# 106: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_ASS_TEASE
 		name = LIDAoption.106
 		trigger = {
 			OR = {
@@ -2559,7 +2559,7 @@ LIDAf.10 = {
 			value = flag:courtyard
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2569,7 +2569,7 @@ LIDAf.10 = {
 					value = 107
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2581,7 +2581,7 @@ LIDAf.10 = {
 			}
 		}
 		random_list = {
-			# HANDJOB_TEASE
+			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2594,7 +2594,7 @@ LIDAf.10 = {
 					value = 107
 				}
 			}
-			# ASS_TEASE
+			# FM_ASS_TEASE
 			10 = {
 				trigger = {
 					scope:finisher_stamina > 0
@@ -2621,7 +2621,7 @@ LIDAf.10 = {
 		}
 	}
 	option = {
-		# 107: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.HANDJOB_TEASE
+		# 107: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
 		name = LIDAoption.107
 		trigger = {
 			OR = {
@@ -2640,7 +2640,7 @@ LIDAf.10 = {
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 108: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.ASS_TEASE
+		# 108: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_ASS_TEASE
 		name = LIDAoption.108
 		trigger = {
 			OR = {
