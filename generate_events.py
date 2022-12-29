@@ -135,8 +135,6 @@ NO = "no"
 EXISTS = "exists"
 HAS_VARIABLE = "has_variable"
 HAS_TRAIT = "has_trait"
-HAS_TRAIT_AUX1 = "has_trait"
-HAS_TRAIT_AUX2 = "has_trait"
 NOT = "NOT"
 OR = "OR"
 AND = "AND"
@@ -2180,9 +2178,9 @@ def define_cum_events(es: EventMap):
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                He plowed you like a cheap whore, his pounding climaxing as he filled you up and you had with #sub no say#! in it.
                 Are you so irresistible that he couldn't help but cum inside """),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB} \n {NOT} = {{ {HAS_TRAIT_AUX1} ={PREGNANT} }}", f"""
+                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB} \n {NOT} = {{ {HAS_TRAIT} ={PREGNANT} }}", f"""
                or is he #italic trying#! to breed you? Either way, you #sub love#! the feeling.""", ),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB} \n {HAS_TRAIT_AUX1} = {PREGNANT}", f"""
+                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB} \n {HAS_TRAIT} = {PREGNANT}", f"""
                even with a bun already in you? How #sub flattering#!.""", ),
                    """\\n\\n""",
 
@@ -2211,21 +2209,21 @@ def define_cum_events(es: EventMap):
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
                \\n\\nAs if getting fucked like a cheap whore wasn't enough, he even #warning seeded#! you like you're just some servant girl at a feast! 
                """, ),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {NOT} = {{ {HAS_TRAIT_AUX1} ={PREGNANT} }}", f"""
+                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {NOT} = {{ {HAS_TRAIT} ={PREGNANT} }}", f"""
                To enjoy the warmth of your womb is an #italic unrivaled privilege#!,
                 how #S #dom dare#!#! he demand more by trying to #S mate with you!?#!
                """, ),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {HAS_TRAIT_AUX1} = {PREGNANT}", f"""
+                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {HAS_TRAIT} = {PREGNANT}", f"""
                Were you not already with child, {THEM} might've #S bred#! you - and you #S #dom deeply loathe#!#! the thought.
                """, ),
 
                    TriggeredDesc(
-                       f"{NOT} = {{ {HAS_TRAIT} ={PREGNANT} }} \n {NOT} = {{ {HAS_TRAIT_AUX1} ={LIDA_SUB} }} \n {NOT} = {{ {HAS_TRAIT_AUX2} ={LIDA_DOM} }}",
+                       f"{NOT} = {{ {HAS_TRAIT} ={PREGNANT} }} \n {NOT} = {{ {HAS_TRAIT} ={LIDA_SUB} }} \n {NOT} = {{ {HAS_TRAIT} ={LIDA_DOM} }}",
                        f"""
                \\n\\nThis isn't quite how you were expecting your dalliance to end...
                """, ),
                    TriggeredDesc(
-                       f"{HAS_TRAIT} ={PREGNANT} \n {NOT} = {{ {HAS_TRAIT_AUX1} ={LIDA_SUB} }} \n {NOT} = {{ {HAS_TRAIT_AUX2} ={LIDA_DOM} }}",
+                       f"{HAS_TRAIT} ={PREGNANT} \n {NOT} = {{ {HAS_TRAIT} ={LIDA_SUB} }} \n {NOT} = {{ {HAS_TRAIT} ={LIDA_DOM} }}",
                        f"""
                \\n\\nAt least the #italic indiscreet#! ending of this dalliance won't have any #S unwanted#! consequences.
                """, ),
