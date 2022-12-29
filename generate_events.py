@@ -36,6 +36,7 @@ class EventsSex(enum.Enum):
     COWGIRL = 12
     MISSIONARY = 13
     PRONE_BONE = 14
+    EATEN_OUT = 15
 
 
 class EventsCum(enum.Enum):
@@ -1400,13 +1401,14 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           Under the interminable strokes from your hand, {THEM}'s cock has 
                           fully hardened. Dew-like pre dribbles from the tip, lubricating the whole shaft.""",
-                          failed_transition_text=f"""{THEM} wants more than your hands, so he #sub takes#! something #italic wetter#!."""
-                          # ComposedDesc(
-                          # TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
-                          #   You're too turned on to be satisfied with just jerking him off!"""),
-                          # TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                          #    {THEM} wants more than your hands, so he #sub takes#! something #italic wetter#!."""), "."
-                          ),
+                          failed_transition_text=
+                           ComposedDesc(
+                           TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
+                             You're too turned on to be satisfied with just jerking him off!"""),
+                           TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                              {THEM} wants more than your hands, so he #sub takes#! something #italic wetter#!."""), "."
+                                        ),
+                            ),
                    Option(EventsSex.BLOWJOB_DOM, OptionCategory.SUB,
                           "Kneel down and take him in your mouth",
                           transition_text=f"""You get on your knees, taking him in your mouth."""),
@@ -1875,7 +1877,7 @@ def define_sex_events(es: EventMap):
                           failed_transition_text=f"""
                           Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in."""),
                    Option(EventsCum.CREAMPIE_REGULAR, OptionCategory.SUB,
-                          "Let him fill you with his seed",
+                          "Let #bold him#! fill you with his seed",
                           transition_text=f"""
                           Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
                )))
@@ -1928,7 +1930,7 @@ def define_sex_events(es: EventMap):
                           failed_transition_text=f"""
                           Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls himself deeper in."""),
                    Option(EventsCum.CREAMPIE_REGULAR, OptionCategory.SUB,
-                          "Let him fill you with his seed",
+                          "Let #bold him#! fill you with his seed",
                           transition_text=f"""
                           Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
 
@@ -1949,7 +1951,7 @@ def define_sex_events(es: EventMap):
                                  ),
                options=(
                    Option(EventsSex.COWGIRL, OptionCategory.DOM,
-                          "Roll with him",
+                          "Roll with him and get on top",
                           transition_text=f"""
                           You grab {THEM} as he's recovering from a thrust and push him sideways with all your strength, landing on top of him.""",
                           failed_transition_text=f"""
@@ -1976,7 +1978,7 @@ def define_sex_events(es: EventMap):
                           failed_transition_text=f"""
                           You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on."""),
                    Option(EventsCum.CREAMPIE_BRED, OptionCategory.SUB,
-                          "Get filled to the brim",
+                          "Get #italic filled to the brim#!",
                           transition_text=f"""
                           His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria."""
                                           ""),
@@ -2006,7 +2008,7 @@ def define_sex_events(es: EventMap):
                           You try to roll in place, but {THEM}'s paralyzing barrage of thrusts never slows enough to do so.
                           """),
                    Option(EventsSex.PRONE_BONE, OptionCategory.SUB,
-                          "Submit to getting #bold savagely#! plowed",
+                          "Submit to getting #bold mercilessly#! plowed",
                           transition_text=f"""
                           The immense warmth of {THEM} pounding you to the core makes your body melt as your mind is #sub flooded with heat#!.
                           """,
@@ -2018,7 +2020,7 @@ def define_sex_events(es: EventMap):
                           failed_transition_text=f"""
                           "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears."""),
                    Option(EventsCum.CREAMPIE_BRED, OptionCategory.SUB,
-                          "Get filled to the brim",
+                          "Get #italic filled to the brim#!",
                           transition_text=f"""
                           His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria."""
                                           ""),
@@ -2087,7 +2089,7 @@ def define_cum_events(es: EventMap):
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                 #italic Maybe they wouldn't if he'd taken some #sub initiative#! instead of being satisfied with this.#!"""),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-               \\n\\n"Thank you for letting my manhood feel your buns, {ME_FULL_REGNAL}", {THEM} says while devotedly cleaning you up.
+               \\n\\n"Thank you for letting me grind against your buns, {ME_FULL_REGNAL}", {THEM} says while devotedly cleaning you up.
                """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                \\n\\n"This was fun", {THEM} says enthusiastically while #italic clearly#! staring at your shapes yearningly.

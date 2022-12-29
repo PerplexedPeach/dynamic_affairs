@@ -169,8 +169,20 @@ LIDAc.1 = {
 					scope:sex_transition = 10003
 				}
 				# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB failed
-				# [affairs_partner.GetFirstName] wants more than your hands, so he #sub takes#! something #italic wetter#!.\n
-				desc = sex_transition_3.10000
+				# 
+				triggered_desc = {
+					trigger = {
+						NOT = { has_trait = lida_dom }
+					}
+					desc = sex_transition_3.0
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = sex_transition_3.1
+				}
+				desc = sex_transition_3.2
 			}
 			triggered_desc = {
 				trigger = {
@@ -890,8 +902,20 @@ LIDAc.3 = {
 					scope:sex_transition = 10003
 				}
 				# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB failed
-				# [affairs_partner.GetFirstName] wants more than your hands, so he #sub takes#! something #italic wetter#!.\n
-				desc = sex_transition_3.10000
+				# 
+				triggered_desc = {
+					trigger = {
+						NOT = { has_trait = lida_dom }
+					}
+					desc = sex_transition_3.0
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = sex_transition_3.1
+				}
+				desc = sex_transition_3.2
 			}
 			triggered_desc = {
 				trigger = {
@@ -1700,8 +1724,20 @@ LIDAc.4 = {
 					scope:sex_transition = 10003
 				}
 				# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB failed
-				# [affairs_partner.GetFirstName] wants more than your hands, so he #sub takes#! something #italic wetter#!.\n
-				desc = sex_transition_3.10000
+				# 
+				triggered_desc = {
+					trigger = {
+						NOT = { has_trait = lida_dom }
+					}
+					desc = sex_transition_3.0
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = sex_transition_3.1
+				}
+				desc = sex_transition_3.2
 			}
 			triggered_desc = {
 				trigger = {
