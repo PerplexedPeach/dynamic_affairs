@@ -7224,7 +7224,7 @@ LIDAs.5 = {
 					value = 50
 				}
 			}
-			# CREAMPIE_BEHIND
+			# CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -7262,7 +7262,7 @@ LIDAs.5 = {
 					value = 50
 				}
 			}
-			# CREAMPIE_BEHIND
+			# CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -7570,7 +7570,7 @@ LIDAs.5 = {
 		}
 	}
 	option = {
-		# 52: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.CREAMPIE_BEHIND
+		# 52: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.CREAMPIE_REGULAR
 		name = LIDAoption.52
 		trigger = {
 			OR = {
@@ -8111,7 +8111,7 @@ LIDAs.11 = {
 					value = 56
 				}
 			}
-			# CREAMPIE_BEHIND
+			# CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -8149,7 +8149,7 @@ LIDAs.11 = {
 					value = 56
 				}
 			}
-			# CREAMPIE_BEHIND
+			# CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -8521,7 +8521,7 @@ LIDAs.11 = {
 		}
 	}
 	option = {
-		# 59: EventsSex.REVERSE_COWGIRL -> EventsCum.CREAMPIE_BEHIND
+		# 59: EventsSex.REVERSE_COWGIRL -> EventsCum.CREAMPIE_REGULAR
 		name = LIDAoption.59
 		trigger = {
 			OR = {
@@ -9044,7 +9044,7 @@ LIDAs.12 = {
 					value = 63
 				}
 			}
-			# CREAMPIE_BEHIND
+			# CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -9082,7 +9082,7 @@ LIDAs.12 = {
 					value = 63
 				}
 			}
-			# CREAMPIE_BEHIND
+			# CREAMPIE_REGULAR
 			10 = {
 				trigger = {
 					scope:partner_stamina <= 0
@@ -9454,7 +9454,7 @@ LIDAs.12 = {
 		}
 	}
 	option = {
-		# 66: EventsSex.COWGIRL -> EventsCum.CREAMPIE_BEHIND
+		# 66: EventsSex.COWGIRL -> EventsCum.CREAMPIE_REGULAR
 		name = LIDAoption.66
 		trigger = {
 			OR = {
