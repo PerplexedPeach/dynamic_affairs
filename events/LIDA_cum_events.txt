@@ -238,9 +238,22 @@ LIDAc.1 = {
 		desc = LIDAc.1.desc.0
 		triggered_desc = {
 			trigger = {
-				scope:subdom > 10
+				scope:subdom >= 10
 			}
 			desc = LIDAc.1.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > -10 
+scope:subdom < 10
+			}
+			desc = LIDAc.1.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.1.desc.3
 		}
 	}
 	immediate = {
@@ -2620,15 +2633,46 @@ LIDAc.12 = {
 		desc = LIDAc.12.desc.0
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_sub
+				has_trait = lida_dom
 			}
 			desc = LIDAc.12.desc.1
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_dom
+				has_trait = lida_sub
 			}
 			desc = LIDAc.12.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.12.desc.3
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > -10 
+scope:subdom < 10
+			}
+			desc = LIDAc.12.desc.4
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.12.desc.5
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.12.desc.6
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.12.desc.7
 		}
 	}
 	immediate = {
@@ -2667,7 +2711,7 @@ LIDAc.12 = {
 	}
 }
 LIDAc.8 = {
-	# CREAMPIE_BEHIND: Plowing the Fields
+	# CREAMPIE_REGULAR: Plowing the Fields
 	type = character_event
 	title = LIDAc.8.t
 	theme = seduction
@@ -2945,7 +2989,7 @@ LIDAc.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 5
 			}
-			# defaulted to 52: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.CREAMPIE_BEHIND
+			# defaulted to 52: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsCum.CREAMPIE_REGULAR
 			desc = sex_transition_52.0
 		}
 		triggered_desc = {
@@ -2955,7 +2999,7 @@ LIDAc.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 11
 			}
-			# defaulted to 59: EventsSex.REVERSE_COWGIRL -> EventsCum.CREAMPIE_BEHIND
+			# defaulted to 59: EventsSex.REVERSE_COWGIRL -> EventsCum.CREAMPIE_REGULAR
 			desc = sex_transition_59.0
 		}
 		triggered_desc = {
@@ -2965,7 +3009,7 @@ LIDAc.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 12
 			}
-			# defaulted to 66: EventsSex.COWGIRL -> EventsCum.CREAMPIE_BEHIND
+			# defaulted to 66: EventsSex.COWGIRL -> EventsCum.CREAMPIE_REGULAR
 			desc = sex_transition_66.0
 		}
 		triggered_desc = {
