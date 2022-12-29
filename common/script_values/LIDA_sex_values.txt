@@ -1,50 +1,16 @@
 ﻿# stamina (how long they can last without climaxing)
 # expects character scope
 max_sex_stamina = {
-	value = 6
-	if = {
-		limit = { has_trait = physique_bad_1 }
-		add = -1
-	}
-	if = {
-		limit = { has_trait = physique_bad_2 }
-		add = -2
-	}
-	if = {
-		limit = { has_trait = physique_bad_3 }
-		add = -3
-	}
-	if = {
-		limit = { has_trait = physique_good_1 }
-		add = 1
-	}
-	if = {
-		limit = { has_trait = physique_good_2 }
-		add = 2
-	}
-	if = {
-		limit = { has_trait = physique_good_3 }
-		add = 3
-	}
-	if = {
-		limit = { has_trait = strong }
-		add = 2
-	}
+	value = 5
 	if = {
 		limit = { has_trait = stubborn }
 		add = 2
 	}
-	if = {
-		limit = { has_trait = ill }
-		add = -2
-	}
-	if = {
-		limit = { has_trait = sickly }
-		add = -2
-	}
-	if = {
-		limit = { has_trait = pneumonic }
-		add = -2
+	# everyone has health around 4, so we take the offset and magnify it with respect to 2
+	add = {
+		add = health
+		subtract = 4
+		multiply = 2
 	}
 	min = 1
 }
