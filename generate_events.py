@@ -1328,9 +1328,9 @@ def define_sex_events(es: EventMap):
                           "Milk him into your soft palms",
                           subdom_sub=0,
                           transition_text=f"""
-                          You place your open palm below his cock, ready to receive his seed.""",
+                          You place your palm below his cock, ready to receive his seed.""",
                           failed_transition_text=f"""
-                          You place your open palm below his cock, ready to receive his seed,
+                          You place your palm below his cock, ready to receive his seed,
                           but his tip seems to be pointing elsewhere...""",
                           ),
                    Option(EventsCum.FM_BLOWJOB_CUM_ON_FACE, OptionCategory.SUB,
@@ -1376,6 +1376,15 @@ def define_sex_events(es: EventMap):
                           do pick up the slack. "Come on {THEM}, show me your mettle."
                           \\n\\n
                           Instead of wasting words, he places both hands behind your head and starts thrusting."""),
+                    Option(EventsSex.FM_STANDING_FUCKED_FROM_BEHIND, OptionCategory.SUB,
+                          "Give his member a #italic wetter#! hole",
+                          transition_text=ComposedDesc(
+                           TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
+                           You're too turned to just suck him off! You turn around and bend over, making him an offer he #S can't#! refuse."""),
+                           TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                           "Your mouth just isn't enough!" he says as he turns you around and bends you over."""), "."
+                                        ),
+                            ),
                    # TODO make these options more likely if you are addicted to cum
                    Option(EventsCum.FM_RUINED_ORGASM, OptionCategory.DOM,
                           "Cruelly deny him his release",
@@ -1726,9 +1735,9 @@ def define_sex_events(es: EventMap):
                    Option(EventsCum.FM_PULL_OUT_CUM_ON_ASS, OptionCategory.DOM,
                           "Have him pull out and cum on your ass",
                           transition_text=f"""
-                          "Pull it out, {THEM}!", you just manage to say between his thrusts and groans.""",
+                          "Pull it out, {THEM}!", you manage to voice between his wild thrusts and loud groans.""",
                           failed_transition_text=f"""
-                          "Pull it out, {THEM}!", you just manage to say between his thrusts and groans, but your pleas falls on deaf ears."""),
+                          "Pull it out, {THEM}!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears."""),
                    Option(EventsCum.FM_CREAMPIE_REGULAR, OptionCategory.SUB,
                           "Let him fill you with his seed",
                           transition_text=f"""
@@ -1982,7 +1991,7 @@ def define_cum_events(es: EventMap):
                pleases#! you #italic - maybe your personality is twisted?#!
                """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
-               "Not bad, {THEM}!", you say while taking note of his #!italic potential#! for any possible future encounters.
+               "Not bad, {THEM}!", you say while taking note of his #italic potential#! for any possible future encounters.
                """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", """
                "Impressive!", you say as you suck one of your fingers clean, "Maybe use that #sub intensity#! for
@@ -2063,10 +2072,9 @@ def define_cum_events(es: EventMap):
                as he makes no move to remove his member. 
                \\n\\n""",
                TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-               "Swallow it," he says in a commanding tone.
+               "Swallow it," he says in a commanding tone. \\n\\n
                """),
                """
-               \\n\\n
                As you have no choice apart from drowning, you swallow it. Fortunately or not, since he
                thrusted so deeply, most of it was shot into the back of your throat where you cannot taste it.
                You #sub gulp audibly and take it all down#!.
@@ -2125,7 +2133,7 @@ def define_cum_events(es: EventMap):
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                 \\n\\n"Come again sometime, will you? I'd like it if you did #sub more#! to me", you say with a smile """),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                \\n\\n"Good boy", you whisper in {THEM}'s ear while #dom patting#! him on the head.
+                \\n\\n"Good boy", you whisper in {THEM}'s ear while #dom patting#! him on the head. 
                 "I #S might#! just invite you over again if I ever need something", you say with a smirk.""")
                ),
                ))
