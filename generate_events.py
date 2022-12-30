@@ -732,12 +732,13 @@ class First(Event):
         if background not in self.POSSIBLE_BACKGROUNDS:
             raise RuntimeError(f"{background} not in possible backgrounds list")
         self.background = background
+        super(First, self).__init__(*args, **kwargs)
         # generate options to each sex source event
         options = []
         for event in source_sex_events:
-            options.append(Option(event.id, OptionCategory.OTHER, event.title))
-
-        super(First, self).__init__(*args, options=options, **kwargs)
+            if event.root_gender == self.root_gender and event.partner_gender == self.partner_gender:
+                options.append(Option(event.id, OptionCategory.OTHER, event.title))
+        self.options = options
 
     def generate_immediate_effect(self):
         # save to use for all future events
@@ -1174,16 +1175,17 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
             if len(these_events.events) == 0:
                 continue
 
+            suffix = f"{pairing[0]}{pairing[1]}"
             f.write(
-                f"subgraph cluster_{pairing[0]}{pairing[1]} "
+                f"subgraph cluster_{suffix} "
                 f"{{\n label=\"{pairing[0].upper()}/{pairing[1].upper()} Events\";\n")
             # f.write("style=filled;\n fillcolor=\"#f2f0ae\";\n")
 
-            source_sex_events = get_source_sex_events(events)
+            source_sex_events = get_source_sex_events(these_events)
             cum_events = []
             regular_sex_events = []
             first_events = []
-            for event in events.all():
+            for event in these_events.all():
                 if event in source_sex_events:
                     continue
                 if isinstance(event.id, EventsCum):
@@ -1201,7 +1203,7 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
                 f.write(";\n")
 
             # sex source events (source nodes)
-            f.write("subgraph cluster_sex_source {\n label=\"Source\";\n rank=same;\n")
+            f.write(f"subgraph cluster_sex_source_{suffix} {{\n label=\"Source\";\n rank=same;\n")
             # invisible node for others to connect to the cluster as a whole
             for i, event in enumerate(source_sex_events):
                 f.write(event.id.name)
@@ -1209,7 +1211,7 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
                 f.write(";\n")
             f.write("}\n")
 
-            f.write("subgraph cluster_meeting {\n label=\"Start Meeting Events\";\n rank=source;\n")
+            f.write(f"subgraph cluster_meeting_{suffix} {{\n label=\"Start Meeting Events\";\n rank=source;\n")
             f.write("style=filled;\n fillcolor=\"#A5FFC7\";\n")
             for i, event in enumerate(first_events):
                 f.write(event.id.name)
@@ -1218,11 +1220,12 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
                 # create visual connection between the start meeting events and the source events
                 if i == len(first_events) // 2:
                     other = source_sex_events[len(source_sex_events) // 2]
-                    f.write(f"{event.id.name} -> {other.id.name} [ltail=cluster_meeting,lhead=cluster_sex_source];\n")
+                    f.write(f"{event.id.name} -> {other.id.name} [ltail=cluster_meeting_{suffix},"
+                            f"lhead=cluster_sex_source_{suffix}];\n")
             f.write("}\n")
 
             # cum events (sink nodes)
-            f.write("subgraph cluster_cum {\n label=\"Terminal Events\";\n rank=sink;\n")
+            f.write(f"subgraph cluster_cum_{suffix} {{\n label=\"Terminal Events\";\n rank=sink;\n")
             f.write("style=filled;\n fillcolor=\"#f2f0ae\";\n")
             for event in cum_events:
                 f.write(event.id.name)
