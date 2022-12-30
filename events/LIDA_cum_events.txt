@@ -1,7 +1,7 @@
 ﻿# GENERATED FILE - DO NOT MODIFY DIRECTLY
 namespace = LIDAc
 LIDAc.1 = {
-	# FM_HANDJOB_CUM_IN_HAND: A Cumshot in Hand is Worth Two in the Bush
+	# FM_HANDJOB_CUM_IN_HAND: A Load in Hand is Worth Two in the Bush
 	type = character_event
 	title = LIDAc.1.t
 	theme = seduction
@@ -294,13 +294,13 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.79
+		name = LIDAoption.157
 	}
 }
-LIDAc.5 = {
+LIDAc.6 = {
 	# FM_ASS_TEASE_CUM_ON_ASS: Icing on the Cake
 	type = character_event
-	title = LIDAc.5.t
+	title = LIDAc.6.t
 	theme = seduction
 	override_background = {
 		trigger = {
@@ -651,49 +651,49 @@ LIDAc.5 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.5.desc.0
+		desc = LIDAc.6.desc.0
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.5.desc.1
+			desc = LIDAc.6.desc.1
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.5.desc.2
+			desc = LIDAc.6.desc.2
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 10
 			}
-			desc = LIDAc.5.desc.3
+			desc = LIDAc.6.desc.3
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom > -10 
 scope:subdom < 10
 			}
-			desc = LIDAc.5.desc.4
+			desc = LIDAc.6.desc.4
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.5.desc.5
+			desc = LIDAc.6.desc.5
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.5.desc.6
+			desc = LIDAc.6.desc.6
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.5.desc.7
+			desc = LIDAc.6.desc.7
 		}
 	}
 	immediate = {
@@ -709,13 +709,13 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.80
+		name = LIDAoption.158
 	}
 }
-LIDAc.3 = {
+LIDAc.4 = {
 	# FM_BLOWJOB_CUM_ON_FACE: Painting your Face
 	type = character_event
-	title = LIDAc.3.t
+	title = LIDAc.4.t
 	theme = seduction
 	override_background = {
 		trigger = {
@@ -1005,25 +1005,25 @@ LIDAc.3 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.3.desc.0
+		desc = LIDAc.4.desc.0
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 10
 			}
-			desc = LIDAc.3.desc.1
+			desc = LIDAc.4.desc.1
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom > -10 
 scope:subdom < 10
 			}
-			desc = LIDAc.3.desc.2
+			desc = LIDAc.4.desc.2
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.3.desc.3
+			desc = LIDAc.4.desc.3
 		}
 	}
 	immediate = {
@@ -1052,7 +1052,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.81
+		name = LIDAoption.159
 	}
 }
 LIDAc.2 = {
@@ -1281,13 +1281,13 @@ LIDAc.2 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.82
+		name = LIDAoption.160
 	}
 }
-LIDAc.6 = {
+LIDAc.3 = {
 	# FM_BLOWJOB_CUM_IN_MOUTH_SUB: Down the Gullet
 	type = character_event
-	title = LIDAc.6.t
+	title = LIDAc.3.t
 	theme = seduction
 	override_background = {
 		trigger = {
@@ -1501,31 +1501,31 @@ LIDAc.6 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.6.desc.0
+		desc = LIDAc.3.desc.0
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 10
 			}
-			desc = LIDAc.6.desc.1
+			desc = LIDAc.3.desc.1
 		}
-		desc = LIDAc.6.desc.2
+		desc = LIDAc.3.desc.2
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.6.desc.3
+			desc = LIDAc.3.desc.3
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.6.desc.4
+			desc = LIDAc.3.desc.4
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.6.desc.5
+			desc = LIDAc.3.desc.5
 		}
 	}
 	immediate = {
@@ -1554,13 +1554,13 @@ LIDAc.6 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.83
+		name = LIDAoption.161
 	}
 }
-LIDAc.4 = {
+LIDAc.5 = {
 	# FM_RUINED_ORGASM: A Firm Grasp on His Release
 	type = character_event
-	title = LIDAc.4.t
+	title = LIDAc.5.t
 	theme = seduction
 	override_background = {
 		trigger = {
@@ -1813,7 +1813,7 @@ LIDAc.4 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.4.desc.0
+		desc = LIDAc.5.desc.0
 	}
 	immediate = {
 		check_if_root_cum_effect = yes
@@ -1847,13 +1847,13 @@ LIDAc.4 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.84
+		name = LIDAoption.162
 	}
 }
-LIDAc.7 = {
+LIDAc.8 = {
 	# FM_PULL_OUT_CUM_ON_ASS: More Icing on the Cake
 	type = character_event
-	title = LIDAc.7.t
+	title = LIDAc.8.t
 	theme = seduction
 	override_background = {
 		trigger = {
@@ -2055,7 +2055,7 @@ LIDAc.7 = {
 					scope:sex_transition = 10049
 				}
 				# 49: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts while as punishment for trying to escape.\n
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
 				desc = sex_transition_49.10000
 			}
 			triggered_desc = {
@@ -2254,38 +2254,38 @@ LIDAc.7 = {
 			trigger = {
 				scope:subdom >= 10
 			}
-			desc = LIDAc.7.desc.0
+			desc = LIDAc.8.desc.0
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom > -10 
 scope:subdom < 10
 			}
-			desc = LIDAc.7.desc.1
+			desc = LIDAc.8.desc.1
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.7.desc.2
+			desc = LIDAc.8.desc.2
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.7.desc.3
+			desc = LIDAc.8.desc.3
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.7.desc.4
+			desc = LIDAc.8.desc.4
 		}
 	}
 	immediate = {
 		check_if_root_cum_effect = yes
 		change_subdom_effect = {
-			CHANGE = -1
+			CHANGE = 1
 		}
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
@@ -2308,13 +2308,13 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.85
+		name = LIDAoption.163
 	}
 }
-LIDAc.12 = {
-	# FM_CUM_ON_GROIN: Coated in White
+LIDAc.7 = {
+	# FM_CUM_ON_GROIN: Snowfall on the Bushes
 	type = character_event
-	title = LIDAc.12.t
+	title = LIDAc.7.t
 	theme = seduction
 	override_background = {
 		trigger = {
@@ -2665,49 +2665,49 @@ LIDAc.12 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.12.desc.0
+		desc = LIDAc.7.desc.0
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.12.desc.1
+			desc = LIDAc.7.desc.1
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.12.desc.2
+			desc = LIDAc.7.desc.2
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 10
 			}
-			desc = LIDAc.12.desc.3
+			desc = LIDAc.7.desc.3
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom > -10 
 scope:subdom < 10
 			}
-			desc = LIDAc.12.desc.4
+			desc = LIDAc.7.desc.4
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.12.desc.5
+			desc = LIDAc.7.desc.5
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.12.desc.6
+			desc = LIDAc.7.desc.6
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.12.desc.7
+			desc = LIDAc.7.desc.7
 		}
 	}
 	immediate = {
@@ -2736,13 +2736,13 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.86
+		name = LIDAoption.164
 	}
 }
-LIDAc.8 = {
+LIDAc.9 = {
 	# FM_CREAMPIE_REGULAR: Plowing the Fields
 	type = character_event
-	title = LIDAc.8.t
+	title = LIDAc.9.t
 	theme = seduction
 	override_background = {
 		trigger = {
@@ -2926,7 +2926,7 @@ LIDAc.8 = {
 					scope:sex_transition = 10049
 				}
 				# 49: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts while as punishment for trying to escape.\n
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
 				desc = sex_transition_49.10000
 			}
 			triggered_desc = {
@@ -3047,38 +3047,38 @@ LIDAc.8 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.8.desc.0
+		desc = LIDAc.9.desc.0
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 10
 			}
-			desc = LIDAc.8.desc.1
+			desc = LIDAc.9.desc.1
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom > -10 
 scope:subdom < 10
 			}
-			desc = LIDAc.8.desc.2
+			desc = LIDAc.9.desc.2
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.8.desc.3
+			desc = LIDAc.9.desc.3
 		}
-		desc = LIDAc.8.desc.4
+		desc = LIDAc.9.desc.4
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.8.desc.5
+			desc = LIDAc.9.desc.5
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.8.desc.6
+			desc = LIDAc.9.desc.6
 		}
 	}
 	immediate = {
@@ -3107,13 +3107,13 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.87
+		name = LIDAoption.165
 	}
 }
-LIDAc.9 = {
+LIDAc.10 = {
 	# FM_CREAMPIE_ON_TOP: Cherry on Top
 	type = character_event
-	title = LIDAc.9.t
+	title = LIDAc.10.t
 	theme = seduction
 	override_background = {
 		trigger = {
@@ -3372,32 +3372,32 @@ LIDAc.9 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.9.desc.0
+		desc = LIDAc.10.desc.0
 		triggered_desc = {
 			trigger = {
 				scope:subdom < -10
 			}
-			desc = LIDAc.9.desc.1
+			desc = LIDAc.10.desc.1
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom > -10 
 scope:subdom < 10
 			}
-			desc = LIDAc.9.desc.2
+			desc = LIDAc.10.desc.2
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom > 10
 			}
-			desc = LIDAc.9.desc.3
+			desc = LIDAc.10.desc.3
 		}
-		desc = LIDAc.9.desc.4
+		desc = LIDAc.10.desc.4
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.9.desc.5
+			desc = LIDAc.10.desc.5
 		}
 	}
 	immediate = {
@@ -3426,13 +3426,13 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.88
+		name = LIDAoption.166
 	}
 }
-LIDAc.10 = {
-	# FM_CREAMPIE_BRED: Something to Remember Him By
+LIDAc.11 = {
+	# FM_CREAMPIE_BREED: Something to Remember Him By
 	type = character_event
-	title = LIDAc.10.t
+	title = LIDAc.11.t
 	theme = seduction
 	override_background = {
 		trigger = {
@@ -3654,7 +3654,7 @@ LIDAc.10 = {
 				exists = scope:prev_event
 				scope:prev_event = 13
 			}
-			# defaulted to 73: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_BRED
+			# defaulted to 73: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_BREED
 			desc = sex_transition_73.0
 		}
 		triggered_desc = {
@@ -3664,7 +3664,7 @@ LIDAc.10 = {
 				exists = scope:prev_event
 				scope:prev_event = 14
 			}
-			# defaulted to 78: EventsSex.FM_PRONE_BONE -> EventsCum.FM_CREAMPIE_BRED
+			# defaulted to 78: EventsSex.FM_PRONE_BONE -> EventsCum.FM_CREAMPIE_BREED
 			desc = sex_transition_78.0
 		}
 		triggered_desc = {
@@ -3673,86 +3673,100 @@ LIDAc.10 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.10.desc.0
-		desc = LIDAc.10.desc.1
+		desc = LIDAc.11.desc.0
+		desc = LIDAc.11.desc.1
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.10.desc.2
+			desc = LIDAc.11.desc.2
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub 
  NOT = { has_trait =pregnant }
 			}
-			desc = LIDAc.10.desc.3
+			desc = LIDAc.11.desc.3
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub 
  has_trait = pregnant
 			}
-			desc = LIDAc.10.desc.4
+			desc = LIDAc.11.desc.4
 		}
-		desc = LIDAc.10.desc.5
+		desc = LIDAc.11.desc.5
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 10
 			}
-			desc = LIDAc.10.desc.6
+			desc = LIDAc.11.desc.6
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 20
 			}
-			desc = LIDAc.10.desc.7
+			desc = LIDAc.11.desc.7
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 10 
-has_trait = lida_dom
+NOT = { has_trait =lida_sub }
 			}
-			desc = LIDAc.10.desc.8
+			desc = LIDAc.11.desc.8
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10 
+has_trait = lida_sub
+			}
+			desc = LIDAc.11.desc.9
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.10.desc.9
+			desc = LIDAc.11.desc.10
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -20
 			}
-			desc = LIDAc.10.desc.10
+			desc = LIDAc.11.desc.11
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10 
 has_trait = lida_sub
 			}
-			desc = LIDAc.10.desc.11
+			desc = LIDAc.11.desc.12
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10 
+NOT = { has_trait =lida_sub }
+			}
+			desc = LIDAc.11.desc.13
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.10.desc.12
+			desc = LIDAc.11.desc.14
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom 
  NOT = { has_trait =pregnant }
 			}
-			desc = LIDAc.10.desc.13
+			desc = LIDAc.11.desc.15
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom 
  has_trait = pregnant
 			}
-			desc = LIDAc.10.desc.14
+			desc = LIDAc.11.desc.16
 		}
 		triggered_desc = {
 			trigger = {
@@ -3760,7 +3774,7 @@ has_trait = lida_sub
  NOT = { has_trait =lida_sub } 
  NOT = { has_trait =lida_dom }
 			}
-			desc = LIDAc.10.desc.15
+			desc = LIDAc.11.desc.17
 		}
 		triggered_desc = {
 			trigger = {
@@ -3768,13 +3782,13 @@ has_trait = lida_sub
  NOT = { has_trait =lida_sub } 
  NOT = { has_trait =lida_dom }
 			}
-			desc = LIDAc.10.desc.16
+			desc = LIDAc.11.desc.18
 		}
 	}
 	immediate = {
 		check_if_root_cum_effect = yes
 		change_subdom_effect = {
-			CHANGE = -3
+			CHANGE = -6
 		}
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
@@ -3797,13 +3811,13 @@ has_trait = lida_sub
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.89
+		name = LIDAoption.167
 	}
 }
-LIDAc.11 = {
+LIDAc.12 = {
 	# FM_CREAMPIE_KEEP: Taking It Home
 	type = character_event
-	title = LIDAc.11.t
+	title = LIDAc.12.t
 	theme = seduction
 	override_background = {
 		trigger = {
@@ -3998,37 +4012,37 @@ LIDAc.11 = {
 			}
 			desc = root_cum_f
 		}
-		desc = LIDAc.11.desc.0
+		desc = LIDAc.12.desc.0
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 10
 			}
-			desc = LIDAc.11.desc.1
+			desc = LIDAc.12.desc.1
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom < 10
 			}
-			desc = LIDAc.11.desc.2
+			desc = LIDAc.12.desc.2
 		}
-		desc = LIDAc.11.desc.3
+		desc = LIDAc.12.desc.3
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.11.desc.4
+			desc = LIDAc.12.desc.4
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.11.desc.5
+			desc = LIDAc.12.desc.5
 		}
 	}
 	immediate = {
 		check_if_root_cum_effect = yes
 		change_subdom_effect = {
-			CHANGE = 1
+			CHANGE = 2
 		}
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
@@ -4051,6 +4065,4107 @@ LIDAc.11 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.90
+		name = LIDAoption.168
+	}
+}
+LIDAc.13 = {
+	# MF_HANDJOB_CUM_IN_HAND: A Load in Hand is Worth Two in the Bush
+	type = character_event
+	title = LIDAc.13.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = boredom
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = shame
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 84
+				}
+				# Handjob
+				# You place your palm below his cock, ready to receive his seed.\n
+				desc = sex_transition_84.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 96
+				}
+				# Sub Blowjob
+				# Pulling away, you deprive him of the warmth of your mouth.\n
+				desc = sex_transition_96.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10081
+				}
+				# 81: EventsSex.MF_HANDJOB -> EventsSex.MF_HANDJOB failed
+				# 
+				triggered_desc = {
+					trigger = {
+						NOT = { has_trait = lida_dom }
+					}
+					desc = sex_transition_81.0
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = sex_transition_81.1
+				}
+				desc = sex_transition_81.2
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10083
+				}
+				# 83: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM failed
+				# You move to stop his climax, but realize that he did not last as long as you expected.\n
+				desc = sex_transition_83.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10084
+				}
+				# 84: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# You place your palm below his cock, ready to receive his seed, but his tip seems to be pointing elsewhere...\n
+				desc = sex_transition_84.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10093
+				}
+				# 93: EventsSex.MF_BLOWJOB_SUB -> EventsSex.MF_BLOWJOB_DOM failed
+				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
+				desc = sex_transition_93.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10096
+				}
+				# 96: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
+				desc = sex_transition_96.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 17
+			}
+			# defaulted to 84: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND
+			desc = sex_transition_84.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 20
+			}
+			# defaulted to 96: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND
+			desc = sex_transition_96.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		desc = LIDAc.13.desc.0
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.13.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > -10 
+scope:subdom < 10
+			}
+			desc = LIDAc.13.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.13.desc.3
+		}
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = 1
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 20
+			become_more_sub_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 20
+				become_more_dom_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.169
+	}
+}
+LIDAc.18 = {
+	# MF_ASS_TEASE_CUM_ON_ASS: Icing on the Cake
+	type = character_event
+	title = LIDAc.18.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 105
+				}
+				# Ass Tease
+				# You manage to guide his stream onto your cheeks.\n
+				desc = sex_transition_105.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 110
+				}
+				# Ass Rub
+				# You manage to guide his stream onto your cheeks.\n
+				desc = sex_transition_110.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 118
+				}
+				# Get Hotdogged
+				# You manage to guide his stream onto your cheeks.\n
+				desc = sex_transition_118.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 124
+				}
+				# Fingered from Behind
+				# You manage to guide his stream onto your cheeks.\n
+				desc = sex_transition_124.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10102
+				}
+				# 102: EventsSex.MF_ASS_TEASE -> EventsSex.MF_ASS_RUB failed
+				# You have better uses for that hard cock than just teasing it.\n
+				desc = sex_transition_102.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10103
+				}
+				# 103: EventsSex.MF_ASS_TEASE -> EventsSex.MF_HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				desc = sex_transition_103.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10105
+				}
+				# 105: EventsSex.MF_ASS_TEASE -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
+				desc = sex_transition_105.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10107
+				}
+				# 107: EventsSex.MF_ASS_RUB -> EventsSex.MF_ASS_RUB failed
+				# You have better uses for that hard cock than just teasing it\n
+				desc = sex_transition_107.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10108
+				}
+				# 108: EventsSex.MF_ASS_RUB -> EventsSex.MF_HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				desc = sex_transition_108.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10110
+				}
+				# 110: EventsSex.MF_ASS_RUB -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
+				desc = sex_transition_110.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10112
+				}
+				# 112: EventsSex.MF_HOTDOG -> EventsSex.MF_ASS_RUB failed
+				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
+				desc = sex_transition_112.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10113
+				}
+				# 113: EventsSex.MF_HOTDOG -> EventsSex.MF_HOTDOG failed
+				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
+				desc = sex_transition_113.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10114
+				}
+				# 114: EventsSex.MF_HOTDOG -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You try to force him to the ground, but as you push your groin backwards something #italic enters#! you and [affairs_partner.GetFirstName] wraps an arm around your bosom, holding you in place.\n
+				desc = sex_transition_114.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10115
+				}
+				# 115: EventsSex.MF_HOTDOG -> EventsSex.MF_BLOWJOB_DOM failed
+				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
+				desc = sex_transition_115.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10118
+				}
+				# 118: EventsSex.MF_HOTDOG -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_118.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10120
+				}
+				# 120: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_HOTDOG failed
+				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_120.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10121
+				}
+				# 121: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
+				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_121.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10124
+				}
+				# 124: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_124.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 16
+			}
+			# defaulted to 105: EventsSex.MF_ASS_TEASE -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_105.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 24
+			}
+			# defaulted to 110: EventsSex.MF_ASS_RUB -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_110.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 22
+			}
+			# defaulted to 118: EventsSex.MF_HOTDOG -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_118.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 23
+			}
+			# defaulted to 124: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_124.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		desc = LIDAc.18.desc.0
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.18.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = { has_trait =lida_dom }
+			}
+			desc = LIDAc.18.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.18.desc.3
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > -10 
+scope:subdom < 10
+			}
+			desc = LIDAc.18.desc.4
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.18.desc.5
+		}
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.170
+	}
+}
+LIDAc.16 = {
+	# MF_BLOWJOB_CUM_ON_FACE: Painting her Face
+	type = character_event
+	title = LIDAc.16.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = scheme
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = shame
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 85
+				}
+				# Handjob
+				# You pull away and look up, preparing for him to mark your face.\n
+				desc = sex_transition_85.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 92
+				}
+				# Dom Blowjob
+				# You pull away and look up, preparing for him to mark your face.\n
+				desc = sex_transition_92.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 98
+				}
+				# Sub Blowjob
+				# You don't resist when he pulls out and aims his rod at your face.\n
+				desc = sex_transition_98.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10081
+				}
+				# 81: EventsSex.MF_HANDJOB -> EventsSex.MF_HANDJOB failed
+				# 
+				triggered_desc = {
+					trigger = {
+						NOT = { has_trait = lida_dom }
+					}
+					desc = sex_transition_81.0
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = sex_transition_81.1
+				}
+				desc = sex_transition_81.2
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10083
+				}
+				# 83: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM failed
+				# You move to stop his climax, but realize that he did not last as long as you expected.\n
+				desc = sex_transition_83.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10084
+				}
+				# 84: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# You place your palm below his cock, ready to receive his seed, but his tip seems to be pointing elsewhere...\n
+				desc = sex_transition_84.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10086
+				}
+				# 86: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_86.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10087
+				}
+				# 87: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_BLOWJOB_DOM failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_87.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10090
+				}
+				# 90: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_90.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10093
+				}
+				# 93: EventsSex.MF_BLOWJOB_SUB -> EventsSex.MF_BLOWJOB_DOM failed
+				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
+				desc = sex_transition_93.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10096
+				}
+				# 96: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
+				desc = sex_transition_96.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 17
+			}
+			# defaulted to 85: EventsSex.MF_HANDJOB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_85.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 18
+			}
+			# defaulted to 92: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_92.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 20
+			}
+			# defaulted to 98: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_98.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		desc = LIDAc.16.desc.0
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.16.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > -10 
+scope:subdom < 10
+			}
+			desc = LIDAc.16.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.16.desc.3
+		}
+		desc = LIDAc.16.desc.4
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.16.desc.5
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = { has_trait = lida_dom } 
+ NOT = { has_trait = lida_sub }
+			}
+			desc = LIDAc.16.desc.6
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.16.desc.7
+		}
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = 2
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 15
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 15
+				become_more_sub_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.171
+	}
+}
+LIDAc.14 = {
+	# MF_BLOWJOB_CUM_IN_MOUTH_DOM: Satisfying her Sweet Tooth
+	type = character_event
+	title = LIDAc.14.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = disgust
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = schadenfreude
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 91
+				}
+				# Dom Blowjob
+				# You prepare to wring him dry with your dexterous tongue.\n
+				desc = sex_transition_91.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10086
+				}
+				# 86: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_86.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10087
+				}
+				# 87: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_BLOWJOB_DOM failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_87.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10090
+				}
+				# 90: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_90.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 18
+			}
+			# defaulted to 91: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM
+			desc = sex_transition_91.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		desc = LIDAc.14.desc.0
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.14.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > -10 
+scope:subdom < 10
+			}
+			desc = LIDAc.14.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.14.desc.3
+		}
+		desc = LIDAc.14.desc.4
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.14.desc.5
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = { has_trait = lida_dom } 
+ NOT = { has_trait = lida_sub }
+			}
+			desc = LIDAc.14.desc.6
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.14.desc.7
+		}
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = 1
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 10
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 10
+				become_more_sub_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.172
+	}
+}
+LIDAc.15 = {
+	# MF_BLOWJOB_CUM_IN_MOUTH_SUB: Down the Gullet
+	type = character_event
+	title = LIDAc.15.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = shame
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = schadenfreude
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 97
+				}
+				# Sub Blowjob
+				# You don't resist when he plunges into your mouth to deposit his seed.\n
+				desc = sex_transition_97.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 101
+				}
+				# Deepthroat
+				# You don't have any say in it, or in anything else at the moment, as his mass fills your throat.\n
+				desc = sex_transition_101.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10093
+				}
+				# 93: EventsSex.MF_BLOWJOB_SUB -> EventsSex.MF_BLOWJOB_DOM failed
+				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
+				desc = sex_transition_93.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10096
+				}
+				# 96: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
+				desc = sex_transition_96.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10099
+				}
+				# 99: EventsSex.MF_DEEPTHROAT -> EventsSex.MF_BLOWJOB_SUB failed
+				# Putting both hands on his waist, you push and try to stop his thrusts. It's all in vain, however, as he ignores you.\n
+				desc = sex_transition_99.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 20
+			}
+			# defaulted to 97: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB
+			desc = sex_transition_97.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 21
+			}
+			# defaulted to 101: EventsSex.MF_DEEPTHROAT -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB
+			desc = sex_transition_101.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		desc = LIDAc.15.desc.0
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.15.desc.1
+		}
+		desc = LIDAc.15.desc.2
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.15.desc.3
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.15.desc.4
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.15.desc.5
+		}
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = -2
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 20
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 20
+				become_more_sub_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.173
+	}
+}
+LIDAc.17 = {
+	# MF_RUINED_ORGASM: A Firm Grasp on Your Release
+	type = character_event
+	title = LIDAc.17.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = dismissal
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = beg
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 83
+				}
+				# Handjob
+				# You abruptly stop your jerking motion and slap his cock, disrupting the build up to his climax.\n
+				desc = sex_transition_83.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 90
+				}
+				# Dom Blowjob
+				# You pull back and slap his rod, disrupting the build up to his climax.\n
+				desc = sex_transition_90.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10081
+				}
+				# 81: EventsSex.MF_HANDJOB -> EventsSex.MF_HANDJOB failed
+				# 
+				triggered_desc = {
+					trigger = {
+						NOT = { has_trait = lida_dom }
+					}
+					desc = sex_transition_81.0
+				}
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = sex_transition_81.1
+				}
+				desc = sex_transition_81.2
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10083
+				}
+				# 83: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM failed
+				# You move to stop his climax, but realize that he did not last as long as you expected.\n
+				desc = sex_transition_83.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10084
+				}
+				# 84: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# You place your palm below his cock, ready to receive his seed, but his tip seems to be pointing elsewhere...\n
+				desc = sex_transition_84.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10086
+				}
+				# 86: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_86.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10087
+				}
+				# 87: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_BLOWJOB_DOM failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_87.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10090
+				}
+				# 90: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_90.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 17
+			}
+			# defaulted to 83: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM
+			desc = sex_transition_83.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 18
+			}
+			# defaulted to 90: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM
+			desc = sex_transition_90.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		desc = LIDAc.17.desc.0
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = 2
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 35
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 35
+				become_more_sub_effect = yes
+			}
+		}
+		scope:affairs_partner = {
+			add_character_modifier = {
+				modifier = sexually_frustrated
+				years = 1
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.174
+	}
+}
+LIDAc.20 = {
+	# MF_PULL_OUT_CUM_ON_ASS: More Icing on the Cake
+	type = character_event
+	title = LIDAc.20.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = personality_bold
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 130
+				}
+				# Standing Fucked from Behind
+				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans.\n
+				desc = sex_transition_130.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 136
+				}
+				# Ride Facing Away
+				# You put your hand on his rod, guiding him to unload on your cheeks instead\n
+				desc = sex_transition_136.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 143
+				}
+				# Ride Facing Them
+				# You put your hand on his rod, guiding him to unload on your cheeks instead\n
+				desc = sex_transition_143.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 149
+				}
+				# Lie on Back
+				# "Not inside!" you barely blurt out between moans and labored breaths.\n
+				desc = sex_transition_149.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 155
+				}
+				# Lie Face Down
+				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless.\n
+				desc = sex_transition_155.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10126
+				}
+				# 126: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
+				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
+				desc = sex_transition_126.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10127
+				}
+				# 127: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_SUB failed
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
+				desc = sex_transition_127.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10130
+				}
+				# 130: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
+				desc = sex_transition_130.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10132
+				}
+				# 132: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
+				desc = sex_transition_132.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10133
+				}
+				# 133: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_133.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10136
+				}
+				# 136: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_136.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10137
+				}
+				# 137: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_137.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10139
+				}
+				# 139: EventsSex.MF_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
+				desc = sex_transition_139.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10140
+				}
+				# 140: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_140.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10143
+				}
+				# 143: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_143.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10144
+				}
+				# 144: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_144.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10146
+				}
+				# 146: EventsSex.MF_MISSIONARY -> EventsSex.MF_COWGIRL failed
+				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
+				desc = sex_transition_146.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10149
+				}
+				# 149: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				desc = sex_transition_149.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10150
+				}
+				# 150: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_KEEP failed
+				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
+				desc = sex_transition_150.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10152
+				}
+				# 152: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY failed
+				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
+				desc = sex_transition_152.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10153
+				}
+				# 153: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
+				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
+				desc = sex_transition_153.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10155
+				}
+				# 155: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
+				desc = sex_transition_155.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 19
+			}
+			# defaulted to 130: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_130.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 25
+			}
+			# defaulted to 136: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_136.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 26
+			}
+			# defaulted to 143: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_143.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 27
+			}
+			# defaulted to 149: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_149.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 28
+			}
+			# defaulted to 155: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_155.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.20.desc.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > -10 
+scope:subdom < 10
+			}
+			desc = LIDAc.20.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.20.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.20.desc.3
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.20.desc.4
+		}
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = 1
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 1.5
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 10
+			become_more_sub_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 10
+				become_more_dom_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.175
+	}
+}
+LIDAc.19 = {
+	# MF_CUM_ON_GROIN: Snowfall on the Bushes
+	type = character_event
+	title = LIDAc.19.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = dismissal
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = personality_bold
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 106
+				}
+				# Ass Tease
+				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
+				desc = sex_transition_106.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 111
+				}
+				# Ass Rub
+				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
+				desc = sex_transition_111.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 119
+				}
+				# Get Hotdogged
+				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
+				desc = sex_transition_119.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 125
+				}
+				# Fingered from Behind
+				# You feel his dick twitch against your ass, alerting you of his impending climax.\n
+				desc = sex_transition_125.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10102
+				}
+				# 102: EventsSex.MF_ASS_TEASE -> EventsSex.MF_ASS_RUB failed
+				# You have better uses for that hard cock than just teasing it.\n
+				desc = sex_transition_102.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10103
+				}
+				# 103: EventsSex.MF_ASS_TEASE -> EventsSex.MF_HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				desc = sex_transition_103.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10105
+				}
+				# 105: EventsSex.MF_ASS_TEASE -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
+				desc = sex_transition_105.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10107
+				}
+				# 107: EventsSex.MF_ASS_RUB -> EventsSex.MF_ASS_RUB failed
+				# You have better uses for that hard cock than just teasing it\n
+				desc = sex_transition_107.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10108
+				}
+				# 108: EventsSex.MF_ASS_RUB -> EventsSex.MF_HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				desc = sex_transition_108.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10110
+				}
+				# 110: EventsSex.MF_ASS_RUB -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
+				desc = sex_transition_110.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10112
+				}
+				# 112: EventsSex.MF_HOTDOG -> EventsSex.MF_ASS_RUB failed
+				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
+				desc = sex_transition_112.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10113
+				}
+				# 113: EventsSex.MF_HOTDOG -> EventsSex.MF_HOTDOG failed
+				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
+				desc = sex_transition_113.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10114
+				}
+				# 114: EventsSex.MF_HOTDOG -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You try to force him to the ground, but as you push your groin backwards something #italic enters#! you and [affairs_partner.GetFirstName] wraps an arm around your bosom, holding you in place.\n
+				desc = sex_transition_114.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10115
+				}
+				# 115: EventsSex.MF_HOTDOG -> EventsSex.MF_BLOWJOB_DOM failed
+				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
+				desc = sex_transition_115.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10118
+				}
+				# 118: EventsSex.MF_HOTDOG -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_118.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10120
+				}
+				# 120: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_HOTDOG failed
+				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_120.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10121
+				}
+				# 121: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
+				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_121.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10124
+				}
+				# 124: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_124.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 16
+			}
+			# defaulted to 106: EventsSex.MF_ASS_TEASE -> EventsCum.MF_CUM_ON_GROIN
+			desc = sex_transition_106.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 24
+			}
+			# defaulted to 111: EventsSex.MF_ASS_RUB -> EventsCum.MF_CUM_ON_GROIN
+			desc = sex_transition_111.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 22
+			}
+			# defaulted to 119: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN
+			desc = sex_transition_119.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 23
+			}
+			# defaulted to 125: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN
+			desc = sex_transition_125.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		desc = LIDAc.19.desc.0
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.19.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.19.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.19.desc.3
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > -10 
+scope:subdom < 10
+			}
+			desc = LIDAc.19.desc.4
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.19.desc.5
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.19.desc.6
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.19.desc.7
+		}
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = -1
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0.3
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 5
+			become_more_sub_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 5
+				become_more_dom_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.176
+	}
+}
+LIDAc.21 = {
+	# MF_CREAMPIE_REGULAR: Plowing the Fields
+	type = character_event
+	title = LIDAc.21.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = worry
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = personality_bold
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 131
+				}
+				# Standing Fucked from Behind
+				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
+				desc = sex_transition_131.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 138
+				}
+				# Ride Facing Away
+				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
+				desc = sex_transition_138.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 145
+				}
+				# Ride Facing Them
+				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
+				desc = sex_transition_145.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10126
+				}
+				# 126: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
+				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
+				desc = sex_transition_126.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10127
+				}
+				# 127: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_SUB failed
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
+				desc = sex_transition_127.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10130
+				}
+				# 130: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
+				desc = sex_transition_130.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10132
+				}
+				# 132: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
+				desc = sex_transition_132.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10133
+				}
+				# 133: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_133.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10136
+				}
+				# 136: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_136.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10137
+				}
+				# 137: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_137.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10139
+				}
+				# 139: EventsSex.MF_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
+				desc = sex_transition_139.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10140
+				}
+				# 140: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_140.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10143
+				}
+				# 143: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_143.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10144
+				}
+				# 144: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_144.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 19
+			}
+			# defaulted to 131: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR
+			desc = sex_transition_131.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 25
+			}
+			# defaulted to 138: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR
+			desc = sex_transition_138.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 26
+			}
+			# defaulted to 145: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR
+			desc = sex_transition_145.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		desc = LIDAc.21.desc.0
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.21.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > -10 
+scope:subdom < 10
+			}
+			desc = LIDAc.21.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.21.desc.3
+		}
+		desc = LIDAc.21.desc.4
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.21.desc.5
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.21.desc.6
+		}
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = 3
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 30
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 20
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 20
+				become_more_sub_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.177
+	}
+}
+LIDAc.22 = {
+	# MF_CREAMPIE_ON_TOP: Cherry on Top
+	type = character_event
+	title = LIDAc.22.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = shock
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 137
+				}
+				# Ride Facing Away
+				# Your body tightens as he begins to twitch inside you.\n
+				desc = sex_transition_137.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 144
+				}
+				# Ride Facing Them
+				# Your body tightens as he begins to twitch inside you.\n
+				desc = sex_transition_144.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10132
+				}
+				# 132: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
+				desc = sex_transition_132.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10133
+				}
+				# 133: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_133.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10136
+				}
+				# 136: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_136.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10137
+				}
+				# 137: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_137.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10139
+				}
+				# 139: EventsSex.MF_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
+				desc = sex_transition_139.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10140
+				}
+				# 140: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_140.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10143
+				}
+				# 143: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_143.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10144
+				}
+				# 144: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_144.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 25
+			}
+			# defaulted to 137: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP
+			desc = sex_transition_137.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 26
+			}
+			# defaulted to 144: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP
+			desc = sex_transition_144.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		desc = LIDAc.22.desc.0
+		triggered_desc = {
+			trigger = {
+				scope:subdom < -10
+			}
+			desc = LIDAc.22.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > -10 
+scope:subdom < 10
+			}
+			desc = LIDAc.22.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > 10
+			}
+			desc = LIDAc.22.desc.3
+		}
+		desc = LIDAc.22.desc.4
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.22.desc.5
+		}
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = 3
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 30
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 30
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 30
+				become_more_sub_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.178
+	}
+}
+LIDAc.23 = {
+	# MF_CREAMPIE_BREED: Something to Remember You By
+	type = character_event
+	title = LIDAc.23.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = worry
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = personality_bold
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 151
+				}
+				# Lie on Back
+				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
+				desc = sex_transition_151.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 156
+				}
+				# Lie Face Down
+				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
+				desc = sex_transition_156.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10146
+				}
+				# 146: EventsSex.MF_MISSIONARY -> EventsSex.MF_COWGIRL failed
+				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
+				desc = sex_transition_146.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10149
+				}
+				# 149: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				desc = sex_transition_149.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10150
+				}
+				# 150: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_KEEP failed
+				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
+				desc = sex_transition_150.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10152
+				}
+				# 152: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY failed
+				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
+				desc = sex_transition_152.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10153
+				}
+				# 153: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
+				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
+				desc = sex_transition_153.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10155
+				}
+				# 155: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
+				desc = sex_transition_155.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 27
+			}
+			# defaulted to 151: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_BREED
+			desc = sex_transition_151.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 28
+			}
+			# defaulted to 156: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED
+			desc = sex_transition_156.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		desc = LIDAc.23.desc.0
+		desc = LIDAc.23.desc.1
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.23.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub 
+ NOT = { has_trait =pregnant }
+			}
+			desc = LIDAc.23.desc.3
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub 
+ has_trait = pregnant
+			}
+			desc = LIDAc.23.desc.4
+		}
+		desc = LIDAc.23.desc.5
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.23.desc.6
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 20
+			}
+			desc = LIDAc.23.desc.7
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10 
+has_trait = lida_dom
+			}
+			desc = LIDAc.23.desc.8
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.23.desc.9
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -20
+			}
+			desc = LIDAc.23.desc.10
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10 
+has_trait = lida_sub
+			}
+			desc = LIDAc.23.desc.11
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.23.desc.12
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom 
+ NOT = { has_trait =pregnant }
+			}
+			desc = LIDAc.23.desc.13
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom 
+ has_trait = pregnant
+			}
+			desc = LIDAc.23.desc.14
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = { has_trait =pregnant } 
+ NOT = { has_trait =lida_sub } 
+ NOT = { has_trait =lida_dom }
+			}
+			desc = LIDAc.23.desc.15
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait =pregnant 
+ NOT = { has_trait =lida_sub } 
+ NOT = { has_trait =lida_dom }
+			}
+			desc = LIDAc.23.desc.16
+		}
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = -6
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 45.0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 45
+			become_more_sub_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 45
+				become_more_dom_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.179
+	}
+}
+LIDAc.24 = {
+	# MF_CREAMPIE_KEEP: Sending It Home
+	type = character_event
+	title = LIDAc.24.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = ecstasy
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = shock
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 150
+				}
+				# Lie on Back
+				# You wrap your legs and arms around him...\n
+				desc = sex_transition_150.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10146
+				}
+				# 146: EventsSex.MF_MISSIONARY -> EventsSex.MF_COWGIRL failed
+				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
+				desc = sex_transition_146.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10149
+				}
+				# 149: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				desc = sex_transition_149.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10150
+				}
+				# 150: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_KEEP failed
+				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
+				desc = sex_transition_150.10000
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 27
+			}
+			# defaulted to 150: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_KEEP
+			desc = sex_transition_150.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_cum = yes
+			}
+			desc = root_cum_m
+		}
+		desc = LIDAc.24.desc.0
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.24.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom < 10
+			}
+			desc = LIDAc.24.desc.2
+		}
+		desc = LIDAc.24.desc.3
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.24.desc.4
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.24.desc.5
+		}
+	}
+	immediate = {
+		check_if_root_cum_effect = yes
+		change_subdom_effect = {
+			CHANGE = 2
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 60
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		random = {
+			chance = 20
+			become_more_dom_effect = yes
+		}
+		scope:affairs_partner = {
+			random = {
+				chance = 20
+				become_more_sub_effect = yes
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.180
 	}
 }
