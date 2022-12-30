@@ -1,7 +1,7 @@
 ﻿# GENERATED FILE - DO NOT MODIFY DIRECTLY
 namespace = LIDAf
 LIDAf.1 = {
-	# MEETING_WITH_SPOUSE: Spicing it Up
+	# FM_MEETING_WITH_SPOUSE: Spicing it Up
 	type = character_event
 	title = LIDAf.1.t
 	theme = seduction
@@ -148,10 +148,6 @@ LIDAf.1 = {
 	}
 	immediate = {
 		save_scope_value_as = {
-			name = finisher_stamina
-			value = scope:partner_stamina
-		}
-		save_scope_value_as = {
 			name = locale
 			value = flag:bedchamber
 		}
@@ -159,21 +155,41 @@ LIDAf.1 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 91
+					value = 181
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 92
+					value = 182
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 183
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 184
 				}
 			}
 		}
@@ -181,27 +197,53 @@ LIDAf.1 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 91
+						scope:first_transition_0 = 181
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 91
+					value = 181
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 92
+						scope:first_transition_0 = 182
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 92
+					value = 182
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 183
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 183
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 184
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 184
 				}
 			}
 		}
@@ -218,12 +260,12 @@ LIDAf.1 = {
 		}
 	}
 	option = {
-		# 91: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.FM_HANDJOB_TEASE
-		name = LIDAoption.91
+		# 181: EventsFirst.FM_MEETING_WITH_SPOUSE -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.181
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 91
-				scope:first_transition_1 = 91
+				scope:first_transition_0 = 181
+				scope:first_transition_1 = 181
 			}
 		}
 		save_scope_value_as = {
@@ -232,17 +274,17 @@ LIDAf.1 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 91
+			value = 181
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 92: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.FM_ASS_TEASE
-		name = LIDAoption.92
+		# 182: EventsFirst.FM_MEETING_WITH_SPOUSE -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.182
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 92
-				scope:first_transition_1 = 92
+				scope:first_transition_0 = 182
+				scope:first_transition_1 = 182
 			}
 		}
 		save_scope_value_as = {
@@ -251,9 +293,47 @@ LIDAf.1 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 92
+			value = 182
 		}
 		trigger_event = LIDAs.2
+	}
+	option = {
+		# 183: EventsFirst.FM_MEETING_WITH_SPOUSE -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.183
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 183
+				scope:first_transition_1 = 183
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 1
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 183
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 184: EventsFirst.FM_MEETING_WITH_SPOUSE -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.184
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 184
+				scope:first_transition_1 = 184
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 1
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 184
+		}
+		trigger_event = LIDAs.16
 	}
 	option = {
 		name = cancel_meeting_option
@@ -263,12 +343,9 @@ LIDAf.1 = {
 			target = scope:affairs_partner
 		}
 	}
-	after = {
-		reset_stamina_after_cum_effect = yes
-	}
 }
 LIDAf.2 = {
-	# MEETING_WITH_SPOUSE_INITIAL: Flowers in Bloom
+	# FM_MEETING_WITH_SPOUSE_INITIAL: Flowers in Bloom
 	type = character_event
 	title = LIDAf.2.t
 	theme = seduction
@@ -415,10 +492,6 @@ LIDAf.2 = {
 	}
 	immediate = {
 		save_scope_value_as = {
-			name = finisher_stamina
-			value = scope:partner_stamina
-		}
-		save_scope_value_as = {
 			name = locale
 			value = flag:garden
 		}
@@ -426,21 +499,41 @@ LIDAf.2 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 93
+					value = 185
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 94
+					value = 186
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 187
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 188
 				}
 			}
 		}
@@ -448,27 +541,53 @@ LIDAf.2 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 93
+						scope:first_transition_0 = 185
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 93
+					value = 185
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 94
+						scope:first_transition_0 = 186
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 94
+					value = 186
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 187
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 187
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 188
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 188
 				}
 			}
 		}
@@ -485,12 +604,12 @@ LIDAf.2 = {
 		}
 	}
 	option = {
-		# 93: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
-		name = LIDAoption.93
+		# 185: EventsFirst.FM_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.185
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 93
-				scope:first_transition_1 = 93
+				scope:first_transition_0 = 185
+				scope:first_transition_1 = 185
 			}
 		}
 		save_scope_value_as = {
@@ -499,17 +618,17 @@ LIDAf.2 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 93
+			value = 185
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 94: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_ASS_TEASE
-		name = LIDAoption.94
+		# 186: EventsFirst.FM_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.186
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 94
-				scope:first_transition_1 = 94
+				scope:first_transition_0 = 186
+				scope:first_transition_1 = 186
 			}
 		}
 		save_scope_value_as = {
@@ -518,9 +637,47 @@ LIDAf.2 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 94
+			value = 186
 		}
 		trigger_event = LIDAs.2
+	}
+	option = {
+		# 187: EventsFirst.FM_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.187
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 187
+				scope:first_transition_1 = 187
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 2
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 187
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 188: EventsFirst.FM_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.188
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 188
+				scope:first_transition_1 = 188
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 2
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 188
+		}
+		trigger_event = LIDAs.16
 	}
 	option = {
 		name = cancel_meeting_option
@@ -530,12 +687,9 @@ LIDAf.2 = {
 			target = scope:affairs_partner
 		}
 	}
-	after = {
-		reset_stamina_after_cum_effect = yes
-	}
 }
 LIDAf.3 = {
-	# MEETING_WITH_VASSAL: Chains of Command
+	# FM_MEETING_WITH_VASSAL: Chains of Command
 	type = character_event
 	title = LIDAf.3.t
 	theme = seduction
@@ -682,10 +836,6 @@ LIDAf.3 = {
 	}
 	immediate = {
 		save_scope_value_as = {
-			name = finisher_stamina
-			value = scope:partner_stamina
-		}
-		save_scope_value_as = {
 			name = locale
 			value = flag:study
 		}
@@ -693,21 +843,41 @@ LIDAf.3 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 95
+					value = 189
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 96
+					value = 190
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 191
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 192
 				}
 			}
 		}
@@ -715,27 +885,53 @@ LIDAf.3 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 95
+						scope:first_transition_0 = 189
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 95
+					value = 189
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 96
+						scope:first_transition_0 = 190
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 96
+					value = 190
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 191
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 191
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 192
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 192
 				}
 			}
 		}
@@ -752,12 +948,12 @@ LIDAf.3 = {
 		}
 	}
 	option = {
-		# 95: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.FM_HANDJOB_TEASE
-		name = LIDAoption.95
+		# 189: EventsFirst.FM_MEETING_WITH_VASSAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.189
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 95
-				scope:first_transition_1 = 95
+				scope:first_transition_0 = 189
+				scope:first_transition_1 = 189
 			}
 		}
 		save_scope_value_as = {
@@ -766,17 +962,17 @@ LIDAf.3 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 95
+			value = 189
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 96: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.FM_ASS_TEASE
-		name = LIDAoption.96
+		# 190: EventsFirst.FM_MEETING_WITH_VASSAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.190
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 96
-				scope:first_transition_1 = 96
+				scope:first_transition_0 = 190
+				scope:first_transition_1 = 190
 			}
 		}
 		save_scope_value_as = {
@@ -785,9 +981,47 @@ LIDAf.3 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 96
+			value = 190
 		}
 		trigger_event = LIDAs.2
+	}
+	option = {
+		# 191: EventsFirst.FM_MEETING_WITH_VASSAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.191
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 191
+				scope:first_transition_1 = 191
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 3
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 191
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 192: EventsFirst.FM_MEETING_WITH_VASSAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.192
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 192
+				scope:first_transition_1 = 192
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 3
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 192
+		}
+		trigger_event = LIDAs.16
 	}
 	option = {
 		name = cancel_meeting_option
@@ -797,12 +1031,9 @@ LIDAf.3 = {
 			target = scope:affairs_partner
 		}
 	}
-	after = {
-		reset_stamina_after_cum_effect = yes
-	}
 }
 LIDAf.4 = {
-	# MEETING_WITH_VASSAL_INITIAL: Privileges of Power
+	# FM_MEETING_WITH_VASSAL_INITIAL: Privileges of Power
 	type = character_event
 	title = LIDAf.4.t
 	theme = seduction
@@ -949,10 +1180,6 @@ LIDAf.4 = {
 	}
 	immediate = {
 		save_scope_value_as = {
-			name = finisher_stamina
-			value = scope:partner_stamina
-		}
-		save_scope_value_as = {
 			name = locale
 			value = flag:study
 		}
@@ -960,21 +1187,41 @@ LIDAf.4 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 97
+					value = 193
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 98
+					value = 194
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 195
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 196
 				}
 			}
 		}
@@ -982,27 +1229,53 @@ LIDAf.4 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 97
+						scope:first_transition_0 = 193
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 97
+					value = 193
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 98
+						scope:first_transition_0 = 194
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 98
+					value = 194
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 195
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 195
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 196
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 196
 				}
 			}
 		}
@@ -1019,12 +1292,12 @@ LIDAf.4 = {
 		}
 	}
 	option = {
-		# 97: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_HANDJOB_TEASE
-		name = LIDAoption.97
+		# 193: EventsFirst.FM_MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.193
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 97
-				scope:first_transition_1 = 97
+				scope:first_transition_0 = 193
+				scope:first_transition_1 = 193
 			}
 		}
 		save_scope_value_as = {
@@ -1033,17 +1306,17 @@ LIDAf.4 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 97
+			value = 193
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 98: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_ASS_TEASE
-		name = LIDAoption.98
+		# 194: EventsFirst.FM_MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.194
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 98
-				scope:first_transition_1 = 98
+				scope:first_transition_0 = 194
+				scope:first_transition_1 = 194
 			}
 		}
 		save_scope_value_as = {
@@ -1052,9 +1325,47 @@ LIDAf.4 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 98
+			value = 194
 		}
 		trigger_event = LIDAs.2
+	}
+	option = {
+		# 195: EventsFirst.FM_MEETING_WITH_VASSAL_INITIAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.195
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 195
+				scope:first_transition_1 = 195
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 4
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 195
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 196: EventsFirst.FM_MEETING_WITH_VASSAL_INITIAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.196
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 196
+				scope:first_transition_1 = 196
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 4
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 196
+		}
+		trigger_event = LIDAs.16
 	}
 	option = {
 		name = cancel_meeting_option
@@ -1064,12 +1375,9 @@ LIDAf.4 = {
 			target = scope:affairs_partner
 		}
 	}
-	after = {
-		reset_stamina_after_cum_effect = yes
-	}
 }
 LIDAf.5 = {
-	# MEETING_WITH_LIEGE: Mead in my Room?
+	# FM_MEETING_WITH_LIEGE: Mead in my Room?
 	type = character_event
 	title = LIDAf.5.t
 	theme = seduction
@@ -1216,10 +1524,6 @@ LIDAf.5 = {
 	}
 	immediate = {
 		save_scope_value_as = {
-			name = finisher_stamina
-			value = scope:partner_stamina
-		}
-		save_scope_value_as = {
 			name = locale
 			value = flag:bedchamber
 		}
@@ -1227,21 +1531,41 @@ LIDAf.5 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 99
+					value = 197
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 100
+					value = 198
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 199
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 200
 				}
 			}
 		}
@@ -1249,27 +1573,53 @@ LIDAf.5 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 99
+						scope:first_transition_0 = 197
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 99
+					value = 197
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 100
+						scope:first_transition_0 = 198
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 100
+					value = 198
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 199
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 199
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 200
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 200
 				}
 			}
 		}
@@ -1286,12 +1636,12 @@ LIDAf.5 = {
 		}
 	}
 	option = {
-		# 99: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.FM_HANDJOB_TEASE
-		name = LIDAoption.99
+		# 197: EventsFirst.FM_MEETING_WITH_LIEGE -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.197
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 99
-				scope:first_transition_1 = 99
+				scope:first_transition_0 = 197
+				scope:first_transition_1 = 197
 			}
 		}
 		save_scope_value_as = {
@@ -1300,17 +1650,17 @@ LIDAf.5 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 99
+			value = 197
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 100: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.FM_ASS_TEASE
-		name = LIDAoption.100
+		# 198: EventsFirst.FM_MEETING_WITH_LIEGE -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.198
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 100
-				scope:first_transition_1 = 100
+				scope:first_transition_0 = 198
+				scope:first_transition_1 = 198
 			}
 		}
 		save_scope_value_as = {
@@ -1319,9 +1669,47 @@ LIDAf.5 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 100
+			value = 198
 		}
 		trigger_event = LIDAs.2
+	}
+	option = {
+		# 199: EventsFirst.FM_MEETING_WITH_LIEGE -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.199
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 199
+				scope:first_transition_1 = 199
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 5
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 199
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 200: EventsFirst.FM_MEETING_WITH_LIEGE -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.200
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 200
+				scope:first_transition_1 = 200
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 5
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 200
+		}
+		trigger_event = LIDAs.16
 	}
 	option = {
 		name = cancel_meeting_option
@@ -1331,12 +1719,9 @@ LIDAf.5 = {
 			target = scope:affairs_partner
 		}
 	}
-	after = {
-		reset_stamina_after_cum_effect = yes
-	}
 }
 LIDAf.6 = {
-	# MEETING_WITH_LIEGE_INITIAL: An Intimate Discussion
+	# FM_MEETING_WITH_LIEGE_INITIAL: An Intimate Discussion
 	type = character_event
 	title = LIDAf.6.t
 	theme = seduction
@@ -1483,10 +1868,6 @@ LIDAf.6 = {
 	}
 	immediate = {
 		save_scope_value_as = {
-			name = finisher_stamina
-			value = scope:partner_stamina
-		}
-		save_scope_value_as = {
 			name = locale
 			value = flag:council_chamber
 		}
@@ -1494,21 +1875,41 @@ LIDAf.6 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 101
+					value = 201
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 102
+					value = 202
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 203
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 204
 				}
 			}
 		}
@@ -1516,27 +1917,53 @@ LIDAf.6 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 101
+						scope:first_transition_0 = 201
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 101
+					value = 201
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 102
+						scope:first_transition_0 = 202
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 102
+					value = 202
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 203
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 203
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 204
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 204
 				}
 			}
 		}
@@ -1553,12 +1980,12 @@ LIDAf.6 = {
 		}
 	}
 	option = {
-		# 101: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
-		name = LIDAoption.101
+		# 201: EventsFirst.FM_MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.201
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 101
-				scope:first_transition_1 = 101
+				scope:first_transition_0 = 201
+				scope:first_transition_1 = 201
 			}
 		}
 		save_scope_value_as = {
@@ -1567,17 +1994,17 @@ LIDAf.6 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 101
+			value = 201
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 102: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_ASS_TEASE
-		name = LIDAoption.102
+		# 202: EventsFirst.FM_MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.202
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 102
-				scope:first_transition_1 = 102
+				scope:first_transition_0 = 202
+				scope:first_transition_1 = 202
 			}
 		}
 		save_scope_value_as = {
@@ -1586,9 +2013,47 @@ LIDAf.6 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 102
+			value = 202
 		}
 		trigger_event = LIDAs.2
+	}
+	option = {
+		# 203: EventsFirst.FM_MEETING_WITH_LIEGE_INITIAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.203
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 203
+				scope:first_transition_1 = 203
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 6
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 203
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 204: EventsFirst.FM_MEETING_WITH_LIEGE_INITIAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.204
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 204
+				scope:first_transition_1 = 204
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 6
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 204
+		}
+		trigger_event = LIDAs.16
 	}
 	option = {
 		name = cancel_meeting_option
@@ -1598,12 +2063,9 @@ LIDAf.6 = {
 			target = scope:affairs_partner
 		}
 	}
-	after = {
-		reset_stamina_after_cum_effect = yes
-	}
 }
 LIDAf.7 = {
-	# MEETING_WITH_PRISONER: Taste of Heaven in Hell
+	# FM_MEETING_WITH_PRISONER: Taste of Heaven in Hell
 	type = character_event
 	title = LIDAf.7.t
 	theme = seduction
@@ -1750,10 +2212,6 @@ LIDAf.7 = {
 	}
 	immediate = {
 		save_scope_value_as = {
-			name = finisher_stamina
-			value = scope:partner_stamina
-		}
-		save_scope_value_as = {
 			name = locale
 			value = flag:dungeon
 		}
@@ -1761,21 +2219,41 @@ LIDAf.7 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 103
+					value = 205
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 104
+					value = 206
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 207
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 208
 				}
 			}
 		}
@@ -1783,27 +2261,53 @@ LIDAf.7 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 103
+						scope:first_transition_0 = 205
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 103
+					value = 205
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 104
+						scope:first_transition_0 = 206
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 104
+					value = 206
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 207
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 207
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 208
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 208
 				}
 			}
 		}
@@ -1820,12 +2324,12 @@ LIDAf.7 = {
 		}
 	}
 	option = {
-		# 103: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.FM_HANDJOB_TEASE
-		name = LIDAoption.103
+		# 205: EventsFirst.FM_MEETING_WITH_PRISONER -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.205
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 103
-				scope:first_transition_1 = 103
+				scope:first_transition_0 = 205
+				scope:first_transition_1 = 205
 			}
 		}
 		save_scope_value_as = {
@@ -1834,17 +2338,17 @@ LIDAf.7 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 103
+			value = 205
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 104: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.FM_ASS_TEASE
-		name = LIDAoption.104
+		# 206: EventsFirst.FM_MEETING_WITH_PRISONER -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.206
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 104
-				scope:first_transition_1 = 104
+				scope:first_transition_0 = 206
+				scope:first_transition_1 = 206
 			}
 		}
 		save_scope_value_as = {
@@ -1853,9 +2357,47 @@ LIDAf.7 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 104
+			value = 206
 		}
 		trigger_event = LIDAs.2
+	}
+	option = {
+		# 207: EventsFirst.FM_MEETING_WITH_PRISONER -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.207
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 207
+				scope:first_transition_1 = 207
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 7
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 207
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 208: EventsFirst.FM_MEETING_WITH_PRISONER -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.208
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 208
+				scope:first_transition_1 = 208
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 7
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 208
+		}
+		trigger_event = LIDAs.16
 	}
 	option = {
 		name = cancel_meeting_option
@@ -1865,12 +2407,9 @@ LIDAf.7 = {
 			target = scope:affairs_partner
 		}
 	}
-	after = {
-		reset_stamina_after_cum_effect = yes
-	}
 }
 LIDAf.8 = {
-	# MEETING_WITH_PRISONER_INITIAL: The Sweetest Torture
+	# FM_MEETING_WITH_PRISONER_INITIAL: The Sweetest Torture
 	type = character_event
 	title = LIDAf.8.t
 	theme = seduction
@@ -2017,10 +2556,6 @@ LIDAf.8 = {
 	}
 	immediate = {
 		save_scope_value_as = {
-			name = finisher_stamina
-			value = scope:partner_stamina
-		}
-		save_scope_value_as = {
 			name = locale
 			value = flag:dungeon
 		}
@@ -2028,21 +2563,41 @@ LIDAf.8 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 105
+					value = 209
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 106
+					value = 210
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 211
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 212
 				}
 			}
 		}
@@ -2050,27 +2605,53 @@ LIDAf.8 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 105
+						scope:first_transition_0 = 209
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 105
+					value = 209
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 106
+						scope:first_transition_0 = 210
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 106
+					value = 210
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 211
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 211
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 212
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 212
 				}
 			}
 		}
@@ -2087,12 +2668,12 @@ LIDAf.8 = {
 		}
 	}
 	option = {
-		# 105: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_HANDJOB_TEASE
-		name = LIDAoption.105
+		# 209: EventsFirst.FM_MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.209
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 105
-				scope:first_transition_1 = 105
+				scope:first_transition_0 = 209
+				scope:first_transition_1 = 209
 			}
 		}
 		save_scope_value_as = {
@@ -2101,17 +2682,17 @@ LIDAf.8 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 105
+			value = 209
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 106: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_ASS_TEASE
-		name = LIDAoption.106
+		# 210: EventsFirst.FM_MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.210
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 106
-				scope:first_transition_1 = 106
+				scope:first_transition_0 = 210
+				scope:first_transition_1 = 210
 			}
 		}
 		save_scope_value_as = {
@@ -2120,9 +2701,47 @@ LIDAf.8 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 106
+			value = 210
 		}
 		trigger_event = LIDAs.2
+	}
+	option = {
+		# 211: EventsFirst.FM_MEETING_WITH_PRISONER_INITIAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.211
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 211
+				scope:first_transition_1 = 211
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 8
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 211
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 212: EventsFirst.FM_MEETING_WITH_PRISONER_INITIAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.212
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 212
+				scope:first_transition_1 = 212
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 8
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 212
+		}
+		trigger_event = LIDAs.16
 	}
 	option = {
 		name = cancel_meeting_option
@@ -2132,12 +2751,9 @@ LIDAf.8 = {
 			target = scope:affairs_partner
 		}
 	}
-	after = {
-		reset_stamina_after_cum_effect = yes
-	}
 }
 LIDAf.9 = {
-	# MEETING_WITH_ACQUAINTANCE: Who Owns Who
+	# FM_MEETING_WITH_ACQUAINTANCE: Who Owns Who
 	type = character_event
 	title = LIDAf.9.t
 	theme = seduction
@@ -2284,10 +2900,6 @@ LIDAf.9 = {
 	}
 	immediate = {
 		save_scope_value_as = {
-			name = finisher_stamina
-			value = scope:partner_stamina
-		}
-		save_scope_value_as = {
 			name = locale
 			value = flag:sitting_room
 		}
@@ -2295,21 +2907,41 @@ LIDAf.9 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 107
+					value = 213
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 108
+					value = 214
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 215
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 216
 				}
 			}
 		}
@@ -2317,27 +2949,53 @@ LIDAf.9 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 107
+						scope:first_transition_0 = 213
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 107
+					value = 213
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 108
+						scope:first_transition_0 = 214
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 108
+					value = 214
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 215
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 215
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 216
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 216
 				}
 			}
 		}
@@ -2354,12 +3012,12 @@ LIDAf.9 = {
 		}
 	}
 	option = {
-		# 107: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_HANDJOB_TEASE
-		name = LIDAoption.107
+		# 213: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.213
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 107
-				scope:first_transition_1 = 107
+				scope:first_transition_0 = 213
+				scope:first_transition_1 = 213
 			}
 		}
 		save_scope_value_as = {
@@ -2368,17 +3026,17 @@ LIDAf.9 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 107
+			value = 213
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 108: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_ASS_TEASE
-		name = LIDAoption.108
+		# 214: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.214
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 108
-				scope:first_transition_1 = 108
+				scope:first_transition_0 = 214
+				scope:first_transition_1 = 214
 			}
 		}
 		save_scope_value_as = {
@@ -2387,9 +3045,47 @@ LIDAf.9 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 108
+			value = 214
 		}
 		trigger_event = LIDAs.2
+	}
+	option = {
+		# 215: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.215
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 215
+				scope:first_transition_1 = 215
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 9
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 215
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 216: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.216
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 216
+				scope:first_transition_1 = 216
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 9
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 216
+		}
+		trigger_event = LIDAs.16
 	}
 	option = {
 		name = cancel_meeting_option
@@ -2399,12 +3095,9 @@ LIDAf.9 = {
 			target = scope:affairs_partner
 		}
 	}
-	after = {
-		reset_stamina_after_cum_effect = yes
-	}
 }
 LIDAf.10 = {
-	# MEETING_WITH_ACQUAINTANCE_INITIAL: A Chance Encounter
+	# FM_MEETING_WITH_ACQUAINTANCE_INITIAL: A Chance Encounter
 	type = character_event
 	title = LIDAf.10.t
 	theme = seduction
@@ -2551,10 +3244,6 @@ LIDAf.10 = {
 	}
 	immediate = {
 		save_scope_value_as = {
-			name = finisher_stamina
-			value = scope:partner_stamina
-		}
-		save_scope_value_as = {
 			name = locale
 			value = flag:courtyard
 		}
@@ -2562,21 +3251,41 @@ LIDAf.10 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 109
+					value = 217
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
-					value = 110
+					value = 218
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 219
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 220
 				}
 			}
 		}
@@ -2584,27 +3293,53 @@ LIDAf.10 = {
 			# FM_HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 109
+						scope:first_transition_0 = 217
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 109
+					value = 217
 				}
 			}
 			# FM_ASS_TEASE
 			10 = {
 				trigger = {
-					scope:finisher_stamina > 0
+					scope:partner_stamina > 0
 					NOT = {
-						scope:first_transition_0 = 110
+						scope:first_transition_0 = 218
 					}
 				}
 				save_scope_value_as = {
 					name = first_transition_1
-					value = 110
+					value = 218
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 219
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 219
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 220
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 220
 				}
 			}
 		}
@@ -2621,12 +3356,12 @@ LIDAf.10 = {
 		}
 	}
 	option = {
-		# 109: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
-		name = LIDAoption.109
+		# 217: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.217
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 109
-				scope:first_transition_1 = 109
+				scope:first_transition_0 = 217
+				scope:first_transition_1 = 217
 			}
 		}
 		save_scope_value_as = {
@@ -2635,17 +3370,17 @@ LIDAf.10 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 109
+			value = 217
 		}
 		trigger_event = LIDAs.1
 	}
 	option = {
-		# 110: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_ASS_TEASE
-		name = LIDAoption.110
+		# 218: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.218
 		trigger = {
 			OR = {
-				scope:first_transition_0 = 110
-				scope:first_transition_1 = 110
+				scope:first_transition_0 = 218
+				scope:first_transition_1 = 218
 			}
 		}
 		save_scope_value_as = {
@@ -2654,9 +3389,47 @@ LIDAf.10 = {
 		}
 		save_scope_value_as = {
 			name = sex_transition
-			value = 110
+			value = 218
 		}
 		trigger_event = LIDAs.2
+	}
+	option = {
+		# 219: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.219
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 219
+				scope:first_transition_1 = 219
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 10
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 219
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 220: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.220
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 220
+				scope:first_transition_1 = 220
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 10
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 220
+		}
+		trigger_event = LIDAs.16
 	}
 	option = {
 		name = cancel_meeting_option
@@ -2666,7 +3439,3444 @@ LIDAf.10 = {
 			target = scope:affairs_partner
 		}
 	}
-	after = {
-		reset_stamina_after_cum_effect = yes
+}
+LIDAf.11 = {
+	# MF_MEETING_WITH_SPOUSE: Spicing it Up
+	type = character_event
+	title = LIDAf.11.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.11.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:bedchamber
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 221
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 222
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 223
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 224
+				}
+			}
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 221
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 221
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 222
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 222
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 223
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 223
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 224
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 224
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 221: EventsFirst.MF_MEETING_WITH_SPOUSE -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.221
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 221
+				scope:first_transition_1 = 221
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 11
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 221
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 222: EventsFirst.MF_MEETING_WITH_SPOUSE -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.222
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 222
+				scope:first_transition_1 = 222
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 11
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 222
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		# 223: EventsFirst.MF_MEETING_WITH_SPOUSE -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.223
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 223
+				scope:first_transition_1 = 223
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 11
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 223
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 224: EventsFirst.MF_MEETING_WITH_SPOUSE -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.224
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 224
+				scope:first_transition_1 = 224
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 11
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 224
+		}
+		trigger_event = LIDAs.16
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+}
+LIDAf.12 = {
+	# MF_MEETING_WITH_SPOUSE_INITIAL: Flowers in Bloom
+	type = character_event
+	title = LIDAf.12.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.12.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:garden
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 225
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 226
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 227
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 228
+				}
+			}
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 225
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 225
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 226
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 226
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 227
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 227
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 228
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 228
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 225: EventsFirst.MF_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.225
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 225
+				scope:first_transition_1 = 225
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 12
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 225
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 226: EventsFirst.MF_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.226
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 226
+				scope:first_transition_1 = 226
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 12
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 226
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		# 227: EventsFirst.MF_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.227
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 227
+				scope:first_transition_1 = 227
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 12
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 227
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 228: EventsFirst.MF_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.228
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 228
+				scope:first_transition_1 = 228
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 12
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 228
+		}
+		trigger_event = LIDAs.16
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+}
+LIDAf.13 = {
+	# MF_MEETING_WITH_VASSAL: Chains of Command
+	type = character_event
+	title = LIDAf.13.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.13.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:study
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 229
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 230
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 231
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 232
+				}
+			}
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 229
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 229
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 230
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 230
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 231
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 231
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 232
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 232
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 229: EventsFirst.MF_MEETING_WITH_VASSAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.229
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 229
+				scope:first_transition_1 = 229
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 13
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 229
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 230: EventsFirst.MF_MEETING_WITH_VASSAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.230
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 230
+				scope:first_transition_1 = 230
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 13
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 230
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		# 231: EventsFirst.MF_MEETING_WITH_VASSAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.231
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 231
+				scope:first_transition_1 = 231
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 13
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 231
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 232: EventsFirst.MF_MEETING_WITH_VASSAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.232
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 232
+				scope:first_transition_1 = 232
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 13
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 232
+		}
+		trigger_event = LIDAs.16
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+}
+LIDAf.14 = {
+	# MF_MEETING_WITH_VASSAL_INITIAL: Privileges of Power
+	type = character_event
+	title = LIDAf.14.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.14.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:study
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 233
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 234
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 235
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 236
+				}
+			}
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 233
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 233
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 234
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 234
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 235
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 235
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 236
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 236
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 233: EventsFirst.MF_MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.233
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 233
+				scope:first_transition_1 = 233
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 14
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 233
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 234: EventsFirst.MF_MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.234
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 234
+				scope:first_transition_1 = 234
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 14
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 234
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		# 235: EventsFirst.MF_MEETING_WITH_VASSAL_INITIAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.235
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 235
+				scope:first_transition_1 = 235
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 14
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 235
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 236: EventsFirst.MF_MEETING_WITH_VASSAL_INITIAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.236
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 236
+				scope:first_transition_1 = 236
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 14
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 236
+		}
+		trigger_event = LIDAs.16
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+}
+LIDAf.15 = {
+	# MF_MEETING_WITH_LIEGE: Mead in my Room?
+	type = character_event
+	title = LIDAf.15.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.15.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:bedchamber
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 237
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 238
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 239
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 240
+				}
+			}
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 237
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 237
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 238
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 238
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 239
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 239
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 240
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 240
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 237: EventsFirst.MF_MEETING_WITH_LIEGE -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.237
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 237
+				scope:first_transition_1 = 237
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 15
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 237
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 238: EventsFirst.MF_MEETING_WITH_LIEGE -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.238
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 238
+				scope:first_transition_1 = 238
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 15
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 238
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		# 239: EventsFirst.MF_MEETING_WITH_LIEGE -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.239
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 239
+				scope:first_transition_1 = 239
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 15
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 239
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 240: EventsFirst.MF_MEETING_WITH_LIEGE -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.240
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 240
+				scope:first_transition_1 = 240
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 15
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 240
+		}
+		trigger_event = LIDAs.16
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+}
+LIDAf.16 = {
+	# MF_MEETING_WITH_LIEGE_INITIAL: An Intimate Discussion
+	type = character_event
+	title = LIDAf.16.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = throne_room_bow_1
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.16.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:council_chamber
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 241
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 242
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 243
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 244
+				}
+			}
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 241
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 241
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 242
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 242
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 243
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 243
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 244
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 244
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 241: EventsFirst.MF_MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.241
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 241
+				scope:first_transition_1 = 241
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 16
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 241
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 242: EventsFirst.MF_MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.242
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 242
+				scope:first_transition_1 = 242
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 16
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 242
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		# 243: EventsFirst.MF_MEETING_WITH_LIEGE_INITIAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.243
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 243
+				scope:first_transition_1 = 243
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 16
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 243
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 244: EventsFirst.MF_MEETING_WITH_LIEGE_INITIAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.244
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 244
+				scope:first_transition_1 = 244
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 16
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 244
+		}
+		trigger_event = LIDAs.16
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+}
+LIDAf.17 = {
+	# MF_MEETING_WITH_PRISONER: Taste of Heaven in Hell
+	type = character_event
+	title = LIDAf.17.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = prisonhouse
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.17.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:dungeon
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 245
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 246
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 247
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 248
+				}
+			}
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 245
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 245
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 246
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 246
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 247
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 247
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 248
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 248
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 245: EventsFirst.MF_MEETING_WITH_PRISONER -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.245
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 245
+				scope:first_transition_1 = 245
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 17
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 245
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 246: EventsFirst.MF_MEETING_WITH_PRISONER -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.246
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 246
+				scope:first_transition_1 = 246
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 17
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 246
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		# 247: EventsFirst.MF_MEETING_WITH_PRISONER -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.247
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 247
+				scope:first_transition_1 = 247
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 17
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 247
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 248: EventsFirst.MF_MEETING_WITH_PRISONER -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.248
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 248
+				scope:first_transition_1 = 248
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 17
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 248
+		}
+		trigger_event = LIDAs.16
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+}
+LIDAf.18 = {
+	# MF_MEETING_WITH_PRISONER_INITIAL: The Sweetest Torture
+	type = character_event
+	title = LIDAf.18.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = prisonhouse
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.18.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:dungeon
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 249
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 250
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 251
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 252
+				}
+			}
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 249
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 249
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 250
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 250
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 251
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 251
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 252
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 252
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 249: EventsFirst.MF_MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.249
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 249
+				scope:first_transition_1 = 249
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 18
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 249
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 250: EventsFirst.MF_MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.250
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 250
+				scope:first_transition_1 = 250
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 18
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 250
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		# 251: EventsFirst.MF_MEETING_WITH_PRISONER_INITIAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.251
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 251
+				scope:first_transition_1 = 251
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 18
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 251
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 252: EventsFirst.MF_MEETING_WITH_PRISONER_INITIAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.252
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 252
+				scope:first_transition_1 = 252
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 18
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 252
+		}
+		trigger_event = LIDAs.16
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+}
+LIDAf.19 = {
+	# MF_MEETING_WITH_ACQUAINTANCE: Who Owns Who
+	type = character_event
+	title = LIDAf.19.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.19.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:sitting_room
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 253
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 254
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 255
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 256
+				}
+			}
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 253
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 253
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 254
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 254
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 255
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 255
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 256
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 256
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 253: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.253
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 253
+				scope:first_transition_1 = 253
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 19
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 253
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 254: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.254
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 254
+				scope:first_transition_1 = 254
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 19
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 254
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		# 255: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.255
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 255
+				scope:first_transition_1 = 255
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 19
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 255
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 256: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.256
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 256
+				scope:first_transition_1 = 256
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 19
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 256
+		}
+		trigger_event = LIDAs.16
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+}
+LIDAf.20 = {
+	# MF_MEETING_WITH_ACQUAINTANCE_INITIAL: A Chance Encounter
+	type = character_event
+	title = LIDAf.20.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.20.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:courtyard
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 257
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 258
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 259
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 260
+				}
+			}
+		}
+		random_list = {
+			# FM_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 257
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 257
+				}
+			}
+			# FM_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 258
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 258
+				}
+			}
+			# MF_HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 259
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 259
+				}
+			}
+			# MF_ASS_TEASE
+			10 = {
+				trigger = {
+					scope:partner_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 260
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 260
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 257: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
+		name = LIDAoption.257
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 257
+				scope:first_transition_1 = 257
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 20
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 257
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 258: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_ASS_TEASE
+		name = LIDAoption.258
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 258
+				scope:first_transition_1 = 258
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 20
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 258
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		# 259: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.MF_HANDJOB_TEASE
+		name = LIDAoption.259
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 259
+				scope:first_transition_1 = 259
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 20
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 259
+		}
+		trigger_event = LIDAs.15
+	}
+	option = {
+		# 260: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.MF_ASS_TEASE
+		name = LIDAoption.260
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 260
+				scope:first_transition_1 = 260
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 20
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 260
+		}
+		trigger_event = LIDAs.16
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
 	}
 }

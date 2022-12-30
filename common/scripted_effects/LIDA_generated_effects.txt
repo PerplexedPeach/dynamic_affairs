@@ -18,11 +18,11 @@ select_start_affairs_effect = {
 					modifier = dominant_opinion
 				}
 			}
-			# MEETING_WITH_SPOUSE
+			# FM_MEETING_WITH_SPOUSE
 			trigger_event = LIDAf.1
 		}
 		else = {
-			# MEETING_WITH_SPOUSE_INITIAL
+			# FM_MEETING_WITH_SPOUSE_INITIAL
 			trigger_event = LIDAf.2
 		}
 	}
@@ -41,11 +41,11 @@ select_start_affairs_effect = {
 					modifier = dominant_opinion
 				}
 			}
-			# MEETING_WITH_PRISONER
+			# FM_MEETING_WITH_PRISONER
 			trigger_event = LIDAf.7
 		}
 		else = {
-			# MEETING_WITH_PRISONER_INITIAL
+			# FM_MEETING_WITH_PRISONER_INITIAL
 			trigger_event = LIDAf.8
 		}
 	}
@@ -64,11 +64,11 @@ select_start_affairs_effect = {
 					modifier = dominant_opinion
 				}
 			}
-			# MEETING_WITH_LIEGE
+			# FM_MEETING_WITH_LIEGE
 			trigger_event = LIDAf.5
 		}
 		else = {
-			# MEETING_WITH_LIEGE_INITIAL
+			# FM_MEETING_WITH_LIEGE_INITIAL
 			trigger_event = LIDAf.6
 		}
 	}
@@ -87,11 +87,11 @@ select_start_affairs_effect = {
 					modifier = dominant_opinion
 				}
 			}
-			# MEETING_WITH_VASSAL
+			# FM_MEETING_WITH_VASSAL
 			trigger_event = LIDAf.3
 		}
 		else = {
-			# MEETING_WITH_VASSAL_INITIAL
+			# FM_MEETING_WITH_VASSAL_INITIAL
 			trigger_event = LIDAf.4
 		}
 	}
@@ -109,11 +109,11 @@ select_start_affairs_effect = {
 					modifier = dominant_opinion
 				}
 			}
-			# MEETING_WITH_ACQUAINTANCE
+			# FM_MEETING_WITH_ACQUAINTANCE
 			trigger_event = LIDAf.9
 		}
 		else = {
-			# MEETING_WITH_ACQUAINTANCE_INITIAL
+			# FM_MEETING_WITH_ACQUAINTANCE_INITIAL
 			trigger_event = LIDAf.10
 		}
 	}
@@ -140,6 +140,24 @@ select_random_sex_source_effect = {
 				}
 			}
 			trigger_event = LIDAs.2
+		}
+		100 = {
+			trigger = {
+				is_female = no
+				scope:affairs_partner = {
+					is_female = yes
+				}
+			}
+			trigger_event = LIDAs.15
+		}
+		100 = {
+			trigger = {
+				is_female = no
+				scope:affairs_partner = {
+					is_female = yes
+				}
+			}
+			trigger_event = LIDAs.16
 		}
 	}
 }
