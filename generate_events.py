@@ -1198,9 +1198,36 @@ def generate_strings(events, options):
                 inside_limit_check_gender(b, FEMALE, MALE)
             add_meeting_events(b, es, EventsFirst.FM_MEETING_WITH_ACQUAINTANCE_INITIAL,
                                EventsFirst.FM_MEETING_WITH_ACQUAINTANCE)
-        # TODO M/F events and other pairings
-        with Block(b, ELSE):
-            b.assign(TRIGGER_EVENT, UNIMPLEMENTED_PAIRING_EVENT)
+
+        # M/F Events
+        with Block(b, IF):
+            with Block(b, LIMIT):
+                b.assign(IS_SPOUSE_OF, AFFAIRS_PARTNER)
+                inside_limit_check_gender(b, MALE, FEMALE)
+            add_meeting_events(b, es, EventsFirst.MF_MEETING_WITH_SPOUSE_INITIAL, EventsFirst.MF_MEETING_WITH_SPOUSE)
+        with Block(b, ELSE_IF):
+            with Block(b, LIMIT):
+                b.assign(IS_IN_LIST, prisoner_list)
+                inside_limit_check_gender(b, MALE, FEMALE)
+            add_meeting_events(b, es, EventsFirst.MF_MEETING_WITH_PRISONER_INITIAL, EventsFirst.MF_MEETING_WITH_PRISONER)
+        with Block(b, ELSE_IF):
+            with Block(b, LIMIT):
+                b.assign(IS_VASSAL_OR_BELOW_OF, AFFAIRS_PARTNER)
+                inside_limit_check_gender(b, MALE, FEMALE)
+            add_meeting_events(b, es, EventsFirst.MF_MEETING_WITH_LIEGE_INITIAL, EventsFirst.MF_MEETING_WITH_LIEGE)
+        with Block(b, ELSE_IF):
+            with Block(b, LIMIT):
+                b.assign(TARGET_IS_VASSAL_OR_BELOW, AFFAIRS_PARTNER)
+                inside_limit_check_gender(b, MALE, FEMALE)
+            add_meeting_events(b, es, EventsFirst.MF_MEETING_WITH_VASSAL_INITIAL, EventsFirst.MF_MEETING_WITH_VASSAL)
+        with Block(b, ELSE_IF):
+            with Block(b, LIMIT):
+                inside_limit_check_gender(b, MALE, FEMALE)
+            add_meeting_events(b, es, EventsFirst.MF_MEETING_WITH_ACQUAINTANCE_INITIAL,
+                               EventsFirst.MF_MEETING_WITH_ACQUAINTANCE)
+        # TODO M/F events and other pairings #this caused all MF events to throw out a fake error for obv reasons
+    #    with Block(b, ELSE):
+    #        b.assign(TRIGGER_EVENT, UNIMPLEMENTED_PAIRING_EVENT)
 
     # generate sex source effect to allow directly randomly transitioning into a sex event
     with Block(b, SELECT_RANDOM_SEX_SOURCE_EFFECT):
@@ -1805,8 +1832,8 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           Giving him something else to thrust into, you get on your knees and starting sucking.""",
                           failed_transition_text=f"""
-                          You move to pull away from his fingers, but your endeavour is stopped
-                          by a particularly deep thrust scraping your inner walls."""),
+                          You move to pull away from his fingers, but are stopped
+                          by a particularly #bold deep#! thrust scraping your inner walls."""),
                    Option(EventsSex.FM_STANDING_FINGERED_FROM_BEHIND, OptionCategory.SUB,
                           "Continue enjoying his deft hands",
                           transition_text=f"""
@@ -2059,7 +2086,7 @@ def define_sex_events(es: EventMap):
                He's in complete control of your body and mind
                """,
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
-                and you're enjoying #sub every#! single moment of him #italic splitting you in half#!"""),
+                and you're enjoying #sub every#! single moment of his cock #italic splitting you in half#!"""),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
                 and you #dom hate#! having to admit to yourself that he might #italic break#! you"""), "."
                                  ),
@@ -2501,8 +2528,8 @@ def define_sex_events(es: EventMap):
                           transition_text=f"""
                           Giving him something else to thrust into, you get on your knees and starting sucking.""",
                           failed_transition_text=f"""
-                          You move to pull away from his fingers, but your endeavour is stopped
-                          by a particularly deep thrust scraping your inner walls."""),
+                          You move to pull away from his fingers, but are stopped
+                          by a particularly #bold deep#! thrust scraping your inner walls."""),
                    Option(EventsSex.MF_STANDING_FINGERED_FROM_BEHIND, OptionCategory.SUB,
                           "Continue enjoying his deft hands",
                           transition_text=f"""
@@ -2752,10 +2779,10 @@ def define_sex_events(es: EventMap):
                desc=ComposedDesc(f"""
                You are face down with your legs closed while {THEM} thrusts deep in your moist womb, your mind melting from the echoing sound of
                #bold your cheeks getting clapped#! as each #italic ravaging#! stroke sends #sub paralyzing#! jolts of pleasure through your whole being. \\n\\n
-               He's in complete control of your body and mind
+               He's in complete control of you
                """,
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
-                and you're enjoying #sub every#! single moment of him #italic splitting you in half#!"""),
+                and you're enjoying #sub every#! single moment of his cock #italic splitting you in half#!"""),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
                 and you #dom hate#! having to admit to yourself that he might #italic break#! you"""), "."
                                  ),
@@ -3095,7 +3122,7 @@ def define_cum_events(es: EventMap):
                or is he #italic trying#! to breed you? Either way, you #sub love#! the feeling.""", ),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB} \n {HAS_TRAIT} = {PREGNANT}", f"""
                even with a bun already in you? How #sub flattering#!.""", ),
-                   """\\n\\n""",
+                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """\\n\\n"""),
 
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
                "M-my {ME_LADY_LORD}!", {THEM} blurts out while staring at your stuffed hole in shock.
@@ -3337,7 +3364,7 @@ def define_cum_events(es: EventMap):
     es.add(Cum(EventsCum.MF_PULL_OUT_CUM_ON_ASS, "More Icing on the Cake",
                subdom_change=1,
                root_gender = MALE, partner_gender = FEMALE,
-               preg_chance_1=0.05 * PREGNANCY_CHANCE,
+               preg_chance_2=0.05 * PREGNANCY_CHANCE,
                animation_left=FLIRTATION_LEFT, animation_right=PERSONALITY_BOLD,
                root_become_more_sub_chance=10,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean yourself and get dressed"),
@@ -3369,7 +3396,7 @@ def define_cum_events(es: EventMap):
                subdom_change=-1,
                root_gender = MALE, partner_gender = FEMALE,
                root_become_more_sub_chance=5,
-               preg_chance_1=PREGNANCY_CHANCE * 0.01,
+               preg_chance_2=PREGNANCY_CHANCE * 0.01,
                animation_left=DISMISSAL, animation_right=PERSONALITY_BOLD,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean up the white coating on your groin"),
                desc=ComposedDesc(f"""
@@ -3426,7 +3453,7 @@ def define_cum_events(es: EventMap):
                subdom_change=3,
                root_gender = MALE, partner_gender = FEMALE,
                root_become_more_dom_chance=30,
-               preg_chance_1=PREGNANCY_CHANCE,
+               preg_chance_2=PREGNANCY_CHANCE,
                animation_left=FLIRTATION_LEFT, animation_right=SHOCK,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe the silky threads hanging from your slit"),
                desc=ComposedDesc(f"""
@@ -3452,7 +3479,7 @@ def define_cum_events(es: EventMap):
                subdom_change=-6,
                root_gender = MALE, partner_gender = FEMALE,
                root_become_more_sub_chance=45,
-               preg_chance_1=PREGNANCY_CHANCE * 1.5,
+               preg_chance_2=PREGNANCY_CHANCE * 1.5,
                animation_left=WORRY, animation_right=PERSONALITY_BOLD,
                terminal_option=Option(None, OptionCategory.OTHER,
                                       "Feel his seed trickle from your slit for the rest of the day"),
@@ -3470,7 +3497,7 @@ def define_cum_events(es: EventMap):
                or is he #italic trying#! to breed you? Either way, you #sub love#! the feeling.""", ),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB} \n {HAS_TRAIT} = {PREGNANT}", f"""
                even with a bun already in you? How #sub flattering#!.""", ),
-                   """\\n\\n""",
+                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """\\n\\n"""),
 
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
                "M-my {ME_LADY_LORD}!", {THEM} blurts out while staring at your stuffed hole in shock.
@@ -3517,11 +3544,11 @@ def define_cum_events(es: EventMap):
                """, ),
                ),
                ))
-    es.add(Cum(EventsCum.MF_CREAMPIE_KEEP, "Sending It Home",
+    es.add(Cum(EventsCum.MF_CREAMPIE_KEEP, "",
                subdom_change=2,
                root_gender = MALE, partner_gender = FEMALE,
                root_become_more_dom_chance=20,
-               preg_chance_1=PREGNANCY_CHANCE * 2,
+               preg_chance_2=PREGNANCY_CHANCE * 2,
                animation_left=ECSTASY, animation_right=SHOCK,
                terminal_option=Option(None, OptionCategory.OTHER, "No need to clean up, it's #bold all#! inside you"),
                desc=ComposedDesc(f"""

@@ -598,7 +598,7 @@ LIDAc.6 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_43.10000
 			}
 			triggered_desc = {
@@ -2648,7 +2648,7 @@ LIDAc.7 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_43.10000
 			}
 			triggered_desc = {
@@ -3755,7 +3755,12 @@ LIDAc.11 = {
 			}
 			desc = LIDAc.11.desc.4
 		}
-		desc = LIDAc.11.desc.5
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.11.desc.5
+		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 10
@@ -4729,7 +4734,7 @@ LIDAc.18 = {
 					scope:sex_transition = 10121
 				}
 				# 121: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_121.10000
 			}
 			triggered_desc = {
@@ -6474,8 +6479,8 @@ scope:subdom < 10
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
 			CHARACTER_2 = scope:affairs_partner
-			C1_PREGNANCY_CHANCE = 1.5
-			C2_PREGNANCY_CHANCE = 0
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 1.5
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
@@ -6790,7 +6795,7 @@ LIDAc.19 = {
 					scope:sex_transition = 10121
 				}
 				# 121: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_121.10000
 			}
 			triggered_desc = {
@@ -6902,8 +6907,8 @@ scope:subdom < 10
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
 			CHARACTER_2 = scope:affairs_partner
-			C1_PREGNANCY_CHANCE = 0.3
-			C2_PREGNANCY_CHANCE = 0
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0.3
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
@@ -7592,8 +7597,8 @@ scope:subdom < 10
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
 			CHARACTER_2 = scope:affairs_partner
-			C1_PREGNANCY_CHANCE = 30
-			C2_PREGNANCY_CHANCE = 0
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 30
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
@@ -7879,7 +7884,12 @@ LIDAc.23 = {
 			}
 			desc = LIDAc.23.desc.4
 		}
-		desc = LIDAc.23.desc.5
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_sub
+			}
+			desc = LIDAc.23.desc.5
+		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom >= 10
@@ -7963,8 +7973,8 @@ has_trait = lida_sub
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
 			CHARACTER_2 = scope:affairs_partner
-			C1_PREGNANCY_CHANCE = 45.0
-			C2_PREGNANCY_CHANCE = 0
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 45.0
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
@@ -7985,7 +7995,7 @@ has_trait = lida_sub
 	}
 }
 LIDAc.24 = {
-	# MF_CREAMPIE_KEEP: Sending It Home
+	# MF_CREAMPIE_KEEP: 
 	type = character_event
 	title = LIDAc.24.t
 	theme = seduction
@@ -8217,8 +8227,8 @@ LIDAc.24 = {
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
 			CHARACTER_2 = scope:affairs_partner
-			C1_PREGNANCY_CHANCE = 60
-			C2_PREGNANCY_CHANCE = 0
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 60
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}

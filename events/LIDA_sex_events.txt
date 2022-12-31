@@ -1549,7 +1549,7 @@ LIDAs.4 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_43.10000
 			}
 			triggered_desc = {
@@ -5231,7 +5231,7 @@ LIDAs.8 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_43.10000
 			}
 			triggered_desc = {
@@ -6281,7 +6281,7 @@ LIDAs.9 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_43.10000
 			}
 			triggered_desc = {
@@ -7148,7 +7148,7 @@ LIDAs.5 = {
 					scope:sex_transition = 10043
 				}
 				# 43: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_43.10000
 			}
 			triggered_desc = {
@@ -12970,7 +12970,7 @@ LIDAs.18 = {
 					scope:sex_transition = 10121
 				}
 				# 121: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_121.10000
 			}
 			triggered_desc = {
@@ -16615,7 +16615,7 @@ LIDAs.22 = {
 					scope:sex_transition = 10121
 				}
 				# 121: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_121.10000
 			}
 			triggered_desc = {
@@ -17655,7 +17655,7 @@ LIDAs.23 = {
 					scope:sex_transition = 10121
 				}
 				# 121: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_121.10000
 			}
 			triggered_desc = {
@@ -18514,7 +18514,7 @@ LIDAs.19 = {
 					scope:sex_transition = 10121
 				}
 				# 121: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
 				desc = sex_transition_121.10000
 			}
 			triggered_desc = {
