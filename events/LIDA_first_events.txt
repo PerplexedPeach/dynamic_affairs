@@ -1,0 +1,2672 @@
+﻿# GENERATED FILE - DO NOT MODIFY DIRECTLY
+namespace = LIDAf
+LIDAf.1 = {
+	# MEETING_WITH_SPOUSE: Spicing it Up
+	type = character_event
+	title = LIDAf.1.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.1.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:bedchamber
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 89
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 90
+				}
+			}
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 89
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 89
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 90
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 90
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 89: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.89
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 89
+				scope:first_transition_1 = 89
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 1
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 89
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 90: EventsFirst.MEETING_WITH_SPOUSE -> EventsSex.ASS_TEASE
+		name = LIDAoption.90
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 90
+				scope:first_transition_1 = 90
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 1
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 90
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
+	}
+}
+LIDAf.2 = {
+	# MEETING_WITH_SPOUSE_INITIAL: Flowers in Bloom
+	type = character_event
+	title = LIDAf.2.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.2.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:garden
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 91
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 92
+				}
+			}
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 91
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 91
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 92
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 92
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 91: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.91
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 91
+				scope:first_transition_1 = 91
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 2
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 91
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 92: EventsFirst.MEETING_WITH_SPOUSE_INITIAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.92
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 92
+				scope:first_transition_1 = 92
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 2
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 92
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
+	}
+}
+LIDAf.3 = {
+	# MEETING_WITH_VASSAL: Chains of Command
+	type = character_event
+	title = LIDAf.3.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.3.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:study
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 93
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 94
+				}
+			}
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 93
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 93
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 94
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 94
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 93: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.93
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 93
+				scope:first_transition_1 = 93
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 3
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 93
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 94: EventsFirst.MEETING_WITH_VASSAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.94
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 94
+				scope:first_transition_1 = 94
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 3
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 94
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
+	}
+}
+LIDAf.4 = {
+	# MEETING_WITH_VASSAL_INITIAL: Privileges of Power
+	type = character_event
+	title = LIDAf.4.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.4.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:study
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 95
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 96
+				}
+			}
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 95
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 95
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 96
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 96
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 95: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.95
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 95
+				scope:first_transition_1 = 95
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 4
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 95
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 96: EventsFirst.MEETING_WITH_VASSAL_INITIAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.96
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 96
+				scope:first_transition_1 = 96
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 4
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 96
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
+	}
+}
+LIDAf.5 = {
+	# MEETING_WITH_LIEGE: Mead in my Room?
+	type = character_event
+	title = LIDAf.5.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.5.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:bedchamber
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 97
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 98
+				}
+			}
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 97
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 97
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 98
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 98
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 97: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.97
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 97
+				scope:first_transition_1 = 97
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 5
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 97
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 98: EventsFirst.MEETING_WITH_LIEGE -> EventsSex.ASS_TEASE
+		name = LIDAoption.98
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 98
+				scope:first_transition_1 = 98
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 5
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 98
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
+	}
+}
+LIDAf.6 = {
+	# MEETING_WITH_LIEGE_INITIAL: An Intimate Discussion
+	type = character_event
+	title = LIDAf.6.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = throne_room_bow_1
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.6.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:council_chamber
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 99
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 100
+				}
+			}
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 99
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 99
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 100
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 100
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 99: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.99
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 99
+				scope:first_transition_1 = 99
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 6
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 99
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 100: EventsFirst.MEETING_WITH_LIEGE_INITIAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.100
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 100
+				scope:first_transition_1 = 100
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 6
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 100
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
+	}
+}
+LIDAf.7 = {
+	# MEETING_WITH_PRISONER: Taste of Heaven in Hell
+	type = character_event
+	title = LIDAf.7.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = prisonhouse
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.7.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:dungeon
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 101
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 102
+				}
+			}
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 101
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 101
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 102
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 102
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 101: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.101
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 101
+				scope:first_transition_1 = 101
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 7
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 101
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 102: EventsFirst.MEETING_WITH_PRISONER -> EventsSex.ASS_TEASE
+		name = LIDAoption.102
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 102
+				scope:first_transition_1 = 102
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 7
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 102
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
+	}
+}
+LIDAf.8 = {
+	# MEETING_WITH_PRISONER_INITIAL: The Sweetest Torture
+	type = character_event
+	title = LIDAf.8.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = prisonhouse
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.8.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:dungeon
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 103
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 104
+				}
+			}
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 103
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 103
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 104
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 104
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 103: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.103
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 103
+				scope:first_transition_1 = 103
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 8
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 103
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 104: EventsFirst.MEETING_WITH_PRISONER_INITIAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.104
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 104
+				scope:first_transition_1 = 104
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 8
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 104
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
+	}
+}
+LIDAf.9 = {
+	# MEETING_WITH_ACQUAINTANCE: Who Owns Who
+	type = character_event
+	title = LIDAf.9.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.9.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:sitting_room
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 105
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 106
+				}
+			}
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 105
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 105
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 106
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 106
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 105: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.105
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 105
+				scope:first_transition_1 = 105
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 9
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 105
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 106: EventsFirst.MEETING_WITH_ACQUAINTANCE -> EventsSex.ASS_TEASE
+		name = LIDAoption.106
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 106
+				scope:first_transition_1 = 106
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 9
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 106
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
+	}
+}
+LIDAf.10 = {
+	# MEETING_WITH_ACQUAINTANCE_INITIAL: A Chance Encounter
+	type = character_event
+	title = LIDAf.10.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		event_background = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		event_background = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		event_background = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		event_background = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		event_background = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		event_background = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		event_background = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		event_background = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		event_background = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		event_background = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		event_background = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		event_background = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		event_background = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		event_background = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		event_background = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		event_background = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		event_background = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = flirtation
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = flirtation_left
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		desc = LIDAf.10.desc.0
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:courtyard
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 107
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+				}
+				save_scope_value_as = {
+					name = first_transition_0
+					value = 108
+				}
+			}
+		}
+		random_list = {
+			# HANDJOB_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 107
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 107
+				}
+			}
+			# ASS_TEASE
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:first_transition_0 = 108
+					}
+				}
+				save_scope_value_as = {
+					name = first_transition_1
+					value = 108
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:first_transition_1
+				}
+			}
+			save_scope_value_as = {
+				name = first_transition_1
+				value = -1
+			}
+		}
+	}
+	option = {
+		# 107: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.HANDJOB_TEASE
+		name = LIDAoption.107
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 107
+				scope:first_transition_1 = 107
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 10
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 107
+		}
+		trigger_event = LIDAs.1
+	}
+	option = {
+		# 108: EventsFirst.MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.ASS_TEASE
+		name = LIDAoption.108
+		trigger = {
+			OR = {
+				scope:first_transition_0 = 108
+				scope:first_transition_1 = 108
+			}
+		}
+		save_scope_value_as = {
+			name = prev_event
+			value = 10
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 108
+		}
+		trigger_event = LIDAs.2
+	}
+	option = {
+		name = cancel_meeting_option
+		custom_tooltip = cancel_meeting_tooltip
+		reverse_add_opinion = {
+			modifier = affair_spurned_opinion
+			target = scope:affairs_partner
+		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
+	}
+}
