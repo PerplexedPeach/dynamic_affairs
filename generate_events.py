@@ -121,6 +121,7 @@ DOM_SUCCESS_ADJUSTMENT_TOOLTIP = "dom_success_adjustment_tooltip"
 CANCEL_MEETING_OPTION = "cancel_meeting_option"
 CANCEL_MEETING_TOOLTIP = "cancel_meeting_tooltip"
 CANT_DOM_DUE_TO_CUM_TOOLTIP = "cant_dom_due_to_cum_tooltip"
+EASY_DOM_DUE_TO_CUM_TOOLTIP = "easy_dom_due_to_cum_tooltip"
 
 # effects
 TRIGGER_EVENT = "trigger_event"
@@ -898,6 +899,7 @@ class Sex(Event):
         for option in self.options:
             categories_to_options[option.category].append(option)
 
+        root_cum_terminates = self.root_stamina_decides_finish()
         for option in self.options:
             with Block(self, OPTION):
                 self.add_debug_comment(str(option))
@@ -921,13 +923,20 @@ class Sex(Event):
                 # for dom options, it could backfire and get you more dommed
                 if option.category == OptionCategory.DOM:
                     self.generate_dom_option_effect(option, categories_to_options[OptionCategory.SUB])
-                    # TODO add corresponding properties for the partner with SPECIAL
-                    # cumming decreases dom success
-                    with Block(self, IF):
-                        with Block(self, LIMIT):
-                            self.add_line(f"{ROOT_STAMINA} <= 0")
-                        self.assign(CUSTOM_TOOLTIP, CANT_DOM_DUE_TO_CUM_TOOLTIP)
-                        self.assign(ADD_INTERNAL_FLAG, DANGEROUS)
+                    if root_cum_terminates:
+                        # partner cumming makes dom easier
+                        with Block(self, IF):
+                            with Block(self, LIMIT):
+                                self.add_line(f"{PARTNER_STAMINA} <= 0")
+                            self.assign(CUSTOM_TOOLTIP, EASY_DOM_DUE_TO_CUM_TOOLTIP)
+                            self.assign(ADD_INTERNAL_FLAG, SPECIAL)
+                    else:
+                        # cumming decreases dom success
+                        with Block(self, IF):
+                            with Block(self, LIMIT):
+                                self.add_line(f"{ROOT_STAMINA} <= 0")
+                            self.assign(CUSTOM_TOOLTIP, CANT_DOM_DUE_TO_CUM_TOOLTIP)
+                            self.assign(ADD_INTERNAL_FLAG, DANGEROUS)
                 elif option.category == OptionCategory.SUB:
                     self.generate_sub_option_effect(option)
                 else:

@@ -31,6 +31,7 @@ partner_cum_m: "\nPLACEHOLDER non-terminating partner M cum"
 cancel_meeting_option: "Back out"
 cancel_meeting_tooltip: "Backing out of the promise of sex will make them angry."
 cant_dom_due_to_cum_tooltip: "You find it much harder to control the situation in the middle of an orgasm!"
+easy_dom_due_to_cum_tooltip: "You find it much easier to control the situation when your partner is in the middle of an orgasm!"
 # traits
 trait_lida_dom_1: "Assertive"
 trait_lida_dom_1_desc: "This character prefers to #dom dominate others#! socially and physically."
