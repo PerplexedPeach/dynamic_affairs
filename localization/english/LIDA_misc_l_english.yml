@@ -22,12 +22,27 @@ attempt_dom_tooltip: "This is considered a #dom;bold dominant#! action and will 
 dom_no_sub_tooltip: "This is considered a #dom;bold dominant#! action! However, since there are no submissive options from this event, you are guaranteed success."
 voluntary_sub_tooltip: "This is considered a #sub;bold submissive#! action and will be welcomed by [affairs_partner.GetFirstName]! However, there are long term consequences to being submissive to them."
 dom_success_adjustment_tooltip: "Due to special circumstance, you have an extra #weak ([SCOPE.GetValue('dom_success_adjustment')|0]%)#! chance of succeeding."
+# dom success breakdown
+# dom_chance_subdom_nature_tooltip: "Relative submissive or dominant nature: #weak [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
+# dom_chance_subdom_tooltip: "Relationship history with [affairs_partner.GetFirstName]: #weak [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+# dom_chance_prowess_tooltip: "Physical prowess: #weak [SCOPE.GetValue('dom_chance_prowess')|0]% #!"
+# dom_chance_lust_beauty_tooltip: "Lust for beauty: #weak [SCOPE.GetValue('dom_chance_lust_beauty')|0]% #!"
+# dom_chance_title_authority_tooltip: "Perceived difference in authority: #weak [SCOPE.GetValue('dom_chance_title_authority')|0]% #!"
+# dom_chance_stubborness_tooltip: "Stubborness: #weak [SCOPE.GetValue('dom_chance_stubborness')|0]% #!"
+# dom_chance_stamina_tooltip: "Stamina: #weak [SCOPE.GetValue('dom_chance_stamina')|0]% #!"
+# dom_chance_orgasm_tooltip: "Orgasm: #weak [SCOPE.GetValue('dom_chance_orgasm')|0]% #!"
+# dom_chance_sex_skill_tooltip: "Sex skill: #weak [SCOPE.GetValue('dom_chance_sex_skill')|0]% #!"
+dom_chance_breakdown_tooltip: "Success chance breakdown\n    Base value: #weak [SCOPE.ScriptValue('dom_base_success_value')|0]% #!\n    Relative submissive or dominant nature: #weak [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!\n    Relationship history with [affairs_partner.GetFirstName]: #weak [SCOPE.GetValue('dom_chance_subdom')|0]% #!\n    Physical prowess: #weak [SCOPE.GetValue('dom_chance_prowess')|0]% #!\n    Lust for beauty: #weak [SCOPE.GetValue('dom_chance_lust_beauty')|0]% #!\n    Perceived difference in authority: #weak [SCOPE.GetValue('dom_chance_title_authority')|0]% #!\n    Stubborness: #weak [SCOPE.GetValue('dom_chance_stubborness')|0]% #!\n    Stamina: #weak [SCOPE.GetValue('dom_chance_stamina')|0]% #!\n    Orgasm: #weak [SCOPE.GetValue('dom_chance_orgasm')|0]% #!\n    Sex skill: #weak [SCOPE.GetValue('dom_chance_sex_skill')|0]% #!"
 # default root cum text
 root_cum_f: "\nYou shudder and close your eyes as you climax. Your body subconsciously clamping down on the one who #sub;bold conquered it#!, as if pleading for more."
 root_cum_m: "\nroot cum male"
+partner_cum_f: "\nPLACEHOLDER non-terminating partner F cum"
+partner_cum_m: "\nPLACEHOLDER non-terminating partner M cum"
+# meetings
 cancel_meeting_option: "Back out"
 cancel_meeting_tooltip: "Backing out of the promise of sex will make them angry."
 cant_dom_due_to_cum_tooltip: "You find it much harder to control the situation in the middle of an orgasm!"
+easy_dom_due_to_cum_tooltip: "You find it much easier to control the situation when your partner is in the middle of an orgasm!"
 # traits
 trait_lida_dom_1: "Assertive"
 trait_lida_dom_1_desc: "This character prefers to #dom dominate others#! socially and physically."

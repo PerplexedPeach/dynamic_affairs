@@ -147,6 +147,9 @@ AFFAIRS_PARTNER = "scope:affairs_partner"
 
 ROOT_STAMINA = "scope:root_stamina"
 PARTNER_STAMINA = "scope:partner_stamina"
+# depending on the type of event, either the root or partner's stamina decides how events are finished
+FINISHER_STAMINA = "finisher_stamina"
+
 DOM_CHANCE = "dom_chance"
 DOM_SUCCESS = "dom_success"
 THIS_DOM_CHANCE = "this_dom_chance"
@@ -155,9 +158,21 @@ DOM_ATTEMPT_TOOLTIP = "attempt_dom_tooltip"
 DOM_NO_SUB_TOOLTIP = "dom_no_sub_tooltip"
 VOLUNTARY_SUB_TOOLTIP = "voluntary_sub_tooltip"
 DOM_SUCCESS_ADJUSTMENT_TOOLTIP = "dom_success_adjustment_tooltip"
+DOM_CHANCE_SUBDOM_NATURE_TOOLTIP = "dom_chance_subdom_nature_tooltip"
+DOM_CHANCE_SUBDOM_TOOLTIP = "dom_chance_subdom_tooltip"
+DOM_CHANCE_PROWESS_TOOLTIP = "dom_chance_prowess_tooltip"
+DOM_CHANCE_LUST_BEAUTY_TOOLTIP = "dom_chance_lust_beauty_tooltip"
+DOM_CHANCE_TITLE_AUTHORITY_TOOLTIP = "dom_chance_title_authority_tooltip"
+DOM_CHANCE_STUBBORNESS_TOOLTIP = "dom_chance_stubborness_tooltip"
+DOM_CHANCE_STAMINA_TOOLTIP = "dom_chance_stamina_tooltip"
+DOM_CHANCE_ORGASM_TOOLTIP = "dom_chance_orgasm_tooltip"
+DOM_CHANCE_SEX_SKILL_TOOLTIP = "dom_chance_sex_skill_tooltip"
+DOM_CHANCE_BREAKDOWN_TOOLTIP = "dom_chance_breakdown_tooltip"
+
 CANCEL_MEETING_OPTION = "cancel_meeting_option"
 CANCEL_MEETING_TOOLTIP = "cancel_meeting_tooltip"
 CANT_DOM_DUE_TO_CUM_TOOLTIP = "cant_dom_due_to_cum_tooltip"
+EASY_DOM_DUE_TO_CUM_TOOLTIP = "easy_dom_due_to_cum_tooltip"
 
 # effects
 TRIGGER_EVENT = "trigger_event"
@@ -179,9 +194,9 @@ NOT = "NOT"
 OR = "OR"
 AND = "AND"
 IS_FEMALE = "is_female"
-CHECK_IF_ROOT_CUM_EFFECT = "check_if_root_cum_effect"
-CLEAR_ROOT_CUM_EFFCT = "clear_root_cum_effect"
+RESET_STAMINA_AFTER_CUM_EFFECT = "reset_stamina_after_cum_effect"
 ROOT_CUM = "root_cum"
+PARTNER_CUM = "partner_cum"
 OVERRIDE_BACKGROUND = "override_background"
 EVENT_BACKGROUND = "event_background"
 LOCALE = "locale"
@@ -360,6 +375,11 @@ class Event(BlockRoot):
                  partner_removes_clothes=False,
                  # text for if the root cums; None indicates the default root cum text will be used
                  root_cum_text=None,
+                 # similarly for partner
+                 partner_cum_text=None,
+                 # overrides the standard gender pairing rules for deciding whose stamina ends the scene
+                 # None means no override, True means root's stamina will be used while False means the partner
+                 force_root_stamina_finishes=None,
                  # custom generation functions, these take the event as teh first argument and call add_line
                  custom_desc: typing.Optional[typing.Callable] = None,
                  # chance for this event to rank up dom/sub (always opposite, but in a separate roll for the partner)
@@ -377,9 +397,15 @@ class Event(BlockRoot):
         self.root_become_more_sub_chance = root_become_more_sub_chance
         self.root_become_more_dom_chance = root_become_more_dom_chance
 
+        # TODO make these Desc
         self.root_cum_text = root_cum_text
         if self.root_cum_text is not None:
             self.root_cum_text = clean_str(self.root_cum_text) + "\\n"
+        self.partner_cum_text = partner_cum_text
+        if self.partner_cum_text is not None:
+            self.partner_cum_text = clean_str(self.partner_cum_text) + "\\n"
+
+        self.force_root_stamina_finishes = force_root_stamina_finishes
 
         namespace = event_type_namespace(self.id)
         eid = self.id.value
@@ -429,7 +455,24 @@ class Event(BlockRoot):
 
             self.generate_options()
 
+            with Block(self, AFTER):
+                self.generate_after()
+
         return "\n".join(self._lines)
+
+    def root_stamina_decides_finish(self):
+        """Whether sex scene ends when root character's stamina reaches 0, or if it's dependent on the partner"""
+        if self.force_root_stamina_finishes is not None:
+            return self.force_root_stamina_finishes
+        elif self.root_gender == FEMALE and self.partner_gender == MALE:
+            return False
+        elif self.root_gender == MALE and self.partner_gender == FEMALE:
+            return True
+        elif self.root_gender == FEMALE and self.partner_gender == FEMALE:
+            return False
+        elif self.root_gender == MALE and self.partner_gender == MALE:
+            return False
+        raise RuntimeError(f"Unexpected gender pairing root: {self.root_gender} and partner: {self.partner_gender}")
 
     def generate_root_outfit(self):
         with Block(self, TRIGGERED_OUTFIT):
@@ -462,6 +505,13 @@ class Event(BlockRoot):
                     self.assign(CHANCE, chance)
                     self.assign(partner_change, YES)
 
+    def _generate_finisher_stamina_effect(self):
+        # should be called near the top of effects, right after changing root and partner stamina
+        if self.root_stamina_decides_finish():
+            self.save_scope_value_as(FINISHER_STAMINA, ROOT_STAMINA)
+        else:
+            self.save_scope_value_as(FINISHER_STAMINA, PARTNER_STAMINA)
+
     def generate_immediate_effect(self):
         self._generate_change_subdom_trait(self.root_become_more_sub_chance, BECOME_MORE_SUB_EFFECT,
                                            BECOME_MORE_DOM_EFFECT)
@@ -479,6 +529,9 @@ class Event(BlockRoot):
     def generate_options(self):
         pass
 
+    def generate_after(self):
+        self.assign(RESET_STAMINA_AFTER_CUM_EFFECT, YES)
+
     def generate_hidden_opinion_change_effect(self, change):
         with Block(self, CHANGE_SUBDOM_EFFECT):
             self.assign(CHANGE, change)
@@ -495,9 +548,9 @@ class Event(BlockRoot):
                         with Block(self, TRIGGER):
                             # depending on this transition leads to cumming or not
                             if isinstance(option.next_id, EventsCum):
-                                self.add_line(f"{PARTNER_STAMINA} <= 0")
+                                self.add_line(f"{SCOPE}:{FINISHER_STAMINA} <= 0")
                             else:
-                                self.add_line(f"{PARTNER_STAMINA} > 0")
+                                self.add_line(f"{SCOPE}:{FINISHER_STAMINA} > 0")
                             # choose without replacement to avoid duplicating the prev choices
                             for prev_choice in range(choice):
                                 with Block(self, NOT):
@@ -515,6 +568,8 @@ class Event(BlockRoot):
         lines = [f"{self.fullname}.t: \"{self.title}\"", self.desc.generate_localization(self)]
         if self.root_cum_text is not None:
             lines.append(f"{self.fullname}.{ROOT_CUM}: \"{self.root_cum_text}\"")
+        if self.partner_cum_text is not None:
+            lines.append(f"{self.fullname}.{PARTNER_CUM}: \"{self.partner_cum_text}\"")
         if self.custom_localization is not None:
             lines.append(self.custom_localization)
         return "\n".join(lines)
@@ -534,12 +589,23 @@ class Event(BlockRoot):
         prefix = self.root_gender
         with Block(self, TRIGGERED_DESC):
             with Block(self, TRIGGER):
-                self.assign(f"{SCOPE}:{ROOT_CUM}", YES)
+                self.add_line(f"{ROOT_STAMINA} <= 0")
                 # depending on if we have a special root cum text or if we need to default
             if self.root_cum_text is not None:
                 self.assign(DESC, f"{self.fullname}.{ROOT_CUM}")
             else:
                 self.assign(DESC, f"{ROOT_CUM}_{prefix}")
+
+    def generate_partner_cum_desc(self):
+        prefix = self.partner_gender
+        with Block(self, TRIGGERED_DESC):
+            with Block(self, TRIGGER):
+                self.add_line(f"{PARTNER_STAMINA} <= 0")
+                # depending on if we have a special root cum text or if we need to default
+            if self.partner_cum_text is not None:
+                self.assign(DESC, f"{self.fullname}.{PARTNER_CUM}")
+            else:
+                self.assign(DESC, f"{PARTNER_CUM}_{prefix}")
 
     def generate_incoming_options_desc(self):
         # description of the transition from the previous event
@@ -743,7 +809,7 @@ class Cum(Event):
         super(Cum, self).generate_desc()
 
     def generate_immediate_effect(self):
-        self.add_line(f"{CHECK_IF_ROOT_CUM_EFFECT} = {YES}")
+        self._generate_finisher_stamina_effect()
         # register that we have had sex to compute consequences
         if self.subdom_change != 0:
             self.generate_hidden_opinion_change_effect(self.subdom_change)
@@ -782,6 +848,7 @@ class First(Event):
         self.options = options
 
     def generate_immediate_effect(self):
+        self._generate_finisher_stamina_effect()
         # save to use for all future events
         self.save_scope_value_as(LOCALE, f"flag:{self.background}")
         # sample which option to use
@@ -830,10 +897,15 @@ class Sex(Event):
         first_prefix = self.root_gender
         second_prefix = f"p{self.partner_gender}"
 
+        # only need to generate cum text for the non-terminating character
+        root_terminating = self.root_stamina_decides_finish()
         for prefix, value_to_check in [(first_prefix, ROOT_STAMINA), (second_prefix, PARTNER_STAMINA)]:
             with Block(self, FIRST_VALID):
+                # for each event, allow for special description on root cum; if none specified, default one will be used
+                if root_terminating and value_to_check == PARTNER_STAMINA:
+                    self.generate_partner_cum_desc()
                 # if you cum, then no need to indicate your sexual stamina, instead fill it with the root cum text
-                if value_to_check == ROOT_STAMINA:
+                elif not root_terminating and value_to_check == ROOT_STAMINA:
                     self.generate_root_cum_desc()
                 for threshold, suffix in stamina_thresholds.items():
                     with Block(self, TRIGGERED_DESC):
@@ -850,8 +922,8 @@ class Sex(Event):
             self.assign(STAMINA_COST_1, self.stam_cost_1)
             self.assign(STAMINA_COST_2, self.stam_cost_2)
 
-        # for each event, allow for special description on root cum; if none specified, default one will be used
-        self.assign(CHECK_IF_ROOT_CUM_EFFECT, YES)
+        self._generate_finisher_stamina_effect()
+
         # separate into categories; within each category the outcome of which option gets selected is random
         categories_to_options = {c: [] for c in OptionCategory}
         for option in self.options:
@@ -874,13 +946,12 @@ class Sex(Event):
 
         super(Sex, self).generate_immediate_effect()
 
-        self.add_debug_line(f"{DEBUG_LOG_SCOPES} = {YES}")
-
     def generate_options(self):
         categories_to_options = {c: [] for c in OptionCategory}
         for option in self.options:
             categories_to_options[option.category].append(option)
 
+        root_cum_terminates = self.root_stamina_decides_finish()
         for option in self.options:
             with Block(self, OPTION):
                 self.add_debug_comment(str(option))
@@ -891,9 +962,9 @@ class Sex(Event):
                 # for some reason show_as_unavailable is not a subset of trigger, so have to duplicate it
                 with Block(self, TRIGGER):
                     if option.category in [OptionCategory.DOM, OptionCategory.SUB]:
-                        # non-cum options are only available if partner is not cumming
+                        # non-cum options are only available if finisher is not cumming
                         if not isinstance(option.next_id, EventsCum):
-                            self.add_line(f"{PARTNER_STAMINA} > 0")
+                            self.add_line(f"{SCOPE}:{FINISHER_STAMINA} > 0")
                         trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
                         with Block(self, OR):
                             for choice in range(max_options_per_type):
@@ -904,12 +975,20 @@ class Sex(Event):
                 # for dom options, it could backfire and get you more dommed
                 if option.category == OptionCategory.DOM:
                     self.generate_dom_option_effect(option, categories_to_options[OptionCategory.SUB])
-                    # cumming decreases dom success
-                    with Block(self, IF):
-                        with Block(self, LIMIT):
-                            self.assign(f"{SCOPE}:{ROOT_CUM}", YES)
-                        self.assign(CUSTOM_TOOLTIP, CANT_DOM_DUE_TO_CUM_TOOLTIP)
-                        self.assign(ADD_INTERNAL_FLAG, DANGEROUS)
+                    if root_cum_terminates:
+                        # partner cumming makes dom easier
+                        with Block(self, IF):
+                            with Block(self, LIMIT):
+                                self.add_line(f"{PARTNER_STAMINA} <= 0")
+                            self.assign(CUSTOM_TOOLTIP, EASY_DOM_DUE_TO_CUM_TOOLTIP)
+                            self.assign(ADD_INTERNAL_FLAG, SPECIAL)
+                    else:
+                        # cumming decreases dom success
+                        with Block(self, IF):
+                            with Block(self, LIMIT):
+                                self.add_line(f"{ROOT_STAMINA} <= 0")
+                            self.assign(CUSTOM_TOOLTIP, CANT_DOM_DUE_TO_CUM_TOOLTIP)
+                            self.assign(ADD_INTERNAL_FLAG, DANGEROUS)
                 elif option.category == OptionCategory.SUB:
                     self.generate_sub_option_effect(option)
                 else:
@@ -926,6 +1005,18 @@ class Sex(Event):
             self.assign(CUSTOM_TOOLTIP, DOM_NO_SUB_TOOLTIP)
         else:
             self.assign(CUSTOM_TOOLTIP, DOM_ATTEMPT_TOOLTIP)
+            # breakdown of all that contributes to the percentage
+            self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_BREAKDOWN_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_SUBDOM_NATURE_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_SUBDOM_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_PROWESS_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_LUST_BEAUTY_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_TITLE_AUTHORITY_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_STUBBORNESS_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_STAMINA_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_ORGASM_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_SEX_SKILL_TOOLTIP)
+
             if option.dom_success_adjustment != 0:
                 self.save_scope_value_as(DOM_SUCCESS_ADJUSTMENT, option.dom_success_adjustment)
                 self.assign(CUSTOM_TOOLTIP, DOM_SUCCESS_ADJUSTMENT_TOOLTIP)

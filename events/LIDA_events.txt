@@ -537,7 +537,6 @@ LIDA.110 = {
 		}
 		store_subdom_value_effect = yes
 		lida_start_sex_effect = {TRIGGER_RANDOM_EVENT = no}
-		check_if_root_cum_effect = yes
 		calculate_dom_success_effect = yes
 	}
 	# create acceptance option for prostitutes (different ones for each tier, with just the flavor being different)

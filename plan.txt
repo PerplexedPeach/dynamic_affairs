@@ -252,9 +252,34 @@ questions
 
 TODO
 - connect Carnalitas fetish system
+- royal court event
+- more hooks into sex scenes
+	- after duel win/loss
+	- during feast drinking
+	- player actively sneaking into rooms
+
+- scene with someone peddling piercings that increase sensitivity
+	- dom not receiving satisfying orgasms from slave
+	- leads to domaination loss since even the flakiest slave will have mastery over your sex
+- sex event edging can use force_root_stamina_finishes=True to not terminate events even if partner's stamina <= 0
 
 TODO long term
 - add sex skills
 	- blowjob proficiency trait (up to 3 stars)
 	- tie into partner stamina cost (can make them scripted values)
 - triggered submission events when your subdom relation with someone is sub enough
+
+TODO trait icons for Mange2020
+Arms traits
+Soft/Muscular/Bulky/Hulking/Wiry/Skeletal/Doughy/Flabby
+Butt Traits
+Pin Buttocks/Flat Bottomed/Pancake Butt/Slender Hipped/Middling Rear/Curvy/Bubbly Butt/Brawn Buttocks/Broad Bottomed/Callypygian/Quatch Buttocks/Maximus Gluteus/Colossal Bottomed 
+I guess I made a lot of those lol
+Height Traits
+Diminutive/Miniature/Pint Sized/Little/Short/Average Height/Tall/Towering/Altitudinous/Huge/Gigantic
+Stomach Traits
+Average Weight/Toned/Chiseled/Svelte/Skinny/Malnourished/Sunken/Chubby/Fat/Obese/Morbidly Obese
+Breast Traits
+A Bosom (its the average one)/Titanic Tits/Monsterous Tits
+Dick Traits
+A Dick/Monster Cock/Impractical Dick
