@@ -231,7 +231,7 @@ LIDAc.1 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
@@ -244,7 +244,10 @@ LIDAc.1 = {
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = 1
 		}
@@ -270,6 +273,9 @@ LIDAc.1 = {
 	}
 	option = {
 		name = LIDAoption.77
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.5 = {
@@ -622,7 +628,7 @@ LIDAc.5 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
@@ -672,7 +678,10 @@ scope:subdom < 10
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
 			CHARACTER_2 = scope:affairs_partner
@@ -685,6 +694,9 @@ scope:subdom < 10
 	}
 	option = {
 		name = LIDAoption.78
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.3 = {
@@ -964,7 +976,7 @@ LIDAc.3 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
@@ -983,7 +995,10 @@ LIDAc.3 = {
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = -2
 		}
@@ -1009,6 +1024,9 @@ LIDAc.3 = {
 	}
 	option = {
 		name = LIDAoption.79
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.2 = {
@@ -1205,14 +1223,17 @@ LIDAc.2 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
 		desc = LIDAc.2.desc.0
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = -1
 		}
@@ -1238,6 +1259,9 @@ LIDAc.2 = {
 	}
 	option = {
 		name = LIDAoption.80
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.6 = {
@@ -1453,14 +1477,17 @@ LIDAc.6 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
 		desc = LIDAc.6.desc.0
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = -2
 		}
@@ -1486,6 +1513,9 @@ LIDAc.6 = {
 	}
 	option = {
 		name = LIDAoption.81
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.4 = {
@@ -1728,14 +1758,17 @@ LIDAc.4 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
 		desc = LIDAc.4.desc.0
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = 2
 		}
@@ -1767,6 +1800,9 @@ LIDAc.4 = {
 	}
 	option = {
 		name = LIDAoption.82
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.7 = {
@@ -2156,7 +2192,7 @@ LIDAc.7 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
@@ -2193,7 +2229,10 @@ scope:subdom < 10
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = -1
 		}
@@ -2219,6 +2258,9 @@ scope:subdom < 10
 	}
 	option = {
 		name = LIDAoption.83
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.12 = {
@@ -2571,7 +2613,7 @@ LIDAc.12 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
@@ -2590,7 +2632,10 @@ LIDAc.12 = {
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = -1
 		}
@@ -2616,6 +2661,9 @@ LIDAc.12 = {
 	}
 	option = {
 		name = LIDAoption.84
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.8 = {
@@ -2922,7 +2970,7 @@ LIDAc.8 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
@@ -2961,7 +3009,10 @@ scope:subdom < 10
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = -3
 		}
@@ -2987,6 +3038,9 @@ scope:subdom < 10
 	}
 	option = {
 		name = LIDAoption.85
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.9 = {
@@ -3247,7 +3301,7 @@ LIDAc.9 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
@@ -3280,7 +3334,10 @@ scope:subdom < 10
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = 3
 		}
@@ -3306,6 +3363,9 @@ scope:subdom < 10
 	}
 	option = {
 		name = LIDAoption.86
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.10 = {
@@ -3539,7 +3599,7 @@ LIDAc.10 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
@@ -3642,7 +3702,10 @@ has_trait = lida_sub
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = -3
 		}
@@ -3668,6 +3731,9 @@ has_trait = lida_sub
 	}
 	option = {
 		name = LIDAoption.87
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.11 = {
@@ -3864,7 +3930,7 @@ LIDAc.11 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_f
 		}
@@ -3896,7 +3962,10 @@ LIDAc.11 = {
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = 1
 		}
@@ -3922,5 +3991,8 @@ LIDAc.11 = {
 	}
 	option = {
 		name = LIDAoption.88
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }

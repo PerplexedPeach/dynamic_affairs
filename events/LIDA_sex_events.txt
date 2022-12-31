@@ -147,7 +147,7 @@ LIDAs.1 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -199,14 +199,17 @@ LIDAs.1 = {
 			STAMINA_COST_1 = 0
 			STAMINA_COST_2 = 1
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# HANDJOB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -229,7 +232,7 @@ LIDAs.1 = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -262,13 +265,12 @@ LIDAs.1 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 1: EventsSex.HANDJOB_TEASE -> EventsSex.HANDJOB
 		name = LIDAoption.1
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 1
 				scope:dom_transition_1 = 1
@@ -316,7 +318,7 @@ LIDAs.1 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -326,7 +328,7 @@ LIDAs.1 = {
 		# 2: EventsSex.HANDJOB_TEASE -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.2
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 2
 				scope:sub_transition_1 = 2
@@ -345,6 +347,9 @@ LIDAs.1 = {
 			value = 2
 		}
 		trigger_event = LIDAs.4
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.3 = {
@@ -708,7 +713,7 @@ LIDAs.3 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -760,14 +765,17 @@ LIDAs.3 = {
 			STAMINA_COST_1 = -0.5
 			STAMINA_COST_2 = 1
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# HANDJOB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -777,7 +785,7 @@ LIDAs.3 = {
 			# RUINED_ORGASM
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -787,7 +795,7 @@ LIDAs.3 = {
 			# HANDJOB_CUM_IN_HAND
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -799,7 +807,7 @@ LIDAs.3 = {
 			# HANDJOB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 3
 					}
@@ -812,7 +820,7 @@ LIDAs.3 = {
 			# RUINED_ORGASM
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 5
 					}
@@ -825,7 +833,7 @@ LIDAs.3 = {
 			# HANDJOB_CUM_IN_HAND
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 6
 					}
@@ -851,7 +859,7 @@ LIDAs.3 = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -861,7 +869,7 @@ LIDAs.3 = {
 			# BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -873,7 +881,7 @@ LIDAs.3 = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 4
 					}
@@ -886,7 +894,7 @@ LIDAs.3 = {
 			# BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 7
 					}
@@ -922,13 +930,12 @@ LIDAs.3 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 3: EventsSex.HANDJOB -> EventsSex.HANDJOB
 		name = LIDAoption.3
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 3
 				scope:dom_transition_1 = 3
@@ -982,7 +989,7 @@ LIDAs.3 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -992,7 +999,7 @@ LIDAs.3 = {
 		# 4: EventsSex.HANDJOB -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.4
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 4
 				scope:sub_transition_1 = 4
@@ -1069,7 +1076,7 @@ LIDAs.3 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -1132,7 +1139,7 @@ LIDAs.3 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -1160,6 +1167,9 @@ LIDAs.3 = {
 			value = 7
 		}
 		trigger_event = LIDAc.3
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.4 = {
@@ -1624,7 +1634,7 @@ LIDAs.4 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -1676,14 +1686,17 @@ LIDAs.4 = {
 			STAMINA_COST_1 = 0.5
 			STAMINA_COST_2 = 2
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# HANDJOB
 			5 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -1693,7 +1706,7 @@ LIDAs.4 = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -1703,7 +1716,7 @@ LIDAs.4 = {
 			# RUINED_ORGASM
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -1715,7 +1728,7 @@ LIDAs.4 = {
 			# HANDJOB
 			5 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 8
 					}
@@ -1728,7 +1741,7 @@ LIDAs.4 = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 9
 					}
@@ -1741,7 +1754,7 @@ LIDAs.4 = {
 			# RUINED_ORGASM
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 11
 					}
@@ -1767,7 +1780,7 @@ LIDAs.4 = {
 			# BLOWJOB_SUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -1777,7 +1790,7 @@ LIDAs.4 = {
 			# BLOWJOB_CUM_IN_MOUTH_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -1787,7 +1800,7 @@ LIDAs.4 = {
 			# BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -1799,7 +1812,7 @@ LIDAs.4 = {
 			# BLOWJOB_SUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 10
 					}
@@ -1812,7 +1825,7 @@ LIDAs.4 = {
 			# BLOWJOB_CUM_IN_MOUTH_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 12
 					}
@@ -1825,7 +1838,7 @@ LIDAs.4 = {
 			# BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 13
 					}
@@ -1851,13 +1864,12 @@ LIDAs.4 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 8: EventsSex.BLOWJOB_DOM -> EventsSex.HANDJOB
 		name = LIDAoption.8
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 8
 				scope:dom_transition_1 = 8
@@ -1917,7 +1929,7 @@ LIDAs.4 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -1927,7 +1939,7 @@ LIDAs.4 = {
 		# 9: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.9
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 9
 				scope:dom_transition_1 = 9
@@ -1987,7 +1999,7 @@ LIDAs.4 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -1997,7 +2009,7 @@ LIDAs.4 = {
 		# 10: EventsSex.BLOWJOB_DOM -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.10
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 10
 				scope:sub_transition_1 = 10
@@ -2080,7 +2092,7 @@ LIDAs.4 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -2131,6 +2143,9 @@ LIDAs.4 = {
 			value = 13
 		}
 		trigger_event = LIDAc.3
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.6 = {
@@ -2439,7 +2454,7 @@ LIDAs.6 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -2491,14 +2506,17 @@ LIDAs.6 = {
 			STAMINA_COST_1 = 1.0
 			STAMINA_COST_2 = 1.5
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -2508,7 +2526,7 @@ LIDAs.6 = {
 			# HANDJOB_CUM_IN_HAND
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -2520,7 +2538,7 @@ LIDAs.6 = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 14
 					}
@@ -2533,7 +2551,7 @@ LIDAs.6 = {
 			# HANDJOB_CUM_IN_HAND
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 17
 					}
@@ -2559,7 +2577,7 @@ LIDAs.6 = {
 			# BLOWJOB_SUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -2569,7 +2587,7 @@ LIDAs.6 = {
 			# DEEPTHROAT
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -2579,7 +2597,7 @@ LIDAs.6 = {
 			# BLOWJOB_CUM_IN_MOUTH_SUB
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -2589,7 +2607,7 @@ LIDAs.6 = {
 			# BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -2601,7 +2619,7 @@ LIDAs.6 = {
 			# BLOWJOB_SUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 15
 					}
@@ -2614,7 +2632,7 @@ LIDAs.6 = {
 			# DEEPTHROAT
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 16
 					}
@@ -2627,7 +2645,7 @@ LIDAs.6 = {
 			# BLOWJOB_CUM_IN_MOUTH_SUB
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 18
 					}
@@ -2640,7 +2658,7 @@ LIDAs.6 = {
 			# BLOWJOB_CUM_ON_FACE
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 19
 					}
@@ -2676,13 +2694,12 @@ LIDAs.6 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 14: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.14
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 14
 				scope:dom_transition_1 = 14
@@ -2748,7 +2765,7 @@ LIDAs.6 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -2758,7 +2775,7 @@ LIDAs.6 = {
 		# 15: EventsSex.BLOWJOB_SUB -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.15
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 15
 				scope:sub_transition_1 = 15
@@ -2782,7 +2799,7 @@ LIDAs.6 = {
 		# 16: EventsSex.BLOWJOB_SUB -> EventsSex.DEEPTHROAT
 		name = LIDAoption.16
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 16
 				scope:sub_transition_1 = 16
@@ -2871,7 +2888,7 @@ LIDAs.6 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -2922,6 +2939,9 @@ LIDAs.6 = {
 			value = 19
 		}
 		trigger_event = LIDAc.3
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.7 = {
@@ -3138,7 +3158,7 @@ LIDAs.7 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -3202,14 +3222,17 @@ LIDAs.7 = {
 			STAMINA_COST_1 = 1.0
 			STAMINA_COST_2 = 2.0
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# BLOWJOB_SUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -3232,7 +3255,7 @@ LIDAs.7 = {
 			# DEEPTHROAT
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -3242,7 +3265,7 @@ LIDAs.7 = {
 			# BLOWJOB_CUM_IN_MOUTH_SUB
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -3254,7 +3277,7 @@ LIDAs.7 = {
 			# DEEPTHROAT
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 21
 					}
@@ -3267,7 +3290,7 @@ LIDAs.7 = {
 			# BLOWJOB_CUM_IN_MOUTH_SUB
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 22
 					}
@@ -3303,13 +3326,12 @@ LIDAs.7 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 20: EventsSex.DEEPTHROAT -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.20
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 20
 				scope:dom_transition_1 = 20
@@ -3363,7 +3385,7 @@ LIDAs.7 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -3373,7 +3395,7 @@ LIDAs.7 = {
 		# 21: EventsSex.DEEPTHROAT -> EventsSex.DEEPTHROAT
 		name = LIDAoption.21
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 21
 				scope:sub_transition_1 = 21
@@ -3415,6 +3437,9 @@ LIDAs.7 = {
 			value = 22
 		}
 		trigger_event = LIDAc.6
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.2 = {
@@ -3564,7 +3589,7 @@ LIDAs.2 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -3616,14 +3641,17 @@ LIDAs.2 = {
 			STAMINA_COST_1 = 0.5
 			STAMINA_COST_2 = 0.75
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# ASS_RUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -3633,7 +3661,7 @@ LIDAs.2 = {
 			# HANDJOB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -3643,7 +3671,7 @@ LIDAs.2 = {
 			# ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -3655,7 +3683,7 @@ LIDAs.2 = {
 			# ASS_RUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 23
 					}
@@ -3668,7 +3696,7 @@ LIDAs.2 = {
 			# HANDJOB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 24
 					}
@@ -3681,7 +3709,7 @@ LIDAs.2 = {
 			# ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 26
 					}
@@ -3707,7 +3735,7 @@ LIDAs.2 = {
 			# HOTDOG
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -3717,7 +3745,7 @@ LIDAs.2 = {
 			# CUM_ON_GROIN
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -3729,7 +3757,7 @@ LIDAs.2 = {
 			# HOTDOG
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 25
 					}
@@ -3742,7 +3770,7 @@ LIDAs.2 = {
 			# CUM_ON_GROIN
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 27
 					}
@@ -3782,13 +3810,12 @@ LIDAs.2 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 23: EventsSex.ASS_TEASE -> EventsSex.ASS_RUB
 		name = LIDAoption.23
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 23
 				scope:dom_transition_1 = 23
@@ -3842,7 +3869,7 @@ LIDAs.2 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -3852,7 +3879,7 @@ LIDAs.2 = {
 		# 24: EventsSex.ASS_TEASE -> EventsSex.HANDJOB
 		name = LIDAoption.24
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 24
 				scope:dom_transition_1 = 24
@@ -3906,7 +3933,7 @@ LIDAs.2 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -3916,7 +3943,7 @@ LIDAs.2 = {
 		# 25: EventsSex.ASS_TEASE -> EventsSex.HOTDOG
 		name = LIDAoption.25
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 25
 				scope:sub_transition_1 = 25
@@ -3993,7 +4020,7 @@ LIDAs.2 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -4021,6 +4048,9 @@ LIDAs.2 = {
 			value = 27
 		}
 		trigger_event = LIDAc.12
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.10 = {
@@ -4328,7 +4358,7 @@ LIDAs.10 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -4380,14 +4410,17 @@ LIDAs.10 = {
 			STAMINA_COST_1 = 0.5
 			STAMINA_COST_2 = 0.75
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# ASS_RUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -4397,7 +4430,7 @@ LIDAs.10 = {
 			# HANDJOB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -4407,7 +4440,7 @@ LIDAs.10 = {
 			# ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -4419,7 +4452,7 @@ LIDAs.10 = {
 			# ASS_RUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 28
 					}
@@ -4432,7 +4465,7 @@ LIDAs.10 = {
 			# HANDJOB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 29
 					}
@@ -4445,7 +4478,7 @@ LIDAs.10 = {
 			# ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 31
 					}
@@ -4471,7 +4504,7 @@ LIDAs.10 = {
 			# HOTDOG
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -4481,7 +4514,7 @@ LIDAs.10 = {
 			# CUM_ON_GROIN
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -4493,7 +4526,7 @@ LIDAs.10 = {
 			# HOTDOG
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 30
 					}
@@ -4506,7 +4539,7 @@ LIDAs.10 = {
 			# CUM_ON_GROIN
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 32
 					}
@@ -4546,13 +4579,12 @@ LIDAs.10 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 28: EventsSex.ASS_RUB -> EventsSex.ASS_RUB
 		name = LIDAoption.28
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 28
 				scope:dom_transition_1 = 28
@@ -4606,7 +4638,7 @@ LIDAs.10 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -4616,7 +4648,7 @@ LIDAs.10 = {
 		# 29: EventsSex.ASS_RUB -> EventsSex.HANDJOB
 		name = LIDAoption.29
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 29
 				scope:dom_transition_1 = 29
@@ -4670,7 +4702,7 @@ LIDAs.10 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -4680,7 +4712,7 @@ LIDAs.10 = {
 		# 30: EventsSex.ASS_RUB -> EventsSex.HOTDOG
 		name = LIDAoption.30
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 30
 				scope:sub_transition_1 = 30
@@ -4757,7 +4789,7 @@ LIDAs.10 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -4785,6 +4817,9 @@ LIDAs.10 = {
 			value = 32
 		}
 		trigger_event = LIDAc.12
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.8 = {
@@ -5193,7 +5228,7 @@ LIDAs.8 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -5245,14 +5280,17 @@ LIDAs.8 = {
 			STAMINA_COST_1 = 0.5
 			STAMINA_COST_2 = 0.75
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# ASS_RUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -5262,7 +5300,7 @@ LIDAs.8 = {
 			# HOTDOG
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -5272,7 +5310,7 @@ LIDAs.8 = {
 			# REVERSE_COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -5282,7 +5320,7 @@ LIDAs.8 = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -5292,7 +5330,7 @@ LIDAs.8 = {
 			# ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -5304,7 +5342,7 @@ LIDAs.8 = {
 			# ASS_RUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 33
 					}
@@ -5317,7 +5355,7 @@ LIDAs.8 = {
 			# HOTDOG
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 34
 					}
@@ -5330,7 +5368,7 @@ LIDAs.8 = {
 			# REVERSE_COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 35
 					}
@@ -5343,7 +5381,7 @@ LIDAs.8 = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 36
 					}
@@ -5356,7 +5394,7 @@ LIDAs.8 = {
 			# ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 39
 					}
@@ -5382,7 +5420,7 @@ LIDAs.8 = {
 			# STANDING_FINGERED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -5392,7 +5430,7 @@ LIDAs.8 = {
 			# STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -5402,7 +5440,7 @@ LIDAs.8 = {
 			# CUM_ON_GROIN
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -5414,7 +5452,7 @@ LIDAs.8 = {
 			# STANDING_FINGERED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 37
 					}
@@ -5427,7 +5465,7 @@ LIDAs.8 = {
 			# STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 38
 					}
@@ -5440,7 +5478,7 @@ LIDAs.8 = {
 			# CUM_ON_GROIN
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 40
 					}
@@ -5470,13 +5508,12 @@ LIDAs.8 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 33: EventsSex.HOTDOG -> EventsSex.ASS_RUB
 		name = LIDAoption.33
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 33
 				scope:dom_transition_1 = 33
@@ -5536,7 +5573,7 @@ LIDAs.8 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -5546,7 +5583,7 @@ LIDAs.8 = {
 		# 34: EventsSex.HOTDOG -> EventsSex.HOTDOG
 		name = LIDAoption.34
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 34
 				scope:dom_transition_1 = 34
@@ -5611,7 +5648,7 @@ LIDAs.8 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -5621,7 +5658,7 @@ LIDAs.8 = {
 		# 35: EventsSex.HOTDOG -> EventsSex.REVERSE_COWGIRL
 		name = LIDAoption.35
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 35
 				scope:dom_transition_1 = 35
@@ -5686,7 +5723,7 @@ LIDAs.8 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -5696,7 +5733,7 @@ LIDAs.8 = {
 		# 36: EventsSex.HOTDOG -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.36
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 36
 				scope:dom_transition_1 = 36
@@ -5761,7 +5798,7 @@ LIDAs.8 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -5771,7 +5808,7 @@ LIDAs.8 = {
 		# 37: EventsSex.HOTDOG -> EventsSex.STANDING_FINGERED_FROM_BEHIND
 		name = LIDAoption.37
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 37
 				scope:sub_transition_1 = 37
@@ -5795,7 +5832,7 @@ LIDAs.8 = {
 		# 38: EventsSex.HOTDOG -> EventsSex.STANDING_FUCKED_FROM_BEHIND
 		name = LIDAoption.38
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 38
 				scope:sub_transition_1 = 38
@@ -5878,7 +5915,7 @@ LIDAs.8 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -5906,6 +5943,9 @@ LIDAs.8 = {
 			value = 40
 		}
 		trigger_event = LIDAc.12
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.9 = {
@@ -6167,7 +6207,7 @@ LIDAs.9 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -6219,14 +6259,17 @@ LIDAs.9 = {
 			STAMINA_COST_1 = 1
 			STAMINA_COST_2 = -0.5
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# HOTDOG
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -6236,7 +6279,7 @@ LIDAs.9 = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -6246,7 +6289,7 @@ LIDAs.9 = {
 			# ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -6258,7 +6301,7 @@ LIDAs.9 = {
 			# HOTDOG
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 41
 					}
@@ -6271,7 +6314,7 @@ LIDAs.9 = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 42
 					}
@@ -6284,7 +6327,7 @@ LIDAs.9 = {
 			# ASS_TEASE_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 45
 					}
@@ -6310,7 +6353,7 @@ LIDAs.9 = {
 			# STANDING_FINGERED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -6320,7 +6363,7 @@ LIDAs.9 = {
 			# STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -6330,7 +6373,7 @@ LIDAs.9 = {
 			# CUM_ON_GROIN
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -6342,7 +6385,7 @@ LIDAs.9 = {
 			# STANDING_FINGERED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 43
 					}
@@ -6355,7 +6398,7 @@ LIDAs.9 = {
 			# STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 44
 					}
@@ -6368,7 +6411,7 @@ LIDAs.9 = {
 			# CUM_ON_GROIN
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 46
 					}
@@ -6404,13 +6447,12 @@ LIDAs.9 = {
 			name = root_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 41: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.HOTDOG
 		name = LIDAoption.41
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 41
 				scope:dom_transition_1 = 41
@@ -6470,7 +6512,7 @@ LIDAs.9 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -6480,7 +6522,7 @@ LIDAs.9 = {
 		# 42: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.42
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 42
 				scope:dom_transition_1 = 42
@@ -6545,7 +6587,7 @@ LIDAs.9 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -6555,7 +6597,7 @@ LIDAs.9 = {
 		# 43: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.STANDING_FINGERED_FROM_BEHIND
 		name = LIDAoption.43
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 43
 				scope:sub_transition_1 = 43
@@ -6579,7 +6621,7 @@ LIDAs.9 = {
 		# 44: EventsSex.STANDING_FINGERED_FROM_BEHIND -> EventsSex.STANDING_FUCKED_FROM_BEHIND
 		name = LIDAoption.44
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 44
 				scope:sub_transition_1 = 44
@@ -6662,7 +6704,7 @@ LIDAs.9 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -6690,6 +6732,9 @@ LIDAs.9 = {
 			value = 46
 		}
 		trigger_event = LIDAc.12
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.5 = {
@@ -7052,7 +7097,7 @@ LIDAs.5 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -7116,14 +7161,17 @@ LIDAs.5 = {
 			STAMINA_COST_1 = 2
 			STAMINA_COST_2 = 1.5
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -7133,7 +7181,7 @@ LIDAs.5 = {
 			# BLOWJOB_SUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -7143,7 +7191,7 @@ LIDAs.5 = {
 			# PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -7155,7 +7203,7 @@ LIDAs.5 = {
 			# BLOWJOB_DOM
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 47
 					}
@@ -7168,7 +7216,7 @@ LIDAs.5 = {
 			# BLOWJOB_SUB
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 48
 					}
@@ -7181,7 +7229,7 @@ LIDAs.5 = {
 			# PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 51
 					}
@@ -7207,7 +7255,7 @@ LIDAs.5 = {
 			# STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -7217,7 +7265,7 @@ LIDAs.5 = {
 			# PRONE_BONE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -7227,7 +7275,7 @@ LIDAs.5 = {
 			# CREAMPIE_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -7239,7 +7287,7 @@ LIDAs.5 = {
 			# STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 49
 					}
@@ -7252,7 +7300,7 @@ LIDAs.5 = {
 			# PRONE_BONE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 50
 					}
@@ -7265,7 +7313,7 @@ LIDAs.5 = {
 			# CREAMPIE_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 52
 					}
@@ -7305,13 +7353,12 @@ LIDAs.5 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 47: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_DOM
 		name = LIDAoption.47
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 47
 				scope:dom_transition_1 = 47
@@ -7371,7 +7418,7 @@ LIDAs.5 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -7381,7 +7428,7 @@ LIDAs.5 = {
 		# 48: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.BLOWJOB_SUB
 		name = LIDAoption.48
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 48
 				scope:dom_transition_1 = 48
@@ -7446,7 +7493,7 @@ LIDAs.5 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -7456,7 +7503,7 @@ LIDAs.5 = {
 		# 49: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.STANDING_FUCKED_FROM_BEHIND
 		name = LIDAoption.49
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 49
 				scope:sub_transition_1 = 49
@@ -7480,7 +7527,7 @@ LIDAs.5 = {
 		# 50: EventsSex.STANDING_FUCKED_FROM_BEHIND -> EventsSex.PRONE_BONE
 		name = LIDAoption.50
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 50
 				scope:sub_transition_1 = 50
@@ -7563,7 +7610,7 @@ LIDAs.5 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -7591,6 +7638,9 @@ LIDAs.5 = {
 			value = 52
 		}
 		trigger_event = LIDAc.8
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.11 = {
@@ -7916,7 +7966,7 @@ LIDAs.11 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -7980,14 +8030,17 @@ LIDAs.11 = {
 			STAMINA_COST_1 = 3
 			STAMINA_COST_2 = 1.5
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# REVERSE_COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -7997,7 +8050,7 @@ LIDAs.11 = {
 			# COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -8007,7 +8060,7 @@ LIDAs.11 = {
 			# PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -8017,7 +8070,7 @@ LIDAs.11 = {
 			# CREAMPIE_ON_TOP
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -8029,7 +8082,7 @@ LIDAs.11 = {
 			# REVERSE_COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 53
 					}
@@ -8042,7 +8095,7 @@ LIDAs.11 = {
 			# COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 54
 					}
@@ -8055,7 +8108,7 @@ LIDAs.11 = {
 			# PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 57
 					}
@@ -8068,7 +8121,7 @@ LIDAs.11 = {
 			# CREAMPIE_ON_TOP
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 58
 					}
@@ -8094,7 +8147,7 @@ LIDAs.11 = {
 			# STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -8104,7 +8157,7 @@ LIDAs.11 = {
 			# PRONE_BONE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -8114,7 +8167,7 @@ LIDAs.11 = {
 			# CREAMPIE_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -8126,7 +8179,7 @@ LIDAs.11 = {
 			# STANDING_FUCKED_FROM_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 55
 					}
@@ -8139,7 +8192,7 @@ LIDAs.11 = {
 			# PRONE_BONE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 56
 					}
@@ -8152,7 +8205,7 @@ LIDAs.11 = {
 			# CREAMPIE_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 59
 					}
@@ -8192,13 +8245,12 @@ LIDAs.11 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 53: EventsSex.REVERSE_COWGIRL -> EventsSex.REVERSE_COWGIRL
 		name = LIDAoption.53
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 53
 				scope:dom_transition_1 = 53
@@ -8258,7 +8310,7 @@ LIDAs.11 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -8268,7 +8320,7 @@ LIDAs.11 = {
 		# 54: EventsSex.REVERSE_COWGIRL -> EventsSex.COWGIRL
 		name = LIDAoption.54
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 54
 				scope:dom_transition_1 = 54
@@ -8328,7 +8380,7 @@ LIDAs.11 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -8338,7 +8390,7 @@ LIDAs.11 = {
 		# 55: EventsSex.REVERSE_COWGIRL -> EventsSex.STANDING_FUCKED_FROM_BEHIND
 		name = LIDAoption.55
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 55
 				scope:sub_transition_1 = 55
@@ -8362,7 +8414,7 @@ LIDAs.11 = {
 		# 56: EventsSex.REVERSE_COWGIRL -> EventsSex.PRONE_BONE
 		name = LIDAoption.56
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 56
 				scope:sub_transition_1 = 56
@@ -8445,7 +8497,7 @@ LIDAs.11 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -8514,7 +8566,7 @@ LIDAs.11 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -8542,6 +8594,9 @@ LIDAs.11 = {
 			value = 59
 		}
 		trigger_event = LIDAc.8
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.12 = {
@@ -8849,7 +8904,7 @@ LIDAs.12 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -8913,14 +8968,17 @@ LIDAs.12 = {
 			STAMINA_COST_1 = 2.0
 			STAMINA_COST_2 = 1
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -8930,7 +8988,7 @@ LIDAs.12 = {
 			# REVERSE_COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -8940,7 +8998,7 @@ LIDAs.12 = {
 			# PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -8950,7 +9008,7 @@ LIDAs.12 = {
 			# CREAMPIE_ON_TOP
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -8962,7 +9020,7 @@ LIDAs.12 = {
 			# COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 60
 					}
@@ -8975,7 +9033,7 @@ LIDAs.12 = {
 			# REVERSE_COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 61
 					}
@@ -8988,7 +9046,7 @@ LIDAs.12 = {
 			# PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 64
 					}
@@ -9001,7 +9059,7 @@ LIDAs.12 = {
 			# CREAMPIE_ON_TOP
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 65
 					}
@@ -9027,7 +9085,7 @@ LIDAs.12 = {
 			# HOTDOG
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -9037,7 +9095,7 @@ LIDAs.12 = {
 			# MISSIONARY
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -9047,7 +9105,7 @@ LIDAs.12 = {
 			# CREAMPIE_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -9059,7 +9117,7 @@ LIDAs.12 = {
 			# HOTDOG
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 62
 					}
@@ -9072,7 +9130,7 @@ LIDAs.12 = {
 			# MISSIONARY
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 63
 					}
@@ -9085,7 +9143,7 @@ LIDAs.12 = {
 			# CREAMPIE_BEHIND
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 66
 					}
@@ -9125,13 +9183,12 @@ LIDAs.12 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 60: EventsSex.COWGIRL -> EventsSex.COWGIRL
 		name = LIDAoption.60
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 60
 				scope:dom_transition_1 = 60
@@ -9191,7 +9248,7 @@ LIDAs.12 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -9201,7 +9258,7 @@ LIDAs.12 = {
 		# 61: EventsSex.COWGIRL -> EventsSex.REVERSE_COWGIRL
 		name = LIDAoption.61
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 61
 				scope:dom_transition_1 = 61
@@ -9261,7 +9318,7 @@ LIDAs.12 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -9271,7 +9328,7 @@ LIDAs.12 = {
 		# 62: EventsSex.COWGIRL -> EventsSex.HOTDOG
 		name = LIDAoption.62
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 62
 				scope:sub_transition_1 = 62
@@ -9295,7 +9352,7 @@ LIDAs.12 = {
 		# 63: EventsSex.COWGIRL -> EventsSex.MISSIONARY
 		name = LIDAoption.63
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 63
 				scope:sub_transition_1 = 63
@@ -9378,7 +9435,7 @@ LIDAs.12 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -9447,7 +9504,7 @@ LIDAs.12 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -9475,6 +9532,9 @@ LIDAs.12 = {
 			value = 66
 		}
 		trigger_event = LIDAc.8
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.13 = {
@@ -9764,7 +9824,7 @@ LIDAs.13 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -9829,14 +9889,17 @@ LIDAs.13 = {
 			STAMINA_COST_1 = 2.0
 			STAMINA_COST_2 = 1.5
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -9846,7 +9909,7 @@ LIDAs.13 = {
 			# PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -9856,7 +9919,7 @@ LIDAs.13 = {
 			# CREAMPIE_KEEP
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -9868,7 +9931,7 @@ LIDAs.13 = {
 			# COWGIRL
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 67
 					}
@@ -9881,7 +9944,7 @@ LIDAs.13 = {
 			# PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 70
 					}
@@ -9894,7 +9957,7 @@ LIDAs.13 = {
 			# CREAMPIE_KEEP
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 71
 					}
@@ -9920,7 +9983,7 @@ LIDAs.13 = {
 			# MISSIONARY
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -9930,7 +9993,7 @@ LIDAs.13 = {
 			# PRONE_BONE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -9940,7 +10003,7 @@ LIDAs.13 = {
 			# CREAMPIE_BRED
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -9952,7 +10015,7 @@ LIDAs.13 = {
 			# MISSIONARY
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 68
 					}
@@ -9965,7 +10028,7 @@ LIDAs.13 = {
 			# PRONE_BONE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 69
 					}
@@ -9978,7 +10041,7 @@ LIDAs.13 = {
 			# CREAMPIE_BRED
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 72
 					}
@@ -10018,13 +10081,12 @@ LIDAs.13 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 67: EventsSex.MISSIONARY -> EventsSex.COWGIRL
 		name = LIDAoption.67
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 67
 				scope:dom_transition_1 = 67
@@ -10084,7 +10146,7 @@ LIDAs.13 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -10094,7 +10156,7 @@ LIDAs.13 = {
 		# 68: EventsSex.MISSIONARY -> EventsSex.MISSIONARY
 		name = LIDAoption.68
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 68
 				scope:sub_transition_1 = 68
@@ -10118,7 +10180,7 @@ LIDAs.13 = {
 		# 69: EventsSex.MISSIONARY -> EventsSex.PRONE_BONE
 		name = LIDAoption.69
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 69
 				scope:sub_transition_1 = 69
@@ -10201,7 +10263,7 @@ LIDAs.13 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -10270,7 +10332,7 @@ LIDAs.13 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -10298,6 +10360,9 @@ LIDAs.13 = {
 			value = 72
 		}
 		trigger_event = LIDAc.10
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAs.14 = {
@@ -10633,7 +10698,7 @@ LIDAs.14 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					scope:root_cum = yes
+					scope:root_stamina <= 0
 				}
 				desc = root_cum_f
 			}
@@ -10698,14 +10763,17 @@ LIDAs.14 = {
 			STAMINA_COST_1 = 3.5
 			STAMINA_COST_2 = 2.5
 		}
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
 		store_subdom_value_effect = yes
 		calculate_dom_success_effect = yes
 		random_list = {
 			# MISSIONARY
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -10715,7 +10783,7 @@ LIDAs.14 = {
 			# PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = dom_transition_0
@@ -10727,7 +10795,7 @@ LIDAs.14 = {
 			# MISSIONARY
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:dom_transition_0 = 73
 					}
@@ -10740,7 +10808,7 @@ LIDAs.14 = {
 			# PULL_OUT_CUM_ON_ASS
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:dom_transition_0 = 75
 					}
@@ -10766,7 +10834,7 @@ LIDAs.14 = {
 			# PRONE_BONE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -10776,7 +10844,7 @@ LIDAs.14 = {
 			# CREAMPIE_BRED
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 				}
 				save_scope_value_as = {
 					name = sub_transition_0
@@ -10788,7 +10856,7 @@ LIDAs.14 = {
 			# PRONE_BONE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:sub_transition_0 = 74
 					}
@@ -10801,7 +10869,7 @@ LIDAs.14 = {
 			# CREAMPIE_BRED
 			10 = {
 				trigger = {
-					scope:partner_stamina <= 0
+					scope:finisher_stamina <= 0
 					NOT = {
 						scope:sub_transition_0 = 76
 					}
@@ -10841,13 +10909,12 @@ LIDAs.14 = {
 			name = partner_naked
 			value = yes
 		}
-		debug_log_scopes = yes
 	}
 	option = {
 		# 73: EventsSex.PRONE_BONE -> EventsSex.MISSIONARY
 		name = LIDAoption.73
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:dom_transition_0 = 73
 				scope:dom_transition_1 = 73
@@ -10901,7 +10968,7 @@ LIDAs.14 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -10911,7 +10978,7 @@ LIDAs.14 = {
 		# 74: EventsSex.PRONE_BONE -> EventsSex.PRONE_BONE
 		name = LIDAoption.74
 		trigger = {
-			scope:partner_stamina > 0
+			scope:finisher_stamina > 0
 			OR = {
 				scope:sub_transition_0 = 74
 				scope:sub_transition_1 = 74
@@ -10988,7 +11055,7 @@ LIDAs.14 = {
 		}
 		if = {
 			limit = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			custom_tooltip = cant_dom_due_to_cum_tooltip
 			add_internal_flag = dangerous
@@ -11016,5 +11083,8 @@ LIDAs.14 = {
 			value = 76
 		}
 		trigger_event = LIDAc.10
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }

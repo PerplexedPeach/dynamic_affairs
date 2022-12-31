@@ -148,6 +148,10 @@ LIDAf.1 = {
 	}
 	immediate = {
 		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
 			name = locale
 			value = flag:bedchamber
 		}
@@ -155,7 +159,7 @@ LIDAf.1 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -165,7 +169,7 @@ LIDAf.1 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -177,7 +181,7 @@ LIDAf.1 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 89
 					}
@@ -190,7 +194,7 @@ LIDAf.1 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 90
 					}
@@ -258,6 +262,9 @@ LIDAf.1 = {
 			modifier = affair_spurned_opinion
 			target = scope:affairs_partner
 		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAf.2 = {
@@ -408,6 +415,10 @@ LIDAf.2 = {
 	}
 	immediate = {
 		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
 			name = locale
 			value = flag:garden
 		}
@@ -415,7 +426,7 @@ LIDAf.2 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -425,7 +436,7 @@ LIDAf.2 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -437,7 +448,7 @@ LIDAf.2 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 91
 					}
@@ -450,7 +461,7 @@ LIDAf.2 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 92
 					}
@@ -518,6 +529,9 @@ LIDAf.2 = {
 			modifier = affair_spurned_opinion
 			target = scope:affairs_partner
 		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAf.3 = {
@@ -668,6 +682,10 @@ LIDAf.3 = {
 	}
 	immediate = {
 		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
 			name = locale
 			value = flag:study
 		}
@@ -675,7 +693,7 @@ LIDAf.3 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -685,7 +703,7 @@ LIDAf.3 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -697,7 +715,7 @@ LIDAf.3 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 93
 					}
@@ -710,7 +728,7 @@ LIDAf.3 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 94
 					}
@@ -778,6 +796,9 @@ LIDAf.3 = {
 			modifier = affair_spurned_opinion
 			target = scope:affairs_partner
 		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAf.4 = {
@@ -928,6 +949,10 @@ LIDAf.4 = {
 	}
 	immediate = {
 		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
 			name = locale
 			value = flag:study
 		}
@@ -935,7 +960,7 @@ LIDAf.4 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -945,7 +970,7 @@ LIDAf.4 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -957,7 +982,7 @@ LIDAf.4 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 95
 					}
@@ -970,7 +995,7 @@ LIDAf.4 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 96
 					}
@@ -1038,6 +1063,9 @@ LIDAf.4 = {
 			modifier = affair_spurned_opinion
 			target = scope:affairs_partner
 		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAf.5 = {
@@ -1188,6 +1216,10 @@ LIDAf.5 = {
 	}
 	immediate = {
 		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
 			name = locale
 			value = flag:bedchamber
 		}
@@ -1195,7 +1227,7 @@ LIDAf.5 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -1205,7 +1237,7 @@ LIDAf.5 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -1217,7 +1249,7 @@ LIDAf.5 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 97
 					}
@@ -1230,7 +1262,7 @@ LIDAf.5 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 98
 					}
@@ -1298,6 +1330,9 @@ LIDAf.5 = {
 			modifier = affair_spurned_opinion
 			target = scope:affairs_partner
 		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAf.6 = {
@@ -1448,6 +1483,10 @@ LIDAf.6 = {
 	}
 	immediate = {
 		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
 			name = locale
 			value = flag:council_chamber
 		}
@@ -1455,7 +1494,7 @@ LIDAf.6 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -1465,7 +1504,7 @@ LIDAf.6 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -1477,7 +1516,7 @@ LIDAf.6 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 99
 					}
@@ -1490,7 +1529,7 @@ LIDAf.6 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 100
 					}
@@ -1558,6 +1597,9 @@ LIDAf.6 = {
 			modifier = affair_spurned_opinion
 			target = scope:affairs_partner
 		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAf.7 = {
@@ -1708,6 +1750,10 @@ LIDAf.7 = {
 	}
 	immediate = {
 		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
 			name = locale
 			value = flag:dungeon
 		}
@@ -1715,7 +1761,7 @@ LIDAf.7 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -1725,7 +1771,7 @@ LIDAf.7 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -1737,7 +1783,7 @@ LIDAf.7 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 101
 					}
@@ -1750,7 +1796,7 @@ LIDAf.7 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 102
 					}
@@ -1818,6 +1864,9 @@ LIDAf.7 = {
 			modifier = affair_spurned_opinion
 			target = scope:affairs_partner
 		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAf.8 = {
@@ -1968,6 +2017,10 @@ LIDAf.8 = {
 	}
 	immediate = {
 		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
 			name = locale
 			value = flag:dungeon
 		}
@@ -1975,7 +2028,7 @@ LIDAf.8 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -1985,7 +2038,7 @@ LIDAf.8 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -1997,7 +2050,7 @@ LIDAf.8 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 103
 					}
@@ -2010,7 +2063,7 @@ LIDAf.8 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 104
 					}
@@ -2078,6 +2131,9 @@ LIDAf.8 = {
 			modifier = affair_spurned_opinion
 			target = scope:affairs_partner
 		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAf.9 = {
@@ -2228,6 +2284,10 @@ LIDAf.9 = {
 	}
 	immediate = {
 		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
 			name = locale
 			value = flag:sitting_room
 		}
@@ -2235,7 +2295,7 @@ LIDAf.9 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -2245,7 +2305,7 @@ LIDAf.9 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -2257,7 +2317,7 @@ LIDAf.9 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 105
 					}
@@ -2270,7 +2330,7 @@ LIDAf.9 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 106
 					}
@@ -2338,6 +2398,9 @@ LIDAf.9 = {
 			modifier = affair_spurned_opinion
 			target = scope:affairs_partner
 		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAf.10 = {
@@ -2488,6 +2551,10 @@ LIDAf.10 = {
 	}
 	immediate = {
 		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		save_scope_value_as = {
 			name = locale
 			value = flag:courtyard
 		}
@@ -2495,7 +2562,7 @@ LIDAf.10 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -2505,7 +2572,7 @@ LIDAf.10 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 				}
 				save_scope_value_as = {
 					name = first_transition_0
@@ -2517,7 +2584,7 @@ LIDAf.10 = {
 			# HANDJOB_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 107
 					}
@@ -2530,7 +2597,7 @@ LIDAf.10 = {
 			# ASS_TEASE
 			10 = {
 				trigger = {
-					scope:partner_stamina > 0
+					scope:finisher_stamina > 0
 					NOT = {
 						scope:first_transition_0 = 108
 					}
@@ -2598,5 +2665,8 @@ LIDAf.10 = {
 			modifier = affair_spurned_opinion
 			target = scope:affairs_partner
 		}
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
