@@ -145,10 +145,10 @@ store_subdom_value_effect = {
 # effects for progressing a sex event
 calculate_dom_success_effect = {
 	save_scope_value_as = {
-		name = dom_chance
+		# underlying subbiness / domminess
+		name = dom_chance_subdom_nature
 		value = {
-			add = dom_base_success_value
-			# underlying subbiness / domminess
+			add = 0
 			if = {
 				limit = {
 					has_trait = lida_dom_1
@@ -223,6 +223,11 @@ calculate_dom_success_effect = {
 					add = 25
 				}
 			}
+		}
+	}
+	save_scope_value_as = {
+		name = dom_chance_prowess
+		value = {
 			# use difference in prowess to compute success chance
 			# physically stronger / more robust
 			add = {
@@ -233,8 +238,12 @@ calculate_dom_success_effect = {
 				# 10 points difference = 20% more likely to dom
 				multiply = 2
 			}
-
-
+		}
+	}
+	save_scope_value_as = {
+		name = dom_chance_lust_beauty
+		value = {
+			add = 0
 			# if lustful, then success decrease if the partner is hot
 			if = {
 				limit = {
@@ -290,7 +299,13 @@ calculate_dom_success_effect = {
 				}
 				add = 15
 			}
-			# every rank difference has preconceived differences in power (higher rank easier to dom lower rank, 10% per rank)
+		}
+	}
+	save_scope_value_as = {
+		name = dom_chance_title_authority
+		value = {
+			add = 0
+			# every rank difference has preconceived differences in power (higher rank easier to dom lower rank)
 			if = {
 				limit = {
 					tier_difference = {
@@ -381,7 +396,14 @@ calculate_dom_success_effect = {
 				}
 				add = -25
 			}
-			# stubborn characters dom more easily 
+		}
+	}
+
+	save_scope_value_as = {
+		name = dom_chance_stubborness
+		value = {
+			add = 0
+			# stubborn characters dom more easily (persistence)
 			if = {
 				limit = {
 					has_trait = stubborn
@@ -396,18 +418,25 @@ calculate_dom_success_effect = {
 				}
 				add = -10
 			}
-			# difference in sex stamina affects dom success
-			add = {
-				value = {
-					add = scope:root_stamina
-					subtract = scope:partner_stamina
-				}
-				multiply = stamina_multiplier_dom_success
-			}
-			# existing sub/dom opinion contributes to dom
-			add = {
-				value = scope:subdom
-			}
+		}
+	}
+	save_scope_value_as = {
+		name = dom_chance_stamina
+		# difference in sex stamina affects dom success
+		value = {
+			add = scope:root_stamina
+			subtract = scope:partner_stamina
+			multiply = stamina_multiplier_dom_success
+		}
+	}
+	save_scope_value_as = {
+		name = dom_chance_subdom
+		# existing sub/dom opinion contributes to dom
+		value = scope:subdom
+	}
+	save_scope_value_as = {
+		name = dom_chance_orgasm
+		value = {
 			# if you are in the middle of an orgasm, you'll find it hard to control the situation
 			if = {
 				limit = {
@@ -421,6 +450,12 @@ calculate_dom_success_effect = {
 				}
 				add = 20
 			}
+		}
+	}
+	save_scope_value_as = {
+		name = dom_chance_sex_skill
+		value = {
+			add = 0
 			# sex skills - more skilled = more likely to succeed
 			# TODO this is a standin for actual, more specific sex skills; consider replacing later
 			if = {
@@ -441,6 +476,22 @@ calculate_dom_success_effect = {
 				}
 				add = 15
 			}
+		}
+	}
+
+	save_scope_value_as = {
+		name = dom_chance
+		value = {
+			add = dom_base_success_value
+			add = scope:dom_chance_subdom_nature
+			add = scope:dom_chance_subdom
+			add = scope:dom_chance_prowess
+			add = scope:dom_chance_lust_beauty
+			add = scope:dom_chance_title_authority
+			add = scope:dom_chance_stubborness
+			add = scope:dom_chance_stamina
+			add = scope:dom_chance_orgasm
+			add = scope:dom_chance_sex_skill
 
 			min = 5
 			max = 95

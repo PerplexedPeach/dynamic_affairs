@@ -257,11 +257,6 @@ TODO
 	- after duel win/loss
 	- during feast drinking
 	- player actively sneaking into rooms
-- calculate dom success into separate scope values and show them in tooltip
-	- success due to prowess
-	- success due to perceived power difference
-	- success due to lust/beauty
-	- success due to stubbornness
 
 - scene with someone peddling piercings that increase sensitivity
 	- dom not receiving satisfying orgasms from slave

@@ -281,6 +281,7 @@ LIDAs.1 = {
 			value = 1
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -946,6 +947,7 @@ LIDAs.3 = {
 			value = 3
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -1033,6 +1035,7 @@ LIDAs.3 = {
 			value = 3
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -1096,6 +1099,7 @@ LIDAs.3 = {
 			value = 3
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -1880,6 +1884,7 @@ LIDAs.4 = {
 			value = 4
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -1950,6 +1955,7 @@ LIDAs.4 = {
 			value = 4
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -2043,6 +2049,7 @@ LIDAs.4 = {
 			value = 4
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -2710,6 +2717,7 @@ LIDAs.6 = {
 			value = 6
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -2833,6 +2841,7 @@ LIDAs.6 = {
 			value = 6
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -3342,6 +3351,7 @@ LIDAs.7 = {
 			value = 7
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -3826,6 +3836,7 @@ LIDAs.2 = {
 			value = 2
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -3890,6 +3901,7 @@ LIDAs.2 = {
 			value = 2
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -3977,6 +3989,7 @@ LIDAs.2 = {
 			value = 2
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -4595,6 +4608,7 @@ LIDAs.10 = {
 			value = 10
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -4659,6 +4673,7 @@ LIDAs.10 = {
 			value = 10
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -4746,6 +4761,7 @@ LIDAs.10 = {
 			value = 10
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -5524,6 +5540,7 @@ LIDAs.8 = {
 			value = 8
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -5594,6 +5611,7 @@ LIDAs.8 = {
 			value = 8
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_scope_value_as = {
 			name = dom_success_adjustment
 			value = 10
@@ -5669,6 +5687,7 @@ LIDAs.8 = {
 			value = 8
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_scope_value_as = {
 			name = dom_success_adjustment
 			value = 10
@@ -5744,6 +5763,7 @@ LIDAs.8 = {
 			value = 8
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_scope_value_as = {
 			name = dom_success_adjustment
 			value = 10
@@ -5866,6 +5886,7 @@ LIDAs.8 = {
 			value = 8
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -6463,6 +6484,7 @@ LIDAs.9 = {
 			value = 9
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -6533,6 +6555,7 @@ LIDAs.9 = {
 			value = 9
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_scope_value_as = {
 			name = dom_success_adjustment
 			value = 5
@@ -6655,6 +6678,7 @@ LIDAs.9 = {
 			value = 9
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -7369,6 +7393,7 @@ LIDAs.5 = {
 			value = 5
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -7439,6 +7464,7 @@ LIDAs.5 = {
 			value = 5
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_scope_value_as = {
 			name = dom_success_adjustment
 			value = 15
@@ -7561,6 +7587,7 @@ LIDAs.5 = {
 			value = 5
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -8261,6 +8288,7 @@ LIDAs.11 = {
 			value = 11
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -8331,6 +8359,7 @@ LIDAs.11 = {
 			value = 11
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -8448,6 +8477,7 @@ LIDAs.11 = {
 			value = 11
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -8517,6 +8547,7 @@ LIDAs.11 = {
 			value = 11
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -9199,6 +9230,7 @@ LIDAs.12 = {
 			value = 12
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -9269,6 +9301,7 @@ LIDAs.12 = {
 			value = 12
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -9386,6 +9419,7 @@ LIDAs.12 = {
 			value = 12
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -9455,6 +9489,7 @@ LIDAs.12 = {
 			value = 12
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -10097,6 +10132,7 @@ LIDAs.13 = {
 			value = 13
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -10214,6 +10250,7 @@ LIDAs.13 = {
 			value = 13
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -10283,6 +10320,7 @@ LIDAs.13 = {
 			value = 13
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -10925,6 +10963,7 @@ LIDAs.14 = {
 			value = 14
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
@@ -11012,6 +11051,7 @@ LIDAs.14 = {
 			value = 14
 		}
 		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {

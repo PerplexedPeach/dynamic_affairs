@@ -118,6 +118,17 @@ DOM_ATTEMPT_TOOLTIP = "attempt_dom_tooltip"
 DOM_NO_SUB_TOOLTIP = "dom_no_sub_tooltip"
 VOLUNTARY_SUB_TOOLTIP = "voluntary_sub_tooltip"
 DOM_SUCCESS_ADJUSTMENT_TOOLTIP = "dom_success_adjustment_tooltip"
+DOM_CHANCE_SUBDOM_NATURE_TOOLTIP = "dom_chance_subdom_nature_tooltip"
+DOM_CHANCE_SUBDOM_TOOLTIP = "dom_chance_subdom_tooltip"
+DOM_CHANCE_PROWESS_TOOLTIP = "dom_chance_prowess_tooltip"
+DOM_CHANCE_LUST_BEAUTY_TOOLTIP = "dom_chance_lust_beauty_tooltip"
+DOM_CHANCE_TITLE_AUTHORITY_TOOLTIP = "dom_chance_title_authority_tooltip"
+DOM_CHANCE_STUBBORNESS_TOOLTIP = "dom_chance_stubborness_tooltip"
+DOM_CHANCE_STAMINA_TOOLTIP = "dom_chance_stamina_tooltip"
+DOM_CHANCE_ORGASM_TOOLTIP = "dom_chance_orgasm_tooltip"
+DOM_CHANCE_SEX_SKILL_TOOLTIP = "dom_chance_sex_skill_tooltip"
+DOM_CHANCE_BREAKDOWN_TOOLTIP = "dom_chance_breakdown_tooltip"
+
 CANCEL_MEETING_OPTION = "cancel_meeting_option"
 CANCEL_MEETING_TOOLTIP = "cancel_meeting_tooltip"
 CANT_DOM_DUE_TO_CUM_TOOLTIP = "cant_dom_due_to_cum_tooltip"
@@ -953,6 +964,18 @@ class Sex(Event):
             self.assign(CUSTOM_TOOLTIP, DOM_NO_SUB_TOOLTIP)
         else:
             self.assign(CUSTOM_TOOLTIP, DOM_ATTEMPT_TOOLTIP)
+            # breakdown of all that contributes to the percentage
+            self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_BREAKDOWN_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_SUBDOM_NATURE_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_SUBDOM_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_PROWESS_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_LUST_BEAUTY_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_TITLE_AUTHORITY_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_STUBBORNESS_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_STAMINA_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_ORGASM_TOOLTIP)
+            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_SEX_SKILL_TOOLTIP)
+
             if option.dom_success_adjustment != 0:
                 self.save_scope_value_as(DOM_SUCCESS_ADJUSTMENT, option.dom_success_adjustment)
                 self.assign(CUSTOM_TOOLTIP, DOM_SUCCESS_ADJUSTMENT_TOOLTIP)
