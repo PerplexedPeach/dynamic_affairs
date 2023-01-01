@@ -88,9 +88,9 @@ DomChanceBreakdownLustBeauty = {
 		}
 		localization_key = dc_lust_beauty_r
 	}
-	text = {
-		localization_key = dc_lust_beauty
-	}
+	# text = {
+	# 	localization_key = dc_lust_beauty
+	# }
 }
 
 DomChanceBreakdownAuthority = {
@@ -138,9 +138,9 @@ DomChanceBreakdownStubborness = {
 		}
 		localization_key = dc_stubborness_r
 	}
-	text = {
-		localization_key = dc_stubborness
-	}
+	# text = {
+	# 	localization_key = dc_stubborness
+	# }
 }
 
 DomChanceBreakdownStamina = {
@@ -219,9 +219,9 @@ DomChanceBreakdownOrgasm = {
 		}
 		localization_key = dc_orgasm_rr
 	}
-	text = {
-		localization_key = dc_orgasm
-	}
+	# text = {
+	# 	localization_key = dc_orgasm
+	# }
 }
 
 DomChanceBreakdownSexSkill = {
