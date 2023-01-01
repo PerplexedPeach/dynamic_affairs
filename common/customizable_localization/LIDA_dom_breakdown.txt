@@ -1,0 +1,256 @@
+﻿DomChanceBreakdownSubdomNature = {
+	type = character
+	# showing percentages so no need to randomlize localization
+	# random_valid = no
+	text = {
+		trigger = {
+			scope:dom_chance_subdom_nature >= 15
+		}
+		localization_key = dc_subdom_nature_gg
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_subdom_nature >= 5
+		}
+		localization_key = dc_subdom_nature_g
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_subdom_nature <= -15
+		}
+		localization_key = dc_subdom_nature_rr
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_subdom_nature <= -5
+		}
+		localization_key = dc_subdom_nature_r
+	}
+	text = {
+		localization_key = dc_subdom_nature
+	}
+}
+
+DomChanceBreakdownProwess = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_prowess >= 15
+		}
+		localization_key = dc_prowess_gg
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_prowess >= 5
+		}
+		localization_key = dc_prowess_g
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_prowess <= -15
+		}
+		localization_key = dc_prowess_rr
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_prowess <= -5
+		}
+		localization_key = dc_prowess_r
+	}
+	text = {
+		localization_key = dc_prowess
+	}
+}
+
+DomChanceBreakdownLustBeauty = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_lust_beauty >= 15
+		}
+		localization_key = dc_lust_beauty_gg
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_lust_beauty >= 5
+		}
+		localization_key = dc_lust_beauty_g
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_lust_beauty <= -15
+		}
+		localization_key = dc_lust_beauty_rr
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_lust_beauty <= -5
+		}
+		localization_key = dc_lust_beauty_r
+	}
+	# text = {
+	# 	localization_key = dc_lust_beauty
+	# }
+}
+
+DomChanceBreakdownAuthority = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_title_authority >= 15
+		}
+		localization_key = dc_authority_gg
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_title_authority >= 5
+		}
+		localization_key = dc_authority_g
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_title_authority <= -15
+		}
+		localization_key = dc_authority_rr
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_title_authority <= -5
+		}
+		localization_key = dc_authority_r
+	}
+	text = {
+		localization_key = dc_authority
+	}
+}
+
+DomChanceBreakdownStubborness = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_stubborness >= 5
+		}
+		localization_key = dc_stubborness_g
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_stubborness <= -5
+		}
+		localization_key = dc_stubborness_r
+	}
+	# text = {
+	# 	localization_key = dc_stubborness
+	# }
+}
+
+DomChanceBreakdownStamina = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_stamina >= 15
+		}
+		localization_key = dc_stamina_gg
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_stamina >= 5
+		}
+		localization_key = dc_stamina_g
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_stamina <= -15
+		}
+		localization_key = dc_stamina_rr
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_stamina <= -5
+		}
+		localization_key = dc_stamina_r
+	}
+	text = {
+		localization_key = dc_stamina
+	}
+}
+
+DomChanceBreakdownSubdom = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_subdom >= 15
+		}
+		localization_key = dc_subdom_gg
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_subdom >= 5
+		}
+		localization_key = dc_subdom_g
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_subdom <= -15
+		}
+		localization_key = dc_subdom_rr
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_subdom <= -5
+		}
+		localization_key = dc_subdom_r
+	}
+	text = {
+		localization_key = dc_subdom
+	}
+}
+
+DomChanceBreakdownOrgasm = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_orgasm >= 15
+		}
+		localization_key = dc_orgasm_gg
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_orgasm <= -15
+		}
+		localization_key = dc_orgasm_rr
+	}
+	# text = {
+	# 	localization_key = dc_orgasm
+	# }
+}
+
+DomChanceBreakdownSexSkill = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_sex_skill >= 15
+		}
+		localization_key = dc_sex_skill_gg
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_sex_skill >= 5
+		}
+		localization_key = dc_sex_skill_g
+	}
+	# text = {
+	# 	trigger = {
+	# 		scope:dom_chance_sex_skill <= -15
+	# 	}
+	# 	localization_key = dc_sex_skill_rr
+	# }
+	# text = {
+	# 	trigger = {
+	# 		scope:dom_chance_sex_skill <= -5
+	# 	}
+	# 	localization_key = dc_sex_skill_r
+	# }
+	text = {
+		localization_key = dc_sex_skill
+	}
+}
