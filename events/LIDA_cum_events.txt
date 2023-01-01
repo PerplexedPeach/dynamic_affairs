@@ -297,7 +297,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.157
+		name = LIDAoption.156
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -718,7 +718,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.158
+		name = LIDAoption.157
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -1067,7 +1067,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.159
+		name = LIDAoption.158
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -1302,7 +1302,7 @@ LIDAc.2 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.160
+		name = LIDAoption.159
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -1581,7 +1581,7 @@ LIDAc.3 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.161
+		name = LIDAoption.160
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -1880,7 +1880,7 @@ LIDAc.5 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.162
+		name = LIDAoption.161
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -2347,7 +2347,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.163
+		name = LIDAoption.162
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -2710,46 +2710,34 @@ LIDAc.7 = {
 		desc = LIDAc.7.desc.0
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_dom
-			}
-			desc = LIDAc.7.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
-			}
-			desc = LIDAc.7.desc.2
-		}
-		triggered_desc = {
-			trigger = {
 				scope:subdom >= 10
 			}
-			desc = LIDAc.7.desc.3
+			desc = LIDAc.7.desc.1
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom > -10 
 scope:subdom < 10
 			}
-			desc = LIDAc.7.desc.4
+			desc = LIDAc.7.desc.2
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.7.desc.5
+			desc = LIDAc.7.desc.3
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.7.desc.6
+			desc = LIDAc.7.desc.4
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.7.desc.7
+			desc = LIDAc.7.desc.5
 		}
 	}
 	immediate = {
@@ -2781,7 +2769,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.164
+		name = LIDAoption.163
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -3158,7 +3146,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.165
+		name = LIDAoption.164
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -3483,7 +3471,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.166
+		name = LIDAoption.165
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -3879,14 +3867,14 @@ NOT = { has_trait =lida_sub }
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.167
+		name = LIDAoption.166
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.12 = {
-	# FM_CREAMPIE_KEEP: Taking It Home
+	# FM_CREAMPIE_KEEP: Bearing the Bloodline
 	type = character_event
 	title = LIDAc.12.t
 	theme = seduction
@@ -4139,7 +4127,10 @@ LIDAc.12 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.168
+		name = LIDAoption.167
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.13 = {
@@ -4385,7 +4376,7 @@ LIDAc.13 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_m
 		}
@@ -4411,7 +4402,10 @@ scope:subdom < 10
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = 1
 		}
@@ -4436,7 +4430,10 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.169
+		name = LIDAoption.168
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.18 = {
@@ -4789,7 +4786,7 @@ LIDAc.18 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_m
 		}
@@ -4827,7 +4824,10 @@ scope:subdom < 10
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
 			CHARACTER_2 = scope:affairs_partner
@@ -4839,7 +4839,10 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.170
+		name = LIDAoption.169
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.16 = {
@@ -5131,7 +5134,7 @@ LIDAc.16 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_m
 		}
@@ -5177,7 +5180,10 @@ scope:subdom < 10
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = 2
 		}
@@ -5202,7 +5208,10 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.171
+		name = LIDAoption.170
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.14 = {
@@ -5326,7 +5335,7 @@ LIDAc.14 = {
 	}
 	left_portrait = {
 		character = root
-		animation = disgust
+		animation = schadenfreude
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -5338,7 +5347,7 @@ LIDAc.14 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = schadenfreude
+		animation = disgust
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -5399,7 +5408,7 @@ LIDAc.14 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_m
 		}
@@ -5445,7 +5454,10 @@ scope:subdom < 10
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = 1
 		}
@@ -5470,7 +5482,10 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.172
+		name = LIDAoption.171
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.15 = {
@@ -5594,7 +5609,7 @@ LIDAc.15 = {
 	}
 	left_portrait = {
 		character = root
-		animation = shame
+		animation = schadenfreude
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -5606,7 +5621,7 @@ LIDAc.15 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = schadenfreude
+		animation = shame
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -5686,7 +5701,7 @@ LIDAc.15 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_m
 		}
@@ -5697,28 +5712,31 @@ LIDAc.15 = {
 			}
 			desc = LIDAc.15.desc.1
 		}
-		desc = LIDAc.15.desc.2
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.15.desc.3
+			desc = LIDAc.15.desc.2
 		}
+		desc = LIDAc.15.desc.3
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_sub
+				has_trait = lida_dom
 			}
 			desc = LIDAc.15.desc.4
 		}
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_dom
+				has_trait = lida_sub
 			}
 			desc = LIDAc.15.desc.5
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = -2
 		}
@@ -5743,7 +5761,10 @@ LIDAc.15 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.173
+		name = LIDAoption.172
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.17 = {
@@ -5867,7 +5888,7 @@ LIDAc.17 = {
 	}
 	left_portrait = {
 		character = root
-		animation = dismissal
+		animation = beg
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -5879,7 +5900,7 @@ LIDAc.17 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = beg
+		animation = dismissal
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -5998,16 +6019,32 @@ LIDAc.17 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_m
 		}
 		desc = LIDAc.17.desc.0
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.17.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = { has_trait = lida_dom }
+			}
+			desc = LIDAc.17.desc.2
+		}
+		desc = LIDAc.17.desc.3
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
 		change_subdom_effect = {
-			CHANGE = 2
+			CHANGE = -2
 		}
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
@@ -6019,12 +6056,12 @@ LIDAc.17 = {
 		}
 		random = {
 			chance = 35
-			become_more_dom_effect = yes
+			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 35
-				become_more_sub_effect = yes
+				become_more_dom_effect = yes
 			}
 		}
 		scope:affairs_partner = {
@@ -6036,7 +6073,10 @@ LIDAc.17 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.174
+		name = LIDAoption.173
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.20 = {
@@ -6160,7 +6200,7 @@ LIDAc.20 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation_left
+		animation = personality_bold
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -6172,7 +6212,7 @@ LIDAc.20 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = personality_bold
+		animation = flirtation_left
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -6223,11 +6263,11 @@ LIDAc.20 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 155
+					scope:sex_transition = 154
 				}
 				# Lie Face Down
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless.\n
-				desc = sex_transition_155.0
+				desc = sex_transition_154.0
 			}
 			triggered_desc = {
 				trigger = {
@@ -6349,38 +6389,29 @@ LIDAc.20 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10150
+					scope:sex_transition = 10151
 				}
-				# 150: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_KEEP failed
-				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_150.10000
+				# 151: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY failed
+				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
+				desc = sex_transition_151.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10152
 				}
-				# 152: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY failed
-				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
+				# 152: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
+				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
 				desc = sex_transition_152.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10153
+					scope:sex_transition = 10154
 				}
-				# 153: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
-				desc = sex_transition_153.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10155
-				}
-				# 155: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# 154: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
-				desc = sex_transition_155.10000
+				desc = sex_transition_154.10000
 			}
 		}
 		triggered_desc = {
@@ -6430,18 +6461,18 @@ LIDAc.20 = {
 				exists = scope:prev_event
 				scope:prev_event = 28
 			}
-			# defaulted to 155: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
-			desc = sex_transition_155.0
+			# defaulted to 154: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_154.0
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_m
 		}
 		triggered_desc = {
 			trigger = {
-				scope:subdom >= 10
+				scope:subdom <= -10
 			}
 			desc = LIDAc.20.desc.0
 		}
@@ -6454,7 +6485,7 @@ scope:subdom < 10
 		}
 		triggered_desc = {
 			trigger = {
-				scope:subdom <= -10
+				scope:subdom >= 10
 			}
 			desc = LIDAc.20.desc.2
 		}
@@ -6472,9 +6503,12 @@ scope:subdom < 10
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
 		change_subdom_effect = {
-			CHANGE = 1
+			CHANGE = -1
 		}
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
@@ -6497,7 +6531,10 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.175
+		name = LIDAoption.174
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.19 = {
@@ -6850,59 +6887,50 @@ LIDAc.19 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_m
 		}
 		desc = LIDAc.19.desc.0
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_dom
+				scope:subdom <= -10
 			}
 			desc = LIDAc.19.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
-			}
-			desc = LIDAc.19.desc.2
-		}
-		triggered_desc = {
-			trigger = {
-				scope:subdom >= 10
-			}
-			desc = LIDAc.19.desc.3
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom > -10 
 scope:subdom < 10
 			}
-			desc = LIDAc.19.desc.4
+			desc = LIDAc.19.desc.2
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.19.desc.5
+			desc = LIDAc.19.desc.3
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.19.desc.6
+			desc = LIDAc.19.desc.4
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.19.desc.7
+			desc = LIDAc.19.desc.5
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
 		change_subdom_effect = {
-			CHANGE = -1
+			CHANGE = 1
 		}
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
@@ -6925,7 +6953,10 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.176
+		name = LIDAoption.175
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.21 = {
@@ -7232,46 +7263,56 @@ LIDAc.21 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_m
 		}
 		desc = LIDAc.21.desc.0
 		triggered_desc = {
 			trigger = {
-				scope:subdom >= 10
+				has_trait = lida_sub
 			}
 			desc = LIDAc.21.desc.1
+		}
+		triggered_desc = {
+			trigger = {
+				 NOT = { has_trait = lida_dom } 
+  NOT = { has_trait = lida_sub }
+			}
+			desc = LIDAc.21.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				has_trait = lida_dom
+			}
+			desc = LIDAc.21.desc.3
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.21.desc.4
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom > -10 
 scope:subdom < 10
 			}
-			desc = LIDAc.21.desc.2
+			desc = LIDAc.21.desc.5
 		}
 		triggered_desc = {
 			trigger = {
 				scope:subdom <= -10
 			}
-			desc = LIDAc.21.desc.3
-		}
-		desc = LIDAc.21.desc.4
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
-			}
-			desc = LIDAc.21.desc.5
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom
-			}
 			desc = LIDAc.21.desc.6
 		}
+		desc = LIDAc.21.desc.7
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = 3
 		}
@@ -7296,7 +7337,10 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.177
+		name = LIDAoption.176
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.22 = {
@@ -7420,7 +7464,7 @@ LIDAc.22 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation_left
+		animation = shock
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -7432,7 +7476,7 @@ LIDAc.22 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = shock
+		animation = flirtation_left
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -7557,14 +7601,14 @@ LIDAc.22 = {
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_m
 		}
 		desc = LIDAc.22.desc.0
 		triggered_desc = {
 			trigger = {
-				scope:subdom < -10
+				scope:subdom >= 10
 			}
 			desc = LIDAc.22.desc.1
 		}
@@ -7577,20 +7621,29 @@ scope:subdom < 10
 		}
 		triggered_desc = {
 			trigger = {
-				scope:subdom > 10
+				scope:subdom <= -10
 			}
 			desc = LIDAc.22.desc.3
 		}
 		desc = LIDAc.22.desc.4
 		triggered_desc = {
 			trigger = {
-				has_trait = lida_dom
+				has_trait = lida_sub
 			}
 			desc = LIDAc.22.desc.5
 		}
+		triggered_desc = {
+			trigger = {
+				NOT = { has_trait = lida_dom }
+			}
+			desc = LIDAc.22.desc.6
+		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
 		change_subdom_effect = {
 			CHANGE = 3
 		}
@@ -7604,18 +7657,21 @@ scope:subdom < 10
 		}
 		random = {
 			chance = 30
-			become_more_dom_effect = yes
+			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 30
-				become_more_sub_effect = yes
+				become_more_dom_effect = yes
 			}
 		}
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.178
+		name = LIDAoption.177
+	}
+	after = {
+		reset_stamina_after_cum_effect = yes
 	}
 }
 LIDAc.23 = {
@@ -7739,385 +7795,9 @@ LIDAc.23 = {
 	}
 	left_portrait = {
 		character = root
-		animation = worry
-		triggered_outfit = {
-			trigger = {
-				exists = scope:root_naked
-			}
-			outfit_tags = {
-				no_clothes
-			}
-		}
-	}
-	right_portrait = {
-		character = scope:affairs_partner
 		animation = personality_bold
 		triggered_outfit = {
 			trigger = {
-				exists = scope:partner_naked
-			}
-			outfit_tags = {
-				no_clothes
-			}
-		}
-	}
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 151
-				}
-				# Lie on Back
-				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
-				desc = sex_transition_151.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 156
-				}
-				# Lie Face Down
-				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
-				desc = sex_transition_156.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10146
-				}
-				# 146: EventsSex.MF_MISSIONARY -> EventsSex.MF_COWGIRL failed
-				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
-				desc = sex_transition_146.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10149
-				}
-				# 149: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
-				desc = sex_transition_149.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10150
-				}
-				# 150: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_KEEP failed
-				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_150.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10152
-				}
-				# 152: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY failed
-				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
-				desc = sex_transition_152.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10153
-				}
-				# 153: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
-				desc = sex_transition_153.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10155
-				}
-				# 155: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
-				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
-				desc = sex_transition_155.10000
-			}
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 27
-			}
-			# defaulted to 151: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_BREED
-			desc = sex_transition_151.0
-		}
-		triggered_desc = {
-			trigger = {
-				exists = scope:sex_transition
-				scope:sex_transition > 10000
-				exists = scope:prev_event
-				scope:prev_event = 28
-			}
-			# defaulted to 156: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED
-			desc = sex_transition_156.0
-		}
-		triggered_desc = {
-			trigger = {
-				scope:root_cum = yes
-			}
-			desc = root_cum_m
-		}
-		desc = LIDAc.23.desc.0
-		desc = LIDAc.23.desc.1
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
-			}
-			desc = LIDAc.23.desc.2
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub 
- NOT = { has_trait =pregnant }
-			}
-			desc = LIDAc.23.desc.3
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub 
- has_trait = pregnant
-			}
-			desc = LIDAc.23.desc.4
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
-			}
-			desc = LIDAc.23.desc.5
-		}
-		triggered_desc = {
-			trigger = {
-				scope:subdom >= 10
-			}
-			desc = LIDAc.23.desc.6
-		}
-		triggered_desc = {
-			trigger = {
-				scope:subdom >= 20
-			}
-			desc = LIDAc.23.desc.7
-		}
-		triggered_desc = {
-			trigger = {
-				scope:subdom >= 10 
-has_trait = lida_dom
-			}
-			desc = LIDAc.23.desc.8
-		}
-		triggered_desc = {
-			trigger = {
-				scope:subdom <= -10
-			}
-			desc = LIDAc.23.desc.9
-		}
-		triggered_desc = {
-			trigger = {
-				scope:subdom <= -20
-			}
-			desc = LIDAc.23.desc.10
-		}
-		triggered_desc = {
-			trigger = {
-				scope:subdom <= -10 
-has_trait = lida_sub
-			}
-			desc = LIDAc.23.desc.11
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom
-			}
-			desc = LIDAc.23.desc.12
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom 
- NOT = { has_trait =pregnant }
-			}
-			desc = LIDAc.23.desc.13
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom 
- has_trait = pregnant
-			}
-			desc = LIDAc.23.desc.14
-		}
-		triggered_desc = {
-			trigger = {
-				NOT = { has_trait =pregnant } 
- NOT = { has_trait =lida_sub } 
- NOT = { has_trait =lida_dom }
-			}
-			desc = LIDAc.23.desc.15
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait =pregnant 
- NOT = { has_trait =lida_sub } 
- NOT = { has_trait =lida_dom }
-			}
-			desc = LIDAc.23.desc.16
-		}
-	}
-	immediate = {
-		check_if_root_cum_effect = yes
-		change_subdom_effect = {
-			CHANGE = -6
-		}
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = root
-			CHARACTER_2 = scope:affairs_partner
-			C1_PREGNANCY_CHANCE = 0
-			C2_PREGNANCY_CHANCE = 45.0
-			STRESS_EFFECTS = yes
-			DRAMA = yes
-		}
-		random = {
-			chance = 45
-			become_more_sub_effect = yes
-		}
-		scope:affairs_partner = {
-			random = {
-				chance = 45
-				become_more_dom_effect = yes
-			}
-		}
-		debug_log_scopes = yes
-	}
-	option = {
-		name = LIDAoption.179
-	}
-}
-LIDAc.24 = {
-	# MF_CREAMPIE_KEEP: 
-	type = character_event
-	title = LIDAc.24.t
-	theme = seduction
-	override_background = {
-		trigger = {
-			scope:locale = flag:battlefield
-		}
-		event_background = battlefield
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:alley_night
-		}
-		event_background = alley_night
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:alley_day
-		}
-		event_background = alley_day
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:temple
-		}
-		event_background = temple
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:corridor_night
-		}
-		event_background = corridor_night
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:corridor_day
-		}
-		event_background = corridor_day
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:courtyard
-		}
-		event_background = courtyard
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:dungeon
-		}
-		event_background = dungeon
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:docks
-		}
-		event_background = docks
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:feast
-		}
-		event_background = feast
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:market
-		}
-		event_background = market
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:tavern
-		}
-		event_background = tavern
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:throne_room
-		}
-		event_background = throne_room
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:garden
-		}
-		event_background = garden
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:gallows
-		}
-		event_background = gallows
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:bedchamber
-		}
-		event_background = bedchamber
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:study
-		}
-		event_background = study
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:council_chamber
-		}
-		event_background = council_chamber
-	}
-	override_background = {
-		trigger = {
-			scope:locale = flag:sitting_room
-		}
-		event_background = sitting_room
-	}
-	left_portrait = {
-		character = root
-		animation = ecstasy
-		triggered_outfit = {
-			trigger = {
 				exists = scope:root_naked
 			}
 			outfit_tags = {
@@ -8127,7 +7807,7 @@ LIDAc.24 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = shock
+		animation = worry
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -8145,8 +7825,17 @@ LIDAc.24 = {
 					scope:sex_transition = 150
 				}
 				# Lie on Back
-				# You wrap your legs and arms around him...\n
+				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
 				desc = sex_transition_150.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 155
+				}
+				# Lie Face Down
+				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
+				desc = sex_transition_155.0
 			}
 			triggered_desc = {
 				trigger = {
@@ -8169,11 +7858,29 @@ LIDAc.24 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10150
+					scope:sex_transition = 10151
 				}
-				# 150: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_KEEP failed
-				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_150.10000
+				# 151: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY failed
+				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
+				desc = sex_transition_151.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10152
+				}
+				# 152: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
+				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
+				desc = sex_transition_152.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10154
+				}
+				# 154: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
+				desc = sex_transition_154.10000
 			}
 		}
 		triggered_desc = {
@@ -8183,69 +7890,97 @@ LIDAc.24 = {
 				exists = scope:prev_event
 				scope:prev_event = 27
 			}
-			# defaulted to 150: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_KEEP
+			# defaulted to 150: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_BREED
 			desc = sex_transition_150.0
 		}
 		triggered_desc = {
 			trigger = {
-				scope:root_cum = yes
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 28
+			}
+			# defaulted to 155: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED
+			desc = sex_transition_155.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
 			}
 			desc = root_cum_m
 		}
-		desc = LIDAc.24.desc.0
-		triggered_desc = {
-			trigger = {
-				scope:subdom >= 10
-			}
-			desc = LIDAc.24.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				scope:subdom < 10
-			}
-			desc = LIDAc.24.desc.2
-		}
-		desc = LIDAc.24.desc.3
+		desc = LIDAc.23.desc.0
+		desc = LIDAc.23.desc.1
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_sub
 			}
-			desc = LIDAc.24.desc.4
+			desc = LIDAc.23.desc.2
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = { has_trait = lida_dom } 
+ NOT = { has_trait = lida_sub }
+			}
+			desc = LIDAc.23.desc.3
 		}
 		triggered_desc = {
 			trigger = {
 				has_trait = lida_dom
 			}
-			desc = LIDAc.24.desc.5
+			desc = LIDAc.23.desc.4
+		}
+		desc = LIDAc.23.desc.5
+		triggered_desc = {
+			trigger = {
+				scope:subdom >= 10
+			}
+			desc = LIDAc.23.desc.6
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom > -10 
+scope:subdom < 10
+			}
+			desc = LIDAc.23.desc.7
+		}
+		triggered_desc = {
+			trigger = {
+				scope:subdom <= -10
+			}
+			desc = LIDAc.23.desc.8
 		}
 	}
 	immediate = {
-		check_if_root_cum_effect = yes
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
 		change_subdom_effect = {
-			CHANGE = 2
+			CHANGE = -6
 		}
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root
 			CHARACTER_2 = scope:affairs_partner
 			C1_PREGNANCY_CHANCE = 0
-			C2_PREGNANCY_CHANCE = 60
+			C2_PREGNANCY_CHANCE = 45.0
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
 		random = {
-			chance = 20
+			chance = 45
 			become_more_dom_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
-				chance = 20
+				chance = 45
 				become_more_sub_effect = yes
 			}
 		}
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.180
+		name = LIDAoption.178
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
