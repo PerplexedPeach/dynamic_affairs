@@ -1,10 +1,10 @@
 ﻿l_english:
 # nature
 dc_subdom_nature: "Relative submissive or dominant nature: #weak [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
-dc_subdom_nature_g: "You are more dominant: #P [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
-dc_subdom_nature_r: "You are more submissive: #N [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
-dc_subdom_nature_gg: "You impress them with your dominant nature: #P;bold [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
-dc_subdom_nature_rr: "You are intimidated by their dominant nature: #N;bold [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
+dc_subdom_nature_g: "You are more #dom dominant#!: #P [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
+dc_subdom_nature_r: "You are more #sub submissive#!: #N [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
+dc_subdom_nature_gg: "You #dom impress#! them with your dominant nature: #P;bold [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
+dc_subdom_nature_rr: "You are #sub intimidated#! by their dominant nature: #N;bold [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
 # prowess
 dc_prowess: "Physical prowess: #weak [SCOPE.GetValue('dom_chance_prowess')|0]% #!"
 dc_prowess_g: "You are stronger: #P [SCOPE.GetValue('dom_chance_prowess')|0]% #! #weak ([prowess|E]) #!"
@@ -35,10 +35,10 @@ dc_stamina_gg: "Their mind is dominated by pleasure: #P;bold [SCOPE.GetValue('do
 dc_stamina_rr: "You are drowning in pleasure: #N;bold [SCOPE.GetValue('dom_chance_stamina')|0]% #! #weak (Sexual stamina)#!"
 # subdom
 dc_subdom: "Relationship history with [affairs_partner.GetFirstName]: #weak [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
-dc_subdom_g: "You have dominated [affairs_partner.GetFirstName] in the past: #P [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
-dc_subdom_r: "You have submitted to [affairs_partner.GetFirstName] in the past: #N [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
-dc_subdom_g: "You are [affairs_partner.GetFirstName]'s dom: #P;bold [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
-dc_subdom_r: "You are [affairs_partner.GetFirstName]'s sub: #N;bold [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+dc_subdom_g: "You have #dom dominated#! [affairs_partner.GetFirstName] in the past: #P [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+dc_subdom_r: "You have #sub submitted#! to [affairs_partner.GetFirstName] in the past: #N [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+dc_subdom_g: "You are [affairs_partner.GetFirstName]'s #dom dom#!: #P;bold [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+dc_subdom_r: "You are [affairs_partner.GetFirstName]'s #sub sub#!: #N;bold [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
 # orgasm
 dc_orgasm: "Orgasm: #weak [SCOPE.GetValue('dom_chance_orgasm')|0]% #!"
 dc_orgasm_gg: "They are in the middle of an #V Orgasm#!: #P;bold [SCOPE.GetValue('dom_chance_orgasm')|0]% #!"
