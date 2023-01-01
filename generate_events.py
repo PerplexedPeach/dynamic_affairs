@@ -2128,9 +2128,9 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=1, stam_cost_2=0,
                root_gender = MALE, partner_gender = FEMALE,
-               root_become_more_dom_chance=5,
-               partner_removes_clothes=True,
-               animation_left=IDLE, animation_right=PERSONALITY_CONTENT,
+               root_become_more_sub_chance=5,
+               root_removes_clothes=True,
+               animation_left=PERSONALITY_CONTENT, animation_right=IDLE,
                desc=f"""
                With a knowing smirk, you size {THEM} up and put both your hands on their chest.
                Leveraging your weight, you push and trap him against a wall. You slide your knee up his leg 
@@ -2156,8 +2156,8 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_HANDJOB, "Handjob",
                stam_cost_1=-1, stam_cost_2=0.5,
                root_gender = MALE, partner_gender = FEMALE,
-               root_become_more_dom_chance=5,
-               partner_removes_clothes=True,
+               root_become_more_sub_chance=5,
+               root_removes_clothes=True,
                desc=f"""
                {THEM}'s eyes are closed and you smirk at your total control of his pleasure.
                You experiment with your strokes, and delight at the immediate feedback on his face.""",
@@ -2203,8 +2203,8 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_BLOWJOB_DOM, "Dom Blowjob",
                stam_cost_1=2, stam_cost_2=0.5,
                root_gender = MALE, partner_gender = FEMALE,
-               partner_removes_clothes=True,
-               animation_left=KNEEL_RULER_3,
+               root_removes_clothes=True,
+               animation_right=KNEEL_RULER_3,
                desc=f"""
                You tease his shaft with your tongue, leaving him yearning for your mouth's full commitment.
                In this position of power and control over his pleasure, you deny him any movement with his hands.""",
@@ -2266,9 +2266,9 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_BLOWJOB_SUB, "Sub Blowjob",
                stam_cost_1=1.5, stam_cost_2=1.0,
                root_gender = MALE, partner_gender = FEMALE,
-               root_become_more_sub_chance=5,
-               partner_removes_clothes=True,
-               animation_left=KNEEL_RULER_3,
+               root_become_more_dom_chance=5,
+               root_removes_clothes=True,
+               animation_right=KNEEL_RULER_3,
                desc=f"""
                With your tongue out, your mouth receives {THEM}'s rhythmic thrusts. His hands behind
                your head prevent you from instinctively pulling away, making you feel self conscious about
@@ -2314,9 +2314,9 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_DEEPTHROAT, "Deepthroat",
                stam_cost_1=2.0, stam_cost_2=1.0,
                root_gender = MALE, partner_gender = FEMALE,
-               root_become_more_sub_chance=10,
-               partner_removes_clothes=True,
-               animation_left=KNEEL_2,
+               root_become_more_dom_chance=10,
+               root_removes_clothes=True,
+               animation_right=KNEEL_2,
                desc=ComposedDesc("""
                Your eyes tear up as he thrusts deeply and relentlessly. The degrading way in which he
                gives not care about your well-being or pleasure leaves a deep impression on you.""",
@@ -2351,7 +2351,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_ASS_TEASE, "Ass Tease",
                stam_cost_1=0.75, stam_cost_2=0.5,
                root_gender = MALE, partner_gender = FEMALE,
-               root_become_more_dom_chance=5,
+               root_become_more_sub_chance=5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
                Looking into {THEM}'s leering eyes, you can see his desire to have you.
@@ -2506,9 +2506,9 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_STANDING_FINGERED_FROM_BEHIND, "Fingered from Behind",
                stam_cost_1=0.5, stam_cost_2=-1,
                root_gender = MALE, partner_gender = FEMALE,
-               root_become_more_sub_chance=5,
+               root_become_more_dom_chance=5,
                root_removes_clothes=True,
-               animation_right=SCHADENFREUDE,
+               animation_left=SCHADENFREUDE,
                desc=f"""
                His finger #sub squelches against your wet folds#! as he extracts juices from your lower lips while
                extracting moans from your upper lips. Your head leans back and he occasionally takes the liberty
@@ -2554,9 +2554,9 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_STANDING_FUCKED_FROM_BEHIND, "Standing Fucked from Behind",
                stam_cost_1=1.5, stam_cost_2=2,
                root_gender = MALE, partner_gender = FEMALE,
-               root_become_more_sub_chance=7,
+               root_become_more_dom_chance=7,
                root_removes_clothes=True, partner_removes_clothes=True,
-               animation_left=BOW_3, animation_right=SCHADENFREUDE,
+               animation_left=SCHADENFREUDE, animation_right=BOW_3,
                desc=ComposedDesc(f"""
                Sometimes bending you over and sometimes #sub pulling your hair to keep you upright#!, 
                you're at the mercy of {THEM}. His vigorous thrusts make you knees weak and you find it
@@ -2615,7 +2615,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_REVERSE_COWGIRL, "Ride Facing Away",
                stam_cost_1=1.5, stam_cost_2=3,
                root_gender = MALE, partner_gender = FEMALE,
-               root_become_more_dom_chance=15,
+               root_become_more_sub_chance=15,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
                You close your eyes as your hips hungrily dance around {THEM}'s shaft, #bold shaking#! with pleasure.
@@ -2669,7 +2669,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_COWGIRL, "Ride Facing Them",
                stam_cost_1=1.0, stam_cost_2=2.0,
                root_gender = MALE, partner_gender = FEMALE,
-               root_become_more_dom_chance=10,
+               root_become_more_sub_chance=10,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
                You look in {THEM}'s eyes as you vigorously ride, his member under your complete control as you focus exclusively on satisfying yourself. \\n
@@ -2724,7 +2724,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_MISSIONARY, "Lie on Back",
                stam_cost_1=1.5, stam_cost_2=2,
                root_gender = MALE, partner_gender = FEMALE,
-               root_become_more_sub_chance=10,
+               root_become_more_dom_chance=10,
                animation_left=FLIRTATION_LEFT, animation_right=FLIRTATION_LEFT,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
@@ -2767,7 +2767,7 @@ def define_sex_events(es: EventMap):
     es.add(Sex(EventsSex.MF_PRONE_BONE, "Lie Face Down",
                stam_cost_1=2.5, stam_cost_2=3.5,
                root_gender = MALE, partner_gender = FEMALE,
-               root_become_more_sub_chance=15,
+               root_become_more_dom_chance=15,
                animation_left=FLIRTATION_LEFT, animation_right=FLIRTATION_LEFT,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
