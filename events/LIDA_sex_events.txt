@@ -11560,7 +11560,7 @@ LIDAs.15 = {
 	}
 	left_portrait = {
 		character = root
-		animation = idle
+		animation = personality_content
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -11572,7 +11572,7 @@ LIDAs.15 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = personality_content
+		animation = idle
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -11692,16 +11692,16 @@ LIDAs.15 = {
 		}
 		random = {
 			chance = 5
-			become_more_dom_effect = yes
+			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 5
-				become_more_sub_effect = yes
+				become_more_dom_effect = yes
 			}
 		}
 		save_scope_value_as = {
-			name = partner_naked
+			name = root_naked
 			value = yes
 		}
 	}
@@ -12370,16 +12370,16 @@ LIDAs.17 = {
 		}
 		random = {
 			chance = 5
-			become_more_dom_effect = yes
+			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 5
-				become_more_sub_effect = yes
+				become_more_dom_effect = yes
 			}
 		}
 		save_scope_value_as = {
-			name = partner_naked
+			name = root_naked
 			value = yes
 		}
 	}
@@ -12748,7 +12748,7 @@ LIDAs.18 = {
 	}
 	left_portrait = {
 		character = root
-		animation = throne_room_ruler_3
+		animation = flirtation
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -12760,7 +12760,7 @@ LIDAs.18 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = throne_room_ruler_3
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -13351,7 +13351,7 @@ LIDAs.18 = {
 			}
 		}
 		save_scope_value_as = {
-			name = partner_naked
+			name = root_naked
 			value = yes
 		}
 	}
@@ -13804,7 +13804,7 @@ LIDAs.20 = {
 	}
 	left_portrait = {
 		character = root
-		animation = throne_room_ruler_3
+		animation = flirtation
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -13816,7 +13816,7 @@ LIDAs.20 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = throne_room_ruler_3
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -14217,16 +14217,16 @@ LIDAs.20 = {
 		}
 		random = {
 			chance = 5
-			become_more_sub_effect = yes
+			become_more_dom_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 5
-				become_more_dom_effect = yes
+				become_more_sub_effect = yes
 			}
 		}
 		save_scope_value_as = {
-			name = partner_naked
+			name = root_naked
 			value = yes
 		}
 	}
@@ -14602,7 +14602,7 @@ LIDAs.21 = {
 	}
 	left_portrait = {
 		character = root
-		animation = throne_room_kneel_2
+		animation = flirtation
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -14614,7 +14614,7 @@ LIDAs.21 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = flirtation_left
+		animation = throne_room_kneel_2
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -14851,16 +14851,16 @@ LIDAs.21 = {
 		}
 		random = {
 			chance = 10
-			become_more_sub_effect = yes
+			become_more_dom_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 10
-				become_more_dom_effect = yes
+				become_more_sub_effect = yes
 			}
 		}
 		save_scope_value_as = {
-			name = partner_naked
+			name = root_naked
 			value = yes
 		}
 	}
@@ -15332,12 +15332,12 @@ LIDAs.16 = {
 		}
 		random = {
 			chance = 5
-			become_more_dom_effect = yes
+			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 5
-				become_more_sub_effect = yes
+				become_more_dom_effect = yes
 			}
 		}
 		save_scope_value_as = {
@@ -17618,7 +17618,7 @@ LIDAs.23 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation
+		animation = schadenfreude
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -17630,7 +17630,7 @@ LIDAs.23 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = schadenfreude
+		animation = flirtation_left
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -17984,12 +17984,12 @@ LIDAs.23 = {
 		}
 		random = {
 			chance = 5
-			become_more_sub_effect = yes
+			become_more_dom_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 5
-				become_more_dom_effect = yes
+				become_more_sub_effect = yes
 			}
 		}
 		save_scope_value_as = {
@@ -18410,7 +18410,7 @@ LIDAs.19 = {
 	}
 	left_portrait = {
 		character = root
-		animation = throne_room_bow_3
+		animation = schadenfreude
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -18422,7 +18422,7 @@ LIDAs.19 = {
 	}
 	right_portrait = {
 		character = scope:affairs_partner
-		animation = schadenfreude
+		animation = throne_room_bow_3
 		triggered_outfit = {
 			trigger = {
 				exists = scope:partner_naked
@@ -19005,12 +19005,12 @@ LIDAs.19 = {
 		}
 		random = {
 			chance = 7
-			become_more_sub_effect = yes
+			become_more_dom_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 7
-				become_more_dom_effect = yes
+				become_more_sub_effect = yes
 			}
 		}
 		save_scope_value_as = {
@@ -19900,12 +19900,12 @@ LIDAs.25 = {
 		}
 		random = {
 			chance = 15
-			become_more_dom_effect = yes
+			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 15
-				become_more_sub_effect = yes
+				become_more_dom_effect = yes
 			}
 		}
 		save_scope_value_as = {
@@ -20833,12 +20833,12 @@ LIDAs.26 = {
 		}
 		random = {
 			chance = 10
-			become_more_dom_effect = yes
+			become_more_sub_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 10
-				become_more_sub_effect = yes
+				become_more_dom_effect = yes
 			}
 		}
 		save_scope_value_as = {
@@ -21712,12 +21712,12 @@ LIDAs.27 = {
 		}
 		random = {
 			chance = 10
-			become_more_sub_effect = yes
+			become_more_dom_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 10
-				become_more_dom_effect = yes
+				become_more_sub_effect = yes
 			}
 		}
 		save_scope_value_as = {
@@ -22496,12 +22496,12 @@ LIDAs.28 = {
 		}
 		random = {
 			chance = 15
-			become_more_sub_effect = yes
+			become_more_dom_effect = yes
 		}
 		scope:affairs_partner = {
 			random = {
 				chance = 15
-				become_more_dom_effect = yes
+				become_more_sub_effect = yes
 			}
 		}
 		save_scope_value_as = {
