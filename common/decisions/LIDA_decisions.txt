@@ -12,7 +12,7 @@
 	cost = {
 		prestige = start_affair_cost
 	}
-	cooldown = { months = 1 }
+	cooldown = { years = 1 }
 	effect = {
 		custom_tooltip = start_affair_decision_tooltip
 		custom_tooltip = start_affair_decision_tooltip_subdom

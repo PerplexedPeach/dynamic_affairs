@@ -231,6 +231,9 @@ select_start_affairs_effect = {
 			trigger_event = LIDAf.20
 		}
 	}
+	else = {
+		trigger_event = LIDA.3
+	}
 }
 select_random_sex_source_effect = {
 	random_list = {
