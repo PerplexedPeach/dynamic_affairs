@@ -1435,6 +1435,8 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
                         attr.append("color=red")
                     elif option.category == OptionCategory.SUB and option.subdom_sub < 0:
                         attr.append("color=blue")
+                    if isinstance(option.next_id, EventsCum):
+                        attr.append("style=dotted")
 
                     attr.append(f"penwidth={option.weight / 5}")
 
