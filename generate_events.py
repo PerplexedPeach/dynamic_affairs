@@ -1344,28 +1344,29 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
         attr = "[" + ",".join(attr) + "]"
         return attr
 
-    gv_filename = "vis.gv"
-    with open(gv_filename, "w") as f:
-        f.write("digraph G {\n")
-        if horizontal:
-            f.write("rankdir=LR;\n")
-        f.write("fontname=Helvetica;\n")
-        # merge edges going back and forth - not good since we need different colors
-        # f.write("concentrate=true;\n")
-        f.write("compound=true;\n")
+    # organize events into gender pairings
+    pairings = [(FEMALE, MALE), (MALE, FEMALE), (FEMALE, FEMALE), (MALE, MALE)]
+    for pairing in pairings:
+        these_events = EventMap()
+        for event in events.all():
+            if event.root_gender == pairing[0] and event.partner_gender == pairing[1]:
+                these_events.add(event)
 
-        # organize events into gender pairings
-        pairings = [(FEMALE, MALE), (MALE, FEMALE), (FEMALE, FEMALE), (MALE, MALE)]
-        for pairing in pairings:
-            these_events = EventMap()
-            for event in events.all():
-                if event.root_gender == pairing[0] and event.partner_gender == pairing[1]:
-                    these_events.add(event)
+        if len(these_events.events) == 0:
+            continue
 
-            if len(these_events.events) == 0:
-                continue
+        suffix = f"{pairing[0]}{pairing[1]}"
 
-            suffix = f"{pairing[0]}{pairing[1]}"
+        gv_filename = f"vis_{suffix}.gv"
+        with open(gv_filename, "w") as f:
+            f.write("digraph G {\n")
+            if horizontal:
+                f.write("rankdir=LR;\n")
+            f.write("fontname=Helvetica;\n")
+            # merge edges going back and forth - not good since we need different colors
+            # f.write("concentrate=true;\n")
+            f.write("compound=true;\n")
+
             f.write(
                 f"subgraph cluster_{suffix} "
                 f"{{\n label=\"{pairing[0].upper()}/{pairing[1].upper()} Events\";\n")
@@ -1444,9 +1445,9 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
 
             f.write("}\n")
 
-        f.write("}\n")
+            f.write("}\n")
 
-    subprocess.run(["dot", "-Tpng", gv_filename, "-o", "vis.png"])
+        subprocess.run(["dot", "-Tpng", gv_filename, "-o", f"vis_{suffix}.png"])
 
 
 parser = argparse.ArgumentParser(
