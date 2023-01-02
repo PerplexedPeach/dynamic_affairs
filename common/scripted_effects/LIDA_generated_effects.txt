@@ -18,11 +18,11 @@ select_start_affairs_effect = {
 					modifier = dominant_opinion
 				}
 			}
-			# MEETING_WITH_SPOUSE
+			# FM_MEETING_WITH_SPOUSE
 			trigger_event = LIDAf.1
 		}
 		else = {
-			# MEETING_WITH_SPOUSE_INITIAL
+			# FM_MEETING_WITH_SPOUSE_INITIAL
 			trigger_event = LIDAf.2
 		}
 	}
@@ -41,11 +41,11 @@ select_start_affairs_effect = {
 					modifier = dominant_opinion
 				}
 			}
-			# MEETING_WITH_PRISONER
+			# FM_MEETING_WITH_PRISONER
 			trigger_event = LIDAf.7
 		}
 		else = {
-			# MEETING_WITH_PRISONER_INITIAL
+			# FM_MEETING_WITH_PRISONER_INITIAL
 			trigger_event = LIDAf.8
 		}
 	}
@@ -64,11 +64,11 @@ select_start_affairs_effect = {
 					modifier = dominant_opinion
 				}
 			}
-			# MEETING_WITH_LIEGE
+			# FM_MEETING_WITH_LIEGE
 			trigger_event = LIDAf.5
 		}
 		else = {
-			# MEETING_WITH_LIEGE_INITIAL
+			# FM_MEETING_WITH_LIEGE_INITIAL
 			trigger_event = LIDAf.6
 		}
 	}
@@ -87,11 +87,11 @@ select_start_affairs_effect = {
 					modifier = dominant_opinion
 				}
 			}
-			# MEETING_WITH_VASSAL
+			# FM_MEETING_WITH_VASSAL
 			trigger_event = LIDAf.3
 		}
 		else = {
-			# MEETING_WITH_VASSAL_INITIAL
+			# FM_MEETING_WITH_VASSAL_INITIAL
 			trigger_event = LIDAf.4
 		}
 	}
@@ -109,12 +109,126 @@ select_start_affairs_effect = {
 					modifier = dominant_opinion
 				}
 			}
-			# MEETING_WITH_ACQUAINTANCE
+			# FM_MEETING_WITH_ACQUAINTANCE
 			trigger_event = LIDAf.9
 		}
 		else = {
-			# MEETING_WITH_ACQUAINTANCE_INITIAL
+			# FM_MEETING_WITH_ACQUAINTANCE_INITIAL
 			trigger_event = LIDAf.10
+		}
+	}
+	if = {
+		limit = {
+			is_spouse_of = scope:affairs_partner
+			is_female = no
+			scope:affairs_partner = {
+				is_female = yes
+			}
+		}
+		if = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+				}
+			}
+			# MF_MEETING_WITH_SPOUSE
+			trigger_event = LIDAf.11
+		}
+		else = {
+			# MF_MEETING_WITH_SPOUSE_INITIAL
+			trigger_event = LIDAf.12
+		}
+	}
+	else_if = {
+		limit = {
+			is_in_list = prisoner_list
+			is_female = no
+			scope:affairs_partner = {
+				is_female = yes
+			}
+		}
+		if = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+				}
+			}
+			# MF_MEETING_WITH_PRISONER
+			trigger_event = LIDAf.17
+		}
+		else = {
+			# MF_MEETING_WITH_PRISONER_INITIAL
+			trigger_event = LIDAf.18
+		}
+	}
+	else_if = {
+		limit = {
+			is_vassal_or_below_of = scope:affairs_partner
+			is_female = no
+			scope:affairs_partner = {
+				is_female = yes
+			}
+		}
+		if = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+				}
+			}
+			# MF_MEETING_WITH_LIEGE
+			trigger_event = LIDAf.15
+		}
+		else = {
+			# MF_MEETING_WITH_LIEGE_INITIAL
+			trigger_event = LIDAf.16
+		}
+	}
+	else_if = {
+		limit = {
+			target_is_vassal_or_below = scope:affairs_partner
+			is_female = no
+			scope:affairs_partner = {
+				is_female = yes
+			}
+		}
+		if = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+				}
+			}
+			# MF_MEETING_WITH_VASSAL
+			trigger_event = LIDAf.13
+		}
+		else = {
+			# MF_MEETING_WITH_VASSAL_INITIAL
+			trigger_event = LIDAf.14
+		}
+	}
+	else_if = {
+		limit = {
+			is_female = no
+			scope:affairs_partner = {
+				is_female = yes
+			}
+		}
+		if = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+				}
+			}
+			# MF_MEETING_WITH_ACQUAINTANCE
+			trigger_event = LIDAf.19
+		}
+		else = {
+			# MF_MEETING_WITH_ACQUAINTANCE_INITIAL
+			trigger_event = LIDAf.20
 		}
 	}
 	else = {
@@ -140,6 +254,24 @@ select_random_sex_source_effect = {
 				}
 			}
 			trigger_event = LIDAs.2
+		}
+		100 = {
+			trigger = {
+				is_female = no
+				scope:affairs_partner = {
+					is_female = yes
+				}
+			}
+			trigger_event = LIDAs.15
+		}
+		100 = {
+			trigger = {
+				is_female = no
+				scope:affairs_partner = {
+					is_female = yes
+				}
+			}
+			trigger_event = LIDAs.16
 		}
 	}
 }
