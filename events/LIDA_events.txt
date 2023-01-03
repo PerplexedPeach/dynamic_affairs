@@ -199,6 +199,9 @@ LIDA.100 = {
 		desc = LIDA.100.desc
 		# triggered description with triggered_desc
 	}
+	trigger = {
+		any_affair_candidate_trigger = { TRIGGER = has_money_to_start_affair }
+	}
 	# probably can use a custom theme
 	theme = seduction
 	override_background = {
@@ -294,6 +297,7 @@ LIDA.100 = {
 				# prisoners don't have the freedom to proposition you
 				is_imprisoned = no
 				age >= 18
+				gold > scope:gold_cost_half
 			}
 			save_temporary_scope_as = affairs_candidate
 			weight = {
@@ -306,20 +310,16 @@ LIDA.100 = {
 						multiply = 50
 					}
 				}
-				modifier = {
-					factor = 0.1
-					gold < scope:gold_cost_half
-				}
 				# more likely if they have extra coins to spare
 				modifier = {
-					factor = 1.5
+					factor = 2.5
 					gold >= scope:gold_cost_extra
 				}
 
 				# if you've already had an affair with this person then they're unlikely to pay you for it
 				# however, it's still more likely than not since they know you're open for it, so it's not as big of a factor
 				modifier = {
-					add = 40
+					add = 20
 					has_opinion_modifier = {
 						target = root
 						modifier = dominant_opinion

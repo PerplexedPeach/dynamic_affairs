@@ -7,8 +7,13 @@ any_affair_candidate_trigger = {
 		cp:councillor_court_chaplain = { 
 			$TRIGGER$ = yes
 		}
-		primary_spouse = { 
-			$TRIGGER$ = yes
+		trigger_if = {
+			limit = {
+				exists = primary_spouse
+			}
+			primary_spouse = { 
+				$TRIGGER$ = yes
+			}
 		}
 		any_normal_councillor = {
 			$TRIGGER$ = yes
@@ -32,4 +37,8 @@ you_dom_them = {
 		modifier = dominant_opinion
 		value >= 10
 	}
+}
+
+has_money_to_start_affair = {
+	gold >= root.standard_activity_cost
 }
