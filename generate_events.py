@@ -1213,7 +1213,7 @@ def generate_strings(events, options):
                                EventsFirst.FM_MEETING_WITH_ACQUAINTANCE)
 
         # M/F Events
-        with Block(b, IF):
+        with Block(b, ELSE_IF):
             with Block(b, LIMIT):
                 b.assign(IS_SPOUSE_OF, AFFAIRS_PARTNER)
                 inside_limit_check_gender(b, MALE, FEMALE)

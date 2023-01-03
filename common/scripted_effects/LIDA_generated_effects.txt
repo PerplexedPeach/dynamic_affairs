@@ -117,7 +117,7 @@ select_start_affairs_effect = {
 			trigger_event = LIDAf.10
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			is_spouse_of = scope:affairs_partner
 			is_female = no
