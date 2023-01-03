@@ -784,6 +784,8 @@ class Desc:
 
 
 class TriggeredDesc(Desc):
+    """Generate a desc if a trigger is satisfied"""
+
     def __init__(self, trigger_condition, desc):
         self.trigger_condition = trigger_condition
         super(TriggeredDesc, self).__init__(desc)
@@ -797,6 +799,8 @@ class TriggeredDesc(Desc):
 
 
 class ComposedDesc(Desc):
+    """Chain a sequence of Desc linearly"""
+
     def __init__(self, *descs: typing.Union[Desc, str]):
         self.descs = [d if isinstance(d, Desc) else Desc(d) for d in descs]
         for i, d in enumerate(self.descs):
@@ -807,6 +811,25 @@ class ComposedDesc(Desc):
         with Block(b, DESC):
             for desc in self.descs:
                 desc.generate_desc(b, o)
+
+    def generate_localization(self, b: Describable):
+        return "\n".join([d.generate_localization(b) for d in self.descs])
+
+
+class RandomDesc(Desc):
+    """Randomly choose among a set of Desc"""
+
+    def __init__(self, *descs: typing.Union[Desc, str]):
+        self.descs = [d if isinstance(d, Desc) else Desc(d) for d in descs]
+        for i, d in enumerate(self.descs):
+            d.subid = i
+        super(RandomDesc, self).__init__("")
+
+    def generate_desc(self, b: Event, o: typing.Optional[Option] = None):
+        with Block(b, DESC):
+            with Block(b, RANDOM_VALID):
+                for desc in self.descs:
+                    desc.generate_desc(b, o)
 
     def generate_localization(self, b: Describable):
         return "\n".join([d.generate_localization(b) for d in self.descs])
