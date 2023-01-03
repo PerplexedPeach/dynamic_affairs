@@ -76,13 +76,14 @@ Note the locales currently used:
 
 ## Sex Event Writing Guide
 Sex events are a special form of highly structured events. 
-All code is inside `generate_events.py`.
-You'll care mostly about the `EventSex`, `EventCum` enums at the top of the file which has the IDs for all types
-of events. It's pretty straightforward, and you should just follow the existing event conventions.
+All code is inside `defines.py` and `generate_events.py`.
+You'll care mostly about the `EventSex`, `EventCum` enums at the top of the `defines.py` which has the IDs for all types
+of events. It's pretty straightforward, and you should just follow the existing event conventions. Append new events to
+the bottom of the enums without changing existing event IDs.
 
-For event writing, you should write everything in **second person present tense**.
+You should write everything in **second person present tense**.
 You'll care most about the `define_sex_events`, `define_cum_events`, and `define_first_events` functions at
-the bottom of the file, where you can define events
+the bottom of the `generate_events.py`, where you can define events
 in the format of the following commented example:
 ```python
     # Sex is the event class; use Cum for the cum events
@@ -141,6 +142,8 @@ in the format of the following commented example:
                )))
 ```
 
+## Dynamic Descriptions
+The `Desc` class allows for more advanced descriptions than just a string of text.
 Below is an example of more advanced composed and triggered descriptions that allow you to gate descriptions behind
 triggered conditions. A string can be used in place of a `Desc` object (will be converted).
 ```python
