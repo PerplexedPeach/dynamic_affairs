@@ -3,7 +3,7 @@ import subprocess
 
 from defines import *
 from event import BlockRoot, Block, Event, Cum, First, Sex, OptionCategory, Option, TriggeredDesc, ComposedDesc, \
-    Modifier, AddModifier
+    Modifier, AddModifier, RepeatedSex
 from util import event_type_namespace
 
 
@@ -18,6 +18,11 @@ class EventMap:
 
     def __getitem__(self, event_id: EventId):
         return self.events[event_id]
+
+    def sex(self, event_id: EventsSex):
+        e = self.events[event_id]
+        assert isinstance(e, Sex)
+        return e
 
     def all(self):
         return self.events.values()
@@ -639,6 +644,39 @@ def define_sex_events_fm(es: EventMap):
                           transition_text=f"""
                               You pull away and look up, preparing for him to mark your face."""),
                )))
+    # TODO define these repeated events
+    es.add(RepeatedSex(EventsSex.FM_BLOWJOB_DOM_I, "Dom Blowjob I", base_event=es.sex(EventsSex.FM_BLOWJOB_DOM),
+                       root_become_more_dom_chance=5,
+                       desc=f"""
+                       placeholder""",
+                       options=(
+                           Option(EventsSex.FM_BLOWJOB_DOM_II, OptionCategory.DOM,
+                                  "Continue milking his cock with your lips and tongue",
+                                  transition_text=f"""
+                              You continue to bob your head back and forth, occasionally glancing up and making adjustments
+                              based on their expression. The fact that you have total control over {THEM}'s pleasure makes
+                              you excited.""",
+                                  failed_transition_text=f"""
+                              The incessant invasion of his member down your throat
+                              momentarily puts you in a trance, leaving the initiative in his hands.""",
+                                  ),
+                       )))
+    es.add(RepeatedSex(EventsSex.FM_BLOWJOB_DOM_II, "Dom Blowjob II", base_event=es.sex(EventsSex.FM_BLOWJOB_DOM_I),
+                       root_become_more_dom_chance=5,
+                       desc=f"""
+                       placeholder""",
+                       options=(
+                           Option(EventsSex.FM_BLOWJOB_DOM_II, OptionCategory.DOM,
+                                  "Continue milking his cock with your lips and tongue",
+                                  transition_text=f"""
+                              You continue to bob your head back and forth, occasionally glancing up and making adjustments
+                              based on their expression. The fact that you have total control over {THEM}'s pleasure makes
+                              you excited.""",
+                                  failed_transition_text=f"""
+                              The incessant invasion of his member down your throat
+                              momentarily puts you in a trance, leaving the initiative in his hands.""",
+                                  ),
+                       )))
     es.add(Sex(EventsSex.FM_BLOWJOB_SUB, "Sub Blowjob",
                stam_cost_1=1.0, stam_cost_2=1.5,
                root_gender=FEMALE, partner_gender=MALE,

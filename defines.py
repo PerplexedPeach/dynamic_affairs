@@ -70,6 +70,8 @@ class EventsSex(enum.Enum):
     MF_MISSIONARY = 34
     MF_PRONE_BONE = 35
     FM_FOOTJOB = 36
+    FM_BLOWJOB_DOM_I = 37
+    FM_BLOWJOB_DOM_II = 38
 
 
 class EventsCum(enum.Enum):

@@ -1,5 +1,6 @@
 from defines import *
 from util import clean_str, event_type_namespace
+import copy
 
 
 class BlockRoot:
@@ -238,9 +239,22 @@ class Event(BlockRoot):
         with Block(self, CHANGE_SUBDOM_EFFECT):
             self.assign(CHANGE, change)
 
+    def filter_repeat_option_from_options(self, options_list):
+        # if we have a Repeat event always make that a choice
+        non_repeat_options = []
+        repeat_option = None
+        for option in options_list:
+            if isinstance(option.next_event, RepeatedSex) and self.id != option.next_id:
+                repeat_option = option
+            else:
+                non_repeat_options.append(option)
+        return non_repeat_options, repeat_option
+
     def generate_options_transition(self, options_list, option_transition_str):
+        options_list, _ = self.filter_repeat_option_from_options(options_list)
         if len(options_list) == 0:
             return
+
         for choice in range(min(len(options_list), max_options_per_type)):
             with Block(self, RANDOM_LIST):
                 for option in options_list:
@@ -568,53 +582,62 @@ class Sex(Event):
 
         super(Sex, self).generate_immediate_effect()
 
+    def generate_single_option(self, option: Option, root_cum_terminates, categories_to_options):
+        self.add_debug_comment(str(option))
+        self.assign(NAME, option.fullname)
+        if option.tooltip is not None:
+            self.assign(CUSTOM_TOOLTIP, f"{option.fullname}.tt")
+
+        with Block(self, TRIGGER):
+            if option.category in [OptionCategory.DOM, OptionCategory.SUB]:
+                # non-cum options are only available if finisher is not cumming
+                if not isinstance(option.next_id, EventsCum):
+                    self.add_line(f"{SCOPE}:{FINISHER_STAMINA} > 0")
+                trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
+                with Block(self, OR):
+                    for choice in range(max_options_per_type):
+                        self.assign(f"{SCOPE}:{trans_type}_{choice}", option.id)
+
+        # save this event
+        self.save_scope_value_as(PREV_EVENT, self.id.value)
+        # for dom options, it could backfire and get you more dommed
+        if option.category == OptionCategory.DOM:
+            self.generate_dom_option_effect(option, categories_to_options[OptionCategory.SUB])
+            if root_cum_terminates:
+                # partner cumming makes dom easier
+                with Block(self, IF):
+                    with Block(self, LIMIT):
+                        self.add_line(f"{PARTNER_STAMINA} <= 0")
+                    self.assign(CUSTOM_TOOLTIP, EASY_DOM_DUE_TO_CUM_TOOLTIP)
+                    self.assign(ADD_INTERNAL_FLAG, SPECIAL)
+            else:
+                # cumming decreases dom success
+                with Block(self, IF):
+                    with Block(self, LIMIT):
+                        self.add_line(f"{ROOT_STAMINA} <= 0")
+                    self.assign(CUSTOM_TOOLTIP, CANT_DOM_DUE_TO_CUM_TOOLTIP)
+                    self.assign(ADD_INTERNAL_FLAG, DANGEROUS)
+        elif option.category == OptionCategory.SUB:
+            self.generate_sub_option_effect(option)
+        else:
+            raise RuntimeError(f"Unsupported option category {option.category}")
+
     def generate_options(self):
         categories_to_options = {c: [] for c in OptionCategory}
-        for option in self.options:
+        options, repeat_option = self.filter_repeat_option_from_options(self.options)
+
+        for option in options:
             categories_to_options[option.category].append(option)
 
         root_cum_terminates = self.root_stamina_decides_finish()
-        for option in self.options:
+        # always an option to repeat itself
+        if repeat_option is not None:
             with Block(self, OPTION):
-                self.add_debug_comment(str(option))
-                self.assign(NAME, option.fullname)
-                if option.tooltip is not None:
-                    self.assign(CUSTOM_TOOLTIP, f"{option.fullname}.tt")
-
-                # for some reason show_as_unavailable is not a subset of trigger, so have to duplicate it
-                with Block(self, TRIGGER):
-                    if option.category in [OptionCategory.DOM, OptionCategory.SUB]:
-                        # non-cum options are only available if finisher is not cumming
-                        if not isinstance(option.next_id, EventsCum):
-                            self.add_line(f"{SCOPE}:{FINISHER_STAMINA} > 0")
-                        trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
-                        with Block(self, OR):
-                            for choice in range(max_options_per_type):
-                                self.assign(f"{SCOPE}:{trans_type}_{choice}", option.id)
-
-                # save this event
-                self.save_scope_value_as(PREV_EVENT, self.id.value)
-                # for dom options, it could backfire and get you more dommed
-                if option.category == OptionCategory.DOM:
-                    self.generate_dom_option_effect(option, categories_to_options[OptionCategory.SUB])
-                    if root_cum_terminates:
-                        # partner cumming makes dom easier
-                        with Block(self, IF):
-                            with Block(self, LIMIT):
-                                self.add_line(f"{PARTNER_STAMINA} <= 0")
-                            self.assign(CUSTOM_TOOLTIP, EASY_DOM_DUE_TO_CUM_TOOLTIP)
-                            self.assign(ADD_INTERNAL_FLAG, SPECIAL)
-                    else:
-                        # cumming decreases dom success
-                        with Block(self, IF):
-                            with Block(self, LIMIT):
-                                self.add_line(f"{ROOT_STAMINA} <= 0")
-                            self.assign(CUSTOM_TOOLTIP, CANT_DOM_DUE_TO_CUM_TOOLTIP)
-                            self.assign(ADD_INTERNAL_FLAG, DANGEROUS)
-                elif option.category == OptionCategory.SUB:
-                    self.generate_sub_option_effect(option)
-                else:
-                    raise RuntimeError(f"Unsupported option category {option.category}")
+                self.generate_single_option(repeat_option, root_cum_terminates, categories_to_options)
+                self.assign(ADD_INTERNAL_FLAG, SPECIAL)
+        for option in options:
+            with Block(self, OPTION):
+                self.generate_single_option(option, root_cum_terminates, categories_to_options)
 
     def generate_sub_option_effect(self, option):
         self.assign(CUSTOM_TOOLTIP, VOLUNTARY_SUB_TOOLTIP)
@@ -657,6 +680,51 @@ class Sex(Event):
                     with Block(self, LIMIT):
                         self.assign(f"{SCOPE}:{SUB_TRANSITION}_0", sub_option.id)
                     self.assign(TRIGGER_EVENT, sub_option.next_event.fullname)
+
+
+class RepeatedSex(Sex):
+    """Class for representing repeated choice of an event"""
+
+    def __init__(self, *args, base_event: Sex = None, **kwargs):
+        super(RepeatedSex, self).__init__(*args, **kwargs)
+        has_option_to_this = False
+        non_repeat_options = []
+        for o in base_event.options:
+            # convert this option to point towards us, so can either define that option as pointing to itself or to us
+            if o.next_id == base_event.id:
+                o.next_id = self.id
+                has_option_to_this = True
+            elif o.next_id == self.id:
+                has_option_to_this = True
+            else:
+                non_repeat_options.append(copy.copy(o))
+        if not has_option_to_this:
+            raise RuntimeError(f"{base_event.id} base event needs an option pointing to itself or {self.id}")
+        # inherit all non-looping out-going options
+        self.options = list(self.options) + non_repeat_options
+        # inherit certain options from base event if they're not specified when constructing this event
+        self.root_gender = base_event.root_gender
+        self.partner_gender = base_event.partner_gender
+        if 'root_cum_text' not in kwargs:
+            self.root_cum_text = base_event.root_cum_text
+        if 'partner_cum_text' not in kwargs:
+            self.partner_cum_text = base_event.partner_cum_text
+        if 'force_root_stamina_finishes' not in kwargs:
+            self.force_root_stamina_finishes = base_event.force_root_stamina_finishes
+        if 'root_become_more_sub_chance' not in kwargs:
+            self.root_become_more_sub_chance = base_event.root_become_more_sub_chance
+        if 'root_become_more_dom_chance' not in kwargs:
+            self.root_become_more_dom_chance = base_event.root_become_more_dom_chance
+        if 'animation_left' not in kwargs:
+            self.anim_l = base_event.anim_l
+        if 'animation_right' not in kwargs:
+            self.anim_r = base_event.anim_r
+        if 'theme' not in kwargs:
+            self.theme = base_event.theme
+        if 'stam_cost_1' not in kwargs:
+            self.stam_cost_1 = base_event.stam_cost_1
+        if 'stam_cost_2' not in kwargs:
+            self.stam_cost_2 = base_event.stam_cost_2
 
 
 class Desc:

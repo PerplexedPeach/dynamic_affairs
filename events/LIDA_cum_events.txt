@@ -157,11 +157,11 @@ LIDAc.1 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 30
+					scope:sex_transition = 44
 				}
 				# Sub Blowjob
 				# Pulling away, you deprive him of the warmth of your mouth.\n
-				desc = sex_transition_30.0
+				desc = sex_transition_44.0
 			}
 			triggered_desc = {
 				trigger = {
@@ -205,20 +205,20 @@ LIDAc.1 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10027
+					scope:sex_transition = 10041
 				}
-				# 27: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_DOM failed
+				# 41: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_DOM failed
 				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
-				desc = sex_transition_27.10000
+				desc = sex_transition_41.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10030
+					scope:sex_transition = 10044
 				}
-				# 30: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
+				# 44: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
-				desc = sex_transition_30.10000
+				desc = sex_transition_44.10000
 			}
 		}
 		triggered_desc = {
@@ -238,8 +238,8 @@ LIDAc.1 = {
 				exists = scope:prev_event
 				scope:prev_event = 10
 			}
-			# defaulted to 30: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND
-			desc = sex_transition_30.0
+			# defaulted to 44: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND
+			desc = sex_transition_44.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -297,7 +297,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.174
+		name = LIDAoption.188
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -451,164 +451,164 @@ LIDAc.6 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 39
+					scope:sex_transition = 53
 				}
 				# Ass Tease
 				# You manage to guide his stream onto your cheeks.\n
-				desc = sex_transition_39.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 44
-				}
-				# Ass Rub
-				# You manage to guide his stream onto your cheeks.\n
-				desc = sex_transition_44.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 52
-				}
-				# Get Hotdogged
-				# You manage to guide his stream onto your cheeks.\n
-				desc = sex_transition_52.0
+				desc = sex_transition_53.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 58
 				}
-				# Fingered from Behind
+				# Ass Rub
 				# You manage to guide his stream onto your cheeks.\n
 				desc = sex_transition_58.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10036
+					scope:sex_transition = 66
 				}
-				# 36: EventsSex.FM_ASS_TEASE -> EventsSex.FM_ASS_RUB failed
+				# Get Hotdogged
+				# You manage to guide his stream onto your cheeks.\n
+				desc = sex_transition_66.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 72
+				}
+				# Fingered from Behind
+				# You manage to guide his stream onto your cheeks.\n
+				desc = sex_transition_72.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10050
+				}
+				# 50: EventsSex.FM_ASS_TEASE -> EventsSex.FM_ASS_RUB failed
 				# You have better uses for that hard cock than just teasing it.\n
-				desc = sex_transition_36.10000
+				desc = sex_transition_50.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10037
+					scope:sex_transition = 10051
 				}
-				# 37: EventsSex.FM_ASS_TEASE -> EventsSex.FM_HANDJOB failed
+				# 51: EventsSex.FM_ASS_TEASE -> EventsSex.FM_HANDJOB failed
 				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
-				desc = sex_transition_37.10000
+				desc = sex_transition_51.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10039
+					scope:sex_transition = 10053
 				}
-				# 39: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
+				# 53: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition_39.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10041
-				}
-				# 41: EventsSex.FM_ASS_RUB -> EventsSex.FM_ASS_RUB failed
-				# You have better uses for that hard cock than just teasing it\n
-				desc = sex_transition_41.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10042
-				}
-				# 42: EventsSex.FM_ASS_RUB -> EventsSex.FM_HANDJOB failed
-				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
-				desc = sex_transition_42.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10044
-				}
-				# 44: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition_44.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10046
-				}
-				# 46: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB failed
-				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
-				desc = sex_transition_46.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10047
-				}
-				# 47: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG failed
-				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
-				desc = sex_transition_47.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10048
-				}
-				# 48: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL failed
-				# You try to force him to the ground, but as you push your groin backwards something #italic enters#! you and [affairs_partner.GetFirstName] wraps an arm around your bosom, holding you in place.\n
-				desc = sex_transition_48.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10049
-				}
-				# 49: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM failed
-				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
-				desc = sex_transition_49.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10052
-				}
-				# 52: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition_52.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10054
-				}
-				# 54: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_HOTDOG failed
-				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
-				desc = sex_transition_54.10000
+				desc = sex_transition_53.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10055
 				}
-				# 55: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
+				# 55: EventsSex.FM_ASS_RUB -> EventsSex.FM_ASS_RUB failed
+				# You have better uses for that hard cock than just teasing it\n
 				desc = sex_transition_55.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10056
+				}
+				# 56: EventsSex.FM_ASS_RUB -> EventsSex.FM_HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				desc = sex_transition_56.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10058
 				}
-				# 58: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# 58: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_58.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10060
+				}
+				# 60: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB failed
+				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
+				desc = sex_transition_60.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10061
+				}
+				# 61: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG failed
+				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
+				desc = sex_transition_61.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10062
+				}
+				# 62: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL failed
+				# You try to force him to the ground, but as you push your groin backwards something #italic enters#! you and [affairs_partner.GetFirstName] wraps an arm around your bosom, holding you in place.\n
+				desc = sex_transition_62.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10063
+				}
+				# 63: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM failed
+				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
+				desc = sex_transition_63.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10066
+				}
+				# 66: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_66.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10068
+				}
+				# 68: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_HOTDOG failed
+				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_68.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10069
+				}
+				# 69: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
+				desc = sex_transition_69.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10072
+				}
+				# 72: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_72.10000
 			}
 		}
 		triggered_desc = {
@@ -618,8 +618,8 @@ LIDAc.6 = {
 				exists = scope:prev_event
 				scope:prev_event = 4
 			}
-			# defaulted to 39: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
-			desc = sex_transition_39.0
+			# defaulted to 53: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_53.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -628,8 +628,8 @@ LIDAc.6 = {
 				exists = scope:prev_event
 				scope:prev_event = 14
 			}
-			# defaulted to 44: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
-			desc = sex_transition_44.0
+			# defaulted to 58: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_58.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -638,8 +638,8 @@ LIDAc.6 = {
 				exists = scope:prev_event
 				scope:prev_event = 12
 			}
-			# defaulted to 52: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
-			desc = sex_transition_52.0
+			# defaulted to 66: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_66.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -648,8 +648,8 @@ LIDAc.6 = {
 				exists = scope:prev_event
 				scope:prev_event = 13
 			}
-			# defaulted to 58: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
-			desc = sex_transition_58.0
+			# defaulted to 72: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_72.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -718,7 +718,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.175
+		name = LIDAoption.189
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -890,11 +890,29 @@ LIDAc.4 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 32
+					scope:sex_transition = 33
+				}
+				# Dom Blowjob I
+				# You pull away and look up, preparing for him to mark your face.\n
+				desc = sex_transition_33.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 40
+				}
+				# Dom Blowjob II
+				# You pull away and look up, preparing for him to mark your face.\n
+				desc = sex_transition_40.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 46
 				}
 				# Sub Blowjob
 				# You don't resist when he pulls out and aims his rod at your face.\n
-				desc = sex_transition_32.0
+				desc = sex_transition_46.0
 			}
 			triggered_desc = {
 				trigger = {
@@ -949,7 +967,7 @@ LIDAc.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10021
 				}
-				# 21: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM failed
+				# 21: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM_I failed
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
 				desc = sex_transition_21.10000
 			}
@@ -967,18 +985,72 @@ LIDAc.4 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10027
 				}
-				# 27: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_DOM failed
-				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
+				# 27: EventsSex.FM_BLOWJOB_DOM_I -> EventsSex.FM_BLOWJOB_DOM_II failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
 				desc = sex_transition_27.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10030
+					scope:sex_transition = 10028
 				}
-				# 30: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
+				# 28: EventsSex.FM_BLOWJOB_DOM_I -> EventsSex.FM_HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_28.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10031
+				}
+				# 31: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_31.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10034
+				}
+				# 34: EventsSex.FM_BLOWJOB_DOM_II -> EventsSex.FM_BLOWJOB_DOM_II failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_34.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10035
+				}
+				# 35: EventsSex.FM_BLOWJOB_DOM_II -> EventsSex.FM_HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_35.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10038
+				}
+				# 38: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_38.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10041
+				}
+				# 41: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_DOM failed
+				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
+				desc = sex_transition_41.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10044
+				}
+				# 44: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
-				desc = sex_transition_30.10000
+				desc = sex_transition_44.10000
 			}
 		}
 		triggered_desc = {
@@ -1006,10 +1078,30 @@ LIDAc.4 = {
 				exists = scope:sex_transition
 				scope:sex_transition > 10000
 				exists = scope:prev_event
+				scope:prev_event = 37
+			}
+			# defaulted to 33: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_33.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 38
+			}
+			# defaulted to 40: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_40.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
 				scope:prev_event = 10
 			}
-			# defaulted to 32: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_BLOWJOB_CUM_ON_FACE
-			desc = sex_transition_32.0
+			# defaulted to 46: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_46.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -1067,7 +1159,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.176
+		name = LIDAoption.190
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -1230,6 +1322,24 @@ LIDAc.2 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 32
+				}
+				# Dom Blowjob I
+				# You prepare to wring him dry with your dexterous tongue.\n
+				desc = sex_transition_32.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 39
+				}
+				# Dom Blowjob II
+				# You prepare to wring him dry with your dexterous tongue.\n
+				desc = sex_transition_39.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 10020
 				}
 				# 20: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_HANDJOB failed
@@ -1241,7 +1351,7 @@ LIDAc.2 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10021
 				}
-				# 21: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM failed
+				# 21: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM_I failed
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
 				desc = sex_transition_21.10000
 			}
@@ -1254,6 +1364,60 @@ LIDAc.2 = {
 				# As you try to pull back, he holds the back of your head with his hands.\n
 				desc = sex_transition_24.10000
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10027
+				}
+				# 27: EventsSex.FM_BLOWJOB_DOM_I -> EventsSex.FM_BLOWJOB_DOM_II failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_27.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10028
+				}
+				# 28: EventsSex.FM_BLOWJOB_DOM_I -> EventsSex.FM_HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_28.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10031
+				}
+				# 31: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_31.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10034
+				}
+				# 34: EventsSex.FM_BLOWJOB_DOM_II -> EventsSex.FM_BLOWJOB_DOM_II failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_34.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10035
+				}
+				# 35: EventsSex.FM_BLOWJOB_DOM_II -> EventsSex.FM_HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_35.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10038
+				}
+				# 38: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_38.10000
+			}
 		}
 		triggered_desc = {
 			trigger = {
@@ -1264,6 +1428,26 @@ LIDAc.2 = {
 			}
 			# defaulted to 25: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_DOM
 			desc = sex_transition_25.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 37
+			}
+			# defaulted to 32: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_DOM
+			desc = sex_transition_32.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 38
+			}
+			# defaulted to 39: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_DOM
+			desc = sex_transition_39.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -1302,7 +1486,7 @@ LIDAc.2 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.177
+		name = LIDAoption.191
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -1456,47 +1640,47 @@ LIDAc.3 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 31
+					scope:sex_transition = 45
 				}
 				# Sub Blowjob
 				# You don't resist when he plunges into your mouth to deposit his seed.\n
-				desc = sex_transition_31.0
+				desc = sex_transition_45.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 35
+					scope:sex_transition = 49
 				}
 				# Deepthroat
 				# You don't have any say in it, or in anything else at the moment, as his mass fills your throat.\n
-				desc = sex_transition_35.0
+				desc = sex_transition_49.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10027
+					scope:sex_transition = 10041
 				}
-				# 27: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_DOM failed
+				# 41: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_BLOWJOB_DOM failed
 				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
-				desc = sex_transition_27.10000
+				desc = sex_transition_41.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10030
+					scope:sex_transition = 10044
 				}
-				# 30: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
+				# 44: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
-				desc = sex_transition_30.10000
+				desc = sex_transition_44.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10033
+					scope:sex_transition = 10047
 				}
-				# 33: EventsSex.FM_DEEPTHROAT -> EventsSex.FM_BLOWJOB_SUB failed
+				# 47: EventsSex.FM_DEEPTHROAT -> EventsSex.FM_BLOWJOB_SUB failed
 				# Putting both hands on his waist, you push and try to stop his thrusts. It's all in vain, however, as he ignores you.\n
-				desc = sex_transition_33.10000
+				desc = sex_transition_47.10000
 			}
 		}
 		triggered_desc = {
@@ -1506,8 +1690,8 @@ LIDAc.3 = {
 				exists = scope:prev_event
 				scope:prev_event = 10
 			}
-			# defaulted to 31: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_SUB
-			desc = sex_transition_31.0
+			# defaulted to 45: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_SUB
+			desc = sex_transition_45.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -1516,8 +1700,8 @@ LIDAc.3 = {
 				exists = scope:prev_event
 				scope:prev_event = 11
 			}
-			# defaulted to 35: EventsSex.FM_DEEPTHROAT -> EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_SUB
-			desc = sex_transition_35.0
+			# defaulted to 49: EventsSex.FM_DEEPTHROAT -> EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_SUB
+			desc = sex_transition_49.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -1581,7 +1765,7 @@ LIDAc.3 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.178
+		name = LIDAoption.192
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -1753,6 +1937,24 @@ LIDAc.5 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 31
+				}
+				# Dom Blowjob I
+				# You pull back and slap his rod, disrupting the build up to his climax.\n
+				desc = sex_transition_31.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 38
+				}
+				# Dom Blowjob II
+				# You pull back and slap his rod, disrupting the build up to his climax.\n
+				desc = sex_transition_38.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 10015
 				}
 				# 15: EventsSex.FM_HANDJOB -> EventsSex.FM_HANDJOB failed
@@ -1803,7 +2005,7 @@ LIDAc.5 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10021
 				}
-				# 21: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM failed
+				# 21: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM_I failed
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
 				desc = sex_transition_21.10000
 			}
@@ -1815,6 +2017,60 @@ LIDAc.5 = {
 				# 24: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
 				desc = sex_transition_24.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10027
+				}
+				# 27: EventsSex.FM_BLOWJOB_DOM_I -> EventsSex.FM_BLOWJOB_DOM_II failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_27.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10028
+				}
+				# 28: EventsSex.FM_BLOWJOB_DOM_I -> EventsSex.FM_HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_28.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10031
+				}
+				# 31: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_31.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10034
+				}
+				# 34: EventsSex.FM_BLOWJOB_DOM_II -> EventsSex.FM_BLOWJOB_DOM_II failed
+				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
+				desc = sex_transition_34.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10035
+				}
+				# 35: EventsSex.FM_BLOWJOB_DOM_II -> EventsSex.FM_HANDJOB failed
+				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
+				desc = sex_transition_35.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10038
+				}
+				# 38: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_RUINED_ORGASM failed
+				# As you try to pull back, he holds the back of your head with his hands.\n
+				desc = sex_transition_38.10000
 			}
 		}
 		triggered_desc = {
@@ -1836,6 +2092,26 @@ LIDAc.5 = {
 			}
 			# defaulted to 24: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_RUINED_ORGASM
 			desc = sex_transition_24.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 37
+			}
+			# defaulted to 31: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_RUINED_ORGASM
+			desc = sex_transition_31.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition > 10000
+				exists = scope:prev_event
+				scope:prev_event = 38
+			}
+			# defaulted to 38: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_RUINED_ORGASM
+			desc = sex_transition_38.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -1880,7 +2156,7 @@ LIDAc.5 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.179
+		name = LIDAoption.193
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -2034,145 +2310,73 @@ LIDAc.8 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 64
+					scope:sex_transition = 78
 				}
 				# Standing Fucked from Behind
 				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans.\n
-				desc = sex_transition_64.0
+				desc = sex_transition_78.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 70
+					scope:sex_transition = 84
 				}
 				# Ride Facing Away
 				# You put your hand on his rod, guiding him to unload on your cheeks instead\n
-				desc = sex_transition_70.0
+				desc = sex_transition_84.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 77
+					scope:sex_transition = 91
 				}
 				# Ride Facing Them
 				# You put your hand on his rod, guiding him to unload on your cheeks instead\n
-				desc = sex_transition_77.0
+				desc = sex_transition_91.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 83
+					scope:sex_transition = 97
 				}
 				# Lie on Back
 				# "Not inside!" you barely blurt out between moans and labored breaths.\n
-				desc = sex_transition_83.0
+				desc = sex_transition_97.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 89
+					scope:sex_transition = 103
 				}
 				# Lie Face Down
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless.\n
-				desc = sex_transition_89.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10060
-				}
-				# 60: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
-				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
-				desc = sex_transition_60.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10061
-				}
-				# 61: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
-				desc = sex_transition_61.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10064
-				}
-				# 64: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
-				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
-				desc = sex_transition_64.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10066
-				}
-				# 66: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
-				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
-				desc = sex_transition_66.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10067
-				}
-				# 67: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL failed
-				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
-				desc = sex_transition_67.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10070
-				}
-				# 70: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
-				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_70.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10071
-				}
-				# 71: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
-				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition_71.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10073
-				}
-				# 73: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL failed
-				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
-				desc = sex_transition_73.10000
+				desc = sex_transition_103.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10074
 				}
-				# 74: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
-				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				# 74: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
+				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
 				desc = sex_transition_74.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10077
+					scope:sex_transition = 10075
 				}
-				# 77: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
-				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_77.10000
+				# 75: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB failed
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
+				desc = sex_transition_75.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10078
 				}
-				# 78: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
-				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				# 78: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_78.10000
 			}
 			triggered_desc = {
@@ -2180,54 +2384,126 @@ LIDAc.8 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10080
 				}
-				# 80: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
-				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
+				# 80: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
+				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
 				desc = sex_transition_80.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10083
+					scope:sex_transition = 10081
 				}
-				# 83: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
-				desc = sex_transition_83.10000
+				# 81: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL failed
+				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_81.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10084
 				}
-				# 84: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
-				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
+				# 84: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
 				desc = sex_transition_84.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10086
+					scope:sex_transition = 10085
 				}
-				# 86: EventsSex.FM_PRONE_BONE -> EventsSex.FM_MISSIONARY failed
-				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
-				desc = sex_transition_86.10000
+				# 85: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_85.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10087
 				}
-				# 87: EventsSex.FM_PRONE_BONE -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
+				# 87: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL failed
+				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
 				desc = sex_transition_87.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10089
+					scope:sex_transition = 10088
 				}
-				# 89: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# 88: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
+				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_88.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10091
+				}
+				# 91: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_91.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10092
+				}
+				# 92: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_92.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10094
+				}
+				# 94: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
+				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
+				desc = sex_transition_94.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10097
+				}
+				# 97: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				desc = sex_transition_97.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10098
+				}
+				# 98: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
+				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
+				desc = sex_transition_98.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10100
+				}
+				# 100: EventsSex.FM_PRONE_BONE -> EventsSex.FM_MISSIONARY failed
+				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
+				desc = sex_transition_100.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10101
+				}
+				# 101: EventsSex.FM_PRONE_BONE -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND failed
+				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
+				desc = sex_transition_101.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10103
+				}
+				# 103: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
-				desc = sex_transition_89.10000
+				desc = sex_transition_103.10000
 			}
 		}
 		triggered_desc = {
@@ -2237,8 +2513,8 @@ LIDAc.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 9
 			}
-			# defaulted to 64: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
-			desc = sex_transition_64.0
+			# defaulted to 78: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_78.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -2247,8 +2523,8 @@ LIDAc.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 15
 			}
-			# defaulted to 70: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
-			desc = sex_transition_70.0
+			# defaulted to 84: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_84.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -2257,8 +2533,8 @@ LIDAc.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 16
 			}
-			# defaulted to 77: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
-			desc = sex_transition_77.0
+			# defaulted to 91: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_91.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -2267,8 +2543,8 @@ LIDAc.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 17
 			}
-			# defaulted to 83: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
-			desc = sex_transition_83.0
+			# defaulted to 97: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_97.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -2277,8 +2553,8 @@ LIDAc.8 = {
 				exists = scope:prev_event
 				scope:prev_event = 18
 			}
-			# defaulted to 89: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
-			desc = sex_transition_89.0
+			# defaulted to 103: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_103.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -2347,7 +2623,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.180
+		name = LIDAoption.194
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -2510,38 +2786,38 @@ LIDAc.7 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 40
+					scope:sex_transition = 54
 				}
 				# Ass Tease
 				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
-				desc = sex_transition_40.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 45
-				}
-				# Ass Rub
-				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
-				desc = sex_transition_45.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 53
-				}
-				# Get Hotdogged
-				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
-				desc = sex_transition_53.0
+				desc = sex_transition_54.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 59
 				}
+				# Ass Rub
+				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
+				desc = sex_transition_59.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 67
+				}
+				# Get Hotdogged
+				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
+				desc = sex_transition_67.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 73
+				}
 				# Fingered from Behind
 				# You feel his dick twitch against your ass, alerting you of his impending climax.\n
-				desc = sex_transition_59.0
+				desc = sex_transition_73.0
 			}
 			triggered_desc = {
 				trigger = {
@@ -2564,128 +2840,128 @@ LIDAc.7 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10036
+					scope:sex_transition = 10050
 				}
-				# 36: EventsSex.FM_ASS_TEASE -> EventsSex.FM_ASS_RUB failed
+				# 50: EventsSex.FM_ASS_TEASE -> EventsSex.FM_ASS_RUB failed
 				# You have better uses for that hard cock than just teasing it.\n
-				desc = sex_transition_36.10000
+				desc = sex_transition_50.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10037
+					scope:sex_transition = 10051
 				}
-				# 37: EventsSex.FM_ASS_TEASE -> EventsSex.FM_HANDJOB failed
+				# 51: EventsSex.FM_ASS_TEASE -> EventsSex.FM_HANDJOB failed
 				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
-				desc = sex_transition_37.10000
+				desc = sex_transition_51.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10039
+					scope:sex_transition = 10053
 				}
-				# 39: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
+				# 53: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition_39.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10041
-				}
-				# 41: EventsSex.FM_ASS_RUB -> EventsSex.FM_ASS_RUB failed
-				# You have better uses for that hard cock than just teasing it\n
-				desc = sex_transition_41.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10042
-				}
-				# 42: EventsSex.FM_ASS_RUB -> EventsSex.FM_HANDJOB failed
-				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
-				desc = sex_transition_42.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10044
-				}
-				# 44: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition_44.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10046
-				}
-				# 46: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB failed
-				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
-				desc = sex_transition_46.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10047
-				}
-				# 47: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG failed
-				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
-				desc = sex_transition_47.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10048
-				}
-				# 48: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL failed
-				# You try to force him to the ground, but as you push your groin backwards something #italic enters#! you and [affairs_partner.GetFirstName] wraps an arm around your bosom, holding you in place.\n
-				desc = sex_transition_48.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10049
-				}
-				# 49: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM failed
-				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
-				desc = sex_transition_49.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10052
-				}
-				# 52: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition_52.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10054
-				}
-				# 54: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_HOTDOG failed
-				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
-				desc = sex_transition_54.10000
+				desc = sex_transition_53.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10055
 				}
-				# 55: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
+				# 55: EventsSex.FM_ASS_RUB -> EventsSex.FM_ASS_RUB failed
+				# You have better uses for that hard cock than just teasing it\n
 				desc = sex_transition_55.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10056
+				}
+				# 56: EventsSex.FM_ASS_RUB -> EventsSex.FM_HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				desc = sex_transition_56.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10058
 				}
-				# 58: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# 58: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_58.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10060
+				}
+				# 60: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB failed
+				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
+				desc = sex_transition_60.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10061
+				}
+				# 61: EventsSex.FM_HOTDOG -> EventsSex.FM_HOTDOG failed
+				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
+				desc = sex_transition_61.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10062
+				}
+				# 62: EventsSex.FM_HOTDOG -> EventsSex.FM_REVERSE_COWGIRL failed
+				# You try to force him to the ground, but as you push your groin backwards something #italic enters#! you and [affairs_partner.GetFirstName] wraps an arm around your bosom, holding you in place.\n
+				desc = sex_transition_62.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10063
+				}
+				# 63: EventsSex.FM_HOTDOG -> EventsSex.FM_BLOWJOB_DOM failed
+				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
+				desc = sex_transition_63.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10066
+				}
+				# 66: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_66.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10068
+				}
+				# 68: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_HOTDOG failed
+				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_68.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10069
+				}
+				# 69: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
+				desc = sex_transition_69.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10072
+				}
+				# 72: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_72.10000
 			}
 		}
 		triggered_desc = {
@@ -2705,8 +2981,8 @@ LIDAc.7 = {
 				exists = scope:prev_event
 				scope:prev_event = 4
 			}
-			# defaulted to 40: EventsSex.FM_ASS_TEASE -> EventsCum.FM_CUM_ON_GROIN
-			desc = sex_transition_40.0
+			# defaulted to 54: EventsSex.FM_ASS_TEASE -> EventsCum.FM_CUM_ON_GROIN
+			desc = sex_transition_54.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -2715,8 +2991,8 @@ LIDAc.7 = {
 				exists = scope:prev_event
 				scope:prev_event = 14
 			}
-			# defaulted to 45: EventsSex.FM_ASS_RUB -> EventsCum.FM_CUM_ON_GROIN
-			desc = sex_transition_45.0
+			# defaulted to 59: EventsSex.FM_ASS_RUB -> EventsCum.FM_CUM_ON_GROIN
+			desc = sex_transition_59.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -2725,8 +3001,8 @@ LIDAc.7 = {
 				exists = scope:prev_event
 				scope:prev_event = 12
 			}
-			# defaulted to 53: EventsSex.FM_HOTDOG -> EventsCum.FM_CUM_ON_GROIN
-			desc = sex_transition_53.0
+			# defaulted to 67: EventsSex.FM_HOTDOG -> EventsCum.FM_CUM_ON_GROIN
+			desc = sex_transition_67.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -2735,8 +3011,8 @@ LIDAc.7 = {
 				exists = scope:prev_event
 				scope:prev_event = 13
 			}
-			# defaulted to 59: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_CUM_ON_GROIN
-			desc = sex_transition_59.0
+			# defaulted to 73: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_CUM_ON_GROIN
+			desc = sex_transition_73.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -2806,7 +3082,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.181
+		name = LIDAoption.195
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -2960,128 +3236,128 @@ LIDAc.9 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 65
-				}
-				# Standing Fucked from Behind
-				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
-				desc = sex_transition_65.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 72
-				}
-				# Ride Facing Away
-				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
-				desc = sex_transition_72.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
 					scope:sex_transition = 79
 				}
-				# Ride Facing Them
+				# Standing Fucked from Behind
 				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
 				desc = sex_transition_79.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10060
+					scope:sex_transition = 86
 				}
-				# 60: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
-				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
-				desc = sex_transition_60.10000
+				# Ride Facing Away
+				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
+				desc = sex_transition_86.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10061
+					scope:sex_transition = 93
 				}
-				# 61: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
-				desc = sex_transition_61.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10064
-				}
-				# 64: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
-				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
-				desc = sex_transition_64.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10066
-				}
-				# 66: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
-				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
-				desc = sex_transition_66.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10067
-				}
-				# 67: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL failed
-				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
-				desc = sex_transition_67.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10070
-				}
-				# 70: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
-				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_70.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10071
-				}
-				# 71: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
-				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition_71.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10073
-				}
-				# 73: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL failed
-				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
-				desc = sex_transition_73.10000
+				# Ride Facing Them
+				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
+				desc = sex_transition_93.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10074
 				}
-				# 74: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
-				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				# 74: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM failed
+				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
 				desc = sex_transition_74.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10077
+					scope:sex_transition = 10075
 				}
-				# 77: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
-				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_77.10000
+				# 75: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB failed
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
+				desc = sex_transition_75.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10078
 				}
-				# 78: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
-				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				# 78: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_78.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10080
+				}
+				# 80: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
+				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
+				desc = sex_transition_80.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10081
+				}
+				# 81: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL failed
+				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_81.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10084
+				}
+				# 84: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_84.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10085
+				}
+				# 85: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_85.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10087
+				}
+				# 87: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL failed
+				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
+				desc = sex_transition_87.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10088
+				}
+				# 88: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
+				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_88.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10091
+				}
+				# 91: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_91.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10092
+				}
+				# 92: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_92.10000
 			}
 		}
 		triggered_desc = {
@@ -3091,8 +3367,8 @@ LIDAc.9 = {
 				exists = scope:prev_event
 				scope:prev_event = 9
 			}
-			# defaulted to 65: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_CREAMPIE_REGULAR
-			desc = sex_transition_65.0
+			# defaulted to 79: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_CREAMPIE_REGULAR
+			desc = sex_transition_79.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -3101,8 +3377,8 @@ LIDAc.9 = {
 				exists = scope:prev_event
 				scope:prev_event = 15
 			}
-			# defaulted to 72: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_REGULAR
-			desc = sex_transition_72.0
+			# defaulted to 86: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_REGULAR
+			desc = sex_transition_86.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -3111,8 +3387,8 @@ LIDAc.9 = {
 				exists = scope:prev_event
 				scope:prev_event = 16
 			}
-			# defaulted to 79: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_REGULAR
-			desc = sex_transition_79.0
+			# defaulted to 93: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_REGULAR
+			desc = sex_transition_93.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -3183,7 +3459,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.182
+		name = LIDAoption.196
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -3337,92 +3613,92 @@ LIDAc.10 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 71
+					scope:sex_transition = 85
 				}
 				# Ride Facing Away
 				# Your body tightens as he begins to twitch inside you.\n
-				desc = sex_transition_71.0
+				desc = sex_transition_85.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 78
+					scope:sex_transition = 92
 				}
 				# Ride Facing Them
 				# Your body tightens as he begins to twitch inside you.\n
-				desc = sex_transition_78.0
+				desc = sex_transition_92.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10066
+					scope:sex_transition = 10080
 				}
-				# 66: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
+				# 80: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
-				desc = sex_transition_66.10000
+				desc = sex_transition_80.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10067
+					scope:sex_transition = 10081
 				}
-				# 67: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL failed
+				# 81: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_COWGIRL failed
 				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
-				desc = sex_transition_67.10000
+				desc = sex_transition_81.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10070
+					scope:sex_transition = 10084
 				}
-				# 70: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# 84: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_70.10000
+				desc = sex_transition_84.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10071
+					scope:sex_transition = 10085
 				}
-				# 71: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
+				# 85: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition_71.10000
+				desc = sex_transition_85.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10073
+					scope:sex_transition = 10087
 				}
-				# 73: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL failed
+				# 87: EventsSex.FM_COWGIRL -> EventsSex.FM_COWGIRL failed
 				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
-				desc = sex_transition_73.10000
+				desc = sex_transition_87.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10074
+					scope:sex_transition = 10088
 				}
-				# 74: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
+				# 88: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL failed
 				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
-				desc = sex_transition_74.10000
+				desc = sex_transition_88.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10077
+					scope:sex_transition = 10091
 				}
-				# 77: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# 91: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_77.10000
+				desc = sex_transition_91.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10078
+					scope:sex_transition = 10092
 				}
-				# 78: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
+				# 92: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition_78.10000
+				desc = sex_transition_92.10000
 			}
 		}
 		triggered_desc = {
@@ -3432,8 +3708,8 @@ LIDAc.10 = {
 				exists = scope:prev_event
 				scope:prev_event = 15
 			}
-			# defaulted to 71: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP
-			desc = sex_transition_71.0
+			# defaulted to 85: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP
+			desc = sex_transition_85.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -3442,8 +3718,8 @@ LIDAc.10 = {
 				exists = scope:prev_event
 				scope:prev_event = 16
 			}
-			# defaulted to 78: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP
-			desc = sex_transition_78.0
+			# defaulted to 92: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP
+			desc = sex_transition_92.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -3508,7 +3784,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.183
+		name = LIDAoption.197
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -3662,74 +3938,74 @@ LIDAc.11 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 85
+					scope:sex_transition = 99
 				}
 				# Lie on Back
 				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
-				desc = sex_transition_85.0
+				desc = sex_transition_99.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 90
+					scope:sex_transition = 104
 				}
 				# Lie Face Down
 				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
-				desc = sex_transition_90.0
+				desc = sex_transition_104.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10080
+					scope:sex_transition = 10094
 				}
-				# 80: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
+				# 94: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
 				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
-				desc = sex_transition_80.10000
+				desc = sex_transition_94.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10083
+					scope:sex_transition = 10097
 				}
-				# 83: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# 97: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
-				desc = sex_transition_83.10000
+				desc = sex_transition_97.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10084
+					scope:sex_transition = 10098
 				}
-				# 84: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
+				# 98: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_84.10000
+				desc = sex_transition_98.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10086
+					scope:sex_transition = 10100
 				}
-				# 86: EventsSex.FM_PRONE_BONE -> EventsSex.FM_MISSIONARY failed
+				# 100: EventsSex.FM_PRONE_BONE -> EventsSex.FM_MISSIONARY failed
 				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
-				desc = sex_transition_86.10000
+				desc = sex_transition_100.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10087
+					scope:sex_transition = 10101
 				}
-				# 87: EventsSex.FM_PRONE_BONE -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND failed
+				# 101: EventsSex.FM_PRONE_BONE -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND failed
 				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
-				desc = sex_transition_87.10000
+				desc = sex_transition_101.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10089
+					scope:sex_transition = 10103
 				}
-				# 89: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# 103: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
-				desc = sex_transition_89.10000
+				desc = sex_transition_103.10000
 			}
 		}
 		triggered_desc = {
@@ -3739,8 +4015,8 @@ LIDAc.11 = {
 				exists = scope:prev_event
 				scope:prev_event = 17
 			}
-			# defaulted to 85: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_BREED
-			desc = sex_transition_85.0
+			# defaulted to 99: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_BREED
+			desc = sex_transition_99.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -3749,8 +4025,8 @@ LIDAc.11 = {
 				exists = scope:prev_event
 				scope:prev_event = 18
 			}
-			# defaulted to 90: EventsSex.FM_PRONE_BONE -> EventsCum.FM_CREAMPIE_BREED
-			desc = sex_transition_90.0
+			# defaulted to 104: EventsSex.FM_PRONE_BONE -> EventsCum.FM_CREAMPIE_BREED
+			desc = sex_transition_104.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -3904,7 +4180,7 @@ NOT = { has_trait =lida_sub }
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.184
+		name = LIDAoption.198
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -4058,38 +4334,38 @@ LIDAc.12 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 84
+					scope:sex_transition = 98
 				}
 				# Lie on Back
 				# You wrap your legs and arms around him...\n
-				desc = sex_transition_84.0
+				desc = sex_transition_98.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10080
+					scope:sex_transition = 10094
 				}
-				# 80: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
+				# 94: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
 				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
-				desc = sex_transition_80.10000
+				desc = sex_transition_94.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10083
+					scope:sex_transition = 10097
 				}
-				# 83: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
+				# 97: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
-				desc = sex_transition_83.10000
+				desc = sex_transition_97.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10084
+					scope:sex_transition = 10098
 				}
-				# 84: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
+				# 98: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition_84.10000
+				desc = sex_transition_98.10000
 			}
 		}
 		triggered_desc = {
@@ -4099,8 +4375,8 @@ LIDAc.12 = {
 				exists = scope:prev_event
 				scope:prev_event = 17
 			}
-			# defaulted to 84: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP
-			desc = sex_transition_84.0
+			# defaulted to 98: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP
+			desc = sex_transition_98.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -4164,7 +4440,7 @@ LIDAc.12 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.185
+		name = LIDAoption.199
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -4318,77 +4594,77 @@ LIDAc.13 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 102
+					scope:sex_transition = 116
 				}
 				# Handjob
 				# You place your palm below his cock, ready to receive his seed.\n
-				desc = sex_transition_102.0
+				desc = sex_transition_116.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 114
+					scope:sex_transition = 128
 				}
 				# Sub Blowjob
 				# Pulling away, you deprive him of the warmth of your mouth.\n
-				desc = sex_transition_114.0
+				desc = sex_transition_128.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10099
+					scope:sex_transition = 10113
 				}
-				# 99: EventsSex.MF_HANDJOB -> EventsSex.MF_HANDJOB failed
+				# 113: EventsSex.MF_HANDJOB -> EventsSex.MF_HANDJOB failed
 				# 
 				triggered_desc = {
 					trigger = {
 						NOT = { has_trait = lida_dom }
 					}
-					desc = sex_transition_99.0
+					desc = sex_transition_113.0
 				}
 				triggered_desc = {
 					trigger = {
 						has_trait = lida_dom
 					}
-					desc = sex_transition_99.1
+					desc = sex_transition_113.1
 				}
-				desc = sex_transition_99.2
+				desc = sex_transition_113.2
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10101
+					scope:sex_transition = 10115
 				}
-				# 101: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM failed
+				# 115: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM failed
 				# You move to stop his climax, but realize that he did not last as long as you expected.\n
-				desc = sex_transition_101.10000
+				desc = sex_transition_115.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10102
+					scope:sex_transition = 10116
 				}
-				# 102: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# 116: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
 				# You place your palm below his cock, ready to receive his seed, but his tip seems to be pointing elsewhere...\n
-				desc = sex_transition_102.10000
+				desc = sex_transition_116.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10111
+					scope:sex_transition = 10125
 				}
-				# 111: EventsSex.MF_BLOWJOB_SUB -> EventsSex.MF_BLOWJOB_DOM failed
+				# 125: EventsSex.MF_BLOWJOB_SUB -> EventsSex.MF_BLOWJOB_DOM failed
 				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
-				desc = sex_transition_111.10000
+				desc = sex_transition_125.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10114
+					scope:sex_transition = 10128
 				}
-				# 114: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# 128: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
-				desc = sex_transition_114.10000
+				desc = sex_transition_128.10000
 			}
 		}
 		triggered_desc = {
@@ -4398,8 +4674,8 @@ LIDAc.13 = {
 				exists = scope:prev_event
 				scope:prev_event = 24
 			}
-			# defaulted to 102: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND
-			desc = sex_transition_102.0
+			# defaulted to 116: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND
+			desc = sex_transition_116.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -4408,8 +4684,8 @@ LIDAc.13 = {
 				exists = scope:prev_event
 				scope:prev_event = 27
 			}
-			# defaulted to 114: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND
-			desc = sex_transition_114.0
+			# defaulted to 128: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND
+			desc = sex_transition_128.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -4467,7 +4743,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.186
+		name = LIDAoption.200
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -4621,164 +4897,164 @@ LIDAc.18 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 123
+					scope:sex_transition = 137
 				}
 				# Ass Tease
 				# You manage to guide his stream onto your cheeks.\n
-				desc = sex_transition_123.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 128
-				}
-				# Ass Rub
-				# You manage to guide his stream onto your cheeks.\n
-				desc = sex_transition_128.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 136
-				}
-				# Get Hotdogged
-				# You manage to guide his stream onto your cheeks.\n
-				desc = sex_transition_136.0
+				desc = sex_transition_137.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 142
 				}
-				# Fingered from Behind
+				# Ass Rub
 				# You manage to guide his stream onto your cheeks.\n
 				desc = sex_transition_142.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10120
+					scope:sex_transition = 150
 				}
-				# 120: EventsSex.MF_ASS_TEASE -> EventsSex.MF_ASS_RUB failed
+				# Get Hotdogged
+				# You manage to guide his stream onto your cheeks.\n
+				desc = sex_transition_150.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 156
+				}
+				# Fingered from Behind
+				# You manage to guide his stream onto your cheeks.\n
+				desc = sex_transition_156.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10134
+				}
+				# 134: EventsSex.MF_ASS_TEASE -> EventsSex.MF_ASS_RUB failed
 				# You have better uses for that hard cock than just teasing it.\n
-				desc = sex_transition_120.10000
+				desc = sex_transition_134.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10121
+					scope:sex_transition = 10135
 				}
-				# 121: EventsSex.MF_ASS_TEASE -> EventsSex.MF_HANDJOB failed
+				# 135: EventsSex.MF_ASS_TEASE -> EventsSex.MF_HANDJOB failed
 				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
-				desc = sex_transition_121.10000
+				desc = sex_transition_135.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10123
+					scope:sex_transition = 10137
 				}
-				# 123: EventsSex.MF_ASS_TEASE -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# 137: EventsSex.MF_ASS_TEASE -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition_123.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10125
-				}
-				# 125: EventsSex.MF_ASS_RUB -> EventsSex.MF_ASS_RUB failed
-				# You have better uses for that hard cock than just teasing it\n
-				desc = sex_transition_125.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10126
-				}
-				# 126: EventsSex.MF_ASS_RUB -> EventsSex.MF_HANDJOB failed
-				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
-				desc = sex_transition_126.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10128
-				}
-				# 128: EventsSex.MF_ASS_RUB -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition_128.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10130
-				}
-				# 130: EventsSex.MF_HOTDOG -> EventsSex.MF_ASS_RUB failed
-				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
-				desc = sex_transition_130.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10131
-				}
-				# 131: EventsSex.MF_HOTDOG -> EventsSex.MF_HOTDOG failed
-				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
-				desc = sex_transition_131.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10132
-				}
-				# 132: EventsSex.MF_HOTDOG -> EventsSex.MF_REVERSE_COWGIRL failed
-				# You try to force him to the ground, but as you push your groin backwards something #italic enters#! you and [affairs_partner.GetFirstName] wraps an arm around your bosom, holding you in place.\n
-				desc = sex_transition_132.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10133
-				}
-				# 133: EventsSex.MF_HOTDOG -> EventsSex.MF_BLOWJOB_DOM failed
-				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
-				desc = sex_transition_133.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10136
-				}
-				# 136: EventsSex.MF_HOTDOG -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition_136.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10138
-				}
-				# 138: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_HOTDOG failed
-				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
-				desc = sex_transition_138.10000
+				desc = sex_transition_137.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10139
 				}
-				# 139: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
+				# 139: EventsSex.MF_ASS_RUB -> EventsSex.MF_ASS_RUB failed
+				# You have better uses for that hard cock than just teasing it\n
 				desc = sex_transition_139.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10140
+				}
+				# 140: EventsSex.MF_ASS_RUB -> EventsSex.MF_HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				desc = sex_transition_140.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10142
 				}
-				# 142: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# 142: EventsSex.MF_ASS_RUB -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_142.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10144
+				}
+				# 144: EventsSex.MF_HOTDOG -> EventsSex.MF_ASS_RUB failed
+				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
+				desc = sex_transition_144.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10145
+				}
+				# 145: EventsSex.MF_HOTDOG -> EventsSex.MF_HOTDOG failed
+				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
+				desc = sex_transition_145.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10146
+				}
+				# 146: EventsSex.MF_HOTDOG -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You try to force him to the ground, but as you push your groin backwards something #italic enters#! you and [affairs_partner.GetFirstName] wraps an arm around your bosom, holding you in place.\n
+				desc = sex_transition_146.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10147
+				}
+				# 147: EventsSex.MF_HOTDOG -> EventsSex.MF_BLOWJOB_DOM failed
+				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
+				desc = sex_transition_147.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10150
+				}
+				# 150: EventsSex.MF_HOTDOG -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_150.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10152
+				}
+				# 152: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_HOTDOG failed
+				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_152.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10153
+				}
+				# 153: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
+				desc = sex_transition_153.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10156
+				}
+				# 156: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_156.10000
 			}
 		}
 		triggered_desc = {
@@ -4788,8 +5064,8 @@ LIDAc.18 = {
 				exists = scope:prev_event
 				scope:prev_event = 22
 			}
-			# defaulted to 123: EventsSex.MF_ASS_TEASE -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
-			desc = sex_transition_123.0
+			# defaulted to 137: EventsSex.MF_ASS_TEASE -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_137.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -4798,8 +5074,8 @@ LIDAc.18 = {
 				exists = scope:prev_event
 				scope:prev_event = 31
 			}
-			# defaulted to 128: EventsSex.MF_ASS_RUB -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
-			desc = sex_transition_128.0
+			# defaulted to 142: EventsSex.MF_ASS_RUB -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_142.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -4808,8 +5084,8 @@ LIDAc.18 = {
 				exists = scope:prev_event
 				scope:prev_event = 29
 			}
-			# defaulted to 136: EventsSex.MF_HOTDOG -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
-			desc = sex_transition_136.0
+			# defaulted to 150: EventsSex.MF_HOTDOG -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_150.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -4818,8 +5094,8 @@ LIDAc.18 = {
 				exists = scope:prev_event
 				scope:prev_event = 30
 			}
-			# defaulted to 142: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
-			desc = sex_transition_142.0
+			# defaulted to 156: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
+			desc = sex_transition_156.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -4876,7 +5152,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.187
+		name = LIDAoption.201
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -5030,113 +5306,113 @@ LIDAc.16 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 103
+					scope:sex_transition = 117
 				}
 				# Handjob
 				# You pull away and look up, preparing for him to mark your face.\n
-				desc = sex_transition_103.0
+				desc = sex_transition_117.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 110
+					scope:sex_transition = 124
 				}
 				# Dom Blowjob
 				# You pull away and look up, preparing for him to mark your face.\n
-				desc = sex_transition_110.0
+				desc = sex_transition_124.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 116
+					scope:sex_transition = 130
 				}
 				# Sub Blowjob
 				# You don't resist when he pulls out and aims his rod at your face.\n
-				desc = sex_transition_116.0
+				desc = sex_transition_130.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10099
+					scope:sex_transition = 10113
 				}
-				# 99: EventsSex.MF_HANDJOB -> EventsSex.MF_HANDJOB failed
+				# 113: EventsSex.MF_HANDJOB -> EventsSex.MF_HANDJOB failed
 				# 
 				triggered_desc = {
 					trigger = {
 						NOT = { has_trait = lida_dom }
 					}
-					desc = sex_transition_99.0
+					desc = sex_transition_113.0
 				}
 				triggered_desc = {
 					trigger = {
 						has_trait = lida_dom
 					}
-					desc = sex_transition_99.1
+					desc = sex_transition_113.1
 				}
-				desc = sex_transition_99.2
+				desc = sex_transition_113.2
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10101
+					scope:sex_transition = 10115
 				}
-				# 101: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM failed
+				# 115: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM failed
 				# You move to stop his climax, but realize that he did not last as long as you expected.\n
-				desc = sex_transition_101.10000
+				desc = sex_transition_115.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10102
+					scope:sex_transition = 10116
 				}
-				# 102: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# 116: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
 				# You place your palm below his cock, ready to receive his seed, but his tip seems to be pointing elsewhere...\n
-				desc = sex_transition_102.10000
+				desc = sex_transition_116.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10104
+					scope:sex_transition = 10118
 				}
-				# 104: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_HANDJOB failed
+				# 118: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_HANDJOB failed
 				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
-				desc = sex_transition_104.10000
+				desc = sex_transition_118.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10105
+					scope:sex_transition = 10119
 				}
-				# 105: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_BLOWJOB_DOM failed
+				# 119: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_BLOWJOB_DOM failed
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
-				desc = sex_transition_105.10000
+				desc = sex_transition_119.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10108
+					scope:sex_transition = 10122
 				}
-				# 108: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM failed
+				# 122: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition_108.10000
+				desc = sex_transition_122.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10111
+					scope:sex_transition = 10125
 				}
-				# 111: EventsSex.MF_BLOWJOB_SUB -> EventsSex.MF_BLOWJOB_DOM failed
+				# 125: EventsSex.MF_BLOWJOB_SUB -> EventsSex.MF_BLOWJOB_DOM failed
 				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
-				desc = sex_transition_111.10000
+				desc = sex_transition_125.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10114
+					scope:sex_transition = 10128
 				}
-				# 114: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# 128: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
-				desc = sex_transition_114.10000
+				desc = sex_transition_128.10000
 			}
 		}
 		triggered_desc = {
@@ -5146,8 +5422,8 @@ LIDAc.16 = {
 				exists = scope:prev_event
 				scope:prev_event = 24
 			}
-			# defaulted to 103: EventsSex.MF_HANDJOB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE
-			desc = sex_transition_103.0
+			# defaulted to 117: EventsSex.MF_HANDJOB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_117.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -5156,8 +5432,8 @@ LIDAc.16 = {
 				exists = scope:prev_event
 				scope:prev_event = 25
 			}
-			# defaulted to 110: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_ON_FACE
-			desc = sex_transition_110.0
+			# defaulted to 124: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_124.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -5166,8 +5442,8 @@ LIDAc.16 = {
 				exists = scope:prev_event
 				scope:prev_event = 27
 			}
-			# defaulted to 116: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE
-			desc = sex_transition_116.0
+			# defaulted to 130: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE
+			desc = sex_transition_130.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -5245,7 +5521,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.188
+		name = LIDAoption.202
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -5399,38 +5675,38 @@ LIDAc.14 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 109
+					scope:sex_transition = 123
 				}
 				# Dom Blowjob
 				# You prepare to wring him dry with your dexterous tongue.\n
-				desc = sex_transition_109.0
+				desc = sex_transition_123.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10104
+					scope:sex_transition = 10118
 				}
-				# 104: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_HANDJOB failed
+				# 118: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_HANDJOB failed
 				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
-				desc = sex_transition_104.10000
+				desc = sex_transition_118.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10105
+					scope:sex_transition = 10119
 				}
-				# 105: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_BLOWJOB_DOM failed
+				# 119: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_BLOWJOB_DOM failed
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
-				desc = sex_transition_105.10000
+				desc = sex_transition_119.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10108
+					scope:sex_transition = 10122
 				}
-				# 108: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM failed
+				# 122: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition_108.10000
+				desc = sex_transition_122.10000
 			}
 		}
 		triggered_desc = {
@@ -5440,8 +5716,8 @@ LIDAc.14 = {
 				exists = scope:prev_event
 				scope:prev_event = 25
 			}
-			# defaulted to 109: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM
-			desc = sex_transition_109.0
+			# defaulted to 123: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM
+			desc = sex_transition_123.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -5519,7 +5795,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.189
+		name = LIDAoption.203
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -5673,47 +5949,47 @@ LIDAc.15 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 115
+					scope:sex_transition = 129
 				}
 				# Sub Blowjob
 				# You don't resist when he plunges into your mouth to deposit his seed.\n
-				desc = sex_transition_115.0
+				desc = sex_transition_129.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 119
+					scope:sex_transition = 133
 				}
 				# Deepthroat
 				# You don't have any say in it, or in anything else at the moment, as his mass fills your throat.\n
-				desc = sex_transition_119.0
+				desc = sex_transition_133.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10111
+					scope:sex_transition = 10125
 				}
-				# 111: EventsSex.MF_BLOWJOB_SUB -> EventsSex.MF_BLOWJOB_DOM failed
+				# 125: EventsSex.MF_BLOWJOB_SUB -> EventsSex.MF_BLOWJOB_DOM failed
 				# Putting both hands on his waist, you attempt to curb his thrusts. However, on your knees beneath him, you don't have enough leverage to forcefully stop him and he seems to have no intention of letting you back in control.\n
-				desc = sex_transition_111.10000
+				desc = sex_transition_125.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10114
+					scope:sex_transition = 10128
 				}
-				# 114: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# 128: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
-				desc = sex_transition_114.10000
+				desc = sex_transition_128.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10117
+					scope:sex_transition = 10131
 				}
-				# 117: EventsSex.MF_DEEPTHROAT -> EventsSex.MF_BLOWJOB_SUB failed
+				# 131: EventsSex.MF_DEEPTHROAT -> EventsSex.MF_BLOWJOB_SUB failed
 				# Putting both hands on his waist, you push and try to stop his thrusts. It's all in vain, however, as he ignores you.\n
-				desc = sex_transition_117.10000
+				desc = sex_transition_131.10000
 			}
 		}
 		triggered_desc = {
@@ -5723,8 +5999,8 @@ LIDAc.15 = {
 				exists = scope:prev_event
 				scope:prev_event = 27
 			}
-			# defaulted to 115: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB
-			desc = sex_transition_115.0
+			# defaulted to 129: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB
+			desc = sex_transition_129.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -5733,8 +6009,8 @@ LIDAc.15 = {
 				exists = scope:prev_event
 				scope:prev_event = 28
 			}
-			# defaulted to 119: EventsSex.MF_DEEPTHROAT -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB
-			desc = sex_transition_119.0
+			# defaulted to 133: EventsSex.MF_DEEPTHROAT -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB
+			desc = sex_transition_133.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -5798,7 +6074,7 @@ LIDAc.15 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.190
+		name = LIDAoption.204
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -5952,86 +6228,86 @@ LIDAc.17 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 101
+					scope:sex_transition = 115
 				}
 				# Handjob
 				# You abruptly stop your jerking motion and slap his cock, disrupting the build up to his climax.\n
-				desc = sex_transition_101.0
+				desc = sex_transition_115.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 108
+					scope:sex_transition = 122
 				}
 				# Dom Blowjob
 				# You pull back and slap his rod, disrupting the build up to his climax.\n
-				desc = sex_transition_108.0
+				desc = sex_transition_122.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10099
+					scope:sex_transition = 10113
 				}
-				# 99: EventsSex.MF_HANDJOB -> EventsSex.MF_HANDJOB failed
+				# 113: EventsSex.MF_HANDJOB -> EventsSex.MF_HANDJOB failed
 				# 
 				triggered_desc = {
 					trigger = {
 						NOT = { has_trait = lida_dom }
 					}
-					desc = sex_transition_99.0
+					desc = sex_transition_113.0
 				}
 				triggered_desc = {
 					trigger = {
 						has_trait = lida_dom
 					}
-					desc = sex_transition_99.1
+					desc = sex_transition_113.1
 				}
-				desc = sex_transition_99.2
+				desc = sex_transition_113.2
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10101
+					scope:sex_transition = 10115
 				}
-				# 101: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM failed
+				# 115: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM failed
 				# You move to stop his climax, but realize that he did not last as long as you expected.\n
-				desc = sex_transition_101.10000
+				desc = sex_transition_115.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10102
+					scope:sex_transition = 10116
 				}
-				# 102: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
+				# 116: EventsSex.MF_HANDJOB -> EventsCum.MF_HANDJOB_CUM_IN_HAND failed
 				# You place your palm below his cock, ready to receive his seed, but his tip seems to be pointing elsewhere...\n
-				desc = sex_transition_102.10000
+				desc = sex_transition_116.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10104
+					scope:sex_transition = 10118
 				}
-				# 104: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_HANDJOB failed
+				# 118: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_HANDJOB failed
 				# The potent musk of his member, inflated by the proximity of your nose to his groin, strangely captivates you and you lose this opportunity to assert more dominance.\n
-				desc = sex_transition_104.10000
+				desc = sex_transition_118.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10105
+					scope:sex_transition = 10119
 				}
-				# 105: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_BLOWJOB_DOM failed
+				# 119: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_BLOWJOB_DOM failed
 				# The incessant invasion of his member down your throat momentarily puts you in a trance, leaving the initiative in his hands.\n
-				desc = sex_transition_105.10000
+				desc = sex_transition_119.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10108
+					scope:sex_transition = 10122
 				}
-				# 108: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM failed
+				# 122: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition_108.10000
+				desc = sex_transition_122.10000
 			}
 		}
 		triggered_desc = {
@@ -6041,8 +6317,8 @@ LIDAc.17 = {
 				exists = scope:prev_event
 				scope:prev_event = 24
 			}
-			# defaulted to 101: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM
-			desc = sex_transition_101.0
+			# defaulted to 115: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM
+			desc = sex_transition_115.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -6051,8 +6327,8 @@ LIDAc.17 = {
 				exists = scope:prev_event
 				scope:prev_event = 25
 			}
-			# defaulted to 108: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM
-			desc = sex_transition_108.0
+			# defaulted to 122: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM
+			desc = sex_transition_122.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -6110,7 +6386,7 @@ LIDAc.17 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.191
+		name = LIDAoption.205
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -6264,145 +6540,73 @@ LIDAc.20 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 148
+					scope:sex_transition = 162
 				}
 				# Standing Fucked from Behind
 				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans.\n
-				desc = sex_transition_148.0
+				desc = sex_transition_162.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 154
+					scope:sex_transition = 168
 				}
 				# Ride Facing Away
 				# You put your hand on his rod, guiding him to unload on your cheeks instead\n
-				desc = sex_transition_154.0
+				desc = sex_transition_168.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 161
+					scope:sex_transition = 175
 				}
 				# Ride Facing Them
 				# You put your hand on his rod, guiding him to unload on your cheeks instead\n
-				desc = sex_transition_161.0
+				desc = sex_transition_175.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 167
+					scope:sex_transition = 181
 				}
 				# Lie on Back
 				# "Not inside!" you barely blurt out between moans and labored breaths.\n
-				desc = sex_transition_167.0
+				desc = sex_transition_181.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 172
+					scope:sex_transition = 186
 				}
 				# Lie Face Down
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless.\n
-				desc = sex_transition_172.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10144
-				}
-				# 144: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
-				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
-				desc = sex_transition_144.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10145
-				}
-				# 145: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
-				desc = sex_transition_145.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10148
-				}
-				# 148: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
-				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
-				desc = sex_transition_148.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10150
-				}
-				# 150: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
-				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
-				desc = sex_transition_150.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10151
-				}
-				# 151: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_COWGIRL failed
-				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
-				desc = sex_transition_151.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10154
-				}
-				# 154: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
-				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_154.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10155
-				}
-				# 155: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
-				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition_155.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10157
-				}
-				# 157: EventsSex.MF_COWGIRL -> EventsSex.MF_COWGIRL failed
-				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
-				desc = sex_transition_157.10000
+				desc = sex_transition_186.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10158
 				}
-				# 158: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
-				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				# 158: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
+				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
 				desc = sex_transition_158.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10161
+					scope:sex_transition = 10159
 				}
-				# 161: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
-				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_161.10000
+				# 159: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_SUB failed
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
+				desc = sex_transition_159.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10162
 				}
-				# 162: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
-				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				# 162: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_162.10000
 			}
 			triggered_desc = {
@@ -6410,45 +6614,117 @@ LIDAc.20 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10164
 				}
-				# 164: EventsSex.MF_MISSIONARY -> EventsSex.MF_COWGIRL failed
-				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
+				# 164: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
 				desc = sex_transition_164.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10167
+					scope:sex_transition = 10165
 				}
-				# 167: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
-				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
-				desc = sex_transition_167.10000
+				# 165: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_165.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10168
+				}
+				# 168: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_168.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10169
 				}
-				# 169: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY failed
-				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
+				# 169: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
 				desc = sex_transition_169.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10170
+					scope:sex_transition = 10171
 				}
-				# 170: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
-				desc = sex_transition_170.10000
+				# 171: EventsSex.MF_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
+				desc = sex_transition_171.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10172
 				}
-				# 172: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
-				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
+				# 172: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
 				desc = sex_transition_172.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10175
+				}
+				# 175: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_175.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10176
+				}
+				# 176: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_176.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10178
+				}
+				# 178: EventsSex.MF_MISSIONARY -> EventsSex.MF_COWGIRL failed
+				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
+				desc = sex_transition_178.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10181
+				}
+				# 181: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
+				desc = sex_transition_181.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10183
+				}
+				# 183: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY failed
+				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
+				desc = sex_transition_183.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10184
+				}
+				# 184: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
+				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
+				desc = sex_transition_184.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10186
+				}
+				# 186: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
+				desc = sex_transition_186.10000
 			}
 		}
 		triggered_desc = {
@@ -6458,8 +6734,8 @@ LIDAc.20 = {
 				exists = scope:prev_event
 				scope:prev_event = 26
 			}
-			# defaulted to 148: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
-			desc = sex_transition_148.0
+			# defaulted to 162: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_162.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -6468,8 +6744,8 @@ LIDAc.20 = {
 				exists = scope:prev_event
 				scope:prev_event = 32
 			}
-			# defaulted to 154: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
-			desc = sex_transition_154.0
+			# defaulted to 168: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_168.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -6478,8 +6754,8 @@ LIDAc.20 = {
 				exists = scope:prev_event
 				scope:prev_event = 33
 			}
-			# defaulted to 161: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
-			desc = sex_transition_161.0
+			# defaulted to 175: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_175.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -6488,8 +6764,8 @@ LIDAc.20 = {
 				exists = scope:prev_event
 				scope:prev_event = 34
 			}
-			# defaulted to 167: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
-			desc = sex_transition_167.0
+			# defaulted to 181: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_181.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -6498,8 +6774,8 @@ LIDAc.20 = {
 				exists = scope:prev_event
 				scope:prev_event = 35
 			}
-			# defaulted to 172: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
-			desc = sex_transition_172.0
+			# defaulted to 186: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition_186.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -6568,7 +6844,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.192
+		name = LIDAoption.206
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -6722,164 +6998,164 @@ LIDAc.19 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 124
+					scope:sex_transition = 138
 				}
 				# Ass Tease
 				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
-				desc = sex_transition_124.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 129
-				}
-				# Ass Rub
-				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
-				desc = sex_transition_129.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 137
-				}
-				# Get Hotdogged
-				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
-				desc = sex_transition_137.0
+				desc = sex_transition_138.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 143
 				}
-				# Fingered from Behind
-				# You feel his dick twitch against your ass, alerting you of his impending climax.\n
+				# Ass Rub
+				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
 				desc = sex_transition_143.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10120
+					scope:sex_transition = 151
 				}
-				# 120: EventsSex.MF_ASS_TEASE -> EventsSex.MF_ASS_RUB failed
+				# Get Hotdogged
+				# You feel his dick twitch between your cheeks, alerting you of his impending climax.\n
+				desc = sex_transition_151.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 157
+				}
+				# Fingered from Behind
+				# You feel his dick twitch against your ass, alerting you of his impending climax.\n
+				desc = sex_transition_157.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10134
+				}
+				# 134: EventsSex.MF_ASS_TEASE -> EventsSex.MF_ASS_RUB failed
 				# You have better uses for that hard cock than just teasing it.\n
-				desc = sex_transition_120.10000
+				desc = sex_transition_134.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10121
+					scope:sex_transition = 10135
 				}
-				# 121: EventsSex.MF_ASS_TEASE -> EventsSex.MF_HANDJOB failed
+				# 135: EventsSex.MF_ASS_TEASE -> EventsSex.MF_HANDJOB failed
 				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
-				desc = sex_transition_121.10000
+				desc = sex_transition_135.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10123
+					scope:sex_transition = 10137
 				}
-				# 123: EventsSex.MF_ASS_TEASE -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# 137: EventsSex.MF_ASS_TEASE -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition_123.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10125
-				}
-				# 125: EventsSex.MF_ASS_RUB -> EventsSex.MF_ASS_RUB failed
-				# You have better uses for that hard cock than just teasing it\n
-				desc = sex_transition_125.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10126
-				}
-				# 126: EventsSex.MF_ASS_RUB -> EventsSex.MF_HANDJOB failed
-				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
-				desc = sex_transition_126.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10128
-				}
-				# 128: EventsSex.MF_ASS_RUB -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition_128.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10130
-				}
-				# 130: EventsSex.MF_HOTDOG -> EventsSex.MF_ASS_RUB failed
-				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
-				desc = sex_transition_130.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10131
-				}
-				# 131: EventsSex.MF_HOTDOG -> EventsSex.MF_HOTDOG failed
-				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
-				desc = sex_transition_131.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10132
-				}
-				# 132: EventsSex.MF_HOTDOG -> EventsSex.MF_REVERSE_COWGIRL failed
-				# You try to force him to the ground, but as you push your groin backwards something #italic enters#! you and [affairs_partner.GetFirstName] wraps an arm around your bosom, holding you in place.\n
-				desc = sex_transition_132.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10133
-				}
-				# 133: EventsSex.MF_HOTDOG -> EventsSex.MF_BLOWJOB_DOM failed
-				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
-				desc = sex_transition_133.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10136
-				}
-				# 136: EventsSex.MF_HOTDOG -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition_136.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10138
-				}
-				# 138: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_HOTDOG failed
-				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
-				desc = sex_transition_138.10000
+				desc = sex_transition_137.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10139
 				}
-				# 139: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
-				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
+				# 139: EventsSex.MF_ASS_RUB -> EventsSex.MF_ASS_RUB failed
+				# You have better uses for that hard cock than just teasing it\n
 				desc = sex_transition_139.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10140
+				}
+				# 140: EventsSex.MF_ASS_RUB -> EventsSex.MF_HANDJOB failed
+				# He recognizes what you are trying to do and twists his body to avoid having his member fully trapped within your fingers.\n
+				desc = sex_transition_140.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10142
 				}
-				# 142: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
-				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				# 142: EventsSex.MF_ASS_RUB -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
 				desc = sex_transition_142.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10144
+				}
+				# 144: EventsSex.MF_HOTDOG -> EventsSex.MF_ASS_RUB failed
+				# Having tasted a bit of control, he has no intention of relenting and giving it back to you.\n
+				desc = sex_transition_144.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10145
+				}
+				# 145: EventsSex.MF_HOTDOG -> EventsSex.MF_HOTDOG failed
+				# Your thoughts are occupied by his vigorous thrusts, and you can't help but wonder what it would feel like to him thrust inside you.\n
+				desc = sex_transition_145.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10146
+				}
+				# 146: EventsSex.MF_HOTDOG -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You try to force him to the ground, but as you push your groin backwards something #italic enters#! you and [affairs_partner.GetFirstName] wraps an arm around your bosom, holding you in place.\n
+				desc = sex_transition_146.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10147
+				}
+				# 147: EventsSex.MF_HOTDOG -> EventsSex.MF_BLOWJOB_DOM failed
+				# His vigorous thrusts invade your mind and you can't help but wonder what it would feel like inside of you. You won't be satisfied with just him inside your mouth.\n
+				desc = sex_transition_147.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10150
+				}
+				# 150: EventsSex.MF_HOTDOG -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_150.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10152
+				}
+				# 152: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_HOTDOG failed
+				# You try to pull away from his devious fingers, but your endeavour is stopped by a particularly deep thrust scraping your inner walls.\n
+				desc = sex_transition_152.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10153
+				}
+				# 153: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
+				# You move to pull away from his fingers, but are stopped by a particularly #bold deep#! thrust scraping your inner walls.\n
+				desc = sex_transition_153.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10156
+				}
+				# 156: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS failed
+				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
+				desc = sex_transition_156.10000
 			}
 		}
 		triggered_desc = {
@@ -6889,8 +7165,8 @@ LIDAc.19 = {
 				exists = scope:prev_event
 				scope:prev_event = 22
 			}
-			# defaulted to 124: EventsSex.MF_ASS_TEASE -> EventsCum.MF_CUM_ON_GROIN
-			desc = sex_transition_124.0
+			# defaulted to 138: EventsSex.MF_ASS_TEASE -> EventsCum.MF_CUM_ON_GROIN
+			desc = sex_transition_138.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -6899,8 +7175,8 @@ LIDAc.19 = {
 				exists = scope:prev_event
 				scope:prev_event = 31
 			}
-			# defaulted to 129: EventsSex.MF_ASS_RUB -> EventsCum.MF_CUM_ON_GROIN
-			desc = sex_transition_129.0
+			# defaulted to 143: EventsSex.MF_ASS_RUB -> EventsCum.MF_CUM_ON_GROIN
+			desc = sex_transition_143.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -6909,8 +7185,8 @@ LIDAc.19 = {
 				exists = scope:prev_event
 				scope:prev_event = 29
 			}
-			# defaulted to 137: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN
-			desc = sex_transition_137.0
+			# defaulted to 151: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN
+			desc = sex_transition_151.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -6919,8 +7195,8 @@ LIDAc.19 = {
 				exists = scope:prev_event
 				scope:prev_event = 30
 			}
-			# defaulted to 143: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN
-			desc = sex_transition_143.0
+			# defaulted to 157: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN
+			desc = sex_transition_157.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -6990,7 +7266,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.193
+		name = LIDAoption.207
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -7144,128 +7420,128 @@ LIDAc.21 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 149
-				}
-				# Standing Fucked from Behind
-				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
-				desc = sex_transition_149.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 156
-				}
-				# Ride Facing Away
-				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
-				desc = sex_transition_156.0
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
 					scope:sex_transition = 163
 				}
-				# Ride Facing Them
+				# Standing Fucked from Behind
 				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
 				desc = sex_transition_163.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10144
+					scope:sex_transition = 170
 				}
-				# 144: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
-				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
-				desc = sex_transition_144.10000
+				# Ride Facing Away
+				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
+				desc = sex_transition_170.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10145
+					scope:sex_transition = 177
 				}
-				# 145: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_SUB failed
-				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
-				desc = sex_transition_145.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10148
-				}
-				# 148: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
-				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
-				desc = sex_transition_148.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10150
-				}
-				# 150: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
-				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
-				desc = sex_transition_150.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10151
-				}
-				# 151: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_COWGIRL failed
-				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
-				desc = sex_transition_151.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10154
-				}
-				# 154: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
-				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_154.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10155
-				}
-				# 155: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
-				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition_155.10000
-			}
-			triggered_desc = {
-				trigger = {
-					exists = scope:sex_transition
-					scope:sex_transition = 10157
-				}
-				# 157: EventsSex.MF_COWGIRL -> EventsSex.MF_COWGIRL failed
-				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
-				desc = sex_transition_157.10000
+				# Ride Facing Them
+				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
+				desc = sex_transition_177.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10158
 				}
-				# 158: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
-				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				# 158: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM failed
+				# You attempt to pull away and recover some control, but you find it hard to focus and pull away from this pleasure.\n
 				desc = sex_transition_158.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10161
+					scope:sex_transition = 10159
 				}
-				# 161: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
-				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_161.10000
+				# 159: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_SUB failed
+				# You attempt to extricate yourself with gravity's assistance. However, he grabs your arms and pulls you back, giving you a few sharp thrusts as punishment for trying to escape.\n
+				desc = sex_transition_159.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
 					scope:sex_transition = 10162
 				}
-				# 162: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
-				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				# 162: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
 				desc = sex_transition_162.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10164
+				}
+				# 164: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
+				desc = sex_transition_164.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10165
+				}
+				# 165: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_165.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10168
+				}
+				# 168: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_168.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10169
+				}
+				# 169: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_169.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10171
+				}
+				# 171: EventsSex.MF_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
+				desc = sex_transition_171.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10172
+				}
+				# 172: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
+				desc = sex_transition_172.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10175
+				}
+				# 175: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
+				desc = sex_transition_175.10000
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 10176
+				}
+				# 176: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
+				desc = sex_transition_176.10000
 			}
 		}
 		triggered_desc = {
@@ -7275,8 +7551,8 @@ LIDAc.21 = {
 				exists = scope:prev_event
 				scope:prev_event = 26
 			}
-			# defaulted to 149: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR
-			desc = sex_transition_149.0
+			# defaulted to 163: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR
+			desc = sex_transition_163.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -7285,8 +7561,8 @@ LIDAc.21 = {
 				exists = scope:prev_event
 				scope:prev_event = 32
 			}
-			# defaulted to 156: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR
-			desc = sex_transition_156.0
+			# defaulted to 170: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR
+			desc = sex_transition_170.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -7295,8 +7571,8 @@ LIDAc.21 = {
 				exists = scope:prev_event
 				scope:prev_event = 33
 			}
-			# defaulted to 163: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR
-			desc = sex_transition_163.0
+			# defaulted to 177: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR
+			desc = sex_transition_177.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -7374,7 +7650,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.194
+		name = LIDAoption.208
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -7528,92 +7804,92 @@ LIDAc.22 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 155
+					scope:sex_transition = 169
 				}
 				# Ride Facing Away
 				# Your body tightens as he begins to twitch inside you.\n
-				desc = sex_transition_155.0
+				desc = sex_transition_169.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 162
+					scope:sex_transition = 176
 				}
 				# Ride Facing Them
 				# Your body tightens as he begins to twitch inside you.\n
-				desc = sex_transition_162.0
+				desc = sex_transition_176.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10150
+					scope:sex_transition = 10164
 				}
-				# 150: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# 164: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
 				# You try to continue riding him, but as you slow down a moment he grabs you arms and pushes your waist forward. You nearly topple before feeling a burst of pleasure as [affairs_partner.GetFirstName]'s cock enters you.\n
-				desc = sex_transition_150.10000
+				desc = sex_transition_164.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10151
+					scope:sex_transition = 10165
 				}
-				# 151: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# 165: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_COWGIRL failed
 				# You try to turn around, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
-				desc = sex_transition_151.10000
+				desc = sex_transition_165.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10154
+					scope:sex_transition = 10168
 				}
-				# 154: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# 168: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_154.10000
+				desc = sex_transition_168.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10155
+					scope:sex_transition = 10169
 				}
-				# 155: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# 169: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition_155.10000
+				desc = sex_transition_169.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10157
+					scope:sex_transition = 10171
 				}
-				# 157: EventsSex.MF_COWGIRL -> EventsSex.MF_COWGIRL failed
+				# 171: EventsSex.MF_COWGIRL -> EventsSex.MF_COWGIRL failed
 				# You continue riding him, but as you slow down for a moment [affairs_partner.GetFirstName] pushes you backwards, trying to get control over you.\n
-				desc = sex_transition_157.10000
+				desc = sex_transition_171.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10158
+					scope:sex_transition = 10172
 				}
-				# 158: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
+				# 172: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL failed
 				# You begin to turn your back towards him, but your legs feel weak and [affairs_partner.GetFirstName] doesn't miss his opportunity to take the lead and guide your next move.\n
-				desc = sex_transition_158.10000
+				desc = sex_transition_172.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10161
+					scope:sex_transition = 10175
 				}
-				# 161: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# 175: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition_161.10000
+				desc = sex_transition_175.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10162
+					scope:sex_transition = 10176
 				}
-				# 162: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
+				# 176: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition_162.10000
+				desc = sex_transition_176.10000
 			}
 		}
 		triggered_desc = {
@@ -7623,8 +7899,8 @@ LIDAc.22 = {
 				exists = scope:prev_event
 				scope:prev_event = 32
 			}
-			# defaulted to 155: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP
-			desc = sex_transition_155.0
+			# defaulted to 169: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP
+			desc = sex_transition_169.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -7633,8 +7909,8 @@ LIDAc.22 = {
 				exists = scope:prev_event
 				scope:prev_event = 33
 			}
-			# defaulted to 162: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP
-			desc = sex_transition_162.0
+			# defaulted to 176: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_ON_TOP
+			desc = sex_transition_176.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -7705,7 +7981,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.195
+		name = LIDAoption.209
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
@@ -7859,65 +8135,65 @@ LIDAc.23 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 168
+					scope:sex_transition = 182
 				}
 				# Lie on Back
 				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
-				desc = sex_transition_168.0
+				desc = sex_transition_182.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 173
+					scope:sex_transition = 187
 				}
 				# Lie Face Down
 				# His rod gets even harder as his relentless pounding reaches your deepest spot, #bold drowning#! your thoughts in euphoria.\n
-				desc = sex_transition_173.0
+				desc = sex_transition_187.0
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10164
+					scope:sex_transition = 10178
 				}
-				# 164: EventsSex.MF_MISSIONARY -> EventsSex.MF_COWGIRL failed
+				# 178: EventsSex.MF_MISSIONARY -> EventsSex.MF_COWGIRL failed
 				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
-				desc = sex_transition_164.10000
+				desc = sex_transition_178.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10167
+					scope:sex_transition = 10181
 				}
-				# 167: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# 181: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
 				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
-				desc = sex_transition_167.10000
+				desc = sex_transition_181.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10169
+					scope:sex_transition = 10183
 				}
-				# 169: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY failed
+				# 183: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY failed
 				# You try to roll in place, but [affairs_partner.GetFirstName]'s #bold paralyzing#! barrage of thrusts never slows enough to do so.\n
-				desc = sex_transition_169.10000
+				desc = sex_transition_183.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10170
+					scope:sex_transition = 10184
 				}
-				# 170: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
+				# 184: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
 				# You try to find a moment to pull your knees under you, but each attempt is thwarted by his wild thrashing.\n
-				desc = sex_transition_170.10000
+				desc = sex_transition_184.10000
 			}
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
-					scope:sex_transition = 10172
+					scope:sex_transition = 10186
 				}
-				# 172: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
+				# 186: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS failed
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
-				desc = sex_transition_172.10000
+				desc = sex_transition_186.10000
 			}
 		}
 		triggered_desc = {
@@ -7927,8 +8203,8 @@ LIDAc.23 = {
 				exists = scope:prev_event
 				scope:prev_event = 34
 			}
-			# defaulted to 168: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_BREED
-			desc = sex_transition_168.0
+			# defaulted to 182: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_BREED
+			desc = sex_transition_182.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -7937,8 +8213,8 @@ LIDAc.23 = {
 				exists = scope:prev_event
 				scope:prev_event = 35
 			}
-			# defaulted to 173: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED
-			desc = sex_transition_173.0
+			# defaulted to 187: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED
+			desc = sex_transition_187.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -8017,7 +8293,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.196
+		name = LIDAoption.210
 	}
 	after = {
 		reset_stamina_after_cum_effect = yes
