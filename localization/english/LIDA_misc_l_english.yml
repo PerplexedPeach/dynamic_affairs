@@ -1,22 +1,7 @@
 ﻿l_english:
 # stamina indicators
-f_very_low_stam: "\nYou can't help but moan as you #N;bold near an orgasm#!. Your thighs clench and your back arches."
-f_low_stam: "\nSweat coats your entire body, and as your breathing becomes ragged, you're #N not sure how much longer you can last#!."
-f_med_stam: "\nDew-like sweat gleams on your skin and a red hue adorns your cheek, both #N evidence of your current physical exertion#!."
-f_high_stam: "\nYou appear in prime condition, ready for any kind of physical exercise."
-m_very_low_stam: "\nM very low stamina"
-m_low_stam: "\nM low stamina"
-m_med_stam: "\nM medium stamina"
-m_high_stam: "\nM high stamina"
-# p prefix stands for partner
-pm_very_low_stam: "Their eyes are unfocused while their muscle tenses up, indicating they are on the #P;bold cusp of cumming#!.\n\n"
-pm_low_stam: "His ragged breathing and occasional grunts betray how good of a job you're doing. He is probably #P close to cumming#!.\n\n"
-pm_med_stam: "A thin layer of sweat is visible on their skin, but you #P don't think they are close to climax#!.\n\n"
-pm_high_stam: "They appear fresh, ready for many rounds of intimate sparring.\n\n"
-pf_very_low_stam: "\nF very low stamina"
-pf_low_stam: "\nF low stamina"
-pf_med_stam: "\nF medium stamina"
-pf_high_stam: "\nF high stamina"
+root_stamina_tooltip: "[SCOPE.Custom('RootSexualStamina')]"
+partner_stamina_tooltip: "[SCOPE.Custom('PartnerSexualStamina')]"
 # sex option tooltips
 attempt_dom_tooltip: "This is considered a #dom;bold dominant#! action and will be challenged by [affairs_partner.GetFirstName]! Your chance of success is based on your physical prowess, personalities, traits, and current relationship #weak ([SCOPE.GetValue('dom_chance')|0]% success)#!"
 dom_no_sub_tooltip: "This is considered a #dom;bold dominant#! action! However, since there are no submissive options from this event, you are guaranteed success."

@@ -144,54 +144,6 @@ LIDAs.1 = {
 		}
 	}
 	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
-		}
 		desc = LIDAs.1.desc.0
 	}
 	immediate = {
@@ -350,6 +302,8 @@ LIDAs.1 = {
 		trigger_event = LIDAs.4
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -722,54 +676,6 @@ LIDAs.3 = {
 			}
 			# defaulted to 30: EventsSex.FM_ASS_RUB -> EventsSex.FM_HANDJOB
 			desc = sex_transition_30.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.3.desc.0
 	}
@@ -1185,6 +1091,8 @@ LIDAs.3 = {
 		trigger_event = LIDAc.4
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -1658,54 +1566,6 @@ LIDAs.4 = {
 			}
 			# defaulted to 48: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM
 			desc = sex_transition_48.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.4.desc.0
 	}
@@ -2241,6 +2101,8 @@ LIDAs.4 = {
 		trigger_event = LIDAc.4
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -2546,54 +2408,6 @@ LIDAs.6 = {
 			}
 			# defaulted to 49: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB
 			desc = sex_transition_49.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.6.desc.0
 	}
@@ -3039,6 +2853,8 @@ LIDAs.6 = {
 		trigger_event = LIDAc.4
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -3252,54 +3068,6 @@ LIDAs.7 = {
 			}
 			# defaulted to 22: EventsSex.FM_DEEPTHROAT -> EventsSex.FM_DEEPTHROAT
 			desc = sex_transition_22.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.7.desc.0
 		triggered_desc = {
@@ -3538,6 +3306,8 @@ LIDAs.7 = {
 		trigger_event = LIDAc.3
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -3685,54 +3455,6 @@ LIDAs.2 = {
 		}
 	}
 	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
-		}
 		desc = LIDAs.2.desc.0
 	}
 	immediate = {
@@ -4152,6 +3874,8 @@ LIDAs.2 = {
 		trigger_event = LIDAc.7
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -4456,54 +4180,6 @@ LIDAs.10 = {
 			}
 			# defaulted to 34: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB
 			desc = sex_transition_34.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.10.desc.0
 	}
@@ -4924,6 +4600,8 @@ LIDAs.10 = {
 		trigger_event = LIDAc.7
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -5329,54 +5007,6 @@ LIDAs.8 = {
 			}
 			# defaulted to 63: EventsSex.FM_COWGIRL -> EventsSex.FM_HOTDOG
 			desc = sex_transition_63.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.8.desc.0
 	}
@@ -6055,6 +5685,8 @@ LIDAs.8 = {
 		trigger_event = LIDAc.7
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -6313,54 +5945,6 @@ LIDAs.9 = {
 			}
 			# defaulted to 44: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_STANDING_FINGERED_FROM_BEHIND
 			desc = sex_transition_44.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.9.desc.0
 	}
@@ -6847,6 +6431,8 @@ LIDAs.9 = {
 		trigger_event = LIDAc.7
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -7322,54 +6908,6 @@ LIDAs.5 = {
 			}
 			# defaulted to 75: EventsSex.FM_PRONE_BONE -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
 			desc = sex_transition_75.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.5.desc.0
 		triggered_desc = {
@@ -7872,6 +7410,8 @@ LIDAs.5 = {
 		trigger_event = LIDAc.9
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -8194,54 +7734,6 @@ LIDAs.11 = {
 			}
 			# defaulted to 62: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL
 			desc = sex_transition_62.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.11.desc.0
 		triggered_desc = {
@@ -8832,6 +8324,8 @@ LIDAs.11 = {
 		trigger_event = LIDAc.9
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -9136,54 +8630,6 @@ LIDAs.12 = {
 			}
 			# defaulted to 68: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL
 			desc = sex_transition_68.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.12.desc.0
 		triggered_desc = {
@@ -9774,6 +9220,8 @@ LIDAs.12 = {
 		trigger_event = LIDAc.9
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -10069,54 +9517,6 @@ LIDAs.13 = {
 			}
 			# defaulted to 74: EventsSex.FM_PRONE_BONE -> EventsSex.FM_MISSIONARY
 			desc = sex_transition_74.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.13.desc.0
 		triggered_desc = {
@@ -10614,6 +10014,8 @@ LIDAs.13 = {
 		trigger_event = LIDAc.11
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -10955,54 +10357,6 @@ LIDAs.14 = {
 			}
 			# defaulted to 76: EventsSex.FM_PRONE_BONE -> EventsSex.FM_PRONE_BONE
 			desc = sex_transition_76.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina <= 0
-				}
-				desc = root_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = f_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = f_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = f_med_stam
-			}
-			desc = f_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pm_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pm_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pm_med_stam
-			}
-			desc = pm_high_stam
 		}
 		desc = LIDAs.14.desc.0
 		triggered_desc = {
@@ -11436,6 +10790,8 @@ LIDAs.14 = {
 		trigger_event = LIDAc.11
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -11583,54 +10939,6 @@ LIDAs.15 = {
 		}
 	}
 	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
-		}
 		desc = LIDAs.15.desc.0
 	}
 	immediate = {
@@ -11789,6 +11097,8 @@ LIDAs.15 = {
 		trigger_event = LIDAs.18
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -12161,54 +11471,6 @@ LIDAs.17 = {
 			}
 			# defaulted to 108: EventsSex.MF_ASS_RUB -> EventsSex.MF_HANDJOB
 			desc = sex_transition_108.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.17.desc.0
 	}
@@ -12624,6 +11886,8 @@ LIDAs.17 = {
 		trigger_event = LIDAc.16
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -13097,54 +12361,6 @@ LIDAs.18 = {
 			}
 			# defaulted to 126: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM
 			desc = sex_transition_126.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.18.desc.0
 	}
@@ -13680,6 +12896,8 @@ LIDAs.18 = {
 		trigger_event = LIDAc.16
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -13985,54 +13203,6 @@ LIDAs.20 = {
 			}
 			# defaulted to 127: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_SUB
 			desc = sex_transition_127.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.20.desc.0
 	}
@@ -14478,6 +13648,8 @@ LIDAs.20 = {
 		trigger_event = LIDAc.16
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -14691,54 +13863,6 @@ LIDAs.21 = {
 			}
 			# defaulted to 100: EventsSex.MF_DEEPTHROAT -> EventsSex.MF_DEEPTHROAT
 			desc = sex_transition_100.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.21.desc.0
 		triggered_desc = {
@@ -14977,6 +14101,8 @@ LIDAs.21 = {
 		trigger_event = LIDAc.15
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -15124,54 +14250,6 @@ LIDAs.16 = {
 		}
 	}
 	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
-		}
 		desc = LIDAs.16.desc.0
 	}
 	immediate = {
@@ -15591,6 +14669,8 @@ LIDAs.16 = {
 		trigger_event = LIDAc.19
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -15895,54 +14975,6 @@ LIDAs.24 = {
 			}
 			# defaulted to 112: EventsSex.MF_HOTDOG -> EventsSex.MF_ASS_RUB
 			desc = sex_transition_112.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.24.desc.0
 	}
@@ -16363,6 +15395,8 @@ LIDAs.24 = {
 		trigger_event = LIDAc.19
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -16768,54 +15802,6 @@ LIDAs.22 = {
 			}
 			# defaulted to 141: EventsSex.MF_COWGIRL -> EventsSex.MF_HOTDOG
 			desc = sex_transition_141.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.22.desc.0
 	}
@@ -17494,6 +16480,8 @@ LIDAs.22 = {
 		trigger_event = LIDAc.19
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -17752,54 +16740,6 @@ LIDAs.23 = {
 			}
 			# defaulted to 122: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_STANDING_FINGERED_FROM_BEHIND
 			desc = sex_transition_122.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.23.desc.0
 	}
@@ -18286,6 +17226,8 @@ LIDAs.23 = {
 		trigger_event = LIDAc.19
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -18761,54 +17703,6 @@ LIDAs.19 = {
 			}
 			# defaulted to 152: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND
 			desc = sex_transition_152.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.19.desc.0
 		triggered_desc = {
@@ -19311,6 +18205,8 @@ LIDAs.19 = {
 		trigger_event = LIDAc.21
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -19633,54 +18529,6 @@ LIDAs.25 = {
 			}
 			# defaulted to 140: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL
 			desc = sex_transition_140.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.25.desc.0
 		triggered_desc = {
@@ -20271,6 +19119,8 @@ LIDAs.25 = {
 		trigger_event = LIDAc.21
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -20566,54 +19416,6 @@ LIDAs.26 = {
 			}
 			# defaulted to 146: EventsSex.MF_MISSIONARY -> EventsSex.MF_COWGIRL
 			desc = sex_transition_146.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.26.desc.0
 		triggered_desc = {
@@ -21204,6 +20006,8 @@ LIDAs.26 = {
 		trigger_event = LIDAc.21
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -21490,54 +20294,6 @@ LIDAs.27 = {
 			}
 			# defaulted to 151: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY
 			desc = sex_transition_151.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.27.desc.0
 		triggered_desc = {
@@ -21942,6 +20698,8 @@ LIDAs.27 = {
 		trigger_event = LIDAc.23
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }
@@ -22274,54 +21032,6 @@ LIDAs.28 = {
 			}
 			# defaulted to 153: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE
 			desc = sex_transition_153.0
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 2
-				}
-				desc = m_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 3
-				}
-				desc = m_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:root_stamina < 4
-				}
-				desc = m_med_stam
-			}
-			desc = m_high_stam
-		}
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina <= 0
-				}
-				desc = partner_cum_f
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 2
-				}
-				desc = pf_very_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 3
-				}
-				desc = pf_low_stam
-			}
-			triggered_desc = {
-				trigger = {
-					scope:partner_stamina < 4
-				}
-				desc = pf_med_stam
-			}
-			desc = pf_high_stam
 		}
 		desc = LIDAs.28.desc.0
 		triggered_desc = {
@@ -22755,6 +21465,8 @@ LIDAs.28 = {
 		trigger_event = LIDAc.23
 	}
 	after = {
+		custom_tooltip = root_stamina_tooltip
+		custom_tooltip = partner_stamina_tooltip
 		reset_stamina_after_cum_effect = yes
 	}
 }

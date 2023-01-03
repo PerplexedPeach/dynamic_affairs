@@ -170,6 +170,8 @@ DOM_CHANCE_STAMINA_TOOLTIP = "dom_chance_stamina_tooltip"
 DOM_CHANCE_ORGASM_TOOLTIP = "dom_chance_orgasm_tooltip"
 DOM_CHANCE_SEX_SKILL_TOOLTIP = "dom_chance_sex_skill_tooltip"
 DOM_CHANCE_BREAKDOWN_TOOLTIP = "dom_chance_breakdown_tooltip"
+ROOT_STAMINA_TOOLTIP = "root_stamina_tooltip"
+PARTNER_STAMINA_TOOLTIP = "partner_stamina_tooltip"
 
 CANCEL_MEETING_OPTION = "cancel_meeting_option"
 CANCEL_MEETING_TOOLTIP = "cancel_meeting_tooltip"
@@ -891,32 +893,13 @@ class Sex(Event):
         super(Sex, self).__init__(*args, **kwargs)
         assert isinstance(self.id, EventsSex)
 
+    def generate_after(self):
+        self.assign(CUSTOM_TOOLTIP, ROOT_STAMINA_TOOLTIP)
+        self.assign(CUSTOM_TOOLTIP, PARTNER_STAMINA_TOOLTIP)
+        super(Sex, self).generate_after()
+
     def generate_desc(self):
         self.generate_incoming_options_desc()
-
-        # description of each partners' stamina
-        stamina_thresholds = {2: "very_low", 3: "low", 4: "med"}
-        first_prefix = self.root_gender
-        second_prefix = f"p{self.partner_gender}"
-
-        # only need to generate cum text for the non-terminating character
-        root_terminating = self.root_stamina_decides_finish()
-        for prefix, value_to_check in [(first_prefix, ROOT_STAMINA), (second_prefix, PARTNER_STAMINA)]:
-            with Block(self, FIRST_VALID):
-                # for each event, allow for special description on root cum; if none specified, default one will be used
-                if root_terminating and value_to_check == PARTNER_STAMINA:
-                    self.generate_partner_cum_desc()
-                # if you cum, then no need to indicate your sexual stamina, instead fill it with the root cum text
-                elif not root_terminating and value_to_check == ROOT_STAMINA:
-                    self.generate_root_cum_desc()
-                for threshold, suffix in stamina_thresholds.items():
-                    with Block(self, TRIGGERED_DESC):
-                        with Block(self, TRIGGER):
-                            self.add_line(f"{value_to_check} < {threshold}")
-                        self.assign(DESC, f"{prefix}_{suffix}_stam")
-                # backup option for high stamina
-                self.assign(DESC, f"{prefix}_high_stam")
-
         super(Sex, self).generate_desc()
 
     def generate_immediate_effect(self):

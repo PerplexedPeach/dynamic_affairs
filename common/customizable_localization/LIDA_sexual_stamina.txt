@@ -1,0 +1,115 @@
+﻿RootSexualStamina = {
+	type = character
+	text = {
+		trigger = {
+			scope:root_stamina < 2
+			is_female = yes
+		}
+		localization_key = f_very_low_stam
+	}
+	text = {
+		trigger = {
+			scope:root_stamina < 3
+			is_female = yes
+		}
+		localization_key = f_low_stam
+	}
+	text = {
+		trigger = {
+			scope:root_stamina < 4
+			is_female = yes
+		}
+		localization_key = f_med_stam
+	}
+	text = {
+		trigger = {
+			scope:root_stamina < 2
+			is_female = no
+		}
+		localization_key = m_very_low_stam
+	}
+	text = {
+		trigger = {
+			scope:root_stamina < 3
+			is_female = no
+		}
+		localization_key = m_low_stam
+	}
+	text = {
+		trigger = {
+			scope:root_stamina < 4
+			is_female = no
+		}
+		localization_key = m_med_stam
+	}
+	text = {
+		trigger = {
+			is_female = no
+		}
+		localization_key = m_high_stam
+	}
+	text = {
+		trigger = {
+			is_female = yes
+		}
+		localization_key = f_high_stam
+	}
+}
+
+PartnerSexualStamina = {
+	type = character
+	text = {
+		trigger = {
+			scope:partner_stamina < 2
+			scope:affairs_partner = { is_female = yes }
+		}
+		localization_key = pf_very_low_stam
+	}
+	text = {
+		trigger = {
+			scope:partner_stamina < 3
+			scope:affairs_partner = { is_female = yes }
+		}
+		localization_key = pf_low_stam
+	}
+	text = {
+		trigger = {
+			scope:partner_stamina < 4
+			scope:affairs_partner = { is_female = yes }
+		}
+		localization_key = pf_med_stam
+	}
+	text = {
+		trigger = {
+			scope:partner_stamina < 2
+			scope:affairs_partner = { is_female = no }
+		}
+		localization_key = pm_very_low_stam
+	}
+	text = {
+		trigger = {
+			scope:partner_stamina < 3
+			scope:affairs_partner = { is_female = no }
+		}
+		localization_key = pm_low_stam
+	}
+	text = {
+		trigger = {
+			scope:partner_stamina < 4
+			scope:affairs_partner = { is_female = no }
+		}
+		localization_key = pm_med_stam
+	}
+	text = {
+		trigger = {
+			scope:affairs_partner = { is_female = no }
+		}
+		localization_key = pm_high_stam
+	}
+	text = {
+		trigger = {
+			scope:affairs_partner = { is_female = yes }
+		}
+		localization_key = pf_high_stam
+	}
+}
