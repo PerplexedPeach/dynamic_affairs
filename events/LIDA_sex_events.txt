@@ -2412,19 +2412,25 @@ LIDAs.7 = {
 				}
 				# 7000700: EventsSex.FM_HANDJOB -> EventsSex.FM_HANDJOB failed
 				# 
-				triggered_desc = {
-					trigger = {
-						NOT = { has_trait = lida_dom }
+				desc = {
+					desc = {
+						triggered_desc = {
+							trigger = {
+								NOT = { has_trait = lida_dom }
+							}
+							desc = sex_transition.7.7.0
+						}
 					}
-					desc = sex_transition.7.7.0
-				}
-				triggered_desc = {
-					trigger = {
-						has_trait = lida_dom
+					desc = {
+						triggered_desc = {
+							trigger = {
+								has_trait = lida_dom
+							}
+							desc = sex_transition.7.7.1
+						}
 					}
-					desc = sex_transition.7.7.1
+					desc = sex_transition.7.7.2
 				}
-				desc = sex_transition.7.7.2
 			}
 			triggered_desc = {
 				trigger = {
@@ -3406,19 +3412,25 @@ LIDAs.8 = {
 				}
 				# 7000700: EventsSex.FM_HANDJOB -> EventsSex.FM_HANDJOB failed
 				# 
-				triggered_desc = {
-					trigger = {
-						NOT = { has_trait = lida_dom }
+				desc = {
+					desc = {
+						triggered_desc = {
+							trigger = {
+								NOT = { has_trait = lida_dom }
+							}
+							desc = sex_transition.7.7.0
+						}
 					}
-					desc = sex_transition.7.7.0
-				}
-				triggered_desc = {
-					trigger = {
-						has_trait = lida_dom
+					desc = {
+						triggered_desc = {
+							trigger = {
+								has_trait = lida_dom
+							}
+							desc = sex_transition.7.7.1
+						}
 					}
-					desc = sex_transition.7.7.1
+					desc = sex_transition.7.7.2
 				}
-				desc = sex_transition.7.7.2
 			}
 			triggered_desc = {
 				trigger = {
@@ -6853,18 +6865,24 @@ LIDAs.11 = {
 			# defaulted to 11001100: EventsSex.FM_DEEPTHROAT -> EventsSex.FM_DEEPTHROAT
 			desc = sex_transition.11.11.0
 		}
-		desc = LIDAs.11.desc.0
-		triggered_desc = {
-			trigger = {
-				NOT = { has_trait = lida_sub }
+		desc = {
+			desc = LIDAs.11.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						NOT = { has_trait = lida_sub }
+					}
+					desc = LIDAs.11.desc.1
+				}
 			}
-			desc = LIDAs.11.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_sub
+					}
+					desc = LIDAs.11.desc.2
+				}
 			}
-			desc = LIDAs.11.desc.2
 		}
 	}
 	immediate = {
@@ -10531,19 +10549,25 @@ LIDAs.9 = {
 				}
 				# Dom Blowjob
 				# 
-				triggered_desc = {
-					trigger = {
-						NOT = { has_trait = lida_dom }
+				desc = {
+					desc = {
+						triggered_desc = {
+							trigger = {
+								NOT = { has_trait = lida_dom }
+							}
+							desc = sex_transition.8.9.0
+						}
 					}
-					desc = sex_transition.8.9.0
-				}
-				triggered_desc = {
-					trigger = {
-						has_trait = lida_dom
+					desc = {
+						triggered_desc = {
+							trigger = {
+								has_trait = lida_dom
+							}
+							desc = sex_transition.8.9.1
+						}
 					}
-					desc = sex_transition.8.9.1
+					desc = sex_transition.8.9.2
 				}
-				desc = sex_transition.8.9.2
 			}
 			triggered_desc = {
 				trigger = {
@@ -10552,19 +10576,25 @@ LIDAs.9 = {
 				}
 				# Dom Blowjob I
 				# 
-				triggered_desc = {
-					trigger = {
-						NOT = { has_trait = lida_dom }
+				desc = {
+					desc = {
+						triggered_desc = {
+							trigger = {
+								NOT = { has_trait = lida_dom }
+							}
+							desc = sex_transition.37.9.0
+						}
 					}
-					desc = sex_transition.37.9.0
-				}
-				triggered_desc = {
-					trigger = {
-						has_trait = lida_dom
+					desc = {
+						triggered_desc = {
+							trigger = {
+								has_trait = lida_dom
+							}
+							desc = sex_transition.37.9.1
+						}
 					}
-					desc = sex_transition.37.9.1
+					desc = sex_transition.37.9.2
 				}
-				desc = sex_transition.37.9.2
 			}
 			triggered_desc = {
 				trigger = {
@@ -10573,19 +10603,25 @@ LIDAs.9 = {
 				}
 				# Dom Blowjob II
 				# 
-				triggered_desc = {
-					trigger = {
-						NOT = { has_trait = lida_dom }
+				desc = {
+					desc = {
+						triggered_desc = {
+							trigger = {
+								NOT = { has_trait = lida_dom }
+							}
+							desc = sex_transition.38.9.0
+						}
 					}
-					desc = sex_transition.38.9.0
-				}
-				triggered_desc = {
-					trigger = {
-						has_trait = lida_dom
+					desc = {
+						triggered_desc = {
+							trigger = {
+								has_trait = lida_dom
+							}
+							desc = sex_transition.38.9.1
+						}
 					}
-					desc = sex_transition.38.9.1
+					desc = sex_transition.38.9.2
 				}
-				desc = sex_transition.38.9.2
 			}
 			triggered_desc = {
 				trigger = {
@@ -10884,19 +10920,25 @@ LIDAs.9 = {
 				scope:prev_event = 8
 			}
 			# defaulted to 8000900: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
-			triggered_desc = {
-				trigger = {
-					NOT = { has_trait = lida_dom }
+			desc = {
+				desc = {
+					triggered_desc = {
+						trigger = {
+							NOT = { has_trait = lida_dom }
+						}
+						desc = sex_transition.8.9.0
+					}
 				}
-				desc = sex_transition.8.9.0
-			}
-			triggered_desc = {
-				trigger = {
-					has_trait = lida_dom
+				desc = {
+					triggered_desc = {
+						trigger = {
+							has_trait = lida_dom
+						}
+						desc = sex_transition.8.9.1
+					}
 				}
-				desc = sex_transition.8.9.1
+				desc = sex_transition.8.9.2
 			}
-			desc = sex_transition.8.9.2
 		}
 		triggered_desc = {
 			trigger = {
@@ -10906,19 +10948,25 @@ LIDAs.9 = {
 				scope:prev_event = 37
 			}
 			# defaulted to 37000900: EventsSex.FM_BLOWJOB_DOM_I -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
-			triggered_desc = {
-				trigger = {
-					NOT = { has_trait = lida_dom }
+			desc = {
+				desc = {
+					triggered_desc = {
+						trigger = {
+							NOT = { has_trait = lida_dom }
+						}
+						desc = sex_transition.37.9.0
+					}
 				}
-				desc = sex_transition.37.9.0
-			}
-			triggered_desc = {
-				trigger = {
-					has_trait = lida_dom
+				desc = {
+					triggered_desc = {
+						trigger = {
+							has_trait = lida_dom
+						}
+						desc = sex_transition.37.9.1
+					}
 				}
-				desc = sex_transition.37.9.1
+				desc = sex_transition.37.9.2
 			}
-			desc = sex_transition.37.9.2
 		}
 		triggered_desc = {
 			trigger = {
@@ -10928,19 +10976,25 @@ LIDAs.9 = {
 				scope:prev_event = 38
 			}
 			# defaulted to 38000900: EventsSex.FM_BLOWJOB_DOM_II -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
-			triggered_desc = {
-				trigger = {
-					NOT = { has_trait = lida_dom }
+			desc = {
+				desc = {
+					triggered_desc = {
+						trigger = {
+							NOT = { has_trait = lida_dom }
+						}
+						desc = sex_transition.38.9.0
+					}
 				}
-				desc = sex_transition.38.9.0
-			}
-			triggered_desc = {
-				trigger = {
-					has_trait = lida_dom
+				desc = {
+					triggered_desc = {
+						trigger = {
+							has_trait = lida_dom
+						}
+						desc = sex_transition.38.9.1
+					}
 				}
-				desc = sex_transition.38.9.1
+				desc = sex_transition.38.9.2
 			}
-			desc = sex_transition.38.9.2
 		}
 		triggered_desc = {
 			trigger = {
@@ -10992,18 +11046,24 @@ LIDAs.9 = {
 			# defaulted to 18000900: EventsSex.FM_PRONE_BONE -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
 			desc = sex_transition.18.9.0
 		}
-		desc = LIDAs.9.desc.0
-		triggered_desc = {
-			trigger = {
-				scope:subdom <= -20
+		desc = {
+			desc = LIDAs.9.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						scope:subdom <= -20
+					}
+					desc = LIDAs.9.desc.1
+				}
 			}
-			desc = LIDAs.9.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				scope:subdom >= 10
+			desc = {
+				triggered_desc = {
+					trigger = {
+						scope:subdom >= 10
+					}
+					desc = LIDAs.9.desc.2
+				}
 			}
-			desc = LIDAs.9.desc.2
 		}
 	}
 	immediate = {
@@ -11846,18 +11906,24 @@ LIDAs.15 = {
 			# defaulted to 16001500: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL
 			desc = sex_transition.16.15.0
 		}
-		desc = LIDAs.15.desc.0
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom
+		desc = {
+			desc = LIDAs.15.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = LIDAs.15.desc.1
+				}
 			}
-			desc = LIDAs.15.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_sub
+					}
+					desc = LIDAs.15.desc.2
+				}
 			}
-			desc = LIDAs.15.desc.2
 		}
 	}
 	immediate = {
@@ -12778,18 +12844,24 @@ LIDAs.16 = {
 			# defaulted to 17001600: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL
 			desc = sex_transition.17.16.0
 		}
-		desc = LIDAs.16.desc.0
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom
+		desc = {
+			desc = LIDAs.16.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = LIDAs.16.desc.1
+				}
 			}
-			desc = LIDAs.16.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_sub
+					}
+					desc = LIDAs.16.desc.2
+				}
 			}
-			desc = LIDAs.16.desc.2
 		}
 	}
 	immediate = {
@@ -13738,20 +13810,26 @@ LIDAs.17 = {
 			# defaulted to 18001700: EventsSex.FM_PRONE_BONE -> EventsSex.FM_MISSIONARY
 			desc = sex_transition.18.17.0
 		}
-		desc = LIDAs.17.desc.0
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
+		desc = {
+			desc = LIDAs.17.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_sub
+					}
+					desc = LIDAs.17.desc.1
+				}
 			}
-			desc = LIDAs.17.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = LIDAs.17.desc.2
+				}
 			}
-			desc = LIDAs.17.desc.2
+			desc = LIDAs.17.desc.3
 		}
-		desc = LIDAs.17.desc.3
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -14606,20 +14684,26 @@ LIDAs.18 = {
 			# defaulted to 18001800: EventsSex.FM_PRONE_BONE -> EventsSex.FM_PRONE_BONE
 			desc = sex_transition.18.18.0
 		}
-		desc = LIDAs.18.desc.0
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
+		desc = {
+			desc = LIDAs.18.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_sub
+					}
+					desc = LIDAs.18.desc.1
+				}
 			}
-			desc = LIDAs.18.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = LIDAs.18.desc.2
+				}
 			}
-			desc = LIDAs.18.desc.2
+			desc = LIDAs.18.desc.3
 		}
-		desc = LIDAs.18.desc.3
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -16583,19 +16667,25 @@ LIDAs.24 = {
 				}
 				# 24002400: EventsSex.MF_HANDJOB -> EventsSex.MF_HANDJOB failed
 				# 
-				triggered_desc = {
-					trigger = {
-						NOT = { has_trait = lida_dom }
+				desc = {
+					desc = {
+						triggered_desc = {
+							trigger = {
+								NOT = { has_trait = lida_dom }
+							}
+							desc = sex_transition.24.24.0
+						}
 					}
-					desc = sex_transition.24.24.0
-				}
-				triggered_desc = {
-					trigger = {
-						has_trait = lida_dom
+					desc = {
+						triggered_desc = {
+							trigger = {
+								has_trait = lida_dom
+							}
+							desc = sex_transition.24.24.1
+						}
 					}
-					desc = sex_transition.24.24.1
+					desc = sex_transition.24.24.2
 				}
-				desc = sex_transition.24.24.2
 			}
 			triggered_desc = {
 				trigger = {
@@ -17494,19 +17584,25 @@ LIDAs.25 = {
 				}
 				# 24002400: EventsSex.MF_HANDJOB -> EventsSex.MF_HANDJOB failed
 				# 
-				triggered_desc = {
-					trigger = {
-						NOT = { has_trait = lida_dom }
+				desc = {
+					desc = {
+						triggered_desc = {
+							trigger = {
+								NOT = { has_trait = lida_dom }
+							}
+							desc = sex_transition.24.24.0
+						}
 					}
-					desc = sex_transition.24.24.0
-				}
-				triggered_desc = {
-					trigger = {
-						has_trait = lida_dom
+					desc = {
+						triggered_desc = {
+							trigger = {
+								has_trait = lida_dom
+							}
+							desc = sex_transition.24.24.1
+						}
 					}
-					desc = sex_transition.24.24.1
+					desc = sex_transition.24.24.2
 				}
-				desc = sex_transition.24.24.2
 			}
 			triggered_desc = {
 				trigger = {
@@ -19334,18 +19430,24 @@ LIDAs.28 = {
 			# defaulted to 28002800: EventsSex.MF_DEEPTHROAT -> EventsSex.MF_DEEPTHROAT
 			desc = sex_transition.28.28.0
 		}
-		desc = LIDAs.28.desc.0
-		triggered_desc = {
-			trigger = {
-				NOT = { has_trait = lida_sub }
+		desc = {
+			desc = LIDAs.28.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						NOT = { has_trait = lida_sub }
+					}
+					desc = LIDAs.28.desc.1
+				}
 			}
-			desc = LIDAs.28.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_sub
+					}
+					desc = LIDAs.28.desc.2
+				}
 			}
-			desc = LIDAs.28.desc.2
 		}
 	}
 	immediate = {
@@ -22975,19 +23077,25 @@ LIDAs.26 = {
 				}
 				# Dom Blowjob
 				# 
-				triggered_desc = {
-					trigger = {
-						NOT = { has_trait = lida_dom }
+				desc = {
+					desc = {
+						triggered_desc = {
+							trigger = {
+								NOT = { has_trait = lida_dom }
+							}
+							desc = sex_transition.25.26.0
+						}
 					}
-					desc = sex_transition.25.26.0
-				}
-				triggered_desc = {
-					trigger = {
-						has_trait = lida_dom
+					desc = {
+						triggered_desc = {
+							trigger = {
+								has_trait = lida_dom
+							}
+							desc = sex_transition.25.26.1
+						}
 					}
-					desc = sex_transition.25.26.1
+					desc = sex_transition.25.26.2
 				}
-				desc = sex_transition.25.26.2
 			}
 			triggered_desc = {
 				trigger = {
@@ -23232,19 +23340,25 @@ LIDAs.26 = {
 				scope:prev_event = 25
 			}
 			# defaulted to 25002600: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND
-			triggered_desc = {
-				trigger = {
-					NOT = { has_trait = lida_dom }
+			desc = {
+				desc = {
+					triggered_desc = {
+						trigger = {
+							NOT = { has_trait = lida_dom }
+						}
+						desc = sex_transition.25.26.0
+					}
 				}
-				desc = sex_transition.25.26.0
-			}
-			triggered_desc = {
-				trigger = {
-					has_trait = lida_dom
+				desc = {
+					triggered_desc = {
+						trigger = {
+							has_trait = lida_dom
+						}
+						desc = sex_transition.25.26.1
+					}
 				}
-				desc = sex_transition.25.26.1
+				desc = sex_transition.25.26.2
 			}
-			desc = sex_transition.25.26.2
 		}
 		triggered_desc = {
 			trigger = {
@@ -23296,18 +23410,24 @@ LIDAs.26 = {
 			# defaulted to 35002600: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND
 			desc = sex_transition.35.26.0
 		}
-		desc = LIDAs.26.desc.0
-		triggered_desc = {
-			trigger = {
-				scope:subdom <= -20
+		desc = {
+			desc = LIDAs.26.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						scope:subdom <= -20
+					}
+					desc = LIDAs.26.desc.1
+				}
 			}
-			desc = LIDAs.26.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				scope:subdom >= 10
+			desc = {
+				triggered_desc = {
+					trigger = {
+						scope:subdom >= 10
+					}
+					desc = LIDAs.26.desc.2
+				}
 			}
-			desc = LIDAs.26.desc.2
 		}
 	}
 	immediate = {
@@ -24150,18 +24270,24 @@ LIDAs.32 = {
 			# defaulted to 33003200: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL
 			desc = sex_transition.33.32.0
 		}
-		desc = LIDAs.32.desc.0
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom
+		desc = {
+			desc = LIDAs.32.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = LIDAs.32.desc.1
+				}
 			}
-			desc = LIDAs.32.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_sub
+					}
+					desc = LIDAs.32.desc.2
+				}
 			}
-			desc = LIDAs.32.desc.2
 		}
 	}
 	immediate = {
@@ -25073,18 +25199,24 @@ LIDAs.33 = {
 			# defaulted to 34003300: EventsSex.MF_MISSIONARY -> EventsSex.MF_COWGIRL
 			desc = sex_transition.34.33.0
 		}
-		desc = LIDAs.33.desc.0
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom
+		desc = {
+			desc = LIDAs.33.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = LIDAs.33.desc.1
+				}
 			}
-			desc = LIDAs.33.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_sub
+					}
+					desc = LIDAs.33.desc.2
+				}
 			}
-			desc = LIDAs.33.desc.2
 		}
 	}
 	immediate = {
@@ -25987,20 +26119,26 @@ LIDAs.34 = {
 			# defaulted to 35003400: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY
 			desc = sex_transition.35.34.0
 		}
-		desc = LIDAs.34.desc.0
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
+		desc = {
+			desc = LIDAs.34.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_sub
+					}
+					desc = LIDAs.34.desc.1
+				}
 			}
-			desc = LIDAs.34.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = LIDAs.34.desc.2
+				}
 			}
-			desc = LIDAs.34.desc.2
+			desc = LIDAs.34.desc.3
 		}
-		desc = LIDAs.34.desc.3
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
@@ -26745,20 +26883,26 @@ LIDAs.35 = {
 			# defaulted to 35003500: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE
 			desc = sex_transition.35.35.0
 		}
-		desc = LIDAs.35.desc.0
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_sub
+		desc = {
+			desc = LIDAs.35.desc.0
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_sub
+					}
+					desc = LIDAs.35.desc.1
+				}
 			}
-			desc = LIDAs.35.desc.1
-		}
-		triggered_desc = {
-			trigger = {
-				has_trait = lida_dom
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
+					}
+					desc = LIDAs.35.desc.2
+				}
 			}
-			desc = LIDAs.35.desc.2
+			desc = LIDAs.35.desc.3
 		}
-		desc = LIDAs.35.desc.3
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {

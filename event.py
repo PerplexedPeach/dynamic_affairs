@@ -789,10 +789,11 @@ class TriggeredDesc(Desc):
         super(TriggeredDesc, self).__init__(desc)
 
     def generate_desc(self, b: Event, o: typing.Optional[Option] = None):
-        with Block(b, TRIGGERED_DESC):
-            with Block(b, TRIGGER):
-                b.add_line(self.trigger_condition)
-            super(TriggeredDesc, self).generate_desc(b, o)
+        with Block(b, DESC):
+            with Block(b, TRIGGERED_DESC):
+                with Block(b, TRIGGER):
+                    b.add_line(self.trigger_condition)
+                super(TriggeredDesc, self).generate_desc(b, o)
 
 
 class ComposedDesc(Desc):
@@ -803,8 +804,9 @@ class ComposedDesc(Desc):
         super(ComposedDesc, self).__init__("")
 
     def generate_desc(self, b: Event, o: typing.Optional[Option] = None):
-        for desc in self.descs:
-            desc.generate_desc(b, o)
+        with Block(b, DESC):
+            for desc in self.descs:
+                desc.generate_desc(b, o)
 
     def generate_localization(self, b: Describable):
         return "\n".join([d.generate_localization(b) for d in self.descs])

@@ -251,7 +251,6 @@ questions
 
 
 TODO
-- FIX repeating options not showing up
 - connect Carnalitas fetish system
 - royal court event
 - more hooks into sex scenes
