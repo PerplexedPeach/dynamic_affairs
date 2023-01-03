@@ -322,7 +322,10 @@ LIDAf.1 = {
 			name = sex_transition
 			value = 1000120
 		}
-		trigger_event = LIDAs.1
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.1
+		}
 	}
 	option = {
 		# 1000220: EventsFirst.FM_MEETING_WITH_SPOUSE -> EventsSex.FM_FOOTJOB_TEASE
@@ -337,7 +340,10 @@ LIDAf.1 = {
 			name = sex_transition
 			value = 1000220
 		}
-		trigger_event = LIDAs.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.2
+		}
 	}
 	option = {
 		# 1000320: EventsFirst.FM_MEETING_WITH_SPOUSE -> EventsSex.FM_HANDJOB_TEASE
@@ -352,7 +358,10 @@ LIDAf.1 = {
 			name = sex_transition
 			value = 1000320
 		}
-		trigger_event = LIDAs.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.3
+		}
 	}
 	option = {
 		# 1000520: EventsFirst.FM_MEETING_WITH_SPOUSE -> EventsSex.FM_PUSSY_TEASE
@@ -367,7 +376,10 @@ LIDAf.1 = {
 			name = sex_transition
 			value = 1000520
 		}
-		trigger_event = LIDAs.5
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.5
+		}
 	}
 	option = {
 		# 1000620: EventsFirst.FM_MEETING_WITH_SPOUSE -> EventsSex.FM_TIT_TEASE
@@ -382,7 +394,10 @@ LIDAf.1 = {
 			name = sex_transition
 			value = 1000620
 		}
-		trigger_event = LIDAs.6
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.6
+		}
 	}
 	option = {
 		# 1000420: EventsFirst.FM_MEETING_WITH_SPOUSE -> EventsSex.FM_ASS_TEASE
@@ -397,7 +412,10 @@ LIDAf.1 = {
 			name = sex_transition
 			value = 1000420
 		}
-		trigger_event = LIDAs.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.4
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -413,6 +431,9 @@ LIDAf.1 = {
 			value = 1
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.2 = {
@@ -737,7 +758,10 @@ LIDAf.2 = {
 			name = sex_transition
 			value = 2000120
 		}
-		trigger_event = LIDAs.1
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.1
+		}
 	}
 	option = {
 		# 2000220: EventsFirst.FM_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_FOOTJOB_TEASE
@@ -752,7 +776,10 @@ LIDAf.2 = {
 			name = sex_transition
 			value = 2000220
 		}
-		trigger_event = LIDAs.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.2
+		}
 	}
 	option = {
 		# 2000320: EventsFirst.FM_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
@@ -767,7 +794,10 @@ LIDAf.2 = {
 			name = sex_transition
 			value = 2000320
 		}
-		trigger_event = LIDAs.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.3
+		}
 	}
 	option = {
 		# 2000520: EventsFirst.FM_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_PUSSY_TEASE
@@ -782,7 +812,10 @@ LIDAf.2 = {
 			name = sex_transition
 			value = 2000520
 		}
-		trigger_event = LIDAs.5
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.5
+		}
 	}
 	option = {
 		# 2000620: EventsFirst.FM_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_TIT_TEASE
@@ -797,7 +830,10 @@ LIDAf.2 = {
 			name = sex_transition
 			value = 2000620
 		}
-		trigger_event = LIDAs.6
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.6
+		}
 	}
 	option = {
 		# 2000420: EventsFirst.FM_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.FM_ASS_TEASE
@@ -812,7 +848,10 @@ LIDAf.2 = {
 			name = sex_transition
 			value = 2000420
 		}
-		trigger_event = LIDAs.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.4
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -828,6 +867,9 @@ LIDAf.2 = {
 			value = 2
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.3 = {
@@ -1152,7 +1194,10 @@ LIDAf.3 = {
 			name = sex_transition
 			value = 3000120
 		}
-		trigger_event = LIDAs.1
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.1
+		}
 	}
 	option = {
 		# 3000220: EventsFirst.FM_MEETING_WITH_VASSAL -> EventsSex.FM_FOOTJOB_TEASE
@@ -1167,7 +1212,10 @@ LIDAf.3 = {
 			name = sex_transition
 			value = 3000220
 		}
-		trigger_event = LIDAs.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.2
+		}
 	}
 	option = {
 		# 3000320: EventsFirst.FM_MEETING_WITH_VASSAL -> EventsSex.FM_HANDJOB_TEASE
@@ -1182,7 +1230,10 @@ LIDAf.3 = {
 			name = sex_transition
 			value = 3000320
 		}
-		trigger_event = LIDAs.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.3
+		}
 	}
 	option = {
 		# 3000520: EventsFirst.FM_MEETING_WITH_VASSAL -> EventsSex.FM_PUSSY_TEASE
@@ -1197,7 +1248,10 @@ LIDAf.3 = {
 			name = sex_transition
 			value = 3000520
 		}
-		trigger_event = LIDAs.5
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.5
+		}
 	}
 	option = {
 		# 3000620: EventsFirst.FM_MEETING_WITH_VASSAL -> EventsSex.FM_TIT_TEASE
@@ -1212,7 +1266,10 @@ LIDAf.3 = {
 			name = sex_transition
 			value = 3000620
 		}
-		trigger_event = LIDAs.6
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.6
+		}
 	}
 	option = {
 		# 3000420: EventsFirst.FM_MEETING_WITH_VASSAL -> EventsSex.FM_ASS_TEASE
@@ -1227,7 +1284,10 @@ LIDAf.3 = {
 			name = sex_transition
 			value = 3000420
 		}
-		trigger_event = LIDAs.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.4
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -1243,6 +1303,9 @@ LIDAf.3 = {
 			value = 3
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.4 = {
@@ -1567,7 +1630,10 @@ LIDAf.4 = {
 			name = sex_transition
 			value = 4000120
 		}
-		trigger_event = LIDAs.1
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.1
+		}
 	}
 	option = {
 		# 4000220: EventsFirst.FM_MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_FOOTJOB_TEASE
@@ -1582,7 +1648,10 @@ LIDAf.4 = {
 			name = sex_transition
 			value = 4000220
 		}
-		trigger_event = LIDAs.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.2
+		}
 	}
 	option = {
 		# 4000320: EventsFirst.FM_MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_HANDJOB_TEASE
@@ -1597,7 +1666,10 @@ LIDAf.4 = {
 			name = sex_transition
 			value = 4000320
 		}
-		trigger_event = LIDAs.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.3
+		}
 	}
 	option = {
 		# 4000520: EventsFirst.FM_MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_PUSSY_TEASE
@@ -1612,7 +1684,10 @@ LIDAf.4 = {
 			name = sex_transition
 			value = 4000520
 		}
-		trigger_event = LIDAs.5
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.5
+		}
 	}
 	option = {
 		# 4000620: EventsFirst.FM_MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_TIT_TEASE
@@ -1627,7 +1702,10 @@ LIDAf.4 = {
 			name = sex_transition
 			value = 4000620
 		}
-		trigger_event = LIDAs.6
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.6
+		}
 	}
 	option = {
 		# 4000420: EventsFirst.FM_MEETING_WITH_VASSAL_INITIAL -> EventsSex.FM_ASS_TEASE
@@ -1642,7 +1720,10 @@ LIDAf.4 = {
 			name = sex_transition
 			value = 4000420
 		}
-		trigger_event = LIDAs.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.4
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -1658,6 +1739,9 @@ LIDAf.4 = {
 			value = 4
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.5 = {
@@ -1982,7 +2066,10 @@ LIDAf.5 = {
 			name = sex_transition
 			value = 5000120
 		}
-		trigger_event = LIDAs.1
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.1
+		}
 	}
 	option = {
 		# 5000220: EventsFirst.FM_MEETING_WITH_LIEGE -> EventsSex.FM_FOOTJOB_TEASE
@@ -1997,7 +2084,10 @@ LIDAf.5 = {
 			name = sex_transition
 			value = 5000220
 		}
-		trigger_event = LIDAs.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.2
+		}
 	}
 	option = {
 		# 5000320: EventsFirst.FM_MEETING_WITH_LIEGE -> EventsSex.FM_HANDJOB_TEASE
@@ -2012,7 +2102,10 @@ LIDAf.5 = {
 			name = sex_transition
 			value = 5000320
 		}
-		trigger_event = LIDAs.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.3
+		}
 	}
 	option = {
 		# 5000520: EventsFirst.FM_MEETING_WITH_LIEGE -> EventsSex.FM_PUSSY_TEASE
@@ -2027,7 +2120,10 @@ LIDAf.5 = {
 			name = sex_transition
 			value = 5000520
 		}
-		trigger_event = LIDAs.5
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.5
+		}
 	}
 	option = {
 		# 5000620: EventsFirst.FM_MEETING_WITH_LIEGE -> EventsSex.FM_TIT_TEASE
@@ -2042,7 +2138,10 @@ LIDAf.5 = {
 			name = sex_transition
 			value = 5000620
 		}
-		trigger_event = LIDAs.6
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.6
+		}
 	}
 	option = {
 		# 5000420: EventsFirst.FM_MEETING_WITH_LIEGE -> EventsSex.FM_ASS_TEASE
@@ -2057,7 +2156,10 @@ LIDAf.5 = {
 			name = sex_transition
 			value = 5000420
 		}
-		trigger_event = LIDAs.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.4
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -2073,6 +2175,9 @@ LIDAf.5 = {
 			value = 5
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.6 = {
@@ -2397,7 +2502,10 @@ LIDAf.6 = {
 			name = sex_transition
 			value = 6000120
 		}
-		trigger_event = LIDAs.1
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.1
+		}
 	}
 	option = {
 		# 6000220: EventsFirst.FM_MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_FOOTJOB_TEASE
@@ -2412,7 +2520,10 @@ LIDAf.6 = {
 			name = sex_transition
 			value = 6000220
 		}
-		trigger_event = LIDAs.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.2
+		}
 	}
 	option = {
 		# 6000320: EventsFirst.FM_MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
@@ -2427,7 +2538,10 @@ LIDAf.6 = {
 			name = sex_transition
 			value = 6000320
 		}
-		trigger_event = LIDAs.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.3
+		}
 	}
 	option = {
 		# 6000520: EventsFirst.FM_MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_PUSSY_TEASE
@@ -2442,7 +2556,10 @@ LIDAf.6 = {
 			name = sex_transition
 			value = 6000520
 		}
-		trigger_event = LIDAs.5
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.5
+		}
 	}
 	option = {
 		# 6000620: EventsFirst.FM_MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_TIT_TEASE
@@ -2457,7 +2574,10 @@ LIDAf.6 = {
 			name = sex_transition
 			value = 6000620
 		}
-		trigger_event = LIDAs.6
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.6
+		}
 	}
 	option = {
 		# 6000420: EventsFirst.FM_MEETING_WITH_LIEGE_INITIAL -> EventsSex.FM_ASS_TEASE
@@ -2472,7 +2592,10 @@ LIDAf.6 = {
 			name = sex_transition
 			value = 6000420
 		}
-		trigger_event = LIDAs.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.4
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -2488,6 +2611,9 @@ LIDAf.6 = {
 			value = 6
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.7 = {
@@ -2812,7 +2938,10 @@ LIDAf.7 = {
 			name = sex_transition
 			value = 7000120
 		}
-		trigger_event = LIDAs.1
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.1
+		}
 	}
 	option = {
 		# 7000220: EventsFirst.FM_MEETING_WITH_PRISONER -> EventsSex.FM_FOOTJOB_TEASE
@@ -2827,7 +2956,10 @@ LIDAf.7 = {
 			name = sex_transition
 			value = 7000220
 		}
-		trigger_event = LIDAs.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.2
+		}
 	}
 	option = {
 		# 7000320: EventsFirst.FM_MEETING_WITH_PRISONER -> EventsSex.FM_HANDJOB_TEASE
@@ -2842,7 +2974,10 @@ LIDAf.7 = {
 			name = sex_transition
 			value = 7000320
 		}
-		trigger_event = LIDAs.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.3
+		}
 	}
 	option = {
 		# 7000520: EventsFirst.FM_MEETING_WITH_PRISONER -> EventsSex.FM_PUSSY_TEASE
@@ -2857,7 +2992,10 @@ LIDAf.7 = {
 			name = sex_transition
 			value = 7000520
 		}
-		trigger_event = LIDAs.5
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.5
+		}
 	}
 	option = {
 		# 7000620: EventsFirst.FM_MEETING_WITH_PRISONER -> EventsSex.FM_TIT_TEASE
@@ -2872,7 +3010,10 @@ LIDAf.7 = {
 			name = sex_transition
 			value = 7000620
 		}
-		trigger_event = LIDAs.6
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.6
+		}
 	}
 	option = {
 		# 7000420: EventsFirst.FM_MEETING_WITH_PRISONER -> EventsSex.FM_ASS_TEASE
@@ -2887,7 +3028,10 @@ LIDAf.7 = {
 			name = sex_transition
 			value = 7000420
 		}
-		trigger_event = LIDAs.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.4
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -2903,6 +3047,9 @@ LIDAf.7 = {
 			value = 7
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.8 = {
@@ -3227,7 +3374,10 @@ LIDAf.8 = {
 			name = sex_transition
 			value = 8000120
 		}
-		trigger_event = LIDAs.1
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.1
+		}
 	}
 	option = {
 		# 8000220: EventsFirst.FM_MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_FOOTJOB_TEASE
@@ -3242,7 +3392,10 @@ LIDAf.8 = {
 			name = sex_transition
 			value = 8000220
 		}
-		trigger_event = LIDAs.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.2
+		}
 	}
 	option = {
 		# 8000320: EventsFirst.FM_MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_HANDJOB_TEASE
@@ -3257,7 +3410,10 @@ LIDAf.8 = {
 			name = sex_transition
 			value = 8000320
 		}
-		trigger_event = LIDAs.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.3
+		}
 	}
 	option = {
 		# 8000520: EventsFirst.FM_MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_PUSSY_TEASE
@@ -3272,7 +3428,10 @@ LIDAf.8 = {
 			name = sex_transition
 			value = 8000520
 		}
-		trigger_event = LIDAs.5
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.5
+		}
 	}
 	option = {
 		# 8000620: EventsFirst.FM_MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_TIT_TEASE
@@ -3287,7 +3446,10 @@ LIDAf.8 = {
 			name = sex_transition
 			value = 8000620
 		}
-		trigger_event = LIDAs.6
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.6
+		}
 	}
 	option = {
 		# 8000420: EventsFirst.FM_MEETING_WITH_PRISONER_INITIAL -> EventsSex.FM_ASS_TEASE
@@ -3302,7 +3464,10 @@ LIDAf.8 = {
 			name = sex_transition
 			value = 8000420
 		}
-		trigger_event = LIDAs.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.4
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -3318,6 +3483,9 @@ LIDAf.8 = {
 			value = 8
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.9 = {
@@ -3642,7 +3810,10 @@ LIDAf.9 = {
 			name = sex_transition
 			value = 9000120
 		}
-		trigger_event = LIDAs.1
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.1
+		}
 	}
 	option = {
 		# 9000220: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_FOOTJOB_TEASE
@@ -3657,7 +3828,10 @@ LIDAf.9 = {
 			name = sex_transition
 			value = 9000220
 		}
-		trigger_event = LIDAs.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.2
+		}
 	}
 	option = {
 		# 9000320: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_HANDJOB_TEASE
@@ -3672,7 +3846,10 @@ LIDAf.9 = {
 			name = sex_transition
 			value = 9000320
 		}
-		trigger_event = LIDAs.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.3
+		}
 	}
 	option = {
 		# 9000520: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_PUSSY_TEASE
@@ -3687,7 +3864,10 @@ LIDAf.9 = {
 			name = sex_transition
 			value = 9000520
 		}
-		trigger_event = LIDAs.5
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.5
+		}
 	}
 	option = {
 		# 9000620: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_TIT_TEASE
@@ -3702,7 +3882,10 @@ LIDAf.9 = {
 			name = sex_transition
 			value = 9000620
 		}
-		trigger_event = LIDAs.6
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.6
+		}
 	}
 	option = {
 		# 9000420: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE -> EventsSex.FM_ASS_TEASE
@@ -3717,7 +3900,10 @@ LIDAf.9 = {
 			name = sex_transition
 			value = 9000420
 		}
-		trigger_event = LIDAs.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.4
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -3733,6 +3919,9 @@ LIDAf.9 = {
 			value = 9
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.10 = {
@@ -4057,7 +4246,10 @@ LIDAf.10 = {
 			name = sex_transition
 			value = 10000120
 		}
-		trigger_event = LIDAs.1
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.1
+		}
 	}
 	option = {
 		# 10000220: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_FOOTJOB_TEASE
@@ -4072,7 +4264,10 @@ LIDAf.10 = {
 			name = sex_transition
 			value = 10000220
 		}
-		trigger_event = LIDAs.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.2
+		}
 	}
 	option = {
 		# 10000320: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_HANDJOB_TEASE
@@ -4087,7 +4282,10 @@ LIDAf.10 = {
 			name = sex_transition
 			value = 10000320
 		}
-		trigger_event = LIDAs.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.3
+		}
 	}
 	option = {
 		# 10000520: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_PUSSY_TEASE
@@ -4102,7 +4300,10 @@ LIDAf.10 = {
 			name = sex_transition
 			value = 10000520
 		}
-		trigger_event = LIDAs.5
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.5
+		}
 	}
 	option = {
 		# 10000620: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_TIT_TEASE
@@ -4117,7 +4318,10 @@ LIDAf.10 = {
 			name = sex_transition
 			value = 10000620
 		}
-		trigger_event = LIDAs.6
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.6
+		}
 	}
 	option = {
 		# 10000420: EventsFirst.FM_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.FM_ASS_TEASE
@@ -4132,7 +4336,10 @@ LIDAf.10 = {
 			name = sex_transition
 			value = 10000420
 		}
-		trigger_event = LIDAs.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.4
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -4148,6 +4355,9 @@ LIDAf.10 = {
 			value = 10
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.11 = {
@@ -4449,7 +4659,10 @@ LIDAf.11 = {
 			name = sex_transition
 			value = 11001920
 		}
-		trigger_event = LIDAs.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.19
+		}
 	}
 	option = {
 		# 11002020: EventsFirst.MF_MEETING_WITH_SPOUSE -> EventsSex.MF_FOOTJOB_TEASE
@@ -4464,7 +4677,10 @@ LIDAf.11 = {
 			name = sex_transition
 			value = 11002020
 		}
-		trigger_event = LIDAs.20
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.20
+		}
 	}
 	option = {
 		# 11002120: EventsFirst.MF_MEETING_WITH_SPOUSE -> EventsSex.MF_HANDJOB_TEASE
@@ -4479,7 +4695,10 @@ LIDAf.11 = {
 			name = sex_transition
 			value = 11002120
 		}
-		trigger_event = LIDAs.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.21
+		}
 	}
 	option = {
 		# 11002320: EventsFirst.MF_MEETING_WITH_SPOUSE -> EventsSex.MF_DICK_TEASE
@@ -4494,7 +4713,10 @@ LIDAf.11 = {
 			name = sex_transition
 			value = 11002320
 		}
-		trigger_event = LIDAs.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.23
+		}
 	}
 	option = {
 		# 11002220: EventsFirst.MF_MEETING_WITH_SPOUSE -> EventsSex.MF_ASS_TEASE
@@ -4509,7 +4731,10 @@ LIDAf.11 = {
 			name = sex_transition
 			value = 11002220
 		}
-		trigger_event = LIDAs.22
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.22
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -4525,6 +4750,9 @@ LIDAf.11 = {
 			value = 11
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.12 = {
@@ -4826,7 +5054,10 @@ LIDAf.12 = {
 			name = sex_transition
 			value = 12001920
 		}
-		trigger_event = LIDAs.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.19
+		}
 	}
 	option = {
 		# 12002020: EventsFirst.MF_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.MF_FOOTJOB_TEASE
@@ -4841,7 +5072,10 @@ LIDAf.12 = {
 			name = sex_transition
 			value = 12002020
 		}
-		trigger_event = LIDAs.20
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.20
+		}
 	}
 	option = {
 		# 12002120: EventsFirst.MF_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.MF_HANDJOB_TEASE
@@ -4856,7 +5090,10 @@ LIDAf.12 = {
 			name = sex_transition
 			value = 12002120
 		}
-		trigger_event = LIDAs.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.21
+		}
 	}
 	option = {
 		# 12002320: EventsFirst.MF_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.MF_DICK_TEASE
@@ -4871,7 +5108,10 @@ LIDAf.12 = {
 			name = sex_transition
 			value = 12002320
 		}
-		trigger_event = LIDAs.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.23
+		}
 	}
 	option = {
 		# 12002220: EventsFirst.MF_MEETING_WITH_SPOUSE_INITIAL -> EventsSex.MF_ASS_TEASE
@@ -4886,7 +5126,10 @@ LIDAf.12 = {
 			name = sex_transition
 			value = 12002220
 		}
-		trigger_event = LIDAs.22
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.22
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -4902,6 +5145,9 @@ LIDAf.12 = {
 			value = 12
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.13 = {
@@ -5203,7 +5449,10 @@ LIDAf.13 = {
 			name = sex_transition
 			value = 13001920
 		}
-		trigger_event = LIDAs.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.19
+		}
 	}
 	option = {
 		# 13002020: EventsFirst.MF_MEETING_WITH_VASSAL -> EventsSex.MF_FOOTJOB_TEASE
@@ -5218,7 +5467,10 @@ LIDAf.13 = {
 			name = sex_transition
 			value = 13002020
 		}
-		trigger_event = LIDAs.20
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.20
+		}
 	}
 	option = {
 		# 13002120: EventsFirst.MF_MEETING_WITH_VASSAL -> EventsSex.MF_HANDJOB_TEASE
@@ -5233,7 +5485,10 @@ LIDAf.13 = {
 			name = sex_transition
 			value = 13002120
 		}
-		trigger_event = LIDAs.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.21
+		}
 	}
 	option = {
 		# 13002320: EventsFirst.MF_MEETING_WITH_VASSAL -> EventsSex.MF_DICK_TEASE
@@ -5248,7 +5503,10 @@ LIDAf.13 = {
 			name = sex_transition
 			value = 13002320
 		}
-		trigger_event = LIDAs.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.23
+		}
 	}
 	option = {
 		# 13002220: EventsFirst.MF_MEETING_WITH_VASSAL -> EventsSex.MF_ASS_TEASE
@@ -5263,7 +5521,10 @@ LIDAf.13 = {
 			name = sex_transition
 			value = 13002220
 		}
-		trigger_event = LIDAs.22
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.22
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -5279,6 +5540,9 @@ LIDAf.13 = {
 			value = 13
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.14 = {
@@ -5580,7 +5844,10 @@ LIDAf.14 = {
 			name = sex_transition
 			value = 14001920
 		}
-		trigger_event = LIDAs.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.19
+		}
 	}
 	option = {
 		# 14002020: EventsFirst.MF_MEETING_WITH_VASSAL_INITIAL -> EventsSex.MF_FOOTJOB_TEASE
@@ -5595,7 +5862,10 @@ LIDAf.14 = {
 			name = sex_transition
 			value = 14002020
 		}
-		trigger_event = LIDAs.20
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.20
+		}
 	}
 	option = {
 		# 14002120: EventsFirst.MF_MEETING_WITH_VASSAL_INITIAL -> EventsSex.MF_HANDJOB_TEASE
@@ -5610,7 +5880,10 @@ LIDAf.14 = {
 			name = sex_transition
 			value = 14002120
 		}
-		trigger_event = LIDAs.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.21
+		}
 	}
 	option = {
 		# 14002320: EventsFirst.MF_MEETING_WITH_VASSAL_INITIAL -> EventsSex.MF_DICK_TEASE
@@ -5625,7 +5898,10 @@ LIDAf.14 = {
 			name = sex_transition
 			value = 14002320
 		}
-		trigger_event = LIDAs.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.23
+		}
 	}
 	option = {
 		# 14002220: EventsFirst.MF_MEETING_WITH_VASSAL_INITIAL -> EventsSex.MF_ASS_TEASE
@@ -5640,7 +5916,10 @@ LIDAf.14 = {
 			name = sex_transition
 			value = 14002220
 		}
-		trigger_event = LIDAs.22
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.22
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -5656,6 +5935,9 @@ LIDAf.14 = {
 			value = 14
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.15 = {
@@ -5957,7 +6239,10 @@ LIDAf.15 = {
 			name = sex_transition
 			value = 15001920
 		}
-		trigger_event = LIDAs.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.19
+		}
 	}
 	option = {
 		# 15002020: EventsFirst.MF_MEETING_WITH_LIEGE -> EventsSex.MF_FOOTJOB_TEASE
@@ -5972,7 +6257,10 @@ LIDAf.15 = {
 			name = sex_transition
 			value = 15002020
 		}
-		trigger_event = LIDAs.20
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.20
+		}
 	}
 	option = {
 		# 15002120: EventsFirst.MF_MEETING_WITH_LIEGE -> EventsSex.MF_HANDJOB_TEASE
@@ -5987,7 +6275,10 @@ LIDAf.15 = {
 			name = sex_transition
 			value = 15002120
 		}
-		trigger_event = LIDAs.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.21
+		}
 	}
 	option = {
 		# 15002320: EventsFirst.MF_MEETING_WITH_LIEGE -> EventsSex.MF_DICK_TEASE
@@ -6002,7 +6293,10 @@ LIDAf.15 = {
 			name = sex_transition
 			value = 15002320
 		}
-		trigger_event = LIDAs.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.23
+		}
 	}
 	option = {
 		# 15002220: EventsFirst.MF_MEETING_WITH_LIEGE -> EventsSex.MF_ASS_TEASE
@@ -6017,7 +6311,10 @@ LIDAf.15 = {
 			name = sex_transition
 			value = 15002220
 		}
-		trigger_event = LIDAs.22
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.22
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -6033,6 +6330,9 @@ LIDAf.15 = {
 			value = 15
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.16 = {
@@ -6334,7 +6634,10 @@ LIDAf.16 = {
 			name = sex_transition
 			value = 16001920
 		}
-		trigger_event = LIDAs.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.19
+		}
 	}
 	option = {
 		# 16002020: EventsFirst.MF_MEETING_WITH_LIEGE_INITIAL -> EventsSex.MF_FOOTJOB_TEASE
@@ -6349,7 +6652,10 @@ LIDAf.16 = {
 			name = sex_transition
 			value = 16002020
 		}
-		trigger_event = LIDAs.20
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.20
+		}
 	}
 	option = {
 		# 16002120: EventsFirst.MF_MEETING_WITH_LIEGE_INITIAL -> EventsSex.MF_HANDJOB_TEASE
@@ -6364,7 +6670,10 @@ LIDAf.16 = {
 			name = sex_transition
 			value = 16002120
 		}
-		trigger_event = LIDAs.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.21
+		}
 	}
 	option = {
 		# 16002320: EventsFirst.MF_MEETING_WITH_LIEGE_INITIAL -> EventsSex.MF_DICK_TEASE
@@ -6379,7 +6688,10 @@ LIDAf.16 = {
 			name = sex_transition
 			value = 16002320
 		}
-		trigger_event = LIDAs.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.23
+		}
 	}
 	option = {
 		# 16002220: EventsFirst.MF_MEETING_WITH_LIEGE_INITIAL -> EventsSex.MF_ASS_TEASE
@@ -6394,7 +6706,10 @@ LIDAf.16 = {
 			name = sex_transition
 			value = 16002220
 		}
-		trigger_event = LIDAs.22
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.22
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -6410,6 +6725,9 @@ LIDAf.16 = {
 			value = 16
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.17 = {
@@ -6711,7 +7029,10 @@ LIDAf.17 = {
 			name = sex_transition
 			value = 17001920
 		}
-		trigger_event = LIDAs.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.19
+		}
 	}
 	option = {
 		# 17002020: EventsFirst.MF_MEETING_WITH_PRISONER -> EventsSex.MF_FOOTJOB_TEASE
@@ -6726,7 +7047,10 @@ LIDAf.17 = {
 			name = sex_transition
 			value = 17002020
 		}
-		trigger_event = LIDAs.20
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.20
+		}
 	}
 	option = {
 		# 17002120: EventsFirst.MF_MEETING_WITH_PRISONER -> EventsSex.MF_HANDJOB_TEASE
@@ -6741,7 +7065,10 @@ LIDAf.17 = {
 			name = sex_transition
 			value = 17002120
 		}
-		trigger_event = LIDAs.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.21
+		}
 	}
 	option = {
 		# 17002320: EventsFirst.MF_MEETING_WITH_PRISONER -> EventsSex.MF_DICK_TEASE
@@ -6756,7 +7083,10 @@ LIDAf.17 = {
 			name = sex_transition
 			value = 17002320
 		}
-		trigger_event = LIDAs.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.23
+		}
 	}
 	option = {
 		# 17002220: EventsFirst.MF_MEETING_WITH_PRISONER -> EventsSex.MF_ASS_TEASE
@@ -6771,7 +7101,10 @@ LIDAf.17 = {
 			name = sex_transition
 			value = 17002220
 		}
-		trigger_event = LIDAs.22
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.22
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -6787,6 +7120,9 @@ LIDAf.17 = {
 			value = 17
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.18 = {
@@ -7088,7 +7424,10 @@ LIDAf.18 = {
 			name = sex_transition
 			value = 18001920
 		}
-		trigger_event = LIDAs.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.19
+		}
 	}
 	option = {
 		# 18002020: EventsFirst.MF_MEETING_WITH_PRISONER_INITIAL -> EventsSex.MF_FOOTJOB_TEASE
@@ -7103,7 +7442,10 @@ LIDAf.18 = {
 			name = sex_transition
 			value = 18002020
 		}
-		trigger_event = LIDAs.20
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.20
+		}
 	}
 	option = {
 		# 18002120: EventsFirst.MF_MEETING_WITH_PRISONER_INITIAL -> EventsSex.MF_HANDJOB_TEASE
@@ -7118,7 +7460,10 @@ LIDAf.18 = {
 			name = sex_transition
 			value = 18002120
 		}
-		trigger_event = LIDAs.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.21
+		}
 	}
 	option = {
 		# 18002320: EventsFirst.MF_MEETING_WITH_PRISONER_INITIAL -> EventsSex.MF_DICK_TEASE
@@ -7133,7 +7478,10 @@ LIDAf.18 = {
 			name = sex_transition
 			value = 18002320
 		}
-		trigger_event = LIDAs.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.23
+		}
 	}
 	option = {
 		# 18002220: EventsFirst.MF_MEETING_WITH_PRISONER_INITIAL -> EventsSex.MF_ASS_TEASE
@@ -7148,7 +7496,10 @@ LIDAf.18 = {
 			name = sex_transition
 			value = 18002220
 		}
-		trigger_event = LIDAs.22
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.22
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -7164,6 +7515,9 @@ LIDAf.18 = {
 			value = 18
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.19 = {
@@ -7465,7 +7819,10 @@ LIDAf.19 = {
 			name = sex_transition
 			value = 19001920
 		}
-		trigger_event = LIDAs.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.19
+		}
 	}
 	option = {
 		# 19002020: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE -> EventsSex.MF_FOOTJOB_TEASE
@@ -7480,7 +7837,10 @@ LIDAf.19 = {
 			name = sex_transition
 			value = 19002020
 		}
-		trigger_event = LIDAs.20
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.20
+		}
 	}
 	option = {
 		# 19002120: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE -> EventsSex.MF_HANDJOB_TEASE
@@ -7495,7 +7855,10 @@ LIDAf.19 = {
 			name = sex_transition
 			value = 19002120
 		}
-		trigger_event = LIDAs.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.21
+		}
 	}
 	option = {
 		# 19002320: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE -> EventsSex.MF_DICK_TEASE
@@ -7510,7 +7873,10 @@ LIDAf.19 = {
 			name = sex_transition
 			value = 19002320
 		}
-		trigger_event = LIDAs.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.23
+		}
 	}
 	option = {
 		# 19002220: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE -> EventsSex.MF_ASS_TEASE
@@ -7525,7 +7891,10 @@ LIDAf.19 = {
 			name = sex_transition
 			value = 19002220
 		}
-		trigger_event = LIDAs.22
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.22
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -7541,6 +7910,9 @@ LIDAf.19 = {
 			value = 19
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAf.20 = {
@@ -7842,7 +8214,10 @@ LIDAf.20 = {
 			name = sex_transition
 			value = 20001920
 		}
-		trigger_event = LIDAs.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.19
+		}
 	}
 	option = {
 		# 20002020: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.MF_FOOTJOB_TEASE
@@ -7857,7 +8232,10 @@ LIDAf.20 = {
 			name = sex_transition
 			value = 20002020
 		}
-		trigger_event = LIDAs.20
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.20
+		}
 	}
 	option = {
 		# 20002120: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.MF_HANDJOB_TEASE
@@ -7872,7 +8250,10 @@ LIDAf.20 = {
 			name = sex_transition
 			value = 20002120
 		}
-		trigger_event = LIDAs.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.21
+		}
 	}
 	option = {
 		# 20002320: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.MF_DICK_TEASE
@@ -7887,7 +8268,10 @@ LIDAf.20 = {
 			name = sex_transition
 			value = 20002320
 		}
-		trigger_event = LIDAs.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.23
+		}
 	}
 	option = {
 		# 20002220: EventsFirst.MF_MEETING_WITH_ACQUAINTANCE_INITIAL -> EventsSex.MF_ASS_TEASE
@@ -7902,7 +8286,10 @@ LIDAf.20 = {
 			name = sex_transition
 			value = 20002220
 		}
-		trigger_event = LIDAs.22
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.22
+		}
 	}
 	option = {
 		name = cancel_meeting_option
@@ -7918,5 +8305,8 @@ LIDAf.20 = {
 			value = 20
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }

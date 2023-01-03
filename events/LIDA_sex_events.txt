@@ -248,7 +248,10 @@ LIDAs.1 = {
 				name = sex_transition
 				value = 1000700
 			}
-			trigger_event = LIDAs.7
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.7
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -262,7 +265,10 @@ LIDAs.1 = {
 				limit = {
 					scope:sub_transition_0 = 1000800
 				}
-				trigger_event = LIDAs.8
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.8
+				}
 			}
 		}
 		if = {
@@ -291,7 +297,10 @@ LIDAs.1 = {
 			name = sex_transition
 			value = 1000800
 		}
-		trigger_event = LIDAs.8
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.8
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -301,6 +310,9 @@ LIDAs.1 = {
 			value = 1
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.2 = {
@@ -551,7 +563,10 @@ LIDAs.2 = {
 				name = sex_transition
 				value = 2003600
 			}
-			trigger_event = LIDAs.36
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.36
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -565,7 +580,10 @@ LIDAs.2 = {
 				limit = {
 					scope:sub_transition_0 = 2000800
 				}
-				trigger_event = LIDAs.8
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.8
+				}
 			}
 		}
 		if = {
@@ -594,7 +612,10 @@ LIDAs.2 = {
 			name = sex_transition
 			value = 2000800
 		}
-		trigger_event = LIDAs.8
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.8
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -604,6 +625,9 @@ LIDAs.2 = {
 			value = 2
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.36 = {
@@ -912,7 +936,10 @@ LIDAs.36 = {
 				name = sex_transition
 				value = 36003600
 			}
-			trigger_event = LIDAs.36
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.36
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -926,7 +953,10 @@ LIDAs.36 = {
 				limit = {
 					scope:sub_transition_0 = 36000800
 				}
-				trigger_event = LIDAs.8
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.8
+				}
 			}
 		}
 		if = {
@@ -955,7 +985,10 @@ LIDAs.36 = {
 			name = sex_transition
 			value = 36000800
 		}
-		trigger_event = LIDAs.8
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.8
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -965,6 +998,9 @@ LIDAs.36 = {
 			value = 36
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.3 = {
@@ -1215,7 +1251,10 @@ LIDAs.3 = {
 				name = sex_transition
 				value = 3000700
 			}
-			trigger_event = LIDAs.7
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.7
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -1229,7 +1268,10 @@ LIDAs.3 = {
 				limit = {
 					scope:sub_transition_0 = 3000800
 				}
-				trigger_event = LIDAs.8
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.8
+				}
 			}
 		}
 		if = {
@@ -1258,7 +1300,10 @@ LIDAs.3 = {
 			name = sex_transition
 			value = 3000800
 		}
-		trigger_event = LIDAs.8
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.8
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -1268,6 +1313,9 @@ LIDAs.3 = {
 			value = 3
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.5 = {
@@ -1594,7 +1642,10 @@ LIDAs.5 = {
 				name = sex_transition
 				value = 5001400
 			}
-			trigger_event = LIDAs.14
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.14
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -1608,13 +1659,19 @@ LIDAs.5 = {
 				limit = {
 					scope:sub_transition_0 = 5001700
 				}
-				trigger_event = LIDAs.17
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.17
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 5000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -1655,7 +1712,10 @@ LIDAs.5 = {
 				name = sex_transition
 				value = 5000700
 			}
-			trigger_event = LIDAs.7
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.7
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -1669,13 +1729,19 @@ LIDAs.5 = {
 				limit = {
 					scope:sub_transition_0 = 5001700
 				}
-				trigger_event = LIDAs.17
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.17
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 5000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -1704,7 +1770,10 @@ LIDAs.5 = {
 			name = sex_transition
 			value = 5001700
 		}
-		trigger_event = LIDAs.17
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.17
+		}
 	}
 	option = {
 		# 5000710: EventsSex.FM_PUSSY_TEASE -> EventsCum.FM_CUM_ON_GROIN
@@ -1723,7 +1792,10 @@ LIDAs.5 = {
 			name = sex_transition
 			value = 5000710
 		}
-		trigger_event = LIDAc.7
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.7
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -1733,6 +1805,9 @@ LIDAs.5 = {
 			value = 5
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.6 = {
@@ -1983,7 +2058,10 @@ LIDAs.6 = {
 				name = sex_transition
 				value = 6000700
 			}
-			trigger_event = LIDAs.7
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.7
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -1997,7 +2075,10 @@ LIDAs.6 = {
 				limit = {
 					scope:sub_transition_0 = 6000800
 				}
-				trigger_event = LIDAs.8
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.8
+				}
 			}
 		}
 		if = {
@@ -2026,7 +2107,10 @@ LIDAs.6 = {
 			name = sex_transition
 			value = 6000800
 		}
-		trigger_event = LIDAs.8
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.8
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -2036,6 +2120,9 @@ LIDAs.6 = {
 			value = 6
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.7 = {
@@ -2796,7 +2883,10 @@ LIDAs.7 = {
 				name = sex_transition
 				value = 7000700
 			}
-			trigger_event = LIDAs.7
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.7
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -2810,13 +2900,19 @@ LIDAs.7 = {
 				limit = {
 					scope:sub_transition_0 = 7000800
 				}
-				trigger_event = LIDAs.8
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.8
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 7000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -2845,7 +2941,10 @@ LIDAs.7 = {
 			name = sex_transition
 			value = 7000800
 		}
-		trigger_event = LIDAs.8
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.8
+		}
 	}
 	option = {
 		# 7000510: EventsSex.FM_HANDJOB -> EventsCum.FM_RUINED_ORGASM
@@ -2876,7 +2975,10 @@ LIDAs.7 = {
 				name = sex_transition
 				value = 7000510
 			}
-			trigger_event = LIDAc.5
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.5
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -2890,13 +2992,19 @@ LIDAs.7 = {
 				limit = {
 					scope:sub_transition_0 = 7000800
 				}
-				trigger_event = LIDAs.8
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.8
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 7000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -2936,7 +3044,10 @@ LIDAs.7 = {
 				name = sex_transition
 				value = 7000110
 			}
-			trigger_event = LIDAc.1
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.1
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -2950,13 +3061,19 @@ LIDAs.7 = {
 				limit = {
 					scope:sub_transition_0 = 7000800
 				}
-				trigger_event = LIDAs.8
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.8
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 7000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -2984,7 +3101,10 @@ LIDAs.7 = {
 			name = sex_transition
 			value = 7000410
 		}
-		trigger_event = LIDAc.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.4
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -2994,6 +3114,9 @@ LIDAs.7 = {
 			value = 7
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.8 = {
@@ -3749,7 +3872,10 @@ LIDAs.8 = {
 				name = sex_transition
 				value = 8003700
 			}
-			trigger_event = LIDAs.37
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.37
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -3763,25 +3889,37 @@ LIDAs.8 = {
 				limit = {
 					scope:sub_transition_0 = 8001000
 				}
-				trigger_event = LIDAs.10
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.10
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 8000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 8000210
 				}
-				trigger_event = LIDAc.2
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.2
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 8000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -3823,7 +3961,10 @@ LIDAs.8 = {
 				name = sex_transition
 				value = 8000700
 			}
-			trigger_event = LIDAs.7
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.7
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -3837,25 +3978,37 @@ LIDAs.8 = {
 				limit = {
 					scope:sub_transition_0 = 8001000
 				}
-				trigger_event = LIDAs.10
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.10
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 8000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 8000210
 				}
-				trigger_event = LIDAc.2
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.2
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 8000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -3884,7 +4037,10 @@ LIDAs.8 = {
 			name = sex_transition
 			value = 8001000
 		}
-		trigger_event = LIDAs.10
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.10
+		}
 	}
 	option = {
 		# 8000900: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
@@ -3904,7 +4060,10 @@ LIDAs.8 = {
 			name = sex_transition
 			value = 8000900
 		}
-		trigger_event = LIDAs.9
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.9
+		}
 	}
 	option = {
 		# 8000510: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_RUINED_ORGASM
@@ -3935,7 +4094,10 @@ LIDAs.8 = {
 				name = sex_transition
 				value = 8000510
 			}
-			trigger_event = LIDAc.5
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.5
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -3949,25 +4111,37 @@ LIDAs.8 = {
 				limit = {
 					scope:sub_transition_0 = 8001000
 				}
-				trigger_event = LIDAs.10
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.10
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 8000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 8000210
 				}
-				trigger_event = LIDAc.2
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.2
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 8000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -3995,7 +4169,10 @@ LIDAs.8 = {
 			name = sex_transition
 			value = 8000210
 		}
-		trigger_event = LIDAc.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.2
+		}
 	}
 	option = {
 		# 8000410: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_BLOWJOB_CUM_ON_FACE
@@ -4014,7 +4191,10 @@ LIDAs.8 = {
 			name = sex_transition
 			value = 8000410
 		}
-		trigger_event = LIDAc.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.4
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -4024,6 +4204,9 @@ LIDAs.8 = {
 			value = 8
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.37 = {
@@ -4440,7 +4623,10 @@ LIDAs.37 = {
 				name = sex_transition
 				value = 37003800
 			}
-			trigger_event = LIDAs.38
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.38
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -4454,25 +4640,37 @@ LIDAs.37 = {
 				limit = {
 					scope:sub_transition_0 = 37001000
 				}
-				trigger_event = LIDAs.10
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.10
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 37000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 37000210
 				}
-				trigger_event = LIDAc.2
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.2
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 37000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -4514,7 +4712,10 @@ LIDAs.37 = {
 				name = sex_transition
 				value = 37000700
 			}
-			trigger_event = LIDAs.7
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.7
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -4528,25 +4729,37 @@ LIDAs.37 = {
 				limit = {
 					scope:sub_transition_0 = 37001000
 				}
-				trigger_event = LIDAs.10
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.10
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 37000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 37000210
 				}
-				trigger_event = LIDAc.2
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.2
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 37000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -4575,7 +4788,10 @@ LIDAs.37 = {
 			name = sex_transition
 			value = 37001000
 		}
-		trigger_event = LIDAs.10
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.10
+		}
 	}
 	option = {
 		# 37000900: EventsSex.FM_BLOWJOB_DOM_I -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
@@ -4595,7 +4811,10 @@ LIDAs.37 = {
 			name = sex_transition
 			value = 37000900
 		}
-		trigger_event = LIDAs.9
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.9
+		}
 	}
 	option = {
 		# 37000510: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_RUINED_ORGASM
@@ -4626,7 +4845,10 @@ LIDAs.37 = {
 				name = sex_transition
 				value = 37000510
 			}
-			trigger_event = LIDAc.5
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.5
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -4640,25 +4862,37 @@ LIDAs.37 = {
 				limit = {
 					scope:sub_transition_0 = 37001000
 				}
-				trigger_event = LIDAs.10
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.10
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 37000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 37000210
 				}
-				trigger_event = LIDAc.2
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.2
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 37000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -4686,7 +4920,10 @@ LIDAs.37 = {
 			name = sex_transition
 			value = 37000210
 		}
-		trigger_event = LIDAc.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.2
+		}
 	}
 	option = {
 		# 37000410: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_BLOWJOB_CUM_ON_FACE
@@ -4705,7 +4942,10 @@ LIDAs.37 = {
 			name = sex_transition
 			value = 37000410
 		}
-		trigger_event = LIDAc.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.4
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -4715,6 +4955,9 @@ LIDAs.37 = {
 			value = 37
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.38 = {
@@ -5200,7 +5443,10 @@ LIDAs.38 = {
 				name = sex_transition
 				value = 38003800
 			}
-			trigger_event = LIDAs.38
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.38
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -5214,25 +5460,37 @@ LIDAs.38 = {
 				limit = {
 					scope:sub_transition_0 = 38001000
 				}
-				trigger_event = LIDAs.10
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.10
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 38000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 38000210
 				}
-				trigger_event = LIDAc.2
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.2
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 38000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -5273,7 +5531,10 @@ LIDAs.38 = {
 				name = sex_transition
 				value = 38000700
 			}
-			trigger_event = LIDAs.7
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.7
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -5287,25 +5548,37 @@ LIDAs.38 = {
 				limit = {
 					scope:sub_transition_0 = 38001000
 				}
-				trigger_event = LIDAs.10
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.10
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 38000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 38000210
 				}
-				trigger_event = LIDAc.2
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.2
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 38000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -5334,7 +5607,10 @@ LIDAs.38 = {
 			name = sex_transition
 			value = 38001000
 		}
-		trigger_event = LIDAs.10
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.10
+		}
 	}
 	option = {
 		# 38000900: EventsSex.FM_BLOWJOB_DOM_II -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
@@ -5354,7 +5630,10 @@ LIDAs.38 = {
 			name = sex_transition
 			value = 38000900
 		}
-		trigger_event = LIDAs.9
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.9
+		}
 	}
 	option = {
 		# 38000510: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_RUINED_ORGASM
@@ -5385,7 +5664,10 @@ LIDAs.38 = {
 				name = sex_transition
 				value = 38000510
 			}
-			trigger_event = LIDAc.5
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.5
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -5399,25 +5681,37 @@ LIDAs.38 = {
 				limit = {
 					scope:sub_transition_0 = 38001000
 				}
-				trigger_event = LIDAs.10
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.10
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 38000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 38000210
 				}
-				trigger_event = LIDAc.2
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.2
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 38000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -5445,7 +5739,10 @@ LIDAs.38 = {
 			name = sex_transition
 			value = 38000210
 		}
-		trigger_event = LIDAc.2
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.2
+		}
 	}
 	option = {
 		# 38000410: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_BLOWJOB_CUM_ON_FACE
@@ -5464,7 +5761,10 @@ LIDAs.38 = {
 			name = sex_transition
 			value = 38000410
 		}
-		trigger_event = LIDAc.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.4
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -5474,6 +5774,9 @@ LIDAs.38 = {
 			value = 38
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.10 = {
@@ -6097,7 +6400,10 @@ LIDAs.10 = {
 				name = sex_transition
 				value = 10000800
 			}
-			trigger_event = LIDAs.8
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.8
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -6111,25 +6417,37 @@ LIDAs.10 = {
 				limit = {
 					scope:sub_transition_0 = 10001000
 				}
-				trigger_event = LIDAs.10
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.10
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 10001100
 				}
-				trigger_event = LIDAs.11
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.11
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 10000310
 				}
-				trigger_event = LIDAc.3
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.3
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 10000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -6158,7 +6476,10 @@ LIDAs.10 = {
 			name = sex_transition
 			value = 10001000
 		}
-		trigger_event = LIDAs.10
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.10
+		}
 	}
 	option = {
 		# 10001100: EventsSex.FM_BLOWJOB_SUB -> EventsSex.FM_DEEPTHROAT
@@ -6178,7 +6499,10 @@ LIDAs.10 = {
 			name = sex_transition
 			value = 10001100
 		}
-		trigger_event = LIDAs.11
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.11
+		}
 	}
 	option = {
 		# 10000110: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND
@@ -6209,7 +6533,10 @@ LIDAs.10 = {
 				name = sex_transition
 				value = 10000110
 			}
-			trigger_event = LIDAc.1
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.1
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -6223,25 +6550,37 @@ LIDAs.10 = {
 				limit = {
 					scope:sub_transition_0 = 10001000
 				}
-				trigger_event = LIDAs.10
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.10
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 10001100
 				}
-				trigger_event = LIDAs.11
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.11
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 10000310
 				}
-				trigger_event = LIDAc.3
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.3
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 10000410
 				}
-				trigger_event = LIDAc.4
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.4
+				}
 			}
 		}
 		if = {
@@ -6269,7 +6608,10 @@ LIDAs.10 = {
 			name = sex_transition
 			value = 10000310
 		}
-		trigger_event = LIDAc.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.3
+		}
 	}
 	option = {
 		# 10000410: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_BLOWJOB_CUM_ON_FACE
@@ -6288,7 +6630,10 @@ LIDAs.10 = {
 			name = sex_transition
 			value = 10000410
 		}
-		trigger_event = LIDAc.4
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.4
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -6298,6 +6643,9 @@ LIDAs.10 = {
 			value = 10
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.11 = {
@@ -6665,7 +7013,10 @@ LIDAs.11 = {
 				name = sex_transition
 				value = 11001000
 			}
-			trigger_event = LIDAs.10
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.10
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -6679,13 +7030,19 @@ LIDAs.11 = {
 				limit = {
 					scope:sub_transition_0 = 11001100
 				}
-				trigger_event = LIDAs.11
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.11
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 11000310
 				}
-				trigger_event = LIDAc.3
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.3
+				}
 			}
 		}
 		if = {
@@ -6714,7 +7071,10 @@ LIDAs.11 = {
 			name = sex_transition
 			value = 11001100
 		}
-		trigger_event = LIDAs.11
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.11
+		}
 	}
 	option = {
 		# 11000310: EventsSex.FM_DEEPTHROAT -> EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_SUB
@@ -6733,7 +7093,10 @@ LIDAs.11 = {
 			name = sex_transition
 			value = 11000310
 		}
-		trigger_event = LIDAc.3
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.3
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -6743,6 +7106,9 @@ LIDAs.11 = {
 			value = 11
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.4 = {
@@ -7096,7 +7462,10 @@ LIDAs.4 = {
 				name = sex_transition
 				value = 4001400
 			}
-			trigger_event = LIDAs.14
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.14
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -7110,13 +7479,19 @@ LIDAs.4 = {
 				limit = {
 					scope:sub_transition_0 = 4001200
 				}
-				trigger_event = LIDAs.12
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.12
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 4000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -7157,7 +7532,10 @@ LIDAs.4 = {
 				name = sex_transition
 				value = 4000700
 			}
-			trigger_event = LIDAs.7
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.7
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -7171,13 +7549,19 @@ LIDAs.4 = {
 				limit = {
 					scope:sub_transition_0 = 4001200
 				}
-				trigger_event = LIDAs.12
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.12
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 4000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -7206,7 +7590,10 @@ LIDAs.4 = {
 			name = sex_transition
 			value = 4001200
 		}
-		trigger_event = LIDAs.12
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.12
+		}
 	}
 	option = {
 		# 4000610: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
@@ -7237,7 +7624,10 @@ LIDAs.4 = {
 				name = sex_transition
 				value = 4000610
 			}
-			trigger_event = LIDAc.6
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.6
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -7251,13 +7641,19 @@ LIDAs.4 = {
 				limit = {
 					scope:sub_transition_0 = 4001200
 				}
-				trigger_event = LIDAs.12
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.12
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 4000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -7285,7 +7681,10 @@ LIDAs.4 = {
 			name = sex_transition
 			value = 4000710
 		}
-		trigger_event = LIDAc.7
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.7
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -7295,6 +7694,9 @@ LIDAs.4 = {
 			value = 4
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.14 = {
@@ -7843,7 +8245,10 @@ LIDAs.14 = {
 				name = sex_transition
 				value = 14001400
 			}
-			trigger_event = LIDAs.14
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.14
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -7857,13 +8262,19 @@ LIDAs.14 = {
 				limit = {
 					scope:sub_transition_0 = 14001200
 				}
-				trigger_event = LIDAs.12
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.12
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 14000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -7904,7 +8315,10 @@ LIDAs.14 = {
 				name = sex_transition
 				value = 14000700
 			}
-			trigger_event = LIDAs.7
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.7
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -7918,13 +8332,19 @@ LIDAs.14 = {
 				limit = {
 					scope:sub_transition_0 = 14001200
 				}
-				trigger_event = LIDAs.12
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.12
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 14000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -7953,7 +8373,10 @@ LIDAs.14 = {
 			name = sex_transition
 			value = 14001200
 		}
-		trigger_event = LIDAs.12
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.12
+		}
 	}
 	option = {
 		# 14000610: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
@@ -7984,7 +8407,10 @@ LIDAs.14 = {
 				name = sex_transition
 				value = 14000610
 			}
-			trigger_event = LIDAc.6
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.6
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -7998,13 +8424,19 @@ LIDAs.14 = {
 				limit = {
 					scope:sub_transition_0 = 14001200
 				}
-				trigger_event = LIDAs.12
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.12
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 14000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -8032,7 +8464,10 @@ LIDAs.14 = {
 			name = sex_transition
 			value = 14000710
 		}
-		trigger_event = LIDAc.7
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.7
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -8042,6 +8477,9 @@ LIDAs.14 = {
 			value = 14
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.12 = {
@@ -8713,7 +9151,10 @@ LIDAs.12 = {
 				name = sex_transition
 				value = 12001400
 			}
-			trigger_event = LIDAs.14
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.14
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -8727,19 +9168,28 @@ LIDAs.12 = {
 				limit = {
 					scope:sub_transition_0 = 12001300
 				}
-				trigger_event = LIDAs.13
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.13
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 12000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 12000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -8785,7 +9235,10 @@ LIDAs.12 = {
 				name = sex_transition
 				value = 12001200
 			}
-			trigger_event = LIDAs.12
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.12
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -8799,19 +9252,28 @@ LIDAs.12 = {
 				limit = {
 					scope:sub_transition_0 = 12001300
 				}
-				trigger_event = LIDAs.13
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.13
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 12000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 12000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -8857,7 +9319,10 @@ LIDAs.12 = {
 				name = sex_transition
 				value = 12001500
 			}
-			trigger_event = LIDAs.15
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.15
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -8871,19 +9336,28 @@ LIDAs.12 = {
 				limit = {
 					scope:sub_transition_0 = 12001300
 				}
-				trigger_event = LIDAs.13
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.13
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 12000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 12000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -8929,7 +9403,10 @@ LIDAs.12 = {
 				name = sex_transition
 				value = 12000800
 			}
-			trigger_event = LIDAs.8
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.8
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -8943,19 +9420,28 @@ LIDAs.12 = {
 				limit = {
 					scope:sub_transition_0 = 12001300
 				}
-				trigger_event = LIDAs.13
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.13
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 12000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 12000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -8984,7 +9470,10 @@ LIDAs.12 = {
 			name = sex_transition
 			value = 12001300
 		}
-		trigger_event = LIDAs.13
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.13
+		}
 	}
 	option = {
 		# 12000900: EventsSex.FM_HOTDOG -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
@@ -9004,7 +9493,10 @@ LIDAs.12 = {
 			name = sex_transition
 			value = 12000900
 		}
-		trigger_event = LIDAs.9
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.9
+		}
 	}
 	option = {
 		# 12000610: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
@@ -9035,7 +9527,10 @@ LIDAs.12 = {
 				name = sex_transition
 				value = 12000610
 			}
-			trigger_event = LIDAc.6
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.6
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -9049,19 +9544,28 @@ LIDAs.12 = {
 				limit = {
 					scope:sub_transition_0 = 12001300
 				}
-				trigger_event = LIDAs.13
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.13
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 12000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 12000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -9089,7 +9593,10 @@ LIDAs.12 = {
 			name = sex_transition
 			value = 12000710
 		}
-		trigger_event = LIDAc.7
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.7
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -9099,6 +9606,9 @@ LIDAs.12 = {
 			value = 12
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.13 = {
@@ -9583,7 +10093,10 @@ LIDAs.13 = {
 				name = sex_transition
 				value = 13001200
 			}
-			trigger_event = LIDAs.12
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.12
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -9597,19 +10110,28 @@ LIDAs.13 = {
 				limit = {
 					scope:sub_transition_0 = 13001300
 				}
-				trigger_event = LIDAs.13
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.13
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 13000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 13000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -9655,7 +10177,10 @@ LIDAs.13 = {
 				name = sex_transition
 				value = 13000800
 			}
-			trigger_event = LIDAs.8
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.8
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -9669,19 +10194,28 @@ LIDAs.13 = {
 				limit = {
 					scope:sub_transition_0 = 13001300
 				}
-				trigger_event = LIDAs.13
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.13
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 13000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 13000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -9710,7 +10244,10 @@ LIDAs.13 = {
 			name = sex_transition
 			value = 13001300
 		}
-		trigger_event = LIDAs.13
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.13
+		}
 	}
 	option = {
 		# 13000900: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
@@ -9730,7 +10267,10 @@ LIDAs.13 = {
 			name = sex_transition
 			value = 13000900
 		}
-		trigger_event = LIDAs.9
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.9
+		}
 	}
 	option = {
 		# 13000610: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS
@@ -9761,7 +10301,10 @@ LIDAs.13 = {
 				name = sex_transition
 				value = 13000610
 			}
-			trigger_event = LIDAc.6
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.6
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -9775,19 +10318,28 @@ LIDAs.13 = {
 				limit = {
 					scope:sub_transition_0 = 13001300
 				}
-				trigger_event = LIDAs.13
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.13
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 13000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 13000710
 				}
-				trigger_event = LIDAc.7
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.7
+				}
 			}
 		}
 		if = {
@@ -9815,7 +10367,10 @@ LIDAs.13 = {
 			name = sex_transition
 			value = 13000710
 		}
-		trigger_event = LIDAc.7
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.7
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -9825,6 +10380,9 @@ LIDAs.13 = {
 			value = 13
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.9 = {
@@ -10682,7 +11240,10 @@ LIDAs.9 = {
 				name = sex_transition
 				value = 9000800
 			}
-			trigger_event = LIDAs.8
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.8
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -10696,19 +11257,28 @@ LIDAs.9 = {
 				limit = {
 					scope:sub_transition_0 = 9000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 9001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 9000910
 				}
-				trigger_event = LIDAc.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.9
+				}
 			}
 		}
 		if = {
@@ -10754,7 +11324,10 @@ LIDAs.9 = {
 				name = sex_transition
 				value = 9001000
 			}
-			trigger_event = LIDAs.10
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.10
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -10768,19 +11341,28 @@ LIDAs.9 = {
 				limit = {
 					scope:sub_transition_0 = 9000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 9001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 9000910
 				}
-				trigger_event = LIDAc.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.9
+				}
 			}
 		}
 		if = {
@@ -10809,7 +11391,10 @@ LIDAs.9 = {
 			name = sex_transition
 			value = 9000900
 		}
-		trigger_event = LIDAs.9
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.9
+		}
 	}
 	option = {
 		# 9001800: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_PRONE_BONE
@@ -10829,7 +11414,10 @@ LIDAs.9 = {
 			name = sex_transition
 			value = 9001800
 		}
-		trigger_event = LIDAs.18
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.18
+		}
 	}
 	option = {
 		# 9000810: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
@@ -10860,7 +11448,10 @@ LIDAs.9 = {
 				name = sex_transition
 				value = 9000810
 			}
-			trigger_event = LIDAc.8
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.8
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -10874,19 +11465,28 @@ LIDAs.9 = {
 				limit = {
 					scope:sub_transition_0 = 9000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 9001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 9000910
 				}
-				trigger_event = LIDAc.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.9
+				}
 			}
 		}
 		if = {
@@ -10914,7 +11514,10 @@ LIDAs.9 = {
 			name = sex_transition
 			value = 9000910
 		}
-		trigger_event = LIDAc.9
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.9
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -10924,6 +11527,9 @@ LIDAs.9 = {
 			value = 9
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.15 = {
@@ -11511,7 +12117,10 @@ LIDAs.15 = {
 				name = sex_transition
 				value = 15001500
 			}
-			trigger_event = LIDAs.15
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.15
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -11525,19 +12134,28 @@ LIDAs.15 = {
 				limit = {
 					scope:sub_transition_0 = 15000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 15001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 15000910
 				}
-				trigger_event = LIDAc.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.9
+				}
 			}
 		}
 		if = {
@@ -11578,7 +12196,10 @@ LIDAs.15 = {
 				name = sex_transition
 				value = 15001600
 			}
-			trigger_event = LIDAs.16
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.16
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -11592,19 +12213,28 @@ LIDAs.15 = {
 				limit = {
 					scope:sub_transition_0 = 15000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 15001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 15000910
 				}
-				trigger_event = LIDAc.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.9
+				}
 			}
 		}
 		if = {
@@ -11633,7 +12263,10 @@ LIDAs.15 = {
 			name = sex_transition
 			value = 15000900
 		}
-		trigger_event = LIDAs.9
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.9
+		}
 	}
 	option = {
 		# 15001800: EventsSex.FM_REVERSE_COWGIRL -> EventsSex.FM_PRONE_BONE
@@ -11653,7 +12286,10 @@ LIDAs.15 = {
 			name = sex_transition
 			value = 15001800
 		}
-		trigger_event = LIDAs.18
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.18
+		}
 	}
 	option = {
 		# 15000810: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
@@ -11684,7 +12320,10 @@ LIDAs.15 = {
 				name = sex_transition
 				value = 15000810
 			}
-			trigger_event = LIDAc.8
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.8
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -11698,19 +12337,28 @@ LIDAs.15 = {
 				limit = {
 					scope:sub_transition_0 = 15000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 15001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 15000910
 				}
-				trigger_event = LIDAc.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.9
+				}
 			}
 		}
 		if = {
@@ -11750,7 +12398,10 @@ LIDAs.15 = {
 				name = sex_transition
 				value = 15001010
 			}
-			trigger_event = LIDAc.10
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.10
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -11764,19 +12415,28 @@ LIDAs.15 = {
 				limit = {
 					scope:sub_transition_0 = 15000900
 				}
-				trigger_event = LIDAs.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.9
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 15001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 15000910
 				}
-				trigger_event = LIDAc.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.9
+				}
 			}
 		}
 		if = {
@@ -11804,7 +12464,10 @@ LIDAs.15 = {
 			name = sex_transition
 			value = 15000910
 		}
-		trigger_event = LIDAc.9
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.9
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -11814,6 +12477,9 @@ LIDAs.15 = {
 			value = 15
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.16 = {
@@ -12383,7 +13049,10 @@ LIDAs.16 = {
 				name = sex_transition
 				value = 16001600
 			}
-			trigger_event = LIDAs.16
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.16
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -12397,19 +13066,28 @@ LIDAs.16 = {
 				limit = {
 					scope:sub_transition_0 = 16001200
 				}
-				trigger_event = LIDAs.12
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.12
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 16001700
 				}
-				trigger_event = LIDAs.17
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.17
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 16000910
 				}
-				trigger_event = LIDAc.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.9
+				}
 			}
 		}
 		if = {
@@ -12450,7 +13128,10 @@ LIDAs.16 = {
 				name = sex_transition
 				value = 16001500
 			}
-			trigger_event = LIDAs.15
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.15
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -12464,19 +13145,28 @@ LIDAs.16 = {
 				limit = {
 					scope:sub_transition_0 = 16001200
 				}
-				trigger_event = LIDAs.12
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.12
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 16001700
 				}
-				trigger_event = LIDAs.17
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.17
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 16000910
 				}
-				trigger_event = LIDAc.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.9
+				}
 			}
 		}
 		if = {
@@ -12505,7 +13195,10 @@ LIDAs.16 = {
 			name = sex_transition
 			value = 16001200
 		}
-		trigger_event = LIDAs.12
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.12
+		}
 	}
 	option = {
 		# 16001700: EventsSex.FM_COWGIRL -> EventsSex.FM_MISSIONARY
@@ -12525,7 +13218,10 @@ LIDAs.16 = {
 			name = sex_transition
 			value = 16001700
 		}
-		trigger_event = LIDAs.17
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.17
+		}
 	}
 	option = {
 		# 16000810: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
@@ -12556,7 +13252,10 @@ LIDAs.16 = {
 				name = sex_transition
 				value = 16000810
 			}
-			trigger_event = LIDAc.8
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.8
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -12570,19 +13269,28 @@ LIDAs.16 = {
 				limit = {
 					scope:sub_transition_0 = 16001200
 				}
-				trigger_event = LIDAs.12
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.12
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 16001700
 				}
-				trigger_event = LIDAs.17
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.17
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 16000910
 				}
-				trigger_event = LIDAc.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.9
+				}
 			}
 		}
 		if = {
@@ -12622,7 +13330,10 @@ LIDAs.16 = {
 				name = sex_transition
 				value = 16001010
 			}
-			trigger_event = LIDAc.10
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.10
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -12636,19 +13347,28 @@ LIDAs.16 = {
 				limit = {
 					scope:sub_transition_0 = 16001200
 				}
-				trigger_event = LIDAs.12
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.12
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 16001700
 				}
-				trigger_event = LIDAs.17
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.17
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 16000910
 				}
-				trigger_event = LIDAc.9
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.9
+				}
 			}
 		}
 		if = {
@@ -12676,7 +13396,10 @@ LIDAs.16 = {
 			name = sex_transition
 			value = 16000910
 		}
-		trigger_event = LIDAc.9
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.9
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -12686,6 +13409,9 @@ LIDAs.16 = {
 			value = 16
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.17 = {
@@ -13261,7 +13987,10 @@ LIDAs.17 = {
 				name = sex_transition
 				value = 17001600
 			}
-			trigger_event = LIDAs.16
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.16
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -13275,19 +14004,28 @@ LIDAs.17 = {
 				limit = {
 					scope:sub_transition_0 = 17001700
 				}
-				trigger_event = LIDAs.17
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.17
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 17001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 17001110
 				}
-				trigger_event = LIDAc.11
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.11
+				}
 			}
 		}
 		if = {
@@ -13316,7 +14054,10 @@ LIDAs.17 = {
 			name = sex_transition
 			value = 17001700
 		}
-		trigger_event = LIDAs.17
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.17
+		}
 	}
 	option = {
 		# 17001800: EventsSex.FM_MISSIONARY -> EventsSex.FM_PRONE_BONE
@@ -13336,7 +14077,10 @@ LIDAs.17 = {
 			name = sex_transition
 			value = 17001800
 		}
-		trigger_event = LIDAs.18
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.18
+		}
 	}
 	option = {
 		# 17000810: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
@@ -13367,7 +14111,10 @@ LIDAs.17 = {
 				name = sex_transition
 				value = 17000810
 			}
-			trigger_event = LIDAc.8
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.8
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -13381,19 +14128,28 @@ LIDAs.17 = {
 				limit = {
 					scope:sub_transition_0 = 17001700
 				}
-				trigger_event = LIDAs.17
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.17
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 17001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 17001110
 				}
-				trigger_event = LIDAc.11
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.11
+				}
 			}
 		}
 		if = {
@@ -13433,7 +14189,10 @@ LIDAs.17 = {
 				name = sex_transition
 				value = 17001210
 			}
-			trigger_event = LIDAc.12
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.12
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -13447,19 +14206,28 @@ LIDAs.17 = {
 				limit = {
 					scope:sub_transition_0 = 17001700
 				}
-				trigger_event = LIDAs.17
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.17
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 17001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 17001110
 				}
-				trigger_event = LIDAc.11
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.11
+				}
 			}
 		}
 		if = {
@@ -13487,7 +14255,10 @@ LIDAs.17 = {
 			name = sex_transition
 			value = 17001110
 		}
-		trigger_event = LIDAc.11
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.11
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -13497,6 +14268,9 @@ LIDAs.17 = {
 			value = 17
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.18 = {
@@ -14058,7 +14832,10 @@ LIDAs.18 = {
 				name = sex_transition
 				value = 18001700
 			}
-			trigger_event = LIDAs.17
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.17
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -14072,13 +14849,19 @@ LIDAs.18 = {
 				limit = {
 					scope:sub_transition_0 = 18001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 18001110
 				}
-				trigger_event = LIDAc.11
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.11
+				}
 			}
 		}
 		if = {
@@ -14119,7 +14902,10 @@ LIDAs.18 = {
 				name = sex_transition
 				value = 18000900
 			}
-			trigger_event = LIDAs.9
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.9
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -14133,13 +14919,19 @@ LIDAs.18 = {
 				limit = {
 					scope:sub_transition_0 = 18001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 18001110
 				}
-				trigger_event = LIDAc.11
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.11
+				}
 			}
 		}
 		if = {
@@ -14168,7 +14960,10 @@ LIDAs.18 = {
 			name = sex_transition
 			value = 18001800
 		}
-		trigger_event = LIDAs.18
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.18
+		}
 	}
 	option = {
 		# 18000810: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS
@@ -14199,7 +14994,10 @@ LIDAs.18 = {
 				name = sex_transition
 				value = 18000810
 			}
-			trigger_event = LIDAc.8
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.8
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -14213,13 +15011,19 @@ LIDAs.18 = {
 				limit = {
 					scope:sub_transition_0 = 18001800
 				}
-				trigger_event = LIDAs.18
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.18
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 18001110
 				}
-				trigger_event = LIDAc.11
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.11
+				}
 			}
 		}
 		if = {
@@ -14247,7 +15051,10 @@ LIDAs.18 = {
 			name = sex_transition
 			value = 18001110
 		}
-		trigger_event = LIDAc.11
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.11
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -14257,6 +15064,9 @@ LIDAs.18 = {
 			value = 18
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.19 = {
@@ -14507,7 +15317,10 @@ LIDAs.19 = {
 				name = sex_transition
 				value = 19002400
 			}
-			trigger_event = LIDAs.24
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.24
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -14521,7 +15334,10 @@ LIDAs.19 = {
 				limit = {
 					scope:sub_transition_0 = 19002500
 				}
-				trigger_event = LIDAs.25
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.25
+				}
 			}
 		}
 		if = {
@@ -14550,7 +15366,10 @@ LIDAs.19 = {
 			name = sex_transition
 			value = 19002500
 		}
-		trigger_event = LIDAs.25
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.25
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -14560,6 +15379,9 @@ LIDAs.19 = {
 			value = 19
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.20 = {
@@ -14810,7 +15632,10 @@ LIDAs.20 = {
 				name = sex_transition
 				value = 20002400
 			}
-			trigger_event = LIDAs.24
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.24
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -14824,7 +15649,10 @@ LIDAs.20 = {
 				limit = {
 					scope:sub_transition_0 = 20002500
 				}
-				trigger_event = LIDAs.25
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.25
+				}
 			}
 		}
 		if = {
@@ -14853,7 +15681,10 @@ LIDAs.20 = {
 			name = sex_transition
 			value = 20002500
 		}
-		trigger_event = LIDAs.25
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.25
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -14863,6 +15694,9 @@ LIDAs.20 = {
 			value = 20
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.21 = {
@@ -15113,7 +15947,10 @@ LIDAs.21 = {
 				name = sex_transition
 				value = 21002400
 			}
-			trigger_event = LIDAs.24
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.24
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -15127,7 +15964,10 @@ LIDAs.21 = {
 				limit = {
 					scope:sub_transition_0 = 21002500
 				}
-				trigger_event = LIDAs.25
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.25
+				}
 			}
 		}
 		if = {
@@ -15156,7 +15996,10 @@ LIDAs.21 = {
 			name = sex_transition
 			value = 21002500
 		}
-		trigger_event = LIDAs.25
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.25
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -15166,6 +16009,9 @@ LIDAs.21 = {
 			value = 21
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.23 = {
@@ -15416,7 +16262,10 @@ LIDAs.23 = {
 				name = sex_transition
 				value = 23002400
 			}
-			trigger_event = LIDAs.24
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.24
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -15430,7 +16279,10 @@ LIDAs.23 = {
 				limit = {
 					scope:sub_transition_0 = 23002500
 				}
-				trigger_event = LIDAs.25
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.25
+				}
 			}
 		}
 		if = {
@@ -15459,7 +16311,10 @@ LIDAs.23 = {
 			name = sex_transition
 			value = 23002500
 		}
-		trigger_event = LIDAs.25
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.25
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -15469,6 +16324,9 @@ LIDAs.23 = {
 			value = 23
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.24 = {
@@ -16128,7 +16986,10 @@ LIDAs.24 = {
 				name = sex_transition
 				value = 24002400
 			}
-			trigger_event = LIDAs.24
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.24
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -16142,13 +17003,19 @@ LIDAs.24 = {
 				limit = {
 					scope:sub_transition_0 = 24002500
 				}
-				trigger_event = LIDAs.25
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.25
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 24001610
 				}
-				trigger_event = LIDAc.16
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.16
+				}
 			}
 		}
 		if = {
@@ -16177,7 +17044,10 @@ LIDAs.24 = {
 			name = sex_transition
 			value = 24002500
 		}
-		trigger_event = LIDAs.25
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.25
+		}
 	}
 	option = {
 		# 24001710: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM
@@ -16208,7 +17078,10 @@ LIDAs.24 = {
 				name = sex_transition
 				value = 24001710
 			}
-			trigger_event = LIDAc.17
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.17
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -16222,13 +17095,19 @@ LIDAs.24 = {
 				limit = {
 					scope:sub_transition_0 = 24002500
 				}
-				trigger_event = LIDAs.25
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.25
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 24001610
 				}
-				trigger_event = LIDAc.16
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.16
+				}
 			}
 		}
 		if = {
@@ -16268,7 +17147,10 @@ LIDAs.24 = {
 				name = sex_transition
 				value = 24001310
 			}
-			trigger_event = LIDAc.13
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.13
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -16282,13 +17164,19 @@ LIDAs.24 = {
 				limit = {
 					scope:sub_transition_0 = 24002500
 				}
-				trigger_event = LIDAs.25
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.25
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 24001610
 				}
-				trigger_event = LIDAc.16
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.16
+				}
 			}
 		}
 		if = {
@@ -16316,7 +17204,10 @@ LIDAs.24 = {
 			name = sex_transition
 			value = 24001610
 		}
-		trigger_event = LIDAc.16
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.16
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -16326,6 +17217,9 @@ LIDAs.24 = {
 			value = 24
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.25 = {
@@ -17122,7 +18016,10 @@ LIDAs.25 = {
 				name = sex_transition
 				value = 25002400
 			}
-			trigger_event = LIDAs.24
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.24
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -17136,25 +18033,37 @@ LIDAs.25 = {
 				limit = {
 					scope:sub_transition_0 = 25002700
 				}
-				trigger_event = LIDAs.27
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.27
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 25002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 25001410
 				}
-				trigger_event = LIDAc.14
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.14
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 25001610
 				}
-				trigger_event = LIDAc.16
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.16
+				}
 			}
 		}
 		if = {
@@ -17195,7 +18104,10 @@ LIDAs.25 = {
 				name = sex_transition
 				value = 25002500
 			}
-			trigger_event = LIDAs.25
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.25
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -17209,25 +18121,37 @@ LIDAs.25 = {
 				limit = {
 					scope:sub_transition_0 = 25002700
 				}
-				trigger_event = LIDAs.27
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.27
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 25002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 25001410
 				}
-				trigger_event = LIDAc.14
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.14
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 25001610
 				}
-				trigger_event = LIDAc.16
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.16
+				}
 			}
 		}
 		if = {
@@ -17256,7 +18180,10 @@ LIDAs.25 = {
 			name = sex_transition
 			value = 25002700
 		}
-		trigger_event = LIDAs.27
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.27
+		}
 	}
 	option = {
 		# 25002600: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND
@@ -17276,7 +18203,10 @@ LIDAs.25 = {
 			name = sex_transition
 			value = 25002600
 		}
-		trigger_event = LIDAs.26
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.26
+		}
 	}
 	option = {
 		# 25001710: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_RUINED_ORGASM
@@ -17307,7 +18237,10 @@ LIDAs.25 = {
 				name = sex_transition
 				value = 25001710
 			}
-			trigger_event = LIDAc.17
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.17
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -17321,25 +18254,37 @@ LIDAs.25 = {
 				limit = {
 					scope:sub_transition_0 = 25002700
 				}
-				trigger_event = LIDAs.27
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.27
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 25002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 25001410
 				}
-				trigger_event = LIDAc.14
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.14
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 25001610
 				}
-				trigger_event = LIDAc.16
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.16
+				}
 			}
 		}
 		if = {
@@ -17367,7 +18312,10 @@ LIDAs.25 = {
 			name = sex_transition
 			value = 25001410
 		}
-		trigger_event = LIDAc.14
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.14
+		}
 	}
 	option = {
 		# 25001610: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_ON_FACE
@@ -17386,7 +18334,10 @@ LIDAs.25 = {
 			name = sex_transition
 			value = 25001610
 		}
-		trigger_event = LIDAc.16
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.16
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -17396,6 +18347,9 @@ LIDAs.25 = {
 			value = 25
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.27 = {
@@ -17927,7 +18881,10 @@ LIDAs.27 = {
 				name = sex_transition
 				value = 27002500
 			}
-			trigger_event = LIDAs.25
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.25
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -17941,25 +18898,37 @@ LIDAs.27 = {
 				limit = {
 					scope:sub_transition_0 = 27002700
 				}
-				trigger_event = LIDAs.27
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.27
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 27002800
 				}
-				trigger_event = LIDAs.28
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.28
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 27001510
 				}
-				trigger_event = LIDAc.15
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.15
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 27001610
 				}
-				trigger_event = LIDAc.16
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.16
+				}
 			}
 		}
 		if = {
@@ -17988,7 +18957,10 @@ LIDAs.27 = {
 			name = sex_transition
 			value = 27002700
 		}
-		trigger_event = LIDAs.27
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.27
+		}
 	}
 	option = {
 		# 27002800: EventsSex.MF_BLOWJOB_SUB -> EventsSex.MF_DEEPTHROAT
@@ -18008,7 +18980,10 @@ LIDAs.27 = {
 			name = sex_transition
 			value = 27002800
 		}
-		trigger_event = LIDAs.28
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.28
+		}
 	}
 	option = {
 		# 27001310: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_HANDJOB_CUM_IN_HAND
@@ -18039,7 +19014,10 @@ LIDAs.27 = {
 				name = sex_transition
 				value = 27001310
 			}
-			trigger_event = LIDAc.13
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.13
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -18053,25 +19031,37 @@ LIDAs.27 = {
 				limit = {
 					scope:sub_transition_0 = 27002700
 				}
-				trigger_event = LIDAs.27
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.27
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 27002800
 				}
-				trigger_event = LIDAs.28
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.28
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 27001510
 				}
-				trigger_event = LIDAc.15
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.15
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 27001610
 				}
-				trigger_event = LIDAc.16
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.16
+				}
 			}
 		}
 		if = {
@@ -18099,7 +19089,10 @@ LIDAs.27 = {
 			name = sex_transition
 			value = 27001510
 		}
-		trigger_event = LIDAc.15
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.15
+		}
 	}
 	option = {
 		# 27001610: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE
@@ -18118,7 +19111,10 @@ LIDAs.27 = {
 			name = sex_transition
 			value = 27001610
 		}
-		trigger_event = LIDAc.16
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.16
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -18128,6 +19124,9 @@ LIDAs.27 = {
 			value = 27
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.28 = {
@@ -18495,7 +19494,10 @@ LIDAs.28 = {
 				name = sex_transition
 				value = 28002700
 			}
-			trigger_event = LIDAs.27
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.27
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -18509,13 +19511,19 @@ LIDAs.28 = {
 				limit = {
 					scope:sub_transition_0 = 28002800
 				}
-				trigger_event = LIDAs.28
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.28
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 28001510
 				}
-				trigger_event = LIDAc.15
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.15
+				}
 			}
 		}
 		if = {
@@ -18544,7 +19552,10 @@ LIDAs.28 = {
 			name = sex_transition
 			value = 28002800
 		}
-		trigger_event = LIDAs.28
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.28
+		}
 	}
 	option = {
 		# 28001510: EventsSex.MF_DEEPTHROAT -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB
@@ -18563,7 +19574,10 @@ LIDAs.28 = {
 			name = sex_transition
 			value = 28001510
 		}
-		trigger_event = LIDAc.15
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.15
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -18573,6 +19587,9 @@ LIDAs.28 = {
 			value = 28
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.22 = {
@@ -18926,7 +19943,10 @@ LIDAs.22 = {
 				name = sex_transition
 				value = 22003100
 			}
-			trigger_event = LIDAs.31
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.31
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -18940,13 +19960,19 @@ LIDAs.22 = {
 				limit = {
 					scope:sub_transition_0 = 22002900
 				}
-				trigger_event = LIDAs.29
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.29
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 22001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -18987,7 +20013,10 @@ LIDAs.22 = {
 				name = sex_transition
 				value = 22002400
 			}
-			trigger_event = LIDAs.24
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.24
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -19001,13 +20030,19 @@ LIDAs.22 = {
 				limit = {
 					scope:sub_transition_0 = 22002900
 				}
-				trigger_event = LIDAs.29
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.29
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 22001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -19036,7 +20071,10 @@ LIDAs.22 = {
 			name = sex_transition
 			value = 22002900
 		}
-		trigger_event = LIDAs.29
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.29
+		}
 	}
 	option = {
 		# 22001810: EventsSex.MF_ASS_TEASE -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
@@ -19067,7 +20105,10 @@ LIDAs.22 = {
 				name = sex_transition
 				value = 22001810
 			}
-			trigger_event = LIDAc.18
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.18
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -19081,13 +20122,19 @@ LIDAs.22 = {
 				limit = {
 					scope:sub_transition_0 = 22002900
 				}
-				trigger_event = LIDAs.29
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.29
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 22001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -19115,7 +20162,10 @@ LIDAs.22 = {
 			name = sex_transition
 			value = 22001910
 		}
-		trigger_event = LIDAc.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.19
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -19125,6 +20175,9 @@ LIDAs.22 = {
 			value = 22
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.31 = {
@@ -19636,7 +20689,10 @@ LIDAs.31 = {
 				name = sex_transition
 				value = 31003100
 			}
-			trigger_event = LIDAs.31
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.31
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -19650,13 +20706,19 @@ LIDAs.31 = {
 				limit = {
 					scope:sub_transition_0 = 31002900
 				}
-				trigger_event = LIDAs.29
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.29
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 31001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -19697,7 +20759,10 @@ LIDAs.31 = {
 				name = sex_transition
 				value = 31002400
 			}
-			trigger_event = LIDAs.24
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.24
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -19711,13 +20776,19 @@ LIDAs.31 = {
 				limit = {
 					scope:sub_transition_0 = 31002900
 				}
-				trigger_event = LIDAs.29
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.29
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 31001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -19746,7 +20817,10 @@ LIDAs.31 = {
 			name = sex_transition
 			value = 31002900
 		}
-		trigger_event = LIDAs.29
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.29
+		}
 	}
 	option = {
 		# 31001810: EventsSex.MF_ASS_RUB -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
@@ -19777,7 +20851,10 @@ LIDAs.31 = {
 				name = sex_transition
 				value = 31001810
 			}
-			trigger_event = LIDAc.18
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.18
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -19791,13 +20868,19 @@ LIDAs.31 = {
 				limit = {
 					scope:sub_transition_0 = 31002900
 				}
-				trigger_event = LIDAs.29
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.29
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 31001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -19825,7 +20908,10 @@ LIDAs.31 = {
 			name = sex_transition
 			value = 31001910
 		}
-		trigger_event = LIDAc.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.19
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -19835,6 +20921,9 @@ LIDAs.31 = {
 			value = 31
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.29 = {
@@ -20506,7 +21595,10 @@ LIDAs.29 = {
 				name = sex_transition
 				value = 29003100
 			}
-			trigger_event = LIDAs.31
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.31
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -20520,19 +21612,28 @@ LIDAs.29 = {
 				limit = {
 					scope:sub_transition_0 = 29003000
 				}
-				trigger_event = LIDAs.30
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.30
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 29002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 29001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -20578,7 +21679,10 @@ LIDAs.29 = {
 				name = sex_transition
 				value = 29002900
 			}
-			trigger_event = LIDAs.29
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.29
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -20592,19 +21696,28 @@ LIDAs.29 = {
 				limit = {
 					scope:sub_transition_0 = 29003000
 				}
-				trigger_event = LIDAs.30
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.30
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 29002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 29001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -20650,7 +21763,10 @@ LIDAs.29 = {
 				name = sex_transition
 				value = 29003200
 			}
-			trigger_event = LIDAs.32
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.32
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -20664,19 +21780,28 @@ LIDAs.29 = {
 				limit = {
 					scope:sub_transition_0 = 29003000
 				}
-				trigger_event = LIDAs.30
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.30
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 29002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 29001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -20722,7 +21847,10 @@ LIDAs.29 = {
 				name = sex_transition
 				value = 29002500
 			}
-			trigger_event = LIDAs.25
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.25
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -20736,19 +21864,28 @@ LIDAs.29 = {
 				limit = {
 					scope:sub_transition_0 = 29003000
 				}
-				trigger_event = LIDAs.30
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.30
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 29002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 29001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -20777,7 +21914,10 @@ LIDAs.29 = {
 			name = sex_transition
 			value = 29003000
 		}
-		trigger_event = LIDAs.30
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.30
+		}
 	}
 	option = {
 		# 29002600: EventsSex.MF_HOTDOG -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND
@@ -20797,7 +21937,10 @@ LIDAs.29 = {
 			name = sex_transition
 			value = 29002600
 		}
-		trigger_event = LIDAs.26
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.26
+		}
 	}
 	option = {
 		# 29001810: EventsSex.MF_HOTDOG -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
@@ -20828,7 +21971,10 @@ LIDAs.29 = {
 				name = sex_transition
 				value = 29001810
 			}
-			trigger_event = LIDAc.18
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.18
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -20842,19 +21988,28 @@ LIDAs.29 = {
 				limit = {
 					scope:sub_transition_0 = 29003000
 				}
-				trigger_event = LIDAs.30
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.30
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 29002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 29001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -20882,7 +22037,10 @@ LIDAs.29 = {
 			name = sex_transition
 			value = 29001910
 		}
-		trigger_event = LIDAc.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.19
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -20892,6 +22050,9 @@ LIDAs.29 = {
 			value = 29
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.30 = {
@@ -21376,7 +22537,10 @@ LIDAs.30 = {
 				name = sex_transition
 				value = 30002900
 			}
-			trigger_event = LIDAs.29
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.29
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -21390,19 +22554,28 @@ LIDAs.30 = {
 				limit = {
 					scope:sub_transition_0 = 30003000
 				}
-				trigger_event = LIDAs.30
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.30
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 30002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 30001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -21448,7 +22621,10 @@ LIDAs.30 = {
 				name = sex_transition
 				value = 30002500
 			}
-			trigger_event = LIDAs.25
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.25
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -21462,19 +22638,28 @@ LIDAs.30 = {
 				limit = {
 					scope:sub_transition_0 = 30003000
 				}
-				trigger_event = LIDAs.30
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.30
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 30002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 30001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -21503,7 +22688,10 @@ LIDAs.30 = {
 			name = sex_transition
 			value = 30003000
 		}
-		trigger_event = LIDAs.30
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.30
+		}
 	}
 	option = {
 		# 30002600: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND
@@ -21523,7 +22711,10 @@ LIDAs.30 = {
 			name = sex_transition
 			value = 30002600
 		}
-		trigger_event = LIDAs.26
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.26
+		}
 	}
 	option = {
 		# 30001810: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_ASS_TEASE_CUM_ON_ASS
@@ -21554,7 +22745,10 @@ LIDAs.30 = {
 				name = sex_transition
 				value = 30001810
 			}
-			trigger_event = LIDAc.18
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.18
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -21568,19 +22762,28 @@ LIDAs.30 = {
 				limit = {
 					scope:sub_transition_0 = 30003000
 				}
-				trigger_event = LIDAs.30
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.30
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 30002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 30001910
 				}
-				trigger_event = LIDAc.19
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.19
+				}
 			}
 		}
 		if = {
@@ -21608,7 +22811,10 @@ LIDAs.30 = {
 			name = sex_transition
 			value = 30001910
 		}
-		trigger_event = LIDAc.19
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.19
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -21618,6 +22824,9 @@ LIDAs.30 = {
 			value = 30
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.26 = {
@@ -22335,7 +23544,10 @@ LIDAs.26 = {
 				name = sex_transition
 				value = 26002500
 			}
-			trigger_event = LIDAs.25
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.25
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -22349,19 +23561,28 @@ LIDAs.26 = {
 				limit = {
 					scope:sub_transition_0 = 26002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 26003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 26002110
 				}
-				trigger_event = LIDAc.21
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.21
+				}
 			}
 		}
 		if = {
@@ -22407,7 +23628,10 @@ LIDAs.26 = {
 				name = sex_transition
 				value = 26002700
 			}
-			trigger_event = LIDAs.27
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.27
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -22421,19 +23645,28 @@ LIDAs.26 = {
 				limit = {
 					scope:sub_transition_0 = 26002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 26003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 26002110
 				}
-				trigger_event = LIDAc.21
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.21
+				}
 			}
 		}
 		if = {
@@ -22462,7 +23695,10 @@ LIDAs.26 = {
 			name = sex_transition
 			value = 26002600
 		}
-		trigger_event = LIDAs.26
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.26
+		}
 	}
 	option = {
 		# 26003500: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_PRONE_BONE
@@ -22482,7 +23718,10 @@ LIDAs.26 = {
 			name = sex_transition
 			value = 26003500
 		}
-		trigger_event = LIDAs.35
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.35
+		}
 	}
 	option = {
 		# 26002010: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
@@ -22513,7 +23752,10 @@ LIDAs.26 = {
 				name = sex_transition
 				value = 26002010
 			}
-			trigger_event = LIDAc.20
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.20
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -22527,19 +23769,28 @@ LIDAs.26 = {
 				limit = {
 					scope:sub_transition_0 = 26002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 26003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 26002110
 				}
-				trigger_event = LIDAc.21
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.21
+				}
 			}
 		}
 		if = {
@@ -22567,7 +23818,10 @@ LIDAs.26 = {
 			name = sex_transition
 			value = 26002110
 		}
-		trigger_event = LIDAc.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.21
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -22577,6 +23831,9 @@ LIDAs.26 = {
 			value = 26
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.32 = {
@@ -23164,7 +24421,10 @@ LIDAs.32 = {
 				name = sex_transition
 				value = 32003200
 			}
-			trigger_event = LIDAs.32
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.32
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -23178,19 +24438,28 @@ LIDAs.32 = {
 				limit = {
 					scope:sub_transition_0 = 32002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 32003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 32002110
 				}
-				trigger_event = LIDAc.21
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.21
+				}
 			}
 		}
 		if = {
@@ -23231,7 +24500,10 @@ LIDAs.32 = {
 				name = sex_transition
 				value = 32003300
 			}
-			trigger_event = LIDAs.33
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.33
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -23245,19 +24517,28 @@ LIDAs.32 = {
 				limit = {
 					scope:sub_transition_0 = 32002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 32003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 32002110
 				}
-				trigger_event = LIDAc.21
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.21
+				}
 			}
 		}
 		if = {
@@ -23286,7 +24567,10 @@ LIDAs.32 = {
 			name = sex_transition
 			value = 32002600
 		}
-		trigger_event = LIDAs.26
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.26
+		}
 	}
 	option = {
 		# 32003500: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_PRONE_BONE
@@ -23306,7 +24590,10 @@ LIDAs.32 = {
 			name = sex_transition
 			value = 32003500
 		}
-		trigger_event = LIDAs.35
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.35
+		}
 	}
 	option = {
 		# 32002010: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
@@ -23337,7 +24624,10 @@ LIDAs.32 = {
 				name = sex_transition
 				value = 32002010
 			}
-			trigger_event = LIDAc.20
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.20
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -23351,19 +24641,28 @@ LIDAs.32 = {
 				limit = {
 					scope:sub_transition_0 = 32002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 32003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 32002110
 				}
-				trigger_event = LIDAc.21
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.21
+				}
 			}
 		}
 		if = {
@@ -23403,7 +24702,10 @@ LIDAs.32 = {
 				name = sex_transition
 				value = 32002210
 			}
-			trigger_event = LIDAc.22
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.22
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -23417,19 +24719,28 @@ LIDAs.32 = {
 				limit = {
 					scope:sub_transition_0 = 32002600
 				}
-				trigger_event = LIDAs.26
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.26
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 32003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 32002110
 				}
-				trigger_event = LIDAc.21
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.21
+				}
 			}
 		}
 		if = {
@@ -23457,7 +24768,10 @@ LIDAs.32 = {
 			name = sex_transition
 			value = 32002110
 		}
-		trigger_event = LIDAc.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.21
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -23467,6 +24781,9 @@ LIDAs.32 = {
 			value = 32
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.33 = {
@@ -24027,7 +25344,10 @@ LIDAs.33 = {
 				name = sex_transition
 				value = 33003300
 			}
-			trigger_event = LIDAs.33
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.33
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -24041,19 +25361,28 @@ LIDAs.33 = {
 				limit = {
 					scope:sub_transition_0 = 33002900
 				}
-				trigger_event = LIDAs.29
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.29
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 33003400
 				}
-				trigger_event = LIDAs.34
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.34
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 33002110
 				}
-				trigger_event = LIDAc.21
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.21
+				}
 			}
 		}
 		if = {
@@ -24094,7 +25423,10 @@ LIDAs.33 = {
 				name = sex_transition
 				value = 33003200
 			}
-			trigger_event = LIDAs.32
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.32
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -24108,19 +25440,28 @@ LIDAs.33 = {
 				limit = {
 					scope:sub_transition_0 = 33002900
 				}
-				trigger_event = LIDAs.29
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.29
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 33003400
 				}
-				trigger_event = LIDAs.34
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.34
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 33002110
 				}
-				trigger_event = LIDAc.21
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.21
+				}
 			}
 		}
 		if = {
@@ -24149,7 +25490,10 @@ LIDAs.33 = {
 			name = sex_transition
 			value = 33002900
 		}
-		trigger_event = LIDAs.29
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.29
+		}
 	}
 	option = {
 		# 33003400: EventsSex.MF_COWGIRL -> EventsSex.MF_MISSIONARY
@@ -24169,7 +25513,10 @@ LIDAs.33 = {
 			name = sex_transition
 			value = 33003400
 		}
-		trigger_event = LIDAs.34
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.34
+		}
 	}
 	option = {
 		# 33002010: EventsSex.MF_COWGIRL -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
@@ -24200,7 +25547,10 @@ LIDAs.33 = {
 				name = sex_transition
 				value = 33002010
 			}
-			trigger_event = LIDAc.20
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.20
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -24214,19 +25564,28 @@ LIDAs.33 = {
 				limit = {
 					scope:sub_transition_0 = 33002900
 				}
-				trigger_event = LIDAs.29
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.29
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 33003400
 				}
-				trigger_event = LIDAs.34
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.34
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 33002110
 				}
-				trigger_event = LIDAc.21
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.21
+				}
 			}
 		}
 		if = {
@@ -24266,7 +25625,10 @@ LIDAs.33 = {
 				name = sex_transition
 				value = 33002210
 			}
-			trigger_event = LIDAc.22
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.22
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -24280,19 +25642,28 @@ LIDAs.33 = {
 				limit = {
 					scope:sub_transition_0 = 33002900
 				}
-				trigger_event = LIDAs.29
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.29
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 33003400
 				}
-				trigger_event = LIDAs.34
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.34
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 33002110
 				}
-				trigger_event = LIDAc.21
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.21
+				}
 			}
 		}
 		if = {
@@ -24320,7 +25691,10 @@ LIDAs.33 = {
 			name = sex_transition
 			value = 33002110
 		}
-		trigger_event = LIDAc.21
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.21
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -24330,6 +25704,9 @@ LIDAs.33 = {
 			value = 33
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.34 = {
@@ -24836,7 +26213,10 @@ LIDAs.34 = {
 				name = sex_transition
 				value = 34003300
 			}
-			trigger_event = LIDAs.33
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.33
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -24850,19 +26230,28 @@ LIDAs.34 = {
 				limit = {
 					scope:sub_transition_0 = 34003400
 				}
-				trigger_event = LIDAs.34
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.34
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 34003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 34002310
 				}
-				trigger_event = LIDAc.23
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.23
+				}
 			}
 		}
 		if = {
@@ -24891,7 +26280,10 @@ LIDAs.34 = {
 			name = sex_transition
 			value = 34003400
 		}
-		trigger_event = LIDAs.34
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.34
+		}
 	}
 	option = {
 		# 34003500: EventsSex.MF_MISSIONARY -> EventsSex.MF_PRONE_BONE
@@ -24911,7 +26303,10 @@ LIDAs.34 = {
 			name = sex_transition
 			value = 34003500
 		}
-		trigger_event = LIDAs.35
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.35
+		}
 	}
 	option = {
 		# 34002010: EventsSex.MF_MISSIONARY -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
@@ -24942,7 +26337,10 @@ LIDAs.34 = {
 				name = sex_transition
 				value = 34002010
 			}
-			trigger_event = LIDAc.20
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.20
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -24956,19 +26354,28 @@ LIDAs.34 = {
 				limit = {
 					scope:sub_transition_0 = 34003400
 				}
-				trigger_event = LIDAs.34
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.34
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 34003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 34002310
 				}
-				trigger_event = LIDAc.23
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.23
+				}
 			}
 		}
 		if = {
@@ -24996,7 +26403,10 @@ LIDAs.34 = {
 			name = sex_transition
 			value = 34002310
 		}
-		trigger_event = LIDAc.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.23
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -25006,6 +26416,9 @@ LIDAs.34 = {
 			value = 34
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }
 LIDAs.35 = {
@@ -25558,7 +26971,10 @@ LIDAs.35 = {
 				name = sex_transition
 				value = 35003400
 			}
-			trigger_event = LIDAs.34
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.34
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -25572,13 +26988,19 @@ LIDAs.35 = {
 				limit = {
 					scope:sub_transition_0 = 35003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 35002310
 				}
-				trigger_event = LIDAc.23
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.23
+				}
 			}
 		}
 		if = {
@@ -25619,7 +27041,10 @@ LIDAs.35 = {
 				name = sex_transition
 				value = 35002600
 			}
-			trigger_event = LIDAs.26
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAs.26
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -25633,13 +27058,19 @@ LIDAs.35 = {
 				limit = {
 					scope:sub_transition_0 = 35003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 35002310
 				}
-				trigger_event = LIDAc.23
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.23
+				}
 			}
 		}
 		if = {
@@ -25668,7 +27099,10 @@ LIDAs.35 = {
 			name = sex_transition
 			value = 35003500
 		}
-		trigger_event = LIDAs.35
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAs.35
+		}
 	}
 	option = {
 		# 35002010: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
@@ -25699,7 +27133,10 @@ LIDAs.35 = {
 				name = sex_transition
 				value = 35002010
 			}
-			trigger_event = LIDAc.20
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.20
+			}
 		}
 		else = {
 			change_subdom_effect = {
@@ -25713,13 +27150,19 @@ LIDAs.35 = {
 				limit = {
 					scope:sub_transition_0 = 35003500
 				}
-				trigger_event = LIDAs.35
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.35
+				}
 			}
 			if = {
 				limit = {
 					scope:sub_transition_0 = 35002310
 				}
-				trigger_event = LIDAc.23
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.23
+				}
 			}
 		}
 		if = {
@@ -25747,7 +27190,10 @@ LIDAs.35 = {
 			name = sex_transition
 			value = 35002310
 		}
-		trigger_event = LIDAc.23
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.23
+		}
 	}
 	after = {
 		custom_tooltip = root_stamina_tooltip
@@ -25757,5 +27203,8 @@ LIDAs.35 = {
 			value = 35
 		}
 		reset_stamina_after_cum_effect = yes
+		trigger_event = {
+			saved_event_id = scope:next_event
+		}
 	}
 }

@@ -502,6 +502,11 @@ class First(Event):
                 options.append(Option(event.id, OptionCategory.OTHER, event.title))
         self.options = options
 
+    def generate_after(self):
+        super(First, self).generate_after()
+        with Block(self, TRIGGER_EVENT):
+            self.assign(SAVED_EVENT_ID, f"{SCOPE}:{NEXT_EVENT}")
+
     def generate_immediate_effect(self):
         self._generate_finisher_stamina_effect()
         # save to use for all future events
@@ -525,7 +530,7 @@ class First(Event):
 
                 # save this event
                 self.save_scope_value_as(SEX_TRANSITION, option.id)
-                self.assign(TRIGGER_EVENT, option.next_event.fullname)
+                self.save_scope_value_as(NEXT_EVENT, f"event_id:{option.next_event.fullname}")
         # last option is to back out
         with Block(self, OPTION):
             self.assign(NAME, CANCEL_MEETING_OPTION)
@@ -547,6 +552,8 @@ class Sex(Event):
         self.assign(CUSTOM_TOOLTIP, ROOT_STAMINA_TOOLTIP)
         self.assign(CUSTOM_TOOLTIP, PARTNER_STAMINA_TOOLTIP)
         super(Sex, self).generate_after()
+        with Block(self, TRIGGER_EVENT):
+            self.assign(SAVED_EVENT_ID, f"{SCOPE}:{NEXT_EVENT}")
 
     def generate_desc(self):
         self.generate_incoming_options_desc()
@@ -640,7 +647,7 @@ class Sex(Event):
         self.assign(CUSTOM_TOOLTIP, VOLUNTARY_SUB_TOOLTIP)
         self.generate_hidden_opinion_change_effect(option.subdom_sub)
         self.save_scope_value_as(SEX_TRANSITION, option.id)
-        self.assign(TRIGGER_EVENT, option.next_event.fullname)
+        self.save_scope_value_as(NEXT_EVENT, f"event_id:{option.next_event.fullname}")
 
     def generate_dom_option_effect(self, option, sub_options):
         if len(sub_options) == 0:
@@ -666,7 +673,7 @@ class Sex(Event):
                 self.add_line(f"{SCOPE}:{DOM_SUCCESS} <= {SCOPE}:{THIS_DOM_CHANCE}")
             self.generate_hidden_opinion_change_effect(option.subdom_dom_success)
             self.save_scope_value_as(SEX_TRANSITION, option.id)
-            self.assign(TRIGGER_EVENT, option.next_event.fullname)
+            self.save_scope_value_as(NEXT_EVENT, f"event_id:{option.next_event.fullname}")
         with Block(self, ELSE):
             self.generate_hidden_opinion_change_effect(option.subdom_dom_fail)
             # register that we've failed to dom
@@ -676,7 +683,8 @@ class Sex(Event):
                 with Block(self, IF):
                     with Block(self, LIMIT):
                         self.assign(f"{SCOPE}:{SUB_TRANSITION}_0", sub_option.id)
-                    self.assign(TRIGGER_EVENT, sub_option.next_event.fullname)
+                    self.save_scope_value_as(NEXT_EVENT, f"event_id:{sub_option.next_event.fullname}")
+
 
 
 class RepeatedSex(Sex):

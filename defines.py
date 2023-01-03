@@ -247,6 +247,8 @@ SUB_TRANSITION = "sub_transition"
 CUM_TRANSITION = "cum_transition"
 FIRST_TRANSITION = "first_transition"
 PREV_EVENT = "prev_event"
+NEXT_EVENT = "next_event"
+SAVED_EVENT_ID = "saved_event_id"
 
 NAMESPACE = "namespace"
 OPTION_NAMESPACE = "LIDAoption"

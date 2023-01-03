@@ -252,7 +252,6 @@ questions
 
 TODO
 - FIX repeating options not showing up
-- FIX after block not getting executed (orgasm isn't getting cleared up nor is prev_event getting set)
 - connect Carnalitas fetish system
 - royal court event
 - more hooks into sex scenes
@@ -261,7 +260,6 @@ TODO
 	- player actively sneaking into rooms
 - save all desc in events in a list to facilitate looping to create localization and effects?
 	- need effect for randomized desc?
-- use different mechanism for naming options to reduce diff size
 
 - scene with someone peddling piercings that increase sensitivity
 	- dom not receiving satisfying orgasms from slave
