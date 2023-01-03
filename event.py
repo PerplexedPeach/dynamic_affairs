@@ -91,13 +91,21 @@ class Event(BlockRoot):
         self.root_become_more_sub_chance = root_become_more_sub_chance
         self.root_become_more_dom_chance = root_become_more_dom_chance
 
-        # TODO make these Desc
         self.root_cum_text = root_cum_text
-        if self.root_cum_text is not None:
-            self.root_cum_text = clean_str(self.root_cum_text) + "\\n"
+        if root_cum_text is not None:
+            if isinstance(root_cum_text, str):
+                desc = Desc(root_cum_text)
+            desc.suffix = "root_cum"
+            desc.desc += "\\n"
+            self.root_cum_text = desc
+
         self.partner_cum_text = partner_cum_text
         if self.partner_cum_text is not None:
-            self.partner_cum_text = clean_str(self.partner_cum_text) + "\\n"
+            if isinstance(partner_cum_text, str):
+                desc = Desc(partner_cum_text)
+            desc.suffix = "partner_cum"
+            desc.desc += "\\n"
+            self.partner_cum_text = desc
 
         self.force_root_stamina_finishes = force_root_stamina_finishes
 
@@ -261,9 +269,9 @@ class Event(BlockRoot):
     def generate_localization(self):
         lines = [f"{self.fullname}.t: \"{self.title}\"", self.desc.generate_localization(self)]
         if self.root_cum_text is not None:
-            lines.append(f"{self.fullname}.{ROOT_CUM}: \"{self.root_cum_text}\"")
+            lines.append(self.root_cum_text.generate_localization(self))
         if self.partner_cum_text is not None:
-            lines.append(f"{self.fullname}.{PARTNER_CUM}: \"{self.partner_cum_text}\"")
+            lines.append(self.partner_cum_text.generate_localization(self))
         if self.custom_localization is not None:
             lines.append(self.custom_localization)
         return "\n".join(lines)
@@ -286,7 +294,7 @@ class Event(BlockRoot):
                 self.add_line(f"{ROOT_STAMINA} <= 0")
                 # depending on if we have a special root cum text or if we need to default
             if self.root_cum_text is not None:
-                self.assign(DESC, f"{self.fullname}.{ROOT_CUM}")
+                self.root_cum_text.generate_desc(self)
             else:
                 self.assign(DESC, f"{ROOT_CUM}_{prefix}")
 
@@ -297,7 +305,7 @@ class Event(BlockRoot):
                 self.add_line(f"{PARTNER_STAMINA} <= 0")
                 # depending on if we have a special root cum text or if we need to default
             if self.partner_cum_text is not None:
-                self.assign(DESC, f"{self.fullname}.{PARTNER_CUM}")
+                self.partner_cum_text.generate_desc(self)
             else:
                 self.assign(DESC, f"{PARTNER_CUM}_{prefix}")
 
@@ -621,15 +629,6 @@ class Sex(Event):
             self.assign(CUSTOM_TOOLTIP, DOM_ATTEMPT_TOOLTIP)
             # breakdown of all that contributes to the percentage
             self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_BREAKDOWN_TOOLTIP)
-            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_SUBDOM_NATURE_TOOLTIP)
-            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_SUBDOM_TOOLTIP)
-            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_PROWESS_TOOLTIP)
-            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_LUST_BEAUTY_TOOLTIP)
-            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_TITLE_AUTHORITY_TOOLTIP)
-            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_STUBBORNESS_TOOLTIP)
-            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_STAMINA_TOOLTIP)
-            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_ORGASM_TOOLTIP)
-            # self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_SEX_SKILL_TOOLTIP)
 
             if option.dom_success_adjustment != 0:
                 self.save_scope_value_as(DOM_SUCCESS_ADJUSTMENT, option.dom_success_adjustment)
