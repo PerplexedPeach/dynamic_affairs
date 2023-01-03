@@ -174,4 +174,9 @@ Check out [https://ck3.paradoxwikis.com/Localization](https://ck3.paradoxwikis.c
 fancy formatting of text. We have custom `#sub <text>#!` and `#dom <text>#!` formatting which will make
 the text pink and purple, respectively.
 
-Current event graph: ![vis](vis.png)
+Current sex events graph: 
+F/M events
+![vis FM](vis_fm.png)
+
+M/F events
+![vis MF](vis_mf.png)
