@@ -29,23 +29,47 @@ class EventMap:
 
 
 def link_events_and_options(events: EventMap):
+    option_type_to_number = {
+        (EventsSex, EventsSex): 0,
+        (EventsSex, EventsCum): 1,
+        (EventsFirst, EventsSex): 2,
+    }
     options = {}
-    option_id = 1
+    terminating_options = 0
     # clear some lists to enable recalling this
     for e in events.all():
         e.incoming_options = []
         e.adjacent_options = []
     for e in events.all():
+        # counter of number of transitions from this event to that event
+        from_this_to_that = {}
         for o in e.options:
-            o.id = option_id
-            option_id += 1
             o.from_id = e.id
+
+            if o.next_id is None:
+                terminating_options += 1
+                o.id = terminating_options
+            else:
+                this_to_that_id = o.next_id.value * 100 + e.id.value * option_from_to_offset
+                number_of_transitions_to_that_event = 0
+                if o.next_id in from_this_to_that:
+                    number_of_transitions_to_that_event = from_this_to_that[o.next_id]
+                else:
+                    from_this_to_that[o.next_id] = 0
+                from_this_to_that[o.next_id] += 1
+
+                from_event_type = option_type_to_number[(type(o.from_id), type(o.next_id))]
+
+                o.id = this_to_that_id + from_event_type * 10 + number_of_transitions_to_that_event
+
             # option generate fullname
             o.fullname = f"{OPTION_NAMESPACE}.{o.id}"
             if o.next_id is not None:
                 o.next_event = events[o.next_id]
                 o.from_event = e
                 o.next_event.incoming_options.append(o)
+            if o.id in options:
+                raise RuntimeError(f"Duplicate option ID: {o.id}")
             options[o.id] = o
     for e in events.all():
         for o in e.incoming_options:

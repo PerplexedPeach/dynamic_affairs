@@ -251,12 +251,17 @@ questions
 
 
 TODO
+- FIX repeating options not showing up
+- FIX after block not getting executed (orgasm isn't getting cleared up nor is prev_event getting set)
 - connect Carnalitas fetish system
 - royal court event
 - more hooks into sex scenes
 	- after duel win/loss
 	- during feast drinking
 	- player actively sneaking into rooms
+- save all desc in events in a list to facilitate looping to create localization and effects?
+	- need effect for randomized desc?
+- use different mechanism for naming options to reduce diff size
 
 - scene with someone peddling piercings that increase sensitivity
 	- dom not receiving satisfying orgasms from slave
@@ -283,3 +288,25 @@ Breast Traits
 A Bosom (its the average one)/Titanic Tits/Monsterous Tits
 Dick Traits
 A Dick/Monster Cock/Impractical Dick
+
+
+Blender to CK3 Notes
+===========
+- textures from Substance Painter
+	- export preset https://drive.google.com/file/d/1k9Yi7Ry136iyTsloRyTupg2UgHPlA7Wi/view
+	- CK3_portrait_attachment
+- portrait_attachment shader expectations for _properties
+	- metalness on blue layer
+	- green and red are black
+	- 1k 8 bit targa 
+		- recommended export in full resolution then compress with PS
+	- dds settings
+		- DXT3 explicit alpha ARGB 8 for non-diffuse
+		- DXT1 RGB no alpha
+- modelling in blender with pdx plugin
+	- Import > load mesh
+	- base head: game/gfx/models/portraits/female_head/female_head.mesh
+		- loads the mesh as well as a io_pdx_rig armature
+	- example head gear: game/gfx/models/portraits/attachments/...headgears/secular/.../....mesh
+	- use example as reference to place own model
+	- bn_h_skull bone for rigid weighting (animations will not distort model)

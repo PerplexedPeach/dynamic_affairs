@@ -3,7 +3,8 @@ import typing
 
 UTF8_BOM = u'\ufeff'
 debug = True
-dom_fail_offset = 10000
+# indirectly also max number of options we can have * 100
+option_from_to_offset = 1000000
 base_event_weight = 5
 max_options_per_type = 2
 

@@ -233,6 +233,7 @@ class Event(BlockRoot):
         pass
 
     def generate_after(self):
+        self.save_scope_value_as(PREV_EVENT, self.id.value)
         self.assign(RESET_STAMINA_AFTER_CUM_EFFECT, YES)
 
     def generate_hidden_opinion_change_effect(self, change):
@@ -346,7 +347,7 @@ class Event(BlockRoot):
                 with Block(self, TRIGGERED_DESC):
                     with Block(self, TRIGGER):
                         self.assign(EXISTS, f"{SCOPE}:{SEX_TRANSITION}")
-                        self.assign(f"{SCOPE}:{SEX_TRANSITION}", option.id + dom_fail_offset)
+                        self.assign(f"{SCOPE}:{SEX_TRANSITION}", -option.id)
                     self.add_debug_comment(f"{option} failed")
                     self.add_debug_comment(option.failed_transition_text.desc)
                     option.failed_transition_text.generate_desc(self, option)
@@ -359,10 +360,9 @@ class Event(BlockRoot):
             with Block(self, TRIGGERED_DESC):
                 with Block(self, TRIGGER):
                     self.assign(EXISTS, f"{SCOPE}:{SEX_TRANSITION}")
-                    self.add_line(f"{SCOPE}:{SEX_TRANSITION} > {dom_fail_offset}")
+                    self.add_line(f"{SCOPE}:{SEX_TRANSITION} < 0")
                     self.assign(EXISTS, f"{SCOPE}:{PREV_EVENT}")
                     self.assign(f"{SCOPE}:{PREV_EVENT}", option.from_id.value)
-                # TODO consider replacing the whole sex_transition system with just PREV_EVENT
                 self.add_debug_comment(f"defaulted to {option}")
                 option.transition_text.generate_desc(self, option)
 
@@ -409,7 +409,7 @@ class Option:
                 failed_transition_text = Desc(failed_transition_text)
                 failed_transition_text.desc += "\\n"
             self.failed_transition_text: Desc = failed_transition_text
-            self.failed_transition_text.subid = dom_fail_offset
+            self.failed_transition_text.subid = 666
 
         self.tooltip = tooltip
 
@@ -524,7 +524,6 @@ class First(Event):
                             self.assign(f"{SCOPE}:{FIRST_TRANSITION}_{choice}", option.id)
 
                 # save this event
-                self.save_scope_value_as(PREV_EVENT, self.id.value)
                 self.save_scope_value_as(SEX_TRANSITION, option.id)
                 self.assign(TRIGGER_EVENT, option.next_event.fullname)
         # last option is to back out
@@ -598,8 +597,6 @@ class Sex(Event):
                     for choice in range(max_options_per_type):
                         self.assign(f"{SCOPE}:{trans_type}_{choice}", option.id)
 
-        # save this event
-        self.save_scope_value_as(PREV_EVENT, self.id.value)
         # for dom options, it could backfire and get you more dommed
         if option.category == OptionCategory.DOM:
             self.generate_dom_option_effect(option, categories_to_options[OptionCategory.SUB])
@@ -672,8 +669,8 @@ class Sex(Event):
             self.assign(TRIGGER_EVENT, option.next_event.fullname)
         with Block(self, ELSE):
             self.generate_hidden_opinion_change_effect(option.subdom_dom_fail)
-            # register that we've failed to dom (use a large offset plus that ID)
-            self.save_scope_value_as(SEX_TRANSITION, option.id + dom_fail_offset)
+            # register that we've failed to dom
+            self.save_scope_value_as(SEX_TRANSITION, -option.id)
             # for each possible sub transition check if we've sampled that
             for sub_option in sub_options:
                 with Block(self, IF):
@@ -748,7 +745,9 @@ class Desc:
     def _generate_full_id(self, b: Event = None, o: Option = None):
         ids = []
         if o is not None:
-            ids.append(f"{SEX_TRANSITION}_{o.id}")
+            ids.append(SEX_TRANSITION)
+            ids.append(str(o.from_id.value))
+            ids.append(str(o.next_id.value))
         elif b is not None:
             ids.append(b.fullname)
             ids.append(DESC)

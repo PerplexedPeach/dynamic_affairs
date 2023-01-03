@@ -37,8 +37,8 @@ dc_stamina_rr: "\nYou are drowning in pleasure: #N;bold [SCOPE.GetValue('dom_cha
 dc_subdom: "\nRelationship history with [affairs_partner.GetFirstName]: #weak [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
 dc_subdom_g: "\nYou have #dom dominated#! [affairs_partner.GetFirstName] in the past: #P [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
 dc_subdom_r: "\nYou have #sub submitted#! to [affairs_partner.GetFirstName] in the past: #N [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
-dc_subdom_g: "\nYou are [affairs_partner.GetFirstName]'s #dom dom#!: #P;bold [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
-dc_subdom_r: "\nYou are [affairs_partner.GetFirstName]'s #sub sub#!: #N;bold [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+dc_subdom_gg: "\nYou are [affairs_partner.GetFirstName]'s #dom dom#!: #P;bold [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+dc_subdom_rr: "\nYou are [affairs_partner.GetFirstName]'s #sub sub#!: #N;bold [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
 # orgasm
 dc_orgasm: "\nOrgasm: #weak [SCOPE.GetValue('dom_chance_orgasm')|0]% #!"
 dc_orgasm_gg: "\nThey are in the middle of an #V Orgasm#!: #P;bold [SCOPE.GetValue('dom_chance_orgasm')|0]% #!"
