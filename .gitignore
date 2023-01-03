@@ -2,3 +2,4 @@
 *.gv
 *.png
 !vis*.png
+*.pyc
