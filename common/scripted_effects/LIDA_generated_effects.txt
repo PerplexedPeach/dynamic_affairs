@@ -257,12 +257,39 @@ select_random_sex_source_effect = {
 		}
 		100 = {
 			trigger = {
-				is_female = no
+				is_female = yes
 				scope:affairs_partner = {
-					is_female = yes
+					is_female = no
 				}
 			}
-			trigger_event = LIDAs.15
+			trigger_event = LIDAs.3
+		}
+		100 = {
+			trigger = {
+				is_female = yes
+				scope:affairs_partner = {
+					is_female = no
+				}
+			}
+			trigger_event = LIDAs.5
+		}
+		100 = {
+			trigger = {
+				is_female = yes
+				scope:affairs_partner = {
+					is_female = no
+				}
+			}
+			trigger_event = LIDAs.6
+		}
+		100 = {
+			trigger = {
+				is_female = yes
+				scope:affairs_partner = {
+					is_female = no
+				}
+			}
+			trigger_event = LIDAs.4
 		}
 		100 = {
 			trigger = {
@@ -271,7 +298,43 @@ select_random_sex_source_effect = {
 					is_female = yes
 				}
 			}
-			trigger_event = LIDAs.16
+			trigger_event = LIDAs.19
+		}
+		100 = {
+			trigger = {
+				is_female = no
+				scope:affairs_partner = {
+					is_female = yes
+				}
+			}
+			trigger_event = LIDAs.20
+		}
+		100 = {
+			trigger = {
+				is_female = no
+				scope:affairs_partner = {
+					is_female = yes
+				}
+			}
+			trigger_event = LIDAs.21
+		}
+		100 = {
+			trigger = {
+				is_female = no
+				scope:affairs_partner = {
+					is_female = yes
+				}
+			}
+			trigger_event = LIDAs.23
+		}
+		100 = {
+			trigger = {
+				is_female = no
+				scope:affairs_partner = {
+					is_female = yes
+				}
+			}
+			trigger_event = LIDAs.22
 		}
 	}
 }
