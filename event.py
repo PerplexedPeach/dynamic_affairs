@@ -661,9 +661,10 @@ class Sex(Event):
 
 
 class Desc:
-    def __init__(self, desc, subid=0):
+    def __init__(self, desc, subid=0, suffix=None):
         self.desc = clean_str(desc)
         self.subid = subid
+        self.suffix = suffix
 
     def generate_desc(self, b: Event, o: typing.Optional[Option] = None):
         if o is not None:
@@ -677,17 +678,31 @@ class Desc:
         elif isinstance(b, Option):
             return self._generate_localization_option(b)
 
+    def _generate_full_id(self, b: Event = None, o: Option = None):
+        ids = []
+        if o is not None:
+            ids.append(f"{SEX_TRANSITION}_{o.id}")
+        elif b is not None:
+            ids.append(b.fullname)
+            ids.append(DESC)
+        else:
+            raise RuntimeError("Need to be a description of either an event or option")
+        if self.suffix is not None:
+            ids.append(self.suffix)
+        ids.append(str(self.subid))
+        return ".".join(ids)
+
     def _generate_desc_event(self, b: Event):
-        b.assign(DESC, f"{b.fullname}.{DESC}.{self.subid}")
+        b.assign(DESC, self._generate_full_id(b=b))
 
     def _generate_localization_event(self, b: Event):
-        return f"{b.fullname}.{DESC}.{self.subid}: \"{self.desc}\""
+        return f"{self._generate_full_id(b=b)}: \"{self.desc}\""
 
     def _generate_desc_option(self, b: Event, o: Option):
-        b.assign(DESC, f"{SEX_TRANSITION}_{o.id}.{self.subid}")
+        b.assign(DESC, self._generate_full_id(o=o))
 
-    def _generate_localization_option(self, b: Option):
-        return f"{SEX_TRANSITION}_{b.id}.{self.subid}: \"{self.desc}\""
+    def _generate_localization_option(self, o: Option):
+        return f"{self._generate_full_id(o=o)}: \"{self.desc}\""
 
 
 class TriggeredDesc(Desc):
