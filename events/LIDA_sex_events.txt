@@ -3842,15 +3842,12 @@ LIDAs.8 = {
 			value = yes
 		}
 	}
+	# Repeat option
 	option = {
 		# 8003700: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM_I
 		name = LIDAoption.8003700
 		trigger = {
 			scope:finisher_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 8003700
-				scope:dom_transition_1 = 8003700
-			}
 		}
 		custom_tooltip = attempt_dom_tooltip
 		custom_tooltip = dom_chance_breakdown_tooltip
@@ -4593,15 +4590,12 @@ LIDAs.37 = {
 			}
 		}
 	}
+	# Repeat option
 	option = {
 		# 37003800: EventsSex.FM_BLOWJOB_DOM_I -> EventsSex.FM_BLOWJOB_DOM_II
 		name = LIDAoption.37003800
 		trigger = {
 			scope:finisher_stamina > 0
-			OR = {
-				scope:dom_transition_0 = 37003800
-				scope:dom_transition_1 = 37003800
-			}
 		}
 		custom_tooltip = attempt_dom_tooltip
 		custom_tooltip = dom_chance_breakdown_tooltip

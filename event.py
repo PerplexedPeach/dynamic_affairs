@@ -588,7 +588,8 @@ class Sex(Event):
 
         super(Sex, self).generate_immediate_effect()
 
-    def generate_single_option(self, option: Option, root_cum_terminates, categories_to_options):
+    def generate_single_option(self, option: Option, root_cum_terminates, categories_to_options,
+                               no_need_to_sample=False):
         self.add_debug_comment(str(option))
         self.assign(NAME, option.fullname)
         if option.tooltip is not None:
@@ -599,10 +600,12 @@ class Sex(Event):
                 # non-cum options are only available if finisher is not cumming
                 if not isinstance(option.next_id, EventsCum):
                     self.add_line(f"{SCOPE}:{FINISHER_STAMINA} > 0")
-                trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
-                with Block(self, OR):
-                    for choice in range(max_options_per_type):
-                        self.assign(f"{SCOPE}:{trans_type}_{choice}", option.id)
+
+                if not no_need_to_sample:
+                    trans_type = DOM_TRANSITION if option.category == OptionCategory.DOM else SUB_TRANSITION
+                    with Block(self, OR):
+                        for choice in range(max_options_per_type):
+                            self.assign(f"{SCOPE}:{trans_type}_{choice}", option.id)
 
         # for dom options, it could backfire and get you more dommed
         if option.category == OptionCategory.DOM:
@@ -636,8 +639,10 @@ class Sex(Event):
         root_cum_terminates = self.root_stamina_decides_finish()
         # always an option to repeat itself
         if repeat_option is not None:
+            self.add_comment("Repeat option")
             with Block(self, OPTION):
-                self.generate_single_option(repeat_option, root_cum_terminates, categories_to_options)
+                self.generate_single_option(repeat_option, root_cum_terminates, categories_to_options,
+                                            no_need_to_sample=True)
                 self.assign(ADD_INTERNAL_FLAG, SPECIAL)
         for option in options:
             with Block(self, OPTION):
@@ -684,7 +689,6 @@ class Sex(Event):
                     with Block(self, LIMIT):
                         self.assign(f"{SCOPE}:{SUB_TRANSITION}_0", sub_option.id)
                     self.save_scope_value_as(NEXT_EVENT, f"event_id:{sub_option.next_event.fullname}")
-
 
 
 class RepeatedSex(Sex):
