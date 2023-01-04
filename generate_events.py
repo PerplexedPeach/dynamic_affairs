@@ -1114,7 +1114,7 @@ def define_sex_events_fm(es: EventMap):
                    """, TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
                    He is a tool, his "manhood" nothing more than a meat toy whose #dom only#! purpose is to satisfy your needs. He is a #bold good#! tool.
                    """), TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
-                   Despite how good this feels you can't help but wish #sub he#! was on top of you instead.  
+                   Despite how good this feels you can't help but wish #sub he#! pleasured you instead.  
                    """),
                                  ),
                options=(
