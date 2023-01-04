@@ -257,8 +257,6 @@ TODO
 	- after duel win/loss
 	- during feast drinking
 	- player actively sneaking into rooms
-- save all desc in events in a list to facilitate looping to create localization and effects?
-	- need effect for randomized desc?
 
 - scene with someone peddling piercings that increase sensitivity
 	- dom not receiving satisfying orgasms from slave
