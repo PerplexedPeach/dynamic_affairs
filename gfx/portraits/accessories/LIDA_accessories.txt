@@ -1,0 +1,7 @@
+﻿female_accessories_lida_dl_collar = {
+	entity = { 
+		required_tags = "" 
+		shared_pose_entity = head 
+		entity = female_accessories_lida_dl_collar_entity
+	}
+}
