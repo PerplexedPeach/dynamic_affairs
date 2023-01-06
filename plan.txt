@@ -168,6 +168,8 @@ effect = {
 		min = 1
 	}
 - give stress loss only at the cumming event
+- console command for testing modifiers
+	- effect = { add_character_modifier = {modifier = wearing_sub_collar} }
 
 questions
 - what does limit = {...} do?
@@ -257,6 +259,8 @@ TODO
 	- after duel win/loss
 	- during feast drinking
 	- player actively sneaking into rooms
+- create gene for new headgear (and new necklace for CFP)
+- link gene to new character modifier
 
 - scene with someone peddling piercings that increase sensitivity
 	- dom not receiving satisfying orgasms from slave
@@ -381,6 +385,20 @@ pdxmesh = {
         shader = "portrait_attachment"
         shader_file = "gfx/FX/jomini/portrait.shader"    
     }
+- genes
+	- headgear is one gene
+	- legwear is one gene
+	- special_accessories_necklace (CFP), special_accessories_earrings (CFP), special_accessories_hands (CFP), special_headgear_... (CFP)
+- genes subgroup
+	- not sure how they're defined per gene yet
+- templates defined in gfx/portraits/portrait_modifiers/ ?
+	- check out 50_headgear_scripted_characters
+- need to define accessory template like fp2_scripted_headgear_01?
+	- seems like it's just a block in the necessary file
+- need to also create collar gene?
+	- see special_accessories_necklace from CFP
+- first try to create a new template group without touching new genes
+- then create portrait modifier assigning the collar as the headgear 
 
 accessories:
 	- female_accessories_lida_dl_collar
