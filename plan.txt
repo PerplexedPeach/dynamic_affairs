@@ -402,3 +402,4 @@ pdxmesh = {
 
 accessories:
 	- female_accessories_lida_dl_collar
+	- female_accessories_lida_sl_collar

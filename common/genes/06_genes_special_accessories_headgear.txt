@@ -1626,7 +1626,8 @@ accessory_genes = {
 				1 = empty
 			}
 			female = {
-				1 = female_accessories_lida_dl_collar
+				# 1 = female_accessories_lida_dl_collar
+				1 = female_accessories_lida_sl_collar
 			}
 			boy = male
 			girl = female

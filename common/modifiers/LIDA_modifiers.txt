@@ -16,11 +16,13 @@ wearing_cummy_clothes = {
 
 wearing_sub_collar = {
 	icon = prison_negative
-	monthly_prestige = 1
+	monthly_prestige = -1
 	dread_decay_mult = 0.3
+	dread_baseline_add = -20
 	attraction_opinion = 15
 	stress_loss_mult = 0.1
 	direct_vassal_opinion = -5
 	intrigue = 2
 	prowess = -2
+	ai_boldness = -25
 }
