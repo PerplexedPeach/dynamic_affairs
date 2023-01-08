@@ -596,7 +596,7 @@
 		}
 	}
 
-	# LIDA added
+## LIDA added
 	add_accessory_modifiers = {
 		gene = headgear
 

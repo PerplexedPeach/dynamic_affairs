@@ -399,7 +399,18 @@ pdxmesh = {
 	- see special_accessories_necklace from CFP
 - first try to create a new template group without touching new genes
 - then create portrait modifier assigning the collar as the headgear 
-
-accessories:
+- clothing blendshapes
+	- breast_size_max
+	- breast_size_min
+	- dwarf
+	- fat
+	- gaunt
+	- infant
+	- muscular
+	- old
+	- pregnant
+collars:
 	- female_accessories_lida_dl_collar
 	- female_accessories_lida_sl_collar
+harness:
+	- female_accessories_lida_l_harness_1
