@@ -1457,7 +1457,6 @@ def define_sex_events_mf(es: EventMap):
                                You're too turned to just suck him off! You turn around and bend over, making him an offer he #S can't#! refuse."""),
                               TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
                                "Your mouth just isn't enough!" he says as he turns you around and bends you over."""),
-                              "."
                           ),
                           ),
                    # TODO make these options more likely if you are addicted to cum

@@ -31,11 +31,29 @@ any_affair_candidate_trigger = {
 	}
 }
 
+any_affair_candidate_including_prisoner_trigger = {
+	OR = {
+		any_affair_candidate_trigger = {
+			TRIGGER = $TRIGGER$
+		}
+		any_prisoner = {
+			$TRIGGER$ = yes
+		}
+	}
+}
+
 you_dom_them = {
 	has_opinion_modifier = {
 		target = root
 		modifier = dominant_opinion
 		value >= 10
+	}
+}
+they_dom_you_strongly = {
+	has_opinion_modifier = {
+		modifier = dominant_opinion
+		target = root
+		value <= -20
 	}
 }
 
