@@ -18,7 +18,8 @@ lida_yearly_random_player_pulse = {
 		100 = LIDA.100 # an affairs partner propositions money to you
 		200 = LIDA.110 # your outward submissive tendencies encourages a partner to sneak into your room
 		100 = LIDA.120 # someone you dom decides to cum in your shoes
-		100 = LIDA.130 # your dom offers you a collar
+		400 = LIDA.130 # your dom offers you a collar
+		400 = LIDA.140 # your dom offers you a harness
 		10 = 0
 	} 
 }
