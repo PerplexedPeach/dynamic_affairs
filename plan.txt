@@ -168,6 +168,8 @@ effect = {
 		min = 1
 	}
 - give stress loss only at the cumming event
+- console command for testing modifiers
+	- effect = { add_character_modifier = {modifier = wearing_sub_collar} }
 
 questions
 - what does limit = {...} do?
@@ -257,6 +259,8 @@ TODO
 	- after duel win/loss
 	- during feast drinking
 	- player actively sneaking into rooms
+- create gene for new headgear (and new necklace for CFP)
+- link gene to new character modifier
 
 - scene with someone peddling piercings that increase sensitivity
 	- dom not receiving satisfying orgasms from slave
@@ -287,6 +291,7 @@ A Dick/Monster Cock/Impractical Dick
 
 Blender to CK3 Notes
 ===========
+- place in gfx/models/portraits/attachments/...specific category
 - textures from Substance Painter
 	- export preset https://drive.google.com/file/d/1k9Yi7Ry136iyTsloRyTupg2UgHPlA7Wi/view
 	- CK3_portrait_attachment
@@ -296,8 +301,8 @@ Blender to CK3 Notes
 	- 1k 8 bit targa 
 		- recommended export in full resolution then compress with PS
 	- dds settings
-		- DXT3 explicit alpha ARGB 8 for non-diffuse
-		- DXT1 RGB no alpha
+		- BC3 linear for properties and normal
+		- BC1 linear for diffuse if no alpha
 - modelling in blender with pdx plugin
 	- Import > load mesh
 	- base head: game/gfx/models/portraits/female_head/female_head.mesh
@@ -305,3 +310,107 @@ Blender to CK3 Notes
 	- example head gear: game/gfx/models/portraits/attachments/...headgears/secular/.../....mesh
 	- use example as reference to place own model
 	- bn_h_skull bone for rigid weighting (animations will not distort model)
+- mesh and texture **file name** need to be unique
+	- will not be differentiated via path
+	- can be used so that you don't need separate models for female, as they can refer to the same files as if they were local
+- "name" of the model such as male_headgear_secular_latin_cfp_icol_01
+	- pdxmesh would be <name>_mesh
+	- generated mesh file would be <name>.mesh
+	- entity would be <name>_entity
+- .asset file is text/paradox script and lets the game know about the 3D model
+	- pdxmesh = {...} describes the model
+		- meshsettings = {name = "<name>Shape"} (can be something else, but convention)
+	- entity = {...} links to the pdxmesh
+	- put in same directory as the texture assets and the .mesh file
+	- paths specified can be relative to current directory, also from gfx/...
+- have to name the object in Blender as <name>
+- have to name the shape in Blender as <name>Shape
+	- upside down green triangle
+- have to name the material in Blender as PDXmat_<name>Shape
+- reference the asset in gfx/portraits/accessories (or some other category) in an arbitrarily named file
+	- create a call for the entity
+	- set required_tags (tags that need to exist for this to be valid)
+	- the call for consistency should have the same name as the .mesh name (without the .mesh extension)
+		- not required but conventional
+		- just has to correctly reference the asset
+	- the entity should be that name _entity for consistency
+- change genes in common/genes/...
+	- file has to have the same as the vanilla filename
+	- unfortunately this leads to incompatibility between mods since they have to edit the same files
+- add localization with PORTRAIT_MODIFIER_<category>_<name>
+- Save mesh with most options ticked
+	- in particular Selected Only with the object selected
+	- merge vertices unticked if using blendshapes
+- have to triangulate mesh before exporting
+
+- can have multiple objects/shapes per file e.g.
+-  single exported dragon2.mesh file with objects that have shapes named dragon_body, dragon_eye_inside, dragon_eye_outside, and dragon_spikes
+pdxmesh = {
+    name = "dragon_mesh"
+    file = "dragon2.mesh"
+    scale = 6
+    meshsettings = {
+        name = "dragon_body"
+        index = 0
+        texture_diffuse = "dragon_body_diffuse.dds"
+        texture_normal = "dragon_body_normal.dds"
+        texture_specular = "dragon_body_properties.dds"
+        shader = "portrait_attachment"
+        shader_file = "gfx/FX/jomini/portrait.shader"    
+    }
+    meshsettings = {
+        name = "dragon_eye_inside"
+        index = 0
+        texture_diffuse = "dragon_eye_inside_diffuse.dds"
+        texture_normal = "dragon_eye_inside_normal.dds"
+        texture_specular = "dragon_eye_inside_properties.dds"
+        shader = "portrait_attachment"
+        shader_file = "gfx/FX/jomini/portrait.shader"    
+    }
+    meshsettings = {
+        name = "dragon_eye_outside"
+        index = 0
+        texture_diffuse = "dragon_eye_outside_diffuse.dds"
+        texture_normal = "dragon_eye_outside_normal.dds"
+        texture_specular = "dragon_eye_outside_properties.dds"
+        shader = "portrait_attachment_alpha_to_coverage"
+        shader_file = "gfx/FX/jomini/portrait.shader"    
+    }
+    meshsettings = {
+        name = "dragon_spikes"
+        index = 0
+        texture_diffuse = "dragon_horns_diffuse.dds"
+        texture_normal = "dragon_horns_normal.dds"
+        texture_specular = "dragon_horns_properties.dds"
+        shader = "portrait_attachment"
+        shader_file = "gfx/FX/jomini/portrait.shader"    
+    }
+- genes
+	- headgear is one gene
+	- legwear is one gene
+	- special_accessories_necklace (CFP), special_accessories_earrings (CFP), special_accessories_hands (CFP), special_headgear_... (CFP)
+- genes subgroup
+	- not sure how they're defined per gene yet
+- templates defined in gfx/portraits/portrait_modifiers/ ?
+	- check out 50_headgear_scripted_characters
+- need to define accessory template like fp2_scripted_headgear_01?
+	- seems like it's just a block in the necessary file
+- need to also create collar gene?
+	- see special_accessories_necklace from CFP
+- first try to create a new template group without touching new genes
+- then create portrait modifier assigning the collar as the headgear 
+- clothing blendshapes
+	- breast_size_max
+	- breast_size_min
+	- dwarf
+	- fat
+	- gaunt
+	- infant
+	- muscular
+	- old
+	- pregnant
+collars:
+	- female_accessories_lida_dl_collar
+	- female_accessories_lida_sl_collar
+harness:
+	- female_accessories_lida_l_harness_1

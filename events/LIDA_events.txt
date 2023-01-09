@@ -546,7 +546,7 @@ LIDA.110 = {
 		trait = lida_sub_2
 		trait = lida_sub_3
 		# starts right into it (get fingered from behind)
-		trigger_event = LIDAs.9
+		trigger_event = LIDAs.13
 	}
 	option = {
 		# rejection not guaranteed! It's a dom action so you can fail
@@ -577,7 +577,7 @@ LIDA.110 = {
 				CHANGE = -2
 			}
 			# you fail and we go to the next event anyway
-			trigger_event = LIDAs.9
+			trigger_event = LIDAs.13
 		}
 	}
 }
@@ -704,5 +704,365 @@ LIDA.120 = {
 		change_subdom_effect = {
 			CHANGE = 1
 		}
+	}
+}
+
+# offered sub collar
+LIDA.130 = {
+	type = character_event
+	title = LIDA.130.t
+	desc = {
+		desc = LIDA.130.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_trait = lida_sub_1
+				}
+				desc = LIDA.130.sub_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = lida_sub_2
+				}
+				desc = LIDA.130.sub_2
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = lida_sub_3
+				}
+				desc = LIDA.130.sub_3
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = lida_dom
+				}
+				desc = LIDA.130.dom
+			}
+		}
+	}
+	trigger = {
+		any_affair_candidate_including_prisoner_trigger = { TRIGGER = they_dom_you_strongly }
+		NOT = { 
+			has_character_modifier = wearing_sub_collar 
+		}
+	}
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = schadenfreude
+	}
+	# select affairs partner
+	immediate = {
+
+		get_characters_eligible_partner_effect = {
+			LISTNAME = affairs_pool
+			RESTRICTED_LISTNAME = rejected_affairs_pool
+		}
+		# find someone who doms you strongly
+		random_in_list = {
+			list = affairs_pool
+			limit = {
+				they_dom_you_strongly = yes
+			}
+			save_temporary_scope_as = affairs_candidate
+			weight = {
+				base = 50
+
+				# more likely if they are bold
+				modifier = {
+					add = {
+						value = ai_boldness
+						divide = dominant_positive_ai_value
+						multiply = 50
+					}
+				}
+			}
+			save_scope_as = affairs_partner
+		}
+
+		if = {
+			limit = {
+				scope:affairs_partner = {
+					is_imprisoned = yes
+				}
+			}
+			save_scope_value_as = {
+				name = locale
+				value = flag:dungeon
+			}
+		}
+		else = {
+			save_scope_value_as = {
+				name = locale
+				value = flag:bedchamber
+			}
+		}
+	}
+	option = {
+		# accept the collar 
+		name = LIDA.130.a
+		add_character_modifier = {
+			modifier = wearing_sub_collar
+		}
+		add_internal_flag = dangerous
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = grateful_opinion
+			opinion = 15
+		}
+		custom_tooltip = voluntary_sub_tooltip
+		trigger_event = LIDA.131
+	}
+	option = {
+		# reject at some stress
+		name = LIDA.130.b
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = annoyed_opinion
+			opinion = -15
+		}
+		stress_impact = {   
+			lida_sub_1 = medium_stress_impact_gain
+			lida_sub_2 = major_stress_impact_gain
+			lida_sub_3 = massive_stress_impact_gain
+		}
+	}
+}
+
+LIDA.131 = {
+	# accept the collar
+	type = character_event
+	title = LIDA.131.t
+	desc = {
+		desc = LIDA.131.desc
+	}
+	# probably can use a custom theme
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = throne_room_bow_2
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = happiness
+	}
+	# select affairs partner
+	immediate = {
+		store_subdom_value_effect = yes
+		lida_start_sex_effect = {TRIGGER_RANDOM_EVENT = no}
+	}
+	# create acceptance option for prostitutes (different ones for each tier, with just the flavor being different)
+	option = {
+		name = LIDA.131.a
+		# starts right into it (sub blowjob)
+		trigger_event = LIDAs.10
+	}
+}
+
+# offered sub collar
+LIDA.140 = {
+	type = character_event
+	title = LIDA.140.t
+	desc = {
+		desc = LIDA.140.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_trait = lida_sub_1
+				}
+				desc = LIDA.140.sub_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = lida_sub_2
+				}
+				desc = LIDA.140.sub_2
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = lida_sub_3
+				}
+				desc = LIDA.140.sub_3
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = lida_dom
+				}
+				desc = LIDA.140.dom
+			}
+		}
+	}
+	trigger = {
+		any_affair_candidate_including_prisoner_trigger = { TRIGGER = they_dom_you_strongly }
+		has_character_modifier = wearing_sub_collar 
+		NOT = { 
+			has_character_modifier = wearing_sub_harness 
+		}
+	}
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = schadenfreude
+	}
+	# select affairs partner
+	immediate = {
+
+		get_characters_eligible_partner_effect = {
+			LISTNAME = affairs_pool
+			RESTRICTED_LISTNAME = rejected_affairs_pool
+		}
+		# find someone who doms you strongly
+		random_in_list = {
+			list = affairs_pool
+			limit = {
+				they_dom_you_strongly = yes
+			}
+			weight = {
+				base = 50
+
+				# more likely if they are bold
+				modifier = {
+					add = {
+						value = ai_boldness
+						divide = dominant_positive_ai_value
+						multiply = 50
+					}
+				}
+			}
+			save_scope_as = affairs_partner
+		}
+
+		if = {
+			limit = {
+				scope:affairs_partner = {
+					is_imprisoned = yes
+				}
+			}
+			save_scope_value_as = {
+				name = locale
+				value = flag:dungeon
+			}
+		}
+		else = {
+			save_scope_value_as = {
+				name = locale
+				value = flag:bedchamber
+			}
+		}
+	}
+	option = {
+		# accept the harness 
+		name = LIDA.140.a
+		add_character_modifier = {
+			modifier = wearing_sub_harness
+		}
+		add_internal_flag = dangerous
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = grateful_opinion
+			opinion = 15
+		}
+		trigger_event = LIDA.141
+
+	}
+	option = {
+		# reject at some stress
+		name = LIDA.140.b
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = annoyed_opinion
+			opinion = -15
+		}
+		stress_impact = {   
+			lida_sub_1 = medium_stress_impact_gain
+			lida_sub_2 = major_stress_impact_gain
+			lida_sub_3 = massive_stress_impact_gain
+		}
+	}
+}
+
+LIDA.141 = {
+	# accept the collar
+	type = character_event
+	title = LIDA.141.t
+	desc = {
+		desc = LIDA.141.desc
+	}
+	# probably can use a custom theme
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		event_background = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		event_background = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = throne_room_bow_2
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = happiness
+	}
+	# select affairs partner
+	immediate = {
+		store_subdom_value_effect = yes
+		lida_start_sex_effect = {TRIGGER_RANDOM_EVENT = no}
+	}
+	# create acceptance option for prostitutes (different ones for each tier, with just the flavor being different)
+	option = {
+		name = LIDA.141.a
+		# starts right into it (prone bone)
+		trigger_event = LIDAs.9
 	}
 }

@@ -23094,7 +23094,6 @@ LIDAs.26 = {
 							desc = sex_transition.25.26.1
 						}
 					}
-					desc = sex_transition.25.26.2
 				}
 			}
 			triggered_desc = {
@@ -23357,7 +23356,6 @@ LIDAs.26 = {
 						desc = sex_transition.25.26.1
 					}
 				}
-				desc = sex_transition.25.26.2
 			}
 		}
 		triggered_desc = {
