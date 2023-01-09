@@ -26,3 +26,17 @@ wearing_sub_collar = {
 	prowess = -2
 	ai_boldness = -25
 }
+
+wearing_sub_harness = {
+	icon = prison_negative
+	monthly_prestige = -1.5
+	dread_decay_mult = 0.3
+	dread_baseline_add = -20
+	stress_loss_mult = 0.15
+	direct_vassal_opinion = -10
+	attraction_opinion = 5
+	diplomacy = 2
+	intrigue = 2
+	prowess = -2
+	ai_boldness = -25
+}
