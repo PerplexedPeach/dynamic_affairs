@@ -59,4 +59,17 @@ they_dom_you_strongly = {
 
 has_money_to_start_affair = {
 	gold >= root.standard_activity_cost
+	can_start_affair = yes
+}
+
+# other conditions necessary for starting an affair
+can_start_affair = {
+	is_attracted_to_gender_of = root
+	NOR = {
+		has_trait = celibate
+		has_sexuality = asexual
+	}
+	# prisoners don't have the freedom to proposition you
+	is_imprisoned = no
+	age >= 18
 }

@@ -200,6 +200,7 @@ LIDA.100 = {
 		# triggered description with triggered_desc
 	}
 	trigger = {
+		attraction >= 20
 		any_affair_candidate_trigger = { TRIGGER = has_money_to_start_affair }
 	}
 	# probably can use a custom theme
@@ -290,13 +291,7 @@ LIDA.100 = {
 				NOT = {
 					is_in_list = rejected_affairs_pool
 				}
-				NOR = {
-					has_trait = celibate
-					has_sexuality = asexual
-				}
-				# prisoners don't have the freedom to proposition you
-				is_imprisoned = no
-				age >= 18
+				can_start_affair = yes
 				gold > scope:gold_cost_half
 			}
 			save_temporary_scope_as = affairs_candidate
@@ -497,6 +492,7 @@ LIDA.110 = {
 				# prisoners don't have the freedom to proposition you
 				is_imprisoned = no
 				age >= 18
+				is_attracted_to_gender_of = root
 			}
 			save_temporary_scope_as = affairs_candidate
 			weight = {
