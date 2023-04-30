@@ -41,10 +41,12 @@ def create_combined_compatible_file(relative_path, num_trailing_braces, game_dir
     if game_directory is not None:
         # strip off last directory of game_directory
         output_path = os.path.join(os.path.basename(os.path.normpath(game_directory)), relative_path)
+        output_path = os.path.normpath(output_path)
     # look for the game file under the game directory
     if game_directory is None:
         game_directory = settings[gamedir]
     game_file = os.path.join(game_directory, relative_path)
+    game_file = os.path.normpath(game_file).strip()
     with open(game_file, 'r', encoding='utf-8') as f:
         game_content = f.read().strip(UTF8_BOM)
 
@@ -57,6 +59,7 @@ def create_combined_compatible_file(relative_path, num_trailing_braces, game_dir
     game_content = game_content[:last_brace_index] + src_content + game_content[last_brace_index:]
     # write the combined content to a copy of the game file at relative_path
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    print("Writing combined file to " + output_path)
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(UTF8_BOM)
         f.write(game_content)
@@ -64,8 +67,8 @@ def create_combined_compatible_file(relative_path, num_trailing_braces, game_dir
 
 
 game_dir = input(
-    "Enter the path to the game directory to make compatible files for, or leave blank to use the game directory."
-    "This can be used to specify a mod, e.g. C:/Program Files (x86)/Steam/steamapps/workshop/content/1158310/2220098919")
+    "Enter the path to the game directory to make compatible files for, or leave blank to use the game directory.\n"
+    "This can be used to specify a mod, e.g. C:/Program Files (x86)/Steam/steamapps/workshop/content/1158310/2220098919\n")
 if game_dir.strip() == "":
     game_dir = None
 
