@@ -35,6 +35,17 @@ want to code a little bit (just in python, no need to touch paradox script), the
 12. submit pull request on the github page for your fork
 13. I'll review the fork then merge or give feedback
 
+## Compatibility Guide
+For files that require overriding, create only the diff that you want added to the game files under `src`.
+You can then generate the merged copy of those files with 
+```bash
+python create_compatible_files.py
+```
+Which will prompt you for a path to the `game` directory. Leaving it default will use the configured
+base game directory. To make compatibility patches for other mods such as CFP, enter for example 
+` C:/Program Files (x86)/Steam/steamapps/workshop/content/1158310/2220098919`
+This will generate the merged files under `2220098919` which then you can copy to a compatibility patch mod.
+
 ## Event Modding Guide
 You can contribute by adding events of various types:
 1. sex events (see below) that are part of dynamic sex scenes

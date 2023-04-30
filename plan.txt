@@ -303,6 +303,7 @@ Blender to CK3 Notes
 	- dds settings
 		- BC3 linear for properties and normal
 		- BC1 linear for diffuse if no alpha
+		- argb8888 with mipmaps for modifiers
 - modelling in blender with pdx plugin
 	- Import > load mesh
 	- base head: game/gfx/models/portraits/female_head/female_head.mesh
