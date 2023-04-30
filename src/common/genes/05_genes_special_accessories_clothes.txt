@@ -1,0 +1,12 @@
+﻿			## LIDA added
+			sub_harness = {
+				index = 82
+				male = {
+					1 = empty
+				}
+				female = {
+					1 = female_accessories_lida_l_harness_1
+				}
+				boy = male
+				girl = female
+			}

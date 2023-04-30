@@ -2,51 +2,19 @@
 	usage = customization
 	interface_position = 0
 
-	add_accessory_modifiers = {
-		gene = clothes
-		template = no_clothes
-		is_valid_custom = {
-			NOT = { cfp_allow_nudity_in_barbershop_trigger = no }
-		}
-	}
-	
 ## FP2 - The Fate of Iberia ##
 
 	add_accessory_modifiers = {
 		gene = clothes
-		template = fp2_christian_commoner_clothes
-		is_valid_custom = {
-			has_fp2_dlc_trigger = yes
-		}
-	}
-
-	add_accessory_modifiers = {
-		gene = clothes
-		template = fp2_christian_low_nobility_clothes
-		is_valid_custom = {
-			has_fp2_dlc_trigger = yes
-		}
-	}
-
-	add_accessory_modifiers = {
-		gene = clothes
-		template = fp2_christian_high_nobility_clothes
-		is_valid_custom = {
-			has_fp2_dlc_trigger = yes
-		}
-	}
-
-	add_accessory_modifiers = {
-		gene = clothes
-		template = fp2_christian_war_nobility_clothes
-		is_valid_custom = {
-			has_fp2_dlc_trigger = yes
-		}
-	}
-	
-	add_accessory_modifiers = {
-		gene = clothes
 		template = fp2_muslim_commoner_clothes
+		is_valid_custom = {
+			has_fp2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = clothes
+		template = fp2_christian_commoner_clothes
 		is_valid_custom = {
 			has_fp2_dlc_trigger = yes
 		}
@@ -62,7 +30,23 @@
 
 	add_accessory_modifiers = {
 		gene = clothes
+		template = fp2_christian_low_nobility_clothes
+		is_valid_custom = {
+			has_fp2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = clothes
 		template = fp2_muslim_high_nobility_clothes
+		is_valid_custom = {
+			has_fp2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = clothes
+		template = fp2_christian_high_nobility_clothes
 		is_valid_custom = {
 			has_fp2_dlc_trigger = yes
 		}
@@ -76,8 +60,24 @@
 		}
 	}
 
+	add_accessory_modifiers = {
+		gene = clothes
+		template = fp2_christian_war_nobility_clothes
+		is_valid_custom = {
+			has_fp2_dlc_trigger = yes
+		}
+	}
+
 ## FP1 ##
-	
+
+	add_accessory_modifiers = {
+		gene = clothes
+		template = fp1_commoner_clothes
+		is_valid_custom = {
+			has_fp1_dlc_trigger = yes
+		}
+	}
+
 	add_accessory_modifiers = {
 		gene = clothes
 		template = fp1_commoner_clothes
@@ -127,11 +127,6 @@
 		# }
 		template = western_high_nobility_clothes
 	}
-	
-	add_accessory_modifiers = {
-		gene = clothes
-		template = western_high_nobility_clothes_late
-	}
 
 	add_accessory_modifiers = {
 		gene = clothes
@@ -144,11 +139,6 @@
 	add_accessory_modifiers = {
 		gene = clothes
 		template = western_war_nobility_clothes
-	}
-
-	add_accessory_modifiers = {
-		gene = clothes
-		template = western_war_late
 	}
 
 	# add_accessory_modifiers = {
@@ -164,33 +154,16 @@
 		template = western_prison
 	}
 
-	# add_accessory_modifiers = {
-	#	gene = clothes
-	#	template = western_bedchamber
-	#}
-	
-	# western_bedchamber conflicts with nudity unlock in barbershop
 	add_accessory_modifiers = {
 		gene = clothes
-		template = cfp_bedchamber
+		template = western_bedchamber
 	}
 
 	add_accessory_modifiers = {
 		gene = clothes
 		template = western_crusades
 	}
-	
-########### CFP ###########
-	add_accessory_modifiers = {
-		gene = clothes
-		template = western_crusades_black
-	}
-	add_accessory_modifiers = {
-		gene = clothes
-		template = latin_venetian_royalty_clothes
-	}
-########### /CFP ###########
-	
+
 	add_accessory_modifiers = {
 		gene = clothes
 		template = northern_commoner_clothes
@@ -210,19 +183,7 @@
 		gene = clothes
 		template = northern_war_nobility_clothes
 	}
-	
-########### CFP ###########
-	add_accessory_modifiers = {
-		gene = clothes
-		template = norse_war_nobility_clothes
-	}
 
-	add_accessory_modifiers = {
-		gene = clothes
-		template = norman_war_nobility_clothes
-	}
-########### /CFP ###########
-	
 	add_accessory_modifiers = {
 		gene = clothes
 		template = byzantine_commoner_clothes
@@ -282,12 +243,7 @@
 		gene = clothes
 		template = steppe_war_nobility_clothes
 	}
-########### CFP ###########
-	add_accessory_modifiers = {
-		gene = clothes
-		template = turkic_war_nobility_clothes
-	}
-########### /CFP ###########
+
 	add_accessory_modifiers = {
 		gene = clothes
 		template = indian_commoner_clothes
@@ -307,23 +263,6 @@
 		gene = clothes
 		template = indian_war_nobility_clothes
 	}
-
-########### CFP ###########
-	add_accessory_modifiers = {
-		gene = clothes
-		template = javanese_common
-	}
-	
-	add_accessory_modifiers = {
-		gene = clothes
-		template = javanese_nobility
-	}
-	
-	add_accessory_modifiers = {
-		gene = clothes
-		template = javanese_royalty
-	}
-########### /CFP ###########
 	
 	
 
@@ -341,18 +280,6 @@
 		gene = clothes
 		template = sub_saharan_high_nobility_clothes
 	}
-
-	add_accessory_modifiers = {
-		gene = clothes
-		template = sub_saharan_war_nobility_clothes
-	}
-	
-	## CFP
-	add_accessory_modifiers = {
-		gene = clothes
-		template = east_african_war_nobility_clothes
-	}
-	## /CFP
 
 	add_accessory_modifiers = {
 		gene = clothes
@@ -418,28 +345,6 @@
 		}
 	}
 	
-	## CFP Unlocked vanilla
-	add_accessory_modifiers = {
-		gene = clothes
-		template = mena_stealth
-		is_valid_custom = {
-			NOT = { has_game_rule = never_cfp_barbershop_unlocks }
-		}
-	}
-	add_accessory_modifiers = {
-		gene = clothes
-		template = western_stealth
-		is_valid_custom = {
-			NOT = { has_game_rule = never_cfp_barbershop_unlocks }
-		}
-	}
-	
-	## CFP
-	add_accessory_modifiers = {
-		gene = clothes
-		template = religious_orthodox_devoted_clothes
-	}
-	##
 	add_accessory_modifiers = {
 		gene = clothes
 		template = religious_orthodox_high_clothes
@@ -454,12 +359,7 @@
 		gene = clothes
 		template = religious_muslim_high_clothes
 	}
-	## CFP
-	add_accessory_modifiers = {
-		gene = clothes
-		template = religious_muslim_high_turkic_clothes
-	}
-	##	
+	
 	add_accessory_modifiers = {
 		gene = clothes
 		template = religious_muslim_head_clothes
@@ -469,22 +369,11 @@
 		gene = clothes
 		template = religious_catholic_devoted_clothes
 	}
-		
+	
 	add_accessory_modifiers = {
 		gene = clothes
 		template = religious_catholic_high_clothes
 	}
-	
-	## CFP
-	add_accessory_modifiers = {
-		gene = clothes
-		template = religious_catholic_cardinal_clothes
-	}
-	add_accessory_modifiers = {
-		gene = clothes
-		template = religious_catholic_head_early_clothes
-	}
-	##
 	
 	add_accessory_modifiers = {
 		gene = clothes
@@ -541,6 +430,14 @@
 		template = ep1_jester_clothes
 	}
 
+	add_accessory_modifiers = {
+		gene = clothes
+		template = sp2_western_royalty_clothes
+		is_valid_custom = {
+			has_dlc_feature = elegance_of_the_empire
+		}
+	}
+
 	#add_accessory_modifiers = {
 	#	gene = hairstyles
 	#	template = rtt_hairstyles
@@ -549,6 +446,7 @@
 	#		monarchs_journey_unlock = 1
 	#	}
 	#}
+
 ## LIDA added
 	add_accessory_modifiers = {
 		gene = clothes

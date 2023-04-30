@@ -1,0 +1,5 @@
+﻿## LIDA added
+	add_accessory_modifiers = {
+		gene = clothes
+		template = sub_harness
+	}

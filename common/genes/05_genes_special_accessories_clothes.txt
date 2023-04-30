@@ -1646,7 +1646,7 @@ special_genes = {
 				boy = male
 				girl = female
 				
-				}
+			}
 			
 			fp2_christian_war_nobility_clothes = {
 				index = 80
@@ -1661,11 +1661,27 @@ special_genes = {
 				boy = male
 				girl = female
 
-				}
-				
-	## LIDA added
-			sub_harness = {
+			}
+			
+			sp2_western_royalty_clothes = {
 				index = 81
+
+				male = {
+					1 = m_clothes_sec_sp2_western_imp_01
+				}
+
+				female = {
+				 	1 = f_clothes_sec_sp2_western_imp_01
+				}
+
+				boy = male
+				girl = female
+
+			}
+				
+					## LIDA added
+			sub_harness = {
+				index = 82
 				male = {
 					1 = empty
 				}
@@ -1675,6 +1691,6 @@ special_genes = {
 				boy = male
 				girl = female
 			}
-		}	
+}	
 	}
 }

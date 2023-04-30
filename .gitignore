@@ -3,3 +3,4 @@
 *.png
 !vis*.png
 *.pyc
+*.pkl
