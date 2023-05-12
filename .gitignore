@@ -4,3 +4,4 @@
 !vis*.png
 *.pyc
 *.pkl
+[0-9]*
