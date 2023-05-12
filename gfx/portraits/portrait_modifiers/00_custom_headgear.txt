@@ -1,10 +1,183 @@
 ﻿custom_headgear = {
 	usage = customization
-	interface_position = 5
+	interface_position = 4
 
 	add_accessory_modifiers = {
 		gene = headgear
 		template = no_headgear
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+
+		template = reward_western_royalty
+		is_valid_custom = {
+			has_reward_item = newsletter_crown
+		}
+	}
+
+	## Elegance of the Empire ##
+	
+	add_accessory_modifiers = {
+		gene = headgear
+		template = sp2_western_imperial
+		is_valid_custom = {
+			has_dlc_feature = elegance_of_the_empire
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = sp2_western_high_nobility
+		is_valid_custom = {
+			has_dlc_feature = elegance_of_the_empire
+		}
+	}
+	
+	### EP2 ###
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = western_wedding
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = mena_wedding
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = byzantine_wedding
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_western_era1_imperial
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_western_era1_royalty
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_western_era1_nobility
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_western_era1_common
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = western_wedding
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = mena_wedding
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = byzantine_wedding
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_western_era1_war_nobility
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_western_era2_war_nobility
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_western_era3_war_nobility
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_western_era4_war_nobility
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_mena_war_nobility
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_steppe_war_nobility
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_byzantine_war_nobility
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = ep2_indian_war_nobility
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
 	}
 
 	### FP2 ###
@@ -88,8 +261,6 @@
 			has_fp2_dlc_trigger = yes
 		}
 	}
-	
-	### EP1 ###
 
 	### EP1 ###
 
@@ -219,7 +390,7 @@
 		gene = headgear
 		template = western_common
 	}
-	
+
 	add_accessory_modifiers = {
 		gene = headgear
 		template = western_nobility
@@ -252,6 +423,11 @@
 	add_accessory_modifiers = {
 		gene = headgear
 		template = western_war
+	}
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = crusades_western_war
 	}
 
 	add_accessory_modifiers = {
@@ -458,7 +634,7 @@
 		is_valid_custom = {
 			has_dlc = "Fashion of the Abbasid Court"
 		}
-	}	
+	}
 
 	add_accessory_modifiers = {
 		gene = headgear
@@ -544,7 +720,7 @@
 	#add_accessory_modifiers = {
 	#	gene = hairstyles
 	#	template = rtt_hairstyles
-	#	
+	#
 	#	is_valid_custom = {
 	#		monarchs_journey_unlock = 1
 	#	}
@@ -558,7 +734,7 @@
 	add_accessory_modifiers = {
 		gene = headgear
 		template = monarchs_journey_low
-		
+
 		weight = {
 			base = 0
 		}
@@ -567,7 +743,7 @@
 	add_accessory_modifiers = {
 		gene = headgear
 		template = monarchs_journey_high
-		
+
 		weight = {
 			base = 0
 		}
@@ -576,7 +752,7 @@
 	add_accessory_modifiers = {
 		gene = headgear
 		template = ep1_jester
-		
+
 		weight = {
 			base = 0
 		}
@@ -593,22 +769,6 @@
 		template = reward_western_royalty
 		is_valid_custom = {
 			has_reward_item = newsletter_crown
-		}
-	}
-
-	add_accessory_modifiers = {
-		gene = headgear
-		template = sp2_western_imperial
-		is_valid_custom = {
-			has_dlc_feature = elegance_of_the_empire
-		}
-	}
-
-	add_accessory_modifiers = {
-		gene = headgear
-		template = sp2_western_high_nobility
-		is_valid_custom = {
-			has_dlc_feature = elegance_of_the_empire
 		}
 	}
 

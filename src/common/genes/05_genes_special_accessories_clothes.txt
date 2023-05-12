@@ -1,6 +1,6 @@
 ﻿			## LIDA added
 			sub_harness = {
-				index = 82
+				index = 97
 				male = {
 					1 = empty
 				}

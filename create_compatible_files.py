@@ -73,7 +73,7 @@ if game_dir.strip() == "":
     game_dir = None
 
 # put any other files that need to be made compatible here
-create_combined_compatible_file("gfx/portraits/portrait_modifiers/01_custom_clothes.txt", 1, game_dir)
-create_combined_compatible_file("gfx/portraits/portrait_modifiers/01_custom_headgear.txt", 1, game_dir)
+create_combined_compatible_file("gfx/portraits/portrait_modifiers/00_custom_clothes.txt", 1, game_dir)
+create_combined_compatible_file("gfx/portraits/portrait_modifiers/00_custom_headgear.txt", 1, game_dir)
 create_combined_compatible_file("common/genes/05_genes_special_accessories_clothes.txt", 3, game_dir)
 create_combined_compatible_file("common/genes/06_genes_special_accessories_headgear.txt", 2, game_dir)

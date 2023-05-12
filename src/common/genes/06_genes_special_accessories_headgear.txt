@@ -1,6 +1,6 @@
 ﻿		# LIDA added
 		sub_collar = {
-			index = 106
+			index = 120
 			male = {
 				1 = empty
 			}
