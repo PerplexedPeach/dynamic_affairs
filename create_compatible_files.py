@@ -47,6 +47,11 @@ def create_combined_compatible_file(relative_path, num_trailing_braces, game_dir
         game_directory = settings[gamedir]
     game_file = os.path.join(game_directory, relative_path)
     game_file = os.path.normpath(game_file).strip()
+    # if the game file doesn't exist, skip it
+    if not os.path.exists(game_file):
+        print("Skipping " + game_file + " because it doesn't exist.")
+        return
+
     with open(game_file, 'r', encoding='utf-8') as f:
         game_content = f.read().strip(UTF8_BOM)
 
@@ -77,3 +82,4 @@ create_combined_compatible_file("gfx/portraits/portrait_modifiers/00_custom_clot
 create_combined_compatible_file("gfx/portraits/portrait_modifiers/00_custom_headgear.txt", 1, game_dir)
 create_combined_compatible_file("common/genes/05_genes_special_accessories_clothes.txt", 3, game_dir)
 create_combined_compatible_file("common/genes/06_genes_special_accessories_headgear.txt", 2, game_dir)
+create_combined_compatible_file("gfx/portraits/portrait_modifiers/CFP_necklaces.txt", 1, game_dir)

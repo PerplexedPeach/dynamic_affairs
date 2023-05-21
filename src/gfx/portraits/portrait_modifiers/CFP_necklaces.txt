@@ -1,0 +1,21 @@
+	# LIDA added
+	sub_collar = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = special_accessories_necklace
+				template = sub_collar
+				value = 0
+			}
+		}
+		# outfit_tags = { no_clothes }
+		# ignore_outfit_tags = yes
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				exists = this
+				has_character_modifier = wearing_sub_collar
+			}	
+		}
+	}
