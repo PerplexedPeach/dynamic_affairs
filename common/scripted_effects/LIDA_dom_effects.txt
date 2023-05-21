@@ -460,21 +460,27 @@ calculate_dom_success_effect = {
 			# TODO this is a standin for actual, more specific sex skills; consider replacing later
 			if = {
 				limit = {
-					has_trait = prostitute_1
+					has_trait_xp = {
+						trait = lifestyle_prostitute
+						value >= 100
+					}
 				}
-				add = 5
+				add = 15
 			}
-			if = {
+			else_if = {
 				limit = {
-					has_trait = prostitute_2
+					has_trait_xp = {
+						trait = lifestyle_prostitute
+						value >= 50
+					}
 				}
 				add = 10
 			}
-			if = {
+			else_if = {
 				limit = {
-					has_trait = prostitute_3
+					has_trait = lifestyle_prostitute
 				}
-				add = 15
+				add = 5
 			}
 		}
 	}

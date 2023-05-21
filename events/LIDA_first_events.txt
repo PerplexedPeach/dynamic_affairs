@@ -9,115 +9,115 @@ LIDAf.1 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -445,115 +445,115 @@ LIDAf.2 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -881,115 +881,115 @@ LIDAf.3 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -1317,115 +1317,115 @@ LIDAf.4 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -1753,115 +1753,115 @@ LIDAf.5 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -2189,115 +2189,115 @@ LIDAf.6 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -2625,115 +2625,115 @@ LIDAf.7 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -3061,115 +3061,115 @@ LIDAf.8 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -3497,115 +3497,115 @@ LIDAf.9 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -3933,115 +3933,115 @@ LIDAf.10 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -4369,115 +4369,115 @@ LIDAf.11 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -4764,115 +4764,115 @@ LIDAf.12 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -5159,115 +5159,115 @@ LIDAf.13 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -5554,115 +5554,115 @@ LIDAf.14 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -5949,115 +5949,115 @@ LIDAf.15 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -6344,115 +6344,115 @@ LIDAf.16 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -6739,115 +6739,115 @@ LIDAf.17 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -7134,115 +7134,115 @@ LIDAf.18 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -7529,115 +7529,115 @@ LIDAf.19 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root
@@ -7924,115 +7924,115 @@ LIDAf.20 = {
 		trigger = {
 			scope:locale = flag:battlefield
 		}
-		event_background = battlefield
+		reference = battlefield
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_night
 		}
-		event_background = alley_night
+		reference = alley_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:alley_day
 		}
-		event_background = alley_day
+		reference = alley_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:temple
 		}
-		event_background = temple
+		reference = temple
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_night
 		}
-		event_background = corridor_night
+		reference = corridor_night
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:corridor_day
 		}
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:courtyard
 		}
-		event_background = courtyard
+		reference = courtyard
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:docks
 		}
-		event_background = docks
+		reference = docks
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:feast
 		}
-		event_background = feast
+		reference = feast
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:market
 		}
-		event_background = market
+		reference = market
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:tavern
 		}
-		event_background = tavern
+		reference = tavern
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:throne_room
 		}
-		event_background = throne_room
+		reference = throne_room
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:garden
 		}
-		event_background = garden
+		reference = garden
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:gallows
 		}
-		event_background = gallows
+		reference = gallows
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:study
 		}
-		event_background = study
+		reference = study
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:council_chamber
 		}
-		event_background = council_chamber
+		reference = council_chamber
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:sitting_room
 		}
-		event_background = sitting_room
+		reference = sitting_room
 	}
 	left_portrait = {
 		character = root

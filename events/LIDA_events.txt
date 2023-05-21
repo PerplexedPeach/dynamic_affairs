@@ -206,7 +206,7 @@ LIDA.100 = {
 	# probably can use a custom theme
 	theme = seduction
 	override_background = {
-		event_background = corridor_day
+		reference = corridor_day
 	}
 	left_portrait = {
 		character = root
@@ -229,7 +229,25 @@ LIDA.100 = {
 		# depending on traits, actual charged price could change
 		if = {
 			limit = {
-				has_trait = prostitute_1
+				has_trait_xp = {
+					trait = lifestyle_prostitute
+					value >= 100
+				}
+			}
+			save_scope_value_as = {
+				name = gold_cost
+				value = {
+					add = scope:min_gold_cost
+					multiply = 2.0
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_trait_xp = {
+					trait = lifestyle_prostitute
+					value >= 50
+				}
 			}
 			save_scope_value_as = {
 				name = gold_cost
@@ -241,25 +259,13 @@ LIDA.100 = {
 		}
 		else_if = {
 			limit = {
-				has_trait = prostitute_2
+				has_trait = lifestyle_prostitute
 			}
 			save_scope_value_as = {
 				name = gold_cost
 				value = {
 					add = scope:min_gold_cost
 					multiply = 1.5
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				has_trait = prostitute_3
-			}
-			save_scope_value_as = {
-				name = gold_cost
-				value = {
-					add = scope:min_gold_cost
-					multiply = 2.0
 				}
 			}
 		}
@@ -328,7 +334,11 @@ LIDA.100 = {
 	option = {
 		name = LIDA.100.a
 		trigger = {
-			has_trait = prostitute_1
+			has_trait = lifestyle_prostitute
+			has_trait_xp = {
+				trait = lifestyle_prostitute
+				value < 50
+			}
 		}
 		scope:affairs_partner = {
 			pay_short_term_gold = {
@@ -341,13 +351,21 @@ LIDA.100 = {
 			modifier = serviced_opinion
 			opinion = 5
 		}
-		trait = prostitute_1
+		trait = lifestyle_prostitute
 		trigger_event = LIDA.101
 	}
 	option = {
 		name = LIDA.100.b
 		trigger = {
-			has_trait = prostitute_2
+			has_trait = lifestyle_prostitute
+			has_trait_xp = {
+				trait = lifestyle_prostitute
+				value >= 50
+			}
+			has_trait_xp = {
+				trait = lifestyle_prostitute
+				value < 100
+			}
 		}
 		scope:affairs_partner = {
 			pay_short_term_gold = {
@@ -360,13 +378,16 @@ LIDA.100 = {
 			modifier = serviced_opinion
 			opinion = 10
 		}
-		trait = prostitute_2
+		trait = lifestyle_prostitute
 		trigger_event = LIDA.101
 	}
 	option = {
 		name = LIDA.100.c
 		trigger = {
-			has_trait = prostitute_3
+			has_trait_xp = {
+				trait = lifestyle_prostitute
+				value >= 100
+			}
 		}
 		scope:affairs_partner = {
 			pay_short_term_gold = {
@@ -379,7 +400,7 @@ LIDA.100 = {
 			modifier = serviced_opinion
 			opinion = 15
 		}
-		trait = prostitute_3
+		trait = lifestyle_prostitute
 		trigger_event = LIDA.101
 	}
 	option = {
@@ -417,7 +438,7 @@ LIDA.101 = {
 	}
 	theme = seduction
 	override_background = {
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	left_portrait = {
 		character = root
@@ -458,7 +479,7 @@ LIDA.110 = {
 	# probably can use a custom theme
 	theme = seduction
 	override_background = {
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	left_portrait = {
 		character = root
@@ -593,7 +614,7 @@ LIDA.120 = {
 	# probably can use a custom theme
 	theme = seduction
 	override_background = {
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	left_portrait = {
 		character = root
@@ -747,13 +768,13 @@ LIDA.130 = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	left_portrait = {
 		character = root
@@ -854,13 +875,13 @@ LIDA.131 = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	left_portrait = {
 		character = root
@@ -928,13 +949,13 @@ LIDA.140 = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	left_portrait = {
 		character = root
@@ -1034,13 +1055,13 @@ LIDA.141 = {
 		trigger = {
 			scope:locale = flag:dungeon
 		}
-		event_background = dungeon
+		reference = dungeon
 	}
 	override_background = {
 		trigger = {
 			scope:locale = flag:bedchamber
 		}
-		event_background = bedchamber
+		reference = bedchamber
 	}
 	left_portrait = {
 		character = root

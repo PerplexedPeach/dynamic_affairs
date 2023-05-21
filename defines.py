@@ -213,7 +213,7 @@ RESET_STAMINA_AFTER_CUM_EFFECT = "reset_stamina_after_cum_effect"
 ROOT_CUM = "root_cum"
 PARTNER_CUM = "partner_cum"
 OVERRIDE_BACKGROUND = "override_background"
-EVENT_BACKGROUND = "event_background"
+EVENT_BACKGROUND = "reference"
 LOCALE = "locale"
 
 BECOME_MORE_SUB_EFFECT = "become_more_sub_effect"
