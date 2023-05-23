@@ -60,8 +60,11 @@ def create_combined_compatible_file(relative_path, num_trailing_braces, game_dir
     last_brace_index = -1
     for i in range(num_trailing_braces):
         last_brace_index = game_content.rfind("}", 0, last_brace_index)
+    # go back to the first non-whitespace character
+    while game_content[last_brace_index - 1] in [" ", "\t", "\n", "\r"]:
+        last_brace_index -= 1
     # insert src_content before the last num_trailing_braces closing braces
-    game_content = game_content[:last_brace_index] + src_content + game_content[last_brace_index:]
+    game_content = game_content[:last_brace_index] + '\n' + src_content + game_content[last_brace_index:]
     # write the combined content to a copy of the game file at relative_path
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     print("Writing combined file to " + output_path)
@@ -83,3 +86,4 @@ create_combined_compatible_file("gfx/portraits/portrait_modifiers/00_custom_head
 create_combined_compatible_file("common/genes/05_genes_special_accessories_clothes.txt", 3, game_dir)
 create_combined_compatible_file("common/genes/06_genes_special_accessories_headgear.txt", 2, game_dir)
 create_combined_compatible_file("gfx/portraits/portrait_modifiers/CFP_necklaces.txt", 1, game_dir)
+create_combined_compatible_file("common/genes/CFP_genes_special_accessories_necklaces.txt", 3, game_dir)
