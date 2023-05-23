@@ -1,0 +1,6 @@
+	## LIDA added
+	add_accessory_modifiers = {
+		gene = special_accessories_necklace
+		template = sub_collar
+	}
+	

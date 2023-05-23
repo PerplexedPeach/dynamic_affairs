@@ -87,3 +87,4 @@ create_combined_compatible_file("common/genes/05_genes_special_accessories_cloth
 create_combined_compatible_file("common/genes/06_genes_special_accessories_headgear.txt", 2, game_dir)
 create_combined_compatible_file("gfx/portraits/portrait_modifiers/CFP_necklaces.txt", 1, game_dir)
 create_combined_compatible_file("common/genes/CFP_genes_special_accessories_necklaces.txt", 3, game_dir)
+create_combined_compatible_file("gfx/portraits/portrait_modifiers/CFP_custom_necklaces.txt", 1, game_dir)
