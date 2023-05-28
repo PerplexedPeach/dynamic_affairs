@@ -1,4 +1,7 @@
 ﻿lida_collar = {
+	selection_behavior = weighted_random
+	priority = 10
+
 	sub_collar = {
         dna_modifiers = {
             accessory = {
@@ -21,6 +24,7 @@
 	}
 }
 lida_body = {
+	priority = 10
 	sub_harness = {
         dna_modifiers = {
             accessory = {
@@ -35,7 +39,7 @@ lida_body = {
 		weight = {
 			base = 0
 			modifier = {
-				add = 200
+				add = 1000
 				exists = this
 				has_character_modifier = wearing_sub_harness
 			}	
@@ -43,6 +47,7 @@ lida_body = {
 	}
 }
 lida_legwear = {
+	priority = 10
 	no_legwear = {
 		dna_modifiers = {
 			accessory = {
