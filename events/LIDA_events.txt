@@ -1017,6 +1017,7 @@ LIDA.140 = {
 		add_character_modifier = {
 			modifier = wearing_sub_harness
 		}
+		designate_diarch = scope:affairs_partner
 		add_internal_flag = dangerous
 		reverse_add_opinion = {
 			target = scope:affairs_partner
