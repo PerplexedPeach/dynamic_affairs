@@ -1,0 +1,20 @@
+﻿l_korean:
+
+f_very_low_stam: "당신: #N;bold;italic 절정에 가까운#!"
+f_low_stam: "당신: #N;bold 신음하는#!"
+f_med_stam: "당신: #N 홍조를 띈#!"
+f_high_stam: "당신: #weak 멀쩡한#!"
+m_very_low_stam: "당신: #N;bold;italic 절정에 가까운#!"
+m_low_stam: "당신: #N;bold 신음하는#!"
+m_med_stam: "당신: #N 홍조를 띈#!"
+m_high_stam: "당신: #weak 멀쩡한#!"
+
+# p prefix stands for partner
+pm_very_low_stam: "상대: #P;bold;italic 절정에 가까운#!"
+pm_low_stam: "상대: #P;bold 신음하는#!"
+pm_med_stam: "상대: #P 홍조를 띈#!"
+pm_high_stam: "상대: #weak 멀쩡한#!"
+pf_very_low_stam: "상대: #P;bold;italic 절정에 가까운#!"
+pf_low_stam: "상대: #P;bold 신음하는#!"
+pf_med_stam: "상대: #P 홍조를 띈#!"
+pf_high_stam: "상대: #weak 멀쩡한#!"

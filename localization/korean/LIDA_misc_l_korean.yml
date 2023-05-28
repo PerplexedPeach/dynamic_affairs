@@ -1,0 +1,68 @@
+﻿l_korean:
+# stamina indicators
+root_stamina_tooltip: "[SCOPE.Custom('RootSexualStamina')]"
+partner_stamina_tooltip: "[SCOPE.Custom('PartnerSexualStamina')]"
+
+# sex option tooltips
+attempt_dom_tooltip: "이것은 #dom #bold 지배적인#!#! 행동으로 간주되며 [affairs_partner.GetFirstName]의 도전을 받게 됩니다! 성공 가능성은 신체적 능력, 성격, 특성 및 현재 관계에 따라 달라집니다. #weak ([SCOPE.GetValue('dom_chance')|0]%로 성공)#!"
+dom_no_sub_tooltip: "이것은 #dom #bold 지배적인#!#! 행동으로 간주됩니다! 그러나, 이 이벤트에는 복종 옵션이 없으므로 성공이 보장됩니다."
+voluntary_sub_tooltip: "이것은 #sub #bold 순종적인#!#! 행동으로 간주되며 [affairs_partner.GetFirstName]이 환영할 것입니다! 하지만 복종하는 행동에는 장기적인 결과가 따릅니다."
+dom_success_adjustment_tooltip: "특수한 상황으로 인해 성공할 확률이 추가적으로 #weak  ([SCOPE.GetValue('dom_success_adjustment')|0]%)#! 있습니다."
+
+# dom success breakdown
+dom_chance_breakdown_tooltip: "성공 확률 분석 #weak (일부 숨김)#!\n기본 확률: #weak [SCOPE.ScriptValue('dom_base_success_value')|0]% #![SCOPE.Custom('DomChanceBreakdownSubdomNature')][SCOPE.Custom('DomChanceBreakdownSubdom')][SCOPE.Custom('DomChanceBreakdownProwess')][SCOPE.Custom('DomChanceBreakdownLustBeauty')][SCOPE.Custom('DomChanceBreakdownAuthority')][SCOPE.Custom('DomChanceBreakdownStubborness')][SCOPE.Custom('DomChanceBreakdownStamina')][SCOPE.Custom('DomChanceBreakdownOrgasm')][SCOPE.Custom('DomChanceBreakdownSexSkill')]"
+
+# default root cum text
+root_cum_f: "\n당신은 절정에 이르자 몸이 떨리며 눈이 감깁니다. 당신은 더 많은 것을 애원하듯, 무의식적으로 당신을 #sub #bold 정복한#!#! 몸을 감쌉니다."
+root_cum_m: "\nroot cum male"
+partner_cum_f: "\nPLACEHOLDER non-terminating partner F cum"
+partner_cum_m: "\nPLACEHOLDER non-terminating partner M cum"
+
+# meetings
+cancel_meeting_option: "취소합니다"
+cancel_meeting_tooltip: "섹스하기로 한 약속을 취소하면 상대방이 화를 낼 것입니다."
+cant_dom_due_to_cum_tooltip: "절정 와중에 상황을 통제하기가 훨씬 더 어렵습니다!"
+easy_dom_due_to_cum_tooltip: "상대방이 절정 중일 때 상황을 통제하기가 훨씬 더 쉽습니다!"
+
+# traits
+trait_lida_dom_1: "적극적인"
+trait_lida_dom_1_desc: "이 인물은 사회적, 육체적으로 다른 사람을 #dom 지배하는#! 것을 선호합니다."
+trait_lida_dom_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]은 사회적, 육체적으로 다른 사람을 #dom 지배하는#! 것을 선호합니다."
+
+trait_lida_dom_2: "지배적인"
+trait_lida_dom_2_desc: "이 인물은 #dom 위압적인 분위기#!를 풍기며, 항상 다른 사람을 사회적, 신체적으로 지배하려고 합니다."
+trait_lida_dom_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]은 #dom 위압적인 분위기#!를 풍기며, 항상 다른 사람을 사회적, 신체적으로 지배하려고 합니다."
+
+trait_lida_dom_3: "고압적인"
+trait_lida_dom_3_desc: "그들의 날카로운 눈빛은 보통 다른 사람에게서 원하는 것을 얻기에 충분합니다. 그들의 말투와 몸짓에 직면했을 때 #dom #bold 거절하는 것은 거의 불가능합니다.#!#!"
+trait_lida_dom_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]의 날카로운 눈빛은 보통 다른 사람에게서 원하는 것을 얻기에 충분합니다. [ROOT.GetCharacter.GetHerHis]의 말투와 몸짓에 직면했을 때 #dom #bold 거절하는 것은 거의 불가능합니다.#!#!"
+
+trait_lida_sub_1: "수용적인"
+trait_lida_sub_1_desc: "이 인물은 사회적, 육체적으로 다른 사람에게 #sub 양보하는#! 것을 선호합니다."
+trait_lida_sub_1_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]은 사회적, 육체적으로 다른 사람에게 #sub 양보하는#! 것을 선호합니다."
+
+trait_lida_sub_2: "순종적인"
+trait_lida_sub_2_desc: "이 인물의 몸짓은 #sub 타고난 복종심#!을 드러냅니다. 온순하고 대립을 피하며 쉽게 지배할 수 있는 것처럼 보입니다."
+trait_lida_sub_2_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]의 몸짓은 #sub 타고난 복종심#!을 드러냅니다. 온순하고 대립을 피하며, 지배하기에 쉬울 것처럼 보입니다."
+
+trait_lida_sub_3: "맹종하는"
+trait_lida_sub_3_desc: "고개를 숙이고 두 손을 공손이 모은, 의복만 아니었다면 하인으로 착각하기 쉬운 인물입니다. #sub #bold 완벽한 복종심#!#!이 모든 행동에 스며들어 있으며, 자신의 지위 아래 있는 사람에게도 지배당하는 것을 선호합니다."
+trait_lida_sub_3_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]는 고개를 숙이고 두 손을 공손히 모아, 의복만 아니었다면 하인으로 착각하기 쉬운 인물입니다. [ROOT.GetCharacter.GetHerHis] #sub #bold 완벽한 복종심#!#!이 모든 행동에 스며들어 있으며, [ROOT.GetCharacter.GetSheHe]는 [ROOT.GetCharacter.GetHerHis] 지위 아래 있는 사람에게도 지배당하는 것을 선호합니다."
+
+# trait groups
+trait_lida_dom: "지배적인 인물"
+trait_lida_sub: "순종적인 인물"
+
+# decision
+lida_start_affair_decision: ""우연한" 만남 찾기"
+lida_start_affair_decision_desc: "통치는 힘들고 당신은 육체의 쾌락을 원합니다. 일상적인 결혼 생활보다 즉흥적인 것이 훨씬 더 흥미롭습니다."
+lida_start_affair_decision_confirm: "만남을 시작하세요"
+lida_start_affair_decision_tooltip: "함께 #V 정사#!를 치를 상대 찾기"
+start_affair_decision_tooltip: "당신의 영지에서 함께 #V 정사#!를 치르기에 적합한 상대와 [stress|E]를 해소할 기회를 찾습니다."
+start_affair_decision_tooltip_subdom: "당신은 당신과 상대방의 선택을 통해 더 #dom 지배적#! 또는 #sub 순종적#!이 될 수 있습니다."
+start_affair_decision_tooltip_sub_1: "당신은 [GetTrait('lida_sub_1').GetName(GetPlayer)]이므로, 당신을 거칠게 대할 사람을 우선시할 것입니다."
+start_affair_decision_tooltip_sub_2: "당신은 [GetTrait('lida_sub_2').GetName(GetPlayer)]이므로, 당신을 지배할 사람을 우선시할 것입니다."
+start_affair_decision_tooltip_sub_3: "당신은 [GetTrait('lida_sub_3').GetName(GetPlayer)]이므로, 당신을 #sub 걸맞게#! 대해줄 주인을 우선시할 것입니다."
+start_affair_decision_tooltip_dom_1: "당신은 [GetTrait('lida_dom_1').GetName(GetPlayer)]이므로, 온순한 사람을 우선시할 것입니다."
+start_affair_decision_tooltip_dom_2: "당신은 [GetTrait('lida_dom_2').GetName(GetPlayer)]이므로, 순종적인 사람을 우선시할 것입니다."
+start_affair_decision_tooltip_dom_3: "당신은 [GetTrait('lida_dom_3').GetName(GetPlayer)]이므로, 당신에게 #dom 모든 것을 복종할#! 노예를 우선시할 것입니다."

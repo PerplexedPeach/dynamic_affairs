@@ -1,0 +1,18 @@
+﻿l_simp_chinese:
+f_very_low_stam: "你: #N;bold;italic 高潮前调#!"
+f_low_stam: "你: #N;bold 呻吟#!"
+f_med_stam: "你: #N;气喘吁吁#!"
+f_high_stam: "你: #weak 满意#!"
+m_very_low_stam: "你: #N;bold;italic 高潮前调#!"
+m_low_stam: "你: #N;bold 呻吟#!"
+m_med_stam: "你: #N;面带红晕#!"
+m_high_stam: "你: #weak 满意#!"
+# p prefix stands for partner
+pm_very_low_stam: "他: #P;bold;italic 来临尖峰#!"
+pm_low_stam: "他: #P;bold 气喘吁吁#!"
+pm_med_stam: "他: #P 面带红晕#!"
+pm_high_stam: "他: #weak 满意#!"
+pf_very_low_stam: "她: #P;;italic 来临尖峰#!"
+pf_low_stam: "她: #P;bold 气喘吁吁#!"
+pf_med_stam: "她: #P 脸红#!"
+pf_high_stam: "她: #weak 满意#!"

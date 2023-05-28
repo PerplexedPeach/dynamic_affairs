@@ -1,0 +1,57 @@
+﻿l_korean:
+# nature
+dc_subdom_nature: "\n상대적으로 복종적인 또는 지배적인 성격: #weak [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
+dc_subdom_nature_g: "\n당신이 더 #dom 지배적임#!: #P [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
+dc_subdom_nature_r: "\n당신이 더 #sub 복종적임#!: #N [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
+dc_subdom_nature_gg: "\n당신은 당신의 지배적인 본성으로 상대를 #dom 압도합니다.#!: #P;bold [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
+dc_subdom_nature_rr: "\n당신은 상대의 지배적인 성격에 #sub 위축되었습니다.#!: #N;bold [SCOPE.GetValue('dom_chance_subdom_nature')|0]% #!"
+
+# prowess
+dc_prowess: "\n신체적 능력: #weak [SCOPE.GetValue('dom_chance_prowess')|0]% #!"
+dc_prowess_g: "\n당신이 더 강합니다: #P [SCOPE.GetValue('dom_chance_prowess')|0]% #! #weak ([prowess|E]) #!"
+dc_prowess_r: "\n당신이 더 약합니다: #N [SCOPE.GetValue('dom_chance_prowess')|0]% #! #weak ([prowess|E]) #!"
+dc_prowess_gg: "\n당신이 물리적으로 쉽게 제압할 수 있습니다: #P;bold [SCOPE.GetValue('dom_chance_prowess')|0]% #! #weak ([prowess|E]) #!"
+dc_prowess_rr: "\n당신은 그들을 단 한 치도 움직이게 할 수 없습니다: #N;bold [SCOPE.GetValue('dom_chance_prowess')|0]% #! #weak ([prowess|E]) #!"
+
+# lust
+dc_lust_beauty: "\n아름다움에 대한 욕망: #weak [SCOPE.GetValue('dom_chance_lust_beauty')|0]% #!"
+dc_lust_beauty_g: "\n상대는 당신의 아름다움을 갈망합니다: #P [SCOPE.GetValue('dom_chance_lust_beauty')|0]% #!"
+dc_lust_beauty_r: "\n당신은 상대의 아름다움을 갈망합니다: #N [SCOPE.GetValue('dom_chance_lust_beauty')|0]% #!"
+dc_lust_beauty_gg: "\n상대는 당신의 아름다움에 매료되었습니다: #P;bold [SCOPE.GetValue('dom_chance_lust_beauty')|0]% #!"
+dc_lust_beauty_rr: "\n당신은 상대의 아름다움에 매료되었습니다: #N;bold [SCOPE.GetValue('dom_chance_lust_beauty')|0]% #!"
+
+# authority
+dc_authority: "\n권위에 대한 인식 차이: #weak [SCOPE.GetValue('dom_chance_title_authority')|0]% #!"
+dc_authority_g: "\n당신은 권위적인 입장입니다: #P [SCOPE.GetValue('dom_chance_title_authority')|0]% #! #weak (신분 계층) #!"
+dc_authority_r: "\n상대는 권위적인 입장입니다: #N [SCOPE.GetValue('dom_chance_title_authority')|0]% #! #weak (신분 계층) #!"
+dc_authority_gg: "\n당신의 계급이 상대를 압도합니다 : #P;bold [SCOPE.GetValue('dom_chance_title_authority')|0]% #! #weak (신분 계층) #!"
+dc_authority_rr: "\n상대의 계급이 당신을 주눅들게 합니다: #N;bold [SCOPE.GetValue('dom_chance_title_authority')|0]% #! #weak (신분 계층) #!"
+
+# stubborn
+dc_stubborness: "\n완고함: #weak [SCOPE.GetValue('dom_chance_stubborness')|0]% #!"
+dc_stubborness_g: "\n당신이 더 완고합니다: #P [SCOPE.GetValue('dom_chance_stubborness')|0]% #!"
+dc_stubborness_r: "\n상대가 더 완고합니다: #N [SCOPE.GetValue('dom_chance_stubborness')|0]% #!"
+
+# stamina
+dc_stamina: "\n원기: #weak [SCOPE.GetValue('dom_chance_stamina')|0]% #!"
+dc_stamina_g: "\n상대는 자신의 쾌락에 몰두하고 있습니다: #P [SCOPE.GetValue('dom_chance_stamina')|0]% #! #weak (성적인 원기)#!"
+dc_stamina_r: "\n당신은 자신의 쾌락에 몰두하고 있습니다: #N [SCOPE.GetValue('dom_chance_stamina')|0]% #! #weak (성적인 원기)#!"
+dc_stamina_gg: "\n상대의 마음은 쾌락에 지배되었습니다: #P;bold [SCOPE.GetValue('dom_chance_stamina')|0]% #! #weak (성적인 원기)#!"
+dc_stamina_rr: "\n당신의 마음은 쾌락에 지배되었습니다: #N;bold [SCOPE.GetValue('dom_chance_stamina')|0]% #! #weak (성적인 원기)#!"
+
+# subdom
+dc_subdom: "\n[affairs_partner.GetFirstName]와의 관계 기록: #weak [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+dc_subdom_g: "\n당신은 과거에 [affairs_partner.GetFirstName]를 #dom 지배했습니다#!: #P [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+dc_subdom_r: "\n당신은 과거에 [affairs_partner.GetFirstName]에게 #sub 복종했습니다#!: #N [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+dc_subdom_gg: "\n당신은 [affairs_partner.GetFirstName]의 #dom 주인#!입니다: #P;bold [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+dc_subdom_rr: "\n당신은 [affairs_partner.GetFirstName]의 #sub 노예#!입니다: #N;bold [SCOPE.GetValue('dom_chance_subdom')|0]% #!"
+
+# orgasm
+dc_orgasm: "\n절정: #weak [SCOPE.GetValue('dom_chance_orgasm')|0]% #!"
+dc_orgasm_gg: "\n상대는 #V 절정#! 중에 있습니다: #P;bold [SCOPE.GetValue('dom_chance_orgasm')|0]% #!"
+dc_orgasm_rr: "\n당신은 #V 절정#! 중에 있습니다: #N;bold [SCOPE.GetValue('dom_chance_orgasm')|0]% #!"
+
+# sex skill
+dc_sex_skill: "\n섹스 스킬: #weak [SCOPE.GetValue('dom_chance_sex_skill')|0]% #!"
+dc_sex_skill_g: "\n당신은 침대에서의 섹스에 능숙합니다: #P [SCOPE.GetValue('dom_chance_sex_skill')|0]% #!"
+dc_sex_skill_gg: "\n당신은 섹스 전문가입니다: #P;bold [SCOPE.GetValue('dom_chance_sex_skill')|0]% #!"
