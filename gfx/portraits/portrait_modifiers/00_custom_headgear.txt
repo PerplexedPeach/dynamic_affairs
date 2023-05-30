@@ -771,11 +771,12 @@
 			has_reward_item = newsletter_crown
 		}
 	}
-
 ## LIDA added
 	add_accessory_modifiers = {
 		gene = headgear
 
 		template = sub_collar
 	}
+
+
 }

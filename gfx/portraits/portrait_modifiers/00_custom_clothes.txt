@@ -552,7 +552,6 @@
 	#		monarchs_journey_unlock = 1
 	#	}
 	#}
-
 ## LIDA added
 	add_accessory_modifiers = {
 		gene = clothes
@@ -562,4 +561,5 @@
 		gene = clothes
 		template = skimpy_plate
 	}
+
 }
