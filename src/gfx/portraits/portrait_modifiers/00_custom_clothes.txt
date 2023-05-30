@@ -3,3 +3,7 @@
 		gene = clothes
 		template = sub_harness
 	}
+	add_accessory_modifiers = {
+		gene = clothes
+		template = skimpy_plate
+	}

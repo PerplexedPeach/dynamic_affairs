@@ -11,8 +11,6 @@
 				value = 0
 			}
 		}
-		# outfit_tags = { no_clothes }
-		# ignore_outfit_tags = yes
 		weight = {
 			base = 0
 			modifier = {
@@ -34,7 +32,7 @@ lida_body = {
 				value = 0
 			}
 		}
-		# outfit_tags = { no_clothes }
+		outfit_tags = { no_clothes }
 		# ignore_outfit_tags = yes
 		weight = {
 			base = 0
@@ -45,7 +43,24 @@ lida_body = {
 			}	
 		}
 	}
+	skimpy_plate = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = skimpy_plate
+				# TODO this should be 0?
+				value = 1
+			}
+		}
+		outfit_tags = { military_outfit }
+		# TODO create modifier for weight
+		weight = {
+			base = 100
+		}
+	}
 }
+
 lida_legwear = {
 	priority = 10
 	no_legwear = {

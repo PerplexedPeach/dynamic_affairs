@@ -10,3 +10,14 @@
 				boy = male
 				girl = female
 			}
+			skimpy_plate = {
+				index = 98
+				male = {
+					1 = empty
+				}
+				female = {
+					1 = female_accessories_lida_skimpy_plate
+				}
+				boy = male
+				girl = female
+			}

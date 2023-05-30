@@ -19,3 +19,17 @@ female_accessories_lida_l_harness_1 = {
 		entity = female_accessories_lida_l_harness_1_entity
 	}
 }
+female_accessories_lida_skimpy_plate = {
+	entity = {
+		required_tags = ""
+		shared_pose_entity = torso
+		entity = female_accessories_lida_skimpy_plate_entity
+	}
+}
+female_accessories_lida_skimpy_plate_legs = {
+	entity = {
+		required_tags = ""
+		shared_pose_entity = torso
+		entity = female_accessories_lida_skimpy_plate_legs_entity
+	}
+}
