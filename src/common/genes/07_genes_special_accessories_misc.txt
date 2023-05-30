@@ -1,0 +1,13 @@
+﻿		## LIDA added
+		skimpy_plate_legs = {
+			index = 10
+			male = {
+				1 = empty
+			}
+			female = {
+				1 = female_accessories_lida_skimpy_plate_legs
+			}
+			boy = male
+			girl = female
+		}
+	

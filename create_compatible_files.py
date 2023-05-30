@@ -100,10 +100,12 @@ if game_dir.strip() == "":
     game_dir = None
 
 # put any other files that need to be made compatible here
-create_combined_compatible_file("gfx/portraits/portrait_modifiers/00_custom_clothes.txt", "custom_clothes", game_dir)
-create_combined_compatible_file("gfx/portraits/portrait_modifiers/00_custom_headgear.txt", "custom_headgear", game_dir)
 create_combined_compatible_file("common/genes/05_genes_special_accessories_clothes.txt", "accessory_genes:clothes", game_dir)
 create_combined_compatible_file("common/genes/06_genes_special_accessories_headgear.txt", "accessory_genes:headgear", game_dir)
-create_combined_compatible_file("gfx/portraits/portrait_modifiers/CFP_necklaces.txt", "cfp_necklaces", game_dir)
+create_combined_compatible_file("common/genes/07_genes_special_accessories_misc.txt", "accessory_genes:legwear", game_dir)
 create_combined_compatible_file("common/genes/CFP_genes_special_accessories_necklaces.txt", "special_accessories_necklace", game_dir)
+create_combined_compatible_file("gfx/portraits/portrait_modifiers/00_custom_clothes.txt", "custom_clothes", game_dir)
+create_combined_compatible_file("gfx/portraits/portrait_modifiers/00_custom_headgear.txt", "custom_headgear", game_dir)
+create_combined_compatible_file("gfx/portraits/portrait_modifiers/00_custom_legwear.txt", "custom_legwear", game_dir)
+create_combined_compatible_file("gfx/portraits/portrait_modifiers/CFP_necklaces.txt", "cfp_necklaces", game_dir)
 create_combined_compatible_file("gfx/portraits/portrait_modifiers/CFP_custom_necklaces.txt", "custom_necklace", game_dir)
