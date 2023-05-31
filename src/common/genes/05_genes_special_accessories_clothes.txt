@@ -1,6 +1,6 @@
 ﻿			## LIDA added
 			sub_harness = {
-				index = 97
+				index = 98
 				male = {
 					1 = empty
 				}
@@ -11,7 +11,7 @@
 				girl = female
 			}
 			skimpy_plate = {
-				index = 98
+				index = 99
 				male = {
 					1 = empty
 				}
