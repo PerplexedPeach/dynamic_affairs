@@ -904,7 +904,7 @@ LIDA.131 = {
 	}
 }
 
-# offered sub collar
+# offered sub harness
 LIDA.140 = {
 	type = character_event
 	title = LIDA.140.t
@@ -1044,7 +1044,7 @@ LIDA.140 = {
 }
 
 LIDA.141 = {
-	# accept the collar
+	# accept the harness
 	type = character_event
 	title = LIDA.141.t
 	desc = {
@@ -1082,5 +1082,216 @@ LIDA.141 = {
 		name = LIDA.141.a
 		# starts right into it (prone bone)
 		trigger_event = LIDAs.9
+	}
+}
+
+# offered skimpy plate
+LIDA.150 = {
+	type = character_event
+	title = LIDA.150.t
+	desc = {
+		desc = LIDA.150.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_trait = beauty_good_1
+				}
+				desc = LIDA.150.beauty_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = beauty_good_2
+				}
+				desc = LIDA.150.beauty_2
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = beauty_good_3
+				}
+				desc = LIDA.150.beauty_3
+			}
+		}
+	}
+	trigger = {
+		is_female = yes
+		# has to be famous enough
+		NOT = {has_character_modifier = wearing_skimpy_plate}
+		prestige_level >= 3
+		has_money_to_buy_skimpy_plate = yes
+	}
+	theme = seduction
+	override_background = {
+		reference = armory
+	}
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = steward
+	}
+	# select affairs partner
+	immediate = {
+		save_scope_value_as = {
+			name = locale
+			value = flag:study
+		}
+
+		get_characters_eligible_partner_effect = {
+			LISTNAME = affairs_pool
+			RESTRICTED_LISTNAME = rejected_affairs_pool
+		}
+		random_in_list = {
+			list = affairs_pool
+			limit = {
+				is_male = yes
+				is_imprisoned = no
+			}
+			save_scope_as = affairs_partner
+		}
+	}
+	option = {
+		# commission the armor
+		name = LIDA.150.a
+		pay_short_term_gold = {
+			target = scope:affairs_partner
+			gold = root.start_skimpy_plate_cost
+		}
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = grateful_opinion
+			opinion = 10
+		}
+		# trigger the next event
+		trigger_event = {
+			id=LIDA.151
+			months = 6
+		}
+	}
+	option = {
+		# reject at some stress
+		name = LIDA.150.b
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = disappointed_opinion
+			opinion = -10
+		}
+		stress_impact = {   
+			lustful = medium_stress_impact_gain
+		}
+	}
+}
+# offered skimpy plate
+LIDA.151 = {
+	type = character_event
+	title = LIDA.151.t
+	desc = {
+		desc = LIDA.151.desc
+	}
+	theme = seduction
+	override_background = {
+		reference = armory
+	}
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = steward
+	}
+	option = {
+		# let them measure your body more intimately
+		name = LIDA.151.a
+		# trigger the completion later, but also trigger an immediate sex scene
+		# trigger the next event
+		trigger_event = {
+			id=LIDA.152
+			months = 6
+		}
+		store_subdom_value_effect = yes
+		lida_start_sex_effect = {TRIGGER_RANDOM_EVENT = no}
+		# starts right into it (tit tease)
+		trigger_event = LIDAs.6
+	}
+	option = {
+		# throw more money at them
+		name = LIDA.151.b
+		# trigger the completion later, but also trigger an immediate sex scene
+		# trigger the next event
+		trigger_event = {
+			id=LIDA.152
+			months = 6
+		}
+		pay_short_term_gold = {
+			target = scope:affairs_partner
+			gold = root.start_skimpy_plate_cost
+		}
+	}
+	option = {
+		# stop the funding
+		name = LIDA.151.c
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = disappointed_opinion
+			opinion = -10
+		}
+		stress_impact = {   
+			lustful = medium_stress_impact_gain
+		}
+	}
+}
+# completed skimpy plate
+LIDA.152 = {
+	type = character_event
+	title = LIDA.152.t
+	desc = {
+		desc = LIDA.152.desc
+	}
+	theme = seduction
+	override_background = {
+		reference = study
+	}
+	left_portrait = {
+		character = root
+		animation = shock
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = steward
+	}
+	immediate = {
+		add_character_modifier = {
+			modifier = wearing_skimpy_plate
+		}
+	}
+	option = {
+		# thank them
+		name = LIDA.152.a
+		store_subdom_value_effect = yes
+		lida_start_sex_effect = {TRIGGER_RANDOM_EVENT = no}
+		# starts right into it (tit tease)
+		trigger_event = LIDAs.6
+	}
+	option = {
+		# give them a tip
+		name = LIDA.152.b
+		pay_short_term_gold = {
+			target = scope:affairs_partner
+			gold = root.start_skimpy_plate_cost
+		}
+	}
+	option = {
+		# ignore them after
+		name = LIDA.152.c
+		reverse_add_opinion = {
+			target = scope:affairs_partner
+			modifier = disappointed_opinion
+			opinion = -5
+		}
+		stress_impact = {   
+			lustful = medium_stress_impact_gain
+		}
 	}
 }

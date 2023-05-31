@@ -1,0 +1,30 @@
+﻿start_skimpy_plate_cost = {
+	value = 0
+	add = standard_activity_base_cost
+	multiply = 2
+	# if you're discrete, this has less of an effect on prestige
+	if = {
+		limit = {
+			has_trait = generous
+		}
+		multiply = 1.4
+	}
+	if = {
+		limit = {
+			has_trait = beauty_good_1
+		}
+		multiply = 0.85
+	}
+	else_if = {
+		limit = {
+			has_trait = beauty_good_2
+		}
+		multiply = 0.7
+	}
+	else_if = {
+		limit = {
+			has_trait = beauty_good_3
+		}
+		multiply = 0.5
+	}
+}

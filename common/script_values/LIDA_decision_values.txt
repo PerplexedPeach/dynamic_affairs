@@ -1,6 +1,6 @@
 ﻿start_affair_cost = {
 	value = 0
-	add = standard_activity_cost
+	add = standard_activity_base_cost
 	divide = 1.5
 	# if you're discrete, this has less of an effect on prestige
 	if = {

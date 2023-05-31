@@ -73,3 +73,8 @@ can_start_affair = {
 	is_imprisoned = no
 	age >= 18
 }
+
+has_money_to_buy_skimpy_plate = {
+	gold >= root.start_skimpy_plate_cost
+	can_start_affair = yes
+}
