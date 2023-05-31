@@ -40,3 +40,14 @@ wearing_sub_harness = {
 	prowess = -2
 	ai_boldness = -25
 }
+
+wearing_skimpy_plate = {
+	icon = grandeur_positive
+	monthly_prestige = 0.5
+	dread_baseline_add = -10
+	attraction_opinion = 10
+	prowess = 4
+	diplomacy = 2
+	martial = -4
+	ai_boldness = 10
+}

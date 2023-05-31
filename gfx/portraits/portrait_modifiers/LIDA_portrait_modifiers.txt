@@ -37,9 +37,13 @@ lida_body = {
 		weight = {
 			base = 0
 			modifier = {
-				add = 1000
+				add = 500
 				exists = this
 				has_character_modifier = wearing_sub_harness
+				OR = {
+					should_be_naked_trigger = yes
+					should_be_topless_portrait_trigger = yes
+				}
 			}	
 		}
 	}
@@ -49,14 +53,24 @@ lida_body = {
 				mode = add
 				gene = clothes
 				template = skimpy_plate
-				# TODO this should be 0?
-				value = 1
+				value = 0
 			}
 		}
 		outfit_tags = { military_outfit }
-		# TODO create modifier for weight
 		weight = {
-			base = 100
+			base = 0
+			modifier = {
+				add = 1000
+				exists = this
+				# portrait_wear_armor_trigger only triggers if the character is leading an army
+				# we want this to be a more casually worn outfit (until we create more outfits), so we use it whenever not naked
+				# portrait_wear_armor_trigger = yes
+				NOR = {
+					should_be_naked_trigger = yes
+					should_be_topless_portrait_trigger = yes
+				}
+				has_character_modifier = wearing_skimpy_plate
+			}
 		}
 	}
 }
@@ -76,10 +90,36 @@ lida_legwear = {
 		weight = {
 			base = 0
 			modifier = {
-				add = 1000
+				add = 500
 				exists = this
 				# to avoid leg shrinkage, subharness should have no legwear
 				has_character_modifier = wearing_sub_harness
+			}
+		}
+	}
+	skimpy_plate_legs = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = skimpy_plate_legs
+				value = 0
+			}
+		}
+		outfit_tags = { military_outfit }
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				exists = this
+				# portrait_wear_armor_trigger only triggers if the character is leading an army
+				# we want this to be a more casually worn outfit (until we create more outfits), so we use it whenever not naked
+				# portrait_wear_armor_trigger = yes
+				NOR = {
+					should_be_naked_trigger = yes
+					should_be_topless_portrait_trigger = yes
+				}
+				has_character_modifier = wearing_skimpy_plate
 			}
 		}
 	}
