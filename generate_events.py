@@ -499,28 +499,24 @@ def define_sex_events_fm(es: EventMap):
                animation_left=IDLE, animation_right=PERSONALITY_CONTENT,
                desc=f"""
                    Looking into {THEM}'s leering eyes, you know you hold the lead for now.
-                   Closing in, you lean close to his ear and promise, "This will be a day you'll remember."
+                   Closing in, you lean close to her ear and promise, "This will be a day you'll remember."
                    \\n\\n
-                   Simultaneously, you reach down and loosen his trousers. His member springs to attention
-                   at your womanly wiles and seductive manner. Hungry, he pulls
-                   up your dress, you press closer, and your hands play across his body.
-                   He sucks in a tight breath as you grip his cock between your thighs and rub your pussy atop it.
-                   """,
+                   Simultaneously, you reach down and pull up her dress, you press closer, and your hands play across her body. Entranced your masculine wiles and seductive manner. She loosens your trousers and pulls your member free. She sucks in a tight breath slide your cock between her thighs and rub your rod against her pussy.""",
                options=(
                    Option(EventsSex.FM_ASS_RUB, OptionCategory.DOM,
-                          "Continue teasing him with your thighs",
+                          "Continue teasing her ass and breasts",
                           transition_text=f"""
                               You continue to rub his rod in between your things and pussy. You can feel a sticky coolness
                               from {THEM}'s tip, slicking between your legs. The contrast with the rhythmic thrusts from his 
                               hot member makes this an interesting experience.""",
                           failed_transition_text="You have better uses for that hard cock than just teasing it."),
                    Option(EventsSex.FM_HANDJOB, OptionCategory.DOM,
-                          "Wrap your fingers around his member and start jerking",
+                          "Slide your fingers within her flower and start stroking",
                           transition_text=f"""
-                              Feeling a change of pace, you switch to using your hand to get him off.""",
+                              Feeling a change of pace, you switch to using your hands to get her off.""",
                           failed_transition_text=f"""
-                              He recognizes what you are trying to do and twists his body to avoid having his member
-                              fully trapped within your fingers."""),
+                              She recognizes what you are trying to do and twists her body to avoid having your fingers
+                              fully within her womanhood."""),
                    Option(EventsSex.FM_MISSIONARY, OptionCategory.SUB,
                           "Relax and let him do the thrusting along your crack",
                           transition_text=f"""
@@ -792,25 +788,25 @@ def define_sex_events_fm(es: EventMap):
                root_become_more_dom_chance=5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
-                   Looking into {THEM}'s leering eyes, you can see his desire to have you.
+                   Looking into {THEM}'s leering eyes, you can see her desire to have you.
                    You may not let them have their way with you, but for now you play along.
                    Closing in, you lean close to his ear and promise, "This will be a day you'll remember."
                    \\n\\n
-                   Simultaneously, you reach down and loosen his trousers. His member springs to attention,
-                   clearly incensed from your womanly wiles and seductive manner. In reciprocation, he pulls
-                   up your dress, and you turn around, teasingly shake your shapely behind and giving his eyes
-                   a treat. You continue shaking while backing up until his cock is gripped by your cheeks.
+                   Simultaneously, you reach down and loosen her trousers and undergarments,
+                   clearly incensed from your masculine wiles and seductive manner. In reciprocation, she pulls
+                   down your pants, and you teasingly shake your shapely behind and semi full staff and giving her eyes
+                   a treat. You continue shaking while backing up until her groin is pressed against your ass.
                    """,
                options=(
                    Option(EventsSex.FM_ASS_RUB, OptionCategory.DOM,
-                          "Continue teasing him with your ass",
+                          "Continue teasing him with your back",
                           transition_text=f"""
-                              You continue to rub his rod in between your buns. You can feel a sticky coolness
-                              from {THEM}'s tip, slicking up your back. The contrast with the rhythmic thrusts from his 
+                              You continue to rub your hands across her back behind you, as she kisses your back and neck, wrapping her hands around your waist.
+                              You feel the supplness of {THEM}'s breasts, pressed against your back. The contrast with the rhythmic thrusts from his 
                               hot member makes this an interesting experience.""",
                           failed_transition_text="You have better uses for that hard cock than just teasing it."),
                    Option(EventsSex.FM_HANDJOB, OptionCategory.DOM,
-                          "Wrap your fingers around his member and start jerking",
+                          "Slide your fingers within her flower and start stroking",
                           transition_text=f"""
                               Feeling a change of pace, you switch to using your hand to get him off.""",
                           failed_transition_text=f"""
@@ -851,7 +847,7 @@ def define_sex_events_fm(es: EventMap):
                               hot member makes this an interesting experience.""",
                           failed_transition_text="You have better uses for that hard cock than just teasing it"),
                    Option(EventsSex.FM_HANDJOB, OptionCategory.DOM,
-                          "Wrap your fingers around his member and start jerking",
+                          "Slide your fingers within her flower and start stroking",
                           transition_text=f"""
                               Feeling a change of pace, you switch to using your hand to get him off.""",
                           failed_transition_text=f"""
@@ -1261,7 +1257,7 @@ def define_sex_events_fm(es: EventMap):
 
 
 def define_sex_events_mf(es: EventMap):
-    # TODO adapt these to the MF perspective (they are copied from F/M)
+    # to do adapt these to the MF perspective (they are copied from F/M)
     es.add(Sex(EventsSex.MF_WHIP_TEASE, "Whip Tease",
                stam_cost_1=1, stam_cost_2=0,
                root_gender=MALE, partner_gender=FEMALE,
@@ -1270,7 +1266,7 @@ def define_sex_events_mf(es: EventMap):
                animation_left=PERSONALITY_CONTENT, animation_right=IDLE,
                desc=f"""
                With a devious smirk, you remove your belt and run it against the skin of {THEM}.
-               Leveraging your weight, you push and trap her against a wall. You teasingly whip your belt against their cloathed ass
+               Leveraging your weight, you push and trap her against a wall. You teasingly whip your belt against their clothed ass
                as your free hand wanders across her body. 
                \\n\\n
                Tracing your fingers against your thin fabric, you pull your trousers down and 
@@ -1280,7 +1276,7 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsSex.MF_HANDJOB, OptionCategory.DOM,
                           "Jerk her off",
                           transition_text="Your continue building a rhythm, whipping her and fingering her.",
-                          failed_transition_text="You're too turned on to be satisfied with just jerking her off."),
+                          failed_transition_text="You're too turned on to be satisfied with just teasing her."),
                    Option(EventsSex.MF_BLOWJOB_DOM, OptionCategory.SUB,
                           "Kneel down and suck upon her pussy.",
                           transition_text=f"""
@@ -1296,17 +1292,17 @@ def define_sex_events_mf(es: EventMap):
                animation_left=PERSONALITY_CONTENT, animation_right=IDLE,
                desc=f"""
                With a lascivious smirk, you remove your shoes and run your hands against the skin of {THEM}.
-               Leveraging your weight, you push and trap her against a wall. You teasingly trace your bare feet against thier legs
+               Leveraging your weight, you push down and trap her against the floor. You teasingly trace your bare feet against her legs and groin
                as your free hand wanders across her body. 
                \\n\\n
                Tracing your fingers against thin fabric, you pull your trousers down 
-               free your member. It twitches at the brisk air.
+               to free your member. It twitches at the brisk air.
                """,
                options=(
                    Option(EventsSex.MF_HANDJOB, OptionCategory.DOM,
                           "Jerk her off",
                           transition_text="Your continue building a rhythm, rubbing against her and fingering her.",
-                          failed_transition_text="You're too turned on to be satisfied with just jerking her off."),
+                          failed_transition_text="You're too turned on to be satisfied with just fingering her."),
                    Option(EventsSex.MF_BLOWJOB_DOM, OptionCategory.SUB,
                           "Kneel down and suck upon her pussy.",
                           transition_text=f"""
@@ -1314,16 +1310,16 @@ def define_sex_events_mf(es: EventMap):
                           They were probably not expecting you to volunteer your mouth's service.
                           She moves a hand behind your head, but you swat it away."""),
                )))
-    es.add(Sex(EventsSex.MF_HANDJOB_TEASE, "Handjob Tease",
+    es.add(Sex(EventsSex.MF_HANDJOB_TEASE, "Finger Tease",
                stam_cost_1=1, stam_cost_2=0,
                root_gender=MALE, partner_gender=FEMALE,
                root_become_more_sub_chance=5,
                root_removes_clothes=True,
                animation_left=PERSONALITY_CONTENT, animation_right=IDLE,
                desc=f"""
-               With a knowing smirk, you size {THEM} up and put both your hands on their chest.
-               Leveraging your weight, you push and trap him against a wall. You slide your knee up his leg 
-               and play with his bulge. 
+               With a knowing smirk, you size {THEM} up and put both your hands on their breasts.
+               Leveraging your weight, you push and trap her against a wall. You slide your knee up her leg 
+               and play with her groin. 
                \\n\\n
                Tracing your fingers against thin fabric, you work your way to her dress and pull it from her body.
                Her skin twitches at the brisk air and the sharp contrast against of your warm hands.
@@ -1332,7 +1328,7 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsSex.MF_HANDJOB, OptionCategory.DOM,
                           "Jerk her off",
                           transition_text="Your continue building a rhythm, teasing her and fingering her.",
-                          failed_transition_text="You're too turned on to be satisfied with just jerking her off."),
+                          failed_transition_text="You're too turned on to be satisfied with just fingering her."),
                    Option(EventsSex.MF_BLOWJOB_DOM, OptionCategory.SUB,
                           "Kneel down and suck upon her pussy.",
                           transition_text=f"""
@@ -1350,13 +1346,13 @@ def define_sex_events_mf(es: EventMap):
                With a lusty smirk, you size {THEM} up and put both your hands on their chest, playing with their brests.
                Leveraging your weight, you push and trap her against a wall. Kissing her neck, you feel her pulse quicken. 
                \\n\\n
-               Tracing your fingers against thin fabric, you work your cock free and rub it against her pussy.
+               Tracing your fingers against thin fabric, you work your cock free and rub it against the opening of her pussy.
                She moans in desire as your warm hands and engorged dick fill her with desire.""",
                options=(
                    Option(EventsSex.MF_HANDJOB, OptionCategory.DOM,
                           "Jerk her off",
                           transition_text="Your continue building a rhythm, teasing her and fingering her.",
-                          failed_transition_text="You're too turned on to be satisfied with just jerking her off."),
+                          failed_transition_text="You're too turned on to be satisfied with just teasing her."),
                    Option(EventsSex.MF_BLOWJOB_DOM, OptionCategory.SUB,
                           "Kneel down and suck upon her pussy.",
                           transition_text=f"""
@@ -1364,173 +1360,174 @@ def define_sex_events_mf(es: EventMap):
                           They were probably not expecting you to volunteer your mouth's service.
                           She moves a hand behind your head, but you swat it away."""),
                )))
-    es.add(Sex(EventsSex.MF_HANDJOB, "Handjob",
+    es.add(Sex(EventsSex.MF_HANDJOB, "Hand Tease",
                stam_cost_1=-1, stam_cost_2=0.5,
                root_gender=MALE, partner_gender=FEMALE,
                root_become_more_sub_chance=5,
                root_removes_clothes=True,
                desc=f"""
-                   {THEM}'s eyes are closed and you smirk at your total control of his pleasure.
-                   You experiment with your strokes, and delight at the immediate feedback on his face.""",
+                   {THEM}'s eyes are closed and you smirk at your total control of her pleasure.
+                   You experiment with your strokes, and delight at the immediate feedback on her face.""",
                options=(
                    Option(EventsSex.MF_HANDJOB, OptionCategory.DOM,
-                          "Continue jerking him off",
+                          "Continue jerking her off",
                           transition_text=f"""
-                              Under the interminable strokes from your hand, {THEM}'s cock has 
-                              fully hardened. Dew-like pre dribbles from the tip, lubricating the whole shaft.""",
+                              Under the interminable strokes from your hand, {THEM}'s pussy has 
+                              begun to swell and moisten. Dew-like fluid dribbles from the opening, lubricating her depths.""",
                           failed_transition_text=
                           ComposedDesc(
                               TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
-                                 You're too turned on to be satisfied with just jerking him off!"""),
+                                 You're too turned on to be satisfied with just fingering her!"""),
                               TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                                  {THEM} wants more than your hands, so he #sub takes#! something #italic wetter#!."""),
+                                  {THEM} wants more than your hands, so she #sub takes#! something #italic wetter#!."""),
                               "."
                           ),
                           ),
                    Option(EventsSex.MF_BLOWJOB_DOM, OptionCategory.SUB,
-                          "Kneel down and take him in your mouth",
-                          transition_text=f"""You get on your knees, taking him in your mouth."""),
+                          "Kneel down and suck upon her pussy.",
+                          transition_text=f"""Looking up, you spot a look of anticipation on {THEM}'s face. 
+                          They were probably not expecting you to volunteer your mouth's service.
+                          She moves a hand behind your head, but you swat it away."""),
                    Option(EventsCum.MF_RUINED_ORGASM, OptionCategory.DOM,
                           "Deny his release",
                           transition_text=f"""
-                              You abruptly stop your jerking motion and slap his cock, 
-                              disrupting the build up to his climax.""",
+                              You abruptly stop your teasing motions and slap her face, 
+                              disrupting the build up to her climax.""",
                           failed_transition_text=f"""
-                              You move to stop his climax, but realize that he did not last as long as you expected."""),
+                              You move to stop her climax, but realize that she did not last as long as you expected."""),
                    Option(EventsCum.MF_HANDJOB_CUM_IN_HAND, OptionCategory.DOM,
-                          "Milk him into your soft palms",
+                          "Milk her into your large palms",
                           subdom_sub=0,
                           transition_text=f"""
-                              You place your palm below his cock, ready to receive his seed.""",
+                              You place your palm below and into her pussy, for the flourishing finale.""",
                           failed_transition_text=f"""
-                              You place your palm below his cock, ready to receive his seed,
-                              but his tip seems to be pointing elsewhere...""",
+                              You place your palm below and into her pussy, for the flourishing finale,
+                              but she seems unable to climax...""",
                           ),
                    Option(EventsCum.MF_BLOWJOB_CUM_ON_FACE, OptionCategory.SUB,
-                          "Make him coat your face in cum",
+                          "Make her coat your face in cum",
                           transition_text=f"""
-                              You pull away and look up, preparing for him to mark your face.""",
+                              You kiss your lips passionately upon her lower lips and gaze into her eyes, preparing for her to release upon your face.""",
                           ),
                )))
-    es.add(Sex(EventsSex.MF_BLOWJOB_DOM, "Dom Blowjob",
+    es.add(Sex(EventsSex.MF_BLOWJOB_DOM, "Dom Head",
                stam_cost_1=2, stam_cost_2=0.5,
                root_gender=MALE, partner_gender=FEMALE,
                root_removes_clothes=True,
                animation_right=KNEEL_RULER_3,
                desc=f"""
-                   You tease his shaft with your tongue, leaving him yearning for your mouth's full commitment.
-                   In this position of power and control over his pleasure, you deny him any movement with his hands.""",
+                   You explore her flower with your tongue and lips, leaving her yearning for your mouth's full commitment.
+                   In this position of power and control over her pleasure, you deny her any movement by interlocking hands.""",
                options=(
                    Option(EventsSex.MF_HANDJOB, OptionCategory.DOM,
-                          "Deny him your mouth, replacing it with your hands",
+                          "Deny her your mouth, replacing it with your hands",
                           weight=5,
                           transition_text=f"""
                               You give {THEM}'s head a last lick, making sure to drag it out as if expressing your tongue's
                               reluctance to part from it. You replace the warmth of your mouth with the milder warmth of
-                              your palms, and the bobbing of your head with the strokes from your hands.
+                              your palms and probing fingers, as your head raises to kiss her sensitive mounds.
                               """,
                           failed_transition_text=f"""
-                              The potent musk of his member, inflated by the proximity of your 
-                              nose to his groin, strangely captivates you and you lose this opportunity to assert more 
+                              The potent musk of her member, inflated by the proximity of your 
+                              nose to her groin, strangely captivates you and you lose this opportunity to assert more 
                               dominance."""),
                    Option(EventsSex.MF_BLOWJOB_DOM, OptionCategory.DOM,
-                          "Continue milking his cock with your lips and tongue",
+                          "Continue imbibe upon her pussy with your lips and tongue",
                           transition_text=f"""
                               You continue to bob your head back and forth, occasionally glancing up and making adjustments
-                              based on their expression. The fact that you have total control over {THEM}'s pleasure makes
-                              you excited.""",
+                              based on their expression. The fact that you have total control over {THEM}'s pleasure thrills you beyond words.""",
                           failed_transition_text=f"""
-                              The incessant invasion of his member down your throat
-                              momentarily puts you in a trance, leaving the initiative in his hands.""",
+                              The incessant dribble of her juices down your throat
+                              momentarily puts you in a trance, leaving the initiative in her hands.""",
                           subdom_dom_success=0),
                    Option(EventsSex.MF_BLOWJOB_SUB, OptionCategory.SUB,
-                          "Let him do the work of thrusting in and out of your mouth",
+                          "Let her do the work of thrusting her pelvis against your face",
                           transition_text=f"""
-                              Your jaw and neck sore from doing all the work, you decide to let him
-                              do pick up the slack. "Come on {THEM}, show me your mettle."
+                              Your lips and tongue sore from doing all the work, you decide to let her
+                              do pick up the slack. "Onwards now {THEM}, show me your mettle."
                               \\n\\n
-                              Instead of wasting words, he places both hands behind your head and starts thrusting."""),
+                              Instead of wasting words, she places both hands behind your head and starts thrusting."""),
                    Option(EventsSex.MF_STANDING_FUCKED_FROM_BEHIND, OptionCategory.SUB,
-                          "Give his member a #italic wetter#! hole",
+                          "Give her pussy a #italic stiffer#! ride",
                           transition_text=ComposedDesc(
                               TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
-                               You're too turned to just suck him off! You turn around and bend over, making him an offer he #S can't#! refuse."""),
+                               You're too turned to just suck her off! You lay back and let her straddle you, making her an offer she #S can't#! refuse."""),
                               TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                               "Your mouth just isn't enough!" he says as he turns you around and bends you over."""),
+                               "Your mouth just isn't enough!" she says as she lays you back and straddles you."""),
                           ),
                           ),
                    # TODO make these options more likely if you are addicted to cum
                    Option(EventsCum.MF_RUINED_ORGASM, OptionCategory.DOM,
-                          "Cruelly deny him his release",
+                          "Cruelly deny her release",
                           transition_text=f"""
-                              You pull back and slap his rod, disrupting the build up to his climax.""",
+                              You pull back and slap her face, disrupting the build up to her climax.""",
                           failed_transition_text=f"""
-                              As you try to pull back, he holds the back of your head with his hands."""),
+                              As you try to pull back, she holds the back of your head with her hands."""),
                    Option(EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM, OptionCategory.SUB,
-                          "Milk him dry onto your tongue",
+                          "Driver her wild upon your tongue",
                           transition_text=f"""
-                              You prepare to wring him dry with your dexterous tongue."""),
+                              You prepare to plunge within her wet depths with your dexterous tongue."""),
                    Option(EventsCum.MF_BLOWJOB_CUM_ON_FACE, OptionCategory.SUB,
-                          "Make him coat your face in cum",
+                          "Make her coat your face in cum",
                           transition_text=f"""
-                              You pull away and look up, preparing for him to mark your face."""),
+                              You kiss your lips passionately upon her lower lips and gaze into her eyes, preparing for her to release upon your face."""),
                )))
-    es.add(Sex(EventsSex.MF_BLOWJOB_SUB, "Sub Blowjob",
+    es.add(Sex(EventsSex.MF_BLOWJOB_SUB, "Sub Head",
                stam_cost_1=1.5, stam_cost_2=1.0,
                root_gender=MALE, partner_gender=FEMALE,
                root_become_more_dom_chance=5,
                root_removes_clothes=True,
                animation_right=KNEEL_RULER_3,
                desc=f"""
-                   With your tongue out, your mouth receives {THEM}'s rhythmic thrusts. His hands behind
+                   With your tongue out, your mouth receives {THEM}'s rhythmic thrusts. Her hands behind
                    your head prevent you from instinctively pulling away, making you feel self conscious about
-                   being kept captive in a compromising position.""",
+                   being kept captive in such a compromising position.""",
                options=(
                    Option(EventsSex.MF_BLOWJOB_DOM, OptionCategory.DOM,
-                          "Take back control and be the active one giving the blowjob",
+                          "Take back control and be the active one giving the head",
                           transition_text=f"""
-                              Putting both hands on his waist, you curb his thrusts. 
-                              {THEM} moves his arms as if to protest, but your licks along his shaft
+                              Putting both hands on his waist, you curb her thrusts. 
+                              {THEM} moves her arms as if to protest, but your arms press them back, and
                               resolve any nascent objections.""",
                           failed_transition_text=f"""
-                              Putting both hands on his waist, you attempt to curb his thrusts.
-                              However, on your knees beneath him, you don't have enough leverage to forcefully
-                              stop him and he seems to have no intention of letting you back in control.
+                              Putting both hands on his waist, you attempt to curb her thrusts.
+                              However, on your knees beneath her, you don't have enough leverage to forcefully
+                              stop her and she seems to have no intention of letting you back in control.
                               """),
                    Option(EventsSex.MF_BLOWJOB_SUB, OptionCategory.SUB,
-                          "Let him continue his thrusts",
+                          "Let her continue her thrusts",
                           transition_text=f"""
-                              You adjust your posture better suit his thrusts, making sure to pull away your teeth."""),
+                              You adjust your posture better suit his thrusts, making sure to service her fully."""),
                    Option(EventsSex.MF_DEEPTHROAT, OptionCategory.SUB,
-                          "Let him thrust even deeper",
+                          "Let her thrust even deeper",
                           transition_text=f"""
-                              He takes advantage of your lack of strong resistance to dominate your mouth
-                              further. Trapping your head with his hands, he plunges deeper while you gag."""),
+                              She takes advantage of your lack of strong resistance to dominate you, driving you from your knees to your back.
+                               Trapping your head with her hands, she plunges more forcefully while you gasp for air."""),
                    Option(EventsCum.MF_HANDJOB_CUM_IN_HAND, OptionCategory.DOM,
-                          "Finish him off on your hand",
+                          "Finish her off on your hands",
                           transition_text=f"""
-                              Pulling away, you deprive him of the warmth of your mouth.""",
+                              Pulling away, you deprive her of the warmth of your mouth.""",
                           failed_transition_text=f"""
                               Try as you might, {THEM} stops you from pulling away."""),
                    Option(EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB, OptionCategory.SUB,
-                          "Let him cum in your mouth",
+                          "Let her cum in your mouth",
                           subdom_sub=0,
                           transition_text=f"""
-                              You don't resist when he plunges into your mouth to deposit his seed."""),
+                              You don't resist when she trembles upon your mouth, and her warmth seeps within your mouth."""),
                    Option(EventsCum.MF_BLOWJOB_CUM_ON_FACE, OptionCategory.SUB,
-                          "Make him coat your face in cum",
+                          "Make her coat your face in cum",
                           subdom_sub=0,
                           transition_text=f"""
-                              You don't resist when he pulls out and aims his rod at your face."""),
+                              You don't resist when she trembles upon your face, and her warmth seeps across your eyes and mouth."""),
                )))
-    es.add(Sex(EventsSex.MF_DEEPTHROAT, "Deepthroat",
+    es.add(Sex(EventsSex.MF_DEEPTHROAT, "Supine Head",
                stam_cost_1=2.0, stam_cost_2=1.0,
                root_gender=MALE, partner_gender=FEMALE,
                root_become_more_dom_chance=10,
                root_removes_clothes=True,
                animation_right=KNEEL_2,
                desc=ComposedDesc("""
-                   Your eyes tear up as he thrusts deeply and relentlessly. The degrading way in which he
+                   Your eyes tear up as she thrusts relentlessly. The degrading way in which she
                    gives not care about your well-being or pleasure leaves a deep impression on you.""",
                                  TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}", """
                    In a dark part of your mind, though you may not admit it, you enjoy being used like
@@ -1542,23 +1539,23 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsSex.MF_BLOWJOB_SUB, OptionCategory.DOM,
                           "Take some control back",
                           transition_text=f"""
-                              Putting both hands on his waist, you reduce his thrusts to a manageable pace and depth. 
+                              Putting both hands on her waist, you reduce her thrusts to a manageable pace. 
                               """,
                           failed_transition_text=f"""
-                              Putting both hands on his waist, you push and try to stop his thrusts.
-                              It's all in vain, however, as he ignores you.
+                              Putting both hands on her waist, you push and try to stop her thrusts.
+                              It's all in vain, however, as she ignores you.
                               """),
                    Option(EventsSex.MF_DEEPTHROAT, OptionCategory.SUB,
-                          "Continue deepthroating",
+                          "Continue supine head",
                           transition_text=f"""
-                              He continues fucking your throat while 
+                              SHe continues fucking your face while 
                               your vision blurs against a mixture of tears, saliva, and sex juices."""),
                    Option(EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB, OptionCategory.SUB,
-                          "He cums in your mouth",
+                          "She cums in your mouth",
                           subdom_sub=0,
                           transition_text=f"""
-                              You don't have any say in it, or in anything else at the moment, as his mass
-                              fills your throat."""),
+                              You don't have any say in it, or in anything else at the moment, as her fluids
+                              fills your mouth."""),
                )))
     es.add(Sex(EventsSex.MF_ASS_TEASE, "Ass Tease",
                stam_cost_1=0.75, stam_cost_2=0.5,
@@ -1566,55 +1563,52 @@ def define_sex_events_mf(es: EventMap):
                root_become_more_sub_chance=5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
-                   Looking into {THEM}'s leering eyes, you can see his desire to have you.
+                   Looking into {THEM}'s leering eyes, you can see her desire to have you.
                    You may not let them have their way with you, but for now you play along.
-                   Closing in, you lean close to his ear and promise, "This will be a day you'll remember."
+                   Closing in, you lean close to her ear and promise, "This will be a day you'll remember."
                    \\n\\n
-                   Simultaneously, you reach down and loosen his trousers. His member springs to attention,
-                   clearly incensed from your womanly wiles and seductive manner. In reciprocation, he pulls
-                   up your dress, and you turn around, teasingly shake your shapely behind and giving his eyes
-                   a treat. You continue shaking while backing up until his cock is gripped by your cheeks.
+                   Spinning her around, you pull up her dress and run your hands across her ass, teasingly kissing her and giving her body gentle tease.
+                   Clearly incensed from your masculine wiles and seductive manner, she reaches down and loosens your trousers.
+                   You continue exploring her body with your hand and spin her around rubbing your manhood against her ass cheeks.
                    """,
                options=(
                    Option(EventsSex.MF_ASS_RUB, OptionCategory.DOM,
-                          "Continue teasing him with your ass",
+                          "Continue teasing her ass",
                           transition_text=f"""
-                              You continue to rub his rod in between your buns. You can feel a sticky coolness
-                              from {THEM}'s tip, slicking up your back. The contrast with the rhythmic thrusts from his 
-                              hot member makes this an interesting experience.""",
-                          failed_transition_text="You have better uses for that hard cock than just teasing it."),
+                              You rub your rod in between her buns. You feel your rod run between her cheeks, as you hold her against you and whisper in {THEM}'s ears. The contrast with the rhythmic thrusts and her clear desire makes this an interesting experience.""",
+                          failed_transition_text="You have better uses for that ass than just teasing it."),
                    Option(EventsSex.MF_HANDJOB, OptionCategory.DOM,
-                          "Wrap your fingers around his member and start jerking",
+                          "Slide your fingers within her flower and start stroking",
                           transition_text=f"""
-                              Feeling a change of pace, you switch to using your hand to get him off.""",
+                              Feeling a change of pace, you switch to using your hand to get her off.""",
                           failed_transition_text=f"""
-                              He recognizes what you are trying to do and twists his body to avoid having his member
-                              fully trapped within your fingers."""),
+                              She recognizes what you are trying to do and twists her body to avoid having her flower filled
+                              by your your fingers."""),
                    Option(EventsSex.MF_HOTDOG, OptionCategory.SUB,
-                          "Relax and let him do the thrusting along your crack",
+                          "Relax and let her do the thrusting along her crack",
                           transition_text=f"""
-                              {THEM} wastes no time after you slow down to pick up the pace, his rod now doing the
-                              thrusting along your crack."""),
+                              {THEM} wastes no time after you slow down. She picks up the pace, as your rod moves along her 
+                              thrusting crack."""),
                    Option(EventsCum.MF_ASS_TEASE_CUM_ON_ASS, OptionCategory.DOM,
-                          "Have him cum on your cheeks",
+                          "You cum on on her cheeks",
                           transition_text=f"""
-                              You manage to guide his stream onto your cheeks.""",
+                              You manage to guide guide stream onto her cheeks.""",
                           failed_transition_text=f"""
-                              You try to guide his stream onto your cheeks, but he is cumming too hard to control"""),
+                              You try to guide your stream onto her cheeks, but she pulls away, too hard to control"""),
                    Option(EventsCum.MF_CUM_ON_GROIN, OptionCategory.SUB,
-                          "Let him cum all over on your groin",
+                          "Cum all over on her groin",
                           subdom_sub=0,
                           transition_text=f"""
-                              You feel his dick twitch between your cheeks, alerting you of his impending climax.""")
-               )))
+                              You feel your dick twitch between her cheeks, alerting you to your impending climax.""")
+               ))) ## CONTINUE HERE 
     es.add(Sex(EventsSex.MF_ASS_RUB, "Ass Rub",
                stam_cost_1=0.75, stam_cost_2=0.5,
                root_gender=MALE, partner_gender=FEMALE,
                root_become_more_dom_chance=5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
-                   Despite not being able to see him standing behind you, 
-                   you feel a sense of control as you rub his cock and control his pleasure with your ass.
+                   Despite not being able to see her standing behind you, 
+                   you feel a sense of control as you rub her ass and control his pleasure with your ass.
                    """,
                options=(
                    Option(EventsSex.MF_ASS_RUB, OptionCategory.DOM,
@@ -1625,7 +1619,7 @@ def define_sex_events_mf(es: EventMap):
                               hot member makes this an interesting experience.""",
                           failed_transition_text="You have better uses for that hard cock than just teasing it"),
                    Option(EventsSex.MF_HANDJOB, OptionCategory.DOM,
-                          "Wrap your fingers around his member and start jerking",
+                          "Slide your fingers within her flower and start stroking",
                           transition_text=f"""
                               Feeling a change of pace, you switch to using your hand to get him off.""",
                           failed_transition_text=f"""
