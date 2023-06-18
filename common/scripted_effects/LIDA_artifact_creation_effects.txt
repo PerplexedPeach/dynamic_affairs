@@ -1,0 +1,29 @@
+﻿create_skimpy_plate_effect = {
+	$OWNER$ = { save_scope_as = owner }
+	$GIVER$ = { save_scope_as = giver }
+	set_artifact_rarity_illustrious = yes
+
+	create_artifact = {
+		name = artifact_skimpy_plate_name
+		description = artifact_skimpy_plate_description
+		template = skimpy_plate_template
+		type = armor_plate
+		visuals = skimpy_plate
+		quality = 100
+		wealth = 100
+		history = {
+			type = created
+			actor = scope:giver
+			recipient = scope:owner
+		}
+
+		modifier = wearing_skimpy_plate
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = skimpy_plate
+		save_scope_as = epic
+	}
+}

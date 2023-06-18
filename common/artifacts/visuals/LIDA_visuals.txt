@@ -1,0 +1,6 @@
+﻿skimpy_plate = {
+	icon = "skimpy_plate.dds"
+	asset = {
+		reference = female_accessories_lida_skimpy_plate_entity
+	}
+}

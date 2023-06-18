@@ -1262,8 +1262,9 @@ LIDA.152 = {
 		animation = steward
 	}
 	immediate = {
-		add_character_modifier = {
-			modifier = wearing_skimpy_plate
+		create_skimpy_plate_effect = {
+			OWNER = root
+			GIVER = scope:affairs_partner
 		}
 	}
 	option = {

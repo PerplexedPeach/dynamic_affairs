@@ -43,10 +43,12 @@ wearing_sub_harness = {
 
 wearing_skimpy_plate = {
 	icon = grandeur_positive
-	monthly_prestige = -0.5
+	monthly_prestige = 0.5
+	monthly_dynasty_prestige = 0.1
 	monthly_piety = -1
 	dread_baseline_add = -10
-	attraction_opinion = 10
+	attraction_opinion = 20
+	general_opinion = -10
 	prowess = 4
 	diplomacy = 2
 	martial = -2

@@ -69,7 +69,8 @@ lida_body = {
 					should_be_naked_trigger = yes
 					should_be_topless_portrait_trigger = yes
 				}
-				has_character_modifier = wearing_skimpy_plate
+				# has_character_modifier = wearing_skimpy_plate
+				portrait_wearing_skimpy_plate_trigger = yes
 			}
 		}
 	}
@@ -119,7 +120,8 @@ lida_legwear = {
 					should_be_naked_trigger = yes
 					should_be_topless_portrait_trigger = yes
 				}
-				has_character_modifier = wearing_skimpy_plate
+				# has_character_modifier = wearing_skimpy_plate
+				portrait_wearing_skimpy_plate_trigger = yes
 			}
 		}
 	}

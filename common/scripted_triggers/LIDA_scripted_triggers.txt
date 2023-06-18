@@ -78,3 +78,9 @@ has_money_to_buy_skimpy_plate = {
 	gold >= root.start_skimpy_plate_cost
 	can_start_affair = yes
 }
+
+portrait_wearing_skimpy_plate_trigger = {
+	any_equipped_character_artifact = {
+		has_variable = skimpy_plate   						
+	}
+}
