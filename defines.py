@@ -70,9 +70,13 @@ class EventsSex(enum.Enum):
     MF_COWGIRL = 33
     MF_MISSIONARY = 34
     MF_PRONE_BONE = 35
+
     FM_FOOTJOB = 36
     FM_BLOWJOB_DOM_I = 37
     FM_BLOWJOB_DOM_II = 38
+    MF_FOOTJOB = 39
+    MF_BLOWJOB_DOM_I = 40
+    MF_BLOWJOB_DOM_II = 41
 
 
 class EventsCum(enum.Enum):
