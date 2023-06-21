@@ -2363,7 +2363,7 @@ def define_cum_events_fm(es: EventMap):
                    as he makes no move to remove his member. 
                    \\n\\n""",
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-                   "Swallow it," he says in a commanding tone. \\n\\n
+                   "#bold Swallow#!" he says in a commanding tone. \\n\\n
                    """),
                                  """
                                  As you have no choice apart from drowning, you swallow it. As he
@@ -2404,7 +2404,7 @@ def define_cum_events_fm(es: EventMap):
                root_gender=FEMALE, partner_gender=MALE,
                preg_chance_1=0.05 * PREGNANCY_CHANCE,
                animation_left=FLIRTATION_LEFT, animation_right=PERSONALITY_BOLD,
-               root_become_more_sub_chance=10,
+               root_become_more_dom_chance=10,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean yourself and get dressed"),
                desc=ComposedDesc(
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
@@ -2471,7 +2471,7 @@ def define_cum_events_fm(es: EventMap):
                    "I-I don't know what came over me!" he says, avoiding your gaze with a look of deep shame across his face.
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
-                   "You were just so tight!", {THEM} awkwardly says, as if trying to justify himself.
+                   "It just felt so good!", {THEM} says, almost as if trying to justify himself.
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", """
                    With a #sub smack on your ass#!, "Let's do this again sometime.", before finally pulling out.
@@ -2558,10 +2558,10 @@ def define_cum_events_fm(es: EventMap):
                    """),
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10 \n{HAS_TRAIT} = {LIDA_SUB}", f"""
                    \\n\\n"Come again sometime", you say with a #italic #sub smile#!#!. He #sub smacks#! your ass with a grin,
-                    running two fingers along your slit before starting to dress.  
+                    running a finger along your slit before starting to dress.  
                    """),
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10 \n{NOT} = {{ {HAS_TRAIT} ={LIDA_SUB} }}", f"""
-                   \\n"Did I say you could #italic do that#!, {THEM}?!". He looks at you with a smug grin, #italic smacking#! your ass before dressing.
+                   \\n"What have you done, {THEM}?!" you say in complete #bold awe#! at his brazenness.
                    """),
 
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
@@ -2712,7 +2712,7 @@ def define_cum_events_mf(es: EventMap):
                    "You taste so good, {ME_FULL_REGNAL}" she says while licking your rod clean as you enjoy the epilogue of your session.
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
-                    "We ", you remark with a smile as {THEM} opens her eyes slightly flustered.
+                    "You look great", you remark with a smile as {THEM} opens her eyes slightly flustered.
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
                    "Impudent knave!" she objects while wiping across her eyeline. "At least have the decency
@@ -2742,7 +2742,7 @@ def define_cum_events_mf(es: EventMap):
                    The wet warmth makes you even harder as you begin shooting out seed in a steady stream which fills up her mouth. 
                    \\n\\n""",
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-                   "Swallow it," you say in a commanding tone. \\n\\n
+                   "#bold Swallow#!" you say in a commanding tone. \\n\\n
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
                    "Pghl eet aut!," {THEM} says. You look down and inches above your cock see a pair of #italic annoyed#!
@@ -2796,40 +2796,40 @@ def define_cum_events_mf(es: EventMap):
                    Fearing the consequences of impregnating {THEM}, you pull out just before going past your limit.
                    You instead shoots your seed on her ass, several quiet splashes announcing the end of the session.
                    \\n\\n
-                   "It is a privilege to satisfy your womb's needs, {THEM_FULL_REGNAL}", you say while devotedly cleaning her up.
+                   "It is a privilege to satisfy your needs, {THEM_FULL_REGNAL}", you say while devotedly cleaning her up.
                    """),
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
-                   Perhaps fearing the consequences of impregnating {THEM} or just showing some courtesy, you pull out just as you reache your limit.
+                   Perhaps fearing the consequences of impregnating {THEM} or just showing some courtesy, you pull out just as you reach your limit.
                    You instead shoots your seed on her ass and holes, several quiet splashes announcing the end of the session. 
                     \\n\\n
                    "What happens next?", she says while #italic clearly#! staring at your body with a lustful gaze.
                    """),
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-                   Perhaps out of courtesy or simply not wanting to impregnate {THEM}, you pull out just as you go past his limit.
+                   Perhaps out of courtesy or simply not wanting to impregnate {THEM}, you pull out just as you go past your limit.
                    You instead shoots your seed all across her groin, several quiet splashes announcing the end of the session.\\n\\n
-                   With a sudden #sub smack on her ass#!, "Let's meet again soon."
+                   "Let's meet again soon." You say as you #sub smack her ass#!, 
                    """),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
                     \\n\\n"Good boy", {THEM} whispers in your ear while #dom patting#! you on the head. 
                     "I #S might#! just invite you over again if I ever need something", she says with a smirk.
                     """),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                    \\n\\n"Oh, we're doing this again sometime", you say assertively while grabbing her shapes before going to dress.""")
+                    \\n\\n"We're doing this again sometime", you say as you #dom squeeze#! her shapes one last time before dressing.""")
                ),
                ))
     es.add(Cum(EventsCum.MF_CUM_ON_GROIN, "Snowfall on the Bushes",
                subdom_change=1,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_sub_chance=5,
+               root_become_more_dom_chance=5,
                preg_chance_2=PREGNANCY_CHANCE * 0.01,
                animation_left=DISMISSAL, animation_right=PERSONALITY_BOLD,
                terminal_option=Option(None, OptionCategory.OTHER, "Watch her clean herself"),
                desc=ComposedDesc(f"""
                    You stops yourself mere inches from {THEM}'s groin before you release, coating her hips and holes with a thick layer of white. 
                    \\n\\n
-                   Your can feel his warmth #sub on#! you.""",
+                   Your can feel her body's warmth with the #sub tip#! of your rod.""",
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
-                   \\n\\n"Pardon me, {THEM_FULL_REGNAL}!", you say while quickly cleaning her up.
+                   \\n\\n"Pardon me, {THEM_FULL_REGNAL}!", you say while quickly aiding in cleaning her up.
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                    \\n\\n"This was fun", you says as you run your hand across {THEM} shapes before dressing.
@@ -2853,17 +2853,17 @@ def define_cum_events_mf(es: EventMap):
                terminal_option=Option(None, OptionCategory.OTHER, "Admire the view"),
                desc=ComposedDesc(f"""
                    "Ugh," you grunt as as you plunge to the hilt, your rod wildly throbbing inside her.
-                    You look down just in time to see a white contour remain on her lips as your load overflows out of her around your rod, dripping down her thighs.""",
+                    You look down just in time to see a white contour remain on her lips as your load overflows around your rod, dripping down her thighs.""",
 
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
-                    "I-I don't know what came over me!" you say, feeling deeply ashamed while avoiding her gaze. \\n\\n
+                    "I-I don't know what came over me!" you say, feeling deeply #sub ashamed#! while avoiding her gaze. \\n\\n
                                      """),
                                  TriggeredDesc(
                                      f" {NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }} \n  {NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}", """
-                   With a #dom smack on her ass#!, "Let's do this again sometime.", before finally pulling out. \\n\\n
+                   "It just felt so good!", you say, almost as if trying to justify yourself. \\n\\n
                    """),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-                   With a #dom smack on her ass#!, "Let's do this again sometime.", before finally pulling out. \\n\\n
+                   "Let's do this again sometime", you say as you #sub smack her ass#! before finally pulling out. \\n\\n
                    """),
 
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
@@ -2877,7 +2877,7 @@ def define_cum_events_mf(es: EventMap):
                    "Is the #dom privilege#! of experiencing my body not enough?!" {THEM} says "How #dom dare#! you release inside me
                     like in some #italic random wench?!#!"""),
 
-                                 """\\n\\nShe's left standing as your seed #sub seeps#! out of her slit, her body seeming #italic pleased#! at the warmth within. \\n\\n""",
+                                 """\\n\\nShe's left standing as your seed #dom seeps#! out of her slit, her body seeming #italic pleased#! at the warmth within. \\n\\n""",
                                  ),
                ))
     es.add(Cum(EventsCum.MF_CREAMPIE_ON_TOP, "Cherry on Top",
@@ -2886,7 +2886,7 @@ def define_cum_events_mf(es: EventMap):
                root_become_more_sub_chance=30,
                preg_chance_2=PREGNANCY_CHANCE,
                animation_left=SHOCK, animation_right=FLIRTATION_LEFT,
-               terminal_option=Option(None, OptionCategory.OTHER, "Wipe the silky threads hanging from your slit"),
+               terminal_option=Option(None, OptionCategory.OTHER, "Watch the silky threads hang from her slit"),
                desc=ComposedDesc(f"""
                    You grunt when {THEM}'s slit fully swallows your rod as your muscles lock up with each surge of warmth you unload in her.
                    \\n\\n 
@@ -2905,7 +2905,7 @@ def define_cum_events_mf(es: EventMap):
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
                    You look into her eyes, knowing you couldn't have stopped her from #dom taking#! your seed no matter how hard you tried to resist - and you #sub didn't#!."""),
                                  TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", f"""
-                   You were pondering leaving her a gift anyway, but to have it #S taken#! from you? Unthinkable!.""")
+                   You were pondering leaving her a gift anyway, but to have it #S taken#! from you? Shameful!.""")
                                  ),
                ))
     es.add(Cum(EventsCum.MF_CREAMPIE_BREED, "Something to Remember You By",
@@ -2919,7 +2919,7 @@ def define_cum_events_mf(es: EventMap):
                desc=ComposedDesc(
                    f"""
                     You grunt loudly, a wave of utter relief passing through your whole being as you unload in her, pushing your seed further in
-                     with each deep thrust - you feel a #bold warmth#! coat your rod as you lie there, loins deep inside {THEM}.
+                     with each deep thrust - you feel a #bold warmth#! coat your rod as you lie loins deep inside {THEM}.
                    \\n\\n
                     """,
                    """She lies there panting, a white sliver dripping from her #dom conquered#! slit as your seed #italic trickles#! from her womb.""",
@@ -2937,7 +2937,7 @@ def define_cum_events_mf(es: EventMap):
                    """\\n\\n""",
 
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-                   "Use me any way you wish, my {ME_LADY_LORD}!", {THEM} blurts out while dizzily panting.
+                   "I'm #bold yours#!, my {ME_LADY_LORD}!", {THEM} blurts out while dizzily panting.
                    """),
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                    "What have you done, {ME_NAME}?!", she says in absolute awe at you brazenness.
@@ -3080,7 +3080,7 @@ def define_first_events(es: EventMap):
                  meet today, it must mean that we should get to know each other more intimately."
                  Your painted lips and inviting body language draws them in with no chance of escape."""))
     # MF
-    # TODO convert these to the male perspective and offer different meeting events
+    # TODO maybe improve some of these
     es.add(First(EventsFirst.MF_MEETING_WITH_SPOUSE, "Spicing it Up",
                  source_sex_events=source_sex_events, background="bedchamber",
                  root_gender=MALE, partner_gender=FEMALE,
@@ -3089,7 +3089,7 @@ def define_first_events(es: EventMap):
                  making it an even more inviting den of intimacy. As before, you left
                  a cryptic message inviting {THEM}.
                  \\n\\n
-                 He arrives promptly, clearly excited with your spontaneous trysts, and only
+                 She arrives promptly, clearly excited with your spontaneous trysts, and only
                  gives a brief greeting before climbing into bed with you."""))
     es.add(First(EventsFirst.MF_MEETING_WITH_SPOUSE_INITIAL, "Flowers in Bloom",
                  source_sex_events=source_sex_events, background="garden",
@@ -3098,47 +3098,47 @@ def define_first_events(es: EventMap):
                  As it is beautiful day, you have a stroll in your garden. 
                  In your bed chambers, you left a note to invite {THEM} outside.
                  \\n\\n
-                 Upon spotting you, he rushes forward, "What is it you wanted to see me
+                 Upon spotting you, she rushes forward, "What is it you wanted to see me
                  about?" Curious, and a little bit panicked with the cryptic content of your message.
                  \\n\\n
-                 Instead of answering, you beam him your brightest smile, 
+                 Instead of answering, you beam her your brightest smile, 
                  "Let's make love here," pointing to a shaded awning free from prying eyes.
                  \\n\\n
-                 Your strategy to put him on his toes and then deliver such a direct line works
-                 and he stands there, flustered at your proposal but not rejecting it.
+                 Your strategy to put her on her toes and then deliver such a direct line works
+                 and she stands there, flustered at your proposal but not rejecting it.
                  """))
     es.add(First(EventsFirst.MF_MEETING_WITH_VASSAL, "Chains of Command",
                  source_sex_events=source_sex_events, background="study",
                  root_gender=MALE, partner_gender=FEMALE,
                  desc=f"""
                  You send a summons to {THEM} about helping you with interpreting some passages in your study.
-                 By now, that's tacitly understood as an invitation to a tryst, which he gladly accepts.
-                 Almost immediately, he shows up in your study.
+                 By now, that's tacitly understood as an invitation to a tryst, which she gladly accepts.
+                 Almost immediately, she shows up in your study.
                  """))
     es.add(First(EventsFirst.MF_MEETING_WITH_VASSAL_INITIAL, "Privileges of Power",
                  source_sex_events=source_sex_events, background="study",
                  root_gender=MALE, partner_gender=FEMALE,
                  desc=f"""
                  You summon {THEM} to your study, giving instructions to your 
-                 guards to let him in then leave afterwards. The guards' faces betray their guesses,
+                 guards to let her in then leave afterwards. The guards' faces betray their guesses,
                  but you pay them to be discrete thus they make no comments.
                  \\n\\n
-                 Entering the study, "You summoned me, my Lady?"
+                 Entering the study, "You summoned me, my Lord?"
                  \\n\\n
-                 "Yes, I want to consult with you on this passage here", you say as you reach for one of the books
-                 on your bookshelf, making sure that as you do so, one of the straps on your dress would come loose
-                 and present your feminine assets. Blushing, they turn away, but you pretend as if you didn't notice 
-                 and instead walk up to him and say in a coy tone, "Could you help me with this?"
+                 "Yes, I want to consult with you on a passage. Could you fetch me that book?", you say as you point to one on the bottom
+                 of your bookshelf. "This one?" she says as her gaze, now at waist level, turns back to you, stops on the
+                 buldge beneath your garments. Blushing, they turn away, but you pretend as if you didn't notice 
+                 and instead walk up to her and say in a coy tone, "Could you help me with this?"
                  """))
     es.add(First(EventsFirst.MF_MEETING_WITH_LIEGE, "Mead in my Room?",
                  source_sex_events=source_sex_events, background="bedchamber",
                  root_gender=MALE, partner_gender=FEMALE,
                  desc=f"""
                  It's another long council meeting, and {THEM}'s councillors start streaming out of the
-                 room. You, however, remain in the room and say, "My Lord, I have some more council
+                 room. You, however, remain in the room and say, "My Lady, I have some more council
                  business to discuss with you."
                  \\n\\n
-                 Nodding, he responds, "Very good, I appreciate your enthusiasm and hard work."
+                 Nodding, she responds, "Very good, I appreciate your enthusiasm and hard work."
                  Taking a pause, "But it's getting late, so let us retire to my bedchambers where
                  we can discuss it in more comfort."
                  """))
@@ -3149,11 +3149,11 @@ def define_first_events(es: EventMap):
                  desc=f"""
                  After the council meeting, {THEM} dismisses you all. However, you take your time
                  leaving and soon you two are the only ones left in the chamber. "Is there something
-                 you need?" he asks amicably.
+                 you need?" she asks amicably.
                  \\n\\n
-                 Instead of answering, you twirl your hair and put an arm under your bosom, making
-                 an effort to highlight it. You saunter closer to him and see an inviting amusement in 
-                 his eyes, "You, my Lord."
+                 Instead of answering you let your clothes rest in a revealing way and make
+                 an effort to highlight it. You saunter closer to her and see an inviting amusement in 
+                 her eyes, "You, my Lady."
                  """))
     es.add(First(EventsFirst.MF_MEETING_WITH_PRISONER, "Taste of Heaven in Hell",
                  source_sex_events=source_sex_events, background="dungeon",
@@ -3162,14 +3162,12 @@ def define_first_events(es: EventMap):
                  desc=f"""
                  You descend to {THEM}'s cell without much ceremony.
                  \\n\\n
-                 "You've come again," he says happily. Laughing, he jests#weak (?)#! "Have you fallen
-                 for my cock?"
+                 "You're here again," she says reluctantly. Worried, she says#weak (?)#! "Are you going to take me again?"
                  \\n\\n
-                 That comment strikes a cord within you and you question your repeated visit to your prisoner.
-                 Initially it was meant as a torture for them, but that is only valid if you deny him the pleasure
-                 afterwards. #sub;italic Perhaps you are growing dependent on the pleasure he can provide?#!
+                 For a moment you ponder the reason why you have come again, but memories of your past encounters with {THEM} soon #italic flood#!
+                 your mind and banish any stray thoughts you may have had.
                  \\n\\n
-                 Pushing such thoughts to the back of your mind, you approach him."""))
+                 Focusing on what's about to transpire, you approach her."""))
     es.add(First(EventsFirst.MF_MEETING_WITH_PRISONER_INITIAL, "The Sweetest Torture",
                  source_sex_events=source_sex_events, background="dungeon",
                  root_gender=MALE, partner_gender=FEMALE,
@@ -3182,17 +3180,16 @@ def define_first_events(es: EventMap):
                  It doesn't take you long before you arrive in front of {THEM}'s cell. Speaking to the guards,
                  "I need to talk to this prisoner along; you are dismissed."
                  \\n\\n
-                 He looks up, eyes wide in fear of what tortures you have devised that requires a personal visit.
-                 But you also notice a bulge forming in his loose trousers. Before coming, you had your makeup and
-                 perfume done in a manner bordering on garish (and some would call #sub whorish#!), the kind that
-                 instantly sparks men's loins and their desire to dominate and conquer.
+                 She looks up, eyes wide in fear of what tortures you have devised that requires a personal visit.
+                 But she also notice a bulge forming in your loose trousers. She audibly gasps, her shock visible
+                 as she realises the reason of your visit.
                  """))
     es.add(First(EventsFirst.MF_MEETING_WITH_ACQUAINTANCE, "Who Owns Who",
                  source_sex_events=source_sex_events, background="sitting_room",
                  root_gender=MALE, partner_gender=FEMALE,
                  desc=f"""
                  Communicating via your servants, you inform {THEM} that you'd like to get to know them better
-                 in your sitting room. Wise to your intentions, he wastes no time arriving, noting the lack of 
+                 in your sitting room. Wise to your intentions, she wastes no time arriving, noting the lack of 
                  servants and guards to confirm his guess.
                  \\n\\n
                  You lock eyes, and without exchanging any words do all the communication with your bodies."""))
@@ -3204,14 +3201,14 @@ def define_first_events(es: EventMap):
                  to clear out the guards and any other personage near that location. A knowing gleam appears in their
                  eyes, but they are paid for their discretion and so bow and leave without any comment.
                  \\n\\n
-                 You find him in the expected location, and feigning like you were strolling as well, you don't
-                 go towards him.
+                 You find her in the expected location, and feigning like you were strolling as well, you don't
+                 go towards her.
                  \\n\\n
-                 "Well met, {ME_FULL_REGNAL}!" He greets you enthusiastically.
+                 "Well met, {ME_FULL_REGNAL}!" She greets you enthusiastically.
                  \\n\\n
                  Smiling, you reply, "{THEM}, no need to stand on formality. Fate has ordained that we
                  meet today, it must mean that we should get to know each other more intimately."
-                 Your painted lips and inviting body language draws them in with no chance of escape."""))
+                 Your inviting body language draws them in with no chance of escape."""))
 
 
 def main():
