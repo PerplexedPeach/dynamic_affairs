@@ -2541,7 +2541,7 @@ LIDAc.8 = {
 					scope:sex_transition = -17001600
 				}
 				# 17001600: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
-				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
+				# You unbalance [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
 				desc = sex_transition.17.16.666
 			}
 			triggered_desc = {
@@ -4105,7 +4105,7 @@ LIDAc.11 = {
 					scope:sex_transition = -17001600
 				}
 				# 17001600: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
-				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
+				# You unbalance [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
 				desc = sex_transition.17.16.666
 			}
 			triggered_desc = {
@@ -4532,7 +4532,7 @@ LIDAc.12 = {
 					scope:sex_transition = -17001600
 				}
 				# 17001600: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL failed
-				# You grab [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
+				# You unbalance [affairs_partner.GetFirstName] as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.\n
 				desc = sex_transition.17.16.666
 			}
 			triggered_desc = {
@@ -7089,7 +7089,7 @@ LIDAc.20 = {
 					scope:sex_transition = 35002010
 				}
 				# Putting Her in Her Place
-				# "D-Don't fill me!" she shakingly say as your pounding nearly drives her senseless.\n
+				# "D-Don't fill me!" she shakingly say as your pounding #italic barely#! permits her to speak.\n
 				desc = sex_transition.35.20.0
 			}
 			triggered_desc = {
@@ -7107,7 +7107,7 @@ LIDAc.20 = {
 					scope:sex_transition = -26003500
 				}
 				# 26003500: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_PRONE_BONE failed
-				# You try to physically tire her out with your intense motions, but she manages to stay on her feet.\n
+				# You expected to tire her out with your vigorous motions, but she manages to stay on her feet.\n
 				desc = sex_transition.26.35.666
 			}
 			triggered_desc = {
@@ -7125,7 +7125,7 @@ LIDAc.20 = {
 					scope:sex_transition = -32002600
 				}
 				# 32002600: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to stand up, but she pushes you down from above you.\n
+				# You try to regain some control by standin up, but she pushes you down from above.\n
 				desc = sex_transition.32.26.666
 			}
 			triggered_desc = {
@@ -7188,7 +7188,7 @@ LIDAc.20 = {
 					scope:sex_transition = -34002310
 				}
 				# 34002310: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_BREED failed
-				# You dig deeper into her, getting ready to breed her, but she seems to be wise to your plans and pushes back against you.\n
+				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
 				desc = sex_transition.34.23.666
 			}
 			triggered_desc = {
@@ -7197,7 +7197,7 @@ LIDAc.20 = {
 					scope:sex_transition = -35003500
 				}
 				# 35003500: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE failed
-				# You don't quite manage to keep up your pace and control.\n
+				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moands distracting you just enough for her to make a move.\n
 				desc = sex_transition.35.35.666
 			}
 			triggered_desc = {
@@ -7206,7 +7206,7 @@ LIDAc.20 = {
 					scope:sex_transition = -35002310
 				}
 				# 35002310: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED failed
-				# You dig deeper into her, getting ready to breed her, but she seems to be wise to your plans and pushes back against you.\n
+				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
 				desc = sex_transition.35.23.666
 			}
 		}
@@ -7536,7 +7536,7 @@ LIDAc.19 = {
 					scope:sex_transition = 30001910
 				}
 				# Fingering from Behind
-				# You can't hold on much longer, but manage to cum on her groin, dangerously close to her pussy.\n
+				# You can't hold on much longer, but manage to cum on her groin, #italic dangerously#! close to her entrance.\n
 				desc = sex_transition.30.19.0
 			}
 			triggered_desc = {
@@ -7957,7 +7957,7 @@ LIDAc.21 = {
 					scope:sex_transition = -26003500
 				}
 				# 26003500: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_PRONE_BONE failed
-				# You try to physically tire her out with your intense motions, but she manages to stay on her feet.\n
+				# You expected to tire her out with your vigorous motions, but she manages to stay on her feet.\n
 				desc = sex_transition.26.35.666
 			}
 			triggered_desc = {
@@ -7975,7 +7975,7 @@ LIDAc.21 = {
 					scope:sex_transition = -32002600
 				}
 				# 32002600: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to stand up, but she pushes you down from above you.\n
+				# You try to regain some control by standin up, but she pushes you down from above.\n
 				desc = sex_transition.32.26.666
 			}
 			triggered_desc = {
@@ -8323,7 +8323,7 @@ LIDAc.22 = {
 					scope:sex_transition = -32002600
 				}
 				# 32002600: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to stand up, but she pushes you down from above you.\n
+				# You try to regain some control by standin up, but she pushes you down from above.\n
 				desc = sex_transition.32.26.666
 			}
 			triggered_desc = {
@@ -8634,7 +8634,7 @@ LIDAc.23 = {
 					scope:sex_transition = 34002310
 				}
 				# Missionary
-				# Your rod gets even harder as you reach her deepest spot, #bold drowning#! her thoughts in euphoria.\n
+				# Your rod gets even harder as your climax approaches, [affairs_partner.GetFirstName] #bold moaning loudly#! as her muscles #dom lock up#!.\n
 				desc = sex_transition.34.23.0
 			}
 			triggered_desc = {
@@ -8643,7 +8643,7 @@ LIDAc.23 = {
 					scope:sex_transition = 35002310
 				}
 				# Putting Her in Her Place
-				# Your rod gets even harder as you reach her deepest spot, #bold drowning#! her thoughts in euphoria.\n
+				# Your rod gets even harder as your climax approaches, [affairs_partner.GetFirstName] #bold moaning loudly#! as her muscles #dom lock up#!.\n
 				desc = sex_transition.35.23.0
 			}
 			triggered_desc = {
@@ -8661,7 +8661,7 @@ LIDAc.23 = {
 					scope:sex_transition = -34002310
 				}
 				# 34002310: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_BREED failed
-				# You dig deeper into her, getting ready to breed her, but she seems to be wise to your plans and pushes back against you.\n
+				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
 				desc = sex_transition.34.23.666
 			}
 			triggered_desc = {
@@ -8670,7 +8670,7 @@ LIDAc.23 = {
 					scope:sex_transition = -35003500
 				}
 				# 35003500: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE failed
-				# You don't quite manage to keep up your pace and control.\n
+				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moands distracting you just enough for her to make a move.\n
 				desc = sex_transition.35.35.666
 			}
 			triggered_desc = {
@@ -8679,7 +8679,7 @@ LIDAc.23 = {
 					scope:sex_transition = -35002310
 				}
 				# 35002310: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED failed
-				# You dig deeper into her, getting ready to breed her, but she seems to be wise to your plans and pushes back against you.\n
+				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
 				desc = sex_transition.35.23.666
 			}
 		}
