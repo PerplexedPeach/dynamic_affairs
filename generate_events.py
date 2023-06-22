@@ -1182,9 +1182,9 @@ def define_sex_events_fm(es: EventMap):
                    Option(EventsSex.FM_COWGIRL, OptionCategory.DOM,
                           "Roll with him and get on top",
                           transition_text=f"""
-                              You grab {THEM} as he's recovering from a thrust and push him sideways with all your strength, landing on top of him.""",
+                              You unbalance {THEM} as he's recovering from a thrust and push him sideways with all your strength, landing on top of him.""",
                           failed_transition_text=f"""
-                              You grab {THEM} as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.
+                              You unbalance {THEM} as he's recovering from a thrust and manage to get on your side, but he grabs and puts you back down.
                               """),
                    Option(EventsSex.FM_MISSIONARY, OptionCategory.SUB,
                           "Keep your legs up",
@@ -1265,7 +1265,7 @@ def define_sex_events_fm(es: EventMap):
 
 
 def define_sex_events_mf(es: EventMap):
-    # TODO adapt the writing to the MF perspective (they are copied from F/M)
+    # TODO improve the writing of the MF perspective (they are copied from F/M)
     es.add(Sex(EventsSex.MF_WHIP_TEASE, "Whip Tease",
                stam_cost_1=1, stam_cost_2=0,
                root_gender=MALE, partner_gender=FEMALE,
@@ -1880,8 +1880,8 @@ def define_sex_events_mf(es: EventMap):
                           "cum all over her groin",
                           subdom_sub=0,
                           transition_text=f"""
-                              You can't hold on much longer, but manage to cum on her groin, dangerously close to
-                              her pussy.""",
+                              You can't hold on much longer, but manage to cum on her groin, #italic dangerously#! close to
+                              her entrance.""",
                           failed_transition_text=f"""
                               You can't hold on much longer, and want to cum on her groin, but she clamps down on your
                               rod before you manage to do so."""
@@ -1899,7 +1899,7 @@ def define_sex_events_mf(es: EventMap):
                    hard to stay on her feet.
                    \\n\\n""",
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-                   "You're my bitch now," you punctuate with a resounding spank on her ass.
+                   "You're #bold mine#! now," you punctuate with a resounding spank on her ass.
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -20", f"""
                    "Is that all?" She manages to get out in between your thrusts, taunting and teasing you.
@@ -1916,16 +1916,16 @@ def define_sex_events_mf(es: EventMap):
                           "Fuck her mouth instead",
                           subdom_sub=0,
                           transition_text=f"""
-                              You drop her to her knees, replacing the hole you are thrusting into without
+                              She drops to her knees, replacing the hole you are thrusting into without
                               breaking your rhythm.
                               """,
                           ),
                    Option(EventsSex.MF_STANDING_FUCKED_FROM_BEHIND, OptionCategory.DOM,
                           "Continue plowing her",
                           transition_text=f"""
-                              She accepts your invasion, each thrust making it harder and harder for her to pull away 
-                              and form coherent thoughts. Instead, her mind is filled with a pink haze, 
-                              urging her to just accept the pleasure of being used like a piece of meat.
+                              She accepts your invasion, each thrust making it harder and harder for her to stay upright
+                              or even #italic speak#!. Instead, her breaths become even more laboured as her
+                              slit gets even #bold wetter#!.
                               """,
                           failed_transition_text=f"""
                               You continue pistoning her from behind, but through various means, she disrupts your
@@ -1936,12 +1936,12 @@ def define_sex_events_mf(es: EventMap):
                           "Plow her face down",
                           dom_success_adjustment=-10,
                           transition_text=f"""
-                              Through your intense motions, you weaken her legs and she falls to the floor.
+                              Through vigorous motions you tire her out, managing to bring her to the floor.
                               Immediately following her down, you take advantage of the situation to
                               #dom dominate#! her. 
                               """,
                           failed_transition_text=f"""
-                              You try to physically tire her out with your intense motions, but she manages to
+                              You expected to tire her out with your vigorous motions, but she manages to
                               stay on her feet.
                           """
                           ),
@@ -1965,31 +1965,30 @@ def define_sex_events_mf(es: EventMap):
                root_become_more_sub_chance=10,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
-                   You lie down as {THEM}'s hips hungrily dance around your shaft, #bold shaking#! with pleasure.
+                   You #sub lie#! down as {THEM} hungrily moves around your shaft, her cheeks #bold shaking#! with each bounce.
                    """, TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                   You are a bit uncomfortable giving her such a position of control, but you are mollified by your
-                   pleasure for now.
+                   To think you're so fully under her control... this #dom demands#! retribution!
                    """), TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
-                   You are content giving her a position of control, simply focusing on your own pleasure.
+                   You're #sub hers#! to do with as she pleases... and you #italic love#! the view.
                    """),
                                  ),
                options=(
                    Option(EventsSex.MF_REVERSE_COWGIRL, OptionCategory.SUB,
                           "Let her continue riding you",
                           transition_text=f"""
-                              She continues riding you, with you powerlessly lying under her.""",
+                              She continues riding your rod as you lie under her.""",
                           ),
                    Option(EventsSex.MF_COWGIRL, OptionCategory.SUB,
                           "Let her turn around and ride you",
                           transition_text=f"""
-                              She turns around, meeting your gaze as she continues riding you.""",
+                              She turns around, meeting your gaze as she continues riding.""",
                           ),
                    Option(EventsSex.MF_STANDING_FUCKED_FROM_BEHIND, OptionCategory.DOM,
                           "Stand up and take her from behind",
                           transition_text=f"""
                               You stand up, taking a more active role in fucking her.""",
                           failed_transition_text=f"""
-                              You try to stand up, but she pushes you down from above you.
+                              You try to regain some control by standin up, but she pushes you down from above.
                           """
                           ),
                    Option(EventsSex.MF_PRONE_BONE, OptionCategory.DOM,
@@ -2027,21 +2026,19 @@ def define_sex_events_mf(es: EventMap):
                root_become_more_sub_chance=10,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
-                   You look in {THEM}'s eyes as she vigorously rides you, your member under her complete control as 
+                   You look in {THEM}'s eyes as she vigorously rides you, your member under her complete #sub control#! as 
                    she focuses exclusively on satisfying herself. \\n
                    """, TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                   You are waiting for an opportunity to #dom turn the tables#! on her when she becomes too focused on her own
-                   pleasure to worry about your moves.
+                   You can't help but be amused as you think of #bold everything#! you'll #dom do to her#! once you're back in control.
                    """), TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
-                   You indulge in #sub giving up control#! of your pleasure to her, 
-                   focusing on the sensations she is giving you.
+                   You indulge in #sub giving up control#!, the dance of her hips atop your groin being pleasure enough.
                    """),
                                  ),
                options=(
                    Option(EventsSex.MF_COWGIRL, OptionCategory.SUB,
                           "Let her continue riding you",
                           transition_text=f"""
-                              She continues riding you, your rod madly bouncing from wall to wall inside her as if attempting to escape.""",
+                              She continues riding you, your rod madly bouncing from wall to wall inside her.""",
                           ),
                    Option(EventsSex.MF_REVERSE_COWGIRL, OptionCategory.SUB,
                           "Let her turn around and ride you",
@@ -2096,18 +2093,18 @@ def define_sex_events_mf(es: EventMap):
                desc=ComposedDesc(f"""
                    She lies on her back in front of you, legs straddling your shoulders, 
                    each of your vigorous thrusts slapping loudly against her cheeks as
-                   waves of pleasure course through her core. You have almost complete control over her body
+                   you pound her from above. You have almost complete control over her body
                    """,
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                     and you wish you didn't have to set the pace."""),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-                    and you #dom relish#! that it feels this good"""), "."
+                    and you #dom relish#! every moment"""), "."
                                  ),
                options=(
                    Option(EventsSex.MF_COWGIRL, OptionCategory.SUB,
                           "Let her climb on top",
                           transition_text=f"""
-                              She grabs you as you're recovering from a thrust and push you sideways with all her 
+                              She unbalances you as you're recovering from a thrust and pushes you sideways with all her 
                               strength, landing on top of you.""",
                           ),
                    Option(EventsSex.MF_MISSIONARY, OptionCategory.DOM,
@@ -2133,11 +2130,11 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_CREAMPIE_BREED, OptionCategory.DOM,
                           "#italic Fill her to the brim#!",
                           transition_text=f"""
-                              Your rod gets even harder as you reach her deepest spot, #bold drowning#! 
-                              her thoughts in euphoria.""",
+                              Your rod gets even harder as your climax approaches, {THEM} #bold moaning 
+                              loudly#! as her muscles #dom lock up#!.""",
                           failed_transition_text=f"""
-                              You dig deeper into her, getting ready to breed her, but she seems to be wise to
-                              your plans and pushes back against you.
+                              Your rod gets even harder as your climax approaches, but at the last moment
+                              your rod #italic slips#! out.
                           """
                           ),
                )))
@@ -2148,16 +2145,15 @@ def define_sex_events_mf(es: EventMap):
                animation_left=FLIRTATION_LEFT, animation_right=FLIRTATION_LEFT,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
-                   You kneel behind her, with her face down and legs closed while you thrust deep in her moist womb. 
-                   The room echoes with the sound of
-                   #bold you clapping her cheeks#! as each #italic ravaging#! stroke sends 
-                   #dom paralyzing#! jolts of pleasure through her whole being. \\n\\n
-                   You are in complete control of her body and mind
+                   {THEM} is face down with her legs closed as you thrust deep in her moist womb,
+                   the #bold clapping of her cheeks#! entrancingly echoing in your ears as each of your #dom ravaging#!
+                   strokes jiggles her shapes. \\n\\n
+                   She's all #bold yours#!... 
                    """,
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
-                    and you are unfamiliar with having so much control."""),
+                    and it feels #sub strange#! to be in this position."""),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-                    and you #dom love#! putting her in her place"""), "."
+                    and you #dom love#! it."""), "."
                                  ),
                options=(
                    Option(EventsSex.MF_MISSIONARY, OptionCategory.SUB,
@@ -2165,7 +2161,7 @@ def define_sex_events_mf(es: EventMap):
                           transition_text=f"""
                               She finds an opening between your thrusts and manage to roll in place, 
                               her body now facing yours,
-                              but you quickly spreads her legs to remove any obstacles to your prick.""",
+                              but you quickly spreads her legs and continue ploughing her.""",
                           ),
                    Option(EventsSex.MF_STANDING_FUCKED_FROM_BEHIND, OptionCategory.SUB,
                           "Let her get up",
@@ -2177,26 +2173,25 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsSex.MF_PRONE_BONE, OptionCategory.DOM,
                           "Keep #bold mercilessly plowing#! her",
                           transition_text=f"""
-                              The immense warmth of you pounding her to the core makes her body melt as her mind is 
-                              #dom flooded with heat#!.
+                              You relentlessly keep pounding {THEM}, her loud moans betraying just how #italic lost#! in ecstasy she is.
                               """,
                           failed_transition_text=f"""
-                              You don't quite manage to keep up your pace and control.
+                              You relentlessly keep pounding {THEM}, her loud moands distracting you just enough for her to make a move.
                           """
                           ),
                    Option(EventsCum.MF_PULL_OUT_CUM_ON_ASS, OptionCategory.SUB,
                           "Pull out and cum on her ass",
                           transition_text=f"""
-                              "D-Don't fill me!" she shakingly say as your pounding nearly drives her senseless.""",
+                              "D-Don't fill me!" she shakingly say as your pounding #italic barely#! permits her to speak.""",
                           ),
                    Option(EventsCum.MF_CREAMPIE_BREED, OptionCategory.DOM,
                           "#italic Fill her to the brim#!",
                           transition_text=f"""
-                              Your rod gets even harder as you reach her deepest spot, #bold drowning#! 
-                              her thoughts in euphoria.""",
+                              Your rod gets even harder as your climax approaches, {THEM} #bold moaning 
+                              loudly#! as her muscles #dom lock up#!.""",
                           failed_transition_text=f"""
-                              You dig deeper into her, getting ready to breed her, but she seems to be wise to
-                              your plans and pushes back against you.
+                              Your rod gets even harder as your climax approaches, but at the last moment
+                              your rod #italic slips#! out.
                           """
                           ),
                )))
@@ -2482,8 +2477,8 @@ def define_cum_events_fm(es: EventMap):
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                    Your body is brimming with anticipation as you softly say: "Y-you can do it again if you want". You #bold #sub want#!#! him to do it again, \\n"""),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-                   Is the #dom privilege#! of experiencing your body not enough?! How #dom dare#! he release inside you whenever he wishes
-                    like in some #italic random wench?!#!"""),
+                   Is the #dom privilege#! of experiencing your body not enough?! How #dom dare#! he release #bold inside#! you whenever he wishes
+                    like in #italic some random wench?!#!"""),
                                  ),
                ))
     es.add(Cum(EventsCum.FM_CREAMPIE_ON_TOP, "Cherry on Top",
@@ -2529,7 +2524,7 @@ def define_cum_events_fm(es: EventMap):
                    """You lie there panting, a white sliver dripping from your #sub conquered#! slit as his seed #bold fills#! your womb.""",
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                    He plowed you like a cheap whore, his pounding intensifying as he filled you up and you had with #sub no say#! in it.
-                    Are you so irresistible that he couldn't help but cum inside """),
+                    Are you so irresistible that he couldn't help himself """),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB} \n {NOT} = {{ {HAS_TRAIT} ={PREGNANT} }}", f"""
                    or is he #italic trying#! to breed you? Either way, you #sub love#! the feeling.""", ),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB} \n {HAS_TRAIT} = {PREGNANT}", f"""
@@ -2568,8 +2563,8 @@ def define_cum_events_fm(es: EventMap):
                    \\n\\nAs if getting fucked like a cheap whore wasn't enough, he even #warning seeded#! you like you're just some servant girl at a feast! 
                    """, ),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {NOT} = {{ {HAS_TRAIT} ={PREGNANT} }}", f"""
-                   To enjoy the warmth of your womb is an #italic unrivaled privilege#!,
-                    how #S #dom dare#!#! he demand more by trying to #S mate with you!?#!
+                   To enjoy the warmth of your loins is an #italic unrivaled privilege#!,
+                    how #S #dom dare#!#! he demand more by trying to #S claim your womb!?#!
                    """, ),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {HAS_TRAIT} = {PREGNANT}", f"""
                    Were you not already with child, {THEM} might've #S bred#! you - and you #S #dom loathe#!#! the thought.
@@ -2596,7 +2591,7 @@ def define_cum_events_fm(es: EventMap):
                terminal_option=Option(None, OptionCategory.OTHER, "No need to clean up, it's #bold all#! inside you"),
                desc=ComposedDesc(f"""
                    As you feel {THEM} close to finishing you clasp around him, each tense twitch of his rod keeping him #dom locked#!
-                    inside as he #S fully#! unloads his hot load in your womb.
+                    inside as he #S fully#! unloads his loins in your womb.
                    \\n\\n
                     """,
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
@@ -2609,7 +2604,7 @@ def define_cum_events_fm(es: EventMap):
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                    You're not usually this assertive, but you #bold #dom yearned#!#! to keep his warmth #sub inside you.#!"""),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-                   Did he think you'd let him have his way with your body just for fun? #dom Fool.#!""")
+                   Did he think you'd let him have his way with your body #italic just#! for fun? #dom Fool.#!""")
                                  )
                ))
 
@@ -2852,7 +2847,7 @@ def define_cum_events_mf(es: EventMap):
                animation_left=WORRY, animation_right=PERSONALITY_BOLD,
                terminal_option=Option(None, OptionCategory.OTHER, "Admire the view"),
                desc=ComposedDesc(f"""
-                   "Ugh," you grunt as as you plunge to the hilt, your rod wildly throbbing inside her.
+                   "Ugh," you grunt as you plunge to the hilt, your rod wildly throbbing inside her.
                     You look down just in time to see a white contour remain on her lips as your load overflows around your rod, dripping down her thighs.""",
 
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
@@ -2874,8 +2869,8 @@ def define_cum_events_mf(es: EventMap):
                    "What are you doing?!" {THEM} says, shocked at your brazen behaviour. This may not have been #italic quite#! what she was expecting...
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
-                   "Is the #dom privilege#! of experiencing my body not enough?!" {THEM} says "How #dom dare#! you release inside me
-                    like in some #italic random wench?!#!"""),
+                   "Is the #dom privilege#! of experiencing my body not enough?!" {THEM} says "How #dom dare#! you release #bold inside#! me
+                    like in #italic some random wench?!#!"""),
 
                                  """\\n\\nShe's left standing as your seed #dom seeps#! out of her slit, her body seeming #italic pleased#! at the warmth within. \\n\\n""",
                                  ),
@@ -2915,18 +2910,18 @@ def define_cum_events_mf(es: EventMap):
                preg_chance_2=PREGNANCY_CHANCE * 1.5,
                animation_left=PERSONALITY_BOLD, animation_right=WORRY,
                terminal_option=Option(None, OptionCategory.OTHER,
-                                      "Feel his seed trickle from your slit for the rest of the day"),
+                                      "Watch a singular thin line trickle from her slit"),
                desc=ComposedDesc(
                    f"""
-                    You grunt loudly, a wave of utter relief passing through your whole being as you unload in her, pushing your seed further in
-                     with each deep thrust - you feel a #bold warmth#! coat your rod as you lie loins deep inside {THEM}.
+                    You grunt loudly, a wave of utter relief passing through your whole being as you unload your seed inside {THEM}, pushing deeper and deeper
+                     with each vigorous thrust - you are #italic exhausted#!, but #dom satisfied#!.
                    \\n\\n
                     """,
                    """She lies there panting, a white sliver dripping from her #dom conquered#! slit as your seed #italic trickles#! from her womb.""",
 
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
-                   You're uncertain what came over you as you take in that you tried to #S mate with her#!.
-                    If she wanted your seed she would've #sub taken#! it, not have you #dom force# it in! \\n"""),
+                   You're uncertain what came over you as you take in that you tried to #S claim her womb#!.
+                    She didn't #sub take#! your seed... you #dom forced# it in! \\n"""),
                    TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }} \n {NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}",
                                  f"""
                    For a moment your mind wanders to ponder the possible consequences, but the #S bliss#! clears out any such thoughts."""),
@@ -3151,8 +3146,8 @@ def define_first_events(es: EventMap):
                  leaving and soon you two are the only ones left in the chamber. "Is there something
                  you need?" she asks amicably.
                  \\n\\n
-                 Instead of answering you let your clothes rest in a revealing way and make
-                 an effort to highlight it. You saunter closer to her and see an inviting amusement in 
+                 Instead of answering you let your clothes rest in a revealing way, making
+                 an effort to be charming. You saunter closer to her and see an inviting amusement in 
                  her eyes, "You, my Lady."
                  """))
     es.add(First(EventsFirst.MF_MEETING_WITH_PRISONER, "Taste of Heaven in Hell",
@@ -3162,10 +3157,10 @@ def define_first_events(es: EventMap):
                  desc=f"""
                  You descend to {THEM}'s cell without much ceremony.
                  \\n\\n
-                 "You're here again," she says reluctantly. Worried, she says#weak (?)#! "Are you going to take me again?"
+                 "You're here again," she says reluctantly. Visibly worried, she says#weak (?)#! "Are you going to take me again?"
                  \\n\\n
-                 For a moment you ponder the reason why you have come again, but memories of your past encounters with {THEM} soon #italic flood#!
-                 your mind and banish any stray thoughts you may have had.
+                 For a moment you stop to ponder the reason you are doing this, but memories of your past encounters
+                 with {THEM} soon #italic flood#! your mind and banish any stray thoughts you may have had.
                  \\n\\n
                  Focusing on what's about to transpire, you approach her."""))
     es.add(First(EventsFirst.MF_MEETING_WITH_PRISONER_INITIAL, "The Sweetest Torture",
