@@ -2822,14 +2822,14 @@ def define_cum_events_mf(es: EventMap):
                desc=ComposedDesc(f"""
                    You stops yourself mere inches from {THEM}'s groin before you release, coating her hips and holes with a thick layer of white. 
                    \\n\\n
-                   Your can feel her body's warmth with the #sub tip#! of your rod.""",
+                   Your can feel her body's warmth with the #italic tip#! of your rod.""",
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
                    \\n\\n"Pardon me, {THEM_FULL_REGNAL}!", you say while quickly aiding in cleaning her up.
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                    \\n\\n"This was fun", you says as you run your hand across {THEM} shapes before dressing.
                    """),
-                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
+                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
                    \\n\\n"Let's do more next time", you says as you #S hungrily#! #dom smack her on the ass#!. 
                    """),
 
@@ -2883,7 +2883,7 @@ def define_cum_events_mf(es: EventMap):
                animation_left=SHOCK, animation_right=FLIRTATION_LEFT,
                terminal_option=Option(None, OptionCategory.OTHER, "Watch the silky threads hang from her slit"),
                desc=ComposedDesc(f"""
-                   You grunt when {THEM}'s slit fully swallows your rod as your muscles lock up with each surge of warmth you unload in her.
+                   You grunt as {THEM}'s slit fully swallows your rod, your muscles locking up with each surge of warmth you unload in her.
                    \\n\\n 
                    """,
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
@@ -2910,7 +2910,7 @@ def define_cum_events_mf(es: EventMap):
                preg_chance_2=PREGNANCY_CHANCE * 1.5,
                animation_left=PERSONALITY_BOLD, animation_right=WORRY,
                terminal_option=Option(None, OptionCategory.OTHER,
-                                      "Watch a singular thin line trickle from her slit"),
+                                      "Watch a singular string hang from her slit"),
                desc=ComposedDesc(
                    f"""
                     You grunt loudly, a wave of utter relief passing through your whole being as you unload your seed inside {THEM}, pushing deeper and deeper
@@ -2938,7 +2938,7 @@ def define_cum_events_mf(es: EventMap):
                    "What have you done, {ME_NAME}?!", she says in absolute awe at you brazenness.
                    """),
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
-                   "Leave, #dom fool#!" {THEM} say #warning furiously#! while kicking you away from her slit.
+                   "Leave, #dom fool#!" {THEM} says #warning furiously#! while kicking you away from her slit.
                    """),
 
                ),

@@ -7708,7 +7708,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						scope:subdom <= -10
+						scope:subdom >= 10
 					}
 					desc = LIDAc.19.desc.3
 				}
