@@ -18245,7 +18245,7 @@ LIDAs.25 = {
 					scope:sex_transition = -26002110
 				}
 				# 26002110: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.26.21.666
 			}
 		}
@@ -20810,7 +20810,7 @@ LIDAs.27 = {
 					scope:sex_transition = -26002110
 				}
 				# 26002110: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.26.21.666
 			}
 		}
@@ -23485,7 +23485,7 @@ LIDAs.29 = {
 					scope:sex_transition = -33002110
 				}
 				# 33002110: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.33.21.666
 			}
 		}
@@ -25365,7 +25365,7 @@ LIDAs.26 = {
 					scope:sex_transition = -26002110
 				}
 				# 26002110: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.26.21.666
 			}
 			triggered_desc = {
@@ -25374,7 +25374,7 @@ LIDAs.26 = {
 					scope:sex_transition = -32002600
 				}
 				# 32002600: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to regain some control by standin up, but she pushes you down from above.\n
+				# You try to regain some control by standing up, but she stays firmly atop you.\n
 				desc = sex_transition.32.26.666
 			}
 			triggered_desc = {
@@ -25392,7 +25392,7 @@ LIDAs.26 = {
 					scope:sex_transition = -32002110
 				}
 				# 32002110: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.32.21.666
 			}
 			triggered_desc = {
@@ -26293,7 +26293,7 @@ LIDAs.32 = {
 					scope:sex_transition = -32002600
 				}
 				# 32002600: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to regain some control by standin up, but she pushes you down from above.\n
+				# You try to regain some control by standing up, but she stays firmly atop you.\n
 				desc = sex_transition.32.26.666
 			}
 			triggered_desc = {
@@ -26311,7 +26311,7 @@ LIDAs.32 = {
 					scope:sex_transition = -32002110
 				}
 				# 32002110: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.32.21.666
 			}
 			triggered_desc = {
@@ -26338,7 +26338,7 @@ LIDAs.32 = {
 					scope:sex_transition = -33002110
 				}
 				# 33002110: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.33.21.666
 			}
 		}
@@ -27162,7 +27162,7 @@ LIDAs.33 = {
 					scope:sex_transition = -32002600
 				}
 				# 32002600: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to regain some control by standin up, but she pushes you down from above.\n
+				# You try to regain some control by standing up, but she stays firmly atop you.\n
 				desc = sex_transition.32.26.666
 			}
 			triggered_desc = {
@@ -27180,7 +27180,7 @@ LIDAs.33 = {
 					scope:sex_transition = -32002110
 				}
 				# 32002110: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.32.21.666
 			}
 			triggered_desc = {
@@ -27207,7 +27207,7 @@ LIDAs.33 = {
 					scope:sex_transition = -33002110
 				}
 				# 33002110: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.33.21.666
 			}
 			triggered_desc = {
@@ -28085,7 +28085,7 @@ LIDAs.34 = {
 					scope:sex_transition = -33002110
 				}
 				# 33002110: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.33.21.666
 			}
 			triggered_desc = {
@@ -28838,7 +28838,7 @@ LIDAs.35 = {
 					scope:sex_transition = -26002110
 				}
 				# 26002110: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.26.21.666
 			}
 			triggered_desc = {
@@ -28847,7 +28847,7 @@ LIDAs.35 = {
 					scope:sex_transition = -32002600
 				}
 				# 32002600: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to regain some control by standin up, but she pushes you down from above.\n
+				# You try to regain some control by standing up, but she stays firmly atop you.\n
 				desc = sex_transition.32.26.666
 			}
 			triggered_desc = {
@@ -28865,7 +28865,7 @@ LIDAs.35 = {
 					scope:sex_transition = -32002110
 				}
 				# 32002110: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
 				desc = sex_transition.32.21.666
 			}
 			triggered_desc = {
