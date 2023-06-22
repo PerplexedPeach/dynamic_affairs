@@ -1358,7 +1358,7 @@ def define_sex_events_mf(es: EventMap):
                Leveraging her weight, she pins you against a wall and slides a knee up your leg. 
                You can feel your face flush as she presses against your bulge. 
                \\n\\n
-               Tracing her fingers against thin fabric, she works her way to your trouser and pull your staff free. 
+               Tracing her fingers against thin fabric, she works her way to your trouser and pulls your staff free. 
                It twitches at the brisk air and her warm hands.""",
                options=(
                    Option(EventsSex.MF_HANDJOB, OptionCategory.SUB,
@@ -1953,9 +1953,9 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_CREAMPIE_REGULAR, OptionCategory.DOM,
                           "#bold Fill her#! with your seed",
                           transition_text=f"""
-                              Feeling little resistance from her body, you prepare to leave a hot, sticky gift inside.""",
+                              Feeling little resistance from her body, you prepare to plant your seed inside.""",
                           failed_transition_text=f"""
-                              {THEM} resists your attempt to leave a hot, sticky gift inside.
+                              {THEM} eludes your attempt to plant your seed inside her.
                           """
                           ),
                )))
@@ -2014,9 +2014,9 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_CREAMPIE_REGULAR, OptionCategory.DOM,
                           "#bold Fill her#! with your seed",
                           transition_text=f"""
-                              Feeling little resistance from her body, you prepare to leave a hot, sticky gift inside.""",
+                              Feeling little resistance from her body, you prepare to plant your seed inside.""",
                           failed_transition_text=f"""
-                              {THEM} resists your attempt to leave a hot, sticky gift inside.
+                              {THEM} eludes your attempt to plant your seed inside her.
                           """
                           ),
                )))
@@ -2078,9 +2078,9 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_CREAMPIE_REGULAR, OptionCategory.DOM,
                           "#bold Fill her#! with your seed",
                           transition_text=f"""
-                              Feeling little resistance from her body, you prepare to leave a hot, sticky gift inside.""",
+                              Feeling little resistance from her body, you prepare to plant your seed inside.""",
                           failed_transition_text=f"""
-                              {THEM} resists your attempt to leave a hot, sticky gift inside.
+                              {THEM} eludes your attempt to plant your seed inside her.
                           """
                           ),
                )))

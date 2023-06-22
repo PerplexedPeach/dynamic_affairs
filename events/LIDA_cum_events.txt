@@ -7116,7 +7116,7 @@ LIDAc.20 = {
 					scope:sex_transition = -26002110
 				}
 				# 26002110: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
 				desc = sex_transition.26.21.666
 			}
 			triggered_desc = {
@@ -7143,7 +7143,7 @@ LIDAc.20 = {
 					scope:sex_transition = -32002110
 				}
 				# 32002110: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
 				desc = sex_transition.32.21.666
 			}
 			triggered_desc = {
@@ -7170,7 +7170,7 @@ LIDAc.20 = {
 					scope:sex_transition = -33002110
 				}
 				# 33002110: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
 				desc = sex_transition.33.21.666
 			}
 			triggered_desc = {
@@ -7921,7 +7921,7 @@ LIDAc.21 = {
 					scope:sex_transition = 26002110
 				}
 				# Standing Fuck from Behind
-				# Feeling little resistance from her body, you prepare to leave a hot, sticky gift inside.\n
+				# Feeling little resistance from her body, you prepare to plant your seed inside.\n
 				desc = sex_transition.26.21.0
 			}
 			triggered_desc = {
@@ -7930,7 +7930,7 @@ LIDAc.21 = {
 					scope:sex_transition = 32002110
 				}
 				# Ride Facing Away
-				# Feeling little resistance from her body, you prepare to leave a hot, sticky gift inside.\n
+				# Feeling little resistance from her body, you prepare to plant your seed inside.\n
 				desc = sex_transition.32.21.0
 			}
 			triggered_desc = {
@@ -7939,7 +7939,7 @@ LIDAc.21 = {
 					scope:sex_transition = 33002110
 				}
 				# Ride Facing Them
-				# Feeling little resistance from her body, you prepare to leave a hot, sticky gift inside.\n
+				# Feeling little resistance from her body, you prepare to plant your seed inside.\n
 				desc = sex_transition.33.21.0
 			}
 			triggered_desc = {
@@ -7966,7 +7966,7 @@ LIDAc.21 = {
 					scope:sex_transition = -26002110
 				}
 				# 26002110: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
 				desc = sex_transition.26.21.666
 			}
 			triggered_desc = {
@@ -7993,7 +7993,7 @@ LIDAc.21 = {
 					scope:sex_transition = -32002110
 				}
 				# 32002110: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
 				desc = sex_transition.32.21.666
 			}
 			triggered_desc = {
@@ -8020,7 +8020,7 @@ LIDAc.21 = {
 					scope:sex_transition = -33002110
 				}
 				# 33002110: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
 				desc = sex_transition.33.21.666
 			}
 		}
@@ -8341,7 +8341,7 @@ LIDAc.22 = {
 					scope:sex_transition = -32002110
 				}
 				# 32002110: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
 				desc = sex_transition.32.21.666
 			}
 			triggered_desc = {
@@ -8368,7 +8368,7 @@ LIDAc.22 = {
 					scope:sex_transition = -33002110
 				}
 				# 33002110: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
-				# [affairs_partner.GetFirstName] resists your attempt to leave a hot, sticky gift inside.\n
+				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
 				desc = sex_transition.33.21.666
 			}
 		}
