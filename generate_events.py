@@ -2753,7 +2753,7 @@ def define_cum_events_mf(es: EventMap):
                                   you hear and #sub audible gulp#! as she takes it all down.
                                  \\n\\n""",
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                   #dom Using#! her like she's just a warm throat to be plesaed by felt #S great#!. Maybe you'll do it again.
+                   #dom Using#! her like she's just a warm throat to be pleased by felt #S great#!. Maybe you'll do it again.
                    """, ),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
                    You're not sure #italic where#! this brutality you displayed came from.
@@ -2767,7 +2767,7 @@ def define_cum_events_mf(es: EventMap):
                animation_left=BEG, animation_right=DISMISSAL,
                terminal_option=Option(None, OptionCategory.OTHER, "Leave yearning and frustrated"),
                desc=ComposedDesc(f"""
-                   You arche your back as you're clearly about to to climax, but are interrupt by {THEM} firmly grabbing and holding your
+                   You arch your back as you're clearly about to to climax, but are interrupt by {THEM} firmly grabbing and holding your
                    shaft close to your body. Even if you wanted to, #S and you do#!, you cannot physically cannot release your seed.
                    "Did I say you could cum?" {THEM} cruelly intones as she grasps your balls with your other hand.
                    \\n\\n
@@ -2886,7 +2886,7 @@ def define_cum_events_mf(es: EventMap):
                root_become_more_sub_chance=30,
                preg_chance_2=PREGNANCY_CHANCE,
                animation_left=SHOCK, animation_right=FLIRTATION_LEFT,
-               terminal_option=Option(None, OptionCategory.OTHER, "Wipe the silky threads hanging from your slit"),
+               terminal_option=Option(None, OptionCategory.OTHER, "Wipe the silky threads hanging from her slit"),
                desc=ComposedDesc(f"""
                    You grunt when {THEM}'s slit fully swallows your rod as your muscles lock up with each surge of warmth you unload in her.
                    \\n\\n 
@@ -2915,7 +2915,7 @@ def define_cum_events_mf(es: EventMap):
                preg_chance_2=PREGNANCY_CHANCE * 1.5,
                animation_left=PERSONALITY_BOLD, animation_right=WORRY,
                terminal_option=Option(None, OptionCategory.OTHER,
-                                      "Feel his seed trickle from your slit for the rest of the day"),
+                                      "Imagine your seed trickling from her slit for the rest of the day"),
                desc=ComposedDesc(
                    f"""
                     You grunt loudly, a wave of utter relief passing through your whole being as you unload in her, pushing your seed further in
