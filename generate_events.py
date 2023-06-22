@@ -2707,11 +2707,10 @@ def define_cum_events_mf(es: EventMap):
                    "You taste so good, {ME_FULL_REGNAL}" she says while licking your rod clean as you enjoy the epilogue of your session.
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
-                    "You look great", you remark with a smile as {THEM} opens her eyes slightly flustered.
+                    "That was great", you remark with a smile as {THEM} catches her breath, slightly flustered.
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
-                   "Impudent knave!" she objects while wiping across her eyeline. "At least have the decency
-                   to aim away from my eyes!" she says #italic visibly irritated#!.
+                   "Impudent knave!" she says while coughing, obviously disliking the taste. "Is that any way to treat #italic a lady?!#!"
                    """),
                                  """\\n\\n""",
 
@@ -2721,7 +2720,7 @@ def define_cum_events_mf(es: EventMap):
                                  TriggeredDesc(
                                      f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }} \n {NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}",
                                      f"""
-                    "You look great", you remark with a smile as {THEM} opens her eyes slightly flustered.
+                    "Let's do this again sometime", you say with a smile.
                    """),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
                     "Pardon me, {THEM_FULL_REGNAL}, I shouldn't have!" you say as you abruptly remove yourself from her mouth."""),
@@ -2772,7 +2771,7 @@ def define_cum_events_mf(es: EventMap):
                    How #dom dare#! she deny you satisfaction. You will not forget this offense.
                    """, ),
                                  TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", f"""
-                   "Please, I'm so close," you whine.
+                   "Please, I'm so close," you #sub whine#!.
                    """, ),
                                  """"You didn't earn it today," she responds, "maybe next time #dom if you please me.#!"""
 
@@ -2830,7 +2829,7 @@ def define_cum_events_mf(es: EventMap):
                    \\n\\n"This was fun", you says as you run your hand across {THEM} shapes before dressing.
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-                   \\n\\n"Let's do more next time", you says as you #S hungrily#! #dom smack her on the ass#!. 
+                   \\n\\n"Let's do more next time", you says as you #S hungrily#! #dom smack her ass#!. 
                    """),
 
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
@@ -2858,7 +2857,7 @@ def define_cum_events_mf(es: EventMap):
                    "It just felt so good!", you say, almost as if trying to justify yourself. \\n\\n
                    """),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-                   "Let's do this again sometime", you say as you #sub smack her ass#! before finally pulling out. \\n\\n
+                   "Let's do this again sometime", you say as you #dom smack her ass#! before finally pulling out. \\n\\n
                    """),
 
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
