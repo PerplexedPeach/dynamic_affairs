@@ -1358,7 +1358,7 @@ def define_sex_events_mf(es: EventMap):
                Leveraging her weight, she pins you against a wall and slides a knee up your leg. 
                You can feel your face flush as she presses against your bulge. 
                \\n\\n
-               Tracing her fingers against thin fabric, she works her way to his trouser and pull your staff free. 
+               Tracing her fingers against thin fabric, she works her way to your trouser and pull your staff free. 
                It twitches at the brisk air and her warm hands.""",
                options=(
                    Option(EventsSex.MF_HANDJOB, OptionCategory.SUB,
@@ -1953,9 +1953,9 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_CREAMPIE_REGULAR, OptionCategory.DOM,
                           "#bold Fill her#! with your seed",
                           transition_text=f"""
-                              Feeling little resistance from her body, you prepare to leave her a hot, sticky gift.""",
+                              Feeling little resistance from her body, you prepare to leave a hot, sticky gift inside.""",
                           failed_transition_text=f"""
-                              Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.
+                              {THEM} resists your attempt to leave a hot, sticky gift inside.
                           """
                           ),
                )))
@@ -1988,7 +1988,7 @@ def define_sex_events_mf(es: EventMap):
                           transition_text=f"""
                               You stand up, taking a more active role in fucking her.""",
                           failed_transition_text=f"""
-                              You try to regain some control by standin up, but she pushes you down from above.
+                              You try to regain some control by standing up, but she stays firmly atop you.
                           """
                           ),
                    Option(EventsSex.MF_PRONE_BONE, OptionCategory.DOM,
@@ -2007,16 +2007,16 @@ def define_sex_events_mf(es: EventMap):
                               She puts her hand on your rod, guiding you to unload on her cheeks instead""",
                           ),
                    Option(EventsCum.MF_CREAMPIE_ON_TOP, OptionCategory.SUB,
-                          "Have your seed #sub extracted#! while pinned down",
+                          "Have your seed #sub taken#! while pinned down",
                           transition_text=f"""
-                              Your body tightens as you release inside her while she pins you down.""",
+                              Your body locks up as you are #bold forced#! to release inside.""",
                           ),
                    Option(EventsCum.MF_CREAMPIE_REGULAR, OptionCategory.DOM,
                           "#bold Fill her#! with your seed",
                           transition_text=f"""
-                              Feeling little resistance from her body, you prepare to leave her a hot, sticky gift.""",
+                              Feeling little resistance from her body, you prepare to leave a hot, sticky gift inside.""",
                           failed_transition_text=f"""
-                              Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.
+                              {THEM} resists your attempt to leave a hot, sticky gift inside.
                           """
                           ),
                )))
@@ -2078,9 +2078,9 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_CREAMPIE_REGULAR, OptionCategory.DOM,
                           "#bold Fill her#! with your seed",
                           transition_text=f"""
-                              Feeling little resistance from her body, you prepare to leave her a hot, sticky gift.""",
+                              Feeling little resistance from her body, you prepare to leave a hot, sticky gift inside.""",
                           failed_transition_text=f"""
-                              Feeling resistance from her, you decide against leaving her a hot, sticky gift inside.
+                              {THEM} resists your attempt to leave a hot, sticky gift inside.
                           """
                           ),
                )))
