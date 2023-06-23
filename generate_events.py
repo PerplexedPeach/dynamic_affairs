@@ -2563,7 +2563,7 @@ def define_cum_events_fm(es: EventMap):
                    \\n\\nAs if getting fucked like a cheap whore wasn't enough, he even #warning seeded#! you like you're just some servant girl at a feast! 
                    """, ),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {NOT} = {{ {HAS_TRAIT} ={PREGNANT} }}", f"""
-                   To enjoy the warmth of your loins is an #italic unrivaled privilege#!,
+                   To enjoy the warmth of being inside you is an #italic unrivaled privilege#!,
                     how #S #dom dare#!#! he demand more by trying to #S claim your womb!?#!
                    """, ),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {HAS_TRAIT} = {PREGNANT}", f"""
