@@ -1894,9 +1894,8 @@ def define_sex_events_mf(es: EventMap):
                root_removes_clothes=True, partner_removes_clothes=True,
                animation_left=SCHADENFREUDE, animation_right=BOW_3,
                desc=ComposedDesc(f"""
-                   Sometimes bending {THEM} over and sometimes #dom pulling her hair to keep her upright#!, 
-                   she is at your mercy. Your vigorous thrusts make her knees weak and she finds it
-                   hard to stay on her feet.
+                   Sometimes bending {THEM} over and sometimes #dom pulling her hair to keep her upright#!,
+                   she is at your mercy as your vigorous thrusts almost make her legs give out.
                    \\n\\n""",
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
                    "You're #bold mine#! now," you punctuate with a resounding spank on her ass.
@@ -1909,8 +1908,8 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsSex.MF_BLOWJOB_DOM, OptionCategory.SUB,
                           "Let her pleasure you with her mouth",
                           transition_text=f"""
-                              She pulls away and recover a bit of control by placing her hands and mouth around
-                              your cock, where she can easily decide what to do with it.""",
+                              She pulls away, placing her hands and mouth around your cock,
+                              where she can easily decide what to do with it.""",
                           ),
                    Option(EventsSex.MF_BLOWJOB_SUB, OptionCategory.SUB,
                           "Fuck her mouth instead",
@@ -1923,13 +1922,12 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsSex.MF_STANDING_FUCKED_FROM_BEHIND, OptionCategory.DOM,
                           "Continue plowing her",
                           transition_text=f"""
-                              She accepts your invasion, each thrust making it harder and harder for her to stay upright
-                              or even #italic speak#!. Instead, her breaths become even more laboured as her
-                              slit gets even #bold wetter#!.
+                              She is #dom overhelmed#! by your invasion, each thrust making it harder and harder for her
+                              to even #italic speak#!. You can hear her breaths become even more laboured as she gets even #bold wetter#!.
                               """,
                           failed_transition_text=f"""
-                              You continue pistoning her from behind, but through various means, she disrupts your
-                              rhythm.
+                              You continue pistoning her from behind, but she finds a moment where you strength
+                              falters and manages to regain some control.
                           """
                           ),
                    Option(EventsSex.MF_PRONE_BONE, OptionCategory.DOM,
@@ -1941,8 +1939,7 @@ def define_sex_events_mf(es: EventMap):
                               #dom dominate#! her. 
                               """,
                           failed_transition_text=f"""
-                              You expected to tire her out with your vigorous motions, but she manages to
-                              stay on her feet.
+                              You expected to tire her out with your vigorous motions, but the #italic opposite#! happens.
                           """
                           ),
                    Option(EventsCum.MF_PULL_OUT_CUM_ON_ASS, OptionCategory.SUB,

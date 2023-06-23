@@ -7098,7 +7098,7 @@ LIDAc.20 = {
 					scope:sex_transition = -26002600
 				}
 				# 26002600: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You continue pistoning her from behind, but through various means, she disrupts your rhythm.\n
+				# You continue pistoning her from behind, but she finds a moment where you strength falters and manages to regain some control.\n
 				desc = sex_transition.26.26.666
 			}
 			triggered_desc = {
@@ -7107,7 +7107,7 @@ LIDAc.20 = {
 					scope:sex_transition = -26003500
 				}
 				# 26003500: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_PRONE_BONE failed
-				# You expected to tire her out with your vigorous motions, but she manages to stay on her feet.\n
+				# You expected to tire her out with your vigorous motions, but the #italic opposite#! happens.\n
 				desc = sex_transition.26.35.666
 			}
 			triggered_desc = {
@@ -7948,7 +7948,7 @@ LIDAc.21 = {
 					scope:sex_transition = -26002600
 				}
 				# 26002600: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You continue pistoning her from behind, but through various means, she disrupts your rhythm.\n
+				# You continue pistoning her from behind, but she finds a moment where you strength falters and manages to regain some control.\n
 				desc = sex_transition.26.26.666
 			}
 			triggered_desc = {
@@ -7957,7 +7957,7 @@ LIDAc.21 = {
 					scope:sex_transition = -26003500
 				}
 				# 26003500: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_PRONE_BONE failed
-				# You expected to tire her out with your vigorous motions, but she manages to stay on her feet.\n
+				# You expected to tire her out with your vigorous motions, but the #italic opposite#! happens.\n
 				desc = sex_transition.26.35.666
 			}
 			triggered_desc = {

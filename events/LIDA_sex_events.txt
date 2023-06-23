@@ -18092,7 +18092,7 @@ LIDAs.25 = {
 					scope:sex_transition = 26002500
 				}
 				# Standing Fuck from Behind
-				# She pulls away and recover a bit of control by placing her hands and mouth around your cock, where she can easily decide what to do with it.\n
+				# She pulls away, placing her hands and mouth around your cock, where she can easily decide what to do with it.\n
 				desc = sex_transition.26.25.0
 			}
 			triggered_desc = {
@@ -18227,7 +18227,7 @@ LIDAs.25 = {
 					scope:sex_transition = -26002600
 				}
 				# 26002600: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You continue pistoning her from behind, but through various means, she disrupts your rhythm.\n
+				# You continue pistoning her from behind, but she finds a moment where you strength falters and manages to regain some control.\n
 				desc = sex_transition.26.26.666
 			}
 			triggered_desc = {
@@ -18236,7 +18236,7 @@ LIDAs.25 = {
 					scope:sex_transition = -26003500
 				}
 				# 26003500: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_PRONE_BONE failed
-				# You expected to tire her out with your vigorous motions, but she manages to stay on her feet.\n
+				# You expected to tire her out with your vigorous motions, but the #italic opposite#! happens.\n
 				desc = sex_transition.26.35.666
 			}
 			triggered_desc = {
@@ -20792,7 +20792,7 @@ LIDAs.27 = {
 					scope:sex_transition = -26002600
 				}
 				# 26002600: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You continue pistoning her from behind, but through various means, she disrupts your rhythm.\n
+				# You continue pistoning her from behind, but she finds a moment where you strength falters and manages to regain some control.\n
 				desc = sex_transition.26.26.666
 			}
 			triggered_desc = {
@@ -20801,7 +20801,7 @@ LIDAs.27 = {
 					scope:sex_transition = -26003500
 				}
 				# 26003500: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_PRONE_BONE failed
-				# You expected to tire her out with your vigorous motions, but she manages to stay on her feet.\n
+				# You expected to tire her out with your vigorous motions, but the #italic opposite#! happens.\n
 				desc = sex_transition.26.35.666
 			}
 			triggered_desc = {
@@ -25194,7 +25194,7 @@ LIDAs.26 = {
 					scope:sex_transition = 26002600
 				}
 				# Standing Fuck from Behind
-				# She accepts your invasion, each thrust making it harder and harder for her to stay upright or even #italic speak#!. Instead, her breaths become even more laboured as her slit gets even #bold wetter#!.\n
+				# She is #dom overhelmed#! by your invasion, each thrust making it harder and harder for her to even #italic speak#!. You can hear her breaths become even more laboured as she gets even #bold wetter#!.\n
 				desc = sex_transition.26.26.0
 			}
 			triggered_desc = {
@@ -25347,7 +25347,7 @@ LIDAs.26 = {
 					scope:sex_transition = -26002600
 				}
 				# 26002600: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You continue pistoning her from behind, but through various means, she disrupts your rhythm.\n
+				# You continue pistoning her from behind, but she finds a moment where you strength falters and manages to regain some control.\n
 				desc = sex_transition.26.26.666
 			}
 			triggered_desc = {
@@ -25356,7 +25356,7 @@ LIDAs.26 = {
 					scope:sex_transition = -26003500
 				}
 				# 26003500: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_PRONE_BONE failed
-				# You expected to tire her out with your vigorous motions, but she manages to stay on her feet.\n
+				# You expected to tire her out with your vigorous motions, but the #italic opposite#! happens.\n
 				desc = sex_transition.26.35.666
 			}
 			triggered_desc = {
@@ -28820,7 +28820,7 @@ LIDAs.35 = {
 					scope:sex_transition = -26002600
 				}
 				# 26002600: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You continue pistoning her from behind, but through various means, she disrupts your rhythm.\n
+				# You continue pistoning her from behind, but she finds a moment where you strength falters and manages to regain some control.\n
 				desc = sex_transition.26.26.666
 			}
 			triggered_desc = {
@@ -28829,7 +28829,7 @@ LIDAs.35 = {
 					scope:sex_transition = -26003500
 				}
 				# 26003500: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_PRONE_BONE failed
-				# You expected to tire her out with your vigorous motions, but she manages to stay on her feet.\n
+				# You expected to tire her out with your vigorous motions, but the #italic opposite#! happens.\n
 				desc = sex_transition.26.35.666
 			}
 			triggered_desc = {
