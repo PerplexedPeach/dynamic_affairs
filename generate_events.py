@@ -1965,7 +1965,7 @@ def define_sex_events_mf(es: EventMap):
                root_become_more_sub_chance=10,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
-                   You #sub lie#! down as {THEM} hungrily moves around your shaft, her cheeks #bold shaking#! with each bounce.
+                   You #sub lie#! down as {THEM} hungrily dances atop your shaft, her cheeks #bold shaking#! with each bounce.
                    """, TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
                    To think you're so fully under her control... this #dom demands#! retribution!
                    """), TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
@@ -1988,7 +1988,7 @@ def define_sex_events_mf(es: EventMap):
                           transition_text=f"""
                               You stand up, taking a more active role in fucking her.""",
                           failed_transition_text=f"""
-                              You try to regain some control by standing up, but she stays firmly atop you.
+                              You try to regain some control by standing up, but she stays firmly on top of you.
                           """
                           ),
                    Option(EventsSex.MF_PRONE_BONE, OptionCategory.DOM,
@@ -2031,7 +2031,7 @@ def define_sex_events_mf(es: EventMap):
                    """, TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
                    You can't help but be amused as you think of #bold everything#! you'll #dom do to her#! once you're back in control.
                    """), TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
-                   You indulge in #sub giving up control#!, the dance of her hips atop your groin being pleasure enough.
+                   You indulge in #sub giving up control#!, the movement of her hips atop your groin being pleasure enough.
                    """),
                                  ),
                options=(

@@ -25374,7 +25374,7 @@ LIDAs.26 = {
 					scope:sex_transition = -32002600
 				}
 				# 32002600: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to regain some control by standing up, but she stays firmly atop you.\n
+				# You try to regain some control by standing up, but she stays firmly on top of you.\n
 				desc = sex_transition.32.26.666
 			}
 			triggered_desc = {
@@ -26293,7 +26293,7 @@ LIDAs.32 = {
 					scope:sex_transition = -32002600
 				}
 				# 32002600: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to regain some control by standing up, but she stays firmly atop you.\n
+				# You try to regain some control by standing up, but she stays firmly on top of you.\n
 				desc = sex_transition.32.26.666
 			}
 			triggered_desc = {
@@ -27162,7 +27162,7 @@ LIDAs.33 = {
 					scope:sex_transition = -32002600
 				}
 				# 32002600: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to regain some control by standing up, but she stays firmly atop you.\n
+				# You try to regain some control by standing up, but she stays firmly on top of you.\n
 				desc = sex_transition.32.26.666
 			}
 			triggered_desc = {
@@ -28847,7 +28847,7 @@ LIDAs.35 = {
 					scope:sex_transition = -32002600
 				}
 				# 32002600: EventsSex.MF_REVERSE_COWGIRL -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
-				# You try to regain some control by standing up, but she stays firmly atop you.\n
+				# You try to regain some control by standing up, but she stays firmly on top of you.\n
 				desc = sex_transition.32.26.666
 			}
 			triggered_desc = {
