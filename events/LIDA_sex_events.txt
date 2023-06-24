@@ -17472,8 +17472,8 @@ LIDAs.24 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = -1
-			STAMINA_COST_2 = 0.5
+			STAMINA_COST_1 = 1
+			STAMINA_COST_2 = -0.5
 		}
 		save_scope_value_as = {
 			name = finisher_stamina
@@ -24445,8 +24445,8 @@ LIDAs.30 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = 0.5
-			STAMINA_COST_2 = -1
+			STAMINA_COST_1 = -0.5
+			STAMINA_COST_2 = 1
 		}
 		save_scope_value_as = {
 			name = finisher_stamina

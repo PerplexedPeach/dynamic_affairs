@@ -1418,7 +1418,7 @@ def define_sex_events_mf(es: EventMap):
                               Your dick twitches between her thighs and pussy, your climax imminent.""")
                )))
     es.add(Sex(EventsSex.MF_HANDJOB, "Handjob",
-               stam_cost_1=-1, stam_cost_2=0.5,
+               stam_cost_1=1, stam_cost_2=-0.5,
                root_gender=MALE, partner_gender=FEMALE,
                root_become_more_sub_chance=5,
                root_removes_clothes=True,
@@ -1836,7 +1836,7 @@ def define_sex_events_mf(es: EventMap):
                           )
                )))
     es.add(Sex(EventsSex.MF_STANDING_FINGERED_FROM_BEHIND, "Fingering from Behind",
-               stam_cost_1=0.5, stam_cost_2=-1,
+               stam_cost_1=-0.5, stam_cost_2=1,
                root_gender=MALE, partner_gender=FEMALE,
                root_become_more_dom_chance=5,
                partner_removes_clothes=True,

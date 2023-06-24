@@ -262,9 +262,8 @@ TODO
 - models
 	- nose piercing
 	- lip piercing
-
-- fix options having duplicated localization leading to missing/incorrect text shown
-
+- character interaction
+- sub/dom tolerance level and stress when going outside tolerance	
 
 - scene with someone peddling piercings that increase sensitivity
 	- dom not receiving satisfying orgasms from slave
