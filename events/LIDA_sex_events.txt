@@ -2418,7 +2418,7 @@ LIDAs.7 = {
 							trigger = {
 								NOT = { has_trait = lida_dom }
 							}
-							desc = sex_transition.7.7.0
+							desc = sex_transition.7.7.20
 						}
 					}
 					desc = {
@@ -2426,10 +2426,10 @@ LIDAs.7 = {
 							trigger = {
 								has_trait = lida_dom
 							}
-							desc = sex_transition.7.7.1
+							desc = sex_transition.7.7.21
 						}
 					}
-					desc = sex_transition.7.7.2
+					desc = sex_transition.7.7.22
 				}
 			}
 			triggered_desc = {
@@ -2439,7 +2439,7 @@ LIDAs.7 = {
 				}
 				# 7000510: EventsSex.FM_HANDJOB -> EventsCum.FM_RUINED_ORGASM failed
 				# You move to stop his climax, but realize that he did not last as long as you expected.\n
-				desc = sex_transition.7.5.666
+				desc = sex_transition.CUM.7.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -2448,7 +2448,7 @@ LIDAs.7 = {
 				}
 				# 7000110: EventsSex.FM_HANDJOB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# You place your palm below his cock, ready to receive his seed, but his tip seems to be pointing elsewhere...\n
-				desc = sex_transition.7.1.666
+				desc = sex_transition.CUM.7.1.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -2475,7 +2475,7 @@ LIDAs.7 = {
 				}
 				# 8000510: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.8.5.666
+				desc = sex_transition.CUM.8.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -2502,7 +2502,7 @@ LIDAs.7 = {
 				}
 				# 37000510: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.37.5.666
+				desc = sex_transition.CUM.37.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -2529,7 +2529,7 @@ LIDAs.7 = {
 				}
 				# 38000510: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.38.5.666
+				desc = sex_transition.CUM.38.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -2556,7 +2556,7 @@ LIDAs.7 = {
 				}
 				# 4000610: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition.4.6.666
+				desc = sex_transition.CUM.4.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -2583,7 +2583,7 @@ LIDAs.7 = {
 				}
 				# 14000610: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition.14.6.666
+				desc = sex_transition.CUM.14.6.666
 			}
 		}
 		triggered_desc = {
@@ -3418,7 +3418,7 @@ LIDAs.8 = {
 							trigger = {
 								NOT = { has_trait = lida_dom }
 							}
-							desc = sex_transition.7.7.0
+							desc = sex_transition.7.7.20
 						}
 					}
 					desc = {
@@ -3426,10 +3426,10 @@ LIDAs.8 = {
 							trigger = {
 								has_trait = lida_dom
 							}
-							desc = sex_transition.7.7.1
+							desc = sex_transition.7.7.21
 						}
 					}
-					desc = sex_transition.7.7.2
+					desc = sex_transition.7.7.22
 				}
 			}
 			triggered_desc = {
@@ -3439,7 +3439,7 @@ LIDAs.8 = {
 				}
 				# 7000510: EventsSex.FM_HANDJOB -> EventsCum.FM_RUINED_ORGASM failed
 				# You move to stop his climax, but realize that he did not last as long as you expected.\n
-				desc = sex_transition.7.5.666
+				desc = sex_transition.CUM.7.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -3448,7 +3448,7 @@ LIDAs.8 = {
 				}
 				# 7000110: EventsSex.FM_HANDJOB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# You place your palm below his cock, ready to receive his seed, but his tip seems to be pointing elsewhere...\n
-				desc = sex_transition.7.1.666
+				desc = sex_transition.CUM.7.1.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -3466,7 +3466,7 @@ LIDAs.8 = {
 				}
 				# 10000110: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
-				desc = sex_transition.10.1.666
+				desc = sex_transition.CUM.10.1.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -3511,7 +3511,7 @@ LIDAs.8 = {
 				}
 				# 12000610: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition.12.6.666
+				desc = sex_transition.CUM.12.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -3538,7 +3538,7 @@ LIDAs.8 = {
 				}
 				# 13000610: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition.13.6.666
+				desc = sex_transition.CUM.13.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -3565,7 +3565,7 @@ LIDAs.8 = {
 				}
 				# 9000810: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
-				desc = sex_transition.9.8.666
+				desc = sex_transition.CUM.9.8.666
 			}
 		}
 		triggered_desc = {
@@ -4397,7 +4397,7 @@ LIDAs.37 = {
 				}
 				# 8000510: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.8.5.666
+				desc = sex_transition.CUM.8.5.666
 			}
 		}
 		triggered_desc = {
@@ -5154,7 +5154,7 @@ LIDAs.38 = {
 				}
 				# 37000510: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.37.5.666
+				desc = sex_transition.CUM.37.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -5181,7 +5181,7 @@ LIDAs.38 = {
 				}
 				# 38000510: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.38.5.666
+				desc = sex_transition.CUM.38.5.666
 			}
 		}
 		triggered_desc = {
@@ -6009,7 +6009,7 @@ LIDAs.10 = {
 				}
 				# 8000510: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.8.5.666
+				desc = sex_transition.CUM.8.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -6036,7 +6036,7 @@ LIDAs.10 = {
 				}
 				# 37000510: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.37.5.666
+				desc = sex_transition.CUM.37.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -6063,7 +6063,7 @@ LIDAs.10 = {
 				}
 				# 38000510: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.38.5.666
+				desc = sex_transition.CUM.38.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -6081,7 +6081,7 @@ LIDAs.10 = {
 				}
 				# 10000110: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
-				desc = sex_transition.10.1.666
+				desc = sex_transition.CUM.10.1.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -6117,7 +6117,7 @@ LIDAs.10 = {
 				}
 				# 9000810: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
-				desc = sex_transition.9.8.666
+				desc = sex_transition.CUM.9.8.666
 			}
 		}
 		triggered_desc = {
@@ -6833,7 +6833,7 @@ LIDAs.11 = {
 				}
 				# 10000110: EventsSex.FM_BLOWJOB_SUB -> EventsCum.FM_HANDJOB_CUM_IN_HAND failed
 				# Try as you might, [affairs_partner.GetFirstName] stops you from pulling away.\n
-				desc = sex_transition.10.1.666
+				desc = sex_transition.CUM.10.1.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -6866,13 +6866,13 @@ LIDAs.11 = {
 			desc = sex_transition.11.11.0
 		}
 		desc = {
-			desc = LIDAs.11.desc.0
+			desc = LIDAs.11.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						NOT = { has_trait = lida_sub }
 					}
-					desc = LIDAs.11.desc.1
+					desc = LIDAs.11.desc.21
 				}
 			}
 			desc = {
@@ -6880,7 +6880,7 @@ LIDAs.11 = {
 					trigger = {
 						has_trait = lida_sub
 					}
-					desc = LIDAs.11.desc.2
+					desc = LIDAs.11.desc.22
 				}
 			}
 		}
@@ -7935,7 +7935,7 @@ LIDAs.14 = {
 				}
 				# 4000610: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition.4.6.666
+				desc = sex_transition.CUM.4.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -7962,7 +7962,7 @@ LIDAs.14 = {
 				}
 				# 14000610: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition.14.6.666
+				desc = sex_transition.CUM.14.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -8007,7 +8007,7 @@ LIDAs.14 = {
 				}
 				# 12000610: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition.12.6.666
+				desc = sex_transition.CUM.12.6.666
 			}
 		}
 		triggered_desc = {
@@ -8709,7 +8709,7 @@ LIDAs.12 = {
 				}
 				# 4000610: EventsSex.FM_ASS_TEASE -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition.4.6.666
+				desc = sex_transition.CUM.4.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -8736,7 +8736,7 @@ LIDAs.12 = {
 				}
 				# 14000610: EventsSex.FM_ASS_RUB -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is cumming too hard to control\n
-				desc = sex_transition.14.6.666
+				desc = sex_transition.CUM.14.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -8781,7 +8781,7 @@ LIDAs.12 = {
 				}
 				# 12000610: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition.12.6.666
+				desc = sex_transition.CUM.12.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -8808,7 +8808,7 @@ LIDAs.12 = {
 				}
 				# 13000610: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition.13.6.666
+				desc = sex_transition.CUM.13.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -8835,7 +8835,7 @@ LIDAs.12 = {
 				}
 				# 16000810: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition.16.8.666
+				desc = sex_transition.CUM.16.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -8844,7 +8844,7 @@ LIDAs.12 = {
 				}
 				# 16001010: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition.16.10.666
+				desc = sex_transition.CUM.16.10.666
 			}
 		}
 		triggered_desc = {
@@ -9829,7 +9829,7 @@ LIDAs.13 = {
 				}
 				# 12000610: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition.12.6.666
+				desc = sex_transition.CUM.12.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -9856,7 +9856,7 @@ LIDAs.13 = {
 				}
 				# 13000610: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition.13.6.666
+				desc = sex_transition.CUM.13.6.666
 			}
 		}
 		triggered_desc = {
@@ -10555,7 +10555,7 @@ LIDAs.9 = {
 							trigger = {
 								NOT = { has_trait = lida_dom }
 							}
-							desc = sex_transition.8.9.0
+							desc = sex_transition.8.9.20
 						}
 					}
 					desc = {
@@ -10563,10 +10563,10 @@ LIDAs.9 = {
 							trigger = {
 								has_trait = lida_dom
 							}
-							desc = sex_transition.8.9.1
+							desc = sex_transition.8.9.21
 						}
 					}
-					desc = sex_transition.8.9.2
+					desc = sex_transition.8.9.22
 				}
 			}
 			triggered_desc = {
@@ -10582,7 +10582,7 @@ LIDAs.9 = {
 							trigger = {
 								NOT = { has_trait = lida_dom }
 							}
-							desc = sex_transition.37.9.0
+							desc = sex_transition.37.9.20
 						}
 					}
 					desc = {
@@ -10590,10 +10590,10 @@ LIDAs.9 = {
 							trigger = {
 								has_trait = lida_dom
 							}
-							desc = sex_transition.37.9.1
+							desc = sex_transition.37.9.21
 						}
 					}
-					desc = sex_transition.37.9.2
+					desc = sex_transition.37.9.22
 				}
 			}
 			triggered_desc = {
@@ -10609,7 +10609,7 @@ LIDAs.9 = {
 							trigger = {
 								NOT = { has_trait = lida_dom }
 							}
-							desc = sex_transition.38.9.0
+							desc = sex_transition.38.9.20
 						}
 					}
 					desc = {
@@ -10617,10 +10617,10 @@ LIDAs.9 = {
 							trigger = {
 								has_trait = lida_dom
 							}
-							desc = sex_transition.38.9.1
+							desc = sex_transition.38.9.21
 						}
 					}
-					desc = sex_transition.38.9.2
+					desc = sex_transition.38.9.22
 				}
 			}
 			triggered_desc = {
@@ -10693,7 +10693,7 @@ LIDAs.9 = {
 				}
 				# 8000510: EventsSex.FM_BLOWJOB_DOM -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.8.5.666
+				desc = sex_transition.CUM.8.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -10720,7 +10720,7 @@ LIDAs.9 = {
 				}
 				# 37000510: EventsSex.FM_BLOWJOB_DOM_I -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.37.5.666
+				desc = sex_transition.CUM.37.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -10747,7 +10747,7 @@ LIDAs.9 = {
 				}
 				# 38000510: EventsSex.FM_BLOWJOB_DOM_II -> EventsCum.FM_RUINED_ORGASM failed
 				# As you try to pull back, he holds the back of your head with his hands.\n
-				desc = sex_transition.38.5.666
+				desc = sex_transition.CUM.38.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -10792,7 +10792,7 @@ LIDAs.9 = {
 				}
 				# 12000610: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition.12.6.666
+				desc = sex_transition.CUM.12.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -10819,7 +10819,7 @@ LIDAs.9 = {
 				}
 				# 13000610: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition.13.6.666
+				desc = sex_transition.CUM.13.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -10846,7 +10846,7 @@ LIDAs.9 = {
 				}
 				# 9000810: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
-				desc = sex_transition.9.8.666
+				desc = sex_transition.CUM.9.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -10873,7 +10873,7 @@ LIDAs.9 = {
 				}
 				# 15000810: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition.15.8.666
+				desc = sex_transition.CUM.15.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -10882,7 +10882,7 @@ LIDAs.9 = {
 				}
 				# 15001010: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition.15.10.666
+				desc = sex_transition.CUM.15.10.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -10909,7 +10909,7 @@ LIDAs.9 = {
 				}
 				# 18000810: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
-				desc = sex_transition.18.8.666
+				desc = sex_transition.CUM.18.8.666
 			}
 		}
 		triggered_desc = {
@@ -10926,7 +10926,7 @@ LIDAs.9 = {
 						trigger = {
 							NOT = { has_trait = lida_dom }
 						}
-						desc = sex_transition.8.9.0
+						desc = sex_transition.8.9.20
 					}
 				}
 				desc = {
@@ -10934,10 +10934,10 @@ LIDAs.9 = {
 						trigger = {
 							has_trait = lida_dom
 						}
-						desc = sex_transition.8.9.1
+						desc = sex_transition.8.9.21
 					}
 				}
-				desc = sex_transition.8.9.2
+				desc = sex_transition.8.9.22
 			}
 		}
 		triggered_desc = {
@@ -10954,7 +10954,7 @@ LIDAs.9 = {
 						trigger = {
 							NOT = { has_trait = lida_dom }
 						}
-						desc = sex_transition.37.9.0
+						desc = sex_transition.37.9.20
 					}
 				}
 				desc = {
@@ -10962,10 +10962,10 @@ LIDAs.9 = {
 						trigger = {
 							has_trait = lida_dom
 						}
-						desc = sex_transition.37.9.1
+						desc = sex_transition.37.9.21
 					}
 				}
-				desc = sex_transition.37.9.2
+				desc = sex_transition.37.9.22
 			}
 		}
 		triggered_desc = {
@@ -10982,7 +10982,7 @@ LIDAs.9 = {
 						trigger = {
 							NOT = { has_trait = lida_dom }
 						}
-						desc = sex_transition.38.9.0
+						desc = sex_transition.38.9.20
 					}
 				}
 				desc = {
@@ -10990,10 +10990,10 @@ LIDAs.9 = {
 						trigger = {
 							has_trait = lida_dom
 						}
-						desc = sex_transition.38.9.1
+						desc = sex_transition.38.9.21
 					}
 				}
-				desc = sex_transition.38.9.2
+				desc = sex_transition.38.9.22
 			}
 		}
 		triggered_desc = {
@@ -11047,13 +11047,13 @@ LIDAs.9 = {
 			desc = sex_transition.18.9.0
 		}
 		desc = {
-			desc = LIDAs.9.desc.0
+			desc = LIDAs.9.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						scope:subdom <= -20
 					}
-					desc = LIDAs.9.desc.1
+					desc = LIDAs.9.desc.21
 				}
 			}
 			desc = {
@@ -11061,7 +11061,7 @@ LIDAs.9 = {
 					trigger = {
 						scope:subdom >= 10
 					}
-					desc = LIDAs.9.desc.2
+					desc = LIDAs.9.desc.22
 				}
 			}
 		}
@@ -11801,7 +11801,7 @@ LIDAs.15 = {
 				}
 				# 12000610: EventsSex.FM_HOTDOG -> EventsCum.FM_ASS_TEASE_CUM_ON_ASS failed
 				# You try to guide his stream onto your cheeks, but he is climaxing too hard to control\n
-				desc = sex_transition.12.6.666
+				desc = sex_transition.CUM.12.6.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -11828,7 +11828,7 @@ LIDAs.15 = {
 				}
 				# 15000810: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition.15.8.666
+				desc = sex_transition.CUM.15.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -11837,7 +11837,7 @@ LIDAs.15 = {
 				}
 				# 15001010: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition.15.10.666
+				desc = sex_transition.CUM.15.10.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -11864,7 +11864,7 @@ LIDAs.15 = {
 				}
 				# 16000810: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition.16.8.666
+				desc = sex_transition.CUM.16.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -11873,7 +11873,7 @@ LIDAs.15 = {
 				}
 				# 16001010: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition.16.10.666
+				desc = sex_transition.CUM.16.10.666
 			}
 		}
 		triggered_desc = {
@@ -11907,13 +11907,13 @@ LIDAs.15 = {
 			desc = sex_transition.16.15.0
 		}
 		desc = {
-			desc = LIDAs.15.desc.0
+			desc = LIDAs.15.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						has_trait = lida_dom
 					}
-					desc = LIDAs.15.desc.1
+					desc = LIDAs.15.desc.21
 				}
 			}
 			desc = {
@@ -11921,7 +11921,7 @@ LIDAs.15 = {
 					trigger = {
 						has_trait = lida_sub
 					}
-					desc = LIDAs.15.desc.2
+					desc = LIDAs.15.desc.22
 				}
 			}
 		}
@@ -12739,7 +12739,7 @@ LIDAs.16 = {
 				}
 				# 15000810: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition.15.8.666
+				desc = sex_transition.CUM.15.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -12748,7 +12748,7 @@ LIDAs.16 = {
 				}
 				# 15001010: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition.15.10.666
+				desc = sex_transition.CUM.15.10.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -12775,7 +12775,7 @@ LIDAs.16 = {
 				}
 				# 16000810: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition.16.8.666
+				desc = sex_transition.CUM.16.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -12784,7 +12784,7 @@ LIDAs.16 = {
 				}
 				# 16001010: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition.16.10.666
+				desc = sex_transition.CUM.16.10.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -12802,7 +12802,7 @@ LIDAs.16 = {
 				}
 				# 17000810: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
-				desc = sex_transition.17.8.666
+				desc = sex_transition.CUM.17.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -12811,7 +12811,7 @@ LIDAs.16 = {
 				}
 				# 17001210: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition.17.12.666
+				desc = sex_transition.CUM.17.12.666
 			}
 		}
 		triggered_desc = {
@@ -12845,13 +12845,13 @@ LIDAs.16 = {
 			desc = sex_transition.17.16.0
 		}
 		desc = {
-			desc = LIDAs.16.desc.0
+			desc = LIDAs.16.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						has_trait = lida_dom
 					}
-					desc = LIDAs.16.desc.1
+					desc = LIDAs.16.desc.21
 				}
 			}
 			desc = {
@@ -12859,7 +12859,7 @@ LIDAs.16 = {
 					trigger = {
 						has_trait = lida_sub
 					}
-					desc = LIDAs.16.desc.2
+					desc = LIDAs.16.desc.22
 				}
 			}
 		}
@@ -13704,7 +13704,7 @@ LIDAs.17 = {
 				}
 				# 16000810: EventsSex.FM_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition.16.8.666
+				desc = sex_transition.CUM.16.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -13713,7 +13713,7 @@ LIDAs.17 = {
 				}
 				# 16001010: EventsSex.FM_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition.16.10.666
+				desc = sex_transition.CUM.16.10.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -13731,7 +13731,7 @@ LIDAs.17 = {
 				}
 				# 17000810: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
-				desc = sex_transition.17.8.666
+				desc = sex_transition.CUM.17.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -13740,7 +13740,7 @@ LIDAs.17 = {
 				}
 				# 17001210: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition.17.12.666
+				desc = sex_transition.CUM.17.12.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -13767,7 +13767,7 @@ LIDAs.17 = {
 				}
 				# 18000810: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
-				desc = sex_transition.18.8.666
+				desc = sex_transition.CUM.18.8.666
 			}
 		}
 		triggered_desc = {
@@ -13811,13 +13811,13 @@ LIDAs.17 = {
 			desc = sex_transition.18.17.0
 		}
 		desc = {
-			desc = LIDAs.17.desc.0
+			desc = LIDAs.17.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						has_trait = lida_sub
 					}
-					desc = LIDAs.17.desc.1
+					desc = LIDAs.17.desc.21
 				}
 			}
 			desc = {
@@ -13825,10 +13825,10 @@ LIDAs.17 = {
 					trigger = {
 						has_trait = lida_dom
 					}
-					desc = LIDAs.17.desc.2
+					desc = LIDAs.17.desc.22
 				}
 			}
-			desc = LIDAs.17.desc.3
+			desc = LIDAs.17.desc.23
 		}
 	}
 	immediate = {
@@ -14551,7 +14551,7 @@ LIDAs.18 = {
 				}
 				# 9000810: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Pull it out, [affairs_partner.GetFirstName]!", you manage to voice between his wild thrusts and loud groans, but your pleas falls on deaf ears.\n
-				desc = sex_transition.9.8.666
+				desc = sex_transition.CUM.9.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -14578,7 +14578,7 @@ LIDAs.18 = {
 				}
 				# 15000810: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# You put your hand on his rod, trying to guide him to cum on your cheeks instead, but are suddenly grabbed.\n
-				desc = sex_transition.15.8.666
+				desc = sex_transition.CUM.15.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -14587,7 +14587,7 @@ LIDAs.18 = {
 				}
 				# 15001010: EventsSex.FM_REVERSE_COWGIRL -> EventsCum.FM_CREAMPIE_ON_TOP failed
 				# Your body tightens as he begins to twitch inside you, but you lose control as he grabs your hips and pulls down on them.\n
-				desc = sex_transition.15.10.666
+				desc = sex_transition.CUM.15.10.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -14605,7 +14605,7 @@ LIDAs.18 = {
 				}
 				# 17000810: EventsSex.FM_MISSIONARY -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "Not inside!" you barely blurt out between moans and labored breaths, but your pleas falls on deaf ears.\n
-				desc = sex_transition.17.8.666
+				desc = sex_transition.CUM.17.8.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -14614,7 +14614,7 @@ LIDAs.18 = {
 				}
 				# 17001210: EventsSex.FM_MISSIONARY -> EventsCum.FM_CREAMPIE_KEEP failed
 				# You try to wrap your legs and arms around him, but his wild thrusting makes it impossible to hold on.\n
-				desc = sex_transition.17.12.666
+				desc = sex_transition.CUM.17.12.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -14641,7 +14641,7 @@ LIDAs.18 = {
 				}
 				# 18000810: EventsSex.FM_PRONE_BONE -> EventsCum.FM_PULL_OUT_CUM_ON_ASS failed
 				# "D-Don't fill me!" you shakingly say as his pounding nearly drives you senseless, but your pleas falls on deaf ears.\n
-				desc = sex_transition.18.8.666
+				desc = sex_transition.CUM.18.8.666
 			}
 		}
 		triggered_desc = {
@@ -14685,13 +14685,13 @@ LIDAs.18 = {
 			desc = sex_transition.18.18.0
 		}
 		desc = {
-			desc = LIDAs.18.desc.0
+			desc = LIDAs.18.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						has_trait = lida_sub
 					}
-					desc = LIDAs.18.desc.1
+					desc = LIDAs.18.desc.21
 				}
 			}
 			desc = {
@@ -14699,10 +14699,10 @@ LIDAs.18 = {
 					trigger = {
 						has_trait = lida_dom
 					}
-					desc = LIDAs.18.desc.2
+					desc = LIDAs.18.desc.22
 				}
 			}
-			desc = LIDAs.18.desc.3
+			desc = LIDAs.18.desc.23
 		}
 	}
 	immediate = {
@@ -17248,7 +17248,7 @@ LIDAs.24 = {
 				}
 				# 24001610: EventsSex.MF_HANDJOB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.24.16.666
+				desc = sex_transition.CUM.24.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -17266,7 +17266,7 @@ LIDAs.24 = {
 				}
 				# 25001410: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.25.14.666
+				desc = sex_transition.CUM.25.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -17275,7 +17275,7 @@ LIDAs.24 = {
 				}
 				# 25001610: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.25.16.666
+				desc = sex_transition.CUM.25.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -17293,7 +17293,7 @@ LIDAs.24 = {
 				}
 				# 40001410: EventsSex.MF_BLOWJOB_DOM_I -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.40.14.666
+				desc = sex_transition.CUM.40.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -17302,7 +17302,7 @@ LIDAs.24 = {
 				}
 				# 40001610: EventsSex.MF_BLOWJOB_DOM_I -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.40.16.666
+				desc = sex_transition.CUM.40.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -17320,7 +17320,7 @@ LIDAs.24 = {
 				}
 				# 41001410: EventsSex.MF_BLOWJOB_DOM_II -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.41.14.666
+				desc = sex_transition.CUM.41.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -17329,7 +17329,7 @@ LIDAs.24 = {
 				}
 				# 41001610: EventsSex.MF_BLOWJOB_DOM_II -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.41.16.666
+				desc = sex_transition.CUM.41.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -17347,7 +17347,7 @@ LIDAs.24 = {
 				}
 				# 22001910: EventsSex.MF_ASS_TEASE -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.22.19.666
+				desc = sex_transition.CUM.22.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -17365,7 +17365,7 @@ LIDAs.24 = {
 				}
 				# 31001910: EventsSex.MF_ASS_RUB -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.31.19.666
+				desc = sex_transition.CUM.31.19.666
 			}
 		}
 		triggered_desc = {
@@ -18138,7 +18138,7 @@ LIDAs.25 = {
 				}
 				# 24001610: EventsSex.MF_HANDJOB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.24.16.666
+				desc = sex_transition.CUM.24.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -18165,7 +18165,7 @@ LIDAs.25 = {
 				}
 				# 27001510: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB failed
 				# You plunge deep into her mouth to deposit your seed, but she manages to pull away before your release.\n
-				desc = sex_transition.27.15.666
+				desc = sex_transition.CUM.27.15.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -18174,7 +18174,7 @@ LIDAs.25 = {
 				}
 				# 27001610: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.27.16.666
+				desc = sex_transition.CUM.27.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -18201,7 +18201,7 @@ LIDAs.25 = {
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.29.19.666
+				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -18219,7 +18219,7 @@ LIDAs.25 = {
 				}
 				# 30001910: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.30.19.666
+				desc = sex_transition.CUM.30.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -18246,7 +18246,7 @@ LIDAs.25 = {
 				}
 				# 26002110: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.26.21.666
+				desc = sex_transition.CUM.26.21.666
 			}
 		}
 		triggered_desc = {
@@ -19047,7 +19047,7 @@ LIDAs.40 = {
 				}
 				# 25001410: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.25.14.666
+				desc = sex_transition.CUM.25.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -19056,7 +19056,7 @@ LIDAs.40 = {
 				}
 				# 25001610: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.25.16.666
+				desc = sex_transition.CUM.25.16.666
 			}
 		}
 		triggered_desc = {
@@ -19802,7 +19802,7 @@ LIDAs.41 = {
 				}
 				# 40001410: EventsSex.MF_BLOWJOB_DOM_I -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.40.14.666
+				desc = sex_transition.CUM.40.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -19811,7 +19811,7 @@ LIDAs.41 = {
 				}
 				# 40001610: EventsSex.MF_BLOWJOB_DOM_I -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.40.16.666
+				desc = sex_transition.CUM.40.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -19829,7 +19829,7 @@ LIDAs.41 = {
 				}
 				# 41001410: EventsSex.MF_BLOWJOB_DOM_II -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.41.14.666
+				desc = sex_transition.CUM.41.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -19838,7 +19838,7 @@ LIDAs.41 = {
 				}
 				# 41001610: EventsSex.MF_BLOWJOB_DOM_II -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.41.16.666
+				desc = sex_transition.CUM.41.16.666
 			}
 		}
 		triggered_desc = {
@@ -20691,7 +20691,7 @@ LIDAs.27 = {
 				}
 				# 25001410: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.25.14.666
+				desc = sex_transition.CUM.25.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -20700,7 +20700,7 @@ LIDAs.27 = {
 				}
 				# 25001610: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.25.16.666
+				desc = sex_transition.CUM.25.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -20718,7 +20718,7 @@ LIDAs.27 = {
 				}
 				# 40001410: EventsSex.MF_BLOWJOB_DOM_I -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.40.14.666
+				desc = sex_transition.CUM.40.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -20727,7 +20727,7 @@ LIDAs.27 = {
 				}
 				# 40001610: EventsSex.MF_BLOWJOB_DOM_I -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.40.16.666
+				desc = sex_transition.CUM.40.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -20745,7 +20745,7 @@ LIDAs.27 = {
 				}
 				# 41001410: EventsSex.MF_BLOWJOB_DOM_II -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.41.14.666
+				desc = sex_transition.CUM.41.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -20754,7 +20754,7 @@ LIDAs.27 = {
 				}
 				# 41001610: EventsSex.MF_BLOWJOB_DOM_II -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.41.16.666
+				desc = sex_transition.CUM.41.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -20781,7 +20781,7 @@ LIDAs.27 = {
 				}
 				# 27001510: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB failed
 				# You plunge deep into her mouth to deposit your seed, but she manages to pull away before your release.\n
-				desc = sex_transition.27.15.666
+				desc = sex_transition.CUM.27.15.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -20790,7 +20790,7 @@ LIDAs.27 = {
 				}
 				# 27001610: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.27.16.666
+				desc = sex_transition.CUM.27.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -20826,7 +20826,7 @@ LIDAs.27 = {
 				}
 				# 26002110: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.26.21.666
+				desc = sex_transition.CUM.26.21.666
 			}
 		}
 		triggered_desc = {
@@ -21609,7 +21609,7 @@ LIDAs.28 = {
 				}
 				# 27001510: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB failed
 				# You plunge deep into her mouth to deposit your seed, but she manages to pull away before your release.\n
-				desc = sex_transition.27.15.666
+				desc = sex_transition.CUM.27.15.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -21618,7 +21618,7 @@ LIDAs.28 = {
 				}
 				# 27001610: EventsSex.MF_BLOWJOB_SUB -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.27.16.666
+				desc = sex_transition.CUM.27.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -21651,13 +21651,13 @@ LIDAs.28 = {
 			desc = sex_transition.28.28.0
 		}
 		desc = {
-			desc = LIDAs.28.desc.0
+			desc = LIDAs.28.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						NOT = { has_trait = lida_sub }
 					}
-					desc = LIDAs.28.desc.1
+					desc = LIDAs.28.desc.21
 				}
 			}
 			desc = {
@@ -21665,7 +21665,7 @@ LIDAs.28 = {
 					trigger = {
 						has_trait = lida_sub
 					}
-					desc = LIDAs.28.desc.2
+					desc = LIDAs.28.desc.22
 				}
 			}
 		}
@@ -22702,7 +22702,7 @@ LIDAs.31 = {
 				}
 				# 22001910: EventsSex.MF_ASS_TEASE -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.22.19.666
+				desc = sex_transition.CUM.22.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -22720,7 +22720,7 @@ LIDAs.31 = {
 				}
 				# 31001910: EventsSex.MF_ASS_RUB -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.31.19.666
+				desc = sex_transition.CUM.31.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -22747,7 +22747,7 @@ LIDAs.31 = {
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.29.19.666
+				desc = sex_transition.CUM.29.19.666
 			}
 		}
 		triggered_desc = {
@@ -23411,7 +23411,7 @@ LIDAs.29 = {
 				}
 				# 22001910: EventsSex.MF_ASS_TEASE -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.22.19.666
+				desc = sex_transition.CUM.22.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -23429,7 +23429,7 @@ LIDAs.29 = {
 				}
 				# 31001910: EventsSex.MF_ASS_RUB -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.31.19.666
+				desc = sex_transition.CUM.31.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -23456,7 +23456,7 @@ LIDAs.29 = {
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.29.19.666
+				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -23474,7 +23474,7 @@ LIDAs.29 = {
 				}
 				# 30001910: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.30.19.666
+				desc = sex_transition.CUM.30.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -23501,7 +23501,7 @@ LIDAs.29 = {
 				}
 				# 33002110: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.33.21.666
+				desc = sex_transition.CUM.33.21.666
 			}
 		}
 		triggered_desc = {
@@ -24400,7 +24400,7 @@ LIDAs.30 = {
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.29.19.666
+				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -24418,7 +24418,7 @@ LIDAs.30 = {
 				}
 				# 30001910: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.30.19.666
+				desc = sex_transition.CUM.30.19.666
 			}
 		}
 		triggered_desc = {
@@ -25117,7 +25117,7 @@ LIDAs.26 = {
 							trigger = {
 								NOT = { has_trait = lida_dom }
 							}
-							desc = sex_transition.25.26.0
+							desc = sex_transition.25.26.20
 						}
 					}
 					desc = {
@@ -25125,10 +25125,10 @@ LIDAs.26 = {
 							trigger = {
 								has_trait = lida_dom
 							}
-							desc = sex_transition.25.26.1
+							desc = sex_transition.25.26.21
 						}
 					}
-					desc = sex_transition.25.26.2
+					desc = sex_transition.25.26.22
 				}
 			}
 			triggered_desc = {
@@ -25144,7 +25144,7 @@ LIDAs.26 = {
 							trigger = {
 								NOT = { has_trait = lida_dom }
 							}
-							desc = sex_transition.40.26.0
+							desc = sex_transition.40.26.20
 						}
 					}
 					desc = {
@@ -25152,10 +25152,10 @@ LIDAs.26 = {
 							trigger = {
 								has_trait = lida_dom
 							}
-							desc = sex_transition.40.26.1
+							desc = sex_transition.40.26.21
 						}
 					}
-					desc = sex_transition.40.26.2
+					desc = sex_transition.40.26.22
 				}
 			}
 			triggered_desc = {
@@ -25171,7 +25171,7 @@ LIDAs.26 = {
 							trigger = {
 								NOT = { has_trait = lida_dom }
 							}
-							desc = sex_transition.41.26.0
+							desc = sex_transition.41.26.20
 						}
 					}
 					desc = {
@@ -25179,10 +25179,10 @@ LIDAs.26 = {
 							trigger = {
 								has_trait = lida_dom
 							}
-							desc = sex_transition.41.26.1
+							desc = sex_transition.41.26.21
 						}
 					}
-					desc = sex_transition.41.26.2
+					desc = sex_transition.41.26.22
 				}
 			}
 			triggered_desc = {
@@ -25246,7 +25246,7 @@ LIDAs.26 = {
 				}
 				# 25001410: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.25.14.666
+				desc = sex_transition.CUM.25.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -25255,7 +25255,7 @@ LIDAs.26 = {
 				}
 				# 25001610: EventsSex.MF_BLOWJOB_DOM -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.25.16.666
+				desc = sex_transition.CUM.25.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -25273,7 +25273,7 @@ LIDAs.26 = {
 				}
 				# 40001410: EventsSex.MF_BLOWJOB_DOM_I -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.40.14.666
+				desc = sex_transition.CUM.40.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -25282,7 +25282,7 @@ LIDAs.26 = {
 				}
 				# 40001610: EventsSex.MF_BLOWJOB_DOM_I -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.40.16.666
+				desc = sex_transition.CUM.40.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -25300,7 +25300,7 @@ LIDAs.26 = {
 				}
 				# 41001410: EventsSex.MF_BLOWJOB_DOM_II -> EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM failed
 				# You aim your cock, preparing to deposit your load onto her tongue, but she brushes you away.\n
-				desc = sex_transition.41.14.666
+				desc = sex_transition.CUM.41.14.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -25309,7 +25309,7 @@ LIDAs.26 = {
 				}
 				# 41001610: EventsSex.MF_BLOWJOB_DOM_II -> EventsCum.MF_BLOWJOB_CUM_ON_FACE failed
 				# You pull her head away and to look up, preparing to to mark her face, but she pulls away in time.\n
-				desc = sex_transition.41.16.666
+				desc = sex_transition.CUM.41.16.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -25336,7 +25336,7 @@ LIDAs.26 = {
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.29.19.666
+				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -25354,7 +25354,7 @@ LIDAs.26 = {
 				}
 				# 30001910: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.30.19.666
+				desc = sex_transition.CUM.30.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -25381,7 +25381,7 @@ LIDAs.26 = {
 				}
 				# 26002110: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.26.21.666
+				desc = sex_transition.CUM.26.21.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -25408,7 +25408,7 @@ LIDAs.26 = {
 				}
 				# 32002110: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.32.21.666
+				desc = sex_transition.CUM.32.21.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -25426,7 +25426,7 @@ LIDAs.26 = {
 				}
 				# 35002310: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED failed
 				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
-				desc = sex_transition.35.23.666
+				desc = sex_transition.CUM.35.23.666
 			}
 		}
 		triggered_desc = {
@@ -25443,7 +25443,7 @@ LIDAs.26 = {
 						trigger = {
 							NOT = { has_trait = lida_dom }
 						}
-						desc = sex_transition.25.26.0
+						desc = sex_transition.25.26.20
 					}
 				}
 				desc = {
@@ -25451,10 +25451,10 @@ LIDAs.26 = {
 						trigger = {
 							has_trait = lida_dom
 						}
-						desc = sex_transition.25.26.1
+						desc = sex_transition.25.26.21
 					}
 				}
-				desc = sex_transition.25.26.2
+				desc = sex_transition.25.26.22
 			}
 		}
 		triggered_desc = {
@@ -25471,7 +25471,7 @@ LIDAs.26 = {
 						trigger = {
 							NOT = { has_trait = lida_dom }
 						}
-						desc = sex_transition.40.26.0
+						desc = sex_transition.40.26.20
 					}
 				}
 				desc = {
@@ -25479,10 +25479,10 @@ LIDAs.26 = {
 						trigger = {
 							has_trait = lida_dom
 						}
-						desc = sex_transition.40.26.1
+						desc = sex_transition.40.26.21
 					}
 				}
-				desc = sex_transition.40.26.2
+				desc = sex_transition.40.26.22
 			}
 		}
 		triggered_desc = {
@@ -25499,7 +25499,7 @@ LIDAs.26 = {
 						trigger = {
 							NOT = { has_trait = lida_dom }
 						}
-						desc = sex_transition.41.26.0
+						desc = sex_transition.41.26.20
 					}
 				}
 				desc = {
@@ -25507,10 +25507,10 @@ LIDAs.26 = {
 						trigger = {
 							has_trait = lida_dom
 						}
-						desc = sex_transition.41.26.1
+						desc = sex_transition.41.26.21
 					}
 				}
-				desc = sex_transition.41.26.2
+				desc = sex_transition.41.26.22
 			}
 		}
 		triggered_desc = {
@@ -25564,13 +25564,13 @@ LIDAs.26 = {
 			desc = sex_transition.35.26.0
 		}
 		desc = {
-			desc = LIDAs.26.desc.0
+			desc = LIDAs.26.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						scope:subdom >= 10
 					}
-					desc = LIDAs.26.desc.1
+					desc = LIDAs.26.desc.21
 				}
 			}
 			desc = {
@@ -25578,7 +25578,7 @@ LIDAs.26 = {
 					trigger = {
 						scope:subdom <= -20
 					}
-					desc = LIDAs.26.desc.2
+					desc = LIDAs.26.desc.22
 				}
 			}
 		}
@@ -26300,7 +26300,7 @@ LIDAs.32 = {
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
 				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
-				desc = sex_transition.29.19.666
+				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -26327,7 +26327,7 @@ LIDAs.32 = {
 				}
 				# 32002110: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.32.21.666
+				desc = sex_transition.CUM.32.21.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -26354,7 +26354,7 @@ LIDAs.32 = {
 				}
 				# 33002110: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.33.21.666
+				desc = sex_transition.CUM.33.21.666
 			}
 		}
 		triggered_desc = {
@@ -26388,13 +26388,13 @@ LIDAs.32 = {
 			desc = sex_transition.33.32.0
 		}
 		desc = {
-			desc = LIDAs.32.desc.0
+			desc = LIDAs.32.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						has_trait = lida_dom
 					}
-					desc = LIDAs.32.desc.1
+					desc = LIDAs.32.desc.21
 				}
 			}
 			desc = {
@@ -26402,7 +26402,7 @@ LIDAs.32 = {
 					trigger = {
 						has_trait = lida_sub
 					}
-					desc = LIDAs.32.desc.2
+					desc = LIDAs.32.desc.22
 				}
 			}
 		}
@@ -27196,7 +27196,7 @@ LIDAs.33 = {
 				}
 				# 32002110: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.32.21.666
+				desc = sex_transition.CUM.32.21.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -27223,7 +27223,7 @@ LIDAs.33 = {
 				}
 				# 33002110: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.33.21.666
+				desc = sex_transition.CUM.33.21.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -27241,7 +27241,7 @@ LIDAs.33 = {
 				}
 				# 34002310: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_BREED failed
 				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
-				desc = sex_transition.34.23.666
+				desc = sex_transition.CUM.34.23.666
 			}
 		}
 		triggered_desc = {
@@ -27275,13 +27275,13 @@ LIDAs.33 = {
 			desc = sex_transition.34.33.0
 		}
 		desc = {
-			desc = LIDAs.33.desc.0
+			desc = LIDAs.33.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						has_trait = lida_dom
 					}
-					desc = LIDAs.33.desc.1
+					desc = LIDAs.33.desc.21
 				}
 			}
 			desc = {
@@ -27289,7 +27289,7 @@ LIDAs.33 = {
 					trigger = {
 						has_trait = lida_sub
 					}
-					desc = LIDAs.33.desc.2
+					desc = LIDAs.33.desc.22
 				}
 			}
 		}
@@ -28101,7 +28101,7 @@ LIDAs.34 = {
 				}
 				# 33002110: EventsSex.MF_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.33.21.666
+				desc = sex_transition.CUM.33.21.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -28119,7 +28119,7 @@ LIDAs.34 = {
 				}
 				# 34002310: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_BREED failed
 				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
-				desc = sex_transition.34.23.666
+				desc = sex_transition.CUM.34.23.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -28137,7 +28137,7 @@ LIDAs.34 = {
 				}
 				# 35002310: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED failed
 				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
-				desc = sex_transition.35.23.666
+				desc = sex_transition.CUM.35.23.666
 			}
 		}
 		triggered_desc = {
@@ -28181,13 +28181,13 @@ LIDAs.34 = {
 			desc = sex_transition.35.34.0
 		}
 		desc = {
-			desc = LIDAs.34.desc.0
+			desc = LIDAs.34.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						has_trait = lida_sub
 					}
-					desc = LIDAs.34.desc.1
+					desc = LIDAs.34.desc.21
 				}
 			}
 			desc = {
@@ -28195,10 +28195,10 @@ LIDAs.34 = {
 					trigger = {
 						has_trait = lida_dom
 					}
-					desc = LIDAs.34.desc.2
+					desc = LIDAs.34.desc.22
 				}
 			}
-			desc = LIDAs.34.desc.3
+			desc = LIDAs.34.desc.23
 		}
 	}
 	immediate = {
@@ -28854,7 +28854,7 @@ LIDAs.35 = {
 				}
 				# 26002110: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.26.21.666
+				desc = sex_transition.CUM.26.21.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -28881,7 +28881,7 @@ LIDAs.35 = {
 				}
 				# 32002110: EventsSex.MF_REVERSE_COWGIRL -> EventsCum.MF_CREAMPIE_REGULAR failed
 				# [affairs_partner.GetFirstName] eludes your attempt to plant your seed inside her.\n
-				desc = sex_transition.32.21.666
+				desc = sex_transition.CUM.32.21.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -28899,7 +28899,7 @@ LIDAs.35 = {
 				}
 				# 34002310: EventsSex.MF_MISSIONARY -> EventsCum.MF_CREAMPIE_BREED failed
 				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
-				desc = sex_transition.34.23.666
+				desc = sex_transition.CUM.34.23.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -28917,7 +28917,7 @@ LIDAs.35 = {
 				}
 				# 35002310: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED failed
 				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
-				desc = sex_transition.35.23.666
+				desc = sex_transition.CUM.35.23.666
 			}
 		}
 		triggered_desc = {
@@ -28961,13 +28961,13 @@ LIDAs.35 = {
 			desc = sex_transition.35.35.0
 		}
 		desc = {
-			desc = LIDAs.35.desc.0
+			desc = LIDAs.35.desc.20
 			desc = {
 				triggered_desc = {
 					trigger = {
 						has_trait = lida_sub
 					}
-					desc = LIDAs.35.desc.1
+					desc = LIDAs.35.desc.21
 				}
 			}
 			desc = {
@@ -28975,10 +28975,10 @@ LIDAs.35 = {
 					trigger = {
 						has_trait = lida_dom
 					}
-					desc = LIDAs.35.desc.2
+					desc = LIDAs.35.desc.22
 				}
 			}
-			desc = LIDAs.35.desc.3
+			desc = LIDAs.35.desc.23
 		}
 	}
 	immediate = {

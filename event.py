@@ -758,6 +758,8 @@ class Desc:
         ids = []
         if o is not None:
             ids.append(SEX_TRANSITION)
+            if isinstance(o.next_id, EventsCum):
+                ids.append("CUM")
             ids.append(str(o.from_id.value))
             ids.append(str(o.next_id.value))
         elif b is not None:
@@ -803,8 +805,10 @@ class ComposedDesc(Desc):
 
     def __init__(self, *descs: typing.Union[Desc, str]):
         self.descs = [d if isinstance(d, Desc) else Desc(d) for d in descs]
+        # assume there are fewer than 20 subids on the same level as a composed desc
+        # and also that there are only 1 composed desc per level
         for i, d in enumerate(self.descs):
-            d.subid = i
+            d.subid = 20 + i
         super(ComposedDesc, self).__init__("")
 
     def generate_desc(self, b: Event, o: typing.Optional[Option] = None):
