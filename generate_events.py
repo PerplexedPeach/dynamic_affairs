@@ -2909,21 +2909,22 @@ def define_cum_events_mf(es: EventMap):
                                       "Watch a singular string hang from her slit"),
                desc=ComposedDesc(
                    f"""
-                    You grunt loudly, a wave of utter relief passing through your whole being as you unload your seed inside {THEM}, pushing deeper and deeper
-                     with each vigorous thrust - you are #italic exhausted#!, but #dom satisfied#!.
+                    A wave of blis passes through your whole being as you release inside {THEM}'s #bold wet warmth#!,
+                    reaching even #dom deeper#! in with each vigorous thrust.
                    \\n\\n
                     """,
-                   """She lies there panting, a white sliver dripping from her #dom conquered#! slit as your seed #italic trickles#! from her womb.""",
+                   """She lies there panting, a white sliver dripping from her #dom conquered#! slit as you soak in the warmth of her #dom dominated#! body.""",
 
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                    You're uncertain what came over you as you take in that you tried to #S claim her womb#!.
                     She didn't #sub take#! your seed... you #dom forced# it in! \\n"""),
                    TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }} \n {NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}",
                                  f"""
-                   For a moment your mind wanders to ponder the possible consequences, but the #S bliss#! clears out any such thoughts."""),
+                   For a moment your mind wanders to ponder the possible consequences, but the #S ecstasy#! clears out any such thoughts."""),
                    TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                   "You're #sub mine#! now, {THEM}", you whisper in her ear before finally beginning to pull out. You thrust in to the hilt one last time,
-                    a sharp moan escaping her lips as you soak in the warmth of her #dom dominated#! body."""),
+                   "You're #sub mine#! now, {THEM}", you whisper in her ear before finally beginning to pull out.
+                   A sharp moan escapes her lips as you thrust in to the hilt one last time, #bold knowing#! you've #dom claimed#! her #S womb#!
+                     """),
 
                    """\\n\\n""",
 
