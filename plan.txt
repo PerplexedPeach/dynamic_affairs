@@ -262,7 +262,9 @@ TODO
 - models
 	- nose piercing
 	- lip piercing
-	- skimpy plate armor female_accessories_lida_skimpy_plate
+
+- fix options having duplicated localization leading to missing/incorrect text shown
+
 
 - scene with someone peddling piercings that increase sensitivity
 	- dom not receiving satisfying orgasms from slave
