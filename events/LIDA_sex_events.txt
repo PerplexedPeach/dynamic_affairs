@@ -18641,11 +18641,16 @@ LIDAs.25 = {
 		}
 		custom_tooltip = attempt_dom_tooltip
 		custom_tooltip = dom_chance_breakdown_tooltip
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -20
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
-				add = 0
+				add = -20
 			}
 		}
 		if = {
@@ -19382,11 +19387,16 @@ LIDAs.40 = {
 		}
 		custom_tooltip = attempt_dom_tooltip
 		custom_tooltip = dom_chance_breakdown_tooltip
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -20
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
-				add = 0
+				add = -20
 			}
 		}
 		if = {
@@ -20203,11 +20213,16 @@ LIDAs.41 = {
 		}
 		custom_tooltip = attempt_dom_tooltip
 		custom_tooltip = dom_chance_breakdown_tooltip
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -20
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
-				add = 0
+				add = -20
 			}
 		}
 		if = {

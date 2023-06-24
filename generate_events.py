@@ -1499,6 +1499,7 @@ def define_sex_events_mf(es: EventMap):
                           ),
                    Option(EventsSex.MF_STANDING_FUCKED_FROM_BEHIND, OptionCategory.DOM,
                           "Seek a #italic wetter#! hole for your dick",
+                          dom_success_adjustment=-20,
                           transition_text=ComposedDesc(
                               TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
                                 "Your mouth just isn't enough!" you say as you turn her around and bend her over."""),
