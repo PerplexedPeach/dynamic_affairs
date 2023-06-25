@@ -17346,7 +17346,7 @@ LIDAs.24 = {
 					scope:sex_transition = -22001910
 				}
 				# 22001910: EventsSex.MF_ASS_TEASE -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.22.19.666
 			}
 			triggered_desc = {
@@ -17364,7 +17364,7 @@ LIDAs.24 = {
 					scope:sex_transition = -31001910
 				}
 				# 31001910: EventsSex.MF_ASS_RUB -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.31.19.666
 			}
 		}
@@ -18200,7 +18200,7 @@ LIDAs.25 = {
 					scope:sex_transition = -29001910
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
@@ -18218,7 +18218,7 @@ LIDAs.25 = {
 					scope:sex_transition = -30001910
 				}
 				# 30001910: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.30.19.666
 			}
 			triggered_desc = {
@@ -22701,7 +22701,7 @@ LIDAs.31 = {
 					scope:sex_transition = -22001910
 				}
 				# 22001910: EventsSex.MF_ASS_TEASE -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.22.19.666
 			}
 			triggered_desc = {
@@ -22719,7 +22719,7 @@ LIDAs.31 = {
 					scope:sex_transition = -31001910
 				}
 				# 31001910: EventsSex.MF_ASS_RUB -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.31.19.666
 			}
 			triggered_desc = {
@@ -22746,7 +22746,7 @@ LIDAs.31 = {
 					scope:sex_transition = -29001910
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.29.19.666
 			}
 		}
@@ -23391,7 +23391,7 @@ LIDAs.29 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 33002900
 				}
-				# Ride Facing Them
+				# Ride Facing You
 				# You manage to pull out and get up, escaping from under her, but she still has your cock clamped between her thighs.\n
 				desc = sex_transition.33.29.0
 			}
@@ -23410,7 +23410,7 @@ LIDAs.29 = {
 					scope:sex_transition = -22001910
 				}
 				# 22001910: EventsSex.MF_ASS_TEASE -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.22.19.666
 			}
 			triggered_desc = {
@@ -23428,7 +23428,7 @@ LIDAs.29 = {
 					scope:sex_transition = -31001910
 				}
 				# 31001910: EventsSex.MF_ASS_RUB -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.31.19.666
 			}
 			triggered_desc = {
@@ -23455,7 +23455,7 @@ LIDAs.29 = {
 					scope:sex_transition = -29001910
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
@@ -23473,7 +23473,7 @@ LIDAs.29 = {
 					scope:sex_transition = -30001910
 				}
 				# 30001910: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.30.19.666
 			}
 			triggered_desc = {
@@ -24363,7 +24363,7 @@ LIDAs.30 = {
 					scope:sex_transition = 29003000
 				}
 				# Hotdogging
-				# As if your earlier thrusting along her ass crack was in preparation, you find an opportunity to plunge your fingers into her wet folds, with only a moan as a weak protest from [affairs_partner.GetFirstName].\n
+				# As if your earlier thrusting along her crack was in preparation, you find an opportunity to plunge your fingers into her wet folds, with only a weak moan as protest from [affairs_partner.GetFirstName].\n
 				desc = sex_transition.29.30.0
 			}
 			triggered_desc = {
@@ -24399,7 +24399,7 @@ LIDAs.30 = {
 					scope:sex_transition = -29001910
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
@@ -24417,7 +24417,7 @@ LIDAs.30 = {
 					scope:sex_transition = -30001910
 				}
 				# 30001910: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.30.19.666
 			}
 		}
@@ -25191,7 +25191,7 @@ LIDAs.26 = {
 					scope:sex_transition = 29002600
 				}
 				# Hotdogging
-				# One of your thrusts, instead of going between her cheeks, sneaks its way between her thighs. Her wet folds dribble anticipation onto your cock, you accept her body's invitation, piercing her folds and eliciting a moan from her lips.\n
+				# One of your thrusts, instead of going between her cheeks, sneaks its way between her thighs. Her wet folds dribble anticipation onto your cock, you accept her body's invitation and a moan escapes her lips as you pierce her.\n
 				desc = sex_transition.29.26.0
 			}
 			triggered_desc = {
@@ -25335,7 +25335,7 @@ LIDAs.26 = {
 					scope:sex_transition = -29001910
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
@@ -25353,7 +25353,7 @@ LIDAs.26 = {
 					scope:sex_transition = -30001910
 				}
 				# 30001910: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.30.19.666
 			}
 			triggered_desc = {
@@ -25416,7 +25416,7 @@ LIDAs.26 = {
 					scope:sex_transition = -35003500
 				}
 				# 35003500: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE failed
-				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moands distracting you just enough for her to make a move.\n
+				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moans distracting you just enough for her to make a move.\n
 				desc = sex_transition.35.35.666
 			}
 			triggered_desc = {
@@ -26271,7 +26271,7 @@ LIDAs.32 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 33003200
 				}
-				# Ride Facing Them
+				# Ride Facing You
 				# She turns her back towards you, treating you as no more than a piece of meat.\n
 				desc = sex_transition.33.32.0
 			}
@@ -26299,7 +26299,7 @@ LIDAs.32 = {
 					scope:sex_transition = -29001910
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
@@ -27000,7 +27000,7 @@ LIDAs.32 = {
 	}
 }
 LIDAs.33 = {
-	# MF_COWGIRL: Ride Facing Them
+	# MF_COWGIRL: Ride Facing You
 	type = character_event
 	title = LIDAs.33.t
 	theme = seduction
@@ -27158,7 +27158,7 @@ LIDAs.33 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 33003300
 				}
-				# Ride Facing Them
+				# Ride Facing You
 				# She continues riding you, your rod madly bouncing from wall to wall inside her.\n
 				desc = sex_transition.33.33.0
 			}
@@ -28045,7 +28045,7 @@ LIDAs.34 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 33003400
 				}
-				# Ride Facing Them
+				# Ride Facing You
 				# With a spurt of strength, you overturn her dominant position and put her on her back. You lift her legs and prepare to pound her.\n
 				desc = sex_transition.33.34.0
 			}
@@ -28064,7 +28064,7 @@ LIDAs.34 = {
 					scope:sex_transition = 35003400
 				}
 				# Putting Her in Her Place
-				# She finds an opening between your thrusts and manage to roll in place, her body now facing yours, but you quickly spreads her legs and continue ploughing her.\n
+				# She finds an opening between your thrusts and manages to roll in place, her body now facing yours, but you quickly spreads her legs and continue ploughing her.\n
 				desc = sex_transition.35.34.0
 			}
 			triggered_desc = {
@@ -28127,7 +28127,7 @@ LIDAs.34 = {
 					scope:sex_transition = -35003500
 				}
 				# 35003500: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE failed
-				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moands distracting you just enough for her to make a move.\n
+				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moans distracting you just enough for her to make a move.\n
 				desc = sex_transition.35.35.666
 			}
 			triggered_desc = {
@@ -28907,7 +28907,7 @@ LIDAs.35 = {
 					scope:sex_transition = -35003500
 				}
 				# 35003500: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE failed
-				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moands distracting you just enough for her to make a move.\n
+				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moans distracting you just enough for her to make a move.\n
 				desc = sex_transition.35.35.666
 			}
 			triggered_desc = {
@@ -28978,7 +28978,6 @@ LIDAs.35 = {
 					desc = LIDAs.35.desc.22
 				}
 			}
-			desc = LIDAs.35.desc.23
 		}
 	}
 	immediate = {

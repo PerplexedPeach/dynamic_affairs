@@ -652,7 +652,7 @@ def define_sex_events_fm(es: EventMap):
                               TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
                                You're too turned to just suck him off! You turn around and bend over, making him an offer he #S can't#! refuse."""),
                               TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                               "Your mouth just isn't enough!" he says as he turns you around and bends you over."""),
+                               "Your mouth just isn't enough!" he says as he turns you around and grabs your arms."""),
                               "."
                           ),
                           ),
@@ -952,8 +952,8 @@ def define_sex_events_fm(es: EventMap):
                root_removes_clothes=True,
                animation_right=SCHADENFREUDE,
                desc=f"""
-                   His finger #sub squelches against your wet folds#! as he extracts juices from your lower lips while
-                   extracting moans from your upper lips. Your head leans back and he occasionally takes the liberty
+                   His finger #sub squelches within you#! as he extract juices from one pair of lips and
+                   moans from the other. Your head leans back, giving him the liberty
                    of entwining his tongue with yours.""",
                options=(
                    Option(EventsSex.FM_HOTDOG, OptionCategory.DOM,
@@ -1000,7 +1000,7 @@ def define_sex_events_fm(es: EventMap):
                root_removes_clothes=True, partner_removes_clothes=True,
                animation_left=BOW_3, animation_right=SCHADENFREUDE,
                desc=ComposedDesc(f"""
-                   Sometimes bending you over and sometimes #sub pulling your hair to keep you upright#!, 
+                   Sometimes bending you over and sometimes #sub pulling your hair#! to keep you upright, 
                    you're at the mercy of {THEM}. His vigorous thrusts make you knees weak and you find it
                    hard to stay on your feet.
                    \\n\\n""",
@@ -1052,7 +1052,7 @@ def define_sex_events_fm(es: EventMap):
                    Option(EventsCum.FM_CREAMPIE_REGULAR, OptionCategory.SUB,
                           "Let him fill you with his seed",
                           transition_text=f"""
-                              Feeling little resistance from your body, he prepares to leave you a hot, sticky gift."""),
+                              Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
                )))
     es.add(Sex(EventsSex.FM_REVERSE_COWGIRL, "Ride Facing Away",
                stam_cost_1=3, stam_cost_2=1.5,
@@ -1106,7 +1106,7 @@ def define_sex_events_fm(es: EventMap):
                    Option(EventsCum.FM_CREAMPIE_REGULAR, OptionCategory.SUB,
                           "Let #bold him#! fill you with his seed",
                           transition_text=f"""
-                              Feeling little resistance from your body, he prepares to leave you a hot, sticky gift."""),
+                              Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
                )))
     es.add(Sex(EventsSex.FM_COWGIRL, "Ride Facing Them",
                stam_cost_1=2.0, stam_cost_2=1,
@@ -1160,7 +1160,7 @@ def define_sex_events_fm(es: EventMap):
                    Option(EventsCum.FM_CREAMPIE_REGULAR, OptionCategory.SUB,
                           "Let #bold him#! fill you with his seed",
                           transition_text=f"""
-                              Feeling little resistance from your body, he prepares to leave you a hot, sticky gift."""),
+                              Feeling little resistance, he prepares to leave you a hot, sticky gift."""),
 
                )))
     es.add(Sex(EventsSex.FM_MISSIONARY, "Lie on Back",
@@ -1502,10 +1502,10 @@ def define_sex_events_mf(es: EventMap):
                           dom_success_adjustment=-20,
                           transition_text=ComposedDesc(
                               TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
-                                "Your mouth just isn't enough!" you say as you turn her around and bend her over."""),
+                                "Your mouth just isn't enough!" you say as you turn her around and grab her arms."""),
                               TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                                #dom "Bend over bitch!"#! you command as you turn her around and bend her over."""),
-                              "."
+                                "#dom Give!#! me that pussy" you command as you turn her around and grab her arms."""),
+                              " "
                           ),
                           ),
                    # TODO make these options more likely if you are addicted to cum
@@ -1701,17 +1701,15 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_ASS_TEASE_CUM_ON_ASS, OptionCategory.SUB,
                           "Cum on her cheeks",
                           transition_text=f"""
-                              You can't hold on much longer, and have to settle for marking her cheeks.""",
+                              Your rod is aimed straight at her cheeks...""",
                           ),
                    Option(EventsCum.MF_CUM_ON_GROIN, OptionCategory.DOM,
                           "cum all over her groin",
                           subdom_sub=0,
                           transition_text=f"""
-                              You can't hold on much longer, but manage to cum on her groin, dangerously close to
-                              her pussy.""",
+                              As your release arrives you aim to coat her entrances in #bold white#!.""",
                           failed_transition_text=f"""
-                              You can't hold on much longer, and want to cum on her groin, but she clamps down on your
-                              rod before you manage to do so."""
+                              As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!."""
                           )
                )))
     es.add(Sex(EventsSex.MF_ASS_RUB, "Ass Rub",
@@ -1746,17 +1744,15 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_ASS_TEASE_CUM_ON_ASS, OptionCategory.SUB,
                           "Cum on her cheeks",
                           transition_text=f"""
-                              You can't hold on much longer, and have to settle for marking her cheeks.""",
+                              Your rod is aimed straight at her cheeks...""",
                           ),
                    Option(EventsCum.MF_CUM_ON_GROIN, OptionCategory.DOM,
                           "cum all over her groin",
                           subdom_sub=0,
                           transition_text=f"""
-                              You can't hold on much longer, but manage to cum on her groin, dangerously close to
-                              her pussy.""",
+                              As your release arrives you aim to coat her entrances in #bold white#!.""",
                           failed_transition_text=f"""
-                              You can't hold on much longer, and want to cum on her groin, but she clamps down on your
-                              rod before you manage to do so."""
+                              As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!."""
                           )
                )))
     es.add(Sex(EventsSex.MF_HOTDOG, "Hotdogging",
@@ -1769,7 +1765,7 @@ def define_sex_events_mf(es: EventMap):
                    """,
                options=(
                    Option(EventsSex.MF_ASS_RUB, OptionCategory.SUB,
-                          "Take a break and her do the rubbing",
+                          "Take a break and let her do the rubbing",
                           transition_text=f"""
                               Having exerted yourself a bit, you instead let her do more of the work.
                               """,
@@ -1797,9 +1793,9 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsSex.MF_STANDING_FINGERED_FROM_BEHIND, OptionCategory.DOM,
                           "Use your fingers to control her pleasure",
                           transition_text=f"""
-                              As if your earlier thrusting along her ass crack was in preparation, you find an
+                              As if your earlier thrusting along her crack was in preparation, you find an
                               opportunity to plunge your fingers into her wet folds, 
-                              with only a moan as a weak protest from {THEM}.""",
+                              with only a weak moan as protest from {THEM}.""",
                           failed_transition_text=f"""
                               As if your earlier thrusting along her ass crack was in preparation, you try to find
                               an opportunity to plunge your fingers into her wet folds, but she does not give you any.
@@ -1811,8 +1807,8 @@ def define_sex_events_mf(es: EventMap):
                           transition_text=f"""
                               One of your thrusts, instead of going between her cheeks, 
                               sneaks its way between her thighs. Her wet folds dribble
-                              anticipation onto your cock, you accept her body's invitation, piercing her folds and
-                              eliciting a moan from her lips.""",
+                              anticipation onto your cock, you accept her body's invitation and a moan escapes her lips as
+                              you pierce her.""",
                           failed_transition_text=f"""
                               One of your thrusts, instead of going between her cheeks,
                               sneaks its way between her thighs. However, she seems to have been prepared for this
@@ -1822,17 +1818,15 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_ASS_TEASE_CUM_ON_ASS, OptionCategory.SUB,
                           "Cum on her cheeks",
                           transition_text=f"""
-                              You can't hold on much longer, and have to settle for marking her cheeks.""",
+                              Your rod is aimed straight at her cheeks...""",
                           ),
                    Option(EventsCum.MF_CUM_ON_GROIN, OptionCategory.DOM,
                           "cum all over her groin",
                           subdom_sub=0,
                           transition_text=f"""
-                              You can't hold on much longer, but manage to cum on her groin, dangerously close to
-                              her pussy.""",
+                              As your release arrives you aim to coat her entrances in #bold white#!.""",
                           failed_transition_text=f"""
-                              You can't hold on much longer, and want to cum on her groin, but she clamps down on your
-                              rod before you manage to do so."""
+                              As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!."""
                           )
                )))
     es.add(Sex(EventsSex.MF_STANDING_FINGERED_FROM_BEHIND, "Fingering from Behind",
@@ -1842,8 +1836,8 @@ def define_sex_events_mf(es: EventMap):
                partner_removes_clothes=True,
                animation_left=SCHADENFREUDE,
                desc=f"""
-                   Your finger #dom squelches against her wet folds#! as you extract juices from her lower lips while
-                   extracting moans from her upper lips. Her head leans back and you occasionally take the liberty
+                   Your finger #dom squelches within her#! as you extract juices from one pair of lips and
+                   moans from the other. Her head leans back, giving you the liberty
                    of entwining your tongue with hers.""",
                options=(
                    Option(EventsSex.MF_HOTDOG, OptionCategory.SUB,
@@ -1875,17 +1869,15 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_ASS_TEASE_CUM_ON_ASS, OptionCategory.SUB,
                           "Cum on her cheeks",
                           transition_text=f"""
-                              You can't hold on much longer, and have to settle for marking her cheeks.""",
+                              Your rod is aimed straight at her cheeks...""",
                           ),
                    Option(EventsCum.MF_CUM_ON_GROIN, OptionCategory.DOM,
                           "cum all over her groin",
                           subdom_sub=0,
                           transition_text=f"""
-                              You can't hold on much longer, but manage to cum on her groin, #italic dangerously#! close to
-                              her entrance.""",
+                              As your release arrives you aim to coat her entrances in #bold white#!.""",
                           failed_transition_text=f"""
-                              You can't hold on much longer, and want to cum on her groin, but she clamps down on your
-                              rod before you manage to do so."""
+                              As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!."""
                           )
                )))
     es.add(Sex(EventsSex.MF_STANDING_FUCKED_FROM_BEHIND, "Standing Fuck from Behind",
@@ -1895,7 +1887,7 @@ def define_sex_events_mf(es: EventMap):
                root_removes_clothes=True, partner_removes_clothes=True,
                animation_left=SCHADENFREUDE, animation_right=BOW_3,
                desc=ComposedDesc(f"""
-                   Sometimes bending {THEM} over and sometimes #dom pulling her hair to keep her upright#!,
+                   Sometimes bending {THEM} over and sometimes #dom pulling her hair#! to keep her upright,
                    she is at your mercy as your vigorous thrusts almost make her legs give out.
                    \\n\\n""",
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
@@ -1951,7 +1943,7 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_CREAMPIE_REGULAR, OptionCategory.DOM,
                           "#bold Fill her#! with your seed",
                           transition_text=f"""
-                              Feeling little resistance from her body, you prepare to plant your seed inside.""",
+                              Feeling little resistance, you prepare to plant your seed inside.""",
                           failed_transition_text=f"""
                               {THEM} eludes your attempt to plant your seed inside her.
                           """
@@ -2012,13 +2004,13 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_CREAMPIE_REGULAR, OptionCategory.DOM,
                           "#bold Fill her#! with your seed",
                           transition_text=f"""
-                              Feeling little resistance from her body, you prepare to plant your seed inside.""",
+                              Feeling little resistance, you prepare to plant your seed inside.""",
                           failed_transition_text=f"""
                               {THEM} eludes your attempt to plant your seed inside her.
                           """
                           ),
                )))
-    es.add(Sex(EventsSex.MF_COWGIRL, "Ride Facing Them",
+    es.add(Sex(EventsSex.MF_COWGIRL, "Ride Facing You",
                stam_cost_1=1.0, stam_cost_2=2.0,
                root_gender=MALE, partner_gender=FEMALE,
                root_become_more_sub_chance=10,
@@ -2076,7 +2068,7 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsCum.MF_CREAMPIE_REGULAR, OptionCategory.DOM,
                           "#bold Fill her#! with your seed",
                           transition_text=f"""
-                              Feeling little resistance from her body, you prepare to plant your seed inside.""",
+                              Feeling little resistance, you prepare to plant your seed inside.""",
                           failed_transition_text=f"""
                               {THEM} eludes your attempt to plant your seed inside her.
                           """
@@ -2151,13 +2143,13 @@ def define_sex_events_mf(es: EventMap):
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
                     and it feels #sub strange#! to be in this position."""),
                                  TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-                    and you #dom love#! it."""), "."
+                    and you #dom love#! it.""")
                                  ),
                options=(
                    Option(EventsSex.MF_MISSIONARY, OptionCategory.SUB,
                           "Let her roll over",
                           transition_text=f"""
-                              She finds an opening between your thrusts and manage to roll in place, 
+                              She finds an opening between your thrusts and manages to roll in place, 
                               her body now facing yours,
                               but you quickly spreads her legs and continue ploughing her.""",
                           ),
@@ -2174,7 +2166,7 @@ def define_sex_events_mf(es: EventMap):
                               You relentlessly keep pounding {THEM}, her loud moans betraying just how #italic lost#! in ecstasy she is.
                               """,
                           failed_transition_text=f"""
-                              You relentlessly keep pounding {THEM}, her loud moands distracting you just enough for her to make a move.
+                              You relentlessly keep pounding {THEM}, her loud moans distracting you just enough for her to make a move.
                           """
                           ),
                    Option(EventsCum.MF_PULL_OUT_CUM_ON_ASS, OptionCategory.SUB,
