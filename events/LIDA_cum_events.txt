@@ -8634,7 +8634,7 @@ LIDAc.23 = {
 					scope:sex_transition = 34002310
 				}
 				# Missionary
-				# Your rod gets even harder as your climax approaches, [affairs_partner.GetFirstName] #bold moaning loudly#! as her muscles #dom lock up#!.\n
+				# Your rod gets even harder as your climax approaches, [affairs_partner.GetFirstName] #bold moaning loudly#! as she quivers uncontrollably.\n
 				desc = sex_transition.CUM.34.23.0
 			}
 			triggered_desc = {
@@ -8643,7 +8643,7 @@ LIDAc.23 = {
 					scope:sex_transition = 35002310
 				}
 				# Putting Her in Her Place
-				# Your rod gets even harder as your climax approaches, [affairs_partner.GetFirstName] #bold moaning loudly#! as her muscles #dom lock up#!.\n
+				# Your rod gets even harder as your climax approaches, [affairs_partner.GetFirstName] #bold moaning loudly#! as she quivers uncontrollably.\n
 				desc = sex_transition.CUM.35.23.0
 			}
 			triggered_desc = {

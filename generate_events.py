@@ -2121,7 +2121,7 @@ def define_sex_events_mf(es: EventMap):
                           "#italic Fill her to the brim#!",
                           transition_text=f"""
                               Your rod gets even harder as your climax approaches, {THEM} #bold moaning 
-                              loudly#! as her muscles #dom lock up#!.""",
+                              loudly#! as she quivers uncontrollably.""",
                           failed_transition_text=f"""
                               Your rod gets even harder as your climax approaches, but at the last moment
                               your rod #italic slips#! out.
@@ -2178,7 +2178,7 @@ def define_sex_events_mf(es: EventMap):
                           "#italic Fill her to the brim#!",
                           transition_text=f"""
                               Your rod gets even harder as your climax approaches, {THEM} #bold moaning 
-                              loudly#! as her muscles #dom lock up#!.""",
+                              loudly#! as she quivers uncontrollably.""",
                           failed_transition_text=f"""
                               Your rod gets even harder as your climax approaches, but at the last moment
                               your rod #italic slips#! out.
