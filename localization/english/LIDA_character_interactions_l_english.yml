@@ -1,0 +1,3 @@
+﻿l_english:
+engage_affair_interaction: "Engage in an Affair"
+engage_affair_interaction_desc: "Arrange for an intimate encounter with [recipient.GetShortUINameNoTooltip]"

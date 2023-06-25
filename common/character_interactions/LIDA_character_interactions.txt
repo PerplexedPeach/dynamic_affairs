@@ -1,0 +1,131 @@
+﻿engage_affair_interaction = {
+    category = interaction_category_friendly
+    
+    desc = engage_affair_interaction_desc
+	# icon = icon_scheme_seduce
+	icon = lover
+
+    interface_priority = 40
+    use_diplomatic_range = yes
+
+    is_shown = {
+		NOT = { scope:actor = scope:recipient }
+        scope:actor = {
+            is_adult = yes
+			# TODO not chastity locked when there are chastity belts
+        }
+        scope:recipient = {
+            is_adult = yes
+        }
+    }
+
+	cooldown = { months = engage_affair_interaction_cooldown }
+
+    is_valid_showing_failures_only = {
+        scope:actor = {
+            carn_can_have_sex_trigger = yes
+        }
+        scope:recipient = {
+			OR = {
+				carn_can_have_sex_trigger = yes
+				# be imprisoned by you
+				AND = {
+					is_alive = yes
+					is_adult = yes
+					is_imprisoned = yes
+					is_imprisoned_by = scope:actor
+				}
+			}
+			is_attracted_to_gender_of = scope:actor
+        }
+            
+        # if this is a paid transaction, actor needs the gold
+        trigger_if = {
+            limit = {
+                scope:recipient = {
+                    carn_is_working_as_prostitute_trigger = yes
+                }
+                NOT = {
+                    scope:actor = {
+                        carn_relationship_allows_free_sex_trigger = {
+                            PARTNER = scope:recipient
+                        }
+                    }
+                }
+            }
+            scope:actor.gold >= scope:recipient.carn_prostitute_sex_interaction_price_value
+        }
+    }
+
+    on_accept = {
+        scope:actor = {
+
+            # pay money for prostitution, and possibly lose piety if your faith dislikes this
+            if = {
+                limit = {
+                    scope:recipient = {
+                        carn_is_working_as_prostitute_trigger = yes
+                    }
+                    NOT = {
+                        carn_relationship_allows_free_sex_trigger = {
+                            PARTNER = scope:recipient
+                        }
+                    }
+                }
+                pay_short_term_gold = {
+                    target = scope:recipient
+                    gold = scope:recipient.carn_prostitute_sex_interaction_price_value
+                }
+                if = {
+                    limit = {
+                        faith = { NOT = { has_doctrine = carn_doctrine_prostitution_accepted } }
+                    }
+                    add_piety = minor_piety_loss
+                }
+            }
+
+            if = {
+                limit = {
+                    NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+                }
+
+                ### STRESS ###
+                if = {
+                    limit = {
+                        is_attracted_to_gender_of = scope:recipient
+                    }
+                    stress_impact = {
+                        base = minor_stress_impact_loss
+                        chaste = activity_stress_gain_impact
+                    }
+                }
+                else = {
+                    custom_tooltip = carn_sex_interaction_not_attracted_to_warning_tt
+                    stress_impact = {
+                        base = major_stress_impact_gain
+                    }
+                }
+
+                add_character_flag = {
+                    flag = carn_sex_interaction_effect_cd
+                    months = engage_affair_interaction_cooldown
+                }
+            }
+            else = {
+                custom_tooltip = carn_sex_interaction_effect_cd_tt
+                add_character_flag = carn_block_next_had_sex_with_effect
+            }
+
+            # request the sex scene
+            hidden_effect = {
+				scope:recipient = {
+					save_scope_as = affairs_partner
+				}
+				lida_start_sex_effect = { TRIGGER_RANDOM_EVENT = no }
+				select_start_affairs_effect = yes
+            }
+        }
+    }
+
+    auto_accept = yes
+}
