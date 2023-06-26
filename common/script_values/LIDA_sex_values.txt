@@ -14,3 +14,50 @@ max_sex_stamina = {
 	}
 	min = 1
 }
+
+dom_tolerance = {
+	
+	#additions
+	value = 10
+	if = {
+		limit = { has_trait = stubborn }
+		add = 3
+	}
+	if = {
+		limit = { has_trait = arrogant }
+		add = 4
+	}
+	if = {
+		limit = { has_trait = wrathful }
+		add = 5
+		}
+	if = {
+		limit = {
+			OR = {
+				has_trait = sadistic
+				has_trait = callous
+				}
+			} 
+		add = 6
+	}
+
+	#subtractions
+	if = {
+		limit = { has_trait = craven }
+		subtract = 3
+	}
+	if = {
+		limit = { has_trait = shy }
+		subtract = 2
+	}
+	if = {
+		limit = { has_trait = trusting }
+		subtract = 2
+	}
+
+	#TODO: add for LIDA traits
+
+	min = 0
+}
+
+# Todo : after adding for LIDA traits copy for sub. 
