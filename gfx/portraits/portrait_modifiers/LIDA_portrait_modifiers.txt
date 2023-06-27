@@ -32,7 +32,7 @@ lida_body = {
 				value = 0
 			}
 		}
-		outfit_tags = { no_clothes }
+		# outfit_tags = { no_clothes }
 		ignore_outfit_tags = yes
 		weight = {
 			base = 0
@@ -56,7 +56,7 @@ lida_body = {
 				value = 0
 			}
 		}
-		outfit_tags = { military_outfit }
+		# outfit_tags = { military_outfit }
 		ignore_outfit_tags = yes
 		weight = {
 			base = 0
@@ -108,7 +108,7 @@ lida_legwear = {
 				value = 0
 			}
 		}
-		outfit_tags = { military_outfit }
+		# outfit_tags = { military_outfit }
 		ignore_outfit_tags = yes
 		weight = {
 			base = 0
