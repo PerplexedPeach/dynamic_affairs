@@ -1115,9 +1115,10 @@ LIDA.150 = {
 	trigger = {
 		is_female = yes
 		# has to be famous enough
-		NOT = {has_character_modifier = wearing_skimpy_plate}
+		NOT = {has_character_flag = lida_skimpy_comissioned_flag}
 		prestige_level >= 3
 		has_money_to_buy_skimpy_plate = yes
+		portrait_wearing_skimpy_plate_trigger = no
 	}
 	theme = seduction
 	override_background = {
@@ -1150,6 +1151,10 @@ LIDA.150 = {
 			}
 			save_scope_as = affairs_partner
 		}
+		# save to be reapplied in followup events
+		scope:affairs_partner = {
+			save_scope_as = armorer
+		}
 	}
 	option = {
 		# commission the armor
@@ -1163,6 +1168,12 @@ LIDA.150 = {
 			modifier = grateful_opinion
 			opinion = 10
 		}
+
+		add_character_flag = {
+			flag = lida_skimpy_comissioned_flag
+			months = 24
+		}
+
 		# trigger the next event
 		trigger_event = {
 			id=LIDA.151
@@ -1188,6 +1199,9 @@ LIDA.151 = {
 	title = LIDA.151.t
 	desc = {
 		desc = LIDA.151.desc
+	}
+	trigger = {
+		exists = scope:armorer
 	}
 	theme = seduction
 	override_background = {
