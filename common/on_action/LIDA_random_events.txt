@@ -7,6 +7,7 @@
 lida_yearly_random_player_pulse = {
 	trigger = {
 		is_ai = no
+		is_adult = yes
 	}
 	effect = {
 		debug_log = "yearly random log for player"
