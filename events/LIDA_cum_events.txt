@@ -3355,7 +3355,7 @@ LIDAc.9 = {
 					scope:sex_transition = 9000910
 				}
 				# Standing Fucked from Behind
-				# Feeling little resistance, he prepares to leave you a hot, sticky gift.\n
+				# You feel [affairs_partner.GetFirstName]'s thrusts become sharper and deeper.\n
 				desc = sex_transition.CUM.9.9.0
 			}
 			triggered_desc = {
@@ -3364,7 +3364,7 @@ LIDAc.9 = {
 					scope:sex_transition = 15000910
 				}
 				# Ride Facing Away
-				# Feeling little resistance, he prepares to leave you a hot, sticky gift.\n
+				# You feel [affairs_partner.GetFirstName]'s thrusts become sharper and deeper.\n
 				desc = sex_transition.CUM.15.9.0
 			}
 			triggered_desc = {
@@ -3373,7 +3373,7 @@ LIDAc.9 = {
 					scope:sex_transition = 16000910
 				}
 				# Ride Facing Them
-				# Feeling little resistance, he prepares to leave you a hot, sticky gift.\n
+				# You feel [affairs_partner.GetFirstName]'s thrusts become sharper and deeper.\n
 				desc = sex_transition.CUM.16.9.0
 			}
 			triggered_desc = {
@@ -8065,34 +8065,9 @@ LIDAc.21 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
-					}
-					desc = LIDAc.21.desc.21
-				}
-			}
-			desc = {
-				triggered_desc = {
-					trigger = {
-						 NOT = { has_trait = lida_dom } 
-  NOT = { has_trait = lida_sub }
-					}
-					desc = LIDAc.21.desc.22
-				}
-			}
-			desc = {
-				triggered_desc = {
-					trigger = {
-						has_trait = lida_dom
-					}
-					desc = LIDAc.21.desc.23
-				}
-			}
-			desc = {
-				triggered_desc = {
-					trigger = {
 						scope:subdom >= 10
 					}
-					desc = LIDAc.21.desc.24
+					desc = LIDAc.21.desc.21
 				}
 			}
 			desc = {
@@ -8101,13 +8076,38 @@ LIDAc.21 = {
 						scope:subdom > -10 
 scope:subdom < 10
 					}
-					desc = LIDAc.21.desc.25
+					desc = LIDAc.21.desc.22
 				}
 			}
 			desc = {
 				triggered_desc = {
 					trigger = {
 						scope:subdom <= -10
+					}
+					desc = LIDAc.21.desc.23
+				}
+			}
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_sub
+					}
+					desc = LIDAc.21.desc.24
+				}
+			}
+			desc = {
+				triggered_desc = {
+					trigger = {
+						 NOT = { has_trait = lida_dom } 
+  NOT = { has_trait = lida_sub }
+					}
+					desc = LIDAc.21.desc.25
+				}
+			}
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait = lida_dom
 					}
 					desc = LIDAc.21.desc.26
 				}
