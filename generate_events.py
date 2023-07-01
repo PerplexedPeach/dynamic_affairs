@@ -576,9 +576,9 @@ def define_sex_events_fm(es: EventMap):
                               Dew-like pre-cum dribbles from the tip, lubricating the whole shaft.""",
                           failed_transition_text=
                           ComposedDesc(
-                              TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
+                              TriggeredDesc(f"{NOT} = {{ {IS_AT_LEAST_DOM_1} }}", """
                                  You're too turned on to be satisfied with just jerking him off!"""),
-                              TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                              TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                                   {THEM} wants more than you teasing him, so he #sub takes#! something #italic wetter#!."""),
                               "."
                           ),
@@ -649,9 +649,9 @@ def define_sex_events_fm(es: EventMap):
                    Option(EventsSex.FM_STANDING_FUCKED_FROM_BEHIND, OptionCategory.SUB,
                           "Give his member a #italic wetter#! hole",
                           transition_text=ComposedDesc(
-                              TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
+                              TriggeredDesc(f"{NOT} = {{ {IS_AT_LEAST_DOM_1} }}", """
                                You're too turned to just suck him off! You turn around and bend over, making him an offer he #S can't#! refuse."""),
-                              TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                              TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                                "Your mouth just isn't enough!" he says as he turns you around and grabs your arms."""),
                               "."
                           ),
@@ -762,10 +762,10 @@ def define_sex_events_fm(es: EventMap):
                desc=ComposedDesc("""
                    Your eyes tear up as he thrusts deeply and relentlessly. The degrading way in which he
                    gives not care about your well-being or pleasure leaves a deep impression on you.""",
-                                 TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}", """
+                                 TriggeredDesc(f"{NOT} = {{ {IS_AT_LEAST_SUB_1} }}", """
                    In a dark part of your mind, though you may not admit it, you enjoy being used like
                    a cheap toy."""),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                    You enjoy being used like a cheap toy, reinforcing your submissive nature."""),
                                  ),
                options=(
@@ -1061,9 +1061,9 @@ def define_sex_events_fm(es: EventMap):
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
                    You close your eyes as your hips hungrily dance around {THEM}'s shaft, #bold shaking#! with pleasure.
-                   """, TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                   """, TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                    Your senses focus on the hard meat in you, using it with precision to scratch itches no man could ever even #dom hope#! to understand.
-                   """), TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
+                   """), TriggeredDesc(IS_AT_LEAST_SUB_1, f"""
                    As your senses focus on his hard meat, you can't help but imagine how amazing it would feel to have this rod #sub pounding you!# mercilessly.  
                    """),
                                  ),
@@ -1115,9 +1115,9 @@ def define_sex_events_fm(es: EventMap):
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
                    You look in {THEM}'s eyes as you vigorously ride, his member under your complete control as you focus exclusively on satisfying yourself. \\n
-                   """, TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                   """, TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                    He is a tool, his "manhood" nothing more than a meat toy whose #dom only#! purpose is to satisfy your needs. He is a #bold good#! tool.
-                   """), TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
+                   """), TriggeredDesc(IS_AT_LEAST_SUB_1, f"""
                    Despite how good this feels you can't help but wish #sub he#! pleasured you instead.  
                    """),
                                  ),
@@ -1173,9 +1173,9 @@ def define_sex_events_fm(es: EventMap):
                    You lie there, legs straddling his shoulders, each of {THEM}'s vigorous thrusts slapping loudly against your cheeks as
                    waves of pleasure course through your core. You have nearly no control over your body
                    """,
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     and you wish you had even #sub less#!"""),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
                     and you #dom hate#! that it feels this good"""), "."
                                  ),
                options=(
@@ -1223,9 +1223,9 @@ def define_sex_events_fm(es: EventMap):
                    #bold your cheeks getting clapped#! as each #italic ravaging#! stroke sends #sub paralyzing#! jolts of pleasure through your whole being. \\n\\n
                    He's in complete control of your body and mind
                    """,
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     and you're enjoying #sub every#! single moment of his cock #italic splitting you in half#!"""),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
                     and you #dom hate#! having to admit to yourself that he might #italic break#! you"""), "."
                                  ),
                options=(
@@ -1501,11 +1501,11 @@ def define_sex_events_mf(es: EventMap):
                           "Seek a #italic wetter#! hole for your dick",
                           dom_success_adjustment=-20,
                           transition_text=ComposedDesc(
-                              TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", """
+                              TriggeredDesc(f"{NOT} = {{ {IS_AT_LEAST_DOM_1} }}", """
                                 "Your mouth just isn't enough!" you say as you turn her around and grab her arms."""),
-                              TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
-                                "#dom Give!#! me that pussy" you command as you turn her around and grab her arms."""),
-                              " "
+                              TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
+                                #dom "Bend over bitch!"#! you command as you turn her around and grab her arms."""),
+                              "."
                           ),
                           ),
                    # TODO make these options more likely if you are addicted to cum
@@ -1631,11 +1631,11 @@ def define_sex_events_mf(es: EventMap):
                    {THEM}'s eyes tear up as you thrust deeply and relentlessly. The degrading way in which you
                    do not care about her well-being or pleasure leaves a deep impression on you, and you are sure,
                    on her as well.""",
-                                 TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}", """
+                                 TriggeredDesc(f"{NOT} = {{ {IS_AT_LEAST_SUB_1} }}", """
                    Treating her like a cheap toy seems like the most natural thing in the world. The weak should
                    serve and submit to the strong.
                    """),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                    You are not used to having such control over someone else, and your trepidation results in some
                    weak thrusts."""),
                                  ),
@@ -1956,9 +1956,9 @@ def define_sex_events_mf(es: EventMap):
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
                    You #sub lie#! down as {THEM} hungrily dances atop your shaft, her cheeks #bold shaking#! with each bounce.
-                   """, TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                   """, TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                    To think you're so fully under her control... this #dom demands#! retribution!
-                   """), TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
+                   """), TriggeredDesc(IS_AT_LEAST_SUB_1, f"""
                    You're #sub hers#! to do with as she pleases... and you #italic love#! the view.
                    """),
                                  ),
@@ -2018,9 +2018,9 @@ def define_sex_events_mf(es: EventMap):
                desc=ComposedDesc(f"""
                    You look in {THEM}'s eyes as she vigorously rides you, your member under her complete #sub control#! as 
                    she focuses exclusively on satisfying herself. \\n
-                   """, TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                   """, TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                    You can't help but be amused as you think of #bold everything#! you'll #dom do to her#! once you're back in control.
-                   """), TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
+                   """), TriggeredDesc(IS_AT_LEAST_SUB_1, f"""
                    You indulge in #sub giving up control#!, the movement of her hips atop your groin being pleasure enough.
                    """),
                                  ),
@@ -2085,9 +2085,9 @@ def define_sex_events_mf(es: EventMap):
                    each of your vigorous thrusts slapping loudly against her cheeks as
                    you pound her from above. You have almost complete control over her body
                    """,
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     and you wish you didn't have to set the pace."""),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
                     and you #dom relish#! every moment"""), "."
                                  ),
                options=(
@@ -2140,10 +2140,10 @@ def define_sex_events_mf(es: EventMap):
                    strokes jiggles her shapes. \\n\\n
                    She's all #bold yours#!... 
                    """,
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     and it feels #sub strange#! to be in this position."""),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
-                    and you #dom love#! it.""")
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
+                    and you #dom love#! it."""), "."
                                  ),
                options=(
                    Option(EventsSex.MF_MISSIONARY, OptionCategory.SUB,
@@ -2279,9 +2279,9 @@ def define_cum_events_fm(es: EventMap):
                    this session. Some starts tracing a warm path down your legs while the rest stay,
                    a compliment to your curves. #italic Is it normal for your thoughts to wander so quickly
                    after sex?#!""",
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
                     #italic Yes, it is - their #dom petty#! desires don't deserve your atention.#!"""),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     #italic Maybe they wouldn't if he'd taken some #sub initiative#! instead of being satisfied with this.#!"""),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
                    \\n\\n"Thank you for letting me grind against your buns, {ME_FULL_REGNAL}", {THEM} says while devotedly cleaning you up.
@@ -2292,9 +2292,9 @@ def define_cum_events_fm(es: EventMap):
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
                    \\n\\n"Let's do more next time", {THEM} says as you feel a sudden #sub smack on your ass#!. 
                    """),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
                     \\n\\nYou #dom chuckle#! at his reaction, asking yourself if you're ever going to face a #S real#! challenge in the sheets ."""),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     \\n\\nYou wish his reaction would have been more... #sub intense#!, to say the least."""),
                                  ),
                ))
@@ -2360,10 +2360,10 @@ def define_cum_events_fm(es: EventMap):
                    Taking advantage of your helpless state, he takes some liberties in degrading you.
                    \\n\\n
                    """),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, f"""
                    The intensity of his thrust, the force with which he just kept you there... How #sub arousing!#!
                    """, ),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                    Seems like {THEM} needs to be #dom put#! in his place, overzealous ruffian that he is. 
                    """, ),
                                  )
@@ -2408,9 +2408,9 @@ def define_cum_events_fm(es: EventMap):
                    He instead shoots his seed on your whole groin, several spurts of warmth announcing the end of the session. \\n\\n
                    With a sudden #sub smack on your ass#!, "Let's meet again soon."
                    """),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                   TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     \\n\\n"Come again sometime, will you? I'd like it if you did #sub more#! to me", you say with a smile """),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                   TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                     \\n\\n"Good boy", you whisper in {THEM}'s ear while #dom patting#! him on the head. 
                     "I #S might#! just invite you over again if I ever need something", you say with a smirk.""")
                ),
@@ -2436,9 +2436,9 @@ def define_cum_events_fm(es: EventMap):
                    \\n\\n"Let's do more next time", {THEM} says as you feel a sudden #sub smack on your ass#!. 
                    """),
 
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
                     Ugh, that #dom fool#! made #italic such#! a mess!"""),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     If only he'd done #sub more#! to you!"""),
                                  ),
                ))
@@ -2464,9 +2464,9 @@ def define_cum_events_fm(es: EventMap):
 
                                  """\\n\\nYou're left standing as his seed #sub seeps#! out of your slit, your body enjoying the newfound warmth within it. \\n\\n""",
 
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                    Your body is brimming with anticipation as you softly say: "Y-you can do it again if you want". You #bold #sub want#!#! him to do it again, \\n"""),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
                    Is the #dom privilege#! of experiencing your body not enough?! How #dom dare#! he release #bold inside#! you whenever he wishes
                     like in #italic some random wench?!#!"""),
                                  ),
@@ -2493,7 +2493,7 @@ def define_cum_events_fm(es: EventMap):
                    "Whatever you need, my {ME_LADY_LORD}!", he says while #dom submitting# to being milked by your womb\\n\\n
                    """),
                                  """You slowly get up, white threads hanging from your slit as drops splash onto the ground. """,
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                    You stare intently into his eyes, knowing he couldn't have stopped you from #dom taking#! his seed no matter how hard he tried - so #dom you did#!.""")
                                  ),
                ))
@@ -2512,14 +2512,14 @@ def define_cum_events_fm(es: EventMap):
                    \\n\\n
                     """,
                    """You lie there panting, a white sliver dripping from your #sub conquered#! slit as his seed #bold fills#! your womb.""",
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                   TriggeredDesc(IS_AT_LEAST_SUB_1, """
                    He plowed you like a cheap whore, his pounding intensifying as he filled you up and you had with #sub no say#! in it.
                     Are you so irresistible that he couldn't help himself """),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB} \n {NOT} = {{ {HAS_TRAIT} ={PREGNANT} }}", f"""
+                   TriggeredDesc(f"{IS_AT_LEAST_SUB_1} \n {NOT} = {{ {HAS_TRAIT} = {PREGNANT} }}", f"""
                    or is he #italic trying#! to breed you? Either way, you #sub love#! the feeling.""", ),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB} \n {HAS_TRAIT} = {PREGNANT}", f"""
+                   TriggeredDesc(f"{IS_AT_LEAST_SUB_1} \n {HAS_TRAIT} = {PREGNANT}", f"""
                    even with a bun already in you? How #sub flattering#!.""", ),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """\\n\\n"""),
+                   TriggeredDesc(IS_AT_LEAST_SUB_1, """\\n\\n"""),
 
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
                    "M-my {ME_LADY_LORD}!", {THEM} blurts out while staring at your stuffed hole in shock.
@@ -2527,10 +2527,10 @@ def define_cum_events_fm(es: EventMap):
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 20", f"""
                    "I'll clean it, forgive me!", he pleads as he starts #dom licking#! you clean, having pulled out #S far#! too late.
                    """),
-                   TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10 \n{NOT} = {{ {HAS_TRAIT} ={LIDA_SUB} }}", f"""
+                   TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10 \n{NOT} = {{ {IS_AT_LEAST_SUB_1} }}", f"""
                    \\n"Leave, #dom fool#!!" you say while #warning furiously#! kicking him away from your slit, banishing him bare from your chamber.
                    """),
-                   TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10 \n{HAS_TRAIT} = {LIDA_SUB}", f"""
+                   TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10 \n{IS_AT_LEAST_SUB_1}", f"""
                    \\n"Oh, that's alright" you say while still #sub blushing#! from his #italic sudden#! burst of #bold intense#! vigor.
                    """),
 
@@ -2541,32 +2541,32 @@ def define_cum_events_fm(es: EventMap):
                    You moan sharply as he thrusts in to the hilt one last time, your back #italic arching#! from the sudden
                     jolt of pleasure as your mind #sub gives in#! to the #S heat#! stirring up inside your loins.
                    """),
-                   TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10 \n{HAS_TRAIT} = {LIDA_SUB}", f"""
+                   TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10 \n{IS_AT_LEAST_SUB_1}", f"""
                    \\n\\n"Come again sometime", you say with a #italic #sub smile#!#!. He #sub smacks#! your ass with a grin,
                     running a finger along your slit before starting to dress.  
                    """),
-                   TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10 \n{NOT} = {{ {HAS_TRAIT} ={LIDA_SUB} }}", f"""
+                   TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10 \n{NOT} = {{ {IS_AT_LEAST_SUB_1} }}", f"""
                    \\n"What have you done, {THEM}?!" you say in complete #bold awe#! at his brazenness.
                    """),
 
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                   TriggeredDesc(IS_AT_LEAST_DOM_1, """
                    \\n\\nAs if getting fucked like a cheap whore wasn't enough, he even #warning seeded#! you like you're just some servant girl at a feast! 
                    """, ),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {NOT} = {{ {HAS_TRAIT} ={PREGNANT} }}", f"""
+                   TriggeredDesc(f"{IS_AT_LEAST_DOM_1} \n {NOT} = {{ {HAS_TRAIT} = {PREGNANT} }}", f"""
                    To enjoy the warmth of being inside you is an #italic unrivaled privilege#!,
                     how #S #dom dare#!#! he demand more by trying to #S claim your womb!?#!
                    """, ),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM} \n {HAS_TRAIT} = {PREGNANT}", f"""
+                   TriggeredDesc(f"{IS_AT_LEAST_DOM_1} \n {HAS_TRAIT} = {PREGNANT}", f"""
                    Were you not already with child, {THEM} might've #S bred#! you - and you #S #dom loathe#!#! the thought.
                    """, ),
 
                    TriggeredDesc(
-                       f"{NOT} = {{ {HAS_TRAIT} ={PREGNANT} }} \n {NOT} = {{ {HAS_TRAIT} ={LIDA_SUB} }} \n {NOT} = {{ {HAS_TRAIT} ={LIDA_DOM} }}",
+                       f"{NOT} = {{ {HAS_TRAIT} ={PREGNANT} }} \n {NOT} = {{ {IS_AT_LEAST_SUB_1} }} \n {NOT} = {{ {IS_AT_LEAST_DOM_1} }}",
                        f"""
                    \\n\\nThis isn't #italic quite#! how you were expecting your dalliance to end...
                    """, ),
                    TriggeredDesc(
-                       f"{HAS_TRAIT} ={PREGNANT} \n {NOT} = {{ {HAS_TRAIT} ={LIDA_SUB} }} \n {NOT} = {{ {HAS_TRAIT} ={LIDA_DOM} }}",
+                       f"{HAS_TRAIT} ={PREGNANT} \n {NOT} = {{ {IS_AT_LEAST_SUB_1} }} \n {NOT} = {{ {IS_AT_LEAST_DOM_1} }}",
                        f"""
                    \\n\\nAt least the #italic indiscreet#! ending of this dalliance won't have any #S unwanted#! consequences.
                    """, ),
@@ -2592,9 +2592,9 @@ def define_cum_events_fm(es: EventMap):
                    """, ),
                                  f"""You lie on your back, knees to your chest, full and satisfied that you've #dom taken#! what you wanted.\\n
                                  #italic The things you do for the dynasty... #!\\n""",
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                    You're not usually this assertive, but you #bold #dom yearned#!#! to keep his warmth #sub inside you.#!"""),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
                    Did he think you'd let him have his way with your body #italic just#! for fun? #dom Fool.#!""")
                                  )
                ))
@@ -2629,9 +2629,9 @@ def define_cum_events_mf(es: EventMap):
                    a compliment to her curves. #italic Is it normal for you to still be focusing on her body even
                    after sex?#!""",
 
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
                     #italic Yes, it is - you should have #dom taken#! those cheeks, not just painted them!#!"""),
-                                 TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} ={LIDA_DOM} }}", """
+                                 TriggeredDesc(f"{NOT} = {{ {IS_AT_LEAST_DOM_1} }}", """
                     #italic Perhaps it is, you were #bold so close#! to what you wanted but didn't get it.#!"""),
 
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
@@ -2669,16 +2669,16 @@ def define_cum_events_mf(es: EventMap):
                    """),
                                  """\\n\\n""",
 
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                     "Next time you're with someone you'll remember this moment, how I marked you, whoever you lay with", you say smugly.
                     {THEM}'s #italic lucky#! you #dom only#! marked her #like this."""),
 
                                  TriggeredDesc(
-                                     f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }} \n {NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}",
+                                     f"{NOT} = {{ {IS_AT_LEAST_DOM_1} }} \n {NOT} = {{ {IS_AT_LEAST_SUB_1} }}",
                                      f"""
                     "You look great", you remark with a smile as {THEM} opens her eyes slightly flustered.
                    """),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, f"""
                     "Forgive me for the mess, {THEM_FULL_REGNAL}!" you say while trying to clean her up."""),
                                  ))
            )
@@ -2705,15 +2705,15 @@ def define_cum_events_mf(es: EventMap):
                    """),
                                  """\\n\\n""",
 
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                     Her mouth is #italic quite#! good... maybe you should take it more often?"""),
 
                                  TriggeredDesc(
-                                     f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }} \n {NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}",
+                                     f"{NOT} = {{ {IS_AT_LEAST_DOM_1} }} \n {NOT} = {{ {IS_AT_LEAST_SUB_1} }}",
                                      f"""
                     "Let's do this again sometime", you say with a smile.
                    """),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, f"""
                     "Pardon me, {THEM_FULL_REGNAL}, I shouldn't have!" you say as you abruptly remove yourself from her mouth."""),
                                  )
                ))
@@ -2737,10 +2737,10 @@ def define_cum_events_mf(es: EventMap):
                                  As she has no choice apart from drowning, she swallows it. You enjoy the feeling a moment before
                                   you hear and #sub audible gulp#! as she takes it all down.
                                  \\n\\n""",
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                    #dom Using#! her like she's just a warm throat to be pleased by felt #S great#!. Maybe you'll do it again.
                    """, ),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, f"""
                    You're not sure #italic where#! this brutality you displayed came from.
                    """, ),
 
@@ -2758,10 +2758,10 @@ def define_cum_events_mf(es: EventMap):
                    \\n\\n
                    
                    \\n\\n""",
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                    How #dom dare#! she deny you satisfaction. You will not forget this offense.
                    """, ),
-                                 TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", f"""
+                                 TriggeredDesc(f"{NOT} = {{ {IS_AT_LEAST_DOM_1} }}", f"""
                    "Please, I'm so close," you #sub whine#!.
                    """, ),
                                  """"You didn't earn it today," she responds, "maybe next time #dom if you please me.#!"""
@@ -2793,11 +2793,11 @@ def define_cum_events_mf(es: EventMap):
                    Perhaps out of courtesy or simply not wanting to impregnate {THEM}, you pull out #italic just#! as you go past your limit.
                    You instead shoots your seed all across her groin, several quiet splashes announcing the end of the session.\\n\\n
                    """),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
+                   TriggeredDesc(IS_AT_LEAST_SUB_1, f"""
                     \\n\\n"Good boy", {THEM} whispers in your ear while #dom patting#! you on the head. 
                     "I #S might#! just invite you over again if I ever need something", she says with a smirk.
                     """),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                   TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                     \\n\\n"We're doing this again sometime", you say as you #dom squeeze#! her shapes one last time before dressing.""")
                ),
                ))
@@ -2822,9 +2822,9 @@ def define_cum_events_mf(es: EventMap):
                    \\n\\n"Let's do more next time", you says as you #S hungrily#! #dom smack her ass#!. 
                    """),
 
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
                     You wanted more, but at least you #S #dom marked#!#! what's yours."""),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     How #italic could#! you make such a mess on her body?"""),
                                  ),
                ))
@@ -2839,7 +2839,7 @@ def define_cum_events_mf(es: EventMap):
                    "Ugh," you grunt as you plunge to the hilt, your rod wildly throbbing inside her.
                     You look down just in time to see a white contour remain on her lips as your load overflows around your rod, dripping down her thighs.""",
 
-                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
+                                 TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
                     "Y-you can do it again if you want", {THEM} says. Judging by the look on her face she #bold wants#!#! you to do it #dom again#!. \\n
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
@@ -2849,14 +2849,14 @@ def define_cum_events_mf(es: EventMap):
                    "Is the #dom privilege#! of experiencing my body not enough?!" {THEM} says "How #dom dare#! you release #bold inside#! me
                     like in #italic some random wench?!#!"""),
 
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     "I-I don't know what came over me!" you say, feeling deeply #sub ashamed#! while avoiding her gaze. \\n\\n
                                      """),
                                  TriggeredDesc(
-                                     f" {NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }} \n  {NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}", """
+                                     f" {NOT} = {{ {IS_AT_LEAST_DOM_1} }} \n  {NOT} = {{ {IS_AT_LEAST_SUB_1} }}", """
                    "It just felt so good!", you say as you withdraw your rod, almost as if trying to justify yourself. \\n\\n
                    """),
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", """
+                                 TriggeredDesc(IS_AT_LEAST_DOM_1, """
                    "Let's do this again sometime", you say as you #dom smack her ass#! before finally pulling out. \\n\\n
                    """),
 
@@ -2885,9 +2885,9 @@ def define_cum_events_mf(es: EventMap):
                    "Whatever you need, {THEM_FULL_REGNAL}!", you say while #dom submitting# to being milked into her tight womb\\n\\n
                    """),
                                  f"""{THEM} slowly gets up, white threads hanging from her slit as drops splash onto the ground. """,
-                                 TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", f"""
+                                 TriggeredDesc(IS_AT_LEAST_SUB_1, f"""
                    You look into her eyes, knowing you couldn't have stopped her from #dom taking#! your seed no matter how hard you tried to resist - and you #sub didn't#!."""),
-                                 TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }}", f"""
+                                 TriggeredDesc(f"{NOT} = {{ {IS_AT_LEAST_DOM_1} }}", f"""
                    You were pondering leaving her a gift anyway, but to have it #S taken#! from you? Shameful!.""")
                                  ),
                ))
@@ -2907,13 +2907,13 @@ def define_cum_events_mf(es: EventMap):
                     """,
                    """She lies there panting, a white sliver dripping from her #dom conquered#! slit as you soak in the warmth of her #dom dominated#! body.""",
 
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_SUB}", """
+                   TriggeredDesc(IS_AT_LEAST_SUB_1, """
                    You're uncertain what came over you as you take in that you tried to #S claim her womb#!.
                     She didn't #sub take#! your seed... you #dom forced# it in! \\n"""),
-                   TriggeredDesc(f"{NOT} = {{ {HAS_TRAIT} = {LIDA_DOM} }} \n {NOT} = {{ {HAS_TRAIT} = {LIDA_SUB} }}",
+                   TriggeredDesc(f"{NOT} = {{ {IS_AT_LEAST_DOM_1} }} \n {NOT} = {{ {IS_AT_LEAST_SUB_1} }}",
                                  f"""
                    For a moment your mind wanders to ponder the possible consequences, but the #S ecstasy#! clears out any such thoughts."""),
-                   TriggeredDesc(f"{HAS_TRAIT} = {LIDA_DOM}", f"""
+                   TriggeredDesc(IS_AT_LEAST_DOM_1, f"""
                    "You're #sub mine#! now, {THEM}", you whisper in her ear before finally beginning to pull out.
                    A sharp moan escapes her lips as you thrust in to the hilt one last time, #bold knowing#! you've #dom claimed#! her #S womb#!
                      """),

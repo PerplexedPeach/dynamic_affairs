@@ -2416,7 +2416,7 @@ LIDAs.7 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								NOT = { has_trait = lida_dom }
+								NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 							}
 							desc = sex_transition.7.7.20
 						}
@@ -2424,7 +2424,7 @@ LIDAs.7 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								has_trait = lida_dom
+								has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 							}
 							desc = sex_transition.7.7.21
 						}
@@ -3416,7 +3416,7 @@ LIDAs.8 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								NOT = { has_trait = lida_dom }
+								NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 							}
 							desc = sex_transition.7.7.20
 						}
@@ -3424,7 +3424,7 @@ LIDAs.8 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								has_trait = lida_dom
+								has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 							}
 							desc = sex_transition.7.7.21
 						}
@@ -6870,7 +6870,7 @@ LIDAs.11 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						NOT = { has_trait = lida_sub }
+						NOT = { has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAs.11.desc.21
 				}
@@ -6878,7 +6878,7 @@ LIDAs.11 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.11.desc.22
 				}
@@ -10553,7 +10553,7 @@ LIDAs.9 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								NOT = { has_trait = lida_dom }
+								NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 							}
 							desc = sex_transition.8.9.20
 						}
@@ -10561,7 +10561,7 @@ LIDAs.9 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								has_trait = lida_dom
+								has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 							}
 							desc = sex_transition.8.9.21
 						}
@@ -10580,7 +10580,7 @@ LIDAs.9 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								NOT = { has_trait = lida_dom }
+								NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 							}
 							desc = sex_transition.37.9.20
 						}
@@ -10588,7 +10588,7 @@ LIDAs.9 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								has_trait = lida_dom
+								has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 							}
 							desc = sex_transition.37.9.21
 						}
@@ -10607,7 +10607,7 @@ LIDAs.9 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								NOT = { has_trait = lida_dom }
+								NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 							}
 							desc = sex_transition.38.9.20
 						}
@@ -10615,7 +10615,7 @@ LIDAs.9 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								has_trait = lida_dom
+								has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 							}
 							desc = sex_transition.38.9.21
 						}
@@ -10924,7 +10924,7 @@ LIDAs.9 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							NOT = { has_trait = lida_dom }
+							NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 						}
 						desc = sex_transition.8.9.20
 					}
@@ -10932,7 +10932,7 @@ LIDAs.9 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							has_trait = lida_dom
+							has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 						}
 						desc = sex_transition.8.9.21
 					}
@@ -10952,7 +10952,7 @@ LIDAs.9 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							NOT = { has_trait = lida_dom }
+							NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 						}
 						desc = sex_transition.37.9.20
 					}
@@ -10960,7 +10960,7 @@ LIDAs.9 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							has_trait = lida_dom
+							has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 						}
 						desc = sex_transition.37.9.21
 					}
@@ -10980,7 +10980,7 @@ LIDAs.9 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							NOT = { has_trait = lida_dom }
+							NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 						}
 						desc = sex_transition.38.9.20
 					}
@@ -10988,7 +10988,7 @@ LIDAs.9 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							has_trait = lida_dom
+							has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 						}
 						desc = sex_transition.38.9.21
 					}
@@ -11911,7 +11911,7 @@ LIDAs.15 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.15.desc.21
 				}
@@ -11919,7 +11919,7 @@ LIDAs.15 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.15.desc.22
 				}
@@ -12849,7 +12849,7 @@ LIDAs.16 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.16.desc.21
 				}
@@ -12857,7 +12857,7 @@ LIDAs.16 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.16.desc.22
 				}
@@ -13815,7 +13815,7 @@ LIDAs.17 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.17.desc.21
 				}
@@ -13823,7 +13823,7 @@ LIDAs.17 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.17.desc.22
 				}
@@ -14689,7 +14689,7 @@ LIDAs.18 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.18.desc.21
 				}
@@ -14697,7 +14697,7 @@ LIDAs.18 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.18.desc.22
 				}
@@ -21655,7 +21655,7 @@ LIDAs.28 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						NOT = { has_trait = lida_sub }
+						NOT = { has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAs.28.desc.21
 				}
@@ -21663,7 +21663,7 @@ LIDAs.28 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.28.desc.22
 				}
@@ -25115,7 +25115,7 @@ LIDAs.26 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								NOT = { has_trait = lida_dom }
+								NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 							}
 							desc = sex_transition.25.26.20
 						}
@@ -25123,7 +25123,7 @@ LIDAs.26 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								has_trait = lida_dom
+								has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 							}
 							desc = sex_transition.25.26.21
 						}
@@ -25142,7 +25142,7 @@ LIDAs.26 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								NOT = { has_trait = lida_dom }
+								NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 							}
 							desc = sex_transition.40.26.20
 						}
@@ -25150,7 +25150,7 @@ LIDAs.26 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								has_trait = lida_dom
+								has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 							}
 							desc = sex_transition.40.26.21
 						}
@@ -25169,7 +25169,7 @@ LIDAs.26 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								NOT = { has_trait = lida_dom }
+								NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 							}
 							desc = sex_transition.41.26.20
 						}
@@ -25177,7 +25177,7 @@ LIDAs.26 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								has_trait = lida_dom
+								has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 							}
 							desc = sex_transition.41.26.21
 						}
@@ -25441,7 +25441,7 @@ LIDAs.26 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							NOT = { has_trait = lida_dom }
+							NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 						}
 						desc = sex_transition.25.26.20
 					}
@@ -25449,7 +25449,7 @@ LIDAs.26 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							has_trait = lida_dom
+							has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 						}
 						desc = sex_transition.25.26.21
 					}
@@ -25469,7 +25469,7 @@ LIDAs.26 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							NOT = { has_trait = lida_dom }
+							NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 						}
 						desc = sex_transition.40.26.20
 					}
@@ -25477,7 +25477,7 @@ LIDAs.26 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							has_trait = lida_dom
+							has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 						}
 						desc = sex_transition.40.26.21
 					}
@@ -25497,7 +25497,7 @@ LIDAs.26 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							NOT = { has_trait = lida_dom }
+							NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 						}
 						desc = sex_transition.41.26.20
 					}
@@ -25505,7 +25505,7 @@ LIDAs.26 = {
 				desc = {
 					triggered_desc = {
 						trigger = {
-							has_trait = lida_dom
+							has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 						}
 						desc = sex_transition.41.26.21
 					}
@@ -26392,7 +26392,7 @@ LIDAs.32 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.32.desc.21
 				}
@@ -26400,7 +26400,7 @@ LIDAs.32 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.32.desc.22
 				}
@@ -27279,7 +27279,7 @@ LIDAs.33 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.33.desc.21
 				}
@@ -27287,7 +27287,7 @@ LIDAs.33 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.33.desc.22
 				}
@@ -28185,7 +28185,7 @@ LIDAs.34 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.34.desc.21
 				}
@@ -28193,7 +28193,7 @@ LIDAs.34 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.34.desc.22
 				}
@@ -28965,7 +28965,7 @@ LIDAs.35 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.35.desc.21
 				}
@@ -28973,7 +28973,7 @@ LIDAs.35 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAs.35.desc.22
 				}

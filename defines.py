@@ -139,6 +139,7 @@ NAME = "name"
 VALUE = "value"
 CUSTOM_TOOLTIP = "custom_tooltip"
 CUSTOM_DESCRIPTION = "custom_description"
+TRAIT = "trait"
 TEXT = "text"
 ADD = "add"
 IS_SPOUSE_OF = "is_spouse_of"
@@ -209,6 +210,7 @@ NO = "no"
 EXISTS = "exists"
 HAS_VARIABLE = "has_variable"
 HAS_TRAIT = "has_trait"
+HAS_TRAIT_XP = "has_trait_xp"
 NOT = "NOT"
 OR = "OR"
 AND = "AND"
@@ -268,6 +270,8 @@ EVENTS_FILE_HEADER = "# GENERATED FILE - DO NOT MODIFY DIRECTLY"
 # traits
 LIDA_SUB = "lida_sub"
 LIDA_DOM = "lida_dom"
+LIDA_SUB_TRACK = "lida_sub_track"
+LIDA_DOM_TRACK = "lida_dom_track"
 
 # localization constants
 THEM = "[affairs_partner.GetFirstName]"
@@ -325,3 +329,16 @@ EYEROLL = "eyeroll"
 # modifiers
 SEXUALLY_FRUSTRATED = "sexually_frustrated"
 WEARING_CUMMY_CLOTHING = "wearing_cummy_clothing"
+
+# scripted values
+LIDA_TRACK_XP_STAGE_1 = "lida_track_xp_stage_1"
+LIDA_TRACK_XP_STAGE_2 = "lida_track_xp_stage_2"
+LIDA_TRACK_XP_STAGE_3 = "lida_track_xp_stage_3"
+
+# convenience macros
+IS_AT_LEAST_SUB_1 = f"{HAS_TRAIT_XP} = {{ {TRAIT} =  {LIDA_SUB_TRACK} {VALUE} >= {LIDA_TRACK_XP_STAGE_1} }}"
+IS_AT_LEAST_SUB_2 = f"{HAS_TRAIT_XP} = {{ {TRAIT} =  {LIDA_SUB_TRACK} {VALUE} >= {LIDA_TRACK_XP_STAGE_2} }}"
+IS_AT_LEAST_SUB_3 = f"{HAS_TRAIT_XP} = {{ {TRAIT} =  {LIDA_SUB_TRACK} {VALUE} >= {LIDA_TRACK_XP_STAGE_3} }}"
+IS_AT_LEAST_DOM_1 = f"{HAS_TRAIT_XP} = {{ {TRAIT} =  {LIDA_DOM_TRACK} {VALUE} >= {LIDA_TRACK_XP_STAGE_1} }}"
+IS_AT_LEAST_DOM_2 = f"{HAS_TRAIT_XP} = {{ {TRAIT} =  {LIDA_DOM_TRACK} {VALUE} >= {LIDA_TRACK_XP_STAGE_2} }}"
+IS_AT_LEAST_DOM_3 = f"{HAS_TRAIT_XP} = {{ {TRAIT} =  {LIDA_DOM_TRACK} {VALUE} >= {LIDA_TRACK_XP_STAGE_3} }}"

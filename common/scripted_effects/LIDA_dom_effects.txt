@@ -151,76 +151,112 @@ calculate_dom_success_effect = {
 			add = 0
 			if = {
 				limit = {
-					has_trait = lida_dom_1
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_3
+					}
+				}
+				add = 25
+			}
+			else_if = {
+				limit = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_2
+					}
+				}
+				add = 17
+			}
+			else_if = {
+				limit = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_1
+					}
 				}
 				add = 10
 			}
 			if = {
 				limit = {
-					has_trait = lida_dom_2
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_3
+					}
 				}
-				add = 17
+				add = -25
 			}
-			if = {
+			else_if = {
 				limit = {
-					has_trait = lida_dom_3
-				}
-				add = 25
-			}
-			if = {
-				limit = {
-					has_trait = lida_sub_1
-				}
-				add = -10
-			}
-			if = {
-				limit = {
-					has_trait = lida_sub_2
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_2
+					}
 				}
 				add = -17
 			}
-			if = {
+			else_if = {
 				limit = {
-					has_trait = lida_sub_3
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_1
+					}
 				}
-				add = -25
+				add = -10
 			}
 			scope:affairs_partner = {
 				if = {
 					limit = {
-						has_trait = lida_dom_1
+						has_trait_xp = {
+							trait = lida_dom_track
+							value >= lida_track_xp_stage_3
+						}
 					}
-					add = -10
+					add = 25
 				}
-				if = {
+				else_if = {
 					limit = {
-						has_trait = lida_dom_2
+						has_trait_xp = {
+							trait = lida_dom_track
+							value >= lida_track_xp_stage_2
+						}
 					}
-					add = -17
+					add = 17
 				}
-				if = {
+				else_if = {
 					limit = {
-						has_trait = lida_dom_3
-					}
-					add = -25
-				}
-				if = {
-					limit = {
-						has_trait = lida_sub_1
+						has_trait_xp = {
+							trait = lida_dom_track
+							value >= lida_track_xp_stage_1
+						}
 					}
 					add = 10
 				}
 				if = {
 					limit = {
-						has_trait = lida_sub_2
+						has_trait_xp = {
+							trait = lida_sub_track
+							value >= lida_track_xp_stage_3
+						}
 					}
-					add = 17
+					add = -25
 				}
-				if = {
+				else_if = {
 					limit = {
-						has_trait = lida_sub_3
+						has_trait_xp = {
+							trait = lida_sub_track
+							value >= lida_track_xp_stage_2
+						}
 					}
-					add = 25
+					add = -17
+				}
+				else_if = {
+					limit = {
+						has_trait_xp = {
+							trait = lida_sub_track
+							value >= lida_track_xp_stage_1
+						}
+					}
+					add = -10
 				}
 			}
 		}
