@@ -102,54 +102,6 @@ LIDA.50 = {
 		custom_tooltip = LIDA.50.c.tt
 	}
 }
-# debug events
-# LIDA.1 = {
-# 	type = character_event
-# 	title = "Become more sub"
-# 	theme = seduction
-# 	left_portrait = {
-# 		character = root
-# 	}
-# 	immediate = {
-# 		random = {
-# 			chance = 50
-# 			become_more_sub_effect = yes
-# 		}
-
-# 		get_characters_eligible_partner_effect = {
-# 			LISTNAME = affairs_pool
-# 			RESTRICTED_LISTNAME = rejected_affairs_pool
-# 		}
-# 		random_in_list = {
-# 			list = affairs_pool
-# 			save_scope_as = affairs_partner
-# 		}
-
-# 		scope:affairs_partner = {
-# 			become_more_sub_effect = yes
-# 		}
-# 	}
-# 	option = {
-# 		name = "ok"
-# 	}
-# }
-# LIDA.2 = {
-# 	type = character_event
-# 	title = "Become more dom"
-# 	theme = seduction
-# 	left_portrait = {
-# 		character = root
-# 	}
-# 	immediate = {
-# 		random = {
-# 			chance = 50
-# 			become_more_dom_effect = yes
-# 		}
-# 	}
-# 	option = {
-# 		name = "ok"
-# 	}
-# }
 
 # consolation event explaining a gender pairing's not been implemented
 LIDA.3 = {
@@ -172,7 +124,7 @@ LIDA.3 = {
 	}
 }
 
-# testing of yearly pulse
+# debug testing of yearly pulse (should be orphaned)
 LIDA.4 = {
 	type = character_event
 	title = LIDA.4.t
@@ -618,7 +570,7 @@ LIDA.120 = {
 		# triggered description with triggered_desc
 	}
 	trigger = {
-		any_affair_candidate_trigger = { TRIGGER = you_dom_them }
+		any_affair_candidate_trigger = { TRIGGER = you_dom_them_they_are_male }
 	}
 	# probably can use a custom theme
 	theme = seduction
@@ -650,7 +602,7 @@ LIDA.120 = {
 				# prisoners don't have the freedom to proposition you
 				is_imprisoned = no
 				age >= 18
-				you_dom_them = yes
+				you_dom_them_they_are_male = yes
 			}
 			save_temporary_scope_as = affairs_candidate
 			weight = {

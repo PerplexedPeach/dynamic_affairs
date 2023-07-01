@@ -49,6 +49,10 @@ you_dom_them = {
 		value >= 10
 	}
 }
+you_dom_them_they_are_male = {
+	you_dom_them = yes
+	is_male = yes
+}
 they_dom_you_strongly = {
 	has_opinion_modifier = {
 		modifier = dominant_opinion
