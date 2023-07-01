@@ -174,7 +174,7 @@ LIDAc.1 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								NOT = { has_trait = lida_dom }
+								NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 							}
 							desc = sex_transition.7.7.20
 						}
@@ -182,7 +182,7 @@ LIDAc.1 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								has_trait = lida_dom
+								has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 							}
 							desc = sex_transition.7.7.21
 						}
@@ -680,7 +680,7 @@ LIDAc.6 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.6.desc.21
 				}
@@ -688,7 +688,7 @@ LIDAc.6 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.6.desc.22
 				}
@@ -721,7 +721,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.6.desc.26
 				}
@@ -729,7 +729,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.6.desc.27
 				}
@@ -963,7 +963,7 @@ LIDAc.4 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								NOT = { has_trait = lida_dom }
+								NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 							}
 							desc = sex_transition.7.7.20
 						}
@@ -971,7 +971,7 @@ LIDAc.4 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								has_trait = lida_dom
+								has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 							}
 							desc = sex_transition.7.7.21
 						}
@@ -1791,7 +1791,7 @@ LIDAc.3 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.3.desc.24
 				}
@@ -1799,7 +1799,7 @@ LIDAc.3 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.3.desc.25
 				}
@@ -2037,7 +2037,7 @@ LIDAc.5 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								NOT = { has_trait = lida_dom }
+								NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 							}
 							desc = sex_transition.7.7.20
 						}
@@ -2045,7 +2045,7 @@ LIDAc.5 = {
 					desc = {
 						triggered_desc = {
 							trigger = {
-								has_trait = lida_dom
+								has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 							}
 							desc = sex_transition.7.7.21
 						}
@@ -2675,7 +2675,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.8.desc.23
 				}
@@ -2683,7 +2683,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.8.desc.24
 				}
@@ -3150,7 +3150,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.7.desc.24
 				}
@@ -3158,7 +3158,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.7.desc.25
 				}
@@ -3543,7 +3543,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.9.desc.25
 				}
@@ -3551,7 +3551,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.9.desc.26
 				}
@@ -3890,7 +3890,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.10.desc.25
 				}
@@ -4186,7 +4186,7 @@ LIDAc.11 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.11.desc.22
 				}
@@ -4194,8 +4194,8 @@ LIDAc.11 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub 
- NOT = { has_trait =pregnant }
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } 
+ NOT = { has_trait = pregnant }
 					}
 					desc = LIDAc.11.desc.23
 				}
@@ -4203,7 +4203,7 @@ LIDAc.11 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub 
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } 
  has_trait = pregnant
 					}
 					desc = LIDAc.11.desc.24
@@ -4212,7 +4212,7 @@ LIDAc.11 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.11.desc.25
 				}
@@ -4237,7 +4237,7 @@ LIDAc.11 = {
 				triggered_desc = {
 					trigger = {
 						scope:subdom >= 10 
-NOT = { has_trait =lida_sub }
+NOT = { has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAc.11.desc.28
 				}
@@ -4246,7 +4246,7 @@ NOT = { has_trait =lida_sub }
 				triggered_desc = {
 					trigger = {
 						scope:subdom >= 10 
-has_trait = lida_sub
+has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.11.desc.29
 				}
@@ -4271,7 +4271,7 @@ has_trait = lida_sub
 				triggered_desc = {
 					trigger = {
 						scope:subdom <= -10 
-has_trait = lida_sub
+has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.11.desc.32
 				}
@@ -4280,7 +4280,7 @@ has_trait = lida_sub
 				triggered_desc = {
 					trigger = {
 						scope:subdom <= -10 
-NOT = { has_trait =lida_sub }
+NOT = { has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAc.11.desc.33
 				}
@@ -4288,7 +4288,7 @@ NOT = { has_trait =lida_sub }
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.11.desc.34
 				}
@@ -4296,8 +4296,8 @@ NOT = { has_trait =lida_sub }
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom 
- NOT = { has_trait =pregnant }
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } 
+ NOT = { has_trait = pregnant }
 					}
 					desc = LIDAc.11.desc.35
 				}
@@ -4305,7 +4305,7 @@ NOT = { has_trait =lida_sub }
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom 
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } 
  has_trait = pregnant
 					}
 					desc = LIDAc.11.desc.36
@@ -4315,8 +4315,8 @@ NOT = { has_trait =lida_sub }
 				triggered_desc = {
 					trigger = {
 						NOT = { has_trait =pregnant } 
- NOT = { has_trait =lida_sub } 
- NOT = { has_trait =lida_dom }
+ NOT = { has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } } 
+ NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAc.11.desc.37
 				}
@@ -4325,8 +4325,8 @@ NOT = { has_trait =lida_sub }
 				triggered_desc = {
 					trigger = {
 						has_trait =pregnant 
- NOT = { has_trait =lida_sub } 
- NOT = { has_trait =lida_dom }
+ NOT = { has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } } 
+ NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAc.11.desc.38
 				}
@@ -4592,7 +4592,7 @@ LIDAc.12 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.12.desc.24
 				}
@@ -4600,7 +4600,7 @@ LIDAc.12 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.12.desc.25
 				}
@@ -5272,7 +5272,7 @@ LIDAc.18 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.18.desc.21
 				}
@@ -5280,7 +5280,7 @@ LIDAc.18 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						NOT = { has_trait =lida_dom }
+						NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAc.18.desc.22
 				}
@@ -5751,7 +5751,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.16.desc.25
 				}
@@ -5759,8 +5759,8 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						NOT = { has_trait = lida_dom } 
- NOT = { has_trait = lida_sub }
+						NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } } 
+ NOT = { has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAc.16.desc.26
 				}
@@ -5768,7 +5768,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.16.desc.27
 				}
@@ -6135,7 +6135,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.14.desc.25
 				}
@@ -6143,8 +6143,8 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						NOT = { has_trait = lida_dom } 
- NOT = { has_trait = lida_sub }
+						NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } } 
+ NOT = { has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAc.14.desc.26
 				}
@@ -6152,7 +6152,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.14.desc.27
 				}
@@ -6455,7 +6455,7 @@ LIDAc.15 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.15.desc.24
 				}
@@ -6463,7 +6463,7 @@ LIDAc.15 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.15.desc.25
 				}
@@ -6841,7 +6841,7 @@ LIDAc.17 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.17.desc.21
 				}
@@ -6849,7 +6849,7 @@ LIDAc.17 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						NOT = { has_trait = lida_dom }
+						NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAc.17.desc.22
 				}
@@ -7295,7 +7295,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.20.desc.23
 				}
@@ -7303,7 +7303,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.20.desc.24
 				}
@@ -7716,7 +7716,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.19.desc.24
 				}
@@ -7724,7 +7724,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.19.desc.25
 				}
@@ -8065,7 +8065,7 @@ LIDAc.21 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.21.desc.21
 				}
@@ -8073,8 +8073,8 @@ LIDAc.21 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						 NOT = { has_trait = lida_dom } 
-  NOT = { has_trait = lida_sub }
+						 NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } } 
+  NOT = { has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAc.21.desc.22
 				}
@@ -8082,7 +8082,7 @@ LIDAc.21 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.21.desc.23
 				}
@@ -8429,7 +8429,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.22.desc.25
 				}
@@ -8437,7 +8437,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						NOT = { has_trait = lida_dom }
+						NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAc.22.desc.26
 				}
@@ -8715,7 +8715,7 @@ LIDAc.23 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_sub
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.23.desc.22
 				}
@@ -8723,8 +8723,8 @@ LIDAc.23 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						NOT = { has_trait = lida_dom } 
- NOT = { has_trait = lida_sub }
+						NOT = { has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 } } 
+ NOT = { has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 } }
 					}
 					desc = LIDAc.23.desc.23
 				}
@@ -8732,7 +8732,7 @@ LIDAc.23 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						has_trait = lida_dom
+						has_trait_xp = { trait =  lida_dom_track value >= lida_track_xp_stage_1 }
 					}
 					desc = LIDAc.23.desc.24
 				}

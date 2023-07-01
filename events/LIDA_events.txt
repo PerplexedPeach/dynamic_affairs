@@ -530,15 +530,24 @@ LIDA.110 = {
 				# more likely if they are dom
 				modifier = {
 					factor = 1.2
-					has_trait = lida_dom_1
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_1
+					}
+				}
+				modifier = {
+					factor = 1.3
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_2
+					}
 				}
 				modifier = {
 					factor = 1.5
-					has_trait = lida_dom_2
-				}
-				modifier = {
-					factor = 2.0
-					has_trait = lida_dom_3
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_3
+					}
 				}
 
 				# more likely if they are bold
@@ -669,11 +678,13 @@ LIDA.120 = {
 		# subtly agitates people to cum in your clothing more since you're sub and like it
 		name = LIDA.120.a
 		trigger = {
-			has_trait = lida_sub
+			has_trait = lida_sub_track
+			has_trait_xp = {
+				trait = lida_sub_track
+				value >= lida_track_xp_stage_1
+			}
 		}
-		trait = lida_sub_1
-		trait = lida_sub_2
-		trait = lida_sub_3
+		trait = lida_sub_track
 		add_character_modifier = {
 			modifier = wearing_cummy_clothes
 			years = 5
@@ -733,25 +744,37 @@ LIDA.130 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					has_trait = lida_sub_1
-				}
-				desc = LIDA.130.sub_1
-			}
-			triggered_desc = {
-				trigger = {
-					has_trait = lida_sub_2
-				}
-				desc = LIDA.130.sub_2
-			}
-			triggered_desc = {
-				trigger = {
-					has_trait = lida_sub_3
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_3
+					}
 				}
 				desc = LIDA.130.sub_3
 			}
 			triggered_desc = {
 				trigger = {
-					has_trait = lida_dom
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_2
+					}
+				}
+				desc = LIDA.130.sub_2
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_1
+					}
+				}
+				desc = LIDA.130.sub_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_1
+					}
 				}
 				desc = LIDA.130.dom
 			}
@@ -855,9 +878,7 @@ LIDA.130 = {
 			opinion = -15
 		}
 		stress_impact = {   
-			lida_sub_1 = medium_stress_impact_gain
-			lida_sub_2 = major_stress_impact_gain
-			lida_sub_3 = massive_stress_impact_gain
+			lida_sub_track = medium_stress_impact_gain
 		}
 	}
 }
@@ -913,25 +934,37 @@ LIDA.140 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					has_trait = lida_sub_1
-				}
-				desc = LIDA.140.sub_1
-			}
-			triggered_desc = {
-				trigger = {
-					has_trait = lida_sub_2
-				}
-				desc = LIDA.140.sub_2
-			}
-			triggered_desc = {
-				trigger = {
-					has_trait = lida_sub_3
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_3
+					}
 				}
 				desc = LIDA.140.sub_3
 			}
 			triggered_desc = {
 				trigger = {
-					has_trait = lida_dom
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_2
+					}
+				}
+				desc = LIDA.140.sub_2
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_1
+					}
+				}
+				desc = LIDA.140.sub_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_1
+					}
 				}
 				desc = LIDA.140.dom
 			}
@@ -1036,9 +1069,7 @@ LIDA.140 = {
 			opinion = -15
 		}
 		stress_impact = {   
-			lida_sub_1 = medium_stress_impact_gain
-			lida_sub_2 = major_stress_impact_gain
-			lida_sub_3 = massive_stress_impact_gain
+			lida_sub_track = medium_stress_impact_gain
 		}
 	}
 }
