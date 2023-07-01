@@ -3313,7 +3313,7 @@ LIDAc.9 = {
 					scope:sex_transition = 9000910
 				}
 				# Standing Fucked from Behind
-				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
+				# You feel [affairs_partner.GetFirstName]'s thrusts become sharper and deeper.\n
 				desc = sex_transition.CUM.9.9.0
 			}
 			triggered_desc = {
@@ -3322,7 +3322,7 @@ LIDAc.9 = {
 					scope:sex_transition = 15000910
 				}
 				# Ride Facing Away
-				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
+				# You feel [affairs_partner.GetFirstName]'s thrusts become sharper and deeper.\n
 				desc = sex_transition.CUM.15.9.0
 			}
 			triggered_desc = {
@@ -3331,7 +3331,7 @@ LIDAc.9 = {
 					scope:sex_transition = 16000910
 				}
 				# Ride Facing Them
-				# Feeling little resistance from your body, he prepares to leave you a hot, sticky gift.\n
+				# You feel [affairs_partner.GetFirstName]'s thrusts become sharper and deeper.\n
 				desc = sex_transition.CUM.16.9.0
 			}
 			triggered_desc = {
@@ -5037,7 +5037,7 @@ LIDAc.18 = {
 					scope:sex_transition = 22001810
 				}
 				# Ass Tease
-				# You can't hold on much longer, and have to settle for marking her cheeks.\n
+				# Your rod is aimed straight at her cheeks...\n
 				desc = sex_transition.CUM.22.18.0
 			}
 			triggered_desc = {
@@ -5046,7 +5046,7 @@ LIDAc.18 = {
 					scope:sex_transition = 31001810
 				}
 				# Ass Rub
-				# You can't hold on much longer, and have to settle for marking her cheeks.\n
+				# Your rod is aimed straight at her cheeks...\n
 				desc = sex_transition.CUM.31.18.0
 			}
 			triggered_desc = {
@@ -5055,7 +5055,7 @@ LIDAc.18 = {
 					scope:sex_transition = 29001810
 				}
 				# Hotdogging
-				# You can't hold on much longer, and have to settle for marking her cheeks.\n
+				# Your rod is aimed straight at her cheeks...\n
 				desc = sex_transition.CUM.29.18.0
 			}
 			triggered_desc = {
@@ -5064,7 +5064,7 @@ LIDAc.18 = {
 					scope:sex_transition = 30001810
 				}
 				# Fingering from Behind
-				# You can't hold on much longer, and have to settle for marking her cheeks.\n
+				# Your rod is aimed straight at her cheeks...\n
 				desc = sex_transition.CUM.30.18.0
 			}
 			triggered_desc = {
@@ -5082,7 +5082,7 @@ LIDAc.18 = {
 					scope:sex_transition = -22001910
 				}
 				# 22001910: EventsSex.MF_ASS_TEASE -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.22.19.666
 			}
 			triggered_desc = {
@@ -5100,7 +5100,7 @@ LIDAc.18 = {
 					scope:sex_transition = -31001910
 				}
 				# 31001910: EventsSex.MF_ASS_RUB -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.31.19.666
 			}
 			triggered_desc = {
@@ -5127,7 +5127,7 @@ LIDAc.18 = {
 					scope:sex_transition = -29001910
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
@@ -5145,7 +5145,7 @@ LIDAc.18 = {
 					scope:sex_transition = -30001910
 				}
 				# 30001910: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.30.19.666
 			}
 		}
@@ -6974,7 +6974,7 @@ LIDAc.20 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 33002010
 				}
-				# Ride Facing Them
+				# Ride Facing You
 				# She puts her hand on your rod, guiding you to unload on her cheeks.\n
 				desc = sex_transition.CUM.33.20.0
 			}
@@ -7101,7 +7101,7 @@ LIDAc.20 = {
 					scope:sex_transition = -35003500
 				}
 				# 35003500: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE failed
-				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moands distracting you just enough for her to make a move.\n
+				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moans distracting you just enough for her to make a move.\n
 				desc = sex_transition.35.35.666
 			}
 			triggered_desc = {
@@ -7407,7 +7407,7 @@ LIDAc.19 = {
 					scope:sex_transition = 22001910
 				}
 				# Ass Tease
-				# You can't hold on much longer, but manage to cum on her groin, dangerously close to her pussy.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!.\n
 				desc = sex_transition.CUM.22.19.0
 			}
 			triggered_desc = {
@@ -7416,7 +7416,7 @@ LIDAc.19 = {
 					scope:sex_transition = 31001910
 				}
 				# Ass Rub
-				# You can't hold on much longer, but manage to cum on her groin, dangerously close to her pussy.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!.\n
 				desc = sex_transition.CUM.31.19.0
 			}
 			triggered_desc = {
@@ -7425,7 +7425,7 @@ LIDAc.19 = {
 					scope:sex_transition = 29001910
 				}
 				# Hotdogging
-				# You can't hold on much longer, but manage to cum on her groin, dangerously close to her pussy.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!.\n
 				desc = sex_transition.CUM.29.19.0
 			}
 			triggered_desc = {
@@ -7434,7 +7434,7 @@ LIDAc.19 = {
 					scope:sex_transition = 30001910
 				}
 				# Fingering from Behind
-				# You can't hold on much longer, but manage to cum on her groin, #italic dangerously#! close to her entrance.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!.\n
 				desc = sex_transition.CUM.30.19.0
 			}
 			triggered_desc = {
@@ -7461,7 +7461,7 @@ LIDAc.19 = {
 					scope:sex_transition = -22001910
 				}
 				# 22001910: EventsSex.MF_ASS_TEASE -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.22.19.666
 			}
 			triggered_desc = {
@@ -7479,7 +7479,7 @@ LIDAc.19 = {
 					scope:sex_transition = -31001910
 				}
 				# 31001910: EventsSex.MF_ASS_RUB -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.31.19.666
 			}
 			triggered_desc = {
@@ -7506,7 +7506,7 @@ LIDAc.19 = {
 					scope:sex_transition = -29001910
 				}
 				# 29001910: EventsSex.MF_HOTDOG -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.29.19.666
 			}
 			triggered_desc = {
@@ -7524,7 +7524,7 @@ LIDAc.19 = {
 					scope:sex_transition = -30001910
 				}
 				# 30001910: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsCum.MF_CUM_ON_GROIN failed
-				# You can't hold on much longer, and want to cum on her groin, but she clamps down on your rod before you manage to do so.\n
+				# As your release arrives you aim to coat her entrances in #bold white#!, but find yourself #italic redirected#!.\n
 				desc = sex_transition.CUM.30.19.666
 			}
 		}
@@ -7813,7 +7813,7 @@ LIDAc.21 = {
 					scope:sex_transition = 26002110
 				}
 				# Standing Fuck from Behind
-				# Feeling little resistance from her body, you prepare to plant your seed inside.\n
+				# Feeling little resistance, you prepare to plant your seed inside.\n
 				desc = sex_transition.CUM.26.21.0
 			}
 			triggered_desc = {
@@ -7822,7 +7822,7 @@ LIDAc.21 = {
 					scope:sex_transition = 32002110
 				}
 				# Ride Facing Away
-				# Feeling little resistance from her body, you prepare to plant your seed inside.\n
+				# Feeling little resistance, you prepare to plant your seed inside.\n
 				desc = sex_transition.CUM.32.21.0
 			}
 			triggered_desc = {
@@ -7830,8 +7830,8 @@ LIDAc.21 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 33002110
 				}
-				# Ride Facing Them
-				# Feeling little resistance from her body, you prepare to plant your seed inside.\n
+				# Ride Facing You
+				# Feeling little resistance, you prepare to plant your seed inside.\n
 				desc = sex_transition.CUM.33.21.0
 			}
 			triggered_desc = {
@@ -7982,7 +7982,7 @@ LIDAc.21 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						scope:subdom >= 10
+						has_trait = lida_sub
 					}
 					desc = LIDAc.21.desc.24
 				}
@@ -7990,8 +7990,8 @@ LIDAc.21 = {
 			desc = {
 				triggered_desc = {
 					trigger = {
-						scope:subdom > -10 
-scope:subdom < 10
+						 NOT = { has_trait = lida_dom } 
+  NOT = { has_trait = lida_sub }
 					}
 					desc = LIDAc.21.desc.25
 				}
@@ -7999,7 +7999,7 @@ scope:subdom < 10
 			desc = {
 				triggered_desc = {
 					trigger = {
-						scope:subdom <= -10
+						has_trait = lida_dom
 					}
 					desc = LIDAc.21.desc.26
 				}
@@ -8199,7 +8199,7 @@ LIDAc.22 = {
 					exists = scope:sex_transition
 					scope:sex_transition = 33002210
 				}
-				# Ride Facing Them
+				# Ride Facing You
 				# Your body tightens as you release inside her while she pins you down.\n
 				desc = sex_transition.CUM.33.22.0
 			}
@@ -8514,7 +8514,7 @@ LIDAc.23 = {
 					scope:sex_transition = 34002310
 				}
 				# Missionary
-				# Your rod gets even harder as your climax approaches, [affairs_partner.GetFirstName] #bold moaning loudly#! as her muscles #dom lock up#!.\n
+				# Your rod gets even harder as your climax approaches, [affairs_partner.GetFirstName] #bold moaning loudly#! as she quivers uncontrollably.\n
 				desc = sex_transition.CUM.34.23.0
 			}
 			triggered_desc = {
@@ -8523,7 +8523,7 @@ LIDAc.23 = {
 					scope:sex_transition = 35002310
 				}
 				# Putting Her in Her Place
-				# Your rod gets even harder as your climax approaches, [affairs_partner.GetFirstName] #bold moaning loudly#! as her muscles #dom lock up#!.\n
+				# Your rod gets even harder as your climax approaches, [affairs_partner.GetFirstName] #bold moaning loudly#! as she quivers uncontrollably.\n
 				desc = sex_transition.CUM.35.23.0
 			}
 			triggered_desc = {
@@ -8550,7 +8550,7 @@ LIDAc.23 = {
 					scope:sex_transition = -35003500
 				}
 				# 35003500: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE failed
-				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moands distracting you just enough for her to make a move.\n
+				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moans distracting you just enough for her to make a move.\n
 				desc = sex_transition.35.35.666
 			}
 			triggered_desc = {
