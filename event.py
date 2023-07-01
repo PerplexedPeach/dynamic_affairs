@@ -78,7 +78,7 @@ class Event(BlockRoot):
                  # custom generation functions, these take the event as teh first argument and call add_line
                  custom_desc: typing.Optional[typing.Callable] = None,
                  # chance for this event to rank up dom/sub (always opposite, but in a separate roll for the partner)
-                 root_become_more_sub_chance=0, root_become_more_dom_chance=0,
+                 root_become_more_sub_xp=0, root_become_more_dom_xp=0,
                  custom_immediate_effect: typing.Optional[Effect] = None):
         self.id = eid
         self.title = title
@@ -89,8 +89,8 @@ class Event(BlockRoot):
         self.anim_l = animation_left
         self.anim_r = animation_right
 
-        self.root_become_more_sub_chance = root_become_more_sub_chance
-        self.root_become_more_dom_chance = root_become_more_dom_chance
+        self.root_become_more_sub_xp = root_become_more_sub_xp
+        self.root_become_more_dom_xp = root_become_more_dom_xp
 
         self.root_cum_text = root_cum_text
         if root_cum_text is not None:
@@ -198,15 +198,11 @@ class Event(BlockRoot):
             # calling the custom desc will modify the event string text in place, and return a localization string
             self.custom_localization = self.custom_desc(self)
 
-    def _generate_change_subdom_trait(self, chance, root_change, partner_change):
-        if chance > 0:
-            with Block(self, RANDOM):
-                self.assign(CHANCE, chance)
-                self.assign(root_change, YES)
+    def _generate_change_subdom_trait(self, change, root_change, partner_change):
+        if change > 0:
+            self.assign(root_change, f"{{ {AMOUNT} = {change} }}")
             with Block(self, AFFAIRS_PARTNER):
-                with Block(self, RANDOM):
-                    self.assign(CHANCE, chance)
-                    self.assign(partner_change, YES)
+                self.assign(partner_change, f"{{ {AMOUNT} = {change} }}")
 
     def _generate_finisher_stamina_effect(self):
         # should be called near the top of effects, right after changing root and partner stamina
@@ -216,9 +212,9 @@ class Event(BlockRoot):
             self.save_scope_value_as(FINISHER_STAMINA, PARTNER_STAMINA)
 
     def generate_immediate_effect(self):
-        self._generate_change_subdom_trait(self.root_become_more_sub_chance, BECOME_MORE_SUB_EFFECT,
+        self._generate_change_subdom_trait(self.root_become_more_sub_xp, BECOME_MORE_SUB_EFFECT,
                                            BECOME_MORE_DOM_EFFECT)
-        self._generate_change_subdom_trait(self.root_become_more_dom_chance, BECOME_MORE_DOM_EFFECT,
+        self._generate_change_subdom_trait(self.root_become_more_dom_xp, BECOME_MORE_DOM_EFFECT,
                                            BECOME_MORE_SUB_EFFECT)
 
         if self.root_removes_clothes:
@@ -721,9 +717,9 @@ class RepeatedSex(Sex):
         if 'force_root_stamina_finishes' not in kwargs:
             self.force_root_stamina_finishes = base_event.force_root_stamina_finishes
         if 'root_become_more_sub_chance' not in kwargs:
-            self.root_become_more_sub_chance = base_event.root_become_more_sub_chance
+            self.root_become_more_sub_xp = base_event.root_become_more_sub_xp
         if 'root_become_more_dom_chance' not in kwargs:
-            self.root_become_more_dom_chance = base_event.root_become_more_dom_chance
+            self.root_become_more_dom_xp = base_event.root_become_more_dom_xp
         if 'animation_left' not in kwargs:
             self.anim_l = base_event.anim_l
         if 'animation_right' not in kwargs:

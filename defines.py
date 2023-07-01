@@ -239,6 +239,7 @@ C2_PREGNANCY_CHANCE = "C2_PREGNANCY_CHANCE"
 PREGNANCY_CHANCE = 30  # basic value  replaced base value with 30 because it was doing weird stuff otherwise
 STRESS_EFFECTS = "STRESS_EFFECTS"
 DRAMA = "DRAMA"
+AMOUNT = "AMOUNT"
 
 SAVE_SCOPE_VALUE_AS = "save_scope_value_as"
 SAVE_TEMPORARY_SCOPE_VALUE_AS = "save_temporary_scope_value_as"

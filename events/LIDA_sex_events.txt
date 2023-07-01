@@ -203,15 +203,9 @@ LIDAs.1 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = partner_naked
@@ -518,15 +512,9 @@ LIDAs.2 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = partner_naked
@@ -891,15 +879,9 @@ LIDAs.36 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = partner_naked
@@ -1206,15 +1188,9 @@ LIDAs.3 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = partner_naked
@@ -1597,15 +1573,9 @@ LIDAs.5 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = partner_naked
@@ -2013,15 +1983,9 @@ LIDAs.6 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = partner_naked
@@ -2844,15 +2808,9 @@ LIDAs.7 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = partner_naked
@@ -4591,16 +4549,6 @@ LIDAs.37 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
-		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
-		}
 	}
 	# Repeat option
 	option = {
@@ -5406,16 +5354,6 @@ LIDAs.38 = {
 			save_scope_value_as = {
 				name = sub_transition_1
 				value = -1
-			}
-		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
-		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
 			}
 		}
 	}
@@ -6361,15 +6299,9 @@ LIDAs.10 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = partner_naked
@@ -6980,15 +6912,9 @@ LIDAs.11 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 10
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 2.0 }
 		}
 		save_scope_value_as = {
 			name = partner_naked
@@ -7425,15 +7351,9 @@ LIDAs.4 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -8208,15 +8128,9 @@ LIDAs.14 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -10060,15 +9974,9 @@ LIDAs.13 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -11245,15 +11153,9 @@ LIDAs.9 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 7
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 1.4 }
 		scope:affairs_partner = {
-			random = {
-				chance = 7
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 1.4 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -12128,15 +12030,9 @@ LIDAs.15 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 15
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 3.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 15
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 3.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -13066,15 +12962,9 @@ LIDAs.16 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 10
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 2.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -14010,15 +13900,9 @@ LIDAs.17 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 10
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 2.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -14861,15 +14745,9 @@ LIDAs.18 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 15
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 3.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 15
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 3.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -15350,15 +15228,9 @@ LIDAs.19 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -15665,15 +15537,9 @@ LIDAs.20 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -16038,15 +15904,9 @@ LIDAs.39 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -16353,15 +16213,9 @@ LIDAs.21 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -16744,15 +16598,9 @@ LIDAs.23 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -17626,15 +17474,9 @@ LIDAs.24 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -19250,16 +19092,6 @@ LIDAs.40 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
-		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
-		}
 	}
 	# Repeat option
 	option = {
@@ -20063,16 +19895,6 @@ LIDAs.41 = {
 			save_scope_value_as = {
 				name = sub_transition_1
 				value = -1
-			}
-		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
-		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
 			}
 		}
 	}
@@ -21070,15 +20892,9 @@ LIDAs.27 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -21765,15 +21581,9 @@ LIDAs.28 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 10
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 2.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -22239,15 +22049,9 @@ LIDAs.22 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -22948,15 +22752,9 @@ LIDAs.31 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -24622,15 +24420,9 @@ LIDAs.30 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		save_scope_value_as = {
 			name = partner_naked
@@ -25762,15 +25554,9 @@ LIDAs.26 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 7
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.4 }
 		scope:affairs_partner = {
-			random = {
-				chance = 7
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.4 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -26609,15 +26395,9 @@ LIDAs.32 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 10
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 2.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -27496,15 +27276,9 @@ LIDAs.33 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 10
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 2.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -28357,15 +28131,9 @@ LIDAs.34 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 10
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 2.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -29136,15 +28904,9 @@ LIDAs.35 = {
 				value = -1
 			}
 		}
-		random = {
-			chance = 15
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 3.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 15
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 3.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked

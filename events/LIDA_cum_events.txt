@@ -298,15 +298,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 20
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 4.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 20
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 4.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -1198,15 +1192,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 15
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 3.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 15
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 3.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -1529,15 +1517,9 @@ LIDAc.2 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 10
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 2.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -1822,15 +1804,9 @@ LIDAc.3 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 20
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 4.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 20
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 4.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -2217,15 +2193,9 @@ LIDAc.5 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 35
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 7.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 35
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 7.0 }
 		}
 		scope:affairs_partner = {
 			add_character_modifier = {
@@ -2706,15 +2676,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 10
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 2.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -3181,15 +3145,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 5
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 1.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -3574,15 +3532,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 20
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 4.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 20
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 4.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -3913,15 +3865,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 30
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 6.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 30
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 6.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -4349,15 +4295,9 @@ NOT = { has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 45
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 9.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 45
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 9.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -4623,15 +4563,9 @@ LIDAc.12 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 20
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 4.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 20
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 4.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -4935,15 +4869,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 20
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 4.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 20
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 4.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -5791,15 +5719,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 15
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 3.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 15
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 3.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -6175,15 +6097,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 10
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 2.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -6486,15 +6402,9 @@ LIDAc.15 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 20
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 4.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 20
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 4.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -6873,15 +6783,9 @@ LIDAc.17 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 35
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 7.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 35
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 7.0 }
 		}
 		scope:affairs_partner = {
 			add_character_modifier = {
@@ -7326,15 +7230,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 10
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 10
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 2.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -7747,15 +7645,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 5
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 1.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 5
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 1.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -8131,15 +8023,9 @@ LIDAc.21 = {
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 20
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 4.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 20
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 4.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -8460,15 +8346,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 30
-			become_more_sub_effect = yes
-		}
+		become_more_sub_effect = { AMOUNT = 6.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 30
-				become_more_dom_effect = yes
-			}
+			become_more_dom_effect = { AMOUNT = 6.0 }
 		}
 		debug_log_scopes = yes
 	}
@@ -8781,15 +8661,9 @@ scope:subdom < 10
 			STRESS_EFFECTS = yes
 			DRAMA = yes
 		}
-		random = {
-			chance = 45
-			become_more_dom_effect = yes
-		}
+		become_more_dom_effect = { AMOUNT = 9.0 }
 		scope:affairs_partner = {
-			random = {
-				chance = 45
-				become_more_sub_effect = yes
-			}
+			become_more_sub_effect = { AMOUNT = 9.0 }
 		}
 		debug_log_scopes = yes
 	}
