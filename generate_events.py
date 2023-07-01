@@ -285,10 +285,10 @@ def export_dot_graphviz(events, horizontal=True, censored=False, show_titles=Tru
         attr = [f"fontname={fontname}", f"shape={shape}", f"style={style}", f"label=\"{get_event_name(event)}\""]
         if rank is not None:
             attr.append(f"rank={rank}")
-        if event.root_become_more_dom_chance > 0:
-            attr.append(f"fillcolor=\"0.0 {float(event.root_become_more_dom_chance) / 100} 1.0\"")
-        elif event.root_become_more_sub_chance > 0:
-            attr.append(f"fillcolor=\"0.6 {float(event.root_become_more_sub_chance) / 100} 1.0\"")
+        if event.root_become_more_dom_xp > 0:
+            attr.append(f"fillcolor=\"0.0 {float(event.root_become_more_dom_xp) / 15} 1.0\"")
+        elif event.root_become_more_sub_xp > 0:
+            attr.append(f"fillcolor=\"0.6 {float(event.root_become_more_sub_xp) / 15} 1.0\"")
         else:
             attr.append(f"fillcolor=\"#ffffff\"")
         attr = "[" + ",".join(attr) + "]"
@@ -407,7 +407,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_WHIP_TEASE, "Whip Tease",
                stam_cost_1=0, stam_cost_2=1,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                partner_removes_clothes=True,
                animation_left=IDLE, animation_right=PERSONALITY_CONTENT,
                desc=f"""
@@ -429,7 +429,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_FOOTJOB_TEASE, "Footjob Tease",
                stam_cost_1=0, stam_cost_2=1,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                partner_removes_clothes=True,
                animation_left=IDLE, animation_right=PERSONALITY_CONTENT,
                desc=f"""
@@ -453,7 +453,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_FOOTJOB, "Footjob",
                stam_cost_1=0, stam_cost_2=1,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                partner_removes_clothes=True,
                animation_left=IDLE, animation_right=PERSONALITY_CONTENT,
                desc=f"""
@@ -476,7 +476,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=0, stam_cost_2=1,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                partner_removes_clothes=True,
                animation_left=IDLE, animation_right=PERSONALITY_CONTENT,
                desc=f"""
@@ -498,7 +498,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_PUSSY_TEASE, "Pussy Tease",
                stam_cost_1=0, stam_cost_2=1,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                partner_removes_clothes=True,
                animation_left=IDLE, animation_right=PERSONALITY_CONTENT,
                desc=f"""
@@ -539,7 +539,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_TIT_TEASE, "Tits Tease",
                stam_cost_1=0, stam_cost_2=1,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                partner_removes_clothes=True,
                animation_left=IDLE, animation_right=PERSONALITY_CONTENT,
                desc=f"""
@@ -563,7 +563,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_HANDJOB, "Handjob",
                stam_cost_1=-0.5, stam_cost_2=1,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                partner_removes_clothes=True,
                desc=f"""
                    {THEM}'s eyes are closed and you delight in your control of his pleasure.
@@ -674,7 +674,7 @@ def define_sex_events_fm(es: EventMap):
                )))
     # TODO define these repeated events
     es.add(RepeatedSex(EventsSex.FM_BLOWJOB_DOM_I, "Dom Blowjob I", base_event=es.sex(EventsSex.FM_BLOWJOB_DOM),
-                       root_become_more_dom_chance=5,
+                       root_become_more_dom_xp=5/5,
                        desc=f"""
                        placeholder""",
                        options=(
@@ -690,7 +690,7 @@ def define_sex_events_fm(es: EventMap):
                                   ),
                        )))
     es.add(RepeatedSex(EventsSex.FM_BLOWJOB_DOM_II, "Dom Blowjob II", base_event=es.sex(EventsSex.FM_BLOWJOB_DOM_I),
-                       root_become_more_dom_chance=5,
+                       root_become_more_dom_xp=5/5,
                        desc=f"""
                        placeholder""",
                        options=(
@@ -708,7 +708,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_BLOWJOB_SUB, "Sub Blowjob",
                stam_cost_1=1.0, stam_cost_2=1.5,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_sub_chance=5,
+               root_become_more_sub_xp=5/5,
                partner_removes_clothes=True,
                animation_left=KNEEL_RULER_3,
                desc=f"""
@@ -756,7 +756,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_DEEPTHROAT, "Deepthroat",
                stam_cost_1=1.0, stam_cost_2=2.0,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_sub_chance=10,
+               root_become_more_sub_xp=10/5,
                partner_removes_clothes=True,
                animation_left=KNEEL_2,
                desc=ComposedDesc("""
@@ -793,7 +793,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_ASS_TEASE, "Ass Tease",
                stam_cost_1=0.5, stam_cost_2=0.75,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
                    Looking into {THEM}'s leering eyes, you can see his desire to have you.
@@ -840,7 +840,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_ASS_RUB, "Ass Rub",
                stam_cost_1=0.5, stam_cost_2=0.75,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
                    Despite not being able to see him standing behind you, 
@@ -948,7 +948,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_STANDING_FINGERED_FROM_BEHIND, "Fingered from Behind",
                stam_cost_1=1, stam_cost_2=-0.5,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_sub_chance=5,
+               root_become_more_sub_xp=5/5,
                root_removes_clothes=True,
                animation_right=SCHADENFREUDE,
                desc=f"""
@@ -996,7 +996,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_STANDING_FUCKED_FROM_BEHIND, "Standing Fucked from Behind",
                stam_cost_1=2, stam_cost_2=1.5,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_sub_chance=7,
+               root_become_more_sub_xp=7/5,
                root_removes_clothes=True, partner_removes_clothes=True,
                animation_left=BOW_3, animation_right=SCHADENFREUDE,
                desc=ComposedDesc(f"""
@@ -1057,7 +1057,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_REVERSE_COWGIRL, "Ride Facing Away",
                stam_cost_1=3, stam_cost_2=1.5,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=15,
+               root_become_more_dom_xp=15/5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
                    You close your eyes as your hips hungrily dance around {THEM}'s shaft, #bold shaking#! with pleasure.
@@ -1111,7 +1111,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_COWGIRL, "Ride Facing Them",
                stam_cost_1=2.0, stam_cost_2=1,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=10,
+               root_become_more_dom_xp=10/5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
                    You look in {THEM}'s eyes as you vigorously ride, his member under your complete control as you focus exclusively on satisfying yourself. \\n
@@ -1166,7 +1166,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_MISSIONARY, "Lie on Back",
                stam_cost_1=2.0, stam_cost_2=1.5,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_sub_chance=10,
+               root_become_more_sub_xp=10/5,
                animation_left=FLIRTATION_LEFT, animation_right=FLIRTATION_LEFT,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
@@ -1215,7 +1215,7 @@ def define_sex_events_fm(es: EventMap):
     es.add(Sex(EventsSex.FM_PRONE_BONE, "Lie Face Down",
                stam_cost_1=3.5, stam_cost_2=2.5,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_sub_chance=15,
+               root_become_more_sub_xp=15/5,
                animation_left=FLIRTATION_LEFT, animation_right=FLIRTATION_LEFT,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
@@ -1269,7 +1269,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_WHIP_TEASE, "Whip Tease",
                stam_cost_1=1, stam_cost_2=0,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_sub_chance=5,
+               root_become_more_sub_xp=5/5,
                root_removes_clothes=True,
                animation_left=PERSONALITY_CONTENT, animation_right=IDLE,
                desc=f"""
@@ -1296,7 +1296,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_FOOTJOB_TEASE, "Footjob Tease",
                stam_cost_1=1, stam_cost_2=0,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_sub_chance=5,
+               root_become_more_sub_xp=5/5,
                root_removes_clothes=True,
                animation_left=PERSONALITY_CONTENT, animation_right=IDLE,
                desc=f"""
@@ -1325,7 +1325,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_FOOTJOB, "Footjob",
                stam_cost_1=1, stam_cost_2=0,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_sub_chance=5,
+               root_become_more_sub_xp=5/5,
                root_removes_clothes=True,
                animation_left=PERSONALITY_CONTENT, animation_right=IDLE,
                desc=f"""
@@ -1350,7 +1350,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=1, stam_cost_2=0,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_sub_chance=5,
+               root_become_more_sub_xp=5/5,
                root_removes_clothes=True,
                animation_left=PERSONALITY_CONTENT, animation_right=IDLE,
                desc=f"""
@@ -1377,7 +1377,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_DICK_TEASE, "Dick Tease",
                stam_cost_1=1, stam_cost_2=1,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                root_removes_clothes=True,
                partner_removes_clothes=True,
                animation_left=PERSONALITY_CONTENT, animation_right=IDLE,
@@ -1420,7 +1420,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_HANDJOB, "Handjob",
                stam_cost_1=1, stam_cost_2=-0.5,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_sub_chance=5,
+               root_become_more_sub_xp=5/5,
                root_removes_clothes=True,
                desc=f"""
                    You close your eyes and enjoy {THEM}'s hands on your cock.
@@ -1534,7 +1534,7 @@ def define_sex_events_mf(es: EventMap):
                )))
     # TODO define these repeated events
     es.add(RepeatedSex(EventsSex.MF_BLOWJOB_DOM_I, "Femdom Blowjob I", base_event=es.sex(EventsSex.MF_BLOWJOB_DOM),
-                       root_become_more_dom_chance=5,
+                       root_become_more_dom_xp=5/5,
                        desc=f"""
                        placeholder""",
                        options=(
@@ -1547,7 +1547,7 @@ def define_sex_events_mf(es: EventMap):
                                   ),
                        )))
     es.add(RepeatedSex(EventsSex.MF_BLOWJOB_DOM_II, "Dom Blowjob II", base_event=es.sex(EventsSex.MF_BLOWJOB_DOM_I),
-                       root_become_more_dom_chance=5,
+                       root_become_more_dom_xp=5/5,
                        desc=f"""
                        placeholder""",
                        options=(
@@ -1562,7 +1562,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_BLOWJOB_SUB, "Blowjob",
                stam_cost_1=1.5, stam_cost_2=1.0,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                root_removes_clothes=True,
                animation_right=KNEEL_RULER_3,
                desc=f"""
@@ -1624,7 +1624,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_DEEPTHROAT, "Deepthroat",
                stam_cost_1=2.0, stam_cost_2=1.0,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_chance=10,
+               root_become_more_dom_xp=10/5,
                root_removes_clothes=True,
                animation_right=KNEEL_2,
                desc=ComposedDesc("""
@@ -1666,7 +1666,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_ASS_TEASE, "Ass Tease",
                stam_cost_1=0.75, stam_cost_2=0.5,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_sub_chance=5,
+               root_become_more_sub_xp=5/5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
                    Looking into {THEM}'s leering eyes, you can see her desire to have you.
@@ -1717,7 +1717,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_ASS_RUB, "Ass Rub",
                stam_cost_1=0.75, stam_cost_2=0.5,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_sub_chance=5,
+               root_become_more_sub_xp=5/5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=f"""
                    You lean back and enjoy being pleasured by her ass, its fullness swallowing your cock.
@@ -1838,7 +1838,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_STANDING_FINGERED_FROM_BEHIND, "Fingering from Behind",
                stam_cost_1=-0.5, stam_cost_2=1,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                partner_removes_clothes=True,
                animation_left=SCHADENFREUDE,
                desc=f"""
@@ -1891,7 +1891,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_STANDING_FUCKED_FROM_BEHIND, "Standing Fuck from Behind",
                stam_cost_1=1.5, stam_cost_2=2,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_chance=7,
+               root_become_more_dom_xp=7/5,
                root_removes_clothes=True, partner_removes_clothes=True,
                animation_left=SCHADENFREUDE, animation_right=BOW_3,
                desc=ComposedDesc(f"""
@@ -1960,7 +1960,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_REVERSE_COWGIRL, "Ride Facing Away",
                stam_cost_1=1.5, stam_cost_2=3,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_sub_chance=10,
+               root_become_more_sub_xp=10/5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
                    You #sub lie#! down as {THEM} hungrily dances atop your shaft, her cheeks #bold shaking#! with each bounce.
@@ -2021,7 +2021,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_COWGIRL, "Ride Facing Them",
                stam_cost_1=1.0, stam_cost_2=2.0,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_sub_chance=10,
+               root_become_more_sub_xp=10/5,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
                    You look in {THEM}'s eyes as she vigorously rides you, your member under her complete #sub control#! as 
@@ -2085,7 +2085,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_MISSIONARY, "Missionary",
                stam_cost_1=1.5, stam_cost_2=2,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_chance=10,
+               root_become_more_dom_xp=10/5,
                animation_left=FLIRTATION_LEFT, animation_right=FLIRTATION_LEFT,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
@@ -2139,7 +2139,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_PRONE_BONE, "Putting Her in Her Place",
                stam_cost_1=2.5, stam_cost_2=3.5,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_chance=15,
+               root_become_more_dom_xp=15/5,
                animation_left=FLIRTATION_LEFT, animation_right=FLIRTATION_LEFT,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
@@ -2198,7 +2198,7 @@ def define_sex_events_mf(es: EventMap):
     # es.add(Sex(EventsSex.MF_MALE_WHIP_TEASE, "Whip Tease",
     #            stam_cost_1=0, stam_cost_2=1,
     #            root_gender=MALE, partner_gender=FEMALE,
-    #            root_become_more_dom_chance=5,
+    #            root_become_more_dom_xp=5/5,
     #            partner_removes_clothes=True,
     #            animation_left=IDLE, animation_right=PERSONALITY_CONTENT,
     #            desc=f"""
@@ -2225,7 +2225,7 @@ def define_sex_events_mf(es: EventMap):
     # es.add(Sex(EventsSex.MF_HANDJOB_TEASE, "Fingering Tease",
     #            stam_cost_1=1, stam_cost_2=0,
     #            root_gender=MALE, partner_gender=FEMALE,
-    #            root_become_more_sub_chance=5,
+    #            root_become_more_sub_xp=5/5,
     #            root_removes_clothes=True,
     #            animation_left=PERSONALITY_CONTENT, animation_right=IDLE,
     #            desc=f"""
@@ -2258,7 +2258,7 @@ def define_sex_events(es: EventMap):
 
 def define_cum_events_fm(es: EventMap):
     es.add(Cum(EventsCum.FM_HANDJOB_CUM_IN_HAND, "A Load in Hand is Worth Two in the Bush",
-               subdom_change=1, root_become_more_dom_chance=20,
+               subdom_change=1, root_become_more_dom_xp=20/5,
                root_gender=FEMALE, partner_gender=MALE,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean your hands on a nearby cloth"),
                animation_left=BOREDOM, animation_right=SHAME,
@@ -2307,7 +2307,7 @@ def define_cum_events_fm(es: EventMap):
                                  ),
                ))
     es.add(Cum(EventsCum.FM_BLOWJOB_CUM_ON_FACE, "Painting your Face",
-               subdom_change=-2, root_become_more_sub_chance=15,
+               subdom_change=-2, root_become_more_sub_xp=15/5,
                root_gender=FEMALE, partner_gender=MALE,
                animation_left=SHAME, animation_right=SCHEME,
                terminal_option=Option(None, OptionCategory.OTHER, "Sample some stray globs of cum"),
@@ -2332,7 +2332,7 @@ def define_cum_events_fm(es: EventMap):
 
                                  )))
     es.add(Cum(EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_DOM, "Satisfying your Sweet Tooth",
-               subdom_change=-1, root_become_more_sub_chance=10,
+               subdom_change=-1, root_become_more_sub_xp=10/5,
                root_gender=FEMALE, partner_gender=MALE,
                animation_left=DISGUST, animation_right=SCHADENFREUDE,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe away any cum that might've escaped"),
@@ -2346,7 +2346,7 @@ def define_cum_events_fm(es: EventMap):
                    """
                ))
     es.add(Cum(EventsCum.FM_BLOWJOB_CUM_IN_MOUTH_SUB, "Down the Gullet",
-               subdom_change=-2, root_become_more_sub_chance=20,
+               subdom_change=-2, root_become_more_sub_xp=20/5,
                root_gender=FEMALE, partner_gender=MALE,
                animation_left=SHAME, animation_right=SCHADENFREUDE,
                terminal_option=Option(None, OptionCategory.OTHER, "Recover from having your throat used so roughly"),
@@ -2377,7 +2377,7 @@ def define_cum_events_fm(es: EventMap):
                                  )
                ))
     es.add(Cum(EventsCum.FM_RUINED_ORGASM, "A Firm Grasp on His Release",
-               subdom_change=2, root_become_more_dom_chance=35,
+               subdom_change=2, root_become_more_dom_xp=35/5,
                root_gender=FEMALE, partner_gender=MALE,
                animation_left=DISMISSAL, animation_right=BEG,
                terminal_option=Option(None, OptionCategory.OTHER, "Leave him yearning and frustrated"),
@@ -2397,7 +2397,7 @@ def define_cum_events_fm(es: EventMap):
                root_gender=FEMALE, partner_gender=MALE,
                preg_chance_1=0.05 * PREGNANCY_CHANCE,
                animation_left=FLIRTATION_LEFT, animation_right=PERSONALITY_BOLD,
-               root_become_more_dom_chance=10,
+               root_become_more_dom_xp=10/5,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean yourself and get dressed"),
                desc=ComposedDesc(
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
@@ -2426,7 +2426,7 @@ def define_cum_events_fm(es: EventMap):
     es.add(Cum(EventsCum.FM_CUM_ON_GROIN, "Snowfall on the Bushes",
                subdom_change=-1,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_sub_chance=5,
+               root_become_more_sub_xp=5/5,
                preg_chance_1=PREGNANCY_CHANCE * 0.01,
                animation_left=DISMISSAL, animation_right=PERSONALITY_BOLD,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean up the white coating on your groin"),
@@ -2453,7 +2453,7 @@ def define_cum_events_fm(es: EventMap):
     es.add(Cum(EventsCum.FM_CREAMPIE_REGULAR, "Plowing the Fields",
                subdom_change=-3,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_sub_chance=20,
+               root_become_more_sub_xp=20/5,
                preg_chance_1=PREGNANCY_CHANCE,
                animation_left=WORRY, animation_right=PERSONALITY_BOLD,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe away the cum dripping down your thighs"),
@@ -2482,7 +2482,7 @@ def define_cum_events_fm(es: EventMap):
     es.add(Cum(EventsCum.FM_CREAMPIE_ON_TOP, "Cherry on Top",
                subdom_change=3,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=30,
+               root_become_more_dom_xp=30/5,
                preg_chance_1=PREGNANCY_CHANCE,
                animation_left=FLIRTATION_LEFT, animation_right=SHOCK,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe the silky threads hanging from your slit"),
@@ -2508,7 +2508,7 @@ def define_cum_events_fm(es: EventMap):
     es.add(Cum(EventsCum.FM_CREAMPIE_BREED, "Something to Remember Him By",
                subdom_change=-6,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_sub_chance=45,
+               root_become_more_sub_xp=45/5,
                preg_chance_1=PREGNANCY_CHANCE * 1.5,
                animation_left=WORRY, animation_right=PERSONALITY_BOLD,
                terminal_option=Option(None, OptionCategory.OTHER,
@@ -2583,7 +2583,7 @@ def define_cum_events_fm(es: EventMap):
     es.add(Cum(EventsCum.FM_CREAMPIE_KEEP, "Bearing the Bloodline",
                subdom_change=2,
                root_gender=FEMALE, partner_gender=MALE,
-               root_become_more_dom_chance=20,
+               root_become_more_dom_xp=20/5,
                preg_chance_1=PREGNANCY_CHANCE * 2,
                animation_left=ECSTASY, animation_right=SHOCK,
                terminal_option=Option(None, OptionCategory.OTHER, "No need to clean up, it's #bold all#! inside you"),
@@ -2609,7 +2609,7 @@ def define_cum_events_fm(es: EventMap):
 
 def define_cum_events_mf(es: EventMap):
     es.add(Cum(EventsCum.MF_HANDJOB_CUM_IN_HAND, "A Load in Hand is Worth Two in the Bush",
-               subdom_change=1, root_become_more_sub_chance=20,
+               subdom_change=1, root_become_more_sub_xp=20/5,
                root_gender=MALE, partner_gender=FEMALE,
                terminal_option=Option(None, OptionCategory.OTHER, "Get dressed"),
                animation_left=BOREDOM, animation_right=SHAME,
@@ -2653,7 +2653,7 @@ def define_cum_events_mf(es: EventMap):
                                  ),
                ))
     es.add(Cum(EventsCum.MF_BLOWJOB_CUM_ON_FACE, "Painting her Face",
-               subdom_change=2, root_become_more_dom_chance=15,
+               subdom_change=2, root_become_more_dom_xp=15/5,
                root_gender=MALE, partner_gender=FEMALE,
                animation_left=SCHEME, animation_right=SHAME,
                terminal_option=Option(None, OptionCategory.OTHER, "Marvel at your work before dressing"),
@@ -2690,7 +2690,7 @@ def define_cum_events_mf(es: EventMap):
                                  ))
            )
     es.add(Cum(EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_DOM, "Satisfying her Sweet Tooth",
-               subdom_change=1, root_become_more_dom_chance=10,
+               subdom_change=1, root_become_more_dom_xp=10/5,
                root_gender=MALE, partner_gender=FEMALE,
                animation_left=SCHADENFREUDE, animation_right=DISGUST,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe your rod clean"),
@@ -2725,7 +2725,7 @@ def define_cum_events_mf(es: EventMap):
                                  )
                ))
     es.add(Cum(EventsCum.MF_BLOWJOB_CUM_IN_MOUTH_SUB, "Down the Gullet",
-               subdom_change=-2, root_become_more_dom_chance=20,
+               subdom_change=-2, root_become_more_dom_xp=20/5,
                root_gender=MALE, partner_gender=FEMALE,
                animation_left=SCHADENFREUDE, animation_right=SHAME,
                terminal_option=Option(None, OptionCategory.OTHER, "Enjoy the warmth a moment more"),
@@ -2754,7 +2754,7 @@ def define_cum_events_mf(es: EventMap):
                                  )
                ))
     es.add(Cum(EventsCum.MF_RUINED_ORGASM, "A Firm Grasp on Your Release",
-               subdom_change=-2, root_become_more_sub_chance=35,
+               subdom_change=-2, root_become_more_sub_xp=35/5,
                root_gender=MALE, partner_gender=FEMALE,
                animation_left=BEG, animation_right=DISMISSAL,
                terminal_option=Option(None, OptionCategory.OTHER, "Leave yearning and frustrated"),
@@ -2781,7 +2781,7 @@ def define_cum_events_mf(es: EventMap):
                root_gender=MALE, partner_gender=FEMALE,
                preg_chance_2=0.05 * PREGNANCY_CHANCE,
                animation_left=PERSONALITY_BOLD, animation_right=FLIRTATION_LEFT,
-               root_become_more_sub_chance=10,
+               root_become_more_sub_xp=10/5,
                terminal_option=Option(None, OptionCategory.OTHER, "Clean yourself and get dressed"),
                desc=ComposedDesc(
                    TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
@@ -2812,7 +2812,7 @@ def define_cum_events_mf(es: EventMap):
     es.add(Cum(EventsCum.MF_CUM_ON_GROIN, "Snowfall on the Bushes",
                subdom_change=1,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_chance=5,
+               root_become_more_dom_xp=5/5,
                preg_chance_2=PREGNANCY_CHANCE * 0.01,
                animation_left=DISMISSAL, animation_right=PERSONALITY_BOLD,
                terminal_option=Option(None, OptionCategory.OTHER, "Watch her clean herself"),
@@ -2839,7 +2839,7 @@ def define_cum_events_mf(es: EventMap):
     es.add(Cum(EventsCum.MF_CREAMPIE_REGULAR, "Plowing the Fields",
                subdom_change=3,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_chance=20,
+               root_become_more_dom_xp=20/5,
                preg_chance_2=PREGNANCY_CHANCE,
                animation_left=WORRY, animation_right=PERSONALITY_BOLD,
                terminal_option=Option(None, OptionCategory.OTHER, "Admire the view"),
@@ -2875,7 +2875,7 @@ def define_cum_events_mf(es: EventMap):
     es.add(Cum(EventsCum.MF_CREAMPIE_ON_TOP, "Cherry on Top",
                subdom_change=3,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_sub_chance=30,
+               root_become_more_sub_xp=30/5,
                preg_chance_2=PREGNANCY_CHANCE,
                animation_left=SHOCK, animation_right=FLIRTATION_LEFT,
                terminal_option=Option(None, OptionCategory.OTHER, "Wipe the silky threads hanging from her slit"),
@@ -2903,7 +2903,7 @@ def define_cum_events_mf(es: EventMap):
     es.add(Cum(EventsCum.MF_CREAMPIE_BREED, "Something to Remember You By",
                subdom_change=-6,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_chance=45,
+               root_become_more_dom_xp=45/5,
                preg_chance_2=PREGNANCY_CHANCE * 1.5,
                animation_left=PERSONALITY_BOLD, animation_right=WORRY,
                terminal_option=Option(None, OptionCategory.OTHER,

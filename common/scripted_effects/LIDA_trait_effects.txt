@@ -1,34 +1,74 @@
 ﻿become_more_sub_effect = {
 	if = {
 		limit = {
-			NOT = {has_trait = lida_dom}
+			NOT = {has_trait = lida_dom_track}
+			has_trait = lida_sub_track
 		}
-		change_trait_rank = {
-			trait = lida_sub
-			rank = 1
+		add_trait_xp = {
+			trait = lida_sub_track
+			value = $AMOUNT$
 		}
 	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_trait = lida_dom_track
+				has_trait = lida_sub_track
+			}
+		}
+		add_trait = lida_sub_track
+	}
+	else_if = {
+		limit = {
+			has_trait = lida_dom_track
+			has_trait_xp = {
+				trait = lida_dom_track
+				value <= 0
+			}
+		}
+		remove_trait = lida_dom_track
+	}
 	else = {
-		change_trait_rank = {
-			trait = lida_dom
-			rank = -1
+		add_trait_xp = {
+			trait = lida_dom_track
+			value = -$AMOUNT$
 		}
 	}
 }
 become_more_dom_effect = {
 	if = {
 		limit = {
-			NOT = {has_trait = lida_sub}
+			NOT = {has_trait = lida_sub_track}
+			has_trait = lida_dom_track
 		}
-		change_trait_rank = {
-			trait = lida_dom
-			rank = 1
+		add_trait_xp = {
+			trait = lida_dom_track
+			value = $AMOUNT$
 		}
 	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_trait = lida_dom_track
+				has_trait = lida_sub_track
+			}
+		}
+		add_trait = lida_dom_track
+	}
+	else_if = {
+		limit = {
+			has_trait = lida_sub_track
+			has_trait_xp = {
+				trait = lida_sub_track
+				value <= 0
+			}
+		}
+		remove_trait = lida_sub_track
+	}
 	else = {
-		change_trait_rank = {
-			trait = lida_sub
-			rank = -1
+		add_trait_xp = {
+			trait = lida_sub_track
+			value = -$AMOUNT$
 		}
 	}
 }
