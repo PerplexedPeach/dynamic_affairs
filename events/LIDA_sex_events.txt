@@ -28746,6 +28746,7 @@ LIDAs.35 = {
 					desc = LIDAs.35.desc.22
 				}
 			}
+			desc = LIDAs.35.desc.23
 		}
 	}
 	immediate = {
