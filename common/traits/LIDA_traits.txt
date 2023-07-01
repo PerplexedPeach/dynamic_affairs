@@ -279,3 +279,329 @@ lida_sub_3 = {
 		}
 	}
 }
+
+lida_sub_track = {
+	opposites = {
+		lida_dom_track
+	}
+	
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_lida_sub_2
+			}
+			
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_3
+					}
+				}
+				desc = trait_lida_sub_3
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_2
+					}
+				}
+				desc = trait_lida_sub_2
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_1
+					}
+				}
+				desc = trait_lida_sub_1
+			}
+			desc = trait_lida_sub_0
+		}
+	}
+
+	icon = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = lida_sub_2.dds
+			}
+			
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_3
+					}
+				}
+				desc = lida_sub_3.dds
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_2
+					}
+				}
+				desc = lida_sub_2.dds
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_1
+					}
+				}
+				desc = lida_sub_1.dds
+			}
+			desc = lida_sub_0.dds
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_lida_sub_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_3
+					}
+				}
+				desc = trait_lida_sub_3_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_2
+					}
+				}
+				desc = trait_lida_sub_2_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_sub_track
+						value >= lida_track_xp_stage_1
+					}
+				}
+				desc = trait_lida_sub_1_character_desc
+			}
+			desc = trait_lida_sub_0_character_desc
+		}
+	}
+
+	opposite_opinion = 15
+	ai_boldness = medium_negative_ai_value
+	ai_sociability = medium_positive_ai_value
+
+	track = {
+		lida_track_xp_stage_1 = {
+			martial = -1
+			prowess = -1
+			intrigue = -1
+			diplomacy = 1
+			stewardship = 1
+			learning = 1
+			monthly_learning_lifestyle_xp_gain_mult = 0.025
+			monthly_stewardship_lifestyle_xp_gain_mult = 0.025
+			stress_loss_mult = 0.1
+			dread_baseline_add = -5
+			dread_decay_mult = 0.05
+		}
+		lida_track_xp_stage_2 = {
+			martial = -1
+			prowess = -1
+			intrigue = -1
+			diplomacy = 1
+			stewardship = 1
+			learning = 1
+			monthly_learning_lifestyle_xp_gain_mult = 0.05
+			monthly_stewardship_lifestyle_xp_gain_mult = 0.05
+			stress_loss_mult = 0.05
+			dread_baseline_add = -5
+			dread_decay_mult = 0.05
+		}
+		lida_track_xp_stage_3 = {
+			martial = -1
+			prowess = -1
+			intrigue = -1
+			diplomacy = 1
+			stewardship = 1
+			learning = 1
+			monthly_learning_lifestyle_xp_gain_mult = 0.075
+			monthly_stewardship_lifestyle_xp_gain_mult = 0.075
+			stress_loss_mult = 0.1
+			dread_baseline_add = -5
+			dread_decay_mult = 0.05
+		}
+	}
+}
+
+lida_dom_track = {
+	opposites = {
+		lida_sub_track
+	}
+	
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_lida_dom_2
+			}
+			
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_3
+					}
+				}
+				desc = trait_lida_dom_3
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_2
+					}
+				}
+				desc = trait_lida_dom_2
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_1
+					}
+				}
+				desc = trait_lida_dom_1
+			}
+			desc = trait_lida_dom_0
+		}
+	}
+
+	icon = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = lida_dom_2.dds
+			}
+			
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_3
+					}
+				}
+				desc = lida_dom_3.dds
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_2
+					}
+				}
+				desc = lida_dom_2.dds
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_1
+					}
+				}
+				desc = lida_dom_1.dds
+			}
+			desc = lida_dom_0.dds
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_lida_dom_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_3
+					}
+				}
+				desc = trait_lida_dom_3_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_2
+					}
+				}
+				desc = trait_lida_dom_2_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = lida_dom_track
+						value >= lida_track_xp_stage_1
+					}
+				}
+				desc = trait_lida_dom_1_character_desc
+			}
+			desc = trait_lida_dom_0_character_desc
+		}
+	}
+
+	same_opinion = -10
+	opposite_opinion = 10
+	ai_boldness = medium_positive_ai_value
+	ai_sociability = medium_negative_ai_value
+
+	track = {
+		lida_track_xp_stage_1 = {
+			martial = 1
+			prowess = 2
+			diplomacy = -1
+			intrigue = -1
+			monthly_martial_lifestyle_xp_gain_mult = 0.05
+			stress_loss_mult = -0.05
+			dread_baseline_add = 5
+			dread_decay_mult = -0.1
+		}
+		lida_track_xp_stage_2 = {
+			martial = 1
+			prowess = 1
+			diplomacy = -1
+			intrigue = -1
+			monthly_martial_lifestyle_xp_gain_mult = 0.05
+			stress_loss_mult = -0.05
+			dread_baseline_add = 5
+			dread_decay_mult = -0.05
+		}
+		lida_track_xp_stage_3 = {
+			martial = 1
+			prowess = 2
+			diplomacy = -1
+			intrigue = -2
+			monthly_martial_lifestyle_xp_gain_mult = 0.1
+			stress_loss_mult = -0.05
+			dread_baseline_add = 5
+			dread_decay_mult = -0.05
+		}
+	}
+}
