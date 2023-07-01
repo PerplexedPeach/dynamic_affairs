@@ -316,3 +316,22 @@ collars:
 	- female_accessories_lida_sl_collar
 harness:
 	- female_accessories_lida_l_harness_1
+
+
+ORDERED TODO:
+	Tolerance - how far along the subdom axis a character is willing to go. Use AI personality (boldness, etc) to determine it?
+	Sex Skills - BJ, intercourse, miscellaneous (XP traits, XP changes via events / transitions)
+	Fetishes - same as above, possible Carn integration further down the line
+
+ORDERLESS TODO:
+	CBO integration (CBO animations with LIDA events)
+
+	AI preference - Depending on tolerance and personality make AI choose an event/transition it would like.
+	AI preferred option always works and boosts their opinion of you (or some other benefit)
+	Letting AI partake in the events?
+
+	With new activities, maybe a fun activity is in order?
+
+	Royal Court events
+	
+	
