@@ -835,8 +835,8 @@ LIDA.130 = {
 	}
 }
 
+# accept the collar
 LIDA.131 = {
-	# accept the collar
 	type = character_event
 	title = LIDA.131.t
 	desc = {
@@ -874,6 +874,267 @@ LIDA.131 = {
 		name = LIDA.131.a
 		# starts right into it (sub blowjob)
 		trigger_event = LIDAs.10
+	}
+}
+
+# offer sub collar
+LIDA.135 = {
+	type = character_event
+	title = LIDA.135.t
+	desc = {
+		desc = LIDA.135.desc
+	}
+	trigger = {
+		any_affair_candidate_including_prisoner_trigger = { TRIGGER = you_dom_them_strongly_they_have_no_collar }
+	}
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		reference = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		reference = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = schadenfreude
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = shock
+	}
+	# select affairs partner
+	immediate = {
+
+		get_characters_eligible_partner_effect = {
+			LISTNAME = affairs_pool
+			RESTRICTED_LISTNAME = rejected_affairs_pool
+		}
+		# find someone who doms you strongly
+		random_in_list = {
+			list = affairs_pool
+			limit = {
+				you_dom_them_strongly_they_have_no_collar = yes
+			}
+			save_temporary_scope_as = affairs_candidate
+			weight = {
+				base = 50
+
+				# less likely if they are bold
+				modifier = {
+					add = {
+						value = ai_boldness
+						divide = dominant_positive_ai_value
+						multiply = -50
+					}
+				}
+			}
+			save_scope_as = affairs_partner
+		}
+
+		if = {
+			limit = {
+				scope:affairs_partner = {
+					is_imprisoned = yes
+				}
+			}
+			save_scope_value_as = {
+				name = locale
+				value = flag:dungeon
+			}
+		}
+		else = {
+			save_scope_value_as = {
+				name = locale
+				value = flag:bedchamber
+			}
+		}
+	}
+	option = {
+		# accept the collar 
+		name = LIDA.135.a
+
+		random_list = {
+			40 = { # They accept the collar
+				modifier = {
+					add = 30
+					scope:affairs_partner = {
+						has_trait_xp = {
+							trait = lida_sub_track
+							value >= lida_track_xp_stage_3
+						}
+					}
+				}
+				modifier = {
+					add = 30
+					scope:affairs_partner = {
+						has_trait_xp = {
+							trait = lida_sub_track
+							value >= lida_track_xp_stage_2
+						}
+					}
+				}
+				modifier = {
+					add = 30
+					scope:affairs_partner = {
+						has_trait_xp = {
+							trait = lida_sub_track
+							value >= lida_track_xp_stage_1
+						}
+					}
+				}
+				modifier = {
+					add = 20
+					scope:affairs_partner = {
+						has_trait = lustful
+					}
+				}
+				modifier = {
+					add = 40
+					scope:affairs_partner = {
+						has_trait = craven
+					}
+				}
+				scope:affairs_partner = {
+					add_character_modifier = {
+						modifier = wearing_sub_collar
+					}
+				}
+				add_opinion = {
+					target = scope:affairs_partner
+					modifier = grateful_opinion
+					opinion = 15
+				}
+
+				trigger_event = LIDA.136
+			}
+			40 = { 
+				modifier = {
+					add = 30
+					scope:affairs_partner = {
+						has_trait_xp = {
+							trait = lida_dom_track
+							value >= lida_track_xp_stage_3
+						}
+					}
+				}
+				modifier = {
+					add = 30
+					scope:affairs_partner = {
+						has_trait_xp = {
+							trait = lida_dom_track
+							value >= lida_track_xp_stage_2
+						}
+					}
+				}
+				modifier = {
+					add = 30
+					scope:affairs_partner = {
+						has_trait_xp = {
+							trait = lida_dom_track
+							value >= lida_track_xp_stage_1
+						}
+					}
+				}
+				modifier = {
+					add = 20
+					scope:affairs_partner = {
+						has_trait = stubborn
+					}
+				}
+				modifier = {
+					add = 40
+					scope:affairs_partner = {
+						has_trait = brave
+					}
+				}
+				scope:affairs_partner = {
+					stress_impact = {   
+						lida_sub_track = medium_stress_impact_gain
+					}
+				}
+				add_opinion = {
+					target = scope:affairs_partner
+					modifier = annoyed_opinion
+					opinion = -15
+				}
+
+				trigger_event = LIDA.137
+			}
+		}
+	}
+}
+# AI accepts collar
+LIDA.136 = {
+	type = character_event
+	title = LIDA.136.t
+	desc = {
+		desc = LIDA.136.desc
+	}
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		reference = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		reference = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = schadenfreude
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = shock
+	}	
+	immediate = {
+		store_subdom_value_effect = yes
+	}
+	option = {
+		name = LIDA.136.a
+		lida_start_sex_effect = {TRIGGER_RANDOM_EVENT = yes}
+	}
+}
+# AI rejects collar
+LIDA.137 = {
+	type = character_event
+	title = LIDA.137.t
+	desc = {
+		desc = LIDA.137.desc
+	}
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		reference = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		reference = bedchamber
+	}
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = worry
+	}
+	option = {
+		name = LIDA.137.a
 	}
 }
 
@@ -952,7 +1213,6 @@ LIDA.140 = {
 	}
 	# select affairs partner
 	immediate = {
-
 		get_characters_eligible_partner_effect = {
 			LISTNAME = affairs_pool
 			RESTRICTED_LISTNAME = rejected_affairs_pool

@@ -49,9 +49,12 @@ you_dom_them = {
 		value >= 10
 	}
 }
-you_dom_them_they_are_male = {
-	you_dom_them = yes
-	is_male = yes
+you_dom_them_strongly = {
+	has_opinion_modifier = {
+		target = root
+		modifier = dominant_opinion
+		value >= 20
+	}
 }
 they_dom_you_strongly = {
 	has_opinion_modifier = {
@@ -60,6 +63,19 @@ they_dom_you_strongly = {
 		value <= -20
 	}
 }
+
+# specialized triggers
+you_dom_them_they_are_male = {
+	you_dom_them = yes
+	is_male = yes
+}
+you_dom_them_strongly_they_have_no_collar = {
+	you_dom_them_strongly = yes
+	NOT = { 
+		has_character_modifier = wearing_sub_collar 
+	}
+}
+
 
 has_money_to_start_affair = {
 	gold >= root.standard_activity_cost
