@@ -5,8 +5,8 @@
 	group = lida_dom
 	level = 1
 	
-	birth = 1
-	random_creation = 1
+	# birth = 1
+	# random_creation = 1
 
 	same_opinion = -5
 	opposite_opinion = 5
@@ -54,8 +54,8 @@ lida_dom_2 = {
 	group = lida_dom
 	level = 2
 	
-	birth = 0.5
-	random_creation = 0.5
+	# birth = 0.5
+	# random_creation = 0.5
 
 	same_opinion = -10
 	opposite_opinion = 10
@@ -103,8 +103,8 @@ lida_dom_3 = {
 	group = lida_dom
 	level = 3
 
-	birth = 0.25
-	random_creation = 0.25
+	# birth = 0.25
+	# random_creation = 0.25
 
 	same_opinion = -15
 	opposite_opinion = 15
@@ -152,8 +152,8 @@ lida_sub_1 = {
 	group = lida_sub
 	level = 1
 	
-	birth = 1
-	random_creation = 1
+	# birth = 1
+	# random_creation = 1
 
 	opposite_opinion = 10
 
@@ -205,8 +205,8 @@ lida_sub_2 = {
 		lida_dom_3 = @pos_compat_low
 	}
 	
-	birth = 0.5
-	random_creation = 0.5
+	# birth = 0.5
+	# random_creation = 0.5
 
 	martial = -2
 	prowess = -2
@@ -242,8 +242,8 @@ lida_sub_3 = {
 	group = lida_sub
 	level = 3
 
-	birth = 0.25
-	random_creation = 0.15
+	# birth = 0.25
+	# random_creation = 0.15
 
 	opposite_opinion = 30
 
