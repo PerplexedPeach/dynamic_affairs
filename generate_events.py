@@ -487,6 +487,23 @@ def define_sex_events_fm(es: EventMap):
                    Option(EventsSex.FM_BLOWJOB_DOM, OptionCategory.SUB,
                           "Kneel down and take him in your mouth",
                           transition_text=f"""You sit up and replace your feet with your more dexterous hands."""),
+                   Option(EventsCum.FM_RUINED_ORGASM, OptionCategory.DOM,
+                          "Deny his release",
+                          dom_success_adjustment=-20,
+                          transition_text=f"""
+                              Just as {THEM}'s body hints at his impending climax, you stop your minstrations with your
+                              feet and instead stomp on his member, reminding him who's in charge.
+                              """,
+                          failed_transition_text=f"""
+                              You move to stop his climax, but realize that he did not last as long as you expected."""),
+                   Option(EventsCum.FM_CUM_ON_FOOT, OptionCategory.SUB,
+                          "Let him cum on your feet",
+                          transition_text=f"""
+                              From the twitching of {THEM}'s member, and the arching of his back, you can tell he's 
+                              about to cum. You bring both your feet together and place them under his member, 
+                              presenting your toes as a target. 
+                              """,
+                          )
                )))
     es.add(Sex(EventsSex.FM_HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=0, stam_cost_2=1,
@@ -1361,6 +1378,24 @@ def define_sex_events_mf(es: EventMap):
                           dexterous hands.""",
                           failed_transition_text="She stuffs your mouth with her other foot, rejecting your suggestion."
                           ),
+                   Option(EventsCum.MF_RUINED_ORGASM, OptionCategory.SUB,
+                          "Let her deny your release",
+                          transition_text=f"""
+                              She stops rubbing on your rod and instead stomps you. Its abruptness takes the wind out of
+                              your guts, stopping your climax in its track.
+                              """,
+                          ),
+                   Option(EventsCum.MF_CUM_ON_FOOT, OptionCategory.DOM,
+                          "Cum on her feet",
+                          dom_success_adjustment=20,
+                          transition_text=f"""
+                              You feel your climax approaching, and you take the initiative by grabbing her feet and
+                              placing them flat under your member, preparing her toes as your target.
+                              """,
+                          failed_transition_text=f"""
+                              You feel your climax approaching, and you take the initiative by grabbing her feet, but
+                              she deftly dodges your hand."""
+                          )
                )))
     es.add(Sex(EventsSex.MF_HANDJOB_TEASE, "Handjob Tease",
                stam_cost_1=1, stam_cost_2=0,
@@ -2613,6 +2648,24 @@ def define_cum_events_fm(es: EventMap):
                    Did he think you'd let him have his way with your body #italic just#! for fun? #dom Fool.#!""")
                                  )
                ))
+    es.add(Cum(EventsCum.FM_CUM_ON_FOOT, "A Sticky Situation",
+               subdom_change=-2,
+               root_gender=FEMALE, partner_gender=MALE,
+               root_become_more_sub_xp=3,
+               animation_left=DISGUST, animation_right=PERSONALITY_CONTENT,
+               terminal_option=Option(None, OptionCategory.OTHER, "Slip into your shoes and leave"),
+               desc=ComposedDesc(
+                   TriggeredDesc(IS_AT_LEAST_SUB_1, """
+                   The direct visual contrast of his member against your feet is surprising. #sub;italic It's almost 
+                   larger than my feet...#! Such thoughts occupy your mind as you let him do as he wishes.\\n\\n
+                   """),
+                   f"""With one hand holding your feet together, he uses the other to finish himself onto you.
+                   His seed is #sub hot#! and #sub sticky#! as it lands on your skin, slowly #sub seeping#! between
+                   your toes.
+                   """,
+               ),
+               custom_immediate_effect=AddModifier(Modifier(WEARING_CUMMY_CLOTHING, duration=f"{YEARS} = 1", root=True))
+               ))
 
 
 def define_cum_events_mf(es: EventMap):
@@ -2946,6 +2999,20 @@ def define_cum_events_mf(es: EventMap):
                    """),
 
                ),
+               ))
+    es.add(Cum(EventsCum.MF_CUM_ON_FOOT, "A Sticky Situation",
+               subdom_change=2,
+               root_gender=MALE, partner_gender=FEMALE,
+               root_become_more_dom_xp=3,
+               animation_left=PERSONALITY_CONTENT, animation_right=DISGUST,
+               terminal_option=Option(None, OptionCategory.OTHER, "Imagine your seed being squished inside her shoes"),
+               desc=ComposedDesc(
+                   f"""With one hand holding her feet together, you use the other to finish yourself onto her feet,
+                   making sure to cover them in your #dom;bold sticky seed#!. Just like your seed #dom seeping#! 
+                   between her toes, you hope your dominance will seep into her heart.
+                   """,
+               ),
+               custom_immediate_effect=AddModifier(Modifier(WEARING_CUMMY_CLOTHING, duration=f"{YEARS} = 1", root=False))
                ))
 
 

@@ -799,6 +799,15 @@ LIDAs.36 = {
 				# You're too aroused to be satisfied with playing with your feet\n
 				desc = sex_transition.36.36.666
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -36000510
+				}
+				# 36000510: EventsSex.FM_FOOTJOB -> EventsCum.FM_RUINED_ORGASM failed
+				# You move to stop his climax, but realize that he did not last as long as you expected.\n
+				desc = sex_transition.CUM.36.5.666
+			}
 		}
 		triggered_desc = {
 			trigger = {
@@ -844,6 +853,44 @@ LIDAs.36 = {
 					value = 36003600
 				}
 			}
+			# FM_RUINED_ORGASM
+			10 = {
+				trigger = {
+					scope:finisher_stamina <= 0
+				}
+				save_scope_value_as = {
+					name = dom_transition_0
+					value = 36000510
+				}
+			}
+		}
+		random_list = {
+			# FM_FOOTJOB
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:dom_transition_0 = 36003600
+					}
+				}
+				save_scope_value_as = {
+					name = dom_transition_1
+					value = 36003600
+				}
+			}
+			# FM_RUINED_ORGASM
+			10 = {
+				trigger = {
+					scope:finisher_stamina <= 0
+					NOT = {
+						scope:dom_transition_0 = 36000510
+					}
+				}
+				save_scope_value_as = {
+					name = dom_transition_1
+					value = 36000510
+				}
+			}
 		}
 		if = {
 			limit = {
@@ -865,6 +912,44 @@ LIDAs.36 = {
 				save_scope_value_as = {
 					name = sub_transition_0
 					value = 36000800
+				}
+			}
+			# FM_CUM_ON_FOOT
+			10 = {
+				trigger = {
+					scope:finisher_stamina <= 0
+				}
+				save_scope_value_as = {
+					name = sub_transition_0
+					value = 36002410
+				}
+			}
+		}
+		random_list = {
+			# FM_BLOWJOB_DOM
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:sub_transition_0 = 36000800
+					}
+				}
+				save_scope_value_as = {
+					name = sub_transition_1
+					value = 36000800
+				}
+			}
+			# FM_CUM_ON_FOOT
+			10 = {
+				trigger = {
+					scope:finisher_stamina <= 0
+					NOT = {
+						scope:sub_transition_0 = 36002410
+					}
+				}
+				save_scope_value_as = {
+					name = sub_transition_1
+					value = 36002410
 				}
 			}
 		}
@@ -940,6 +1025,15 @@ LIDAs.36 = {
 					value = event_id:LIDAs.8
 				}
 			}
+			if = {
+				limit = {
+					scope:sub_transition_0 = 36002410
+				}
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.24
+				}
+			}
 		}
 		if = {
 			limit = {
@@ -970,6 +1064,102 @@ LIDAs.36 = {
 		save_scope_value_as = {
 			name = next_event
 			value = event_id:LIDAs.8
+		}
+	}
+	option = {
+		# 36000510: EventsSex.FM_FOOTJOB -> EventsCum.FM_RUINED_ORGASM
+		name = LIDAoption.36000510
+		trigger = {
+			OR = {
+				scope:dom_transition_0 = 36000510
+				scope:dom_transition_1 = 36000510
+			}
+		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -20
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		save_temporary_scope_value_as = {
+			name = this_dom_chance
+			value = {
+				add = scope:dom_chance
+				add = -20
+			}
+		}
+		if = {
+			limit = {
+				scope:dom_success <= scope:this_dom_chance
+			}
+			change_subdom_effect = {
+				CHANGE = 1
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = 36000510
+			}
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.5
+			}
+		}
+		else = {
+			change_subdom_effect = {
+				CHANGE = -2
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = -36000510
+			}
+			if = {
+				limit = {
+					scope:sub_transition_0 = 36000800
+				}
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.8
+				}
+			}
+			if = {
+				limit = {
+					scope:sub_transition_0 = 36002410
+				}
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.24
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:root_stamina <= 0
+			}
+			custom_tooltip = cant_dom_due_to_cum_tooltip
+			add_internal_flag = dangerous
+		}
+	}
+	option = {
+		# 36002410: EventsSex.FM_FOOTJOB -> EventsCum.FM_CUM_ON_FOOT
+		name = LIDAoption.36002410
+		trigger = {
+			OR = {
+				scope:sub_transition_0 = 36002410
+				scope:sub_transition_1 = 36002410
+			}
+		}
+		custom_tooltip = voluntary_sub_tooltip
+		change_subdom_effect = {
+			CHANGE = -1
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 36002410
+		}
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.24
 		}
 	}
 	after = {
@@ -3344,6 +3534,15 @@ LIDAs.8 = {
 				# 36003600: EventsSex.FM_FOOTJOB -> EventsSex.FM_FOOTJOB failed
 				# You're too aroused to be satisfied with playing with your feet\n
 				desc = sex_transition.36.36.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -36000510
+				}
+				# 36000510: EventsSex.FM_FOOTJOB -> EventsCum.FM_RUINED_ORGASM failed
+				# You move to stop his climax, but realize that he did not last as long as you expected.\n
+				desc = sex_transition.CUM.36.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -15824,6 +16023,15 @@ LIDAs.39 = {
 				# She stuffs your mouth with her other foot, rejecting your suggestion.\n
 				desc = sex_transition.39.24.666
 			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -39002510
+				}
+				# 39002510: EventsSex.MF_FOOTJOB -> EventsCum.MF_CUM_ON_FOOT failed
+				# You feel your climax approaching, and you take the initiative by grabbing her feet, but she deftly dodges your hand.\n
+				desc = sex_transition.CUM.39.25.666
+			}
 		}
 		triggered_desc = {
 			trigger = {
@@ -15869,6 +16077,44 @@ LIDAs.39 = {
 					value = 39002400
 				}
 			}
+			# MF_CUM_ON_FOOT
+			10 = {
+				trigger = {
+					scope:finisher_stamina <= 0
+				}
+				save_scope_value_as = {
+					name = dom_transition_0
+					value = 39002510
+				}
+			}
+		}
+		random_list = {
+			# MF_HANDJOB
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:dom_transition_0 = 39002400
+					}
+				}
+				save_scope_value_as = {
+					name = dom_transition_1
+					value = 39002400
+				}
+			}
+			# MF_CUM_ON_FOOT
+			10 = {
+				trigger = {
+					scope:finisher_stamina <= 0
+					NOT = {
+						scope:dom_transition_0 = 39002510
+					}
+				}
+				save_scope_value_as = {
+					name = dom_transition_1
+					value = 39002510
+				}
+			}
 		}
 		if = {
 			limit = {
@@ -15890,6 +16136,44 @@ LIDAs.39 = {
 				save_scope_value_as = {
 					name = sub_transition_0
 					value = 39003900
+				}
+			}
+			# MF_RUINED_ORGASM
+			10 = {
+				trigger = {
+					scope:finisher_stamina <= 0
+				}
+				save_scope_value_as = {
+					name = sub_transition_0
+					value = 39001710
+				}
+			}
+		}
+		random_list = {
+			# MF_FOOTJOB
+			10 = {
+				trigger = {
+					scope:finisher_stamina > 0
+					NOT = {
+						scope:sub_transition_0 = 39003900
+					}
+				}
+				save_scope_value_as = {
+					name = sub_transition_1
+					value = 39003900
+				}
+			}
+			# MF_RUINED_ORGASM
+			10 = {
+				trigger = {
+					scope:finisher_stamina <= 0
+					NOT = {
+						scope:sub_transition_0 = 39001710
+					}
+				}
+				save_scope_value_as = {
+					name = sub_transition_1
+					value = 39001710
 				}
 			}
 		}
@@ -15986,6 +16270,111 @@ LIDAs.39 = {
 				save_scope_value_as = {
 					name = next_event
 					value = event_id:LIDAs.39
+				}
+			}
+			if = {
+				limit = {
+					scope:sub_transition_0 = 39001710
+				}
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.17
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:partner_stamina <= 0
+			}
+			custom_tooltip = easy_dom_due_to_cum_tooltip
+			add_internal_flag = special
+		}
+	}
+	option = {
+		# 39001710: EventsSex.MF_FOOTJOB -> EventsCum.MF_RUINED_ORGASM
+		name = LIDAoption.39001710
+		trigger = {
+			OR = {
+				scope:sub_transition_0 = 39001710
+				scope:sub_transition_1 = 39001710
+			}
+		}
+		custom_tooltip = voluntary_sub_tooltip
+		change_subdom_effect = {
+			CHANGE = -1
+		}
+		save_scope_value_as = {
+			name = sex_transition
+			value = 39001710
+		}
+		save_scope_value_as = {
+			name = next_event
+			value = event_id:LIDAc.17
+		}
+	}
+	option = {
+		# 39002510: EventsSex.MF_FOOTJOB -> EventsCum.MF_CUM_ON_FOOT
+		name = LIDAoption.39002510
+		trigger = {
+			OR = {
+				scope:dom_transition_0 = 39002510
+				scope:dom_transition_1 = 39002510
+			}
+		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = 20
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		save_temporary_scope_value_as = {
+			name = this_dom_chance
+			value = {
+				add = scope:dom_chance
+				add = 20
+			}
+		}
+		if = {
+			limit = {
+				scope:dom_success <= scope:this_dom_chance
+			}
+			change_subdom_effect = {
+				CHANGE = 1
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = 39002510
+			}
+			save_scope_value_as = {
+				name = next_event
+				value = event_id:LIDAc.25
+			}
+		}
+		else = {
+			change_subdom_effect = {
+				CHANGE = -2
+			}
+			save_scope_value_as = {
+				name = sex_transition
+				value = -39002510
+			}
+			if = {
+				limit = {
+					scope:sub_transition_0 = 39003900
+				}
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAs.39
+				}
+			}
+			if = {
+				limit = {
+					scope:sub_transition_0 = 39001710
+				}
+				save_scope_value_as = {
+					name = next_event
+					value = event_id:LIDAc.17
 				}
 			}
 		}
@@ -17061,6 +17450,15 @@ LIDAs.24 = {
 				# 39002400: EventsSex.MF_FOOTJOB -> EventsSex.MF_HANDJOB failed
 				# She stuffs your mouth with her other foot, rejecting your suggestion.\n
 				desc = sex_transition.39.24.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -39002510
+				}
+				# 39002510: EventsSex.MF_FOOTJOB -> EventsCum.MF_CUM_ON_FOOT failed
+				# You feel your climax approaching, and you take the initiative by grabbing her feet, but she deftly dodges your hand.\n
+				desc = sex_transition.CUM.39.25.666
 			}
 			triggered_desc = {
 				trigger = {

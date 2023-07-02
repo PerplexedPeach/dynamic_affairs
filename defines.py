@@ -92,6 +92,7 @@ class EventsCum(enum.Enum):
     FM_CREAMPIE_ON_TOP = 10
     FM_CREAMPIE_BREED = 11
     FM_CREAMPIE_KEEP = 12
+    FM_CUM_ON_FOOT = 24
 
     MF_HANDJOB_CUM_IN_HAND = 13
     MF_BLOWJOB_CUM_IN_MOUTH_DOM = 14
@@ -104,6 +105,7 @@ class EventsCum(enum.Enum):
     MF_CREAMPIE_REGULAR = 21
     MF_CREAMPIE_ON_TOP = 22
     MF_CREAMPIE_BREED = 23
+    MF_CUM_ON_FOOT = 25
 
 
 # alias for any event type
@@ -329,7 +331,7 @@ EYEROLL = "eyeroll"
 
 # modifiers
 SEXUALLY_FRUSTRATED = "sexually_frustrated"
-WEARING_CUMMY_CLOTHING = "wearing_cummy_clothing"
+WEARING_CUMMY_CLOTHING = "wearing_cummy_clothes"
 
 # scripted values
 LIDA_TRACK_XP_STAGE_1 = "lida_track_xp_stage_1"

@@ -1969,6 +1969,15 @@ LIDAc.5 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 36000510
+				}
+				# Footjob
+				# Just as [affairs_partner.GetFirstName]'s body hints at his impending climax, you stop your minstrations with your feet and instead stomp on his member, reminding him who's in charge.\n
+				desc = sex_transition.CUM.36.5.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 7000510
 				}
 				# Handjob
@@ -2001,6 +2010,24 @@ LIDAc.5 = {
 				# Dom Blowjob II
 				# You pull back and slap his rod, disrupting the build up to his climax.\n
 				desc = sex_transition.CUM.38.5.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -36003600
+				}
+				# 36003600: EventsSex.FM_FOOTJOB -> EventsSex.FM_FOOTJOB failed
+				# You're too aroused to be satisfied with playing with your feet\n
+				desc = sex_transition.36.36.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -36000510
+				}
+				# 36000510: EventsSex.FM_FOOTJOB -> EventsCum.FM_RUINED_ORGASM failed
+				# You move to stop his climax, but realize that he did not last as long as you expected.\n
+				desc = sex_transition.CUM.36.5.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -2128,6 +2155,16 @@ LIDAc.5 = {
 				# As you try to pull back, he holds the back of your head with his hands.\n
 				desc = sex_transition.CUM.38.5.666
 			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition < 0
+				exists = scope:prev_event
+				scope:prev_event = 36
+			}
+			# defaulted to 36000510: EventsSex.FM_FOOTJOB -> EventsCum.FM_RUINED_ORGASM
+			desc = sex_transition.CUM.36.5.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -4580,6 +4617,244 @@ LIDAc.12 = {
 		reset_stamina_after_cum_effect = yes
 	}
 }
+LIDAc.24 = {
+	# FM_CUM_ON_FOOT: A Sticky Situation
+	type = character_event
+	title = LIDAc.24.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		reference = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		reference = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		reference = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		reference = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		reference = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		reference = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		reference = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		reference = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		reference = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		reference = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		reference = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		reference = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		reference = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		reference = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		reference = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		reference = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		reference = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		reference = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		reference = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = disgust
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 36002410
+				}
+				# Footjob
+				# From the twitching of [affairs_partner.GetFirstName]'s member, and the arching of his back, you can tell he's about to cum. You bring both your feet together and place them under his member, presenting your toes as a target.\n
+				desc = sex_transition.CUM.36.24.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -36003600
+				}
+				# 36003600: EventsSex.FM_FOOTJOB -> EventsSex.FM_FOOTJOB failed
+				# You're too aroused to be satisfied with playing with your feet\n
+				desc = sex_transition.36.36.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -36000510
+				}
+				# 36000510: EventsSex.FM_FOOTJOB -> EventsCum.FM_RUINED_ORGASM failed
+				# You move to stop his climax, but realize that he did not last as long as you expected.\n
+				desc = sex_transition.CUM.36.5.666
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition < 0
+				exists = scope:prev_event
+				scope:prev_event = 36
+			}
+			# defaulted to 36002410: EventsSex.FM_FOOTJOB -> EventsCum.FM_CUM_ON_FOOT
+			desc = sex_transition.CUM.36.24.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
+		desc = {
+			desc = {
+				triggered_desc = {
+					trigger = {
+						has_trait_xp = { trait =  lida_sub_track value >= lida_track_xp_stage_1 }
+					}
+					desc = LIDAc.24.desc.20
+				}
+			}
+			desc = LIDAc.24.desc.21
+		}
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:partner_stamina
+		}
+		change_subdom_effect = {
+			CHANGE = -2
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		become_more_sub_effect = { AMOUNT = 3 }
+		scope:affairs_partner = {
+			become_more_dom_effect = { AMOUNT = 3 }
+		}
+		add_character_modifier = {
+			modifier = wearing_cummy_clothes
+			years = 1
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.13
+	}
+	after = {
+		save_scope_value_as = {
+			name = prev_event
+			value = 24
+		}
+		reset_stamina_after_cum_effect = yes
+	}
+}
 LIDAc.13 = {
 	# MF_HANDJOB_CUM_IN_HAND: A Load in Hand is Worth Two in the Bush
 	type = character_event
@@ -4876,7 +5151,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.13
+		name = LIDAoption.14
 	}
 	after = {
 		save_scope_value_as = {
@@ -5256,7 +5531,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.14
+		name = LIDAoption.15
 	}
 	after = {
 		save_scope_value_as = {
@@ -5726,7 +6001,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.15
+		name = LIDAoption.16
 	}
 	after = {
 		save_scope_value_as = {
@@ -6104,7 +6379,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.16
+		name = LIDAoption.17
 	}
 	after = {
 		save_scope_value_as = {
@@ -6409,7 +6684,7 @@ LIDAc.15 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.17
+		name = LIDAoption.18
 	}
 	after = {
 		save_scope_value_as = {
@@ -6567,6 +6842,15 @@ LIDAc.17 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 39001710
+				}
+				# Footjob
+				# She stops rubbing on your rod and instead stomps you. Its abruptness takes the wind out of your guts, stopping your climax in its track.\n
+				desc = sex_transition.CUM.39.17.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 24001710
 				}
 				# Handjob
@@ -6599,6 +6883,24 @@ LIDAc.17 = {
 				# Dom Blowjob II
 				# She pulls back and slaps your rod, disrupting the build up to your climax.\n
 				desc = sex_transition.CUM.41.17.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -39002400
+				}
+				# 39002400: EventsSex.MF_FOOTJOB -> EventsSex.MF_HANDJOB failed
+				# She stuffs your mouth with her other foot, rejecting your suggestion.\n
+				desc = sex_transition.39.24.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -39002510
+				}
+				# 39002510: EventsSex.MF_FOOTJOB -> EventsCum.MF_CUM_ON_FOOT failed
+				# You feel your climax approaching, and you take the initiative by grabbing her feet, but she deftly dodges your hand.\n
+				desc = sex_transition.CUM.39.25.666
 			}
 			triggered_desc = {
 				trigger = {
@@ -6705,6 +7007,16 @@ LIDAc.17 = {
 				exists = scope:sex_transition
 				scope:sex_transition < 0
 				exists = scope:prev_event
+				scope:prev_event = 39
+			}
+			# defaulted to 39001710: EventsSex.MF_FOOTJOB -> EventsCum.MF_RUINED_ORGASM
+			desc = sex_transition.CUM.39.17.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition < 0
+				exists = scope:prev_event
 				scope:prev_event = 24
 			}
 			# defaulted to 24001710: EventsSex.MF_HANDJOB -> EventsCum.MF_RUINED_ORGASM
@@ -6796,7 +7108,7 @@ LIDAc.17 = {
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.18
+		name = LIDAoption.19
 	}
 	after = {
 		save_scope_value_as = {
@@ -7237,7 +7549,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.19
+		name = LIDAoption.20
 	}
 	after = {
 		save_scope_value_as = {
@@ -7652,7 +7964,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.20
+		name = LIDAoption.21
 	}
 	after = {
 		save_scope_value_as = {
@@ -8030,7 +8342,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.21
+		name = LIDAoption.22
 	}
 	after = {
 		save_scope_value_as = {
@@ -8353,7 +8665,7 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.22
+		name = LIDAoption.23
 	}
 	after = {
 		save_scope_value_as = {
@@ -8668,12 +8980,244 @@ scope:subdom < 10
 		debug_log_scopes = yes
 	}
 	option = {
-		name = LIDAoption.23
+		name = LIDAoption.24
 	}
 	after = {
 		save_scope_value_as = {
 			name = prev_event
 			value = 23
+		}
+		reset_stamina_after_cum_effect = yes
+	}
+}
+LIDAc.25 = {
+	# MF_CUM_ON_FOOT: A Sticky Situation
+	type = character_event
+	title = LIDAc.25.t
+	theme = seduction
+	override_background = {
+		trigger = {
+			scope:locale = flag:battlefield
+		}
+		reference = battlefield
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_night
+		}
+		reference = alley_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:alley_day
+		}
+		reference = alley_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:temple
+		}
+		reference = temple
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_night
+		}
+		reference = corridor_night
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:corridor_day
+		}
+		reference = corridor_day
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:courtyard
+		}
+		reference = courtyard
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:dungeon
+		}
+		reference = dungeon
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:docks
+		}
+		reference = docks
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:feast
+		}
+		reference = feast
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:market
+		}
+		reference = market
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:tavern
+		}
+		reference = tavern
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:throne_room
+		}
+		reference = throne_room
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:garden
+		}
+		reference = garden
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:gallows
+		}
+		reference = gallows
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:bedchamber
+		}
+		reference = bedchamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:study
+		}
+		reference = study
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:council_chamber
+		}
+		reference = council_chamber
+	}
+	override_background = {
+		trigger = {
+			scope:locale = flag:sitting_room
+		}
+		reference = sitting_room
+	}
+	left_portrait = {
+		character = root
+		animation = personality_content
+		triggered_outfit = {
+			trigger = {
+				exists = scope:root_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	right_portrait = {
+		character = scope:affairs_partner
+		animation = disgust
+		triggered_outfit = {
+			trigger = {
+				exists = scope:partner_naked
+			}
+			outfit_tags = {
+				no_clothes
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = 39002510
+				}
+				# Footjob
+				# You feel your climax approaching, and you take the initiative by grabbing her feet and placing them flat under your member, preparing her toes as your target.\n
+				desc = sex_transition.CUM.39.25.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -39002400
+				}
+				# 39002400: EventsSex.MF_FOOTJOB -> EventsSex.MF_HANDJOB failed
+				# She stuffs your mouth with her other foot, rejecting your suggestion.\n
+				desc = sex_transition.39.24.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -39002510
+				}
+				# 39002510: EventsSex.MF_FOOTJOB -> EventsCum.MF_CUM_ON_FOOT failed
+				# You feel your climax approaching, and you take the initiative by grabbing her feet, but she deftly dodges your hand.\n
+				desc = sex_transition.CUM.39.25.666
+			}
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition < 0
+				exists = scope:prev_event
+				scope:prev_event = 39
+			}
+			# defaulted to 39002510: EventsSex.MF_FOOTJOB -> EventsCum.MF_CUM_ON_FOOT
+			desc = sex_transition.CUM.39.25.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
+		desc = {
+			desc = LIDAc.25.desc.20
+		}
+	}
+	immediate = {
+		save_scope_value_as = {
+			name = finisher_stamina
+			value = scope:root_stamina
+		}
+		change_subdom_effect = {
+			CHANGE = 2
+		}
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = root
+			CHARACTER_2 = scope:affairs_partner
+			C1_PREGNANCY_CHANCE = 0
+			C2_PREGNANCY_CHANCE = 0
+			STRESS_EFFECTS = yes
+			DRAMA = yes
+		}
+		become_more_dom_effect = { AMOUNT = 3 }
+		scope:affairs_partner = {
+			become_more_sub_effect = { AMOUNT = 3 }
+		}
+		scope:affairs_partner = {
+			add_character_modifier = {
+				modifier = wearing_cummy_clothes
+				years = 1
+			}
+		}
+		debug_log_scopes = yes
+	}
+	option = {
+		name = LIDAoption.25
+	}
+	after = {
+		save_scope_value_as = {
+			name = prev_event
+			value = 25
 		}
 		reset_stamina_after_cum_effect = yes
 	}
