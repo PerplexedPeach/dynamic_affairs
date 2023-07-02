@@ -125,6 +125,9 @@ def validate_sex_events(events: EventMap):
     for event in events.all():
         if not isinstance(event, Sex):
             continue
+        # heuristic for ignoring tease events - those are allowed to have no cum transition
+        if event.id.name.endswith("TEASE"):
+            continue
         has_cum_transition = False
         for option in event.options:
             if isinstance(option.next_id, EventsCum):
