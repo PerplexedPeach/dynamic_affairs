@@ -261,19 +261,28 @@ calculate_dom_success_effect = {
 			}
 		}
 	}
+	save_temporary_scope_value_as = {
+		name = prowess_diff
+		value = {
+			add = prowess
+			substract = scope:affairs_partner.prowess
+		}
+	}
 	save_scope_value_as = {
 		name = dom_chance_prowess
 		value = {
 			# use difference in prowess to compute success chance
 			# physically stronger / more robust
-			add = {
+			# to get diminishing returns we have
+			# diff / (diff + XX) * YY
+			add = scope:prowess_diff
+			divide = {
 				value = {
-					add = prowess
-					subtract = scope:affairs_partner.prowess
+					add = scope:prowess_diff
+					add = 20
 				}
-				# 10 points difference = 20% more likely to dom
-				multiply = 2
 			}
+			multiply = 30
 		}
 	}
 	save_scope_value_as = {
