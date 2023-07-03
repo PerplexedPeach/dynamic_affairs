@@ -1,0 +1,26 @@
+pdxmesh = {
+	name = "male_accessories_lida_sl_collar_mesh"
+	file = "male_accessories_lida_sl_collar.mesh"
+
+	blend_shape = { id = "male_accessories_lida_sl_collar_bs_fat"				type = "male_accessories_lida_sl_collar_bs_fat.mesh" }
+	blend_shape = { id = "male_accessories_lida_sl_collar_bs_old"				type = "male_accessories_lida_sl_collar_bs_old.mesh" }
+	blend_shape = { id = "male_accessories_lida_sl_collar_bs_dwarf"				type = "male_accessories_lida_sl_collar_bs_dwarf.mesh" }
+
+	meshsettings = {
+		name = "male_accessories_lida_sl_collarShape"
+		index = 0
+		texture_diffuse = "female_accessories_lida_sl_collar_diffuse.dds"
+		texture_normal = "female_accessories_lida_sl_collar_normal.dds"
+		texture_specular = "female_accessories_lida_sl_collar_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_accessories_lida_sl_collar_entity"
+	pdxmesh = "male_accessories_lida_sl_collar_mesh"
+	attribute = { name = "bs_body_fat_1"					blend_shape = "male_accessories_lida_sl_collar_bs_fat" }
+	attribute = { name = "bs_body_old_1"					blend_shape = "male_accessories_lida_sl_collar_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"					blend_shape = "male_accessories_lida_sl_collar_bs_dwarf" }
+}
