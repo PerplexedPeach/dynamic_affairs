@@ -75,6 +75,13 @@ you_dom_them_strongly_they_have_no_collar = {
 		has_character_modifier = wearing_sub_collar 
 	}
 }
+you_dom_them_strongly_they_have_collar_no_harness = {
+	you_dom_them_strongly = yes
+	has_character_modifier = wearing_sub_collar
+	NOT = { 
+		has_character_modifier = wearing_sub_harness 
+	}
+}
 
 
 has_money_to_start_affair = {
