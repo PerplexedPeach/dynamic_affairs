@@ -406,11 +406,7 @@ lida_sub_track = {
 
 	track = {
 		lida_track_xp_stage_1 = {
-			martial = -1
 			prowess = -1
-			intrigue = -1
-			diplomacy = 1
-			stewardship = 1
 			learning = 1
 			monthly_learning_lifestyle_xp_gain_mult = 0.025
 			monthly_stewardship_lifestyle_xp_gain_mult = 0.025
@@ -422,20 +418,20 @@ lida_sub_track = {
 			martial = -1
 			prowess = -1
 			intrigue = -1
-			diplomacy = 1
 			stewardship = 1
-			learning = 1
 			monthly_learning_lifestyle_xp_gain_mult = 0.05
 			monthly_stewardship_lifestyle_xp_gain_mult = 0.05
 			stress_loss_mult = 0.05
 			dread_baseline_add = -5
 			dread_decay_mult = 0.05
+			parochial_opinion = 5
+			glory_hound_opinion = -5
+			liege_opinion = 5
 		}
 		lida_track_xp_stage_3 = {
 			martial = -1
-			prowess = -1
-			intrigue = -1
-			diplomacy = 1
+			prowess = -2
+			diplomacy = -1
 			stewardship = 1
 			learning = 1
 			monthly_learning_lifestyle_xp_gain_mult = 0.075
@@ -443,6 +439,9 @@ lida_sub_track = {
 			stress_loss_mult = 0.1
 			dread_baseline_add = -5
 			dread_decay_mult = 0.05
+			parochial_opinion = 10
+			glory_hound_opinion = -10
+			liege_opinion = 10
 		}
 	}
 }
@@ -574,34 +573,37 @@ lida_dom_track = {
 
 	track = {
 		lida_track_xp_stage_1 = {
-			martial = 1
-			prowess = 2
-			diplomacy = -1
-			intrigue = -1
-			monthly_martial_lifestyle_xp_gain_mult = 0.05
+			prowess = 1
+			monthly_martial_lifestyle_xp_gain_mult = 0.025
 			stress_loss_mult = -0.05
 			dread_baseline_add = 5
-			dread_decay_mult = -0.1
+			dread_decay_mult = -0.05
 		}
 		lida_track_xp_stage_2 = {
 			martial = 1
 			prowess = 1
-			diplomacy = -1
-			intrigue = -1
+			diplomacy = 1
+			learning = -1
 			monthly_martial_lifestyle_xp_gain_mult = 0.05
 			stress_loss_mult = -0.05
 			dread_baseline_add = 5
 			dread_decay_mult = -0.05
+			parochial_opinion = -5
+			glory_hound_opinion = 5
+			liege_opinion = -5
 		}
 		lida_track_xp_stage_3 = {
 			martial = 1
 			prowess = 2
-			diplomacy = -1
-			intrigue = -2
-			monthly_martial_lifestyle_xp_gain_mult = 0.1
+			intrigue = 1
+			stewardship = -1
+			monthly_martial_lifestyle_xp_gain_mult = 0.075
 			stress_loss_mult = -0.05
 			dread_baseline_add = 5
-			dread_decay_mult = -0.05
+			dread_decay_mult = -0.1
+			parochial_opinion = -10
+			glory_hound_opinion = 10
+			liege_opinion = -10
 		}
 	}
 }
