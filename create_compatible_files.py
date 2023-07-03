@@ -95,7 +95,7 @@ def create_combined_compatible_file(relative_path, enclosing_scope_name, game_di
 
 game_dir = input(
     "Enter the path to the game directory to make compatible files for, or leave blank to use the game directory.\n"
-    "This can be used to specify a mod, e.g. C:/Program Files (x86)/Steam/steamapps/workshop/content/1158310/2220098919\n")
+    "This can be used to specify a mod, e.g.\nCFP: C:/Program Files (x86)/Steam/steamapps/workshop/content/1158310/2220098919\n")
 if game_dir.strip() == "":
     game_dir = None
 

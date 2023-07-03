@@ -2,7 +2,7 @@
 			sub_collar = {
 				index = 9
 				male = {
-					1 = empty
+					1 = male_accessories_lida_sl_collar
 				}
 				female = {
 					1 = female_accessories_lida_sl_collar
