@@ -6,7 +6,7 @@ partner_stamina_tooltip: "[SCOPE.Custom('PartnerSexualStamina')]"
 attempt_dom_tooltip: "This is considered a #dom;bold dominant#! action and will be challenged by [affairs_partner.GetFirstName]! Your chance of success is based on your physical prowess, personalities, traits, and current relationship #weak ([SCOPE.GetValue('dom_chance')|0]% success)#!"
 dom_no_sub_tooltip: "This is considered a #dom;bold dominant#! action! However, since there are no submissive options from this event, you are guaranteed success."
 voluntary_sub_tooltip: "This is considered a #sub;bold submissive#! action and will be welcomed by [affairs_partner.GetFirstName]! However, there are long term consequences to being submissive to them."
-dom_success_adjustment_tooltip: "Due to special circumstance, you have an extra #weak ([SCOPE.GetValue('dom_success_adjustment')|0]%)#! chance of succeeding."
+dom_success_adjustment_tooltip: "Due to special circumstance, you have an extra #weak ([SCOPE.GetValue('dom_success_adjustment')|0]%)#! chance of succeeding #weak (total [SCOPE.GetValue('this_dom_chance')|0]% success)#!."
 # dom success breakdown
 dom_chance_breakdown_tooltip: "Success chance breakdown #weak (some hidden)#!\nBase chance: #weak [SCOPE.ScriptValue('dom_base_success_value')|0]% #![SCOPE.Custom('DomChanceBreakdownSubdomNature')][SCOPE.Custom('DomChanceBreakdownSubdom')][SCOPE.Custom('DomChanceBreakdownProwess')][SCOPE.Custom('DomChanceBreakdownLustBeauty')][SCOPE.Custom('DomChanceBreakdownAuthority')][SCOPE.Custom('DomChanceBreakdownStubborness')][SCOPE.Custom('DomChanceBreakdownStamina')][SCOPE.Custom('DomChanceBreakdownOrgasm')][SCOPE.Custom('DomChanceBreakdownSexSkill')]"
 # default root cum text

@@ -7,6 +7,8 @@ debug = True
 option_from_to_offset = 1000000
 base_event_weight = 5
 max_options_per_type = 2
+min_dom_success_chance = 5
+max_dom_success_chance = 95
 
 
 class EventsFirst(enum.Enum):
@@ -144,6 +146,8 @@ CUSTOM_DESCRIPTION = "custom_description"
 TRAIT = "trait"
 TEXT = "text"
 ADD = "add"
+MIN = "min"
+MAX = "max"
 IS_SPOUSE_OF = "is_spouse_of"
 IS_IN_LIST = "is_in_list"
 REVERSE_HAS_OPINION_MODIFIER = "reverse_has_opinion_modifier"

@@ -651,17 +651,6 @@ class Sex(Event):
         self.save_scope_value_as(NEXT_EVENT, f"event_id:{option.next_event.fullname}")
 
     def generate_dom_option_effect(self, option, sub_options):
-        if len(sub_options) == 0:
-            self.assign(CUSTOM_TOOLTIP, DOM_NO_SUB_TOOLTIP)
-        else:
-            self.assign(CUSTOM_TOOLTIP, DOM_ATTEMPT_TOOLTIP)
-            # breakdown of all that contributes to the percentage
-            self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_BREAKDOWN_TOOLTIP)
-
-            if option.dom_success_adjustment != 0:
-                self.save_scope_value_as(DOM_SUCCESS_ADJUSTMENT, option.dom_success_adjustment)
-                self.assign(CUSTOM_TOOLTIP, DOM_SUCCESS_ADJUSTMENT_TOOLTIP)
-
         # each dom option has potentially different success offsets
         with Block(self, SAVE_TEMPORARY_SCOPE_VALUE_AS):
             self.assign(NAME, THIS_DOM_CHANCE)
@@ -669,6 +658,19 @@ class Sex(Event):
                 self.assign(ADD, f"{SCOPE}:{DOM_CHANCE}")
                 # this allows dom_success_adjustment to also be a scripted value (e.g. check if you're a blowjob expert)
                 self.assign(ADD, option.dom_success_adjustment)
+                self.assign(MIN, min_dom_success_chance)
+                self.assign(MAX, max_dom_success_chance)
+                
+        if len(sub_options) == 0:
+            self.assign(CUSTOM_TOOLTIP, DOM_NO_SUB_TOOLTIP)
+        else:
+            if option.dom_success_adjustment != 0:
+                self.save_scope_value_as(DOM_SUCCESS_ADJUSTMENT, option.dom_success_adjustment)
+                self.assign(CUSTOM_TOOLTIP, DOM_SUCCESS_ADJUSTMENT_TOOLTIP)
+            self.assign(CUSTOM_TOOLTIP, DOM_ATTEMPT_TOOLTIP)
+            # breakdown of all that contributes to the percentage
+            self.assign(CUSTOM_TOOLTIP, DOM_CHANCE_BREAKDOWN_TOOLTIP)
+
         with Block(self, IF):
             with Block(self, LIMIT):
                 self.add_line(f"{SCOPE}:{DOM_SUCCESS} <= {SCOPE}:{THIS_DOM_CHANCE}")

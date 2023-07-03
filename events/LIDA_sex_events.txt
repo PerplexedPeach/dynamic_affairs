@@ -222,15 +222,17 @@ LIDAs.1 = {
 				scope:dom_transition_1 = 1000700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -531,15 +533,17 @@ LIDAs.2 = {
 				scope:dom_transition_1 = 2003600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -983,15 +987,17 @@ LIDAs.36 = {
 				scope:dom_transition_1 = 36003600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -1075,20 +1081,22 @@ LIDAs.36 = {
 				scope:dom_transition_1 = 36000510
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = -20
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = -20
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -20
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -1397,15 +1405,17 @@ LIDAs.3 = {
 				scope:dom_transition_1 = 3000700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -1782,15 +1792,17 @@ LIDAs.5 = {
 				scope:dom_transition_1 = 5001400
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -1852,15 +1864,17 @@ LIDAs.5 = {
 				scope:dom_transition_1 = 5000700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -2192,15 +2206,17 @@ LIDAs.6 = {
 				scope:dom_transition_1 = 6000700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -3017,15 +3033,17 @@ LIDAs.7 = {
 				scope:dom_transition_1 = 7000700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -3109,15 +3127,17 @@ LIDAs.7 = {
 				scope:dom_transition_1 = 7000510
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -3178,15 +3198,17 @@ LIDAs.7 = {
 				scope:dom_transition_1 = 7000110
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -4018,15 +4040,17 @@ LIDAs.8 = {
 		trigger = {
 			scope:finisher_stamina > 0
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -4107,15 +4131,17 @@ LIDAs.8 = {
 				scope:dom_transition_1 = 8000700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -4240,15 +4266,17 @@ LIDAs.8 = {
 				scope:dom_transition_1 = 8000510
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -4756,15 +4784,17 @@ LIDAs.37 = {
 		trigger = {
 			scope:finisher_stamina > 0
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -4845,15 +4875,17 @@ LIDAs.37 = {
 				scope:dom_transition_1 = 37000700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -4978,15 +5010,17 @@ LIDAs.37 = {
 				scope:dom_transition_1 = 37000510
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -5566,15 +5600,17 @@ LIDAs.38 = {
 				scope:dom_transition_1 = 38003800
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -5654,15 +5690,17 @@ LIDAs.38 = {
 				scope:dom_transition_1 = 38000700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -5787,15 +5825,17 @@ LIDAs.38 = {
 				scope:dom_transition_1 = 38000510
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -6517,15 +6557,17 @@ LIDAs.10 = {
 				scope:dom_transition_1 = 10000800
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -6650,15 +6692,17 @@ LIDAs.10 = {
 				scope:dom_transition_1 = 10000110
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -7130,15 +7174,17 @@ LIDAs.11 = {
 				scope:dom_transition_1 = 11001000
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -7573,15 +7619,17 @@ LIDAs.4 = {
 				scope:dom_transition_1 = 4001400
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -7643,15 +7691,17 @@ LIDAs.4 = {
 				scope:dom_transition_1 = 4000700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -7735,15 +7785,17 @@ LIDAs.4 = {
 				scope:dom_transition_1 = 4000610
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -8350,15 +8402,17 @@ LIDAs.14 = {
 				scope:dom_transition_1 = 14001400
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -8420,15 +8474,17 @@ LIDAs.14 = {
 				scope:dom_transition_1 = 14000700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -8512,15 +8568,17 @@ LIDAs.14 = {
 				scope:dom_transition_1 = 14000610
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -9256,15 +9314,17 @@ LIDAs.12 = {
 				scope:dom_transition_1 = 12001400
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -9335,20 +9395,22 @@ LIDAs.12 = {
 				scope:dom_transition_1 = 12001200
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = 10
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 10
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = 10
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -9419,20 +9481,22 @@ LIDAs.12 = {
 				scope:dom_transition_1 = 12001500
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = 10
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 10
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = 10
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -9503,20 +9567,22 @@ LIDAs.12 = {
 				scope:dom_transition_1 = 12000800
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = 10
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 10
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = 10
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -9632,15 +9698,17 @@ LIDAs.12 = {
 				scope:dom_transition_1 = 12000610
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -10192,15 +10260,17 @@ LIDAs.13 = {
 				scope:dom_transition_1 = 13001200
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -10271,20 +10341,22 @@ LIDAs.13 = {
 				scope:dom_transition_1 = 13000800
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = 5
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 5
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = 5
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -10400,15 +10472,17 @@ LIDAs.13 = {
 				scope:dom_transition_1 = 13000610
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -11375,15 +11449,17 @@ LIDAs.9 = {
 				scope:dom_transition_1 = 9000800
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -11454,20 +11530,22 @@ LIDAs.9 = {
 				scope:dom_transition_1 = 9001000
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = 15
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 15
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = 15
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -11583,15 +11661,17 @@ LIDAs.9 = {
 				scope:dom_transition_1 = 9000810
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -12252,15 +12332,17 @@ LIDAs.15 = {
 				scope:dom_transition_1 = 15001500
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -12331,15 +12413,17 @@ LIDAs.15 = {
 				scope:dom_transition_1 = 15001600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -12455,15 +12539,17 @@ LIDAs.15 = {
 				scope:dom_transition_1 = 15000810
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -12533,15 +12619,17 @@ LIDAs.15 = {
 				scope:dom_transition_1 = 15001010
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -13184,15 +13272,17 @@ LIDAs.16 = {
 				scope:dom_transition_1 = 16001600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -13263,15 +13353,17 @@ LIDAs.16 = {
 				scope:dom_transition_1 = 16001500
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -13387,15 +13479,17 @@ LIDAs.16 = {
 				scope:dom_transition_1 = 16000810
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -13465,15 +13559,17 @@ LIDAs.16 = {
 				scope:dom_transition_1 = 16001010
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -14122,15 +14218,17 @@ LIDAs.17 = {
 				scope:dom_transition_1 = 17001600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -14246,15 +14344,17 @@ LIDAs.17 = {
 				scope:dom_transition_1 = 17000810
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -14324,15 +14424,17 @@ LIDAs.17 = {
 				scope:dom_transition_1 = 17001210
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -14967,15 +15069,17 @@ LIDAs.18 = {
 				scope:dom_transition_1 = 18001700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -15037,15 +15141,17 @@ LIDAs.18 = {
 				scope:dom_transition_1 = 18000900
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -15129,15 +15235,17 @@ LIDAs.18 = {
 				scope:dom_transition_1 = 18000810
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -15469,15 +15577,17 @@ LIDAs.19 = {
 				scope:dom_transition_1 = 19002500
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -15778,15 +15888,17 @@ LIDAs.20 = {
 				scope:dom_transition_1 = 20002500
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -16230,15 +16342,17 @@ LIDAs.39 = {
 				scope:dom_transition_1 = 39002400
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -16321,20 +16435,22 @@ LIDAs.39 = {
 				scope:dom_transition_1 = 39002510
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = 20
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 20
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = 20
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -16644,15 +16760,17 @@ LIDAs.21 = {
 				scope:dom_transition_1 = 21002500
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -17056,15 +17174,17 @@ LIDAs.23 = {
 				scope:dom_transition_1 = 23003400
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -17125,15 +17245,17 @@ LIDAs.23 = {
 				scope:dom_transition_1 = 23001910
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -17914,15 +18036,17 @@ LIDAs.24 = {
 				scope:dom_transition_1 = 24002500
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -18036,15 +18160,17 @@ LIDAs.24 = {
 				scope:dom_transition_1 = 24001610
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -18809,15 +18935,17 @@ LIDAs.25 = {
 				scope:dom_transition_1 = 25002700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -18879,20 +19007,22 @@ LIDAs.25 = {
 				scope:dom_transition_1 = 25002600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = -20
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = -20
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -20
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -18975,15 +19105,17 @@ LIDAs.25 = {
 				scope:dom_transition_1 = 25001410
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -19044,15 +19176,17 @@ LIDAs.25 = {
 				scope:dom_transition_1 = 25001610
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -19545,15 +19679,17 @@ LIDAs.40 = {
 				scope:dom_transition_1 = 40002700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -19615,20 +19751,22 @@ LIDAs.40 = {
 				scope:dom_transition_1 = 40002600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = -20
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = -20
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -20
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -19711,15 +19849,17 @@ LIDAs.40 = {
 				scope:dom_transition_1 = 40001410
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -19780,15 +19920,17 @@ LIDAs.40 = {
 				scope:dom_transition_1 = 40001610
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -20352,15 +20494,17 @@ LIDAs.41 = {
 				scope:dom_transition_1 = 41002700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -20431,20 +20575,22 @@ LIDAs.41 = {
 				scope:dom_transition_1 = 41002600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = -20
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = -20
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -20
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -20536,15 +20682,17 @@ LIDAs.41 = {
 				scope:dom_transition_1 = 41001410
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -20614,15 +20762,17 @@ LIDAs.41 = {
 				scope:dom_transition_1 = 41001610
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -21332,15 +21482,17 @@ LIDAs.27 = {
 				scope:dom_transition_1 = 27002700
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -21402,15 +21554,17 @@ LIDAs.27 = {
 				scope:dom_transition_1 = 27002800
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -21493,15 +21647,17 @@ LIDAs.27 = {
 				scope:dom_transition_1 = 27001510
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -21562,15 +21718,17 @@ LIDAs.27 = {
 				scope:dom_transition_1 = 27001610
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -22021,15 +22179,17 @@ LIDAs.28 = {
 				scope:dom_transition_1 = 28002800
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -22081,15 +22241,17 @@ LIDAs.28 = {
 				scope:dom_transition_1 = 28001510
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -22516,15 +22678,17 @@ LIDAs.22 = {
 				scope:dom_transition_1 = 22002900
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -22616,15 +22780,17 @@ LIDAs.22 = {
 				scope:dom_transition_1 = 22001910
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -23219,15 +23385,17 @@ LIDAs.31 = {
 				scope:dom_transition_1 = 31002900
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -23319,15 +23487,17 @@ LIDAs.31 = {
 				scope:dom_transition_1 = 31001910
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -24088,15 +24258,17 @@ LIDAs.29 = {
 				scope:dom_transition_1 = 29003000
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -24185,20 +24357,22 @@ LIDAs.29 = {
 				scope:dom_transition_1 = 29002600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = -15
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = -15
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -15
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -24308,15 +24482,17 @@ LIDAs.29 = {
 				scope:dom_transition_1 = 29001910
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -24883,15 +25059,17 @@ LIDAs.30 = {
 				scope:dom_transition_1 = 30003000
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -24962,20 +25140,22 @@ LIDAs.30 = {
 				scope:dom_transition_1 = 30002600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = -15
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = -15
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -15
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -25067,15 +25247,17 @@ LIDAs.30 = {
 				scope:dom_transition_1 = 30001910
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -26021,15 +26203,17 @@ LIDAs.26 = {
 				scope:dom_transition_1 = 26002600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -26100,20 +26284,22 @@ LIDAs.26 = {
 				scope:dom_transition_1 = 26003500
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = -10
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = -10
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -10
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -26205,15 +26391,17 @@ LIDAs.26 = {
 				scope:dom_transition_1 = 26002110
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -26862,15 +27050,17 @@ LIDAs.32 = {
 				scope:dom_transition_1 = 32002600
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -26950,20 +27140,22 @@ LIDAs.32 = {
 				scope:dom_transition_1 = 32003500
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = -15
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = -15
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -15
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -27086,15 +27278,17 @@ LIDAs.32 = {
 				scope:dom_transition_1 = 32002110
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -27743,20 +27937,22 @@ LIDAs.33 = {
 				scope:dom_transition_1 = 33002900
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = 10
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 10
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = 10
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -27836,15 +28032,17 @@ LIDAs.33 = {
 				scope:dom_transition_1 = 33003400
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -27967,15 +28165,17 @@ LIDAs.33 = {
 				scope:dom_transition_1 = 33002110
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -28575,15 +28775,17 @@ LIDAs.34 = {
 				scope:dom_transition_1 = 34003400
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -28645,20 +28847,22 @@ LIDAs.34 = {
 				scope:dom_transition_1 = 34003500
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
-		save_scope_value_as = {
-			name = dom_success_adjustment
-			value = -10
-		}
-		custom_tooltip = dom_success_adjustment_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = -10
+				min = 5
+				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -10
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -28741,15 +28945,17 @@ LIDAs.34 = {
 				scope:dom_transition_1 = 34002310
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -29372,15 +29578,17 @@ LIDAs.35 = {
 				scope:dom_transition_1 = 35003500
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
@@ -29472,15 +29680,17 @@ LIDAs.35 = {
 				scope:dom_transition_1 = 35002310
 			}
 		}
-		custom_tooltip = attempt_dom_tooltip
-		custom_tooltip = dom_chance_breakdown_tooltip
 		save_temporary_scope_value_as = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
 				add = 0
+				min = 5
+				max = 95
 			}
 		}
+		custom_tooltip = attempt_dom_tooltip
+		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
 			limit = {
 				scope:dom_success <= scope:this_dom_chance
