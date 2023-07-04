@@ -1677,7 +1677,7 @@ def define_sex_events_mf(es: EventMap):
                root_become_more_dom_xp=10 / 5,
                root_removes_clothes=True,
                animation_right=KNEEL_2,
-               desc=ComposedDesc("""
+               desc=ComposedDesc(f"""
                    {THEM}'s eyes tear up as you thrust deeply and relentlessly. The degrading way in which you
                    do not care about her well-being or pleasure leaves a deep impression on you, and you are sure,
                    on her as well.""",
