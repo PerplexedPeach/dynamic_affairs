@@ -46,6 +46,11 @@ base game directory. To make compatibility patches for other mods such as CFP, e
 ` C:/Program Files (x86)/Steam/steamapps/workshop/content/1158310/2220098919`
 This will generate the merged files under `2220098919` which then you can copy to a compatibility patch mod.
 
+## Generating Release
+```bash
+python create_release.py
+```
+
 ## Event Modding Guide
 You can contribute by adding events of various types:
 1. sex events (see below) that are part of dynamic sex scenes
