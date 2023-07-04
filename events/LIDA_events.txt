@@ -1451,11 +1451,12 @@ LIDA.145 = {
 						has_trait = craven
 					}
 				}
+				# TODO only designate as diarch if they are a valid diarch candidate
 				scope:affairs_partner = {
 					add_character_modifier = {
 						modifier = wearing_sub_harness
 					}
-					designate_diarch = scope:affairs_partner
+					designate_diarch = root
 				}
 				add_opinion = {
 					target = scope:affairs_partner
@@ -1557,7 +1558,7 @@ LIDA.146 = {
 		lida_start_sex_effect = {TRIGGER_RANDOM_EVENT = yes}
 	}
 }
-# AI rejects collar
+# AI rejects harness
 LIDA.147 = {
 	type = character_event
 	title = LIDA.147.t
