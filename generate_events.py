@@ -2835,7 +2835,7 @@ def define_cum_events_mf(es: EventMap):
                                  """"You didn't earn it today," she responds, "maybe next time #dom if you please me.#!"""
 
                                  ),
-               custom_immediate_effect=AddModifier(Modifier(SEXUALLY_FRUSTRATED, duration=f"{YEARS} = 1", root=False))
+               custom_immediate_effect=AddModifier(Modifier(SEXUALLY_FRUSTRATED, duration=f"{YEARS} = 1", root=True))
                ))
     es.add(Cum(EventsCum.MF_PULL_OUT_CUM_ON_ASS, "More Icing on the Cake",
                subdom_change=-1,

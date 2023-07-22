@@ -7099,11 +7099,9 @@ LIDAc.17 = {
 		scope:affairs_partner = {
 			become_more_dom_effect = { AMOUNT = 7.0 }
 		}
-		scope:affairs_partner = {
-			add_character_modifier = {
-				modifier = sexually_frustrated
-				years = 1
-			}
+		add_character_modifier = {
+			modifier = sexually_frustrated
+			years = 1
 		}
 		debug_log_scopes = yes
 	}
