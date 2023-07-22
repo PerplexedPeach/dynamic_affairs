@@ -1677,7 +1677,6 @@ LIDA.150 = {
 
 		add_character_flag = {
 			flag = lida_skimpy_comissioned_flag
-			months = 24
 		}
 
 		# trigger the next event
