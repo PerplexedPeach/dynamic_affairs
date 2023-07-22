@@ -275,6 +275,7 @@ calculate_dom_success_effect = {
 			# physically stronger / more robust
 			# to get diminishing returns we have
 			# diff / (diff + XX) * YY
+			add = scope:prowess_diff
 			# ensure positive while being manipulated
 			if = {
 				limit = {
@@ -282,7 +283,6 @@ calculate_dom_success_effect = {
 				}
 				multiply = -1
 			}
-			add = scope:prowess_diff
 			divide = {
 				value = {
 					add = scope:prowess_diff
