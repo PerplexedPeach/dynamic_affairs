@@ -319,7 +319,8 @@ collars:
 	- female_accessories_lida_sl_collar
 harness:
 	- female_accessories_lida_l_harness_1
-
+	- female_accessories_lida_l_harness_dress
+		- look at Emira's Veil for example of transparent shader female_headgear_secular_dde_abbasid_high_nobility_01
 
 ORDERED TODO:
 	Tolerance - how far along the subdom axis a character is willing to go. Use AI personality (boldness, etc) to determine it?

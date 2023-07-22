@@ -211,39 +211,12 @@ calculate_dom_success_effect = {
 							value >= lida_track_xp_stage_3
 						}
 					}
-					add = 25
-				}
-				else_if = {
-					limit = {
-						has_trait_xp = {
-							trait = lida_dom_track
-							value >= lida_track_xp_stage_2
-						}
-					}
-					add = 17
-				}
-				else_if = {
-					limit = {
-						has_trait_xp = {
-							trait = lida_dom_track
-							value >= lida_track_xp_stage_1
-						}
-					}
-					add = 10
-				}
-				if = {
-					limit = {
-						has_trait_xp = {
-							trait = lida_sub_track
-							value >= lida_track_xp_stage_3
-						}
-					}
 					add = -25
 				}
 				else_if = {
 					limit = {
 						has_trait_xp = {
-							trait = lida_sub_track
+							trait = lida_dom_track
 							value >= lida_track_xp_stage_2
 						}
 					}
@@ -252,11 +225,38 @@ calculate_dom_success_effect = {
 				else_if = {
 					limit = {
 						has_trait_xp = {
-							trait = lida_sub_track
+							trait = lida_dom_track
 							value >= lida_track_xp_stage_1
 						}
 					}
 					add = -10
+				}
+				if = {
+					limit = {
+						has_trait_xp = {
+							trait = lida_sub_track
+							value >= lida_track_xp_stage_3
+						}
+					}
+					add = 25
+				}
+				else_if = {
+					limit = {
+						has_trait_xp = {
+							trait = lida_sub_track
+							value >= lida_track_xp_stage_2
+						}
+					}
+					add = 17
+				}
+				else_if = {
+					limit = {
+						has_trait_xp = {
+							trait = lida_sub_track
+							value >= lida_track_xp_stage_1
+						}
+					}
+					add = 10
 				}
 			}
 		}
@@ -265,7 +265,7 @@ calculate_dom_success_effect = {
 		name = prowess_diff
 		value = {
 			add = prowess
-			substract = scope:affairs_partner.prowess
+			subtract = scope:affairs_partner.prowess
 		}
 	}
 	save_scope_value_as = {
@@ -275,6 +275,13 @@ calculate_dom_success_effect = {
 			# physically stronger / more robust
 			# to get diminishing returns we have
 			# diff / (diff + XX) * YY
+			# ensure positive while being manipulated
+			if = {
+				limit = {
+					scope:prowess_diff < 0
+				}
+				multiply = -1
+			}
 			add = scope:prowess_diff
 			divide = {
 				value = {
@@ -283,6 +290,13 @@ calculate_dom_success_effect = {
 				}
 			}
 			multiply = 30
+			# restore original sign
+			if = {
+				limit = {
+					scope:prowess_diff < 0
+				}
+				multiply = -1
+			}
 		}
 	}
 	save_scope_value_as = {
