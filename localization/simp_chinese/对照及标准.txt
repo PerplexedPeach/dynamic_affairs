@@ -1,0 +1,87 @@
+为了凑工整，某些文本我带着个人色彩意译，含义会有所偏差
+
+可能用到的：做爱，交配，繁殖，性爱，性交，爱抚，挑逗，射精，射入，内射，干，操，草
+
+"them"指代性别不明时用"他/她",如果不能用两字则用他
+
+或许?：足，丰臀，口，比脚，屁股，嘴更能勾起性欲
+
+'于股间用小穴'可以改作素股，但可能有人听不懂
+
+符号标准：
+
+  全都使用全角符号，除""外
+
+特殊代码含义：
+  
+  "#dom ……#!"为使用怎样的字体，记得dom这类词之后留个空格，这样代码次啊能生效
+
+  [ROOT.Char.GetLadyLord]：以头街称呼的女性伴侣
+
+  [affairs_partner.GetFirstName]：你性伴侣的名字
+
+  [affairs_partner.GetFullNameRegnal]：你性伴侣的全名
+
+  [ROOT.Char.GetFirstName]：玩家的名字
+
+  [ROOT.Char.GetFullNameRegnal]：玩家的全名
+
+  [ROOT.GetCharacter.GetHerHis]：根据性别输出"Her""His"
+  
+  [ROOT.GetCharacter.GetFirstNameNoTooltip]：获得该特质/宝物等等的拥有者的名字，鼠标放在名字上面不会导向角色
+
+标准词：
+
+  guard：卫兵
+
+  servant：仆从
+
+  council meeting：宫廷会议(议会会议有些绕口，等P社出共和制扮演系统再修改)
+  
+  thrust：抽送，插入，顶入，撞击
+
+  pleasure：欢愉
+
+下为特殊翻译，一般为性暗示相关词汇
+
+  cheeks：丰臀(不是脸颊!)
+
+  cum：精液
+
+  cock：鸡巴
+
+  twitch：抽搐
+
+  dick：阴茎
+
+  groin：腹股沟
+
+  rod：肉棒
+
+  pussy：小穴
+
+  Mead in my Room：或许是从"mead in my table"的俚语变化而来（意为永远欢迎你作客）
+
+  council meeting：宫廷会议（议会会议有些绕口，等P社出共和制扮演系统再修改）
+
+  staff：肉棒
+
+  oot：足
+
+  member：小兄弟
+
+  shaft：肉棒
+
+  thickness：肉棒
+
+  tip：龟头
+
+  cunt：小穴
+
+  walls：内壁
+
+  fvck：操，干
+
+  tits：乳房
+
+  sharper：剧烈
