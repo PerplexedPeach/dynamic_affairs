@@ -2054,6 +2054,17 @@ special_genes = {
 				boy = male
 				girl = female
 			}
+			dress_harness = {
+				index = 100
+				male = {
+					1 = empty
+				}
+				female = {
+					1 = female_accessories_lida_dress_harness
+				}
+				boy = male
+				girl = female
+			}
 		}	
 	}
 }

@@ -1,0 +1,56 @@
+pdxmesh = {
+	name = "female_accessories_lida_dress_harness_mesh"
+	file = "female_accessories_lida_dress_harness.mesh"
+
+	blend_shape = { id = "female_accessories_lida_dress_harness_bs_infant"				type = "female_accessories_lida_dress_harness_bs_infant.mesh" }
+	blend_shape = { id = "female_accessories_lida_dress_harness_bs_fat"				type = "female_accessories_lida_dress_harness_bs_fat.mesh" }
+	blend_shape = { id = "female_accessories_lida_dress_harness_bs_gaunt"				type = "female_accessories_lida_dress_harness_bs_gaunt.mesh" }
+	blend_shape = { id = "female_accessories_lida_dress_harness_bs_muscular"			type = "female_accessories_lida_dress_harness_bs_muscular.mesh" }	
+	blend_shape = { id = "female_accessories_lida_dress_harness_bs_old"				type = "female_accessories_lida_dress_harness_bs_old.mesh" }
+	blend_shape = { id = "female_accessories_lida_dress_harness_bs_pregnant"			type = "female_accessories_lida_dress_harness_bs_pregnant.mesh" }
+	blend_shape = { id = "female_accessories_lida_dress_harness_bs_dwarf"				type = "female_accessories_lida_dress_harness_bs_dwarf.mesh" }
+	blend_shape = { id = "female_accessories_lida_dress_harness_bs_breast_size_min"			type = "female_accessories_lida_dress_harness_bs_breast_size_min.mesh" }
+	blend_shape = { id = "female_accessories_lida_dress_harness_bs_breast_size_max"			type = "female_accessories_lida_dress_harness_bs_breast_size_max.mesh" }
+
+	meshsettings = {
+		name = "female_accessories_lida_dress_harnessShape"
+		index = 0
+		texture_diffuse = "dress_harness_dress_diffuse.dds"
+		texture_normal = "dress_harness_dress_normal.dds"
+		texture_specular = "dress_harness_dress_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	meshsettings = {
+		name = "female_accessories_lida_dress_harnessShape"
+		index = 1
+		texture_diffuse = "female_accessories_lida_dress_harness_dress_harness_skirt_diffuse.dds"
+		texture_normal = "female_accessories_lida_dress_harness_dress_harness_skirt_normal.dds"
+		texture_specular = "female_accessories_lida_dress_harness_dress_harness_skirt_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+	meshsettings = {
+		name = "female_accessories_lida_dress_harnessShape"
+		index = 2
+		texture_diffuse = "female_accessories_lida_l_harness_1_diffuse.dds"
+		texture_normal = "female_accessories_lida_l_harness_1_normal.dds"
+		texture_specular = "female_accessories_lida_l_harness_1_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_accessories_lida_dress_harness_entity"
+	pdxmesh = "female_accessories_lida_dress_harness_mesh"
+	attribute = { name = "bs_body_infant_1"					blend_shape = "female_accessories_lida_dress_harness_bs_infant" }
+	attribute = { name = "bs_body_fat_1"					blend_shape = "female_accessories_lida_dress_harness_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"					blend_shape = "female_accessories_lida_dress_harness_bs_gaunt" }
+	attribute = { name = "bs_body_muscular_1"				blend_shape = "female_accessories_lida_dress_harness_bs_muscular" }	
+	attribute = { name = "bs_body_old_1"					blend_shape = "female_accessories_lida_dress_harness_bs_old" }
+	attribute = { name = "bs_body_pregnant_1"				blend_shape = "female_accessories_lida_dress_harness_bs_pregnant" }
+	attribute = { name = "bs_body_dwarf_1"					blend_shape = "female_accessories_lida_dress_harness_bs_dwarf" }
+	attribute = { name = "bs_body_breast_size_min"				blend_shape = "female_accessories_lida_dress_harness_bs_breast_size_min" }
+	attribute = { name = "bs_body_breast_size_max"				blend_shape = "female_accessories_lida_dress_harness_bs_breast_size_max" }
+}
