@@ -1,7 +1,7 @@
 import os
 import pickle
-from defines import UTF8_BOM
 
+UTF8_BOM = u'\ufeff'
 settings_file = "./settings.pkl"
 # load settings if it exists, otherwise create an empty dictionary for it
 if not os.path.exists(settings_file):

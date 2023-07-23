@@ -1,6 +1,0 @@
-﻿	## LIDA added
-	add_accessory_modifiers = {
-		gene = legwear
-
-		template = skimpy_plate_legs
-	}
