@@ -4,6 +4,7 @@
 dominant_opinion = {
 	decaying = no
 	max = 30
+	min = -30
 	stacking = yes
 }
 affair_spurned_opinion = {
