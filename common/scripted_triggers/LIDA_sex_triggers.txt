@@ -1,0 +1,29 @@
+﻿probably_virgin = {
+	is_alive = yes
+	AND = {
+		is_married = no
+		is_concubine = no
+		is_female = yes
+		num_of_relation_lover <= 0
+		age <= 30
+		NOT = { has_trait = rakish }
+		NOT = {
+			any_child = {
+				count >= 1
+			}
+		}
+		is_pregnant = no
+		OR = {
+			age <= 19
+			AND = {
+				NOT = { has_trait = lustful }
+				age <= 21
+			}
+			AND = {
+				has_trait = chaste
+				age <= 25
+			}
+			has_trait = celibate
+		}
+	}
+}
