@@ -4,6 +4,7 @@
 	}
 	group = lida_dom
 	level = 1
+	shown_in_ruler_designer = no
 	
 	# birth = 1
 	# random_creation = 1
@@ -53,6 +54,7 @@ lida_dom_2 = {
 	}
 	group = lida_dom
 	level = 2
+	shown_in_ruler_designer = no
 	
 	# birth = 0.5
 	# random_creation = 0.5
@@ -102,6 +104,7 @@ lida_dom_3 = {
 	}
 	group = lida_dom
 	level = 3
+	shown_in_ruler_designer = no
 
 	# birth = 0.25
 	# random_creation = 0.25
@@ -151,6 +154,7 @@ lida_sub_1 = {
 	}
 	group = lida_sub
 	level = 1
+	shown_in_ruler_designer = no
 	
 	# birth = 1
 	# random_creation = 1
@@ -196,6 +200,7 @@ lida_sub_2 = {
 	}
 	group = lida_sub
 	level = 2
+	shown_in_ruler_designer = no
 
 	opposite_opinion = 20
 
@@ -241,6 +246,7 @@ lida_sub_3 = {
 	}
 	group = lida_sub
 	level = 3
+	shown_in_ruler_designer = no
 
 	# birth = 0.25
 	# random_creation = 0.15
@@ -284,6 +290,9 @@ lida_sub_track = {
 	opposites = {
 		lida_dom_track
 	}
+	category = personality
+	birth = 0
+	random_creation = 0
 	
 	name = {
 		first_valid = {
@@ -453,7 +462,10 @@ lida_dom_track = {
 	opposites = {
 		lida_sub_track
 	}
-	
+	category = personality
+	birth = 0
+	random_creation = 0
+
 	name = {
 		first_valid = {
 			triggered_desc = {
