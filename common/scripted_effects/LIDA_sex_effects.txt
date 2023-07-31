@@ -25,6 +25,14 @@ reset_stamina_after_cum_effect = {
 			name = root_stamina
 			value = max_sex_stamina
 		}
+		# number of times the root character orgasms during the sex scene
+		save_scope_value_as = {
+			name = root_cum_count
+			value = {
+				value = scope:root_cum_count
+				add = 1
+			}
+		}
 		change_subdom_effect = { CHANGE = -2 }
 	}
 	if = {
@@ -34,6 +42,13 @@ reset_stamina_after_cum_effect = {
 		save_scope_value_as = {
 			name = partner_stamina
 			value = scope:affairs_partner.max_sex_stamina
+		}
+		save_scope_value_as = {
+			name = partner_cum_count
+			value = {
+				value = scope:partner_cum_count
+				add = 1
+			}
 		}
 		change_subdom_effect = { CHANGE = 2 }
 	}
@@ -56,6 +71,15 @@ lida_start_sex_effect = {
 		name = partner_stamina
 		value = scope:affairs_partner.max_sex_stamina 
 	}		
+	# number of times the root character orgasms during the sex scene
+	save_scope_value_as = {
+		name = root_cum_count
+		value = 0
+	}
+	save_scope_value_as = {
+		name = partner_cum_count
+		value = 0
+	}
 	
 	# if TRIGGER_RANDOM_EVENT is not set, then this effect only does initialization
 	# otherwise will trigger random source sex event
