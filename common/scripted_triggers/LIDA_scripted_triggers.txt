@@ -103,7 +103,13 @@ can_start_affair = {
 
 has_money_to_buy_skimpy_plate = {
 	gold >= root.start_skimpy_plate_cost
-	can_start_affair = yes
+	NOR = {
+		has_trait = celibate
+		has_sexuality = asexual
+	}
+	# prisoners don't have the freedom to proposition you
+	is_imprisoned = no
+	age >= 18
 }
 
 portrait_wearing_skimpy_plate_trigger = {
