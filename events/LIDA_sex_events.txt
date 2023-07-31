@@ -144,6 +144,12 @@ LIDAs.1 = {
 		}
 	}
 	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAs.1.desc.0
 	}
 	immediate = {
@@ -455,6 +461,12 @@ LIDAs.2 = {
 		}
 	}
 	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAs.2.desc.0
 	}
 	immediate = {
@@ -832,6 +844,12 @@ LIDAs.36 = {
 			}
 			# defaulted to 36003600: EventsSex.FM_FOOTJOB -> EventsSex.FM_FOOTJOB
 			desc = sex_transition.36.36.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
 		}
 		desc = LIDAs.36.desc.0
 	}
@@ -1327,6 +1345,12 @@ LIDAs.3 = {
 		}
 	}
 	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAs.3.desc.0
 	}
 	immediate = {
@@ -1638,6 +1662,12 @@ LIDAs.5 = {
 		}
 	}
 	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAs.5.desc.0
 	}
 	immediate = {
@@ -2128,6 +2158,12 @@ LIDAs.6 = {
 		}
 	}
 	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAs.6.desc.0
 	}
 	immediate = {
@@ -2855,6 +2891,12 @@ LIDAs.7 = {
 			}
 			# defaulted to 14000700: EventsSex.FM_ASS_RUB -> EventsSex.FM_HANDJOB
 			desc = sex_transition.14.7.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
 		}
 		desc = LIDAs.7.desc.0
 	}
@@ -3847,6 +3889,12 @@ LIDAs.8 = {
 			# defaulted to 9000800: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_DOM
 			desc = sex_transition.9.8.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAs.8.desc.0
 	}
 	immediate = {
@@ -4594,6 +4642,12 @@ LIDAs.37 = {
 			}
 			# defaulted to 8003700: EventsSex.FM_BLOWJOB_DOM -> EventsSex.FM_BLOWJOB_DOM_I
 			desc = sex_transition.8.37.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
 		}
 		desc = LIDAs.37.desc.0
 	}
@@ -5384,6 +5438,12 @@ LIDAs.38 = {
 			}
 			# defaulted to 38003800: EventsSex.FM_BLOWJOB_DOM_II -> EventsSex.FM_BLOWJOB_DOM_II
 			desc = sex_transition.38.38.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
 		}
 		desc = LIDAs.38.desc.0
 	}
@@ -6357,6 +6417,12 @@ LIDAs.10 = {
 			# defaulted to 9001000: EventsSex.FM_STANDING_FUCKED_FROM_BEHIND -> EventsSex.FM_BLOWJOB_SUB
 			desc = sex_transition.9.10.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAs.10.desc.0
 	}
 	immediate = {
@@ -7040,6 +7106,12 @@ LIDAs.11 = {
 			# defaulted to 11001100: EventsSex.FM_DEEPTHROAT -> EventsSex.FM_DEEPTHROAT
 			desc = sex_transition.11.11.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = {
 			desc = LIDAs.11.desc.20
 			desc = {
@@ -7438,6 +7510,12 @@ LIDAs.4 = {
 		}
 	}
 	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = LIDAs.4.desc.0
 	}
 	immediate = {
@@ -8220,6 +8298,12 @@ LIDAs.14 = {
 			}
 			# defaulted to 12001400: EventsSex.FM_HOTDOG -> EventsSex.FM_ASS_RUB
 			desc = sex_transition.12.14.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
 		}
 		desc = LIDAs.14.desc.0
 	}
@@ -9067,6 +9151,12 @@ LIDAs.12 = {
 			}
 			# defaulted to 16001200: EventsSex.FM_COWGIRL -> EventsSex.FM_HOTDOG
 			desc = sex_transition.16.12.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
 		}
 		desc = LIDAs.12.desc.0
 	}
@@ -10059,6 +10149,12 @@ LIDAs.13 = {
 			}
 			# defaulted to 13001300: EventsSex.FM_STANDING_FINGERED_FROM_BEHIND -> EventsSex.FM_STANDING_FINGERED_FROM_BEHIND
 			desc = sex_transition.13.13.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
 		}
 		desc = LIDAs.13.desc.0
 	}
@@ -11227,6 +11323,12 @@ LIDAs.9 = {
 			# defaulted to 18000900: EventsSex.FM_PRONE_BONE -> EventsSex.FM_STANDING_FUCKED_FROM_BEHIND
 			desc = sex_transition.18.9.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = {
 			desc = LIDAs.9.desc.20
 			desc = {
@@ -12086,6 +12188,12 @@ LIDAs.15 = {
 			}
 			# defaulted to 16001500: EventsSex.FM_COWGIRL -> EventsSex.FM_REVERSE_COWGIRL
 			desc = sex_transition.16.15.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
 		}
 		desc = {
 			desc = LIDAs.15.desc.20
@@ -13026,6 +13134,12 @@ LIDAs.16 = {
 			}
 			# defaulted to 17001600: EventsSex.FM_MISSIONARY -> EventsSex.FM_COWGIRL
 			desc = sex_transition.17.16.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
 		}
 		desc = {
 			desc = LIDAs.16.desc.20
@@ -13995,6 +14109,12 @@ LIDAs.17 = {
 			# defaulted to 18001700: EventsSex.FM_PRONE_BONE -> EventsSex.FM_MISSIONARY
 			desc = sex_transition.18.17.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = {
 			desc = LIDAs.17.desc.20
 			desc = {
@@ -14869,6 +14989,12 @@ LIDAs.18 = {
 			# defaulted to 18001800: EventsSex.FM_PRONE_BONE -> EventsSex.FM_PRONE_BONE
 			desc = sex_transition.18.18.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_f
+		}
 		desc = {
 			desc = LIDAs.18.desc.20
 			desc = {
@@ -15476,6 +15602,12 @@ LIDAs.19 = {
 		}
 	}
 	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
 		desc = LIDAs.19.desc.0
 	}
 	immediate = {
@@ -15787,6 +15919,12 @@ LIDAs.20 = {
 		}
 	}
 	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
 		desc = LIDAs.20.desc.0
 	}
 	immediate = {
@@ -16164,6 +16302,12 @@ LIDAs.39 = {
 			}
 			# defaulted to 39003900: EventsSex.MF_FOOTJOB -> EventsSex.MF_FOOTJOB
 			desc = sex_transition.39.39.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
 		}
 		desc = LIDAs.39.desc.0
 	}
@@ -16659,6 +16803,12 @@ LIDAs.21 = {
 		}
 	}
 	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
 		desc = LIDAs.21.desc.0
 	}
 	immediate = {
@@ -16970,6 +17120,12 @@ LIDAs.23 = {
 		}
 	}
 	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
 		desc = LIDAs.23.desc.0
 	}
 	immediate = {
@@ -17836,6 +17992,12 @@ LIDAs.24 = {
 			# defaulted to 31002400: EventsSex.MF_ASS_RUB -> EventsSex.MF_HANDJOB
 			desc = sex_transition.31.24.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
 		desc = LIDAs.24.desc.0
 	}
 	immediate = {
@@ -18695,6 +18857,12 @@ LIDAs.25 = {
 			# defaulted to 26002500: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_DOM
 			desc = sex_transition.26.25.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
 		desc = LIDAs.25.desc.0
 	}
 	immediate = {
@@ -19442,6 +19610,12 @@ LIDAs.40 = {
 			}
 			# defaulted to 25004000: EventsSex.MF_BLOWJOB_DOM -> EventsSex.MF_BLOWJOB_DOM_I
 			desc = sex_transition.25.40.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
 		}
 		desc = LIDAs.40.desc.0
 	}
@@ -20232,6 +20406,12 @@ LIDAs.41 = {
 			}
 			# defaulted to 41004100: EventsSex.MF_BLOWJOB_DOM_II -> EventsSex.MF_BLOWJOB_DOM_II
 			desc = sex_transition.41.41.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
 		}
 		desc = LIDAs.41.desc.0
 	}
@@ -21259,6 +21439,12 @@ LIDAs.27 = {
 			# defaulted to 26002700: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_BLOWJOB_SUB
 			desc = sex_transition.26.27.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
 		desc = LIDAs.27.desc.0
 	}
 	immediate = {
@@ -22022,6 +22208,12 @@ LIDAs.28 = {
 			# defaulted to 28002800: EventsSex.MF_DEEPTHROAT -> EventsSex.MF_DEEPTHROAT
 			desc = sex_transition.28.28.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
 		desc = {
 			desc = LIDAs.28.desc.20
 			desc = {
@@ -22451,6 +22643,12 @@ LIDAs.22 = {
 		}
 	}
 	desc = {
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
 		desc = LIDAs.22.desc.0
 	}
 	immediate = {
@@ -23157,6 +23355,12 @@ LIDAs.31 = {
 			}
 			# defaulted to 29003100: EventsSex.MF_HOTDOG -> EventsSex.MF_ASS_RUB
 			desc = sex_transition.29.31.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
 		}
 		desc = LIDAs.31.desc.0
 	}
@@ -23919,6 +24123,12 @@ LIDAs.29 = {
 			}
 			# defaulted to 33002900: EventsSex.MF_COWGIRL -> EventsSex.MF_HOTDOG
 			desc = sex_transition.33.29.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
 		}
 		desc = LIDAs.29.desc.0
 	}
@@ -24812,6 +25022,12 @@ LIDAs.30 = {
 			}
 			# defaulted to 30003000: EventsSex.MF_STANDING_FINGERED_FROM_BEHIND -> EventsSex.MF_STANDING_FINGERED_FROM_BEHIND
 			desc = sex_transition.30.30.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
 		}
 		desc = LIDAs.30.desc.0
 	}
@@ -25935,6 +26151,12 @@ LIDAs.26 = {
 			# defaulted to 35002600: EventsSex.MF_PRONE_BONE -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND
 			desc = sex_transition.35.26.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
 		desc = {
 			desc = LIDAs.26.desc.20
 			desc = {
@@ -26758,6 +26980,12 @@ LIDAs.32 = {
 			}
 			# defaulted to 33003200: EventsSex.MF_COWGIRL -> EventsSex.MF_REVERSE_COWGIRL
 			desc = sex_transition.33.32.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
 		}
 		desc = {
 			desc = LIDAs.32.desc.20
@@ -27645,6 +27873,12 @@ LIDAs.33 = {
 			}
 			# defaulted to 34003300: EventsSex.MF_MISSIONARY -> EventsSex.MF_COWGIRL
 			desc = sex_transition.34.33.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
 		}
 		desc = {
 			desc = LIDAs.33.desc.20
@@ -28552,6 +28786,12 @@ LIDAs.34 = {
 			# defaulted to 35003400: EventsSex.MF_PRONE_BONE -> EventsSex.MF_MISSIONARY
 			desc = sex_transition.35.34.0
 		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
+		}
 		desc = {
 			desc = LIDAs.34.desc.20
 			desc = {
@@ -29331,6 +29571,12 @@ LIDAs.35 = {
 			}
 			# defaulted to 35003500: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE
 			desc = sex_transition.35.35.0
+		}
+		triggered_desc = {
+			trigger = {
+				scope:root_stamina <= 0
+			}
+			desc = root_cum_m
 		}
 		desc = {
 			desc = LIDAs.35.desc.20

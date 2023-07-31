@@ -553,6 +553,7 @@ class Sex(Event):
 
     def generate_desc(self):
         self.generate_incoming_options_desc()
+        self.generate_root_cum_desc()
         super(Sex, self).generate_desc()
 
     def generate_immediate_effect(self):

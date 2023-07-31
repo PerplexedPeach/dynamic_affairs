@@ -10,8 +10,8 @@ dom_success_adjustment_tooltip: "Due to special circumstance, you have an extra 
 # dom success breakdown
 dom_chance_breakdown_tooltip: "Success chance breakdown #weak (some hidden)#!\nBase chance: #weak [SCOPE.ScriptValue('dom_base_success_value')|0]% #![SCOPE.Custom('DomChanceBreakdownSubdomNature')][SCOPE.Custom('DomChanceBreakdownSubdom')][SCOPE.Custom('DomChanceBreakdownProwess')][SCOPE.Custom('DomChanceBreakdownLustBeauty')][SCOPE.Custom('DomChanceBreakdownAuthority')][SCOPE.Custom('DomChanceBreakdownStubborness')][SCOPE.Custom('DomChanceBreakdownStamina')][SCOPE.Custom('DomChanceBreakdownOrgasm')][SCOPE.Custom('DomChanceBreakdownSexSkill')]"
 # default root cum text
-root_cum_f: "\nYou shudder and close your eyes as you climax. Your body subconsciously clamping down on the one who #sub;bold conquered it#!, as if pleading for more."
-root_cum_m: "\nroot cum male"
+root_cum_f: "\nYou shudder and close your eyes as you climax. Your body subconsciously clamping down on the one who #sub;bold conquered it#!, as if pleading for more.\n\n"
+root_cum_m: "\nYou buckle and close your eyes as you shoot your load. Briefly losing control of your body as you #sub submit#! to the pleasure.\n\n"
 partner_cum_f: "\nPLACEHOLDER non-terminating partner F cum"
 partner_cum_m: "\nPLACEHOLDER non-terminating partner M cum"
 # meetings
