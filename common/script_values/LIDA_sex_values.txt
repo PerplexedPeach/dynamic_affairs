@@ -13,4 +13,34 @@ max_sex_stamina = {
 		multiply = 2
 	}
 	min = 1
+	# buff stamina for partner
+	if = {
+		limit = {
+			exists = this
+			exists = scope:affairs_partner
+			this = scope:affairs_partner
+		}
+		if = {
+			limit = { has_game_rule = stam_very_easy_difficulty }
+			add = -2
+		}
+		else_if = {
+			limit = { has_game_rule = stam_easy_difficulty }
+			add = -1
+		}
+		else_if = {
+			limit = { has_game_rule = stam_hard_difficulty }
+			add = 2
+		}
+		else_if = {
+			limit = { has_game_rule = stam_very_hard_difficulty }
+			add = 4
+		}
+		else_if = {
+			limit = { has_game_rule = stam_nightmare_difficulty }
+			add = 6
+		}
+	}
 }
+close_to_cumming_stamina_threshold = 5
+close_to_cumming_dom_success_multiplier = 4

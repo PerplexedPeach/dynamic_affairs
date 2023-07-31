@@ -17,3 +17,23 @@
 	dom_very_hard_difficulty = { }
 	
 }
+partner_stamina_difficulty = {
+	
+	categories = {
+		difficulty ai
+	}
+	
+	default = normal_difficulty
+
+	stam_very_easy_difficulty = { }
+
+	stam_easy_difficulty = { }
+
+	stam_normal_difficulty = { }
+	
+	stam_hard_difficulty = { }
+
+	stam_very_hard_difficulty = { }
+	
+	stam_nightmare_difficulty = { }
+}

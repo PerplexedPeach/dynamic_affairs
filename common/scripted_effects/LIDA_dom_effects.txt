@@ -479,13 +479,39 @@ calculate_dom_success_effect = {
 			}
 		}
 	}
+	save_temporary_scope_value_as = {
+		name = close_to_cumming
+		value = {
+			add = close_to_cumming_stamina_threshold
+			subtract = scope:root_stamina
+			multiply = close_to_cumming_dom_success_multiplier
+		}
+	}
+	save_temporary_scope_value_as = {
+		name = close_to_cumming_partner
+		value = {
+			add = close_to_cumming_stamina_threshold
+			subtract = scope:partner_stamina
+			multiply = close_to_cumming_dom_success_multiplier
+		}
+	}
 	save_scope_value_as = {
 		name = dom_chance_stamina
 		# difference in sex stamina affects dom success
 		value = {
-			add = scope:root_stamina
-			subtract = scope:partner_stamina
-			multiply = stamina_multiplier_dom_success
+			add = 0
+			if = {
+				limit = { 
+					scope:root_stamina < close_to_cumming_stamina_threshold
+				}
+				subtract = scope:close_to_cumming
+			}
+			if = {
+				limit = { 
+					scope:partner_stamina < close_to_cumming_stamina_threshold
+				}
+				add = scope:close_to_cumming_partner
+			}
 		}
 	}
 	save_scope_value_as = {
