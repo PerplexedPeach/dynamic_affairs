@@ -2,9 +2,28 @@
 dominant_decrease_value = { add = -3 }
 dominant_max_value = 30
 dominant_min_value = -30
-dom_base_success_value = 50
 stamina_multiplier_dom_success = 3
 engage_affair_interaction_cooldown = 12
 lida_track_xp_stage_1 = 25
 lida_track_xp_stage_2 = 50
 lida_track_xp_stage_3 = 75
+default_dom_base_success_value = 50
+dom_base_success_value = {
+    value = default_dom_base_success_value
+    if = {
+        limit = { has_game_rule = dom_very_easy_difficulty }
+        add = 20
+    }
+    else_if = {
+        limit = { has_game_rule = dom_easy_difficulty }
+        add = 10
+    }
+    else_if = {
+        limit = { has_game_rule = dom_hard_difficulty }
+        add = -10
+    }
+    else_if = {
+        limit = { has_game_rule = dom_very_hard_difficulty }
+        add = -20
+    }
+}

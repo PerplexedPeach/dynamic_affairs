@@ -1,0 +1,19 @@
+﻿dom_success_difficulty = {
+	
+	categories = {
+		difficulty ai
+	}
+	
+	default = normal_difficulty
+
+	dom_very_easy_difficulty = { }
+
+	dom_easy_difficulty = { }
+
+	dom_normal_difficulty = { }
+	
+	dom_hard_difficulty = { }
+
+	dom_very_hard_difficulty = { }
+	
+}

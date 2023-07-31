@@ -1,0 +1,12 @@
+﻿l_english:
+rule_dom_success_difficulty: "@lida_icon! #sub Dynamic Affair:#! Domination (applies to everyone)"
+setting_dom_very_easy_difficulty: "Very Easy"
+setting_dom_very_easy_difficulty_desc: "+20% base domination success chance for everyone"
+setting_dom_easy_difficulty: "Easy"
+setting_dom_easy_difficulty_desc: "+10% base domination success chance for everyone"
+setting_dom_normal_difficulty: "Normal"
+setting_dom_normal_difficulty_desc: "Base domination success chance for everyone"
+setting_dom_hard_difficulty: "Hard"
+setting_dom_hard_difficulty_desc: "-10% base domination success chance for everyone"
+setting_dom_very_hard_difficulty: "Very Hard"
+setting_dom_very_hard_difficulty_desc: "-20% base domination success chance for everyone"

@@ -1,0 +1,9 @@
+﻿texticon = {
+	icon = lida_icon
+	iconsize = {
+		texture = "gfx/interface/icons/lida_icon.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
