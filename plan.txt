@@ -271,6 +271,7 @@ TODO
 	- leads to domaination loss since even the flakiest slave will have mastery over your sex
 - sex event edging can use force_root_stamina_finishes=True to not terminate events even if partner's stamina <= 0
 - stress loss for sub options as a sub
+- reward from finishing an event chain be dependent on orgasm achieved and so on
 
 TODO long term
 - add sex skills
