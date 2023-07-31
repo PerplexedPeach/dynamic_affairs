@@ -1,0 +1,3 @@
+﻿has_attempted_affair_trigger = {
+    first_not = has_attempted_affair_trigger
+}

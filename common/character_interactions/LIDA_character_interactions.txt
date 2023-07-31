@@ -49,14 +49,18 @@
         }
     }
 
-	cooldown = { months = engage_affair_interaction_cooldown }
+	# cooldown = { months = engage_affair_interaction_cooldown }
+	cooldown = { days = 2 }
 
     is_valid_showing_failures_only = {
         scope:actor = {
             carn_can_have_sex_trigger = yes
-            NOT = {
-                has_character_flag = has_attempted_affair
-            }
+			custom_description = {
+				text = has_attempted_affair_trigger
+				NOT = {
+					has_character_flag = has_attempted_affair
+				}
+			}
         }
         scope:recipient = {
 			OR = {
@@ -751,6 +755,10 @@
 
     on_accept = {
         scope:actor = {
+			add_character_flag = {
+				flag = has_attempted_affair
+				days = 30
+			}
 
             # pay money for prostitution, and possibly lose piety if your faith dislikes this
             if = {
@@ -819,8 +827,11 @@
         }
     }
 
+	on_decline_summary = engage_affair_decline_summary
+
     on_decline = {
 		scope:actor = {
+			trigger_event = LIDA.51
 			stress_impact = {
 				base = minor_stress_impact_gain
 				chaste = medium_stress_impact_gain

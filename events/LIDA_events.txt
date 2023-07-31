@@ -380,6 +380,29 @@ LIDA.100 = {
 	}
 }
 
+# failed to engage in affair
+LIDA.51 = {
+	title = LIDA.51.t
+	desc = LIDA.51.desc
+    type = character_event
+	theme = scheme
+	override_background = garden
+
+	left_portrait = {
+		character = root
+		animation = shame
+	}
+
+	right_portrait = {
+		character = scope:recipient
+		animation = dismissal
+	}
+
+	option = {
+		name = LIDA.51.a
+	}
+}
+
 LIDA.101 = {
 	# acceptance followup event to 100
 	# someone attracted to you propositions to have sex with you for money

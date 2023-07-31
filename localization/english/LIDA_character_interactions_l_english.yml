@@ -2,6 +2,13 @@
 engage_affair_interaction: "Engage in an Affair"
 engage_affair_interaction_desc: "Arrange for an intimate encounter with [recipient.GetShortUINameNoTooltip]"
 has_attempted_affair_desc: "Recently attempted to engage in an affair"
+engage_affair_decline_summary: "If [recipient.GetShortUINameNoTooltip] declines, [recipient.GetSheHe] will remember and rebuff your advances in the near future..."
+has_attempted_affair_trigger: "Recovering from your last affair or attempt at one"
+
+LIDA.51.t: "Uninterested In You"
+LIDA.51.desc: "After a bit of planning, you carry out your plan to arrange an affair with [recipient.GetFullName|V].\n\nSoon after, your plan is carried out without a hitch, managing to create a situation where you and [recipient.GetHerHim] are alone. However, from their body language, it is clear [recipient.GetSheHe] is not interested in you. You make some excuse to escape the situation, but it does little to assuage the encounter's awkward aftertaste."
+LIDA.51.a: "Try your best to forget the incident."
+
 
 # Interaction Modifiers
 engage_affair_dom_sub: "[recipient.GetHerHis|U] submissive nature is receptive to your dominant one: $VALUE|=+0$"
