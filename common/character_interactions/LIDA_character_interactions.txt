@@ -39,7 +39,6 @@
 			}
 		    is_adult = yes
 			fertility > 0
-			is_imprisoned = no
 			is_commanding_army = no
 			is_busy_in_events_unlocalised = no
 			NOT = {
@@ -53,7 +52,7 @@
 
     is_valid_showing_failures_only = {
         scope:actor = {
-            carn_can_have_sex_trigger = yes
+			carn_can_have_sex_trigger = yes
 			custom_description = {
 				text = has_attempted_affair_trigger
 				NOT = {
@@ -122,6 +121,14 @@
 
     ai_accept = {
 		base = 0 #added 75 for maybe
+
+		# auto accept for prisoners
+		modifier = {
+			is_imprisoned = yes
+			is_imprisoned_by = scope:actor
+			desc = engage_affair_imprisoned
+			add = 999
+		}
 
         # sub dom compatibility
         modifier = {
