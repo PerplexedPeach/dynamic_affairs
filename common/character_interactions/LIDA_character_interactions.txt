@@ -25,7 +25,6 @@
 			is_attracted_to_gender_of = scope:recipient
 			is_commanding_army = no
 			is_busy_in_events_unlocalised = no
-			NOT = { has_trait = pregnant }
         }
         scope:recipient = {
             OR = {
@@ -174,6 +173,17 @@
             add = 15
         }
 
+		# negative reception for pregnancy
+		modifier = {
+			add = -20
+			OR = {
+				has_trait = pregnant 
+				scope:recipient = {
+					has_trait = pregnant
+				}
+			}
+			desc = engage_affair_pregnancy
+		}
 
 		# OPINION INFLUENCE
 		modifier = {

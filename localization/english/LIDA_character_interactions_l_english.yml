@@ -26,6 +26,7 @@ engage_affair_second_spouse: "[recipient.GetSheHe|U] is your concubine: $VALUE|=
 engage_affair_no_heirs: "[recipient.GetSheHe|U] knows you have no heir: $VALUE|=+0$"
 engage_affair_courtier: "[recipient.GetSheHe|U] is your courtier: $VALUE|=+0$"
 engage_affair_guest: "[recipient.GetSheHe|U] is your guest: $VALUE|=+0$"
+engage_affair_pregnancy: "Someone is pregnant: $VALUE|=+0$"
 
 engage_affair_aibehavior_pregnantme_tt:0 "You are pregnant: $VALUE|=+0$"
 engage_affair_aibehavior_pregnantthey_tt:0 "She is pregnant: $VALUE|=+0$"
