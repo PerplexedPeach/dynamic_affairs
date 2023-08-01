@@ -2,7 +2,8 @@
 # negative if you are the sub to them since they disrespect you, at least subconciously
 # is applied to other characters with the player character as the target
 dominant_opinion = {
-	decaying = no
+	years = 10
+	decaying = yes
 	max = 30
 	min = -30
 	stacking = yes

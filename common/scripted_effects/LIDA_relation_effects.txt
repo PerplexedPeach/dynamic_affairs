@@ -76,10 +76,35 @@ get_characters_eligible_partner_effect = {
 
 change_subdom_effect = {
 	hidden_effect = {
-		reverse_add_opinion = {
-			target = scope:affairs_partner
-			modifier = dominant_opinion
-			opinion = $CHANGE$
+		if = {
+			# already over limit, do nothing
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+					value <= -30
+				}
+				$CHANGE$ < 0
+			}
+			debug_log = "avoid subtracting from already min obedience"	
+		}
+		else_if = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					target = scope:affairs_partner
+					modifier = dominant_opinion
+					value >= 30
+				}
+				$CHANGE$ > 0
+			}
+			debug_log = "avoid adding to already max obedience"	
+		}
+		else = {
+			reverse_add_opinion = {
+				target = scope:affairs_partner
+				modifier = dominant_opinion
+				opinion = $CHANGE$
+			}
 		}
 	}
 }
