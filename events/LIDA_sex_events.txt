@@ -17025,14 +17025,14 @@ LIDAs.39 = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
-				add = 20
+				add = 10
 				min = 5
 				max = 95
 			}
 		}
 		save_scope_value_as = {
 			name = dom_success_adjustment
-			value = 20
+			value = 10
 		}
 		custom_tooltip = dom_success_adjustment_tooltip
 		custom_tooltip = attempt_dom_tooltip
@@ -19086,7 +19086,7 @@ LIDAs.25 = {
 					scope:sex_transition = 19002500
 				}
 				# Whip Tease
-				# Surprisingly, she acquiesces and replaces the harsh strikes from her make-shift whip with the hot caress of her mouth.\n
+				# Surprisingly, she acquiesces and replaces the harsh strikes from her make-shift whip with the hot caress of her lips.\n
 				desc = sex_transition.19.25.0
 			}
 			triggered_desc = {
@@ -21961,9 +21961,9 @@ LIDAs.27 = {
 				value = -1
 			}
 		}
-		become_more_dom_effect = { AMOUNT = 1.0 }
+		become_more_dom_effect = { AMOUNT = 2.0 }
 		scope:affairs_partner = {
-			become_more_sub_effect = { AMOUNT = 1.0 }
+			become_more_sub_effect = { AMOUNT = 2.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -22079,11 +22079,16 @@ LIDAs.27 = {
 			name = this_dom_chance
 			value = {
 				add = scope:dom_chance
-				add = 0
+				add = -10
 				min = 5
 				max = 95
 			}
 		}
+		save_scope_value_as = {
+			name = dom_success_adjustment
+			value = -10
+		}
+		custom_tooltip = dom_success_adjustment_tooltip
 		custom_tooltip = attempt_dom_tooltip
 		custom_tooltip = dom_chance_breakdown_tooltip
 		if = {
@@ -22702,9 +22707,9 @@ LIDAs.28 = {
 				value = -1
 			}
 		}
-		become_more_dom_effect = { AMOUNT = 5.0 }
+		become_more_dom_effect = { AMOUNT = 7.0 }
 		scope:affairs_partner = {
-			become_more_sub_effect = { AMOUNT = 5.0 }
+			become_more_sub_effect = { AMOUNT = 7.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -23319,7 +23324,7 @@ LIDAs.22 = {
 		}
 		else = {
 			change_subdom_effect = {
-				CHANGE = -2
+				CHANGE = 0
 			}
 			save_scope_value_as = {
 				name = sex_transition
@@ -23421,7 +23426,7 @@ LIDAs.22 = {
 		}
 		else = {
 			change_subdom_effect = {
-				CHANGE = -2
+				CHANGE = 0
 			}
 			save_scope_value_as = {
 				name = sex_transition
@@ -24116,7 +24121,7 @@ LIDAs.31 = {
 		}
 		else = {
 			change_subdom_effect = {
-				CHANGE = -2
+				CHANGE = 0
 			}
 			save_scope_value_as = {
 				name = sex_transition
@@ -24723,7 +24728,7 @@ LIDAs.29 = {
 		}
 		custom_tooltip = voluntary_sub_tooltip
 		change_subdom_effect = {
-			CHANGE = -1
+			CHANGE = 0
 		}
 		save_scope_value_as = {
 			name = sex_transition
@@ -25441,10 +25446,6 @@ LIDAs.30 = {
 				value = -1
 			}
 		}
-		become_more_dom_effect = { AMOUNT = 1.0 }
-		scope:affairs_partner = {
-			become_more_sub_effect = { AMOUNT = 1.0 }
-		}
 		save_scope_value_as = {
 			name = partner_naked
 			value = yes
@@ -25462,7 +25463,7 @@ LIDAs.30 = {
 		}
 		custom_tooltip = voluntary_sub_tooltip
 		change_subdom_effect = {
-			CHANGE = -1
+			CHANGE = 0
 		}
 		save_scope_value_as = {
 			name = sex_transition
@@ -25485,7 +25486,7 @@ LIDAs.30 = {
 		}
 		custom_tooltip = voluntary_sub_tooltip
 		change_subdom_effect = {
-			CHANGE = -1
+			CHANGE = 0
 		}
 		save_scope_value_as = {
 			name = sex_transition
@@ -25527,7 +25528,7 @@ LIDAs.30 = {
 				scope:dom_success <= scope:this_dom_chance
 			}
 			change_subdom_effect = {
-				CHANGE = 1
+				CHANGE = 0
 			}
 			save_scope_value_as = {
 				name = sex_transition
@@ -25540,7 +25541,7 @@ LIDAs.30 = {
 		}
 		else = {
 			change_subdom_effect = {
-				CHANGE = -2
+				CHANGE = 0
 			}
 			save_scope_value_as = {
 				name = sex_transition
@@ -25728,7 +25729,7 @@ LIDAs.30 = {
 		}
 		else = {
 			change_subdom_effect = {
-				CHANGE = -2
+				CHANGE = 0
 			}
 			save_scope_value_as = {
 				name = sex_transition
@@ -26424,7 +26425,7 @@ LIDAs.26 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = 1.5
+			STAMINA_COST_1 = 2
 			STAMINA_COST_2 = 2
 		}
 		save_scope_value_as = {
@@ -26601,9 +26602,9 @@ LIDAs.26 = {
 				value = -1
 			}
 		}
-		become_more_dom_effect = { AMOUNT = 2.0 }
+		become_more_dom_effect = { AMOUNT = 3.0 }
 		scope:affairs_partner = {
-			become_more_sub_effect = { AMOUNT = 2.0 }
+			become_more_sub_effect = { AMOUNT = 3.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -27530,7 +27531,7 @@ LIDAs.32 = {
 		}
 		custom_tooltip = voluntary_sub_tooltip
 		change_subdom_effect = {
-			CHANGE = -1
+			CHANGE = 0
 		}
 		save_scope_value_as = {
 			name = sex_transition
@@ -27676,7 +27677,7 @@ LIDAs.32 = {
 				scope:dom_success <= scope:this_dom_chance
 			}
 			change_subdom_effect = {
-				CHANGE = 1
+				CHANGE = 0
 			}
 			save_scope_value_as = {
 				name = sex_transition
@@ -28002,7 +28003,7 @@ LIDAs.33 = {
 					scope:sex_transition = 19003300
 				}
 				# Whip Tease
-				# She smiles at your unexpected surrendering. She slithers on your body before straddling you and putting your rod inside her.\n
+				# She pushes you down and slithers on your body before straddling you and putting your rod inside her.\n
 				desc = sex_transition.19.33.0
 			}
 			triggered_desc = {
@@ -28020,7 +28021,7 @@ LIDAs.33 = {
 					scope:sex_transition = 39003300
 				}
 				# Footjob
-				# She licks her lips at your unexpected surrendering. She slithers on your body and replaces the strokes from her feet with the hot warmth of her inner walls clenching around your member.\n
+				# She licks her lips as she slithers on your body and replaces the strokes from her feet with the hot warmth of her inner walls clenching around your member.\n
 				desc = sex_transition.39.33.0
 			}
 			triggered_desc = {
@@ -28592,7 +28593,7 @@ LIDAs.33 = {
 		}
 		custom_tooltip = voluntary_sub_tooltip
 		change_subdom_effect = {
-			CHANGE = -1
+			CHANGE = 0
 		}
 		save_scope_value_as = {
 			name = sex_transition
@@ -29432,9 +29433,9 @@ LIDAs.46 = {
 				value = -1
 			}
 		}
-		become_more_sub_effect = { AMOUNT = 5.0 }
+		become_more_sub_effect = { AMOUNT = 7.0 }
 		scope:affairs_partner = {
-			become_more_dom_effect = { AMOUNT = 5.0 }
+			become_more_dom_effect = { AMOUNT = 7.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -29457,7 +29458,7 @@ LIDAs.46 = {
 		}
 		custom_tooltip = voluntary_sub_tooltip
 		change_subdom_effect = {
-			CHANGE = -1
+			CHANGE = 0
 		}
 		save_scope_value_as = {
 			name = sex_transition
@@ -29512,7 +29513,7 @@ LIDAs.46 = {
 		}
 		else = {
 			change_subdom_effect = {
-				CHANGE = -2
+				CHANGE = 0
 			}
 			save_scope_value_as = {
 				name = sex_transition
@@ -30254,9 +30255,9 @@ LIDAs.47 = {
 				value = -1
 			}
 		}
-		become_more_sub_effect = { AMOUNT = 4.0 }
+		become_more_sub_effect = { AMOUNT = 5.0 }
 		scope:affairs_partner = {
-			become_more_dom_effect = { AMOUNT = 4.0 }
+			become_more_dom_effect = { AMOUNT = 5.0 }
 		}
 		save_scope_value_as = {
 			name = root_naked
@@ -33627,7 +33628,7 @@ LIDAs.44 = {
 	}
 	left_portrait = {
 		character = root
-		animation = flirtation_left
+		animation = throne_room_ruler_3
 		triggered_outfit = {
 			trigger = {
 				exists = scope:root_naked
@@ -33885,7 +33886,7 @@ LIDAs.44 = {
 	}
 	immediate = {
 		lida_ongoing_sex_effect = {
-			STAMINA_COST_1 = -1.5
+			STAMINA_COST_1 = -1.0
 			STAMINA_COST_2 = 4.5
 		}
 		save_scope_value_as = {

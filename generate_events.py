@@ -1297,7 +1297,7 @@ def define_sex_events_fm(es: EventMap):
 
 
 def define_sex_events_mf(es: EventMap):
-    # TODO improve the writing of the MF perspective (they are copied from F/M)
+    # TODO improve the writing of some MF perspective
     es.add(Sex(EventsSex.MF_WHIP_TEASE, "Whip Tease",
                stam_cost_1=1, stam_cost_2=0,
                root_gender=MALE, partner_gender=FEMALE,
@@ -1318,7 +1318,7 @@ def define_sex_events_mf(es: EventMap):
                           ),
                    Option(EventsSex.MF_COWGIRL, OptionCategory.SUB,
                           "Lie down and submit to her",
-                          transition_text="She smiles at your unexpected surrendering. She slithers on your body before straddling you and putting your rod inside her.",
+                          transition_text="She pushes you down and slithers on your body before straddling you and putting your rod inside her.",
                           ),
                    Option(EventsSex.MF_TIT_TEASE, OptionCategory.DOM,
                           "Give her tits some affection",
@@ -1332,7 +1332,7 @@ def define_sex_events_mf(es: EventMap):
                           "Convince her to take you in her mouth",
                           transition_text=f"""
                           Surprisingly, she acquiesces and replaces the harsh strikes from her make-shift whip
-                          with the hot caress of her mouth.
+                          with the hot caress of her lips.
                           """,
                           failed_transition_text="She refuses your suggestion and continues with complete control."
                           ),
@@ -1407,8 +1407,8 @@ def define_sex_events_mf(es: EventMap):
                           "Beg her to ride you",
                           dom_success_adjustment=35,
                           transition_text=f"""
-                          She licks her lips at your unexpected surrendering. She slithers on your body and
-                          replaces the strokes from her feet with the hot warmth of her inner walls clenching around your member.
+                          She licks her lips as she slithers on your body and replaces the strokes 
+                          from her feet with the hot warmth of her inner walls clenching around your member.
                           """,
                           failed_transition_text="She licks her lips at your unexpected surrendering, but she has other project in mind."
                           ),
@@ -1421,7 +1421,7 @@ def define_sex_events_mf(es: EventMap):
                           ),
                    Option(EventsCum.MF_CUM_ON_FOOT, OptionCategory.DOM,
                           "Cum on her feet",
-                          dom_success_adjustment=20,
+                          dom_success_adjustment=10,
                           transition_text=f"""
                               You feel your climax approaching, and you take the initiative by grabbing her feet and
                               placing them flat under your member, preparing her toes as your target.
@@ -1661,7 +1661,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_BLOWJOB_SUB, "Blowjob",
                stam_cost_1=2.0, stam_cost_2=-0.5,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_xp=5 / 5,
+               root_become_more_dom_xp=10 / 5,
                root_removes_clothes=True,
                animation_right=KNEEL_RULER_3,
                desc=f"""
@@ -1686,6 +1686,7 @@ def define_sex_events_mf(es: EventMap):
                           ),
                    Option(EventsSex.MF_DEEPTHROAT, OptionCategory.DOM,
                           "Thrust even deeper",
+                          dom_success_adjustment=-10,
                           transition_text=f"""
                               You take advantage of {THEM}'s lack of strong resistance to dominate her mouth
                               further. Trapping her head with your hands, you plunge deeper while she gags.""",
@@ -1723,7 +1724,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_DEEPTHROAT, "Deepthroat",
                stam_cost_1=2.5, stam_cost_2=-0.5,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_xp=25 / 5,
+               root_become_more_dom_xp=35 / 5,
                root_removes_clothes=True,
                animation_right=KNEEL_2,
                desc=ComposedDesc(f"""
@@ -1796,6 +1797,7 @@ def define_sex_events_mf(es: EventMap):
                           ),
                    Option(EventsSex.MF_HOTDOG, OptionCategory.DOM,
                           "Thrust between her crack",
+                          subdom_dom_fail=0,
                           transition_text=f"""
                               You waste no time after she slows down to pick up the pace, your rod now doing the
                               thrusting along her crack.""",
@@ -1810,7 +1812,7 @@ def define_sex_events_mf(es: EventMap):
                           ),
                    Option(EventsCum.MF_CUM_ON_GROIN, OptionCategory.DOM,
                           "Cum all over her groin",
-                          subdom_sub=0,
+                          subdom_dom_fail=0,
                           transition_text=f"""
                               As your release arrives you aim to coat her entrances in #bold white#!.""",
                           failed_transition_text=f"""
@@ -1853,8 +1855,8 @@ def define_sex_events_mf(es: EventMap):
                               Your rod is aimed straight at her cheeks...""",
                           ),
                    Option(EventsCum.MF_CUM_ON_GROIN, OptionCategory.DOM,
-                          "cum all over her groin",
-                          subdom_sub=0,
+                          "Cum all over her groin",
+                          subdom_dom_fail=0,
                           transition_text=f"""
                               As your release arrives you aim to coat her entrances in #bold white#!.""",
                           failed_transition_text=f"""
@@ -1879,6 +1881,7 @@ def define_sex_events_mf(es: EventMap):
                           ),
                    Option(EventsSex.MF_REVERSE_COWGIRL, OptionCategory.SUB,
                           "Take a break and let her do the rubbing",
+                          subdom_sub=0,
                           transition_text=f"""
                               Having exterted yourself a bit, you instead let her do the work. 
                               She pushes her ass backwards, forcing you to the ground as she puts your rod inside her.
@@ -1926,7 +1929,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_STANDING_FINGERED_FROM_BEHIND, "Fingering from Behind",
                stam_cost_1=-0.5, stam_cost_2=1,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_xp=5 / 5,
+               root_become_more_dom_xp=0,
                partner_removes_clothes=True,
                animation_left=SCHADENFREUDE,
                desc=f"""
@@ -1936,11 +1939,13 @@ def define_sex_events_mf(es: EventMap):
                options=(
                    Option(EventsSex.MF_TIT_TEASE, OptionCategory.SUB,
                           "Give her a massage",
+                          subdom_sub=0,
                           transition_text=f"""
                               Giving you something else to please, she put your hands on her breasts.""",
                           ),
                    Option(EventsSex.MF_REVERSE_COWGIRL, OptionCategory.SUB,
                           "Take a break",
+                          subdom_sub=0,
                           transition_text=f"""
                               She pushes her ass backwards, forcing you to the ground as she puts your rod inside her.
                               """,
@@ -1948,6 +1953,8 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsSex.MF_STANDING_FINGERED_FROM_BEHIND, OptionCategory.DOM,
                           "Continue applying your deft hands",
                           dom_success_adjustment=-15,
+                          subdom_dom_fail=0,
+                          subdom_dom_success=0,
                           transition_text=f"""
                               She melts into your hands as she surrender to pleasure.""",
                           failed_transition_text=f"""
@@ -1970,7 +1977,7 @@ def define_sex_events_mf(es: EventMap):
                           ),
                    Option(EventsCum.MF_CUM_ON_GROIN, OptionCategory.DOM,
                           "Cum all over her groin",
-                          subdom_sub=0,
+                          subdom_dom_fail=0,
                           transition_text=f"""
                               As your release arrives you aim to coat her entrances in #bold white#!.""",
                           failed_transition_text=f"""
@@ -1978,9 +1985,9 @@ def define_sex_events_mf(es: EventMap):
                           )
                )))
     es.add(Sex(EventsSex.MF_STANDING_FUCKED_FROM_BEHIND, "Standing Fuck from Behind",
-               stam_cost_1=1.5, stam_cost_2=2,
+               stam_cost_1=2, stam_cost_2=2,
                root_gender=MALE, partner_gender=FEMALE,
-               root_become_more_dom_xp=10 / 5,
+               root_become_more_dom_xp=15 / 5,
                root_removes_clothes=True, partner_removes_clothes=True,
                animation_left=SCHADENFREUDE, animation_right=BOW_3,
                desc=ComposedDesc(f"""
@@ -2060,6 +2067,7 @@ def define_sex_events_mf(es: EventMap):
                options=(
                    Option(EventsSex.MF_REVERSE_COWGIRL_II, OptionCategory.SUB,
                           "Let her continue riding you",
+                          subdom_sub=0,
                           transition_text=f"""
                               She continues riding your rod as you lie beneath her.""",
                           ),
@@ -2080,6 +2088,7 @@ def define_sex_events_mf(es: EventMap):
                    Option(EventsSex.MF_PRONE_BONE, OptionCategory.DOM,
                           "Roll with her and dominate her from behind",
                           dom_success_adjustment=-25,
+                          subdom_dom_success=0,
                           transition_text=f"""
                               You stand up and push her stomach into the floor, ready to give her a fucking she won't
                               be ready for.""",
@@ -2123,6 +2132,7 @@ def define_sex_events_mf(es: EventMap):
                options=(
                    Option(EventsSex.MF_COWGIRL_II, OptionCategory.SUB,
                           "Let her continue riding you",
+                          subdom_sub=0,
                           transition_text=f"""
                               She continues riding you, your rod madly bouncing from wall to wall inside her.""",
                           ),
@@ -2182,7 +2192,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_REVERSE_COWGIRL_II, "Ride Facing Away",
            stam_cost_1=1.5, stam_cost_2=2.5,
            root_gender=MALE, partner_gender=FEMALE,
-           root_become_more_sub_xp=25 / 5,
+           root_become_more_sub_xp=35 / 5,
            root_removes_clothes=True, partner_removes_clothes=True,
            desc=ComposedDesc(f"""
                    You #sub lie#! down as {THEM} hungrily dances atop your shaft, her cheeks #bold shaking#! with each bounce.
@@ -2195,11 +2205,13 @@ def define_sex_events_mf(es: EventMap):
            options=(
                Option(EventsSex.MF_COWGIRL_II, OptionCategory.SUB,
                       "Ask her to look at you while she rides you",
+                      subdom_sub=0,
                       transition_text=f"""
                               She turns around, meeting your gaze as she continues riding you with intense motions.""",
                       ),
                Option(EventsSex.MF_REVERSE_COWGIRL, OptionCategory.DOM,
                       "Slow her down to get back control",
+                      subdom_dom_fail=0,
                       dom_success_adjustment=-15,
                       transition_text=f"""
                               You put your hands on her waist and manage to slow her down, but she still has
@@ -2239,7 +2251,7 @@ def define_sex_events_mf(es: EventMap):
     es.add(Sex(EventsSex.MF_COWGIRL_II, "Ride Facing You",
            stam_cost_1=2.5, stam_cost_2=1.5,
            root_gender=MALE, partner_gender=FEMALE,
-           root_become_more_sub_xp=20 / 5,
+           root_become_more_sub_xp=25 / 5,
            root_removes_clothes=True, partner_removes_clothes=True,
            desc=ComposedDesc(f"""
                    You look in {THEM}'s eyes as she vigorously rides you, your member under her complete #sub control#! as 
@@ -2369,7 +2381,6 @@ def define_sex_events_mf(es: EventMap):
                                  ),
                options=(
                    Option(EventsSex.MF_MISSIONARY, OptionCategory.SUB,
-
                           "Let her roll over",
                           transition_text=f"""
                               She finds an opening between your thrusts and manages to roll in place, 
@@ -2470,7 +2481,7 @@ def define_sex_events_mf(es: EventMap):
                                  TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     "#sub Lick my pussy.#!" she orders."""),
                                  TriggeredDesc(IS_AT_LEAST_DOM_1, """
-                    "Please, #sub go down on me!!#!" she orders huskily."""), "."
+                    "Please, #sub go down on me!!#!" she begs you."""), "."
                                  ),
                options=(
                    Option(EventsSex.MF_LICK_PUSSY, OptionCategory.SUB,
@@ -2502,10 +2513,10 @@ def define_sex_events_mf(es: EventMap):
                )))
 
     es.add(Sex(EventsSex.MF_LICK_PUSSY, "Worshipping Her Pussy",
-               stam_cost_1=-1.5, stam_cost_2=4.5,
+               stam_cost_1=-1.0, stam_cost_2=4.5,
                root_gender=MALE, partner_gender=FEMALE,
                root_become_more_sub_xp=35 / 5,
-               animation_left=FLIRTATION_LEFT, animation_right=FLIRTATION_LEFT,
+               animation_left=KNEEL_RULER_3, animation_right=FLIRTATION_LEFT,
                root_removes_clothes=True, partner_removes_clothes=True,
                desc=ComposedDesc(f"""
                    {THEM} keeps moaning as you go down on her, licking and kissing on her mound.
@@ -2515,7 +2526,7 @@ def define_sex_events_mf(es: EventMap):
                                  TriggeredDesc(IS_AT_LEAST_SUB_1, """
                     "#sub That's it, lick your mistress' pussy.#!" she moans."""),
                                  TriggeredDesc(IS_AT_LEAST_DOM_1, """
-                    You can't believe you're doing this, acting so submissively..."""), "."
+                    You can't believe you're doing this, acting so #sub submissively...#!"""), "."
                                  ),
                options=(
                    Option(EventsSex.MF_LICK_PUSSY, OptionCategory.SUB,
@@ -3063,7 +3074,7 @@ def define_cum_events_mf(es: EventMap):
                     #italic Perhaps it is, you were #bold so close#! to what you wanted but didn't get it.#!"""),
 
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} >= 10", f"""
-                    \\n\\n"Let's do more next time", you say as you #sub smack her ass#!, surprising her.                  
+                    \\n\\n"Let's do more next time", you say as you #dom smack her ass#!, surprising her.                  
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                     \\n\\n"Let's meet again sometime, {THEM}" you say while slightly biting your lip.
@@ -3175,7 +3186,7 @@ def define_cum_events_mf(es: EventMap):
                                  )
                ))
     es.add(Cum(EventsCum.MF_RUINED_ORGASM, "A Firm Grasp on Your Release",
-               subdom_change=-2, root_become_more_sub_xp=35 / 5,
+               subdom_change=-4, root_become_more_sub_xp=35 / 5,
                root_gender=MALE, partner_gender=FEMALE,
                animation_left=BEG, animation_right=DISMISSAL,
                terminal_option=Option(None, OptionCategory.OTHER, "Leave yearning and frustrated"),
@@ -3308,9 +3319,11 @@ def define_cum_events_mf(es: EventMap):
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} > -10 \n{SCOPE}:{SUBDOM} < 10", f"""
                    "What are you doing, {THEM}?!", you say completely stunned by her sudden forcefulness.
+                   "I couldn't help myself." She giggles. "You look #sub so cute#! underneath me!"
                    """),
                                  TriggeredDesc(f"{SCOPE}:{SUBDOM} <= -10", f"""
                    "#sub I'm yours#!, {THEM_FULL_REGNAL}!", you moan while #sub submitting#! to being milked into her tight womb\\n\\n
+                   "Good boy..." She traces her fingers along your chest, as if to mark you as her property.
                    """),
                                  f"""{THEM} slowly gets up, white threads hanging from her slit as drops splash onto the ground. """,
                                  TriggeredDesc(IS_AT_LEAST_SUB_1, f"""
