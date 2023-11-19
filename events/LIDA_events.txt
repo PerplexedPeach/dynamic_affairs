@@ -385,7 +385,7 @@ LIDA.51 = {
 	title = LIDA.51.t
 	desc = LIDA.51.desc
     type = character_event
-	theme = scheme
+	theme = seduction
 	override_background = garden
 
 	left_portrait = {
