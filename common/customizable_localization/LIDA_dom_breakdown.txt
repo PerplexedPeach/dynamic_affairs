@@ -234,6 +234,22 @@ DomChanceBreakdownOrgasms = {
 	}
 }
 
+DomChanceBreakdownMixedTraits = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_mixedtraits > 0
+		}
+		localization_key = dc_mixedtraits_p
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_mixedtraits < 0
+		}
+		localization_key = dc_mixedtraits_n
+	}
+}
+
 DomChanceBreakdownSexSkill = {
 	type = character
 	text = {
