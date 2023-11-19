@@ -253,7 +253,18 @@ questions
 
 
 TODO
-- move clothing to new category to improve compatibility
+- connect Carnalitas fetish system
+- royal court event
+- more hooks into sex scenes
+	- after duel win/loss
+	- during feast drinking
+	- player actively sneaking into rooms
+- models
+	- male collar
+	- male harness (longer term)
+	- nose piercing
+	- lip piercing
+- sub/dom tolerance level and stress when going outside tolerance	
 
 - scene with someone peddling piercings that increase sensitivity
 	- dom not receiving satisfying orgasms from slave
@@ -262,18 +273,7 @@ TODO
 - stress loss for sub options as a sub
 - reward from finishing an event chain be dependent on orgasm achieved and so on
 
-
 TODO long term
-- connect Carnalitas fetish system
-- royal court event
-- more hooks into sex scenes
-	- after duel win/loss
-	- during feast drinking
-	- player actively sneaking into rooms
-- models
-	- nose piercing
-	- lip piercing
-- sub/dom tolerance level and stress when going outside tolerance	
 - add sex skills
 	- blowjob proficiency trait (up to 3 stars)
 	- tie into partner stamina cost (can make them scripted values)
