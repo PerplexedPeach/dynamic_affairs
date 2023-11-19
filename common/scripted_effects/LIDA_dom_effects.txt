@@ -467,7 +467,7 @@ calculate_dom_success_effect = {
 				limit = {
 					has_trait = stubborn
 				}
-				add = 10
+				add = 15
 			}
 			if = {
 				limit = {
@@ -475,7 +475,7 @@ calculate_dom_success_effect = {
 						has_trait = stubborn
 					}
 				}
-				add = -10
+				add = -15
 			}
 		}
 	}
@@ -513,6 +513,28 @@ calculate_dom_success_effect = {
 				add = scope:close_to_cumming_partner
 			}
 		}
+	}
+	save_temporary_scope_value_as = {
+    	name = orgasm_mult_score
+    	value = {
+    		add = scope:partner_cum_count
+    		multiply = 5
+    	}
+    }
+	save_scope_value_as = {
+	    name = dom_chance_orgasms
+	    # the more she came, the more she's weak
+	    value = {
+	        add = 0
+	        if = {
+	            limit = {
+	                scope:partner_cum_count > 0
+	            }
+	            add = scope:orgasm_mult_score
+	        }
+	        min = 0
+	        max = 40
+	    }
 	}
 	save_scope_value_as = {
 		name = dom_chance_subdom
@@ -583,6 +605,7 @@ calculate_dom_success_effect = {
 			add = scope:dom_chance_stamina
 			add = scope:dom_chance_orgasm
 			add = scope:dom_chance_sex_skill
+			add = scope:dom_chance_orgasms
 
 			min = 5
 			max = 95

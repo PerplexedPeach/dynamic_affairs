@@ -47,3 +47,5 @@ dc_orgasm_rr: "\nYou are in the middle of an #V Orgasm#!: #N;bold [SCOPE.GetValu
 dc_sex_skill: "\nSex skill: #weak [SCOPE.GetValue('dom_chance_sex_skill')|0]% #!"
 dc_sex_skill_g: "\nYour proficient sex in bed: #P [SCOPE.GetValue('dom_chance_sex_skill')|0]% #!"
 dc_sex_skill_gg: "\nYour sexual expertise: #P;bold [SCOPE.GetValue('dom_chance_sex_skill')|0]% #!"
+# partner cum count
+dc_cum_count: "\nHer previous orgasms: #P;bold [SCOPE.GetValue('dom_chance_orgasms')|0]% #!"

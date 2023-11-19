@@ -285,7 +285,7 @@
 			scope:recipient = {
 				AND = {
 					age <= 20
-					age >= 18
+					age >= 16
 				}
 			}	
 			add = 15
@@ -301,7 +301,7 @@
 					}
 				}	
 			}
-			add = -10
+			add = -20
 		}
 
 		modifier = { # They are bonded with you
@@ -317,7 +317,7 @@
 			scope:recipient = {
 				is_concubine_of = scope:actor
 			}
-			add = 25
+			add = 35
 		}
 
 		modifier = { # No Heirs
@@ -378,7 +378,7 @@
 				NOT = {has_relation_soulmate = scope:actor
 				}
 			}
-			add = -10
+			add = 5
 		}
 		
 
@@ -402,7 +402,7 @@
 					this = scope:recipient.betrothed
 				}
 			}
-			add = -10
+			add = -1
 		}	
 
 		modifier = { # I am Celibate
@@ -426,7 +426,7 @@
 			scope:recipient = {
 				has_trait = lustful
 			}
-			add = 35
+			add = 45
 		}
 
 		modifier = { # Chaste
@@ -673,7 +673,7 @@
 					has_relation_lover = scope:actor
 				}
 			}
-			add = 30
+			add = 80
 		}
 
 		modifier = { #Soulmate Modifier
@@ -683,7 +683,7 @@
 					has_relation_soulmate = scope:actor
 				}
 			}
-			add = 40
+			add = 200
 		}
 
 		modifier = { #Rivalry modifier.
@@ -725,7 +725,7 @@
 
 		modifier = { #Heritage modifiers.
 			desc = offer_vassalization_interaction_aibehavior_culture_group_tt
-			add = -15
+			add = -5
 			scope:actor = {
 				NOT = { culture = { has_same_culture_heritage = scope:recipient.culture } }
 			}
@@ -733,7 +733,7 @@
 
 		modifier = { #Faith modifiers.
 			desc = offer_vassalization_interaction_aibehavior_differentfaith_tt
-			add = -25
+			add = -5
 			scope:actor = {
 				NOT = { faith = scope:recipient.faith }
 			}
@@ -741,7 +741,7 @@
 
 		modifier = { #Close Family modifier.
 			desc = engage_affair_aibehavior_clfamily_tt
-			add = -70
+			add = -10
 			scope:actor = {
 				AND = {
 					is_close_family_of = scope:recipient
@@ -756,7 +756,7 @@
 
 		modifier = { #Extended Family modifier.
 			desc = engage_affair_aibehavior_exfamily_tt
-			add = -30
+			add = -5
 			scope:actor = {
 				AND = {
 					is_extended_family_of = scope:recipient
