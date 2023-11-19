@@ -55,6 +55,7 @@ class EventsSex(enum.Enum):
     FM_COWGIRL = 16
     FM_MISSIONARY = 17
     FM_PRONE_BONE = 18
+
     MF_WHIP_TEASE = 19
     MF_FOOTJOB_TEASE = 20
     MF_HANDJOB_TEASE = 21
@@ -76,9 +77,16 @@ class EventsSex(enum.Enum):
     FM_FOOTJOB = 36
     FM_BLOWJOB_DOM_I = 37
     FM_BLOWJOB_DOM_II = 38
+
     MF_FOOTJOB = 39
     MF_BLOWJOB_DOM_I = 40
     MF_BLOWJOB_DOM_II = 41
+    MF_TIT_TEASE = 42
+    MF_TIT_TEASE_II = 43
+    MF_LICK_PUSSY = 44
+    MF_FINGER = 45
+    MF_REVERSE_COWGIRL_II = 46
+    MF_COWGIRL_II = 47
 
 
 class EventsCum(enum.Enum):
@@ -223,7 +231,9 @@ AND = "AND"
 IS_FEMALE = "is_female"
 RESET_STAMINA_AFTER_CUM_EFFECT = "reset_stamina_after_cum_effect"
 ROOT_CUM = "root_cum"
+ROOT_CUM_COUNT = "root_cum_count"
 PARTNER_CUM = "partner_cum"
+PARTNER_CUM_COUNT = "partner_cum_count"
 OVERRIDE_BACKGROUND = "override_background"
 EVENT_BACKGROUND = "reference"
 LOCALE = "locale"

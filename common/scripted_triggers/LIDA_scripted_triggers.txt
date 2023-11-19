@@ -69,6 +69,10 @@ you_dom_them_they_are_male = {
 	you_dom_them = yes
 	is_male = yes
 }
+you_dom_them_they_are_female = {
+	you_dom_them = yes
+	is_male = yes
+}
 you_dom_them_strongly_they_have_no_collar = {
 	you_dom_them_strongly = yes
 	NOT = { 

@@ -224,6 +224,16 @@ DomChanceBreakdownOrgasm = {
 	# }
 }
 
+DomChanceBreakdownOrgasms = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_orgasms >= 5
+		}
+		localization_key = dc_cum_count
+	}
+}
+
 DomChanceBreakdownSexSkill = {
 	type = character
 	text = {
