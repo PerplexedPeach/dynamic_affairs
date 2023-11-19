@@ -1,4 +1,4 @@
-version="0.7.1"
+version="0.8.0"
 tags={
 	"Character Interactions"
 	"Events"
@@ -6,6 +6,6 @@ tags={
 	"Gameplay"
 }
 name="Dynamic Affairs"
-supported_version="1.9.*"
+supported_version="1.11.*"
 path="mod/dynamic_affairs"
 picture="thumbnail.png"
