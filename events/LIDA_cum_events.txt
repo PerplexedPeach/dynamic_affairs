@@ -7140,7 +7140,7 @@ LIDAc.17 = {
 			value = scope:root_stamina
 		}
 		change_subdom_effect = {
-			CHANGE = -2
+			CHANGE = -4
 		}
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = root

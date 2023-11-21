@@ -479,6 +479,126 @@ calculate_dom_success_effect = {
 			}
 		}
 	}
+    save_scope_value_as = {
+        name = dom_chance_mixedtraits
+        value = {
+            add = 0
+            # other traits can have an impact too
+            if = {
+                limit = {
+                    has_trait = arrogant
+                }
+                add = 5
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = arrogant
+                    }
+                }
+                add = -5
+            }
+            if = {
+                limit = {
+                    has_trait = ambitious
+                }
+                add = 5
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = ambitious
+                        # todo: wants to dom you more if lower authority than you (since it might be an opportunity to rise)
+                    }
+                }
+                add = -5
+            }
+            if = {
+                limit = {
+                    has_trait = callous
+                }
+                add = 5
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = callous
+                    }
+                }
+                add = -5
+            }
+            if = {
+                limit = {
+                    has_trait = wrathful
+                }
+                add = 5
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = wrathful
+                    }
+                }
+                add = -5
+            }
+            if = {
+                limit = {
+                    has_trait = sadistic
+                }
+                add = 6
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = sadistic
+                    }
+                }
+                add = -6
+            }
+            if = {
+                limit = {
+                    has_trait = craven
+                }
+                add = -5
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = craven
+                    }
+                }
+                add = 5
+            }
+            if = {
+                limit = {
+                    has_trait = shy
+                }
+                add = -5
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = shy
+                    }
+                }
+                add = 5
+            }
+            if = {
+                limit = {
+                    has_trait = trusting
+                }
+                add = -5
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = trusting
+                    }
+                }
+                add = 5
+            }
+        }
+    }
 	save_temporary_scope_value_as = {
 		name = close_to_cumming
 		value = {
@@ -602,6 +722,7 @@ calculate_dom_success_effect = {
 			add = scope:dom_chance_lust_beauty
 			add = scope:dom_chance_title_authority
 			add = scope:dom_chance_stubborness
+			add = scope:dom_chance_mixedtraits
 			add = scope:dom_chance_stamina
 			add = scope:dom_chance_orgasm
 			add = scope:dom_chance_sex_skill

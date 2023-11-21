@@ -6,6 +6,6 @@ tags={
 	"Gameplay"
 }
 name="Dynamic Affairs"
-supported_version="1.9.*"
+supported_version="1.11.*"
 path="mod/dynamic_affairs"
 picture="thumbnail.png"
