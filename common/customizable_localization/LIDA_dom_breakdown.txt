@@ -121,6 +121,25 @@ DomChanceBreakdownLustTits = {
 	}
 }
 
+DomChanceBreakdownAmbitious = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_title_amb >= 5
+		}
+		localization_key = dc_ambitious_g
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_title_amb <= -5
+		}
+		localization_key = dc_ambitious_r
+	}
+	text = {
+		localization_key = dc_ambitious
+	}
+}
+
 DomChanceBreakdownAuthority = {
 	type = character
 	text = {

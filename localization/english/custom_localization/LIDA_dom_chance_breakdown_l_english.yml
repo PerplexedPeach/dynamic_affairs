@@ -29,6 +29,10 @@ dc_authority_g: "\nYou are in a position of authority: #P [SCOPE.GetValue('dom_c
 dc_authority_r: "\nThey are in a position of authority: #N [SCOPE.GetValue('dom_chance_title_authority')|0]% #! #weak (Title tier) #!"
 dc_authority_gg: "\nYour titles daunt them: #P;bold [SCOPE.GetValue('dom_chance_title_authority')|0]% #! #weak (Title tier) #!"
 dc_authority_rr: "\nTheir titles unnerve you: #N;bold [SCOPE.GetValue('dom_chance_title_authority')|0]% #! #weak (Title tier) #!"
+# ambitious wants titles
+dc_ambitious: "\nPerceived ambitiousness: #weak [SCOPE.GetValue('dom_chance_title_amb')|0]% #!"
+dc_ambitious_g: "\nYou want their titles: #P [SCOPE.GetValue('dom_chance_title_amb')|0]% #! #weak (Title tier) #!"
+dc_ambitious_r: "\nThey wants your titles: #N [SCOPE.GetValue('dom_chance_title_amb')|0]% #! #weak (Title tier) #!"
 # stubborn
 dc_stubborness: "\nStubborness: #weak [SCOPE.GetValue('dom_chance_stubborness')|0]% #!"
 dc_stubborness_g: "\nYou are more stubborn: #P [SCOPE.GetValue('dom_chance_stubborness')|0]% #!"

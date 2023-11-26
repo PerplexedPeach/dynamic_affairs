@@ -425,12 +425,108 @@ calculate_dom_success_effect = {
         name = dom_chance_title_authority
         value = {
             add = 0
-            # Check if either the character or their partner has the "ambitious" trait
+            # every rank difference has preconceived differences in power (higher rank easier to dom lower rank)
+            if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = 1
+                    }
+                }
+                add = 5
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = 2
+                    }
+                }
+                add = 10
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = 3
+                    }
+                }
+                add = 15
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = 4
+                    }
+                }
+                add = 20
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value >= 5
+                    }
+                }
+                add = 25
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = -1
+                    }
+                }
+                add = -5
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = -2
+                    }
+                }
+                add = -10
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = -3
+                    }
+                }
+                add = -15
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = -4
+                    }
+                }
+                add = -20
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value <= -5
+                    }
+                }
+                add = -25
+            }
+        }
+    }
+    save_scope_value_as = {
+        name = dom_chance_title_amb
+        value = {
+            add = 0
             if = {
                 limit = {
                     scope:affairs_partner = { has_trait = ambitious }
                 }
-                # malus if partner is ambitious
+                # malus if partner is ambitious (doubled to counter the title bonus)
                 add = {
                     if = {
                         limit = {
@@ -439,7 +535,7 @@ calculate_dom_success_effect = {
                                 value = 1
                             }
                         }
-                        add = -5
+                        add = -10
                     }
                     else_if = {
                         limit = {
@@ -448,7 +544,7 @@ calculate_dom_success_effect = {
                                 value = 2
                             }
                         }
-                        add = -10
+                        add = -20
                     }
                     else_if = {
                         limit = {
@@ -457,7 +553,7 @@ calculate_dom_success_effect = {
                                 value = 3
                             }
                         }
-                        add = -15
+                        add = -30
                     }
                     else_if = {
                         limit = {
@@ -466,7 +562,7 @@ calculate_dom_success_effect = {
                                 value = 4
                             }
                         }
-                        add = -20
+                        add = -40
                     }
                     else_if = {
                         limit = {
@@ -475,14 +571,14 @@ calculate_dom_success_effect = {
                                 value >= 5
                             }
                         }
-                        add = -25
+                        add = -50
                     }
                 }
                 else_if = {
                     limit = {
                         has_trait = ambitious
                     }
-                    # you are ambitious and wants their titles
+                    # you are ambitious and wants their titles (doubled bonus to counter title penalty)
                     add = {
                         if = {
                             limit = {
@@ -491,7 +587,7 @@ calculate_dom_success_effect = {
                                     value = -1
                                 }
                             }
-                            add = 5
+                            add = 10
                         }
                         else_if = {
                             limit = {
@@ -500,7 +596,7 @@ calculate_dom_success_effect = {
                                     value = -2
                                 }
                             }
-                            add = 10
+                            add = 20
                         }
                         else_if = {
                             limit = {
@@ -509,7 +605,7 @@ calculate_dom_success_effect = {
                                     value = -3
                                 }
                             }
-                            add = 15
+                            add = 30
                         }
                         else_if = {
                             limit = {
@@ -518,7 +614,7 @@ calculate_dom_success_effect = {
                                     value = -4
                                 }
                             }
-                            add = 20
+                            add = 40
                         }
                         else_if = {
                             limit = {
@@ -527,102 +623,8 @@ calculate_dom_success_effect = {
                                     value <= -5
                                 }
                             }
-                            add = 25
+                            add = 50
                         }
-                    }
-                }
-                # Apply the regular bonus/malus if ambitious trait is not present
-                else = {
-                    # every rank difference has preconceived differences in power (higher rank easier to dom lower rank)
-                    if = {
-                        limit = {
-                            tier_difference = {
-                                target = scope:affairs_partner
-                                value = 1
-                            }
-                        }
-                        add = 5
-                    }
-                    else_if = {
-                        limit = {
-                            tier_difference = {
-                                target = scope:affairs_partner
-                                value = 2
-                            }
-                        }
-                        add = 10
-                    }
-                    else_if = {
-                        limit = {
-                            tier_difference = {
-                                target = scope:affairs_partner
-                                value = 3
-                            }
-                        }
-                        add = 15
-                    }
-                    else_if = {
-                        limit = {
-                            tier_difference = {
-                                target = scope:affairs_partner
-                                value = 4
-                            }
-                        }
-                        add = 20
-                    }
-                    else_if = {
-                        limit = {
-                            tier_difference = {
-                                target = scope:affairs_partner
-                                value >= 5
-                            }
-                        }
-                        add = 25
-                    }
-                    else_if = {
-                        limit = {
-                            tier_difference = {
-                                target = scope:affairs_partner
-                                value = -1
-                            }
-                        }
-                        add = -5
-                    }
-                    else_if = {
-                        limit = {
-                            tier_difference = {
-                                target = scope:affairs_partner
-                                value = -2
-                            }
-                        }
-                        add = -10
-                    }
-                    else_if = {
-                        limit = {
-                            tier_difference = {
-                                target = scope:affairs_partner
-                                value = -3
-                            }
-                        }
-                        add = -15
-                    }
-                    else_if = {
-                        limit = {
-                            tier_difference = {
-                                target = scope:affairs_partner
-                                value = -4
-                            }
-                        }
-                        add = -20
-                    }
-                    else_if = {
-                        limit = {
-                            tier_difference = {
-                                target = scope:affairs_partner
-                                value <= -5
-                            }
-                        }
-                        add = -25
                     }
                 }
             }
