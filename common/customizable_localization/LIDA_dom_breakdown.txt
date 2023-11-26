@@ -93,6 +93,34 @@ DomChanceBreakdownLustBeauty = {
 	# }
 }
 
+DomChanceBreakdownLustTits = {
+	type = character
+	text = {
+		trigger = {
+			scope:dom_chance_lust_tits >= 15
+		}
+		localization_key = dc_lust_tits_gg
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_lust_tits >= 5
+		}
+		localization_key = dc_lust_tits_g
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_lust_tits <= -15
+		}
+		localization_key = dc_lust_tits_rr
+	}
+	text = {
+		trigger = {
+			scope:dom_chance_lust_tits <= -5
+		}
+		localization_key = dc_lust_tits_r
+	}
+}
+
 DomChanceBreakdownAuthority = {
 	type = character
 	text = {

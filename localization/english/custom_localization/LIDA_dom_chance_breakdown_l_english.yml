@@ -17,6 +17,12 @@ dc_lust_beauty_g: "\nThey lust after your beauty: #P [SCOPE.GetValue('dom_chance
 dc_lust_beauty_r: "\nYou lust after their beauty: #N [SCOPE.GetValue('dom_chance_lust_beauty')|0]% #!"
 dc_lust_beauty_gg: "\nThey are entranced by your beauty: #P;bold [SCOPE.GetValue('dom_chance_lust_beauty')|0]% #!"
 dc_lust_beauty_rr: "\nYou are enthralled by their beauty: #N;bold [SCOPE.GetValue('dom_chance_lust_beauty')|0]% #!"
+# lust tits
+dc_lust_tits: "\nBody Lust: #weak [SCOPE.GetValue('dom_chance_lust_tits')|0]% #!"
+dc_lust_tits_g: "\nThey lust after your breasts: #P [SCOPE.GetValue('dom_chance_lust_tits')|0]% #!"
+dc_lust_tits_r: "\nYou lust after her breasts: #N [SCOPE.GetValue('dom_chance_lust_tits')|0]% #!"
+dc_lust_tits_gg: "\nThey are entranced by your breasts: #P;bold [SCOPE.GetValue('dom_chance_lust_tits')|0]% #!"
+dc_lust_tits_rr: "\nYou are enthralled by her breasts: #N;bold [SCOPE.GetValue('dom_chance_lust_tits')|0]% #!"
 # authority
 dc_authority: "\nPerceived difference in authority: #weak [SCOPE.GetValue('dom_chance_title_authority')|0]% #!"
 dc_authority_g: "\nYou are in a position of authority: #P [SCOPE.GetValue('dom_chance_title_authority')|0]% #! #weak (Title tier) #!"
