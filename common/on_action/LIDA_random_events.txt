@@ -25,6 +25,6 @@ lida_yearly_random_player_pulse = {
 		200 = LIDA.135 # you offer a sub a collar
 		200 = LIDA.145 # you offer a sub a harness
 		50 = LIDA.150 # someone offers to craft skimpy plate armor for you
-		10 = 0
+		200 = 0 # Nothing happens this year
 	} 
 }

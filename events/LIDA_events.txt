@@ -48,7 +48,7 @@ LIDA.50 = {
 			save_temporary_scope_as = affairs_candidate
 			# TODO need to check if list is empty?
 			weight = {
-				base = 50
+				base = 1
 				# TODO if the root character is a deviant/sadist, then having negative opinion actually makes them more likely as a partner (hate fuck) 
 				opinion_modifier = {
 					opinion_target = root
@@ -63,13 +63,12 @@ LIDA.50 = {
 					add = {
 						value = attraction
 						divide = high_positive_attraction
-						multiply = 50
 					}
 				}
 				# if you've previously had relations with this person then weight them highly
 				# either one of you should be the dom of the other
 				modifier = {
-					add = 1000
+					add = 0.2
 					has_opinion_modifier = {
 						target = root
 						modifier = dominant_opinion
@@ -254,13 +253,12 @@ LIDA.100 = {
 			}
 			save_temporary_scope_as = affairs_candidate
 			weight = {
-				base = 50
-				# add based on attraction
+				base = 1
+				# add based on attraction, up to +100%
 				modifier = {
 					add = {
 						value = attraction
 						divide = high_positive_attraction
-						multiply = 50
 					}
 				}
 				# more likely if they have extra coins to spare
@@ -272,7 +270,7 @@ LIDA.100 = {
 				# if you've already had an affair with this person then they're unlikely to pay you for it
 				# however, it's still more likely than not since they know you're open for it, so it's not as big of a factor
 				modifier = {
-					add = 20
+					add = 0.4
 					has_opinion_modifier = {
 						target = root
 						modifier = dominant_opinion
@@ -492,13 +490,13 @@ LIDA.110 = {
 			}
 			save_temporary_scope_as = affairs_candidate
 			weight = {
-				base = 50
-				# add based on attraction
+				base = 1
+
+				# add based on attraction, up to +100%
 				modifier = {
 					add = {
 						value = attraction
 						divide = high_positive_attraction
-						multiply = 50
 					}
 				}
 
@@ -530,7 +528,6 @@ LIDA.110 = {
 					add = {
 						value = ai_boldness
 						divide = dominant_positive_ai_value
-						multiply = 50
 					}
 				}
 			}
@@ -629,11 +626,11 @@ LIDA.120 = {
 			}
 			save_temporary_scope_as = affairs_candidate
 			weight = {
-				base = 50
+				base = 1
 
 				# more likely if they are sexually frustrated
 				modifier = {
-					add = 100
+					add = 2
 					has_character_modifier = sexually_frustrated
 				}
 
@@ -642,7 +639,6 @@ LIDA.120 = {
 					add = {
 						value = ai_boldness
 						divide = dominant_positive_ai_value
-						multiply = 50
 					}
 				}
 			}
@@ -797,14 +793,13 @@ LIDA.130 = {
 			}
 			save_temporary_scope_as = affairs_candidate
 			weight = {
-				base = 50
+				base = 1
 
 				# more likely if they are bold
 				modifier = {
 					add = {
 						value = ai_boldness
 						divide = dominant_positive_ai_value
-						multiply = 50
 					}
 				}
 			}
@@ -946,14 +941,14 @@ LIDA.135 = {
 			}
 			save_temporary_scope_as = affairs_candidate
 			weight = {
-				base = 50
+				base = 1
 
 				# less likely if they are bold
 				modifier = {
 					add = {
 						value = ai_boldness
 						divide = dominant_positive_ai_value
-						multiply = -50
+						multiply = -1
 					}
 				}
 			}
@@ -1247,14 +1242,13 @@ LIDA.140 = {
 				they_dom_you_strongly = yes
 			}
 			weight = {
-				base = 50
+				base = 1
 
 				# more likely if they are bold
 				modifier = {
 					add = {
 						value = ai_boldness
 						divide = dominant_positive_ai_value
-						multiply = 50
 					}
 				}
 			}
@@ -1397,14 +1391,14 @@ LIDA.145 = {
 			}
 			save_temporary_scope_as = affairs_candidate
 			weight = {
-				base = 50
+				base = 1
 
 				# less likely if they are bold
 				modifier = {
 					add = {
 						value = ai_boldness
 						divide = dominant_positive_ai_value
-						multiply = -50
+						multiply = -1
 					}
 				}
 			}
