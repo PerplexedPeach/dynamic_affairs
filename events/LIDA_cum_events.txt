@@ -7373,6 +7373,15 @@ LIDAc.20 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 49002010
+				}
+				# Dominating Her Completely
+				# "D-Don't fill me!" she shakingly say as your pounding #italic barely#! permits her to speak.\n
+				desc = sex_transition.CUM.49.20.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = -26002600
 				}
 				# 26002600: EventsSex.MF_STANDING_FUCKED_FROM_BEHIND -> EventsSex.MF_STANDING_FUCKED_FROM_BEHIND failed
@@ -7526,11 +7535,38 @@ LIDAc.20 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = -35004900
+				}
+				# 35004900: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE_II failed
+				# You try to tie [affairs_partner.GetFirstName] up, but her loud moans distracts you just enough for her to make a move.\n
+				desc = sex_transition.35.49.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = -35002310
 				}
 				# 35002310: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED failed
 				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
 				desc = sex_transition.CUM.35.23.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -49004900
+				}
+				# 49004900: EventsSex.MF_PRONE_BONE_II -> EventsSex.MF_PRONE_BONE_II failed
+				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moans distracting you just enough for her to make a move.\n
+				desc = sex_transition.49.49.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -49002310
+				}
+				# 49002310: EventsSex.MF_PRONE_BONE_II -> EventsCum.MF_CREAMPIE_BREED failed
+				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
+				desc = sex_transition.CUM.49.23.666
 			}
 		}
 		triggered_desc = {
@@ -7592,6 +7628,16 @@ LIDAc.20 = {
 			}
 			# defaulted to 35002010: EventsSex.MF_PRONE_BONE -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
 			desc = sex_transition.CUM.35.20.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition < 0
+				exists = scope:prev_event
+				scope:prev_event = 49
+			}
+			# defaulted to 49002010: EventsSex.MF_PRONE_BONE_II -> EventsCum.MF_PULL_OUT_CUM_ON_ASS
+			desc = sex_transition.CUM.49.20.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -8746,6 +8792,15 @@ LIDAc.22 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 48002210
+				}
+				# Cowgirl Pinned Down
+				# Your body tightens as you release inside her while she pins you down.\n
+				desc = sex_transition.CUM.48.22.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = 34002210
 				}
 				# Missionary
@@ -8872,6 +8927,15 @@ LIDAc.22 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = -48004700
+				}
+				# 48004700: EventsSex.MF_COWGIRL_III -> EventsSex.MF_COWGIRL_II failed
+				# You struggle underneath her, but you can't do anything to get free from her grasp.\n
+				desc = sex_transition.48.47.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = -34003500
 				}
 				# 34003500: EventsSex.MF_MISSIONARY -> EventsSex.MF_PRONE_BONE failed
@@ -8927,6 +8991,16 @@ LIDAc.22 = {
 			}
 			# defaulted to 47002210: EventsSex.MF_COWGIRL_II -> EventsCum.MF_CREAMPIE_ON_TOP
 			desc = sex_transition.CUM.47.22.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition < 0
+				exists = scope:prev_event
+				scope:prev_event = 48
+			}
+			# defaulted to 48002210: EventsSex.MF_COWGIRL_III -> EventsCum.MF_CREAMPIE_ON_TOP
+			desc = sex_transition.CUM.48.22.0
 		}
 		triggered_desc = {
 			trigger = {
@@ -9189,6 +9263,15 @@ LIDAc.23 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = 49002310
+				}
+				# Dominating Her Completely
+				# Your rod gets even harder as your climax approaches, [affairs_partner.GetFirstName] #bold moaning loudly#! as she quivers uncontrollably.\n
+				desc = sex_transition.CUM.49.23.0
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = -34003500
 				}
 				# 34003500: EventsSex.MF_MISSIONARY -> EventsSex.MF_PRONE_BONE failed
@@ -9216,11 +9299,38 @@ LIDAc.23 = {
 			triggered_desc = {
 				trigger = {
 					exists = scope:sex_transition
+					scope:sex_transition = -35004900
+				}
+				# 35004900: EventsSex.MF_PRONE_BONE -> EventsSex.MF_PRONE_BONE_II failed
+				# You try to tie [affairs_partner.GetFirstName] up, but her loud moans distracts you just enough for her to make a move.\n
+				desc = sex_transition.35.49.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
 					scope:sex_transition = -35002310
 				}
 				# 35002310: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED failed
 				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
 				desc = sex_transition.CUM.35.23.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -49004900
+				}
+				# 49004900: EventsSex.MF_PRONE_BONE_II -> EventsSex.MF_PRONE_BONE_II failed
+				# You relentlessly keep pounding [affairs_partner.GetFirstName], her loud moans distracting you just enough for her to make a move.\n
+				desc = sex_transition.49.49.666
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:sex_transition
+					scope:sex_transition = -49002310
+				}
+				# 49002310: EventsSex.MF_PRONE_BONE_II -> EventsCum.MF_CREAMPIE_BREED failed
+				# Your rod gets even harder as your climax approaches, but at the last moment your rod #italic slips#! out.\n
+				desc = sex_transition.CUM.49.23.666
 			}
 		}
 		triggered_desc = {
@@ -9242,6 +9352,16 @@ LIDAc.23 = {
 			}
 			# defaulted to 35002310: EventsSex.MF_PRONE_BONE -> EventsCum.MF_CREAMPIE_BREED
 			desc = sex_transition.CUM.35.23.0
+		}
+		triggered_desc = {
+			trigger = {
+				exists = scope:sex_transition
+				scope:sex_transition < 0
+				exists = scope:prev_event
+				scope:prev_event = 49
+			}
+			# defaulted to 49002310: EventsSex.MF_PRONE_BONE_II -> EventsCum.MF_CREAMPIE_BREED
+			desc = sex_transition.CUM.49.23.0
 		}
 		triggered_desc = {
 			trigger = {
