@@ -1,79 +1,79 @@
 ﻿engage_affair_interaction = {
     category = interaction_category_friendly
-    
+
     desc = engage_affair_interaction_desc
-	# icon = icon_scheme_seduce
-	icon = lover
-    
+    # icon = icon_scheme_seduce
+    icon = lover
+
     ai_maybe = yes
-	ai_min_reply_days = 1
-	ai_max_reply_days = 2
-	popup_on_receive = yes
-	pause_on_receive = yes
+    ai_min_reply_days = 1
+    ai_max_reply_days = 2
+    popup_on_receive = yes
+    pause_on_receive = yes
 
 
     interface_priority = 40
     use_diplomatic_range = yes
 
     is_shown = {
-		NOT = { scope:actor = scope:recipient }
+        NOT = { scope:actor = scope:recipient }
         scope:actor = {
             is_adult = yes
-			# TODO not chastity locked when there are chastity belts
-			fertility > 0
-			is_imprisoned = no
-			is_attracted_to_gender_of = scope:recipient
-			is_commanding_army = no
-			is_busy_in_events_unlocalised = no
+            # TODO not chastity locked when there are chastity belts
+            fertility > 0
+            is_imprisoned = no
+            is_attracted_to_gender_of = scope:recipient
+            is_commanding_army = no
+            is_busy_in_events_unlocalised = no
         }
         scope:recipient = {
             OR = {
-				is_spouse_of = scope:actor
-				is_concubine_of = scope:actor
-				is_consort_of = scope:actor
-				is_courtier_of = scope:actor
-				is_pool_guest_of = scope:actor
-				has_relation_lover = scope:actor
-				has_relation_soulmate = scope:actor
-				is_at_same_location = scope:actor
-			}
-		    is_adult = yes
-			fertility > 0
-			is_commanding_army = no
-			is_busy_in_events_unlocalised = no
-			NOT = {
-			#is_close_family_of = scope:actor
-			}
+                is_spouse_of = scope:actor
+                is_concubine_of = scope:actor
+                is_consort_of = scope:actor
+                is_courtier_of = scope:actor
+                is_pool_guest_of = scope:actor
+                has_relation_lover = scope:actor
+                has_relation_soulmate = scope:actor
+                is_at_same_location = scope:actor
+            }
+            is_adult = yes
+            fertility > 0
+            is_commanding_army = no
+            is_busy_in_events_unlocalised = no
+            NOT = {
+            #is_close_family_of = scope:actor
+            }
         }
     }
 
-	# cooldown = { months = engage_affair_interaction_cooldown }
-	cooldown = { days = 2 }
+    # cooldown = { months = engage_affair_interaction_cooldown }
+    cooldown = { days = 2 }
 
     is_valid_showing_failures_only = {
         scope:actor = {
-			carn_can_have_sex_trigger = yes
-			custom_description = {
-				text = has_attempted_affair_trigger
-				NOT = {
-					has_character_flag = has_attempted_affair
-				}
-			}
+            carn_can_have_sex_trigger = yes
+            custom_description = {
+                text = has_attempted_affair_trigger
+                NOT = {
+                    has_character_flag = has_attempted_affair
+                }
+            }
         }
         scope:recipient = {
-			OR = {
-				carn_can_have_sex_trigger = yes
-				# be imprisoned by you
-				AND = {
-					is_alive = yes
-					is_adult = yes
-					is_imprisoned = yes
-					is_imprisoned_by = scope:actor
-				}
-			}
-			is_attracted_to_gender_of = scope:actor
+            OR = {
+                carn_can_have_sex_trigger = yes
+                # be imprisoned by you
+                AND = {
+                    is_alive = yes
+                    is_adult = yes
+                    is_imprisoned = yes
+                    is_imprisoned_by = scope:actor
+                }
+            }
+            is_attracted_to_gender_of = scope:actor
         }
-            
+
         # if this is a paid transaction, actor needs the gold
         trigger_if = {
             limit = {
@@ -94,41 +94,47 @@
 
     #auto_accept = yes
     #Use hook
-	auto_accept = {
-		custom_description = {
-			text = "spending_hook"
-			subject = scope:actor
-			object = scope:recipient
-			scope:hook = yes
-			scope:actor = { has_strong_hook = scope:recipient }
-		}
-	}
+    auto_accept = {
+        custom_description = {
+            text = "spending_hook"
+            subject = scope:actor
+            object = scope:recipient
+            scope:hook = yes
+            scope:actor = { has_strong_hook = scope:recipient }
+        }
+    }
 
     send_option = {
-		is_valid = {
-			scope:actor = {
-				has_usable_hook = scope:recipient
-			}
-		}
-		flag = hook
-		localization = SCHEME_HOOK
-	}
-	should_use_extra_icon = {
-		scope:actor = { has_usable_hook = scope:recipient }
-	}
-	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
-	send_options_exclusive = no
+        is_valid = {
+            scope:actor = {
+                has_usable_hook = scope:recipient
+            }
+        }
+        flag = hook
+        localization = SCHEME_HOOK
+    }
+    should_use_extra_icon = {
+        scope:actor = { has_usable_hook = scope:recipient }
+    }
+    extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+    send_options_exclusive = no
 
     ai_accept = {
-		base = 0 #added 75 for maybe
+        base = 0 #added 75 for maybe
 
-		# auto accept for prisoners
-		modifier = {
-			is_imprisoned = yes
-			is_imprisoned_by = scope:actor
-			desc = engage_affair_imprisoned
-			add = 999
-		}
+        # auto accept for prisoners
+        modifier = {
+            is_imprisoned = yes
+            is_imprisoned_by = scope:actor
+            desc = engage_affair_imprisoned
+            add = 999
+        }
+        # auto accept for slaves
+        modifier = {
+            has_trait = slave
+            desc = engage_affair_slave
+            add = 999
+        }
 
         # sub dom compatibility
         modifier = {
@@ -180,602 +186,610 @@
             add = 15
         }
 
-		# negative reception for pregnancy
-		modifier = {
-			add = -20
-			OR = {
-				has_trait = pregnant 
-				scope:recipient = {
-					has_trait = pregnant
-				}
-			}
-			desc = engage_affair_pregnancy
-		}
+        # negative reception for pregnancy
+        modifier = {
+            add = -20
+            OR = {
+                has_trait = pregnant
+                scope:recipient = {
+                    has_trait = pregnant
+                }
+            }
+            desc = engage_affair_pregnancy
+        }
 
-		# OPINION INFLUENCE
-		modifier = {
-			add = intimidated_external_reason_value
-			scope:recipient = {
-				has_dread_level_towards = {
-					target = scope:actor
-					level = 1
-				}
-			}
-			desc = INTIMIDATED_REASON
-		}
-		modifier = {
-			add = cowed_external_reason_value
-			scope:recipient = {
-				has_dread_level_towards = {
-					target = scope:actor
-					level = 2
-				}
-			}
-			desc = COWED_REASON
-		}
+        # OPINION INFLUENCE
+        modifier = {
+            add = intimidated_external_reason_value
+            scope:recipient = {
+                has_dread_level_towards = {
+                    target = scope:actor
+                    level = 1
+                }
+            }
+            desc = INTIMIDATED_REASON
+        }
+        modifier = {
+            add = cowed_external_reason_value
+            scope:recipient = {
+                has_dread_level_towards = {
+                    target = scope:actor
+                    level = 2
+                }
+            }
+            desc = COWED_REASON
+        }
 
-		modifier = { # They are Married
-			desc = engage_affair_they_are_married
-			scope:recipient = {
-				AND = {
-					is_married = yes
-					NOT = {
-						is_consort_of = scope:actor
-					}
-				}
-			}	
-			add = -20
-		}
+        modifier = { # They are Married
+            desc = engage_affair_they_are_married
+            scope:recipient = {
+                AND = {
+                    is_married = yes
+                    NOT = {
+                        is_consort_of = scope:actor
+                    }
+                }
+            }
+            add = -20
+        }
 
-		modifier = { # I am Married
-			desc = engage_affair_i_am_married
-			scope:actor = {
-				AND = {
-					is_married = yes
-					NOT = {
-						is_consort_of = scope:recipient
-					}
-				}
-			}
-			add = -10
-		}	
+        modifier = { # I am Married
+            desc = engage_affair_i_am_married
+            scope:actor = {
+                AND = {
+                    is_married = yes
+                    NOT = {
+                        is_consort_of = scope:recipient
+                    }
+                }
+            }
+            add = -10
+        }
 
-		modifier = { # Your are both single
-			desc = engage_affair_neither_married
-			AND = {
-				scope:actor = {
-					AND = {
-						is_married = no
-						is_betrothed = no
-					}
-				}
-				scope:recipient = {
-					AND = {
-						is_married = no
-						is_betrothed = no
-					}
-				}
-			}
-			add = 20
-		}
+        modifier = { # You are both single
+            desc = engage_affair_neither_married
+            AND = {
+                scope:actor = {
+                    AND = {
+                        is_married = no
+                        is_betrothed = no
+                    }
+                }
+                scope:recipient = {
+                    AND = {
+                        is_married = no
+                        is_betrothed = no
+                    }
+                }
+            }
+            add = 20
+        }
 
-		opinion_modifier = { #Compare Opinion of Spouse
-			trigger = {
-				scope:recipient = {
-					is_married = yes
-					NOT = {
-						is_consort_of = scope:actor
-					}
-				}
-			}
-			who = scope:recipient
-			opinion_target = scope:recipient.primary_spouse
-			multiplier = -0.75
-			desc = engage_affair_feeling_toward_spouse
-		}
+        opinion_modifier = { #Compare Opinion of Spouse
+            trigger = {
+                scope:recipient = {
+                    is_married = yes
+                    NOT = {
+                        is_consort_of = scope:actor
+                    }
+                }
+            }
+            who = scope:recipient
+            opinion_target = scope:recipient.primary_spouse
+            multiplier = -0.75
+            desc = engage_affair_feeling_toward_spouse
+        }
 
-		opinion_modifier = { #Compare Opinion modifier.
-			who = scope:recipient
-			opinion_target = scope:actor
-			multiplier = 0.5
-		}
+        opinion_modifier = { #Compare Opinion modifier.
+            who = scope:recipient
+            opinion_target = scope:actor
+            multiplier = 0.5
+        }
 
-		modifier = { # They are young
-			desc = engage_affair_they_are_young
-			scope:recipient = {
-				AND = {
-					age <= 20
-					age >= 16
-				}
-			}	
-			add = 15
-		}
+        modifier = { # They are young
+            desc = engage_affair_they_are_young
+            scope:recipient = {
+                AND = {
+                    age <= 20
+                    age >= 16
+                }
+            }
+            add = 15
+        }
 
-		modifier = { # Virgin
-			desc = engage_affair_virgin
-			scope:recipient = {
-				AND = {
-					probably_virgin = yes
-					NOT = {
-						has_character_flag = not_virgin
-					}
-				}	
-			}
-			add = -20
-		}
+        modifier = { # Virgin
+            desc = engage_affair_virgin
+            scope:recipient = {
+                AND = {
+                    probably_virgin = yes
+                    NOT = {
+                        has_character_flag = not_virgin
+                    }
+                }
+            }
+            add = -20
+        }
 
-		modifier = { # They are bonded with you
-			desc = engage_affair_spouse
-			scope:recipient = {
-				is_consort_of = scope:actor
-			}
-			add = 75
-		}
+        modifier = { # They are bonded with you
+            desc = engage_affair_spouse
+            scope:recipient = {
+                is_consort_of = scope:actor
+            }
+            add = 200
+        }
 
-		modifier = { # They are a secondary spouse
-			desc = engage_affair_second_spouse
-			scope:recipient = {
-				is_concubine_of = scope:actor
-			}
-			add = 35
-		}
+        modifier = { # They are a secondary spouse
+            desc = engage_affair_second_spouse
+            scope:recipient = {
+                is_concubine_of = scope:actor
+            }
+            add = 100
+        }
 
-		modifier = { # No Heirs
-			desc = engage_affair_no_heirs
-			OR = {
-				AND = {
-					scope:recipient = { is_consort_of = scope:actor }
-					scope:actor = {
-						NOT = {
-							any_child = {
-								is_heir_of = scope:actor
-							}
-						}
-					}
-				}		
-				scope:actor = {
-					AND = {
-						age > 30
-						scope:actor = {
-							NOT = {
-								any_child = {
-									is_heir_of = scope:actor
-								}
-							}
-						}
-					}	
-				}	
-			}
-			add = 25
-		}
+        modifier = { # No Heirs
+            desc = engage_affair_no_heirs
+            OR = {
+                AND = {
+                    scope:recipient = { is_consort_of = scope:actor }
+                    scope:actor = {
+                        NOT = {
+                            any_child = {
+                                is_heir_of = scope:actor
+                            }
+                        }
+                    }
+                }
+                scope:actor = {
+                    AND = {
+                        age > 30
+                        scope:actor = {
+                            NOT = {
+                                any_child = {
+                                    is_heir_of = scope:actor
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            add = 25
+        }
 
-		modifier = { # They are Courtier
-			desc = engage_affair_courtier
-			scope:recipient = {
-				is_courtier_of = scope:actor
-				NOT = {is_spouse_of = scope:actor
-				}
-				NOT = {is_concubine_of = scope:actor
-				}
-				NOT = {has_relation_lover = scope:actor
-				}
-				NOT = {has_relation_soulmate = scope:actor
-				}
-			}
-			add = 15
-		}		
+        modifier = { # They are Courtier
+            desc = engage_affair_courtier
+            scope:recipient = {
+                is_courtier_of = scope:actor
+                NOT = {is_spouse_of = scope:actor
+                }
+                NOT = {is_concubine_of = scope:actor
+                }
+                NOT = {has_relation_lover = scope:actor
+                }
+                NOT = {has_relation_soulmate = scope:actor
+                }
+            }
+            add = 15
+        }
 
-		modifier = { # They are Guest
-			desc = engage_affair_guest
-			scope:recipient = {
-				is_pool_guest_of = scope:actor
-				NOT = {is_spouse_of = scope:actor
-				}
-				NOT = {is_concubine_of = scope:actor
-				}
-				NOT = {has_relation_lover = scope:actor
-				}
-				NOT = {has_relation_soulmate = scope:actor
-				}
-			}
-			add = 5
-		}
-		
+        modifier = { # They are Guest
+            desc = engage_affair_guest
+            scope:recipient = {
+                is_pool_guest_of = scope:actor
+                NOT = {is_spouse_of = scope:actor
+                }
+                NOT = {is_concubine_of = scope:actor
+                }
+                NOT = {has_relation_lover = scope:actor
+                }
+                NOT = {has_relation_soulmate = scope:actor
+                }
+            }
+            add = 5
+        }
 
-		modifier = { # They are Betrothed
-			desc = engage_affair_aibehavior_betrothedthey_tt
-			scope:recipient = {
-				is_betrothed = yes
-				NOT = {
-					this = scope:actor.betrothed
-				}
-			}
-			add = -10
-		}	
 
-		
-		modifier = { # I am Betrothed
-			desc = engage_affair_aibehavior_betrothedme_tt
-			scope:actor = {
-				is_betrothed = yes
-				NOT = {
-					this = scope:recipient.betrothed
-				}
-			}
-			add = -1
-		}	
+        modifier = { # They are Betrothed
+            desc = engage_affair_aibehavior_betrothedthey_tt
+            scope:recipient = {
+                is_betrothed = yes
+                NOT = {
+                    this = scope:actor.betrothed
+                }
+            }
+            add = -10
+        }
 
-		modifier = { # I am Celibate
-			desc = engage_affair_aibehavior_celibateme_tt
-			scope:actor = {
-				has_trait = celibate
-			}
-			add = -100
-		}
 
-		modifier = { # They are Celibate
-			desc = engage_affair_aibehavior_celibatethey_tt
-			scope:recipient = {
-				has_trait = celibate
-			}
-			add = -100
-		}
+        modifier = { # I am Betrothed
+            desc = engage_affair_aibehavior_betrothedme_tt
+            scope:actor = {
+                is_betrothed = yes
+                NOT = {
+                    this = scope:recipient.betrothed
+                }
+            }
+            add = -1
+        }
 
-		modifier = { # Lustful
-			desc = engage_affair_aibehavior_lustful_tt
-			scope:recipient = {
-				has_trait = lustful
-			}
-			add = 45
-		}
+        modifier = { # I am Celibate
+            desc = engage_affair_aibehavior_celibateme_tt
+            scope:actor = {
+                has_trait = celibate
+            }
+            add = -100
+        }
 
-		modifier = { # Chaste
-			desc = engage_affair_aibehavior_chaste_tt
-			scope:recipient = {
-				has_trait = chaste
-			}
-			add = -20
-		}
+        modifier = { # They are Celibate
+            desc = engage_affair_aibehavior_celibatethey_tt
+            scope:recipient = {
+                has_trait = celibate
+            }
+            add = -100
+        }
 
-		modifier = { # Shy
-			desc = engage_affair_aibehavior_shy_tt
-			scope:recipient = {
-				has_trait = shy
-			}
-			add = -5
-		}
+        modifier = { # Lustful
+            desc = engage_affair_aibehavior_lustful_tt
+            scope:recipient = {
+                has_trait = lustful
+            }
+            add = 45
+        }
 
-		modifier = { # Trusting
-			desc = engage_affair_aibehavior_trusting_tt
-			scope:recipient = {
-				has_trait = trusting
-			}
-			add = 15
-		}
+        modifier = { # Chaste
+            desc = engage_affair_aibehavior_chaste_tt
+            scope:recipient = {
+                has_trait = chaste
+            }
+            add = -20
+        }
 
-		modifier = { # I have Lover's Pox
-			desc = engage_affair_aibehavior_loverspoxme_tt
-			scope:actor = {
-				has_trait = lovers_pox
-			}
-			add = -30
-		}
+        modifier = { # Shy
+            desc = engage_affair_aibehavior_shy_tt
+            scope:recipient = {
+                has_trait = shy
+            }
+            add = -5
+        }
 
-		modifier = { # They have Lover's Pox
-			desc = engage_affair_aibehavior_loverspoxthey_tt
-			scope:recipient = {
-				has_trait = lovers_pox
-			}
-			add = -15
-		}
+        modifier = { # Trusting
+            desc = engage_affair_aibehavior_trusting_tt
+            scope:recipient = {
+                has_trait = trusting
+            }
+            add = 15
+        }
 
-		modifier = { # I have Great Pox
-			desc = engage_affair_aibehavior_greatpoxme_tt
-			scope:actor = {
-				has_trait = great_pox
-			}
-			add = -40
-		}
+        modifier = { # I have Lover's Pox
+            desc = engage_affair_aibehavior_loverspoxme_tt
+            scope:actor = {
+                has_trait = lovers_pox
+            }
+            add = -30
+        }
 
-		modifier = { # They have Great Pox
-			desc = engage_affair_aibehavior_greatpoxthey_tt
-			scope:recipient = {
-				has_trait = great_pox
-			}
-			add = -20
-		}
+        modifier = { # They have Lover's Pox
+            desc = engage_affair_aibehavior_loverspoxthey_tt
+            scope:recipient = {
+                has_trait = lovers_pox
+            }
+            add = -15
+        }
 
-		modifier = { # I am Impotent
-			desc = engage_affair_aibehavior_impotentme_tt
-			scope:actor = {
-				has_trait = impotent
-			}
-			add = -10
-		}
+        modifier = { # I have Great Pox
+            desc = engage_affair_aibehavior_greatpoxme_tt
+            scope:actor = {
+                has_trait = great_pox
+            }
+            add = -40
+        }
 
-		modifier = { # They are Impotent
-			desc = engage_affair_aibehavior_impotentthey_tt
-			scope:recipient = {
-				has_trait = impotent
-			}
-			add = -15
-		}
+        modifier = { # They have Great Pox
+            desc = engage_affair_aibehavior_greatpoxthey_tt
+            scope:recipient = {
+                has_trait = great_pox
+            }
+            add = -20
+        }
 
-		modifier = { # I have Gout
-			desc = engage_affair_aibehavior_goutme_tt
-			scope:actor = {
-				has_trait = gout_ridden 
-			}
-			add = -20
-		}
+        modifier = { # I am Impotent
+            desc = engage_affair_aibehavior_impotentme_tt
+            scope:actor = {
+                has_trait = impotent
+            }
+            add = -10
+        }
 
-		modifier = { # They have Gout
-			desc = engage_affair_aibehavior_goutthey_tt
-			scope:recipient = {
-				has_trait = gout_ridden
-			}
-			add = -10
-		}
+        modifier = { # They are Impotent
+            desc = engage_affair_aibehavior_impotentthey_tt
+            scope:recipient = {
+                has_trait = impotent
+            }
+            add = -15
+        }
 
-		modifier = { # I am Ill
-			desc = engage_affair_aibehavior_illme_tt
-			scope:actor = {
-				has_trait = ill
-			}
-			add = -25
-		}
+        modifier = { # I have Gout
+            desc = engage_affair_aibehavior_goutme_tt
+            scope:actor = {
+                has_trait = gout_ridden
+            }
+            add = -20
+        }
 
-		modifier = { # They are Ill
-			desc = engage_affair_aibehavior_illthey_tt
-			scope:recipient = {
-				has_trait = ill
-			}
-			add = -20
-		}
+        modifier = { # They have Gout
+            desc = engage_affair_aibehavior_goutthey_tt
+            scope:recipient = {
+                has_trait = gout_ridden
+            }
+            add = -10
+        }
 
-		modifier = { # I have Pneumonia
-			desc = engage_affair_aibehavior_pneumonicme_tt
-			scope:actor = {
-				has_trait = pneumonic
-			}
-			add = -40
-		}
+        modifier = { # I am Ill
+            desc = engage_affair_aibehavior_illme_tt
+            scope:actor = {
+                has_trait = ill
+            }
+            add = -25
+        }
 
-		modifier = { # They have Pneumonia
-			desc = engage_affair_aibehavior_pneumonicthey_tt
-			scope:recipient = {
-				has_trait = pneumonic
-			}
-			add = -30
-		}
+        modifier = { # They are Ill
+            desc = engage_affair_aibehavior_illthey_tt
+            scope:recipient = {
+                has_trait = ill
+            }
+            add = -20
+        }
 
-		modifier = { # I have Consumption
-			desc = engage_affair_aibehavior_consumptionme_tt
-			scope:actor = {
-				has_trait = consumption
-			}
-			add = -30
-		}
+        modifier = { # I have Pneumonia
+            desc = engage_affair_aibehavior_pneumonicme_tt
+            scope:actor = {
+                has_trait = pneumonic
+            }
+            add = -40
+        }
 
-		modifier = { # They have Consumption
-			desc = engage_affair_aibehavior_consumptionthey_tt
-			scope:recipient = {
-				has_trait = consumption
-			}
-			add = -25
-		}
+        modifier = { # They have Pneumonia
+            desc = engage_affair_aibehavior_pneumonicthey_tt
+            scope:recipient = {
+                has_trait = pneumonic
+            }
+            add = -30
+        }
 
-		modifier = { # I have Smallpox
-			desc = engage_affair_aibehavior_smallpoxme_tt
-			scope:actor = {
-				has_trait = smallpox
-			}
-			add = -60
-		}
+        modifier = { # I have Consumption
+            desc = engage_affair_aibehavior_consumptionme_tt
+            scope:actor = {
+                has_trait = consumption
+            }
+            add = -30
+        }
 
-		modifier = { # They have Smallpox
-			desc = engage_affair_aibehavior_smallpoxthey_tt
-			scope:recipient = {
-				has_trait = smallpox
-			}
-			add = -50
-		}
+        modifier = { # They have Consumption
+            desc = engage_affair_aibehavior_consumptionthey_tt
+            scope:recipient = {
+                has_trait = consumption
+            }
+            add = -25
+        }
 
-		modifier = { # I have Typhus
-			desc = engage_affair_aibehavior_typhusme_tt
-			scope:actor = {
-				has_trait = typhus
-			}
-			add = -65
-		}
+        modifier = { # I have Smallpox
+            desc = engage_affair_aibehavior_smallpoxme_tt
+            scope:actor = {
+                has_trait = smallpox
+            }
+            add = -60
+        }
 
-		modifier = { # They have Typhus
-			desc = engage_affair_aibehavior_typhusthey_tt
-			scope:recipient = {
-				has_trait = typhus
-			}
-			add = -55
-		}
+        modifier = { # They have Smallpox
+            desc = engage_affair_aibehavior_smallpoxthey_tt
+            scope:recipient = {
+                has_trait = smallpox
+            }
+            add = -50
+        }
 
-		modifier = { # I have Plague
-			desc = engage_affair_aibehavior_plagueme_tt
-			scope:actor = {
-				has_trait = bubonic_plague
-			}
-			add = -80
-		}
+        modifier = { # I have Typhus
+            desc = engage_affair_aibehavior_typhusme_tt
+            scope:actor = {
+                has_trait = typhus
+            }
+            add = -65
+        }
 
-		modifier = { # They have Plague
-			desc = engage_affair_aibehavior_plaguethey_tt
-			scope:recipient = {
-				has_trait = bubonic_plague
-			}
-			add = -75
-		}
+        modifier = { # They have Typhus
+            desc = engage_affair_aibehavior_typhusthey_tt
+            scope:recipient = {
+                has_trait = typhus
+            }
+            add = -55
+        }
 
-		modifier = { # I have Leprosy
-			desc = engage_affair_aibehavior_leperme_tt
-			scope:actor = {
-				has_trait = leper
-			}
-			add = -95
-		}
+        modifier = { # I have Plague
+            desc = engage_affair_aibehavior_plagueme_tt
+            scope:actor = {
+                has_trait = bubonic_plague
+            }
+            add = -80
+        }
 
-		modifier = { # They have Leprosy
-			desc = engage_affair_aibehavior_leperthey_tt
-			scope:recipient = {
-				has_trait = leper
-			}
-			add = -90
-		}
+        modifier = { # They have Plague
+            desc = engage_affair_aibehavior_plaguethey_tt
+            scope:recipient = {
+                has_trait = bubonic_plague
+            }
+            add = -75
+        }
 
-		modifier = { #I am a King!
-			desc = engage_affair_aibehavior_amking_tt
-			trigger = {
-				scope:actor = { highest_held_title_tier = tier_kingdom }
-			}
-			add = 15
-		}
+        modifier = { # I have Leprosy
+            desc = engage_affair_aibehavior_leperme_tt
+            scope:actor = {
+                has_trait = leper
+            }
+            add = -95
+        }
 
-		modifier = { #I am an Emperor!
-			desc = engage_affair_aibehavior_amking_tt
-			trigger = {
-				scope:actor = { highest_held_title_tier = tier_empire }
-			}
-			add = 35
-		}
+        modifier = { # They have Leprosy
+            desc = engage_affair_aibehavior_leperthey_tt
+            scope:recipient = {
+                has_trait = leper
+            }
+            add = -90
+        }
 
-		modifier = { #Friend modifier.
-			desc = offer_vassalization_interaction_aibehavior_friend_tt
-			trigger = {
-				scope:recipient = {
-					has_relation_friend = scope:actor
-					NOT = { has_relation_best_friend = scope:actor }
-				}
-			}
-			add = 20
-		}
-		
-		modifier = { #Best Friend modifier.
-			desc = offer_vassalization_interaction_aibehavior_best_friend_tt
-			trigger = {
-				scope:recipient = {
-					has_relation_best_friend = scope:actor
-				}
-			}
-			add = 30
-		}
+        modifier = { #I am a King!
+            desc = engage_affair_aibehavior_amking_tt
+            trigger = {
+                scope:actor = { highest_held_title_tier = tier_kingdom }
+            }
+            add = 15
+        }
 
-		modifier = { #Lover Modifier
-			desc = engage_affair_aibehavior_lover_tt
-			trigger = {
-				scope:recipient = {
-					has_relation_lover = scope:actor
-				}
-			}
-			add = 80
-		}
+        modifier = { #I am an Emperor!
+            desc = engage_affair_aibehavior_amking_tt
+            trigger = {
+                scope:actor = { highest_held_title_tier = tier_empire }
+            }
+            add = 35
+        }
 
-		modifier = { #Soulmate Modifier
-			desc = engage_affair_aibehavior_soulmate_tt
-			trigger = {
-				scope:recipient = {
-					has_relation_soulmate = scope:actor
-				}
-			}
-			add = 200
-		}
+        modifier = { #Friend modifier.
+            desc = offer_vassalization_interaction_aibehavior_friend_tt
+            trigger = {
+                scope:recipient = {
+                    has_relation_friend = scope:actor
+                    NOT = { has_relation_best_friend = scope:actor }
+                }
+            }
+            add = 20
+        }
 
-		modifier = { #Rivalry modifier.
-			desc = offer_vassalization_interaction_aibehavior_rival_tt
-			trigger = {
-				scope:recipient = {
-					has_relation_rival = scope:actor
-					NOT = { has_relation_nemesis = scope:actor }
-				}
-			}
-			add = -25
-		}
-		
-		modifier = { #Nemesis modifier.
-			desc = offer_vassalization_interaction_aibehavior_nemesis_tt
-			trigger = {
-				scope:recipient = {
-					has_relation_nemesis = scope:actor
-				}
-			}
-			add = -75
-		}
-		
-		modifier = { #Language modifiers.
-			desc = speaks_same_language_interaction_reason
-			add = 10
-			scope:actor = {
-				knows_language_of_culture = scope:recipient.culture
-			}
-		}	 
-		
-		modifier = { #Cultural modifiers.
-			desc = offer_vassalization_interaction_aibehavior_culture_tt
-			add = -10
-			scope:actor = {
-				NOT = { has_same_culture_as = scope:recipient }
-			}
-		}
+        modifier = { #Best Friend modifier.
+            desc = offer_vassalization_interaction_aibehavior_best_friend_tt
+            trigger = {
+                scope:recipient = {
+                    has_relation_best_friend = scope:actor
+                }
+            }
+            add = 30
+        }
 
-		modifier = { #Heritage modifiers.
-			desc = offer_vassalization_interaction_aibehavior_culture_group_tt
-			add = -5
-			scope:actor = {
-				NOT = { culture = { has_same_culture_heritage = scope:recipient.culture } }
-			}
-		}
+        modifier = { #Lover Modifier
+            desc = engage_affair_aibehavior_lover_tt
+            trigger = {
+                scope:recipient = {
+                    has_relation_lover = scope:actor
+                }
+            }
+            add = 100
+        }
 
-		modifier = { #Faith modifiers.
-			desc = offer_vassalization_interaction_aibehavior_differentfaith_tt
-			add = -5
-			scope:actor = {
-				NOT = { faith = scope:recipient.faith }
-			}
-		}
+        modifier = { #Soulmate Modifier
+            desc = engage_affair_aibehavior_soulmate_tt
+            trigger = {
+                scope:recipient = {
+                    has_relation_soulmate = scope:actor
+                }
+            }
+            add = 200
+        }
 
-		modifier = { #Close Family modifier.
-			desc = engage_affair_aibehavior_clfamily_tt
-			add = -10
-			scope:actor = {
-				AND = {
-					is_close_family_of = scope:recipient
-					NOR = {
-						is_consort_of = scope:recipient
-						has_relation_lover = scope:recipient
-						has_relation_soulmate = scope:recipient
-					}
-				}
-			}
-		}
+        modifier = { #Rivalry modifier.
+            desc = offer_vassalization_interaction_aibehavior_rival_tt
+            trigger = {
+                scope:recipient = {
+                    has_relation_rival = scope:actor
+                    NOT = { has_relation_nemesis = scope:actor }
+                }
+            }
+            add = -25
+        }
 
-		modifier = { #Extended Family modifier.
-			desc = engage_affair_aibehavior_exfamily_tt
-			add = -5
-			scope:actor = {
-				AND = {
-					is_extended_family_of = scope:recipient
-					NOR = {
-						is_consort_of = scope:recipient
-						has_relation_lover = scope:recipient
-						has_relation_soulmate = scope:recipient
-					}
-				}
-			}
-		}
-	}
+        modifier = { #Nemesis modifier.
+            desc = offer_vassalization_interaction_aibehavior_nemesis_tt
+            trigger = {
+                scope:recipient = {
+                    has_relation_nemesis = scope:actor
+                }
+            }
+            add = -75
+        }
+
+        modifier = { #Language modifiers.
+            desc = speaks_same_language_interaction_reason
+            add = 10
+            scope:actor = {
+                knows_language_of_culture = scope:recipient.culture
+            }
+        }
+
+        modifier = { #Cultural modifiers.
+            desc = offer_vassalization_interaction_aibehavior_culture_tt
+            add = -5
+            scope:actor = {
+                NOT = { has_same_culture_as = scope:recipient }
+            }
+        }
+
+        modifier = { #Heritage modifiers.
+            desc = offer_vassalization_interaction_aibehavior_culture_group_tt
+            add = -5
+            scope:actor = {
+                NOT = { culture = { has_same_culture_heritage = scope:recipient.culture } }
+            }
+        }
+
+        modifier = { #Faith modifiers.
+            desc = offer_vassalization_interaction_aibehavior_differentfaith_tt
+            add = -5
+            scope:actor = {
+                NOT = { faith = scope:recipient.faith }
+            }
+        }
+
+        modifier = { #Faith modifiers.
+            desc = offer_vassalization_interaction_aibehavior_differentfaith_tt
+            add = 5
+            scope:actor = {
+                faith = scope:recipient.faith
+            }
+        }
+
+        modifier = { #Close Family modifier.
+            desc = engage_affair_aibehavior_clfamily_tt
+            add = -10
+            scope:actor = {
+                AND = {
+                    is_close_family_of = scope:recipient
+                    NOR = {
+                        is_consort_of = scope:recipient
+                        has_relation_lover = scope:recipient
+                        has_relation_soulmate = scope:recipient
+                    }
+                }
+            }
+        }
+
+        modifier = { #Extended Family modifier.
+            desc = engage_affair_aibehavior_exfamily_tt
+            add = -5
+            scope:actor = {
+                AND = {
+                    is_extended_family_of = scope:recipient
+                    NOR = {
+                        is_consort_of = scope:recipient
+                        has_relation_lover = scope:recipient
+                        has_relation_soulmate = scope:recipient
+                    }
+                }
+            }
+        }
+    }
 
     on_accept = {
         scope:actor = {
-			add_character_flag = {
-				flag = has_attempted_affair
-				days = 30
-			}
+            add_character_flag = {
+                flag = has_attempted_affair
+                days = 30
+            }
 
             # pay money for prostitution, and possibly lose piety if your faith dislikes this
             if = {
@@ -835,34 +849,34 @@
 
             # request the sex scene
             hidden_effect = {
-				scope:recipient = {
-					save_scope_as = affairs_partner
-				}
-				lida_start_sex_effect = { TRIGGER_RANDOM_EVENT = no }
-				select_start_affairs_effect = yes
+                scope:recipient = {
+                    save_scope_as = affairs_partner
+                }
+                lida_start_sex_effect = { TRIGGER_RANDOM_EVENT = no }
+                select_start_affairs_effect = yes
             }
         }
     }
 
-	on_decline_summary = engage_affair_decline_summary
+    on_decline_summary = engage_affair_decline_summary
 
     on_decline = {
-		scope:actor = {
-			trigger_event = LIDA.51
-			stress_impact = {
-				base = minor_stress_impact_gain
-				chaste = medium_stress_impact_gain
-				lustful = miniscule_stress_impact_gain
-				shy = medium_stress_impact_gain
-			}
-			add_character_flag = {
-				flag = has_attempted_affair
-				days = 14
-			}
-		}
+        scope:actor = {
+            trigger_event = LIDA.51
+            stress_impact = {
+                base = minor_stress_impact_gain
+                chaste = medium_stress_impact_gain
+                lustful = miniscule_stress_impact_gain
+                shy = medium_stress_impact_gain
+            }
+            add_character_flag = {
+                flag = has_attempted_affair
+                days = 14
+            }
+        }
     }
 
     ai_will_do = {
-		base = 0 #The AI should never do this!
-	}
+        base = 0 #The AI should never do this!
+    }
 }

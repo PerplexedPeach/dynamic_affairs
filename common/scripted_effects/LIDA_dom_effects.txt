@@ -1,495 +1,667 @@
 ﻿# map relationship value to a stored scope value
 store_subdom_value_effect = {
-	save_scope_value_as = {
-		name = subdom
-		value = {
-			if = {
-				limit = {
-					NOT = {
-						reverse_has_opinion_modifier = {
-							target = scope:affairs_partner
-							modifier = dominant_opinion
-						}
-					}
-				}
-				add = 0
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= -30
-					}
-				}
-				add = -30
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= -25
-					}
-				}
-				add = -25
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= -20
-					}
-				}
-				add = -20
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= -15
-					}
-				}
-				add = -15
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= -10
-					}
-				}
-				add = -10
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= -5
-					}
-				}
-				add = -5
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= 5
-					}
-				}
-				add = 0
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= 10
-					}
-				}
-				add = 5
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= 15
-					}
-				}
-				add = 10
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= 20
-					}
-				}
-				add = 15
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= 25
-					}
-				}
-				add = 20
-			}
-			else_if = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						target = scope:affairs_partner
-						modifier = dominant_opinion
-						value <= 30
-					}
-				}
-				add = 25
-			}
-			else = {
-				add = 30
-			}
-		}
-	}
+    save_scope_value_as = {
+        name = subdom
+        value = {
+            if = {
+                limit = {
+                    NOT = {
+                        reverse_has_opinion_modifier = {
+                            target = scope:affairs_partner
+                            modifier = dominant_opinion
+                        }
+                    }
+                }
+                add = 0
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= -30
+                    }
+                }
+                add = -30
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= -25
+                    }
+                }
+                add = -25
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= -20
+                    }
+                }
+                add = -20
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= -15
+                    }
+                }
+                add = -15
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= -10
+                    }
+                }
+                add = -10
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= -5
+                    }
+                }
+                add = -5
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= 5
+                    }
+                }
+                add = 0
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= 10
+                    }
+                }
+                add = 5
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= 15
+                    }
+                }
+                add = 10
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= 20
+                    }
+                }
+                add = 15
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= 25
+                    }
+                }
+                add = 20
+            }
+            else_if = {
+                limit = {
+                    reverse_has_opinion_modifier = {
+                        target = scope:affairs_partner
+                        modifier = dominant_opinion
+                        value <= 30
+                    }
+                }
+                add = 25
+            }
+            else = {
+                add = 30
+            }
+        }
+    }
 }
 
 # expects character scope with a scope:affairs_partner character
 # effects for progressing a sex event
 calculate_dom_success_effect = {
-	save_scope_value_as = {
-		# underlying subbiness / domminess
-		name = dom_chance_subdom_nature
-		value = {
-			add = 0
-			if = {
-				limit = {
-					has_trait_xp = {
-						trait = lida_dom_track
-						value >= lida_track_xp_stage_3
-					}
-				}
-				add = 15
-			}
-			else_if = {
-				limit = {
-					has_trait_xp = {
-						trait = lida_dom_track
-						value >= lida_track_xp_stage_2
-					}
-				}
-				add = 10
-			}
-			else_if = {
-				limit = {
-					has_trait_xp = {
-						trait = lida_dom_track
-						value >= lida_track_xp_stage_1
-					}
-				}
-				add = 5
-			}
-			if = {
-				limit = {
-					has_trait_xp = {
-						trait = lida_sub_track
-						value >= lida_track_xp_stage_3
-					}
-				}
-				add = -15
-			}
-			else_if = {
-				limit = {
-					has_trait_xp = {
-						trait = lida_sub_track
-						value >= lida_track_xp_stage_2
-					}
-				}
-				add = -10
-			}
-			else_if = {
-				limit = {
-					has_trait_xp = {
-						trait = lida_sub_track
-						value >= lida_track_xp_stage_1
-					}
-				}
-				add = -5
-			}
-			scope:affairs_partner = {
-				if = {
-					limit = {
-						has_trait_xp = {
-							trait = lida_dom_track
-							value >= lida_track_xp_stage_3
-						}
-					}
-					add = -15
-				}
-				else_if = {
-					limit = {
-						has_trait_xp = {
-							trait = lida_dom_track
-							value >= lida_track_xp_stage_2
-						}
-					}
-					add = -10
-				}
-				else_if = {
-					limit = {
-						has_trait_xp = {
-							trait = lida_dom_track
-							value >= lida_track_xp_stage_1
-						}
-					}
-					add = -5
-				}
-				if = {
-					limit = {
-						has_trait_xp = {
-							trait = lida_sub_track
-							value >= lida_track_xp_stage_3
-						}
-					}
-					add = 15
-				}
-				else_if = {
-					limit = {
-						has_trait_xp = {
-							trait = lida_sub_track
-							value >= lida_track_xp_stage_2
-						}
-					}
-					add = 10
-				}
-				else_if = {
-					limit = {
-						has_trait_xp = {
-							trait = lida_sub_track
-							value >= lida_track_xp_stage_1
-						}
-					}
-					add = 5
-				}
-			}
-		}
-	}
-	save_temporary_scope_value_as = {
-		name = prowess_diff
-		value = {
-			add = prowess
-			subtract = scope:affairs_partner.prowess
-		}
-	}
-	save_temporary_scope_value_as = {
-		name = prowess_diff_abs
-		value = {
-			add = scope:prowess_diff
-			# ensure positive while being manipulated
-			if = {
-				limit = {
-					scope:prowess_diff < 0
-				}
-				multiply = -1
-			}
-		}
-	}
-	save_scope_value_as = {
-		name = dom_chance_prowess
-		value = {
-			# use difference in prowess to compute success chance
-			# physically stronger / more robust
-			# to get diminishing returns we have
-			# diff / (diff + XX) * YY
-			add = scope:prowess_diff_abs
-			divide = {
-				value = {
-					add = scope:prowess_diff_abs
-					add = 20
-				}
-			}
-			multiply = 30
-			# restore original sign
-			if = {
-				limit = {
-					scope:prowess_diff < 0
-				}
-				multiply = -1
-			}
-		}
-	}
-	save_scope_value_as = {
-		name = dom_chance_lust_beauty
-		value = {
-			add = 0
-			# if lustful, then success decrease if the partner is hot
-			if = {
-				limit = {
-					has_trait = lustful
-					scope:affairs_partner = {
-						has_trait = beauty_good_1
-					}
-				}
-				add = -5
-			}
-			else_if = {
-				limit = {
-					has_trait = lustful
-					scope:affairs_partner = {
-						has_trait = beauty_good_2
-					}
-				}
-				add = -10
-			}
-			else_if = {
-				limit = {
-					has_trait = lustful
-					scope:affairs_partner = {
-						has_trait = beauty_good_3
-					}
-				}
-				add = -15
-			}
-			if = {
-				limit = {
-					has_trait = beauty_good
-					scope:affairs_partner = {
-						has_trait = lustful
-					}
-				}
-				add = 5
-			}
-			else_if = {
-				limit = {
-					has_trait = beauty_good_2
-					scope:affairs_partner = {
-						has_trait = lustful
-					}
-				}
-				add = 10
-			}
-			else_if = {
-				limit = {
-					has_trait = beauty_good_3
-					scope:affairs_partner = {
-						has_trait = lustful
-					}
-				}
-				add = 15
-			}
-		}
-	}
-	save_scope_value_as = {
-		name = dom_chance_title_authority
-		value = {
-			add = 0
-			# every rank difference has preconceived differences in power (higher rank easier to dom lower rank)
-			if = {
-				limit = {
-					tier_difference = {
-						target = scope:affairs_partner
-						value = 1
-					}
-				}
-				add = 5
-			}
-			else_if = {
-				limit = {
-					tier_difference = {
-						target = scope:affairs_partner
-						value = 2
-					}
-				}
-				add = 10
-			}
-			else_if = {
-				limit = {
-					tier_difference = {
-						target = scope:affairs_partner
-						value = 3
-					}
-				}
-				add = 15
-			}
-			else_if = {
-				limit = {
-					tier_difference = {
-						target = scope:affairs_partner
-						value = 4
-					}
-				}
-				add = 20
-			}
-			else_if = {
-				limit = {
-					tier_difference = {
-						target = scope:affairs_partner
-						value >= 5
-					}
-				}
-				add = 25
-			}
-			else_if = {
-				limit = {
-					tier_difference = {
-						target = scope:affairs_partner
-						value = -1
-					}
-				}
-				add = -5
-			}
-			else_if = {
-				limit = {
-					tier_difference = {
-						target = scope:affairs_partner
-						value = -2
-					}
-				}
-				add = -10
-			}
-			else_if = {
-				limit = {
-					tier_difference = {
-						target = scope:affairs_partner
-						value = -3
-					}
-				}
-				add = -15
-			}
-			else_if = {
-				limit = {
-					tier_difference = {
-						target = scope:affairs_partner
-						value = -4
-					}
-				}
-				add = -20
-			}
-			else_if = {
-				limit = {
-					tier_difference = {
-						target = scope:affairs_partner
-						value <= -5
-					}
-				}
-				add = -25
-			}
-		}
-	}
-
-	save_scope_value_as = {
-		name = dom_chance_stubborness
-		value = {
-			add = 0
-			# stubborn characters dom more easily (persistence)
-			if = {
-				limit = {
-					has_trait = stubborn
-				}
-				add = 15
-			}
-			if = {
-				limit = {
-					scope:affairs_partner = {
-						has_trait = stubborn
-					}
-				}
-				add = -15
-			}
-		}
-	}
+    save_scope_value_as = {
+        # underlying subbiness / domminess
+        name = dom_chance_subdom_nature
+        value = {
+            add = 0
+            if = {
+                limit = {
+                    has_trait_xp = {
+                        trait = lida_dom_track
+                        value >= lida_track_xp_stage_3
+                    }
+                }
+                add = 15
+            }
+            else_if = {
+                limit = {
+                    has_trait_xp = {
+                        trait = lida_dom_track
+                        value >= lida_track_xp_stage_2
+                    }
+                }
+                add = 10
+            }
+            else_if = {
+                limit = {
+                    has_trait_xp = {
+                        trait = lida_dom_track
+                        value >= lida_track_xp_stage_1
+                    }
+                }
+                add = 5
+            }
+            if = {
+                limit = {
+                    has_trait_xp = {
+                        trait = lida_sub_track
+                        value >= lida_track_xp_stage_3
+                    }
+                }
+                add = -15
+            }
+            else_if = {
+                limit = {
+                    has_trait_xp = {
+                        trait = lida_sub_track
+                        value >= lida_track_xp_stage_2
+                    }
+                }
+                add = -10
+            }
+            else_if = {
+                limit = {
+                    has_trait_xp = {
+                        trait = lida_sub_track
+                        value >= lida_track_xp_stage_1
+                    }
+                }
+                add = -5
+            }
+            scope:affairs_partner = {
+                if = {
+                    limit = {
+                        has_trait_xp = {
+                            trait = lida_dom_track
+                            value >= lida_track_xp_stage_3
+                        }
+                    }
+                    add = -15
+                }
+                else_if = {
+                    limit = {
+                        has_trait_xp = {
+                            trait = lida_dom_track
+                            value >= lida_track_xp_stage_2
+                        }
+                    }
+                    add = -10
+                }
+                else_if = {
+                    limit = {
+                        has_trait_xp = {
+                            trait = lida_dom_track
+                            value >= lida_track_xp_stage_1
+                        }
+                    }
+                    add = -5
+                }
+                if = {
+                    limit = {
+                        has_trait_xp = {
+                            trait = lida_sub_track
+                            value >= lida_track_xp_stage_3
+                        }
+                    }
+                    add = 15
+                }
+                else_if = {
+                    limit = {
+                        has_trait_xp = {
+                            trait = lida_sub_track
+                            value >= lida_track_xp_stage_2
+                        }
+                    }
+                    add = 10
+                }
+                else_if = {
+                    limit = {
+                        has_trait_xp = {
+                            trait = lida_sub_track
+                            value >= lida_track_xp_stage_1
+                        }
+                    }
+                    add = 5
+                }
+            }
+        }
+    }
+    save_temporary_scope_value_as = {
+        name = prowess_diff
+        value = {
+            add = prowess
+            subtract = scope:affairs_partner.prowess
+        }
+    }
+    save_temporary_scope_value_as = {
+        name = prowess_diff_abs
+        value = {
+            add = scope:prowess_diff
+            # ensure positive while being manipulated
+            if = {
+                limit = {
+                    scope:prowess_diff < 0
+                }
+                multiply = -1
+            }
+        }
+    }
+    save_scope_value_as = {
+        name = dom_chance_prowess
+        value = {
+            # use difference in prowess to compute success chance
+            # physically stronger / more robust
+            # to get diminishing returns we have
+            # diff / (diff + XX) * YY
+            add = scope:prowess_diff_abs
+            divide = {
+                value = {
+                    add = scope:prowess_diff_abs
+                    add = 20
+                }
+            }
+            multiply = 30
+            # restore original sign
+            if = {
+                limit = {
+                    scope:prowess_diff < 0
+                }
+                multiply = -1
+            }
+        }
+    }
+    save_scope_value_as = {
+        name = dom_chance_lust_beauty
+        value = {
+            add = 0
+            # if lustful, then success decrease if the partner is hot
+            if = {
+                limit = {
+                    has_trait = lustful
+                    scope:affairs_partner = {
+                        has_trait = beauty_good_1
+                    }
+                }
+                add = -5
+            }
+            else_if = {
+                limit = {
+                    has_trait = lustful
+                    scope:affairs_partner = {
+                        has_trait = beauty_good_2
+                    }
+                }
+                add = -10
+            }
+            else_if = {
+                limit = {
+                    has_trait = lustful
+                    scope:affairs_partner = {
+                        has_trait = beauty_good_3
+                    }
+                }
+                add = -15
+            }
+            if = {
+                limit = {
+                    has_trait = beauty_good
+                    scope:affairs_partner = {
+                        has_trait = lustful
+                    }
+                }
+                add = 5
+            }
+            else_if = {
+                limit = {
+                    has_trait = beauty_good_2
+                    scope:affairs_partner = {
+                        has_trait = lustful
+                    }
+                }
+                add = 10
+            }
+            else_if = {
+                limit = {
+                    has_trait = beauty_good_3
+                    scope:affairs_partner = {
+                        has_trait = lustful
+                    }
+                }
+                add = 15
+            }
+        }
+    }
+    save_scope_value_as = {
+        name = dom_chance_lust_tits
+        value = {
+            add = 0
+            # if lustful, then success decrease if the partner has big tits
+            if = {
+                limit = {
+                    has_trait = lustful
+                    scope:affairs_partner = {
+                        has_trait = tits_big_good_1
+                    }
+                }
+                add = -5
+            }
+            else_if = {
+                limit = {
+                    has_trait = lustful
+                    scope:affairs_partner = {
+                        has_trait = tits_big_good_2
+                    }
+                }
+                add = -10
+            }
+            else_if = {
+                limit = {
+                    has_trait = lustful
+                    scope:affairs_partner = {
+                        has_trait = tits_big_good_3
+                    }
+                }
+                add = -15
+            }
+            if = {
+                limit = {
+                    has_trait = tits_big_good_1
+                    scope:affairs_partner = {
+                        has_trait = lustful
+                    }
+                }
+                add = 5
+            }
+            else_if = {
+                limit = {
+                    has_trait = tits_big_good_2
+                    scope:affairs_partner = {
+                        has_trait = lustful
+                    }
+                }
+                add = 10
+            }
+            else_if = {
+                limit = {
+                    has_trait = tits_big_good_3
+                    scope:affairs_partner = {
+                        has_trait = lustful
+                    }
+                }
+                add = 15
+            }
+        }
+    }
+    save_scope_value_as = {
+        name = dom_chance_title_authority
+        value = {
+            add = 0
+            # every rank difference has preconceived differences in power (higher rank easier to dom lower rank)
+            if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = 1
+                    }
+                }
+                add = 5
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = 2
+                    }
+                }
+                add = 10
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = 3
+                    }
+                }
+                add = 15
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = 4
+                    }
+                }
+                add = 20
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value >= 5
+                    }
+                }
+                add = 25
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = -1
+                    }
+                }
+                add = -5
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = -2
+                    }
+                }
+                add = -10
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = -3
+                    }
+                }
+                add = -15
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value = -4
+                    }
+                }
+                add = -20
+            }
+            else_if = {
+                limit = {
+                    tier_difference = {
+                        target = scope:affairs_partner
+                        value <= -5
+                    }
+                }
+                add = -25
+            }
+        }
+    }
+    save_scope_value_as = {
+        name = dom_chance_title_amb
+        value = {
+            add = 0
+            if = {
+                limit = {
+                    scope:affairs_partner = { has_trait = ambitious }
+                }
+                # malus if partner is ambitious (doubled to counter the title bonus)
+                add = {
+                    if = {
+                        limit = {
+                            tier_difference = {
+                                target = scope:affairs_partner
+                                value = 1
+                            }
+                        }
+                        add = -10
+                    }
+                    else_if = {
+                        limit = {
+                            tier_difference = {
+                                target = scope:affairs_partner
+                                value = 2
+                            }
+                        }
+                        add = -20
+                    }
+                    else_if = {
+                        limit = {
+                            tier_difference = {
+                                target = scope:affairs_partner
+                                value = 3
+                            }
+                        }
+                        add = -30
+                    }
+                    else_if = {
+                        limit = {
+                            tier_difference = {
+                                target = scope:affairs_partner
+                                value = 4
+                            }
+                        }
+                        add = -40
+                    }
+                    else_if = {
+                        limit = {
+                            tier_difference = {
+                                target = scope:affairs_partner
+                                value >= 5
+                            }
+                        }
+                        add = -50
+                    }
+                }
+                else_if = {
+                    limit = {
+                        has_trait = ambitious
+                    }
+                    # you are ambitious and wants their titles (doubled bonus to counter title penalty)
+                    add = {
+                        if = {
+                            limit = {
+                                tier_difference = {
+                                    target = scope:affairs_partner
+                                    value = -1
+                                }
+                            }
+                            add = 10
+                        }
+                        else_if = {
+                            limit = {
+                                tier_difference = {
+                                    target = scope:affairs_partner
+                                    value = -2
+                                }
+                            }
+                            add = 20
+                        }
+                        else_if = {
+                            limit = {
+                                tier_difference = {
+                                    target = scope:affairs_partner
+                                    value = -3
+                                }
+                            }
+                            add = 30
+                        }
+                        else_if = {
+                            limit = {
+                                tier_difference = {
+                                    target = scope:affairs_partner
+                                    value = -4
+                                }
+                            }
+                            add = 40
+                        }
+                        else_if = {
+                            limit = {
+                                tier_difference = {
+                                    target = scope:affairs_partner
+                                    value <= -5
+                                }
+                            }
+                            add = 50
+                        }
+                    }
+                }
+            }
+        }
+    }
+    save_scope_value_as = {
+        name = dom_chance_stubborness
+        value = {
+            add = 0
+            # stubborn characters dom more easily (persistence)
+            if = {
+                limit = {
+                    has_trait = stubborn
+                }
+                add = 10
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = stubborn
+                    }
+                }
+                add = -10
+            }
+        }
+    }
     save_scope_value_as = {
         name = dom_chance_mixedtraits
         value = {
             add = 0
-            # other traits can have an impact too
+            # personality play a role
             if = {
                 limit = {
                     has_trait = arrogant
@@ -500,21 +672,6 @@ calculate_dom_success_effect = {
                 limit = {
                     scope:affairs_partner = {
                         has_trait = arrogant
-                    }
-                }
-                add = -5
-            }
-            if = {
-                limit = {
-                    has_trait = ambitious
-                }
-                add = 5
-            }
-            if = {
-                limit = {
-                    scope:affairs_partner = {
-                        has_trait = ambitious
-                        # todo: wants to dom you more if lower authority than you (since it might be an opportunity to rise)
                     }
                 }
                 add = -5
@@ -563,6 +720,20 @@ calculate_dom_success_effect = {
             }
             if = {
                 limit = {
+                    has_trait = strong
+                }
+                add = 5
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = strong
+                    }
+                }
+                add = -5
+            }
+            if = {
+                limit = {
                     has_trait = craven
                 }
                 add = -5
@@ -603,145 +774,203 @@ calculate_dom_success_effect = {
                 }
                 add = 5
             }
+            if = {
+                limit = {
+                    has_trait = weak
+                }
+                add = -5
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = weak
+                    }
+                }
+                add = 5
+            }
+            if = {
+                limit = {
+                    has_trait = stuttering
+                }
+                add = -5
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = stuttering
+                    }
+                }
+                add = 5
+            }
         }
     }
-	save_temporary_scope_value_as = {
-		name = close_to_cumming
-		value = {
-			add = close_to_cumming_stamina_threshold
-			subtract = scope:root_stamina
-			multiply = close_to_cumming_dom_success_multiplier
-		}
-	}
-	save_temporary_scope_value_as = {
-		name = close_to_cumming_partner
-		value = {
-			add = close_to_cumming_stamina_threshold
-			subtract = scope:partner_stamina
-			multiply = close_to_cumming_dom_success_multiplier
-		}
-	}
-	save_scope_value_as = {
-		name = dom_chance_stamina
-		# difference in sex stamina affects dom success
-		value = {
-			add = 0
-			if = {
-				limit = { 
-					scope:root_stamina < close_to_cumming_stamina_threshold
-				}
-				subtract = scope:close_to_cumming
-			}
-			if = {
-				limit = { 
-					scope:partner_stamina < close_to_cumming_stamina_threshold
-				}
-				add = scope:close_to_cumming_partner
-			}
-		}
-	}
-	save_temporary_scope_value_as = {
-    	name = orgasm_mult_score
-    	value = {
-    		add = scope:partner_cum_count
-    		multiply = 5
-    	}
+    save_temporary_scope_value_as = {
+        name = close_to_cumming
+        value = {
+            add = close_to_cumming_stamina_threshold
+            subtract = scope:root_stamina
+            multiply = close_to_cumming_dom_success_multiplier
+        }
     }
-	save_scope_value_as = {
-	    name = dom_chance_orgasms
-	    # the more she came, the more she's weak
-	    value = {
-	        add = 0
-	        if = {
-	            limit = {
-	                scope:partner_cum_count > 0
-	            }
-	            add = scope:orgasm_mult_score
-	        }
-	        min = 0
-	        max = 40
-	    }
-	}
-	save_scope_value_as = {
-		name = dom_chance_subdom
-		# existing sub/dom opinion contributes to dom
-		value = scope:subdom
-	}
-	save_scope_value_as = {
-		name = dom_chance_orgasm
-		value = {
-			# if you are in the middle of an orgasm, you'll find it hard to control the situation
-			if = {
-				limit = {
-					scope:root_stamina <= 0
-				}
-				add = -20
-			}
-			if = {
-				limit = {
-					scope:partner_stamina <= 0
-				}
-				add = 20
-			}
-		}
-	}
-	save_scope_value_as = {
-		name = dom_chance_sex_skill
-		value = {
-			add = 0
-			# sex skills - more skilled = more likely to succeed
-			# TODO this is a standin for actual, more specific sex skills; consider replacing later
-			if = {
-				limit = {
-					has_trait_xp = {
-						trait = lifestyle_prostitute
-						value >= 100
-					}
-				}
-				add = 15
-			}
-			else_if = {
-				limit = {
-					has_trait_xp = {
-						trait = lifestyle_prostitute
-						value >= 50
-					}
-				}
-				add = 10
-			}
-			else_if = {
-				limit = {
-					has_trait = lifestyle_prostitute
-				}
-				add = 5
-			}
-		}
-	}
+    save_temporary_scope_value_as = {
+        name = close_to_cumming_partner
+        value = {
+            add = close_to_cumming_stamina_threshold
+            subtract = scope:partner_stamina
+            multiply = close_to_cumming_dom_success_multiplier
+        }
+    }
+    save_scope_value_as = {
+        name = dom_chance_stamina
+        # difference in sex stamina affects dom success
+        value = {
+            add = 0
+            if = {
+                limit = {
+                    scope:root_stamina < close_to_cumming_stamina_threshold
+                }
+                subtract = scope:close_to_cumming
+            }
+            if = {
+                limit = {
+                    scope:partner_stamina < close_to_cumming_stamina_threshold
+                }
+                add = scope:close_to_cumming_partner
+            }
+        }
+    }
+    save_temporary_scope_value_as = {
+        name = orgasm_mult_score
+        value = {
+            add = scope:partner_cum_count
+            multiply = 5
+        }
+    }
+    save_scope_value_as = {
+        name = dom_chance_orgasms
+        # the more she came, the more she's weak
+        value = {
+            add = 0
+            if = {
+                limit = {
+                    scope:partner_cum_count > 0
+                }
+                add = scope:orgasm_mult_score
+            }
+            min = 0
+            max = 40
+        }
+    }
+    save_scope_value_as = {
+        name = dom_chance_subdom
+        # existing sub/dom opinion contributes to dom
+        value = scope:subdom
+    }
+    save_scope_value_as = {
+        name = dom_chance_orgasm
+        value = {
+            # if you are in the middle of an orgasm, you'll find it hard to control the situation
+            if = {
+                limit = {
+                    scope:root_stamina <= 0
+                }
+                add = -20
+            }
+            if = {
+                limit = {
+                    scope:partner_stamina <= 0
+                }
+                add = 20
+            }
+        }
+    }
+    save_scope_value_as = {
+        name = dom_chance_sex_skill
+        value = {
+            add = 0
+            # sex skills - more skilled = more likely to succeed
+            # TODO this is a standin for actual, more specific sex skills; consider replacing later
+            if = {
+                limit = {
+                    has_trait_xp = {
+                        trait = lifestyle_prostitute
+                        value >= 100
+                    }
+                }
+                add = 15
+            }
+            else_if = {
+                limit = {
+                    has_trait_xp = {
+                        trait = lifestyle_prostitute
+                        value >= 50
+                    }
+                }
+                add = 10
+            }
+            else_if = {
+                limit = {
+                    has_trait = lifestyle_prostitute
+                }
+                add = 5
+            }
+            if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait_xp = {
+                            trait = lifestyle_prostitute
+                            value >= 100
+                        }
+                    }
+                }
+                add = -15
+            }
+            else_if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait_xp = {
+                            trait = lifestyle_prostitute
+                            value >= 50
+                        }
+                    }
+                }
+                add = -10
+            }
+            else_if = {
+                limit = {
+                    scope:affairs_partner = {
+                        has_trait = lifestyle_prostitute
+                    }
+                }
+                add = -5
+            }
+        }
+    }
 
-	save_scope_value_as = {
-		name = dom_chance
-		value = {
-			add = dom_base_success_value
-			add = scope:dom_chance_subdom_nature
-			add = scope:dom_chance_subdom
-			add = scope:dom_chance_prowess
-			add = scope:dom_chance_lust_beauty
-			add = scope:dom_chance_title_authority
-			add = scope:dom_chance_stubborness
-			add = scope:dom_chance_mixedtraits
-			add = scope:dom_chance_stamina
-			add = scope:dom_chance_orgasm
-			add = scope:dom_chance_sex_skill
-			add = scope:dom_chance_orgasms
+    save_scope_value_as = {
+        name = dom_chance
+        value = {
+            add = dom_base_success_value
+            add = scope:dom_chance_subdom_nature
+            add = scope:dom_chance_subdom
+            add = scope:dom_chance_prowess
+            add = scope:dom_chance_lust_beauty
+            add = scope:dom_chance_title_authority
+            add = scope:dom_chance_stubborness
+            add = scope:dom_chance_mixedtraits
+            add = scope:dom_chance_stamina
+            add = scope:dom_chance_orgasm
+            add = scope:dom_chance_sex_skill
+            add = scope:dom_chance_orgasms
 
-			min = 5
-			max = 95
-		}
-	}
+            min = 5
+            max = 95
+        }
+    }
 
-	save_scope_value_as = {
-		name = dom_success
-		# need to sample dom_success < dom_chance to succeed
-		value = {0 100}
-	}
+    save_scope_value_as = {
+        name = dom_success
+        # need to sample dom_success < dom_chance to succeed
+        value = {0 100}
+    }
 }

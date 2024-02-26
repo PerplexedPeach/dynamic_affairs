@@ -29,6 +29,7 @@ engage_affair_guest: "[recipient.GetSheHe|U] is your guest: $VALUE|=+0$"
 engage_affair_pregnancy: "Someone is pregnant: $VALUE|=+0$"
 
 engage_affair_imprisoned: "[recipient.GetSheHe|U] is at your mercy: $VALUE|=+0$"
+engage_affair_slave: "[recipient.GetSheHe|U] is your slave: $VALUE|=+0$"
 engage_affair_aibehavior_pregnantme_tt:0 "You are pregnant: $VALUE|=+0$"
 engage_affair_aibehavior_pregnantthey_tt:0 "She is pregnant: $VALUE|=+0$"
 engage_affair_aibehavior_spousethey_tt:0 "[recipient.GetSheHe|U] is bonded to you: $VALUE|=+0$"
