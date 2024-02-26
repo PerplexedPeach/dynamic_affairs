@@ -268,13 +268,9 @@ calculate_dom_success_effect = {
 			subtract = scope:affairs_partner.prowess
 		}
 	}
-	save_scope_value_as = {
-		name = dom_chance_prowess
+	save_temporary_scope_value_as = {
+		name = prowess_diff_abs
 		value = {
-			# use difference in prowess to compute success chance
-			# physically stronger / more robust
-			# to get diminishing returns we have
-			# diff / (diff + XX) * YY
 			add = scope:prowess_diff
 			# ensure positive while being manipulated
 			if = {
@@ -283,9 +279,19 @@ calculate_dom_success_effect = {
 				}
 				multiply = -1
 			}
+		}
+	}
+	save_scope_value_as = {
+		name = dom_chance_prowess
+		value = {
+			# use difference in prowess to compute success chance
+			# physically stronger / more robust
+			# to get diminishing returns we have
+			# diff / (diff + XX) * YY
+			add = scope:prowess_diff_abs
 			divide = {
 				value = {
-					add = scope:prowess_diff
+					add = scope:prowess_diff_abs
 					add = 20
 				}
 			}
