@@ -87,6 +87,8 @@ class EventsSex(enum.Enum):
     MF_FINGER = 45
     MF_REVERSE_COWGIRL_II = 46
     MF_COWGIRL_II = 47
+    MF_COWGIRL_III = 48
+    MF_PRONE_BONE_II = 49
 
 
 class EventsCum(enum.Enum):
